@@ -91,6 +91,11 @@
         </label>
       </div>
 
+      @if (extracting()) {
+        <p data-testid="extract-progress" class="text-xs text-n500">
+          Leyendo la foto… puede tardar hasta un minuto.
+        </p>
+      }
       @if (extractError()) {
         <p
           data-testid="extract-error"

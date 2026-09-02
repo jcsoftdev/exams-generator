@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { TimeoutError } from 'rxjs';
 import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
 import {
   LucideAngularModule,
@@ -514,8 +515,16 @@ export class BankNewComponent {
         this.setTab('structured');
         this.focusStructuredFirstField(hasAlternatives);
       },
-      error: (error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse | TimeoutError) => {
         this.extracting.set(false);
+        // B2: the client-side watchdog (ai.service.ts) fires a TimeoutError,
+        // not an HttpErrorResponse — it never reached the server at all, so
+        // there is no status/body to read a message from. Handled first,
+        // before anything below assumes an HttpErrorResponse shape.
+        if (error instanceof TimeoutError) {
+          this.extractError.set('La lectura de la foto tardó demasiado. Inténtalo de nuevo.');
+          return;
+        }
         // 429 gets its own wording because the server's body says nothing
         // actionable about a free-tier quota. Every other 4xx DOES explain
         // itself — a 422 carries the validation errors, a 400 says the file

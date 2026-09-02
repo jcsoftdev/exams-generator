@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { Observable, TimeoutError, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
@@ -1417,6 +1417,48 @@ describe('BankNewComponent', () => {
 
       const instance = fixture.componentInstance as unknown as { sCorrectAnswer(): string };
       expect(instance.sCorrectAnswer()).toBe('');
+    });
+  });
+
+  describe('B2: client timeout on extract', () => {
+    it('shows the progress status line while extracting, hidden the rest of the time', () => {
+      const { fixture, compiled } = setup({
+        // Never emits/errors — simulates a still-in-flight request.
+        extractQuestionFromImageImpl: () => new Observable(() => {}),
+      });
+      expect(compiled.querySelector('[data-testid="extract-progress"]')).toBeFalsy();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const status = compiled.querySelector('[data-testid="extract-progress"]');
+      expect(status?.textContent).toContain('Leyendo la foto… puede tardar hasta un minuto.');
+    });
+
+    it('on a client-side timeout, shows the specific timeout message and re-enables the button', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => throwError(() => new TimeoutError()),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        extractError(): string | null;
+        extracting(): boolean;
+      };
+      expect(instance.extractError()).toBe(
+        'La lectura de la foto tardó demasiado. Inténtalo de nuevo.',
+      );
+      expect(instance.extracting()).toBe(false);
+      const button = compiled.querySelector(
+        '[data-testid="extract-with-ai"] button',
+      ) as HTMLButtonElement;
+      expect(button.disabled).toBe(false);
     });
   });
 
