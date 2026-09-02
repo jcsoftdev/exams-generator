@@ -19,9 +19,24 @@ export type LiveRegionPoliteness = 'polite' | 'assertive';
 export class LiveAnnouncerService {
   private readonly _message = signal('');
   private readonly _politeness = signal<LiveRegionPoliteness>('polite');
+  /**
+   * Bumped on every `announce()` call, including a repeat of the exact same
+   * message (audit crop-review/live-region #7): `signal.set()` compares with
+   * `Object.is`, so two consecutive identical announcements would otherwise
+   * leave `message()` unchanged — nothing for `LiveRegionComponent`'s
+   * template to re-render, so the DOM text never actually changes and
+   * assistive tech never re-announces it. `LiveRegionComponent` mixes this
+   * into the rendered text as an invisible marker so its DOM node's text
+   * content changes even when the message repeats verbatim. `message()`
+   * itself stays the exact string passed in — this is a separate signal so
+   * callers reading `message()` directly (tests included) keep getting back
+   * exactly what they announced.
+   */
+  private readonly _revision = signal(0);
 
   readonly message = this._message.asReadonly();
   readonly politeness = this._politeness.asReadonly();
+  readonly revision = this._revision.asReadonly();
 
   /**
    * `politeness` defaults to `'polite'` (queued after the AT's current
@@ -32,5 +47,6 @@ export class LiveAnnouncerService {
   announce(message: string, politeness: LiveRegionPoliteness = 'polite'): void {
     this._politeness.set(politeness);
     this._message.set(message);
+    this._revision.update((n) => n + 1);
   }
 }

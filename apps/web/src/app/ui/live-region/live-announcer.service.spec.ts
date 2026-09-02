@@ -24,4 +24,22 @@ describe('LiveAnnouncerService', () => {
     expect(service.message()).toBe('No se pudo guardar.');
     expect(service.politeness()).toBe('assertive');
   });
+
+  // audit crop-review/live-region #7: two consecutive identical announce()
+  // calls left `message()` at the same value (Object.is no-op for the
+  // signal), so a LiveRegionComponent bound only to `message()` never
+  // re-rendered its DOM text and assistive tech never re-announced it.
+  // `revision()` is the escape hatch — it changes on every call, message or not.
+  it('bumps revision() on every announce() call, even a repeat of the same message', () => {
+    const service = TestBed.inject(LiveAnnouncerService);
+
+    service.announce('Pregunta guardada.');
+    const first = service.revision();
+
+    service.announce('Pregunta guardada.');
+    const second = service.revision();
+
+    expect(service.message()).toBe('Pregunta guardada.');
+    expect(second).not.toBe(first);
+  });
 });
