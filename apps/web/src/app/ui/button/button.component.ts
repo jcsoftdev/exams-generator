@@ -18,9 +18,17 @@ import { ButtonSize, ButtonVariant } from '../ui.types';
       [disabled]="disabled() || loading()"
       [attr.aria-label]="ariaLabel() || null"
       [attr.aria-disabled]="disabled() || loading() ? 'true' : null"
+      [attr.aria-busy]="loading() ? 'true' : null"
       (click)="onClick()"
     >
       <ng-content></ng-content>
+      @if (loading()) {
+        <!-- D3a (audit M12): loading toggled disabled but never told assistive
+             tech WHY the click did nothing and nothing else changed — no
+             aria-busy, no changed label. This is the sr-only equivalent of the
+             spinner every loading variant already shows sighted users. -->
+        <span class="sr-only">Cargando…</span>
+      }
     </button>
   `,
 })

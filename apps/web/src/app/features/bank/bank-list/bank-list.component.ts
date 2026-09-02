@@ -27,6 +27,8 @@ import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { LiveRegionComponent } from '../../../ui/live-region/live-region.component';
+import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
@@ -223,6 +225,7 @@ const HIGHLIGHT_DURATION_MS = 4000;
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
     LucideAngularModule,
+    LiveRegionComponent,
   ],
   // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
   // local `pick()` SHADOWS (does not merge with) the app-level one in app.config.ts. This must list
@@ -255,6 +258,7 @@ export class BankListComponent {
   private readonly aiService = inject(AiService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  private readonly liveAnnouncer = inject(LiveAnnouncerService);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly difficultyLabels = DIFFICULTY_LABELS;

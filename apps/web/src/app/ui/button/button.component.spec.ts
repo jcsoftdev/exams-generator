@@ -126,4 +126,26 @@ describe('ButtonComponent', () => {
     const button = compiled.querySelector('button')!;
     expect(button.getAttribute('type')).toBe('submit');
   });
+
+  // D3a (audit M12): loading state was silent to assistive tech — no aria-busy,
+  // no changed label, so a screen-reader user got no signal a click did anything.
+  it('exposes aria-busy and a visually-hidden "Cargando…" label while loading=true', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('loading', true);
+    fixture.detectChanges();
+
+    const button = compiled.querySelector('button')!;
+    expect(button.getAttribute('aria-busy')).toBe('true');
+    const hidden = button.querySelector('.sr-only');
+    expect(hidden?.textContent).toContain('Cargando…');
+  });
+
+  it('has no aria-busy and no hidden loading label when not loading', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    const button = compiled.querySelector('button')!;
+    expect(button.getAttribute('aria-busy')).toBeNull();
+    expect(button.querySelector('.sr-only')).toBeFalsy();
+  });
 });

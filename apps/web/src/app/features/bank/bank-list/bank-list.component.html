@@ -1,4 +1,11 @@
 <div class="flex flex-col gap-4 p-6" data-testid="bank-list">
+  <!--
+    D3 (audit M12): single aria-live sink for LiveAnnouncerService. Belongs in
+    the app shell (one instance app-wide) — mounted here only because the
+    shell is out of this line's ownership; see LiveRegionComponent's doc.
+  -->
+  <ui-live-region></ui-live-region>
+
   <h1 class="text-xl font-semibold text-n900">Banco de preguntas</h1>
 
   @if (createdBanner()) {

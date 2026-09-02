@@ -1505,4 +1505,11 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-highlight="true"]')).toBeFalsy();
     });
   });
+
+  describe('accessibility (D3)', () => {
+    it('mounts a single live-region for the LiveAnnouncerService, so it can be moved to the shell at merge', () => {
+      const { compiled } = setup();
+      expect(compiled.querySelector('[data-testid="live-region"]')).toBeTruthy();
+    });
+  });
 });
