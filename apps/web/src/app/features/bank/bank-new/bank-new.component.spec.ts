@@ -1835,6 +1835,69 @@ describe('BankNewComponent', () => {
       const instance = fixture.componentInstance as unknown as { sCorrectAnswer(): string };
       expect(instance.sCorrectAnswer()).toBe('');
     });
+
+    it('leaves the clave input empty when alternatives is empty, even though correctAnswer carries an index', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'Enunciado sin alternativas',
+            alternatives: [],
+            correctAnswer: '0',
+          }),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      // An index into an EMPTY alternatives list is meaningless — prefilling
+      // 'a' here would silently point the clave at an alternative that does
+      // not exist.
+      const instance = fixture.componentInstance as unknown as { sCorrectAnswer(): string };
+      expect(instance.sCorrectAnswer()).toBe('');
+    });
+  });
+
+  describe('clave range check: the letter must index an actual alternative', () => {
+    it('rejects a clave whose letter index is out of range for the current alternatives, with a dedicated missing-field message', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'x\ny'); // 2 alternatives — valid letters are a, b
+      set(fixture, 'sCorrectAnswer', 'e'); // index 4, out of range
+
+      const instance = fixture.componentInstance as unknown as { structuredValid(): boolean };
+      expect(instance.structuredValid()).toBe(false);
+      const hint = compiled.querySelector('[data-testid="structured-validation"]');
+      expect(hint?.textContent).toContain('clave fuera de rango');
+      expect(
+        (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement)
+          .disabled,
+      ).toBe(true);
+    });
+
+    it('accepts a clave whose letter index IS within range for the current alternatives', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'x\ny');
+      set(fixture, 'sCorrectAnswer', 'b'); // index 1, within range for 2 alternatives
+
+      const instance = fixture.componentInstance as unknown as { structuredValid(): boolean };
+      expect(instance.structuredValid()).toBe(true);
+      expect(compiled.querySelector('[data-testid="structured-validation"]')).toBeFalsy();
+    });
   });
 
   describe('B7: announces the tab switch after a successful extraction', () => {

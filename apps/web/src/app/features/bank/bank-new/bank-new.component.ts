@@ -636,8 +636,13 @@ export class BankNewComponent {
         // never invents a key the photo didn't show.
         // `indexToCorrectAnswerLetter` handles `null` itself (returns `''`),
         // which matches the field's initial value and correctly requires
-        // the teacher to pick one by hand.
-        this.sCorrectAnswer.set(indexToCorrectAnswerLetter(extracted.correctAnswer));
+        // the teacher to pick one by hand. When `alternatives` is EMPTY
+        // (B1), any index the model returned is meaningless — there is
+        // nothing for it to point at — so the clave is forced blank
+        // regardless of what `correctAnswer` says, same as the `null` case.
+        this.sCorrectAnswer.set(
+          hasAlternatives ? indexToCorrectAnswerLetter(extracted.correctAnswer) : '',
+        );
         // sDifficulty is intentionally left untouched — Nivel is never
         // auto-filled from AI, the human always picks it.
 
@@ -884,8 +889,32 @@ export class BankNewComponent {
       !!this.sGradeLevel() &&
       !!this.sBody().trim() &&
       this.alternativesList().length >= 2 &&
-      !!this.sCorrectAnswer()
+      !!this.sCorrectAnswer() &&
+      this.correctAnswerInRange()
     );
+  }
+
+  /**
+   * A letter that IS present but indexes past the current alternatives list
+   * — e.g. clave "e" with only 2 alternatives typed/edited — used to be
+   * accepted at face value: `structuredValid()` only checked `sCorrectAnswer`
+   * was non-empty, never that the index it names actually exists.
+   * `alternativesList()` can shrink after extraction (teacher edits) or the
+   * clave itself is manually mistyped, so this has to be re-checked live,
+   * not just at extraction time (see B1's "empty alternatives" fix above,
+   * which handles the extraction-time case this can't: alternatives
+   * present but the letter outgrowing them afterwards).
+   */
+  private correctAnswerInRange(): boolean {
+    const letter = this.sCorrectAnswer().trim().toLowerCase();
+    const index = CORRECT_ANSWER_LETTERS.indexOf(letter);
+    if (index === -1) {
+      // Not a recognized a-e letter at all — a different, pre-existing
+      // concern (whatever the server does with an unrecognized clave on
+      // submit), not this range check's job.
+      return true;
+    }
+    return index < this.alternativesList().length;
   }
 
   /** B8: names only the fields still missing, in the structured tab's visual order, instead of always listing all six. */
@@ -897,7 +926,11 @@ export class BankNewComponent {
     if (!this.sDifficulty()) missing.push('nivel');
     if (!this.sBody().trim()) missing.push('enunciado');
     if (this.alternativesList().length < 2) missing.push('al menos 2 alternativas');
-    if (!this.sCorrectAnswer()) missing.push('clave');
+    if (!this.sCorrectAnswer()) {
+      missing.push('clave');
+    } else if (!this.correctAnswerInRange()) {
+      missing.push('clave fuera de rango');
+    }
     return missing.join(', ');
   }
 
