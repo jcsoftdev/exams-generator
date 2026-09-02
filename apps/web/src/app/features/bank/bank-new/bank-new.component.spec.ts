@@ -2820,4 +2820,31 @@ describe('BankNewComponent', () => {
       expect(event.returnValue).toBe('untouched');
     });
   });
+
+  describe('M8: revokes preview object URLs on destroy', () => {
+    it('revokes both the photo and structured preview object URLs when the component is destroyed', () => {
+      const { fixture, compiled } = setup();
+      let counter = 0;
+      vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:preview-${counter++}`);
+      const revokeSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+
+      pickImage(fixture, compiled);
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickStructuredImage(fixture, compiled);
+      revokeSpy.mockClear();
+
+      fixture.destroy();
+
+      expect(revokeSpy).toHaveBeenCalledWith('blob:preview-0');
+      expect(revokeSpy).toHaveBeenCalledWith('blob:preview-1');
+      vi.restoreAllMocks();
+    });
+
+    it('does not throw when destroyed with no image ever picked', () => {
+      const { fixture } = setup();
+
+      expect(() => fixture.destroy()).not.toThrow();
+    });
+  });
 });

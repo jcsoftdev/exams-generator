@@ -1,5 +1,6 @@
 import {
   Component,
+  DestroyRef,
   ElementRef,
   HostListener,
   Injector,
@@ -177,6 +178,7 @@ export class BankNewComponent {
   private readonly router = inject(Router);
   private readonly injector = inject(Injector);
   private readonly liveAnnouncer = inject(LiveAnnouncerService);
+  private readonly destroyRef = inject(DestroyRef);
 
   /**
    * Template refs on the structured tab's own textareas — used only to move
@@ -385,6 +387,25 @@ export class BankNewComponent {
     effect(() => {
       if (this.sAlternatives().trim().length > 0) {
         this.extractNoAlternatives.set(false);
+      }
+    });
+
+    // M8: `setImage`/`setStructuredImage` only ever revoke the PREVIOUS
+    // object URL when a new one replaces it — whichever one is still live
+    // the moment this component is torn down (navigating away mid-review,
+    // route reuse) never gets revoked at all, leaking it for the lifetime
+    // of the tab. `cropPhotoUrl` is a `computed` of `pImagePreviewUrl` (no
+    // object URL of its own) and every `CropSlot.dataUrl` is a `data:` URI
+    // (AI extraction responses / `dataUrlToFile`, never
+    // `URL.createObjectURL`) — neither needs a revoke here.
+    this.destroyRef.onDestroy(() => {
+      const photoUrl = this.pImagePreviewUrl();
+      if (photoUrl) {
+        URL.revokeObjectURL(photoUrl);
+      }
+      const structuredUrl = this.sImagePreviewUrl();
+      if (structuredUrl) {
+        URL.revokeObjectURL(structuredUrl);
       }
     });
   }
