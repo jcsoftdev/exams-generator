@@ -420,3 +420,73 @@ describe("spend ceiling", () => {
     expect(MAX_COMPLETION_TOKENS).toBeGreaterThanOrEqual(2000);
   });
 });
+
+describe("responseFormat: json_object — providers without json_schema (DeepSeek's own API)", () => {
+  it("sends a bare json_object response_format with no schema object", () => {
+    const body = buildOpenRouterRequestBody("deepseek-v4-flash", INPUT, { responseFormat: "json_object" });
+
+    expect(body.response_format).toEqual({ type: "json_object" });
+  });
+
+  it("embeds the schema in the prompt, since the provider never sees it server-side", () => {
+    const body = buildOpenRouterRequestBody("deepseek-v4-flash", INPUT, { responseFormat: "json_object" });
+    const promptText = promptTextOf(body);
+
+    expect(promptText).toContain('"bodyTypst"');
+    expect(promptText).toContain('"correctAnswer"');
+    expect(promptText).toContain('"solutionSteps"');
+    expect(promptText).toMatch(/JSON/);
+  });
+
+  it("applies the same mode to revise, and to extract with its own extra fields", () => {
+    const revise = buildOpenRouterReviseRequestBody("deepseek-v4-flash", REVISE_INPUT, {
+      responseFormat: "json_object",
+    });
+    const extractInput: ExtractQuestionInput = {
+      image: Buffer.from("fake-png-bytes"),
+      mimeType: "image/png",
+    };
+    const extract = buildOpenRouterExtractRequestBody("deepseek-v4-flash-vision-exp", extractInput, {
+      responseFormat: "json_object",
+    });
+
+    expect(revise.response_format).toEqual({ type: "json_object" });
+    expect(extract.response_format).toEqual({ type: "json_object" });
+    expect(promptTextOf(revise)).toContain('"bodyTypst"');
+    expect(promptTextOf(extract)).toContain("suggestedCourse");
+  });
+
+  it("keeps strict json_schema by default so OpenRouter callers are untouched", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    expect(body.response_format.type).toBe("json_schema");
+    expect(promptTextOf(body)).not.toContain('"additionalProperties"');
+  });
+});
+
+describe("thinking: provider-side reasoning switch (DeepSeek V4 thinks by default)", () => {
+  it("sends thinking.type when the option is set, on all three request kinds", () => {
+    const extractInput: ExtractQuestionInput = {
+      image: Buffer.from("fake-png-bytes"),
+      mimeType: "image/png",
+    };
+
+    expect(buildOpenRouterRequestBody("deepseek-v4-flash", INPUT, { thinking: "disabled" }).thinking).toEqual(
+      {
+        type: "disabled",
+      },
+    );
+    expect(
+      buildOpenRouterReviseRequestBody("deepseek-v4-flash", REVISE_INPUT, { thinking: "enabled" }).thinking,
+    ).toEqual({ type: "enabled" });
+    expect(
+      buildOpenRouterExtractRequestBody("deepseek-v4-flash-vision-exp", extractInput, {
+        thinking: "disabled",
+      }).thinking,
+    ).toEqual({ type: "disabled" });
+  });
+
+  it("omits the field entirely when unset, so OpenRouter models that do not know it never see it", () => {
+    expect("thinking" in buildOpenRouterRequestBody("some/free-model:free", INPUT)).toBe(false);
+  });
+});

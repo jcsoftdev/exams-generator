@@ -14,6 +14,8 @@ import {
   buildOpenRouterRequestBody,
   buildOpenRouterReviseRequestBody,
   OpenRouterRequestBody,
+  OpenRouterResponseFormatMode,
+  OpenRouterThinkingMode,
 } from "./openrouter-request-builder";
 import { assessGeneratedQuestionPlausibility } from "./openrouter-content-plausibility-validator";
 import { assertDifficultyMatchesSelfReport } from "./openrouter-difficulty-gate";
@@ -121,6 +123,22 @@ async function* withIdleTimeout(body: AsyncIterable<Uint8Array>): AsyncIterable<
   }
 }
 
+/**
+ * The provider's error body, truncated, for the `AiGenerationError` message.
+ * Without it a DeepSeek "Model Not Exist" or a schema rejection reaches the
+ * log as a bare "status 400" and the cause has to be reproduced by hand.
+ * Never throws: a body that is not JSON just contributes nothing.
+ */
+async function providerErrorDetail(response: HttpJsonResponse): Promise<string> {
+  try {
+    const body: unknown = await response.json();
+    const text = typeof body === "string" ? body : JSON.stringify(body);
+    return text ? `: ${text.slice(0, 300)}` : "";
+  } catch {
+    return "";
+  }
+}
+
 export interface OpenRouterAdapterConfig {
   readonly apiKey: string;
   /**
@@ -136,6 +154,14 @@ export interface OpenRouterAdapterConfig {
    * falls back to `model` when unset. Never hardcoded (free list rotates).
    */
   readonly visionModel?: string;
+  /**
+   * `json_schema` (default, OpenRouter/OpenAI strict output) or `json_object`
+   * (DeepSeek's own API and other providers with JSON mode only). Resolved
+   * from `process.env.AI_RESPONSE_FORMAT`.
+   */
+  readonly responseFormat?: OpenRouterResponseFormatMode;
+  /** Provider reasoning switch, from `process.env.AI_THINKING`; unset = not sent. */
+  readonly thinking?: OpenRouterThinkingMode;
   readonly httpClient?: HttpClient;
   readonly sseHttpClient?: SseHttpClient;
   readonly baseUrl?: string;
@@ -183,7 +209,12 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     previousCompileError?: string,
   ): Promise<GeneratedQuestion> {
     return this.runWithRetries(
-      (previousError) => buildOpenRouterRequestBody(this.config.model, input, { previousError }),
+      (previousError) =>
+        buildOpenRouterRequestBody(this.config.model, input, {
+          previousError,
+          responseFormat: this.config.responseFormat,
+          thinking: this.config.thinking,
+        }),
       onProgress,
       previousCompileError,
       (question, selfReport) => {
@@ -203,7 +234,11 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    */
   async reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion> {
     return this.runWithRetries((previousError) =>
-      buildOpenRouterReviseRequestBody(this.config.model, input, { previousError }),
+      buildOpenRouterReviseRequestBody(this.config.model, input, {
+        previousError,
+        responseFormat: this.config.responseFormat,
+        thinking: this.config.thinking,
+      }),
     );
   }
 
@@ -214,7 +249,11 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    */
   async extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion> {
     return this.runWithRetries((previousError) =>
-      buildOpenRouterExtractRequestBody(this.visionModel, input, { previousError }),
+      buildOpenRouterExtractRequestBody(this.visionModel, input, {
+        previousError,
+        responseFormat: this.config.responseFormat,
+        thinking: this.config.thinking,
+      }),
     );
   }
 
@@ -275,7 +314,9 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
       throw new AiRateLimitError();
     }
     if (response.status >= 400) {
-      throw new AiGenerationError(`OpenRouter request failed with status ${response.status}`);
+      throw new AiGenerationError(
+        `OpenRouter request failed with status ${response.status}${await providerErrorDetail(response)}`,
+      );
     }
 
     const json = await response.json();
@@ -354,11 +395,20 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
  */
 function extractMessageContent(json: unknown): string {
   const body = json as {
-    choices?: Array<{ message?: { content?: unknown } }>;
+    choices?: Array<{ finish_reason?: unknown; message?: { content?: unknown } }>;
   };
-  const content = body?.choices?.[0]?.message?.content;
+  const choice = body?.choices?.[0];
+  const content = choice?.message?.content;
   if (typeof content !== "string" || content.length === 0) {
-    throw new Error("OpenRouter response is missing choices[0].message.content");
+    // Name what DID come back: a `finish_reason=length` means the reply was
+    // cut before any content (raise max_tokens or shorten the prompt); a
+    // message carrying only `reasoning_content` means a thinking model spent
+    // the whole budget reasoning. Without this the 422 reads the same either way.
+    const finishReason = typeof choice?.finish_reason === "string" ? choice.finish_reason : "unknown";
+    const messageKeys = choice?.message ? Object.keys(choice.message).join(",") : "none";
+    throw new Error(
+      `OpenRouter response is missing choices[0].message.content (finish_reason=${finishReason}, message keys: ${messageKeys})`,
+    );
   }
   return content;
 }

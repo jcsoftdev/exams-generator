@@ -155,7 +155,14 @@ services:
       METRICS_TOKEN: ${METRICS_TOKEN:-}
       AI_MODEL: ${AI_MODEL}
       AI_VISION_MODEL: ${AI_VISION_MODEL}
-      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      # Provider-neutral trio (resolve-ai-provider-config.ts). Unset = OpenRouter
+      # with strict json_schema. DeepSeek's own API needs all three: its
+      # chat/completions url, AI_API_KEY, and AI_RESPONSE_FORMAT=json_object.
+      AI_BASE_URL: ${AI_BASE_URL:-}
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_RESPONSE_FORMAT: ${AI_RESPONSE_FORMAT:-}
+      AI_THINKING: ${AI_THINKING:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
       PORT: 3000
     healthcheck:
       test:

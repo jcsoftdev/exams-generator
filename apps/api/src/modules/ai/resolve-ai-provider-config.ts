@@ -1,4 +1,8 @@
 import { OpenRouterAdapterConfig } from "./adapters/openrouter/openrouter.adapter";
+import {
+  OpenRouterResponseFormatMode,
+  OpenRouterThinkingMode,
+} from "./adapters/openrouter/openrouter-request-builder";
 
 /** OpenRouter stays the default so no existing deployment has to set a base url. */
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
@@ -54,5 +58,43 @@ export function resolveAiProviderConfig(env: AiProviderEnv): OpenRouterAdapterCo
     model,
     visionModel: readNonBlank(env, "AI_VISION_MODEL"),
     baseUrl: readNonBlank(env, "AI_BASE_URL") ?? OPENROUTER_CHAT_COMPLETIONS_URL,
+    responseFormat: readResponseFormat(env),
+    thinking: readThinking(env),
   };
+}
+
+const THINKING_MODES: readonly OpenRouterThinkingMode[] = ["enabled", "disabled"];
+
+/**
+ * `AI_THINKING` — provider-side reasoning switch. Unset means the field is
+ * never sent (OpenRouter models that do not know it would reject it).
+ * DeepSeek V4 thinks by default and can spend the whole `max_tokens` budget
+ * on `reasoning_content`, returning an empty answer — set `disabled` there.
+ */
+function readThinking(env: AiProviderEnv): OpenRouterThinkingMode | undefined {
+  const raw = readNonBlank(env, "AI_THINKING");
+  if (raw === undefined) return undefined;
+  if ((THINKING_MODES as readonly string[]).includes(raw)) return raw as OpenRouterThinkingMode;
+  throw new Error(
+    `AI_THINKING must be one of ${THINKING_MODES.join(", ")} (got "${raw}"); see infra/env.example.`,
+  );
+}
+
+const RESPONSE_FORMAT_MODES: readonly OpenRouterResponseFormatMode[] = ["json_schema", "json_object"];
+
+/**
+ * `AI_RESPONSE_FORMAT` picks how JSON is requested. Unset means strict
+ * `json_schema` so nothing on OpenRouter changes. DeepSeek's own API only
+ * accepts `json_object` (verified 2026-09-02 against api-docs.deepseek.com),
+ * so a DeepSeek deployment sets it explicitly. An unknown value is refused
+ * here rather than forwarded — the provider's 400 would surface as a
+ * generic extraction failure several layers away from the typo.
+ */
+function readResponseFormat(env: AiProviderEnv): OpenRouterResponseFormatMode {
+  const raw = readNonBlank(env, "AI_RESPONSE_FORMAT");
+  if (raw === undefined) return "json_schema";
+  if ((RESPONSE_FORMAT_MODES as readonly string[]).includes(raw)) return raw as OpenRouterResponseFormatMode;
+  throw new Error(
+    `AI_RESPONSE_FORMAT must be one of ${RESPONSE_FORMAT_MODES.join(", ")} (got "${raw}"). Use json_object for DeepSeek's own API (see infra/env.example).`,
+  );
 }

@@ -65,4 +65,43 @@ describe("resolveAiProviderConfig", () => {
   it("treats a blank key as missing rather than sending an empty Bearer token", () => {
     expect(() => resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "   " })).toThrow(/AI_API_KEY/);
   });
+
+  it("defaults to strict json_schema output so existing OpenRouter deployments are untouched", () => {
+    const config = resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k" });
+
+    expect(config.responseFormat).toBe("json_schema");
+  });
+
+  it("switches to json_object when AI_RESPONSE_FORMAT says so — DeepSeek's own API has no json_schema", () => {
+    const config = resolveAiProviderConfig({
+      AI_MODEL: "deepseek-v4-flash",
+      AI_API_KEY: "k",
+      AI_BASE_URL: "https://api.deepseek.com/chat/completions",
+      AI_RESPONSE_FORMAT: "json_object",
+    });
+
+    expect(config.responseFormat).toBe("json_object");
+  });
+
+  it("rejects an unknown AI_RESPONSE_FORMAT instead of sending a mode the provider may not accept", () => {
+    expect(() =>
+      resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k", AI_RESPONSE_FORMAT: "yaml" }),
+    ).toThrow(/AI_RESPONSE_FORMAT/);
+  });
+
+  it("leaves thinking undefined when AI_THINKING is unset, so the field is never sent", () => {
+    expect(resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k" }).thinking).toBeUndefined();
+  });
+
+  it("passes AI_THINKING=disabled through — DeepSeek V4 reasons by default and starves max_tokens", () => {
+    expect(
+      resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k", AI_THINKING: "disabled" }).thinking,
+    ).toBe("disabled");
+  });
+
+  it("rejects an unknown AI_THINKING value", () => {
+    expect(() => resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k", AI_THINKING: "maybe" })).toThrow(
+      /AI_THINKING/,
+    );
+  });
 });

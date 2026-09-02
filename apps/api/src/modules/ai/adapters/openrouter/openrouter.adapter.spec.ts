@@ -94,6 +94,30 @@ describe("OpenRouterAdapter", () => {
     expect(body.model).toBe("deepseek/deepseek-r1:free");
   });
 
+  it("carries the provider's own error body in the message on a 4xx/5xx, so a 400 is diagnosable from the API log", async () => {
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(400, { error: { message: "Model Not Exist", type: "invalid_request_error" } }),
+      );
+    const adapter = new OpenRouterAdapter({ apiKey: "sk-test-key", model: "deepseek-chat", httpClient });
+
+    await expect(adapter.generate(INPUT)).rejects.toThrow(/status 400.*Model Not Exist/s);
+  });
+
+  it("names finish_reason and the message keys when content is missing, so a truncated or reasoning-only reply is diagnosable", async () => {
+    const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValue(
+      jsonResponse(200, {
+        choices: [
+          { finish_reason: "length", message: { role: "assistant", content: "", reasoning_content: "..." } },
+        ],
+      }),
+    );
+    const adapter = new OpenRouterAdapter({ apiKey: "sk-test-key", model: "deepseek-v4-flash", httpClient });
+
+    await expect(adapter.generate(INPUT)).rejects.toThrow(/finish_reason=length.*reasoning_content/s);
+  });
+
   it("returns the validated question on a clean response with no reasoning", async () => {
     const httpClient = jest
       .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()

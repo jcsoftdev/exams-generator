@@ -32,14 +32,36 @@ export interface OpenRouterJsonSchema {
   };
 }
 
+/**
+ * How the provider is asked for JSON. `json_schema` is OpenAI/OpenRouter
+ * strict structured output — the server enforces the schema. `json_object`
+ * is the weaker mode DeepSeek's own API (and other providers) support: the
+ * server only guarantees syntactically valid JSON, so the schema has to be
+ * spelled out in the prompt and the shape is enforced client-side by
+ * `validateGeneratedQuestionShape` (which it always was — the retry-once
+ * pipeline is unchanged).
+ */
+export type OpenRouterResponseFormatMode = "json_schema" | "json_object";
+
+export type OpenRouterResponseFormat =
+  | { readonly type: "json_schema"; readonly json_schema: OpenRouterJsonSchema }
+  | { readonly type: "json_object" };
+
+/**
+ * Provider-side reasoning switch. DeepSeek V4 (`thinking.type`, on by default
+ * at effort "high") spends `max_tokens` on `reasoning_content` first — a
+ * transcription from a photo can come back with `finish_reason=length` and an
+ * EMPTY `content`. Sent only when configured: OpenRouter models that do not
+ * know the field must never receive it.
+ */
+export type OpenRouterThinkingMode = "enabled" | "disabled";
+
 export interface OpenRouterRequestBody {
   readonly model: string;
   readonly messages: readonly OpenRouterMessage[];
   readonly max_tokens: number;
-  readonly response_format: {
-    readonly type: "json_schema";
-    readonly json_schema: OpenRouterJsonSchema;
-  };
+  readonly response_format: OpenRouterResponseFormat;
+  readonly thinking?: { readonly type: OpenRouterThinkingMode };
 }
 
 /**
@@ -63,6 +85,41 @@ export interface BuildOpenRouterRequestOptions {
    * sees exactly why its previous output was rejected.
    */
   readonly previousError?: string;
+  /** Defaults to `json_schema`; see `OpenRouterResponseFormatMode`. */
+  readonly responseFormat?: OpenRouterResponseFormatMode;
+  /** Unset = field not sent; see `OpenRouterThinkingMode`. */
+  readonly thinking?: OpenRouterThinkingMode;
+}
+
+/** `{ thinking: {...} }` when configured, `{}` otherwise — spread into the body so the key is absent, not `undefined`. */
+function thinkingField(mode: OpenRouterThinkingMode | undefined): Pick<OpenRouterRequestBody, "thinking"> {
+  return mode ? { thinking: { type: mode } } : {};
+}
+
+function responseFormatFor(
+  schema: OpenRouterJsonSchema,
+  mode: OpenRouterResponseFormatMode = "json_schema",
+): OpenRouterResponseFormat {
+  return mode === "json_object" ? { type: "json_object" } : { type: "json_schema", json_schema: schema };
+}
+
+/**
+ * In `json_object` mode the provider never sees the schema, so it travels in
+ * the prompt instead. Empty in `json_schema` mode — the server has it and
+ * repeating it would only spend tokens. The word "JSON" must appear in the
+ * prompt for `json_object`: DeepSeek documents that without it the model can
+ * emit whitespace until `max_tokens`.
+ */
+function schemaInstructionLines(
+  schema: OpenRouterJsonSchema,
+  mode: OpenRouterResponseFormatMode = "json_schema",
+): string[] {
+  if (mode !== "json_object") return [];
+  return [
+    "",
+    "FORMATO DE SALIDA OBLIGATORIO: responde con UN SOLO objeto JSON válido que cumpla EXACTAMENTE este JSON Schema — todos los campos required, ningún campo extra, nada de texto fuera del objeto:",
+    JSON.stringify(schema.schema),
+  ];
 }
 
 const RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
@@ -270,13 +327,17 @@ export function buildOpenRouterRequestBody(
     model,
     messages: [
       { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: userPromptLines.join("\n") },
+      {
+        role: "user",
+        content: [
+          ...userPromptLines,
+          ...schemaInstructionLines(RESPONSE_JSON_SCHEMA, options.responseFormat),
+        ].join("\n"),
+      },
     ],
     max_tokens: MAX_COMPLETION_TOKENS,
-    response_format: {
-      type: "json_schema",
-      json_schema: RESPONSE_JSON_SCHEMA,
-    },
+    response_format: responseFormatFor(RESPONSE_JSON_SCHEMA, options.responseFormat),
+    ...thinkingField(options.thinking),
   };
 }
 
@@ -336,13 +397,17 @@ export function buildOpenRouterReviseRequestBody(
     model,
     messages: [
       { role: "system", content: REVISE_SYSTEM_PROMPT },
-      { role: "user", content: userPromptLines.join("\n") },
+      {
+        role: "user",
+        content: [
+          ...userPromptLines,
+          ...schemaInstructionLines(RESPONSE_JSON_SCHEMA, options.responseFormat),
+        ].join("\n"),
+      },
     ],
     max_tokens: MAX_COMPLETION_TOKENS,
-    response_format: {
-      type: "json_schema",
-      json_schema: RESPONSE_JSON_SCHEMA,
-    },
+    response_format: responseFormatFor(RESPONSE_JSON_SCHEMA, options.responseFormat),
+    ...thinkingField(options.thinking),
   };
 }
 
@@ -435,15 +500,19 @@ export function buildOpenRouterExtractRequestBody(
       {
         role: "user",
         content: [
-          { type: "text", text: instructionLines.join("\n") },
+          {
+            type: "text",
+            text: [
+              ...instructionLines,
+              ...schemaInstructionLines(EXTRACT_RESPONSE_JSON_SCHEMA, options.responseFormat),
+            ].join("\n"),
+          },
           { type: "image_url", image_url: { url: dataUrl } },
         ],
       },
     ],
     max_tokens: MAX_COMPLETION_TOKENS,
-    response_format: {
-      type: "json_schema",
-      json_schema: EXTRACT_RESPONSE_JSON_SCHEMA,
-    },
+    response_format: responseFormatFor(EXTRACT_RESPONSE_JSON_SCHEMA, options.responseFormat),
+    ...thinkingField(options.thinking),
   };
 }
