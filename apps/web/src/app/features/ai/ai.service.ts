@@ -69,6 +69,18 @@ import {
  */
 const AI_STREAM_WATCHDOG_MS = 360_000;
 
+/**
+ * B2 (client timeout audit): `extractQuestionFromImage` and `recropExtraction`
+ * were bare `http.post` calls with nothing bounding how long they could hang
+ * on a silently dropped connection — unlike the two streaming calls above,
+ * which already lean on `AI_STREAM_WATCHDOG_MS`. DeepSeek Vision extraction
+ * normally takes 25-50s, so 120s gives ample margin while still surfacing a
+ * `TimeoutError` instead of hanging forever.
+ */
+const AI_EXTRACT_TIMEOUT_MS = 120_000;
+/** A hand-drawn re-crop is a much lighter/faster operation than a full extraction — 30s is generous. */
+const AI_RECROP_TIMEOUT_MS = 30_000;
+
 @Injectable({ providedIn: 'root' })
 export class AiService {
   private readonly http = inject(HttpClient);
@@ -230,18 +242,18 @@ export class AiService {
     const formData = new FormData();
     formData.set('file', image);
 
-    return this.http.post<AiExtractedQuestion>(
-      `${environment.apiBaseUrl}/ai/questions/extract`,
-      formData,
-    );
+    return this.http
+      .post<AiExtractedQuestion>(`${environment.apiBaseUrl}/ai/questions/extract`, formData)
+      .pipe(timeout({ each: AI_EXTRACT_TIMEOUT_MS }));
   }
 
   /** `POST /ai/questions/extract/:extractionId/crop` — re-cuts one crop with a hand-drawn box. */
   recropExtraction(extractionId: string, box: NormalizedBoxDto): Observable<AiQuestionCrop> {
-    return this.http.post<AiQuestionCrop>(
-      `${environment.apiBaseUrl}/ai/questions/extract/${extractionId}/crop`,
-      { box },
-    );
+    return this.http
+      .post<AiQuestionCrop>(`${environment.apiBaseUrl}/ai/questions/extract/${extractionId}/crop`, {
+        box,
+      })
+      .pipe(timeout({ each: AI_RECROP_TIMEOUT_MS }));
   }
 
   /** `POST /ai/questions/jobs` (design doc §4) — creates a durable batch job and returns immediately (202); the caller navigates to the job-detail screen and polls from there instead of waiting on this request. */

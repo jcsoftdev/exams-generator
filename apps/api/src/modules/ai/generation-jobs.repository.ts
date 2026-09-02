@@ -23,6 +23,8 @@ export interface CreateGenerationJobRecord {
 export interface GenerationJobFailedItem {
   readonly index: number;
   readonly error: string;
+  /** Mirrors the shared `GenerationJobFailedItem.code` wire contract — see its docstring in `packages/shared`. */
+  readonly code?: string;
 }
 
 export interface GenerationJobRecord {

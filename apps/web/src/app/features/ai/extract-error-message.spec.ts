@@ -67,4 +67,41 @@ describe('extractErrorMessage', () => {
 
     expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
   });
+
+  /**
+   * B10 (audit A2, web half): a 503 with `{ code: "ai_not_configured" }`
+   * means the school's tenant has no AI provider set up at all — not a
+   * transient failure, so the message must not suggest retrying (unlike
+   * every other branch above, which does).
+   *
+   * B10 follow-up (adversarial fix round): this helper is SHARED by
+   * exam-review, bank-list, and ai-review-queue — none of which show a
+   * photo. The old wording ("Escribe la pregunta o guarda la foto tal
+   * cual.") only makes sense on bank-new's photo tab, so the helper now
+   * returns the neutral half only; bank-new appends its own photo-specific
+   * sentence on top (see bank-new.component.spec.ts's B10 test).
+   */
+  it('returns the neutral ai-not-configured wording for a 503 carrying { code: "ai_not_configured" }, without suggesting a retry', () => {
+    const error = new HttpErrorResponse({
+      status: 503,
+      error: { code: 'ai_not_configured', message: 'AI is not configured for this tenant' },
+    });
+
+    const message = extractErrorMessage(error);
+    expect(message).toBe('La IA no está habilitada en este colegio.');
+    expect(message.toLowerCase()).not.toContain('inténtalo de nuevo');
+    // Photo-specific wording is bank-new's own responsibility, not this
+    // shared helper's — exam-review/bank-list/ai-review-queue never show a
+    // photo tab.
+    expect(message).not.toContain('foto');
+  });
+
+  it('falls back to the generic 5xx wording for a 503 that does NOT carry the ai_not_configured code', () => {
+    const error = new HttpErrorResponse({
+      status: 503,
+      error: { message: 'Service Unavailable' },
+    });
+
+    expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+  });
 });

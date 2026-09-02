@@ -153,6 +153,47 @@ describe('buildQuestionTree', () => {
   it('returns an empty array for an empty summary (no empty branches rendered)', () => {
     expect(buildQuestionTree([], new Map(), COURSE_NAMES, TOPIC_NAMES)).toEqual([]);
   });
+
+  it("exposes a topic's gradeLevel once its questions are loaded (D2b — needed to disambiguate same-named topics)", () => {
+    const loaded = new Map<string, readonly BankQuestion[]>([
+      ['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1', gradeLevel: 'secundaria_5' })]],
+    ]);
+
+    const tree = buildQuestionTree(COUNTS, loaded, COURSE_NAMES, TOPIC_NAMES);
+    const fracciones = tree
+      .find((c) => c.courseId === 'c1')
+      ?.topics.find((t) => t.topicId === 't1');
+
+    expect(fracciones?.gradeLevel).toBe('secundaria_5');
+  });
+
+  it('leaves gradeLevel null for a topic never expanded — grade is unknown until the first page loads', () => {
+    const tree = buildQuestionTree(COUNTS, new Map(), COURSE_NAMES, TOPIC_NAMES);
+    const fracciones = tree
+      .find((c) => c.courseId === 'c1')
+      ?.topics.find((t) => t.topicId === 't1');
+
+    expect(fracciones?.gradeLevel).toBeNull();
+  });
+
+  it('leaves gradeLevel null when the loaded page mixes grades — a wrong suffix is worse than none (audit #15)', () => {
+    const loaded = new Map<string, readonly BankQuestion[]>([
+      [
+        't1',
+        [
+          q({ id: 'q1', courseId: 'c1', topicId: 't1', gradeLevel: 'secundaria_5' }),
+          q({ id: 'q2', courseId: 'c1', topicId: 't1', gradeLevel: 'secundaria_4' }),
+        ],
+      ],
+    ]);
+
+    const tree = buildQuestionTree(COUNTS, loaded, COURSE_NAMES, TOPIC_NAMES);
+    const fracciones = tree
+      .find((c) => c.courseId === 'c1')
+      ?.topics.find((t) => t.topicId === 't1');
+
+    expect(fracciones?.gradeLevel).toBeNull();
+  });
 });
 
 describe('filterQuestionTree', () => {

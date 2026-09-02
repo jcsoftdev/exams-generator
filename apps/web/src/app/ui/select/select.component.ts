@@ -57,6 +57,9 @@ interface SelectListItem<T> {
         [attr.aria-controls]="listboxId"
         [attr.aria-activedescendant]="open() ? optionId(highlightedIndex()) : null"
         [attr.aria-labelledby]="label() ? labelId : null"
+        [attr.aria-required]="required() ? 'true' : null"
+        [attr.aria-invalid]="error() ? 'true' : null"
+        [attr.aria-describedby]="error() ? errorId : null"
         [disabled]="disabled()"
         (click)="toggleOpen()"
         (keydown)="onTriggerKeydown($event)"
@@ -104,7 +107,9 @@ interface SelectListItem<T> {
       }
     </div>
     @if (error()) {
-      <p data-testid="select-error" class="mt-1 text-sm text-hard-text">{{ error() }}</p>
+      <p [id]="errorId" data-testid="select-error" class="mt-1 text-sm text-hard-text">
+        {{ error() }}
+      </p>
     }
   `,
 })
@@ -117,12 +122,16 @@ export class SelectComponent<T = string> {
   readonly placeholder = input<string>();
   readonly disabled = input(false);
   readonly error = input<string>();
+  /** D4 (audit M11): "ningún campo marca `required`" — programmatic, not just visual/copy. */
+  readonly required = input(false);
 
   private readonly elementRef: ElementRef<HTMLElement> = inject(ElementRef);
 
   protected readonly instanceId = `ui-select-${SelectComponent.instanceCounter++}`;
   protected readonly listboxId = `${this.instanceId}-listbox`;
   protected readonly labelId = `${this.instanceId}-label`;
+  /** D4: mirrors `ui-input`'s `errorId` — links the trigger to the error text via `aria-describedby`. */
+  protected readonly errorId = `${this.instanceId}-error`;
 
   protected readonly open = signal(false);
   protected readonly highlightedIndex = signal(-1);

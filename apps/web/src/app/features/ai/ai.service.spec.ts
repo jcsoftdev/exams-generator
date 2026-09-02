@@ -3,7 +3,12 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { TimeoutError } from 'rxjs';
-import { AiQuestionCrop, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
+import {
+  AiExtractedQuestion,
+  AiQuestionCrop,
+  Difficulty,
+  NormalizedBoxDto,
+} from '@exams-generator/shared';
 import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
 import {
@@ -339,12 +344,12 @@ describe('AiService', () => {
   describe('extractQuestionFromImage', () => {
     it('POSTs a multipart FormData with the image under "file" and resolves with the extracted question', () => {
       const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
-      const extracted: AiRevisedQuestion = {
+      const extracted: AiExtractedQuestion = {
         bodyTypst: 'extracted body',
         alternatives: ['a', 'b', 'c', 'd', 'e'],
         correctAnswer: '2',
       };
-      let result: AiRevisedQuestion | undefined;
+      let result: AiExtractedQuestion | undefined;
 
       service.extractQuestionFromImage(image).subscribe((response) => (result = response));
 
@@ -358,6 +363,32 @@ describe('AiService', () => {
       req.flush(extracted);
 
       expect(result).toEqual(extracted);
+    });
+
+    /**
+     * B2 (client timeout audit): unlike the two streaming calls above, this
+     * was a bare `http.post` with nothing bounding how long it could hang —
+     * DeepSeek Vision extraction normally takes 25-50s, so 120s gives ample
+     * margin while still surfacing a TimeoutError instead of hanging forever
+     * on a silently dropped connection.
+     */
+    it('errors with a TimeoutError when no response arrives within 120s', () => {
+      vi.useFakeTimers();
+      try {
+        const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
+        let capturedError: unknown;
+        service
+          .extractQuestionFromImage(image)
+          .subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/extract`);
+
+        vi.advanceTimersByTime(120_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
     });
   });
 
@@ -377,6 +408,26 @@ describe('AiService', () => {
       req.flush(crop);
 
       expect(result).toEqual(crop);
+    });
+
+    /** B2: a hand-drawn re-crop is a much lighter/faster operation than a full extraction — 30s is generous. */
+    it('errors with a TimeoutError when no response arrives within 30s', () => {
+      vi.useFakeTimers();
+      try {
+        const box: NormalizedBoxDto = { x: 0.1, y: 0.2, w: 0.3, h: 0.4 };
+        let capturedError: unknown;
+        service
+          .recropExtraction('extraction-1', box)
+          .subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/extract/extraction-1/crop`);
+
+        vi.advanceTimersByTime(30_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
     });
   });
 

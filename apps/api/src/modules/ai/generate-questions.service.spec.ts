@@ -4,7 +4,7 @@ import { firstValueFrom, toArray } from "rxjs";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
-import { AiInvalidResponseError } from "./domain/ports/question-generator.port";
+import { AiInvalidResponseError, AiNotConfiguredError } from "./domain/ports/question-generator.port";
 import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
 
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
@@ -189,6 +189,26 @@ describe("GenerateQuestionsService.generateQuestions", () => {
     expect(result.created).toHaveLength(1);
     expect(result.failed).toEqual([expect.objectContaining({ index: 0 })]);
   });
+
+  it('tags a failed item with code: "ai_not_configured" when the AI provider is not configured, instead of a bare message the client can only string-match', async () => {
+    const { service, generator } = buildDeps();
+    generator.generate.mockRejectedValueOnce(new AiNotConfiguredError("AI_MODEL env var is not set."));
+
+    const result = await service.generateQuestions(TEACHER_USER, { ...VALID_DTO, count: 1 });
+
+    expect(result.failed).toEqual([
+      expect.objectContaining({ index: 0, code: "ai_not_configured", error: "AI_MODEL env var is not set." }),
+    ]);
+  });
+
+  it("does NOT tag code on a failure from a different cause (e.g. invalid AI response)", async () => {
+    const { service, generator } = buildDeps();
+    generator.generate.mockRejectedValueOnce(new AiInvalidResponseError("bad json", "{}"));
+
+    const result = await service.generateQuestions(TEACHER_USER, { ...VALID_DTO, count: 1 });
+
+    expect(result.failed[0]?.code).toBeUndefined();
+  });
 });
 
 describe("GenerateQuestionsService.generateQuestionStream", () => {
@@ -232,6 +252,18 @@ describe("GenerateQuestionsService.generateQuestionStream", () => {
 
     expect(events).toEqual([
       { type: "done", result: { created: [], failed: [{ index: 0, error: "bad json" }] } },
+    ]);
+  });
+
+  it('emits a done/failed event tagged with code: "ai_not_configured" when the AI provider is not configured, instead of an indistinguishable generic failure', async () => {
+    const { service, generator } = buildDeps();
+    generator.generate.mockRejectedValue(new AiNotConfiguredError("AI_MODEL env var is not set."));
+
+    const events = await collect(service, STREAM_DTO);
+
+    const last = events[events.length - 1] as GenerateQuestionStreamEvent & { type: "done" };
+    expect(last.result.failed).toEqual([
+      expect.objectContaining({ index: 0, code: "ai_not_configured", error: "AI_MODEL env var is not set." }),
     ]);
   });
 

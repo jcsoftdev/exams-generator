@@ -36,6 +36,15 @@ export type GenerationJobStatus = (typeof GENERATION_JOB_STATUSES)[number];
 export interface GenerationJobFailedItem {
   readonly index: number;
   readonly error: string;
+  /**
+   * A stable machine-readable reason, present only for failure causes a
+   * client needs to react to differently than "show the message" — today
+   * only `"ai_not_configured"` (the deployment is missing `AI_MODEL`/
+   * `AI_API_KEY`, or has an invalid `AI_THINKING`/`AI_RESPONSE_FORMAT`),
+   * absent for every other failure. Additive and backwards-compatible: an
+   * older client that doesn't read this field still gets `error` unchanged.
+   */
+  readonly code?: string;
 }
 
 /**
@@ -111,6 +120,8 @@ export interface GenerateQuestionsCreatedItem {
 export interface GenerateQuestionsFailedItem {
   readonly index: number;
   readonly error: string;
+  /** Same contract as `GenerationJobFailedItem.code` — see its docstring. */
+  readonly code?: string;
 }
 
 /**
@@ -157,8 +168,13 @@ export type GenerateQuestionStreamEvent =
  * `string | undefined` here to match what actually crosses the wire.
  *
  * `alternatives` is left as a loose `readonly string[]`, not the port's
- * exactly-5 `GeneratedAlternatives` tuple, even though the API always sends
- * exactly 5 (`openrouter-response-validator.ts` rejects anything else) —
+ * exactly-5 `GeneratedAlternatives` tuple. For `revise`/`generate` the API
+ * DOES always send exactly 5 (`openrouter-response-validator.ts`'s
+ * `validateGeneratedQuestionShape` rejects anything else) — but this same
+ * field is inherited unchanged by `AiExtractedQuestion` below, whose
+ * `extract` response may legitimately carry FEWER than 5, even an empty
+ * array (`validateExtractedQuestionShape` — see `AiExtractedQuestion`'s own
+ * docstring), so a tuple type here would be wrong for that caller. Also:
  * the bank feature's own AI-revise/extract test fixtures
  * (`bank-list.component.spec.ts`, `bank-new.component.spec.ts`) construct
  * `AiRevisedQuestion` values with 2-element arrays via `satisfies
@@ -197,7 +213,13 @@ export interface AiQuestionCrop {
   readonly box: NormalizedBoxDto;
 }
 
-/** A crop belonging to one alternative slot. `alternativeIndex` is 0-based. */
+/**
+ * A crop belonging to one alternative slot. `alternativeIndex` is 0-based
+ * and ALWAYS `< AiExtractedQuestion.alternatives.length` — the API drops any
+ * crop whose marker/figure band the transcription didn't confirm an
+ * alternative for, so the client never has to guard against an index with
+ * no matching entry in `alternatives`.
+ */
 export interface AiAlternativeCrop extends AiQuestionCrop {
   readonly alternativeIndex: number;
 }
@@ -213,8 +235,21 @@ export interface AiAlternativeCrop extends AiQuestionCrop {
  * re-crop (i.e. whenever `figureCrop`/`alternativeCrops` are present); a
  * text-only extraction never populates it, since there is nothing to hold a
  * cache entry open for.
+ *
+ * `correctAnswer` OVERRIDES `AiRevisedQuestion`'s (via `Omit`, since
+ * TypeScript won't let `extends` narrow-then-widen a property in place) to
+ * `string | null`: extraction transcribes a PHOTO, and the photo may show
+ * alternatives with no visible/inferable correct answer at all — the API
+ * responds `null` rather than inventing a key (see `ExtractedQuestion` in
+ * the API's `domain/ports/question-generator.port.ts`, the port type this
+ * shape mirrors). `revise`'s `correctAnswer` stays non-null: an existing
+ * bank question always already has a key. Same reasoning extends to
+ * `alternatives` (inherited from `AiRevisedQuestion` unchanged, already a
+ * loose `readonly string[]`) — extraction may return FEWER than 5, even an
+ * empty array, when the photo shows fewer; it never pads or invents up to 5.
  */
-export interface AiExtractedQuestion extends AiRevisedQuestion {
+export interface AiExtractedQuestion extends Omit<AiRevisedQuestion, "correctAnswer"> {
+  readonly correctAnswer: string | null;
   readonly figureCrop?: AiQuestionCrop;
   /**
    * Sparse — only the alternatives that are drawings appear here, at most ONE

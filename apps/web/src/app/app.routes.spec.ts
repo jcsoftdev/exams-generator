@@ -9,6 +9,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { BankListComponent } from './features/bank/bank-list/bank-list.component';
 import { BankNewComponent } from './features/bank/bank-new/bank-new.component';
+import { bankNewLeaveGuard } from './features/bank/bank-new/bank-new-leave.guard';
 import { ExamListComponent } from './features/exams/exam-list/exam-list.component';
 import { ExamVersionsPanelComponent } from './features/exam-versions/exam-versions-panel/exam-versions-panel.component';
 import { ExamBuilderComponent } from './features/exams/exam-builder/exam-builder.component';
@@ -52,6 +53,12 @@ describe('app routes', () => {
     const appRoute = routes.find((route) => route.path === 'app');
     const bankNewRoute = appRoute?.children?.find((route) => route.path === 'bank/new');
     expect(bankNewRoute).toBeTruthy();
+  });
+
+  it('guards /app/bank/new with bankNewLeaveGuard so an unsaved question cannot be navigated away from silently', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const bankNewRoute = appRoute?.children?.find((route) => route.path === 'bank/new');
+    expect(bankNewRoute?.canDeactivate).toEqual([bankNewLeaveGuard]);
   });
 
   it('registers an exam versions panel route under the protected /app shell', () => {

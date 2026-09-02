@@ -20,6 +20,7 @@ import { ChangeDetectionStrategy, Component, input, model } from '@angular/core'
       [attr.aria-label]="label() ? null : ariaLabel() || null"
       [attr.aria-describedby]="error() ? errorId : null"
       [attr.aria-invalid]="error() ? 'true' : null"
+      [attr.aria-required]="required() ? 'true' : null"
       [disabled]="disabled()"
       [value]="value()"
       (input)="onInput($event)"
@@ -42,6 +43,8 @@ export class InputComponent {
   readonly error = input<string>();
   readonly disabled = input(false);
   readonly name = input<string>();
+  /** D4 (audit M11): "ningún campo marca `required`" — programmatic, not just visual/copy. */
+  readonly required = input(false);
   /**
    * Invisible accessible name, for controls whose context is only visual — the
    * builder grid's 1,656 cell inputs, where a visible `label` would print text

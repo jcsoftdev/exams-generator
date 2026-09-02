@@ -18,54 +18,18 @@
       data-testid="tab-photo-panel"
       class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4"
     >
-      <div data-testid="photo-grade-select">
-        <ui-select
-          label="Grado"
-          [options]="gradeLevelOptions"
-          [value]="pGradeLevel()"
-          (valueChange)="pGradeLevel.set($event)"
-          placeholder="Elige un grado"
-        ></ui-select>
-      </div>
-      <div data-testid="photo-course-select">
-        <ui-select
-          label="Curso"
-          [placeholder]="pGradeLevel() ? 'Elige un curso' : 'Primero elige un grado'"
-          [options]="pCourseOptions()"
-          [value]="pCourseId()"
-          [disabled]="!pGradeLevel()"
-          (valueChange)="pCourseId.set($event ?? '')"
-        ></ui-select>
-      </div>
-      <div data-testid="photo-topic-select">
-        <ui-select
-          label="Tema"
-          [placeholder]="pCourseId() ? 'Elige un tema' : 'Primero elige un curso'"
-          [options]="pTopicOptions()"
-          [value]="pTopicId()"
-          [disabled]="!pCourseId()"
-          (valueChange)="pTopicId.set($event ?? '')"
-        ></ui-select>
-      </div>
-      <ui-select
-        label="Nivel"
-        [options]="difficultyOptions"
-        [value]="pDifficulty()"
-        (valueChange)="pDifficulty.set($event)"
-        placeholder="Elige"
-      ></ui-select>
-      <ui-input
-        label="Clave (respuesta correcta)"
-        [value]="pCorrectAnswer()"
-        (valueChange)="pCorrectAnswer.set($event)"
-      ></ui-input>
-
       <div data-testid="image-upload" class="flex flex-col gap-2">
         <span class="text-sm font-medium text-n700">Imagen del enunciado</span>
         <label
           class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
         >
-          <input type="file" accept="image/*" class="sr-only" (change)="onImageSelected($event)" />
+          <input
+            type="file"
+            accept="image/*"
+            class="sr-only"
+            [disabled]="extracting()"
+            (change)="onImageSelected($event)"
+          />
           @if (pImagePreviewUrl()) {
             <img
               data-testid="image-upload-preview"
@@ -91,6 +55,41 @@
         </label>
       </div>
 
+      <div data-testid="photo-grade-select">
+        <ui-select
+          label="Grado"
+          [required]="true"
+          [options]="gradeLevelOptions"
+          [value]="pGradeLevel()"
+          (valueChange)="pGradeLevel.set($event)"
+          placeholder="Elige un grado"
+        ></ui-select>
+      </div>
+
+      <div data-testid="extract-with-ai">
+        <ui-button
+          variant="primary"
+          [loading]="extracting()"
+          [disabled]="!photoTaxonomyValid() || extracting()"
+          [ariaDescribedBy]="!photoTaxonomyValid() ? 'extract-helper-text' : undefined"
+          (clicked)="extractWithAi()"
+        >
+          <span class="flex items-center gap-1">
+            <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
+            Extraer con IA
+          </span>
+        </ui-button>
+      </div>
+      @if (!photoTaxonomyValid()) {
+        <p id="extract-helper-text" data-testid="extract-helper" class="text-xs text-n500">
+          Necesita grado e imagen. Lee el enunciado, las alternativas y la clave por ti.
+        </p>
+      }
+      @if (extracting()) {
+        <p data-testid="extract-progress" class="text-xs text-n500">
+          Leyendo la foto… puede tardar hasta un minuto.
+        </p>
+      }
       @if (extractError()) {
         <p
           data-testid="extract-error"
@@ -100,33 +99,63 @@
           {{ extractError() }}
         </p>
       }
+
+      <div data-testid="photo-course-select">
+        <ui-select
+          label="Curso"
+          [required]="true"
+          [placeholder]="pGradeLevel() ? 'Elige un curso' : 'Primero elige un grado'"
+          [options]="pCourseOptions()"
+          [value]="pCourseId()"
+          [disabled]="!pGradeLevel()"
+          (valueChange)="pCourseId.set($event ?? '')"
+        ></ui-select>
+      </div>
+      <div data-testid="photo-topic-select">
+        <ui-select
+          label="Tema"
+          [required]="true"
+          [placeholder]="pCourseId() ? 'Elige un tema' : 'Primero elige un curso'"
+          [options]="pTopicOptions()"
+          [value]="pTopicId()"
+          [disabled]="!pCourseId()"
+          (valueChange)="pTopicId.set($event ?? '')"
+        ></ui-select>
+      </div>
+      <div data-testid="photo-difficulty-select">
+        <ui-select
+          label="Nivel"
+          [required]="true"
+          [options]="difficultyOptions"
+          [value]="pDifficulty()"
+          (valueChange)="pDifficulty.set($event)"
+          placeholder="Elige"
+        ></ui-select>
+      </div>
+      <div data-testid="photo-correct-answer-input">
+        <ui-input
+          label="Clave (respuesta correcta)"
+          [required]="true"
+          [value]="pCorrectAnswer()"
+          (valueChange)="pCorrectAnswer.set($event)"
+        ></ui-input>
+      </div>
+
       @if (!photoValid()) {
-        <p data-testid="photo-validation" class="text-xs text-hard-text">
-          Completa grado, curso, tema, nivel, clave e imagen para poder guardar.
+        <p id="photo-validation-hint" data-testid="photo-validation" class="text-xs text-hard-text">
+          Falta: {{ photoMissingFields() }}
         </p>
       }
       <div class="flex flex-wrap gap-2">
         <div data-testid="photo-submit">
           <ui-button
-            variant="primary"
+            variant="ghost"
             [loading]="saving()"
             [disabled]="!photoValid()"
+            [ariaDescribedBy]="!photoValid() ? 'photo-validation-hint' : undefined"
             (clicked)="submitPhoto()"
-            >Guardar pregunta</ui-button
+            >Guardar foto tal cual</ui-button
           >
-        </div>
-        <div data-testid="extract-with-ai">
-          <ui-button
-            variant="ghost"
-            [loading]="extracting()"
-            [disabled]="!photoTaxonomyValid() || extracting()"
-            (clicked)="extractWithAi()"
-          >
-            <span class="flex items-center gap-1">
-              <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
-              Extraer con IA
-            </span>
-          </ui-button>
         </div>
       </div>
     </div>
@@ -135,9 +164,18 @@
       data-testid="tab-structured-panel"
       class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4"
     >
+      @if (extractReviewNotice()) {
+        <p
+          data-testid="extract-review-notice"
+          class="rounded-field bg-tint-bg px-3 py-2 text-sm text-tint-text"
+        >
+          La IA leyó la foto. Revisa el enunciado, las alternativas y la clave antes de guardar.
+        </p>
+      }
       <div data-testid="structured-grade-select">
         <ui-select
           label="Grado"
+          [required]="true"
           [options]="gradeLevelOptions"
           [value]="sGradeLevel()"
           (valueChange)="sGradeLevel.set($event)"
@@ -147,6 +185,7 @@
       <div data-testid="structured-course-select">
         <ui-select
           label="Curso"
+          [required]="true"
           [placeholder]="sGradeLevel() ? 'Elige un curso' : 'Primero elige un grado'"
           [options]="sCourseOptions()"
           [value]="sCourseId()"
@@ -157,6 +196,7 @@
       <div data-testid="structured-topic-select">
         <ui-select
           label="Tema"
+          [required]="true"
           [placeholder]="sCourseId() ? 'Elige un tema' : 'Primero elige un curso'"
           [options]="sTopicOptions()"
           [value]="sTopicId()"
@@ -164,36 +204,59 @@
           (valueChange)="sTopicId.set($event ?? '')"
         ></ui-select>
       </div>
-      <ui-select
-        label="Nivel"
-        [options]="difficultyOptions"
-        [value]="sDifficulty()"
-        (valueChange)="sDifficulty.set($event)"
-        placeholder="Elige"
-      ></ui-select>
+      @if (showAiTaxonomyHint()) {
+        <p data-testid="ai-taxonomy-hint" class="text-xs text-tint-text">
+          {{ aiTaxonomyHint() }}
+        </p>
+      }
+      <div data-testid="structured-difficulty-select">
+        <ui-select
+          label="Nivel"
+          [required]="true"
+          [options]="difficultyOptions"
+          [value]="sDifficulty()"
+          (valueChange)="sDifficulty.set($event)"
+          placeholder="Elige"
+        ></ui-select>
+      </div>
       <label class="text-sm text-n700"
         >Enunciado
         <textarea
+          #bodyTextarea
+          data-testid="structured-body-textarea"
           class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
           rows="3"
           [value]="sBody()"
           (input)="sBody.set($any($event.target).value)"
         ></textarea>
       </label>
+      @if (extractNoAlternatives()) {
+        <p
+          data-testid="extract-no-alternatives"
+          class="rounded-field bg-tint-bg px-3 py-2 text-sm text-tint-text"
+        >
+          La foto no trae alternativas. Escríbelas una por línea.
+        </p>
+      }
       <label class="text-sm text-n700"
         >Alternativas (una por línea)
         <textarea
+          #alternativesTextarea
+          data-testid="structured-alternatives-textarea"
           class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
           rows="4"
           [value]="sAlternatives()"
           (input)="sAlternatives.set($any($event.target).value)"
         ></textarea>
       </label>
-      <ui-input
-        label="Clave (a/b/c/d)"
-        [value]="sCorrectAnswer()"
-        (valueChange)="sCorrectAnswer.set($event)"
-      ></ui-input>
+      <div data-testid="structured-correct-answer-input">
+        <ui-input
+          label="Clave (a–e)"
+          [required]="true"
+          [value]="sCorrectAnswer()"
+          (valueChange)="sCorrectAnswer.set($event)"
+        ></ui-input>
+      </div>
 
       <div data-testid="structured-image-upload" class="flex flex-col gap-2">
         <span class="text-sm font-medium text-n700">Imagen complementaria (opcional)</span>
@@ -242,21 +305,30 @@
           (recrop)="onRecrop($event)"
           (discard)="onDiscard($event)"
         />
-        @if (extractError()) {
-          <p
-            data-testid="extract-error"
-            class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
-            role="alert"
-          >
-            {{ extractError() }}
-          </p>
-        }
+      }
+      @if (extractError()) {
+        <!--
+          Deliberately OUTSIDE the crop-review `@if` above: a recrop error
+          must stay visible even after the teacher discards the LAST crop
+          slot (cropSlots().length drops to 0), since discarding a slot is
+          not "resolving" whatever went wrong recropping it.
+        -->
+        <p
+          data-testid="extract-error"
+          class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+          role="alert"
+        >
+          {{ extractError() }}
+        </p>
       }
 
       @if (!structuredValid()) {
-        <p data-testid="structured-validation" class="text-xs text-hard-text">
-          Completa grado, curso, tema, nivel, enunciado, al menos 2 alternativas y la clave para
-          poder guardar.
+        <p
+          id="structured-validation-hint"
+          data-testid="structured-validation"
+          class="text-xs text-hard-text"
+        >
+          Falta: {{ structuredMissingFields() }}
         </p>
       }
       <div data-testid="structured-submit">
@@ -264,6 +336,7 @@
           variant="primary"
           [loading]="saving()"
           [disabled]="!structuredValid()"
+          [ariaDescribedBy]="!structuredValid() ? 'structured-validation-hint' : undefined"
           (clicked)="submitStructured()"
           >Guardar pregunta</ui-button
         >

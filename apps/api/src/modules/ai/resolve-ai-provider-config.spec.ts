@@ -1,4 +1,5 @@
 import { resolveAiProviderConfig } from "./resolve-ai-provider-config";
+import { AiNotConfiguredError } from "./domain/ports/question-generator.port";
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
@@ -89,6 +90,12 @@ describe("resolveAiProviderConfig", () => {
     ).toThrow(/AI_RESPONSE_FORMAT/);
   });
 
+  it("rejects an unknown AI_RESPONSE_FORMAT as AiNotConfiguredError — a config typo, not a runtime failure, so it must map to the same 503 as a missing key rather than a generic 500", () => {
+    expect(() =>
+      resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k", AI_RESPONSE_FORMAT: "yaml" }),
+    ).toThrow(AiNotConfiguredError);
+  });
+
   it("leaves thinking undefined when AI_THINKING is unset, so the field is never sent", () => {
     expect(resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k" }).thinking).toBeUndefined();
   });
@@ -102,6 +109,12 @@ describe("resolveAiProviderConfig", () => {
   it("rejects an unknown AI_THINKING value", () => {
     expect(() => resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k", AI_THINKING: "maybe" })).toThrow(
       /AI_THINKING/,
+    );
+  });
+
+  it("rejects an unknown AI_THINKING value as AiNotConfiguredError — same reasoning as AI_RESPONSE_FORMAT above", () => {
+    expect(() => resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "k", AI_THINKING: "maybe" })).toThrow(
+      AiNotConfiguredError,
     );
   });
 });

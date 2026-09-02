@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Role } from '@exams-generator/shared';
 import { authGuard } from './core/auth/auth.guard';
 import { roleGuard } from './core/auth/role.guard';
+import { bankNewLeaveGuard } from './features/bank/bank-new/bank-new-leave.guard';
 import { EXAMS_ROLES } from './features/exams/exams.roles';
 import { LoginComponent } from './features/login/login.component';
 import { AuthCallbackComponent } from './features/auth-callback/auth-callback.component';
@@ -50,6 +51,7 @@ export const routes: Routes = [
         path: 'bank/new',
         loadComponent: () =>
           import('./features/bank/bank-new/bank-new.component').then((m) => m.BankNewComponent),
+        canDeactivate: [bankNewLeaveGuard],
         title: `Nueva pregunta${TITLE_SUFFIX}`,
       },
       // The backend exams controller is @Roles(Teacher, SchoolAdmin) — any

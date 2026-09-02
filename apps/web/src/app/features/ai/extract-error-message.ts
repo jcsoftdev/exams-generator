@@ -1,6 +1,15 @@
 import { HttpErrorResponse } from '@angular/common/http';
 
 /**
+ * The exact neutral wording `extractErrorMessage` returns for a 503
+ * `{ code: "ai_not_configured" }` — exported so bank-new can compare
+ * against it and append its own photo-specific sentence, without either
+ * side hardcoding a copy of the other's string (see the doc comment on
+ * `extractErrorMessage` below).
+ */
+export const AI_NOT_CONFIGURED_MESSAGE = 'La IA no está habilitada en este colegio.';
+
+/**
  * Normalizes the two 400 body shapes `PATCH /bank/questions/:id` can send
  * (see apps/api/src/modules/bank/bank.service.ts `editDraftQuestion`):
  *   - `BadRequestException(validation.errors)` → body IS the array itself
@@ -32,6 +41,25 @@ export function extractErrorMessage(
   fallback = 'No se pudo guardar la pregunta. Inténtalo de nuevo.',
 ): string {
   const body = error.error as unknown;
+
+  // B10 (audit A2, web half): a 503 with `{ code: "ai_not_configured" }`
+  // means the school's tenant never set up an AI provider at all — not a
+  // transient failure, so this is checked FIRST and returns dedicated
+  // wording that does NOT invite a retry, unlike every other branch below.
+  //
+  // This helper is SHARED by exam-review, bank-list, ai-review-queue and
+  // bank-new — only bank-new has a photo tab, so the sentence steering the
+  // teacher to "write it or keep the photo as-is" belongs there, not here.
+  // Returns the neutral half only; bank-new appends its own photo-specific
+  // sentence on top (see bank-new.component.ts `extractWithAi`).
+  if (
+    error.status === 503 &&
+    body &&
+    typeof body === 'object' &&
+    (body as { code?: unknown }).code === 'ai_not_configured'
+  ) {
+    return AI_NOT_CONFIGURED_MESSAGE;
+  }
 
   if (Array.isArray(body)) {
     return body.join(', ');

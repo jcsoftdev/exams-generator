@@ -233,3 +233,45 @@ Con `AI_BASE_URL=https://api.deepseek.com/chat/completions`, `AI_MODEL=deepseek-
 
 - Dos preguntas nuevas en la DB local: `Genética y herencia` (biología, texto) y `Electricidad y magnetismo` id `ce72935a-8875-4ccd-be9b-a905537ad2aa` (circuito, con imagen). Ambas 5° secundaria, nivel Media.
 - El API que quedó corriendo en :3012 lo levantó la auditoría con `AI_THINKING=disabled` exportado en el shell, no desde el `.env`. Al agregar `AI_THINKING=disabled` al `.env` conviene reiniciarlo.
+
+## Addendum 2 — corrección en paralelo y segunda refutación (2026-09-02, noche)
+
+Rama `mvp/integration` (53 commits sobre `main`): cuatro líneas en worktrees (A api, B bank-new, C crop-review, D bank-list + ui), cada ítem con su test de feature en rojo antes del código, merge, un refutador opus por línea sobre el diff integrado, y una ronda de corrección con los hallazgos de esa revisión.
+
+**Cerrados del informe original:** H1, H2, H3, H6, M1, M2 (parcial: copy sigue diciendo "arrastra" con drop implementado), M3, M4, M5, M6, M7, M11, M12, M13, L1, L3, L4 (parcial: grado solo tras expandir el tema, el resumen del API no trae `gradeLevel`), L9, L10, L11 (409 → "Ya existe una pregunta idéntica en el banco.").
+**Abiertos:** M8, M9, M10, M14 (VoiceOver), L5, L6, L7, L8, y el `TODO(api)` de exponer `gradeLevel` en `TopicListItem`.
+
+### Ledger de la segunda refutación (hallazgos sobre el diff, todos corregidos)
+
+| Línea | Hallazgo | Corrección |
+|---|---|---|
+| A | Clave fuera de rango aceptada (`alternatives: []`, `correctAnswer: "c"`) | validador y servicio exigen índice < largo, o `null` |
+| A | `ai_not_configured` no llegaba a generar/stream ni a jobs | `code` en `failed[]` del stream y del job, e2e propio |
+| A | Validador de extracción sin tests; e2e mockeaba el puerto | tests a nivel adapter con `httpClient` stub |
+| A | Boot callaba errores de `AI_THINKING`/`AI_RESPONSE_FORMAT` | todos son `AiNotConfiguredError` → 503 y WARN |
+| A | `alternativeCrops` con índices sin alternativa | se descartan |
+| B | Extracción stale pisaba una foto ya reemplazada | token por `File`, input deshabilitado mientras extrae |
+| B | Segunda extracción del mismo grado conservaba Curso/Tema viejos y ocultaba el hint | ids resueltos se aplican explícitamente; sin match se limpian |
+| B | Guard de salida ignoraba el tab Foto | cubre foto, alternativas, clave, imagen |
+| B | Mensaje 503 con "guarda la foto" en pantallas sin foto | helper neutro, bank-new agrega su remedio |
+| B | Clave precargada con `alternatives: []`; sin chequeo de rango | clave vacía, "clave fuera de rango" en el hint |
+| B | Errores de guardado tragaban el mensaje del servidor | `extractErrorMessage` + 409 específico |
+| B | Avisos no se limpiaban, anuncio doble, timeout de recrop sin copy, latch sin reset, tests vacíos | corregidos, 35 tests nuevos |
+| C | Wrappers de 44 px tapaban el arrastre en cajas chicas | tamaño acotado a `boxDim − 24`, mínimo 8 |
+| C | Enter sin edición disparaba un recrop vacío; `keyBox` stale; un solo pendiente para todos los slots; `aria-label` igual en todos | pendientes por slot en `Map`, limpiados al arrastrar o cambiar slots |
+| D | `createdQuestionId` se releía en F5/atrás | consumido con `replaceState` |
+| D | Timers sin `DestroyRef`; `getQuestion` doble; highlight antes de que exista la fila | corregidos |
+| D | "Pregunta con imagen" para preguntas structured vacías | solo `type === 'image'` |
+| D | Anunciador silencioso con mensajes repetidos; `role="status"` con `assertive` | marcador de revisión; rol según cortesía |
+| D | Primitivas `required`/`ariaDescribedBy` sin uso | cableadas en bank-new |
+
+### Verificación final en `mvp/integration`
+
+| Suite | Resultado |
+|---|---|
+| API unit (`non-e2e`) | 127 suites, 1329 tests |
+| API e2e (`ai` + `bank`, Postgres/MinIO/Redis reales) | 15 suites, 98 tests |
+| Web (`ng test`) | 79 archivos, 1029 tests |
+| Web typecheck + eslint | limpios |
+| API typecheck | falla solo por `packages/shared/dist` desactualizado (`AiExtractedQuestion` nuevo); requiere recompilar `shared` |
+| Browser (Playwright MCP, DeepSeek V4 real) | foto con circuito → extracción sin alternativas inventadas, aviso, sugerencia de taxonomía, recorte por teclado + recrop 200, 409 con mensaje correcto, guardado 201 + imagen 201, banner y anuncio en el banco |

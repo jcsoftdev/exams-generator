@@ -3,6 +3,7 @@ import {
   OpenRouterResponseFormatMode,
   OpenRouterThinkingMode,
 } from "./adapters/openrouter/openrouter-request-builder";
+import { AiNotConfiguredError } from "./domain/ports/question-generator.port";
 
 /** OpenRouter stays the default so no existing deployment has to set a base url. */
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
@@ -41,14 +42,14 @@ function readNonBlank(env: AiProviderEnv, name: string): string | undefined {
 export function resolveAiProviderConfig(env: AiProviderEnv): OpenRouterAdapterConfig {
   const model = readNonBlank(env, "AI_MODEL");
   if (!model) {
-    throw new Error(
+    throw new AiNotConfiguredError(
       "AI_MODEL env var is not set. Set it to a model id your provider serves (see infra/env.example) — the model is never hardcoded because provider model lists rotate.",
     );
   }
 
   const apiKey = readNonBlank(env, "AI_API_KEY") ?? readNonBlank(env, "OPENROUTER_API_KEY");
   if (!apiKey) {
-    throw new Error(
+    throw new AiNotConfiguredError(
       "No API key set. Set AI_API_KEY (any OpenAI-compatible provider), or OPENROUTER_API_KEY when using OpenRouter (see infra/env.example).",
     );
   }
@@ -75,7 +76,11 @@ function readThinking(env: AiProviderEnv): OpenRouterThinkingMode | undefined {
   const raw = readNonBlank(env, "AI_THINKING");
   if (raw === undefined) return undefined;
   if ((THINKING_MODES as readonly string[]).includes(raw)) return raw as OpenRouterThinkingMode;
-  throw new Error(
+  // A config typo, not a transient provider failure — same reasoning as the
+  // missing AI_MODEL/AI_API_KEY checks above: an operator has to fix the
+  // env, a teacher retrying can never succeed. AiNotConfiguredError maps
+  // this to 503 `ai_not_configured` instead of a generic 500 at request time.
+  throw new AiNotConfiguredError(
     `AI_THINKING must be one of ${THINKING_MODES.join(", ")} (got "${raw}"); see infra/env.example.`,
   );
 }
@@ -94,7 +99,9 @@ function readResponseFormat(env: AiProviderEnv): OpenRouterResponseFormatMode {
   const raw = readNonBlank(env, "AI_RESPONSE_FORMAT");
   if (raw === undefined) return "json_schema";
   if ((RESPONSE_FORMAT_MODES as readonly string[]).includes(raw)) return raw as OpenRouterResponseFormatMode;
-  throw new Error(
+  // Same reasoning as `readThinking`'s AiNotConfiguredError above — a
+  // deployment misconfiguration, not something retrying the request fixes.
+  throw new AiNotConfiguredError(
     `AI_RESPONSE_FORMAT must be one of ${RESPONSE_FORMAT_MODES.join(", ")} (got "${raw}"). Use json_object for DeepSeek's own API (see infra/env.example).`,
   );
 }

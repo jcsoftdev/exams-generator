@@ -1,11 +1,13 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject, input, output } from '@angular/core';
+import { LiveAnnouncerService } from '../live-region/live-announcer.service';
 import { ButtonSize, ButtonVariant } from '../ui.types';
 
 /**
  * Design-system button primitive (DECISION FE-4). Presentational only —
- * no HttpClient/service injection. `clicked` is suppressed whenever
- * `disabled` or `loading` is true (DS-R2). Label/icon are supplied via
- * projected content, no default copy (DS-R7).
+ * no HttpClient/service injection [beyond `LiveAnnouncerService`, itself a
+ * presentational-safe signal bus with no HTTP of its own — see its doc].
+ * `clicked` is suppressed whenever `disabled` or `loading` is true (DS-R2).
+ * Label/icon are supplied via projected content, no default copy (DS-R7).
  */
 @Component({
   selector: 'ui-button',
@@ -16,11 +18,26 @@ import { ButtonSize, ButtonVariant } from '../ui.types';
       [attr.type]="htmlType()"
       [class]="classes()"
       [disabled]="disabled() || loading()"
-      [attr.aria-label]="ariaLabel() || null"
+      [attr.aria-label]="computedAriaLabel()"
       [attr.aria-disabled]="disabled() || loading() ? 'true' : null"
+      [attr.aria-busy]="loading() ? 'true' : null"
+      [attr.aria-describedby]="ariaDescribedBy() || null"
       (click)="onClick()"
     >
       <ng-content></ng-content>
+      @if (loading()) {
+        <!-- D3a (audit M12): loading toggled disabled but never told assistive
+             tech WHY the click did nothing and nothing else changed — no
+             aria-busy, no changed label. This is the sr-only equivalent of the
+             spinner every loading variant already shows sighted users.
+
+             Audit crop-review/button #9: when ariaLabel() IS set, this span
+             never reaches the accessible name at all — aria-label wins the
+             accname computation outright over content, sr-only or not. That
+             case is handled instead by computedAriaLabel() folding
+             ", cargando" straight into the attribute. -->
+        <span class="sr-only">Cargando…</span>
+      }
     </button>
   `,
 })
@@ -37,8 +54,55 @@ export class ButtonComponent {
    * it belongs to (audit 2026-08-15).
    */
   readonly ariaLabel = input<string>();
+  /**
+   * D4 (audit M11): "Botón deshabilitado sin vínculo a la razón" — a disabled
+   * button with a helper text nearby ("Necesita grado e imagen") has no
+   * programmatic link between the two unless something passes that hint's id
+   * through as `aria-describedby`. Passthrough only — the id itself is the
+   * caller's to own (same pattern as `ui-input`'s `errorId`).
+   */
+  readonly ariaDescribedBy = input<string>();
 
   readonly clicked = output<void>();
+
+  private readonly liveAnnouncer = inject(LiveAnnouncerService);
+
+  constructor() {
+    // Audit crop-review/button #9: `loading` already forces the native
+    // `disabled` attribute and (via `computedAriaLabel`/the sr-only span)
+    // the accessible name, but neither one is itself an INTERRUPTING signal
+    // — a screen reader only picks up a name/state change on an element it
+    // is currently focused on and re-inspects, and a disabled button often
+    // isn't. Routing through `LiveAnnouncerService` makes "the button you
+    // just pressed is now working on it" audible even then.
+    //
+    // Fires only on the FALSE -> TRUE transition: `effect()` re-runs when
+    // its tracked signal's VALUE changes, so `loading()` staying `true`
+    // across renders never re-triggers this — no duplicate announcements
+    // for as long as it stays loading.
+    effect(() => {
+      if (this.loading()) {
+        this.liveAnnouncer.announce('Cargando…');
+      }
+    });
+  }
+
+  /**
+   * The accessible name once `loading()` is folded in (audit #9). Content-
+   * based naming (no `ariaLabel()`) already gets this for free from the
+   * sr-only "Cargando…" span rendered alongside the projected content — ARIA
+   * accname concatenates them. `aria-label`, when present, instead REPLACES
+   * content in the accname computation outright, so that span is invisible
+   * to it; composing ", cargando" directly into the attribute is the only
+   * way to expose the same state change on that path.
+   */
+  protected computedAriaLabel(): string | null {
+    const label = this.ariaLabel();
+    if (!label) {
+      return null;
+    }
+    return this.loading() ? `${label}, cargando` : label;
+  }
 
   private static readonly BASE =
     'inline-flex items-center justify-center gap-2 rounded-field text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60';

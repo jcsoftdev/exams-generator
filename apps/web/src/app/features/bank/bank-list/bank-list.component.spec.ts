@@ -28,6 +28,7 @@ import { BankQuestion, BankTopicCount } from '../bank.models';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
+import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 
 function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
   return {
@@ -107,6 +108,19 @@ function setup(
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
+    /** D1: what `router.getCurrentNavigation()?.extras.state` looks like on entry. `undefined` -> no current navigation (falls back to `history.state`). */
+    getCurrentNavigationImpl?: () => unknown;
+    /**
+     * Overrides `listQuestionsPaged` directly instead of deriving it from
+     * `listImpl`'s shared `questionSource` (audit #13/#11 — needed to delay
+     * or control a SPECIFIC topic page fetch without also delaying the
+     * summary counts fetch that gates the whole tree skeleton).
+     */
+    listQuestionsPagedImpl?: (
+      filters: { topicId?: string },
+      page: number,
+      pageSize: number,
+    ) => unknown;
   } = {},
 ) {
   const questionSource = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
@@ -114,16 +128,17 @@ function setup(
     (questionSource() as Observable<BankQuestion[]>).pipe(map(countsFrom)),
   );
   const listQuestionsPaged = vi.fn(
-    (filters: { topicId?: string }, page: number, pageSize: number) =>
-      (questionSource() as Observable<BankQuestion[]>).pipe(
-        map((all) => {
-          const inTopic = all.filter((q) => q.topicId === filters.topicId);
-          return {
-            items: inTopic.slice((page - 1) * pageSize, page * pageSize),
-            total: inTopic.length,
-          };
-        }),
-      ),
+    over.listQuestionsPagedImpl ??
+      ((filters: { topicId?: string }, page: number, pageSize: number) =>
+        (questionSource() as Observable<BankQuestion[]>).pipe(
+          map((all) => {
+            const inTopic = all.filter((q) => q.topicId === filters.topicId);
+            return {
+              items: inTopic.slice((page - 1) * pageSize, page * pageSize),
+              total: inTopic.length,
+            };
+          }),
+        )),
   );
   const getQuestion = vi.fn(over.getQuestionImpl ?? ((id: string) => of(makeQuestion({ id }))));
   const archiveQuestion = vi.fn(
@@ -162,6 +177,7 @@ function setup(
         } satisfies AiRevisedQuestion)),
   );
   const navigate = vi.fn();
+  const getCurrentNavigation = vi.fn(over.getCurrentNavigationImpl ?? (() => null));
   let n = 0;
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-${n++}`);
   vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
@@ -203,7 +219,7 @@ function setup(
       },
       { provide: TaxonomyService, useValue: { getCourses, getAllTopics } },
       { provide: AiService, useValue: { reviseQuestion, extractQuestionFromImage } },
-      { provide: Router, useValue: { navigate } },
+      { provide: Router, useValue: { navigate, getCurrentNavigation } },
     ],
   });
   const fixture = TestBed.createComponent(BankListComponent);
@@ -226,6 +242,7 @@ function setup(
     reviseQuestion,
     extractQuestionFromImage,
     navigate,
+    getCurrentNavigation,
   };
 }
 
@@ -551,6 +568,67 @@ describe('BankListComponent', () => {
       expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
     });
 
+    // audit bank-list #14: the "Pregunta con imagen" fallback used to fire
+    // for ANY leaf with no statement/no source, image question or not — a
+    // structured question with a genuinely empty body would get the same
+    // "it has an image" copy despite never having one.
+    it('never shows "Pregunta con imagen" for a structured question with an empty body — falls back to the answer key instead (audit #14)', () => {
+      const structuredBlank = makeQuestion({
+        id: 'qs-blank',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'structured',
+        imageAssetId: null,
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: null,
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([structuredBlank]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      expect(compiled.querySelector('[data-testid="question-snippet"]')).toBeFalsy();
+      const row = compiled.querySelector('[data-question-id="qs-blank"]');
+      expect(row?.textContent).not.toContain('Pregunta con imagen');
+      expect(row?.textContent).toContain('Clave:');
+    });
+
+    it('shows a neutral "Pregunta con imagen" fallback when a leaf has no statement AND no sourceName (D2a — a web-created image question)', () => {
+      const image = makeQuestion({
+        id: 'qi-blank',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: null,
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent).toContain('Pregunta con imagen');
+    });
+
+    it('strips the file extension off sourceName before showing it as the snippet (D2a)', () => {
+      const image = makeQuestion({
+        id: 'qi-ext',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: '1d.PNG',
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent?.trim()).toBe('1d');
+    });
+
     it('labels an image question with where it came from, since it has no statement', () => {
       // The bank now holds ~1500 whole-question images harvested from published
       // exams. Without their provenance every one of those rows reads "Clave: c"
@@ -619,6 +697,49 @@ describe('BankListComponent', () => {
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).not.toContain('(clave C)');
+    });
+
+    it('shows the grade on each topic once two topics under the same course share a name (D2b)', () => {
+      const topics: Topic[] = [
+        { id: 't-bio-5', name: 'Genética y herencia', courseId: 'c1' },
+        { id: 't-bio-4', name: 'Genética y herencia', courseId: 'c1' },
+      ];
+      const questions: BankQuestion[] = [
+        makeQuestion({ id: 'gb5', courseId: 'c1', topicId: 't-bio-5', gradeLevel: 'secundaria_5' }),
+        makeQuestion({ id: 'gb4', courseId: 'c1', topicId: 't-bio-4', gradeLevel: 'secundaria_4' }),
+      ];
+      const { compiled, fixture } = setup({
+        getAllTopicsImpl: () => of(topics),
+        listImpl: () => of(questions),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't-bio-5');
+      expandTopic(compiled, fixture, 't-bio-4');
+
+      expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
+      expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
+    });
+
+    it('leaves a unique topic name bare — no grade suffix when nothing else under the course shares it', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
+
+      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
+    });
+
+    // audit bank-list #15 — the test above never expands 't1', so its
+    // `gradeLevel` is null regardless of the uniqueness check, and would
+    // pass even if `sharesNameWithSibling` were broken. EXPANDING the unique
+    // topic gives it a real (non-null) `gradeLevel`, so this is the one that
+    // actually exercises "unique name -> bare" rather than "no grade loaded
+    // yet -> bare".
+    it('leaves a unique, EXPANDED topic bare too — the suffix is gated on sharing a name, not merely on having a loaded grade (audit #15)', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
     });
   });
 
@@ -1356,6 +1477,226 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
       expect(questionSource).toHaveBeenCalledTimes(1);
       expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+    });
+  });
+
+  describe('created question banner (D1)', () => {
+    it('reveals the question just created: expands its course/topic, selects it, and shows a dismissible banner', () => {
+      const { compiled, getQuestion } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+
+      expect(getQuestion).toHaveBeenCalledWith('q1');
+      // audit #12: `select()` used to re-fetch the very same question a
+      // second time even though `revealCreatedQuestion` already had the
+      // full record in hand.
+      expect(getQuestion).toHaveBeenCalledTimes(1);
+      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      expect(compiled.querySelector('[data-testid="bank-panel"]')).toBeTruthy();
+
+      const banner = compiled.querySelector('[data-testid="created-banner"]');
+      expect(banner?.textContent).toContain('Pregunta guardada.');
+
+      const row = compiled.querySelector('[data-question-id="q1"]');
+      expect(row?.getAttribute('data-highlight')).toBe('true');
+    });
+
+    it('falls back to history.state when there is no current Angular navigation', () => {
+      history.replaceState({ createdQuestionId: 'q1' }, '');
+      try {
+        const { compiled } = setup({
+          getCurrentNavigationImpl: () => null,
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+
+        expect(compiled.querySelector('[data-testid="created-banner"]')).toBeTruthy();
+        expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      } finally {
+        history.replaceState(null, '');
+      }
+    });
+
+    it('dismisses the banner on click, without touching the highlighted row', () => {
+      const { compiled, fixture } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+
+      (
+        compiled.querySelector('[data-testid="created-banner-dismiss"]') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
+    });
+
+    it('clears the row highlight after 4s (fake timers)', () => {
+      vi.useFakeTimers();
+      try {
+        const { compiled, fixture } = setup({
+          getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+        fixture.detectChanges();
+
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBe('true');
+
+        vi.advanceTimersByTime(4000);
+        fixture.detectChanges();
+
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBeNull();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('shows neither the banner nor any highlight when there is no created-question state', () => {
+      const { compiled } = setup();
+      expect(compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-highlight="true"]')).toBeFalsy();
+    });
+
+    // audit #13: the highlight's 4s clear-timer used to start the instant
+    // `revealCreatedQuestion` ran, BEFORE the topic's page (and so the row)
+    // had actually loaded — on a slow topic fetch, part or all of the
+    // window could burn before the teacher ever saw the highlight. It must
+    // instead start once the topic's page has resolved.
+    it('starts the 4s highlight window only once the topic page resolves, not the instant the question is fetched (audit #13)', () => {
+      vi.useFakeTimers();
+      try {
+        const topicPage = new Subject<{ items: BankQuestion[]; total: number }>();
+        const { compiled, fixture } = setup({
+          getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+          // Counts (`listImpl`, left at its default) resolve synchronously —
+          // only THIS topic's own page fetch is held open, so the tree
+          // skeleton exists but the row inside it does not, yet.
+          listQuestionsPagedImpl: () => topicPage,
+        });
+        fixture.detectChanges();
+
+        // The topic page hasn't resolved yet — the row doesn't exist, and
+        // the highlight must not be showing (nothing to show it ON), and
+        // certainly must not already be counting down.
+        expect(compiled.querySelector('[data-question-id="q1"]')).toBeNull();
+
+        // Advancing the clock before the page ever resolves must NOT clear
+        // anything — with the bug, the timer would already be running and
+        // this would have cleared a highlight that (with the fix) hasn't
+        // even started yet.
+        vi.advanceTimersByTime(4000);
+        fixture.detectChanges();
+
+        topicPage.next({
+          items: [makeQuestion({ id: 'q1', courseId: 'c1', topicId: 't1' })],
+          total: 1,
+        });
+        topicPage.complete();
+        fixture.detectChanges();
+
+        // NOW the row exists and the highlight starts.
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBe('true');
+
+        // A further 4s from THIS point clears it — proving the window
+        // started at resolution, not at the original fetch.
+        vi.advanceTimersByTime(4000);
+        fixture.detectChanges();
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBeNull();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    // audit #11: both `setTimeout`s `revealCreatedQuestion` schedules must
+    // be cleared if the component is destroyed before they fire — otherwise
+    // a fast navigation away leaves a stray timer trying to mutate a
+    // destroyed component's signals.
+    it('clears its highlight-clear timer on destroy — the exact handle setTimeout(4000) returned reaches clearTimeout (audit #11)', () => {
+      // Real timers on purpose: this spies on the real global
+      // setTimeout/clearTimeout to prove the SPECIFIC handle scheduling
+      // produced is the one destroy hands to clearTimeout — a stronger,
+      // more targeted claim than "some timer, somewhere, got cleared" (which
+      // fake-timer bookkeeping can't distinguish from framework-internal
+      // timers unrelated to this bug).
+      const setTimeoutSpy = vi.spyOn(globalThis, 'setTimeout');
+      const clearTimeoutSpy = vi.spyOn(globalThis, 'clearTimeout');
+
+      const { fixture } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+      fixture.detectChanges();
+
+      // `HIGHLIGHT_DURATION_MS` (4000) is distinctive enough that a call
+      // with that exact delay can only be the highlight-clear timer.
+      const highlightCallIndex = setTimeoutSpy.mock.calls.findIndex((call) => call[1] === 4000);
+      expect(highlightCallIndex).toBeGreaterThanOrEqual(0);
+      const highlightHandle = setTimeoutSpy.mock.results[highlightCallIndex].value;
+
+      fixture.destroy();
+
+      expect(clearTimeoutSpy).toHaveBeenCalledWith(highlightHandle);
+
+      setTimeoutSpy.mockRestore();
+      clearTimeoutSpy.mockRestore();
+    });
+
+    // audit bank-list #10: `history.state` (unlike Angular's one-shot
+    // navigation extras) survives a reload / back-forward navigation to the
+    // same entry — so leaving `createdQuestionId` in it meant the SAME
+    // question got revealed again on every future visit to this history
+    // entry, not just the one right after saving it.
+    it('consumes createdQuestionId from history.state — a second component built against the same entry does not reveal it again (audit #10)', () => {
+      history.replaceState({ createdQuestionId: 'q1' }, '');
+      try {
+        const first = setup({
+          getCurrentNavigationImpl: () => null,
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+        expect(first.compiled.querySelector('[data-testid="created-banner"]')).toBeTruthy();
+
+        // Simulate a second, independent BankListComponent built against the
+        // same underlying `history.state` (e.g. a reload replaying the same
+        // history entry). `TestBed.resetTestingModule()` only tears down
+        // Angular's DI/providers — it never touches `history.state` itself,
+        // so this is a faithful "constructed twice against the same entry".
+        TestBed.resetTestingModule();
+        const second = setup({
+          getCurrentNavigationImpl: () => null,
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+        expect(second.compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
+      } finally {
+        history.replaceState(null, '');
+      }
+    });
+  });
+
+  describe('accessibility (D3)', () => {
+    // `ui-live-region` itself moved to the app shell at integration (mounted
+    // once app-wide instead of once per bank-list instance) — this component
+    // no longer renders a sink locally, it only calls the root-provided
+    // `LiveAnnouncerService.announce()`. Assert against the service's own
+    // signals rather than a local DOM node.
+    it('announces "Pregunta guardada." through the root LiveAnnouncerService when the created-question banner shows', () => {
+      setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+
+      const announcer = TestBed.inject(LiveAnnouncerService);
+      expect(announcer.message()).toBe('Pregunta guardada.');
+      expect(announcer.politeness()).toBe('polite');
     });
   });
 });

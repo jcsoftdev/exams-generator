@@ -2,9 +2,8 @@ import { randomUUID } from "node:crypto";
 import { Inject, Injectable, Logger, UnprocessableEntityException } from "@nestjs/common";
 import { AiAlternativeCrop, AiExtractedQuestion, AiQuestionCrop } from "@exams-generator/shared";
 import { requireImageMime } from "../assets/image-mime";
-import { validateStructuredContent } from "../bank/domain/validate-structured-content";
 import { AuthTokenPayload } from "../auth/token.service";
-import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import { ExtractedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { TextRegionDetectorPort } from "./domain/ports/text-region-detector.port";
@@ -18,7 +17,7 @@ import {
   QUESTION_GENERATOR_PORT,
   TEXT_REGION_DETECTOR_PORT,
 } from "./ai.constants";
-import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
+import { correctAnswerLetterToIndexOrNull } from "./domain/correct-answer-letter-to-index";
 
 /** Raw multipart file shape this service needs — decoupled from Express/Multer types. */
 export interface ExtractQuestionFile {
@@ -34,12 +33,24 @@ export interface ExtractQuestionFile {
  * produces a brand-new, unsaved draft the caller may later persist via the existing
  * bank creation endpoints.
  *
- * `correctAnswer` is a LETTER ("a".."e") on the `QuestionGeneratorPort` contract but
- * a 0-based INDEX in bank storage/the PATCH edit contract — this service converts the
- * generator's LETTER output to an INDEX (`correctAnswerLetterToIndex`, mirroring
- * `ReviseQuestionService`/`GenerateQuestionsService`) BEFORE validating or returning
- * it, so neither `validateStructuredContent` nor the HTTP caller ever see the letter
- * representation.
+ * `correctAnswer` is a LETTER ("a".."e", or `null` when the photo doesn't show/imply
+ * a key — see `ExtractedQuestion`) on the `QuestionGeneratorPort` contract but a
+ * 0-based INDEX (or still `null`) in the response/PATCH edit contract — this service
+ * converts the generator's LETTER output to an INDEX
+ * (`correctAnswerLetterToIndexOrNull`, the null-safe wrapper around
+ * `ReviseQuestionService`/`GenerateQuestionsService`'s own
+ * `correctAnswerLetterToIndex`, passing a `null` key straight through) BEFORE
+ * returning it.
+ *
+ * Unlike `generate()`/`reviseQuestion()`, this endpoint does NOT run the bank's
+ * `validateStructuredContent` (which requires >=2 alternatives and a non-null
+ * `correctAnswer` — the rule a SAVEABLE question must satisfy). A photo may
+ * legitimately show only a stem, or alternatives with no visible key, and
+ * `extractFromImage` never invents either to force that shape (see
+ * `ExtractedQuestion`'s docstring) — this response is a DRAFT the teacher may
+ * still need to complete by hand before the bank creation endpoints (which DO
+ * run `validateStructuredContent`) will accept it. Only `bodyTypst` is checked
+ * here, since a blank transcription is never useful to return at all.
  *
  * The response also carries finished `data:` URL crops for the question's
  * figures — but their boxes never come from the model: `QuestionGeneratorPort`
@@ -80,23 +91,38 @@ export class ExtractQuestionService {
       mimeType,
     });
 
-    // The generator returns a LETTER; convert to the 0-based INDEX bank
-    // storage/PATCH convention expects BEFORE validating or returning.
-    const extractedWithIndex: GeneratedQuestion = {
+    // The generator returns a LETTER (or null); convert to the 0-based INDEX
+    // response/PATCH convention expects BEFORE returning — the null-safe
+    // wrapper passes a `null` key straight through unconverted.
+    const correctAnswerIndex = correctAnswerLetterToIndexOrNull(extracted.correctAnswer);
+
+    // Residual guard, mirroring `validateExtractedQuestionShape`'s own
+    // out-of-range rule (the adapter's validator is the primary gate — this
+    // is defense in depth, not a substitute for it): a key pointing past the
+    // alternatives actually transcribed must never reach the response, even
+    // from a `QuestionGeneratorPort` implementation that didn't enforce it
+    // itself.
+    const safeCorrectAnswerIndex =
+      correctAnswerIndex !== null && Number(correctAnswerIndex) >= extracted.alternatives.length
+        ? null
+        : correctAnswerIndex;
+
+    const extractedWithIndex: ExtractedQuestion = {
       ...extracted,
-      correctAnswer: correctAnswerLetterToIndex(extracted.correctAnswer),
+      correctAnswer: safeCorrectAnswerIndex,
     };
 
-    const errors = validateStructuredContent({
-      bodyTypst: extractedWithIndex.bodyTypst,
-      alternatives: extractedWithIndex.alternatives,
-      correctAnswer: extractedWithIndex.correctAnswer,
-    });
-    if (errors.length > 0) {
-      throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
+    // Only bodyTypst is checked here — see this class's docstring for why
+    // `validateStructuredContent`'s alternatives/correctAnswer rules
+    // (>=2 alternatives, non-null key) do NOT apply to an extraction draft.
+    if (!extractedWithIndex.bodyTypst || extractedWithIndex.bodyTypst.trim().length === 0) {
+      throw new UnprocessableEntityException({
+        message: "AI produced invalid content",
+        errors: ["bodyTypst is required"],
+      });
     }
 
-    const crops = await this.buildCrops(file.buffer, mimeType);
+    const crops = await this.buildCrops(file.buffer, mimeType, extractedWithIndex.alternatives.length);
 
     const hasCrops = !!crops.figureCrop || (crops.alternativeCrops?.length ?? 0) > 0;
     if (!hasCrops) {
@@ -146,10 +172,18 @@ export class ExtractQuestionService {
    * tesseract, an image sharp cannot decode, a downscale or a crop that
    * throws — is logged and swallowed, and the caller still gets the
    * transcription. The text is the valuable half of this endpoint.
+   *
+   * `alternativesLength` bounds `alternativeCrops`: the page's own OCR marks
+   * a figure band for any `A)`–`E)` marker it finds, regardless of how many
+   * alternatives the model actually transcribed — an out-of-range entry
+   * (`alternativeIndex >= alternativesLength`) is skipped BEFORE it is ever
+   * cropped, never surfaced for the teacher to match against an alternative
+   * that doesn't exist.
    */
   private async buildCrops(
     image: Buffer,
     mimeType: string,
+    alternativesLength: number,
   ): Promise<{ figureCrop?: AiQuestionCrop; alternativeCrops?: readonly AiAlternativeCrop[] }> {
     try {
       // Detection runs on a BOUNDED raster, never on the raw upload. See
@@ -182,6 +216,12 @@ export class ExtractQuestionService {
 
       const alternativeCrops: AiAlternativeCrop[] = [];
       for (const entry of attributed.byAlternative) {
+        // The photo may show a marker band for an alternative slot the
+        // transcription never confirmed — never crop (or return) a figure
+        // the teacher has no matching alternative text for.
+        if (entry.alternativeIndex >= alternativesLength) {
+          continue;
+        }
         alternativeCrops.push({ alternativeIndex: entry.alternativeIndex, ...(await cropAt(entry.box)) });
       }
 

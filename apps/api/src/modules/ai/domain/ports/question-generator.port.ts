@@ -65,6 +65,28 @@ export interface ExtractQuestionInput {
 }
 
 /**
+ * `extractFromImage()`'s own result shape — deliberately NOT `GeneratedQuestion`.
+ * `generate()`/`reviseQuestion()` always produce exactly 5 alternatives and a
+ * definite letter key (the model is composing content from nothing, so a
+ * schema-enforced complete answer is correct there). `extractFromImage()`
+ * transcribes a PHOTO instead: the source material may show fewer than 5
+ * alternatives, or no visible/inferable correct answer at all — and inventing
+ * either to satisfy a stricter shape would hand the teacher a fabricated
+ * alternative or a fabricated key with no way to tell it apart from a real
+ * one. So this type is intentionally more permissive on exactly the two
+ * fields where the photo itself may simply have less to give:
+ *   - `alternatives`: 0..5 non-blank strings (never padded/invented).
+ *   - `correctAnswer`: a letter "a".."e" when visible/inferable, `null` when
+ *     it is not — never a guess.
+ */
+export interface ExtractedQuestion extends Omit<GeneratedQuestion, "alternatives" | "correctAnswer"> {
+  /** Alternatives the photo actually shows, in order — empty when the photo shows none. Never invented/padded. */
+  readonly alternatives: readonly string[];
+  /** Letter of the correct alternative when visible/inferable in the photo, `null` otherwise. Never a guess. */
+  readonly correctAnswer: string | null;
+}
+
+/**
  * Emitted during `QuestionGeneratorPort.generate()` when a caller passes an
  * `onProgress` callback — proof-of-life for the AI call while it's still in
  * flight (design doc: live streaming progress). `restart` fires whenever a
@@ -122,13 +144,16 @@ export interface QuestionGeneratorPort {
   /**
    * Extracts a question (body, alternatives, correct answer) from a photo of
    * a printed/handwritten question, returning a fully-validated
-   * `GeneratedQuestion` (same shape/validation guarantees as `generate()`).
+   * `ExtractedQuestion` — unlike `generate()`/`reviseQuestion()`, alternatives
+   * may be fewer than 5 (even zero) and `correctAnswer` may be `null` when the
+   * photo doesn't show or imply either: this port NEVER invents an
+   * alternative or a key the source material didn't actually contain.
    *
    * @throws AiRateLimitError when the provider is rate-limited.
    * @throws AiInvalidResponseError when the provider's output can't be
-   *   parsed/validated into a `GeneratedQuestion`.
+   *   parsed/validated into an `ExtractedQuestion`.
    */
-  extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion>;
+  extractFromImage(input: ExtractQuestionInput): Promise<ExtractedQuestion>;
 }
 
 export class AiGenerationError extends Error {
@@ -146,6 +171,22 @@ export class AiRateLimitError extends AiGenerationError {
   constructor(message = "AI provider rate limit reached (429)") {
     super(message);
     this.name = "AiRateLimitError";
+  }
+}
+
+/**
+ * Raised by `resolveAiProviderConfig` when the deployment is missing the AI
+ * model or API key env vars — a configuration gap, not a transient provider
+ * failure. `AiController.mapAiProviderError` maps this to HTTP 503 with
+ * `code: "ai_not_configured"`, distinct from the generic `AiGenerationError`
+ * 502 mapping: a teacher hitting "retry" on this can never succeed until an
+ * operator sets the env, and the response should say so rather than imply
+ * the provider is just down.
+ */
+export class AiNotConfiguredError extends AiGenerationError {
+  constructor(message: string) {
+    super(message);
+    this.name = "AiNotConfiguredError";
   }
 }
 

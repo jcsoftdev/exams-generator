@@ -16,19 +16,31 @@
       >
         <img [src]="photoUrl()" alt="" class="block w-full h-auto" />
         <div
-          class="absolute cursor-move border-2 border-primary-500 bg-primary-500/10"
+          data-testid="crop-box"
+          tabindex="0"
+          role="group"
+          [attr.aria-label]="
+            slot.label + ', usa las flechas para mover y Shift+flechas para redimensionar'
+          "
+          class="absolute cursor-move border-2 border-primary-500 bg-primary-500/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           [style.left.%]="boxFor(slot).x * 100"
           [style.top.%]="boxFor(slot).y * 100"
           [style.width.%]="boxFor(slot).w * 100"
           [style.height.%]="boxFor(slot).h * 100"
+          (keydown)="onKeyDown($event, slot)"
         >
           @for (handle of resizeHandles; track handle) {
             <div
-              class="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-primary-600"
+              data-testid="crop-resize-handle"
+              class="absolute flex -translate-x-1/2 -translate-y-1/2 items-center justify-center"
               [style.left]="handlePosition(handle).left"
               [style.top]="handlePosition(handle).top"
+              [style.width]="handleSize(container, slot, handle).width"
+              [style.height]="handleSize(container, slot, handle).height"
               (pointerdown)="startResize($event, container, slot, handle)"
-            ></div>
+            >
+              <div class="h-2 w-2 rounded-full border border-white bg-primary-600"></div>
+            </div>
           }
         </div>
       </div>
@@ -39,6 +51,10 @@
         class="h-32 w-32 rounded-field border border-n200 object-contain"
       />
     </div>
+
+    <p data-testid="crop-keyboard-hint" class="text-xs text-n500">
+      Arrastra la caja o usa las flechas; Shift+flechas cambia el tamaño; Enter aplica.
+    </p>
 
     <div class="flex gap-2">
       <button

@@ -1,4 +1,5 @@
 import {
+  ExtractedQuestion,
   ExtractQuestionInput,
   GenerateProgressEvent,
   GenerateQuestionInput,
@@ -41,7 +42,7 @@ export class LazyQuestionGeneratorAdapter implements QuestionGeneratorPort {
     return this.resolved.reviseQuestion(input);
   }
 
-  async extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion> {
+  async extractFromImage(input: ExtractQuestionInput): Promise<ExtractedQuestion> {
     if (!this.resolved) {
       this.resolved = this.resolve();
     }

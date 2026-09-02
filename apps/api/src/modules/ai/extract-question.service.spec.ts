@@ -1,6 +1,6 @@
 import { BadRequestException, UnprocessableEntityException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
-import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import { ExtractedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { TextRegionDetectorPort } from "./domain/ports/text-region-detector.port";
@@ -10,7 +10,7 @@ import { fakePng } from "../../test-support/image-fixtures";
 
 const USER = { sub: "user-1", tenantId: "tenant-1" } as unknown as AuthTokenPayload;
 
-const EXTRACTED_QUESTION: GeneratedQuestion = {
+const EXTRACTED_QUESTION: ExtractedQuestion = {
   bodyTypst: "¿Cuánto es $2 + 2$?",
   alternatives: ["3", "4", "5", "6", "7"],
   // LETTER (QuestionGeneratorPort contract) — "b" is index 1.
@@ -146,12 +146,11 @@ describe("ExtractQuestionService.extract", () => {
     expect(result.correctAnswer).toBe("1");
   });
 
-  it("throws UnprocessableEntityException when the AI output fails validateStructuredContent", async () => {
+  it("throws UnprocessableEntityException when the AI output has a blank bodyTypst", async () => {
     const { service, generator } = buildDeps();
     generator.extractFromImage.mockResolvedValue({
-      bodyTypst: "¿Cuánto es $2 + 2$?",
-      // Only 1 alternative — fails validateStructuredContent's MIN_ALTERNATIVES=2 rule.
-      alternatives: ["4"] as unknown as GeneratedQuestion["alternatives"],
+      bodyTypst: "   ",
+      alternatives: ["4"],
       correctAnswer: "a",
     });
     const file = { buffer: fakePng(), mimetype: "image/png" };
@@ -165,6 +164,20 @@ describe("ExtractQuestionService.extract", () => {
 
     await expect(service.extract(USER, file)).rejects.toBeInstanceOf(BadRequestException);
     expect(generator.extractFromImage).not.toHaveBeenCalled();
+  });
+
+  it("nulls out correctAnswer when its index has no matching alternative, even if the generator adapter didn't catch it (residual guard, mirrors the validator's own out-of-range rule)", async () => {
+    const { service, generator } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["4"], // only index 0 exists
+      correctAnswer: "c", // letter c -> index 2, out of range
+    });
+    const file = { buffer: fakePng(), mimetype: "image/png" };
+
+    const result = await service.extract(USER, file);
+
+    expect(result.correctAnswer).toBeNull();
   });
 });
 
@@ -204,6 +217,22 @@ describe("ExtractQuestionService.extract — crops", () => {
     // cols 32-167, rows 72-107.
     expect(result.alternativeCrops![0]!.box).toEqual({ x: 0.16, y: 0.36, w: 0.68, h: 0.18 });
     expect(cropper.crop).toHaveBeenCalledTimes(2);
+  });
+
+  it("drops an alternative crop whose index the transcribed alternatives don't cover (alternativeCrops must never be unbounded)", async () => {
+    const { service, generator, cropper, detector } = buildDeps();
+    // The page's own markers attribute figures to alternativeIndex 1 ("b")
+    // and 2 ("c"), but only 2 alternatives were transcribed (indices 0-1) —
+    // the crop for index 2 has no matching alternative and must be dropped.
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, alternatives: ["3", "4"] });
+    cropper.raster.mockResolvedValue(RASTER_WITH_TWO_ALTERNATIVE_FIGURES);
+    detector.detect.mockResolvedValue(ALTERNATIVE_MARKERS);
+
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result.alternativeCrops?.map((crop) => crop.alternativeIndex)).toEqual([1]);
+    // Never even crops the out-of-range figure — not just filters it after.
+    expect(cropper.crop).toHaveBeenCalledTimes(1);
   });
 
   it("caches the photo and returns an extractionId only when there is something to re-crop", async () => {
