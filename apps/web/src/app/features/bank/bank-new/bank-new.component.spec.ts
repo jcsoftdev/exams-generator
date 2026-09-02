@@ -1883,6 +1883,101 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('L7: parallelises the image and alternative-crops uploads', () => {
+    const EXTRACTED_FOR_L7: AiExtractedQuestion = {
+      bodyTypst: '¿Qué figura se muestra?',
+      alternatives: ['Uno', 'Dos'],
+      correctAnswer: '0',
+      extractionId: 'extraction-l7',
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+      },
+      alternativeCrops: [
+        {
+          alternativeIndex: 0,
+          dataUrl: 'data:image/png;base64,BBBB',
+          box: { x: 0, y: 0.7, w: 0.1, h: 0.1 },
+        },
+      ],
+    };
+
+    it('issues replaceQuestionImage and setAlternativeImages before either resolves, and a failure in either surfaces a save error without discarding the created id', () => {
+      const imageSubject = new Subject<{ id: string }>();
+      const altSubject = new Subject<{ id: string }>();
+      const { fixture, compiled, replaceQuestionImage, setAlternativeImages, navigate } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_FOR_L7),
+        replaceImageImpl: () => imageSubject.asObservable(),
+        setAlternativeImagesImpl: () => altSubject.asObservable(),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      // Both requests must already be in flight — proving they were fired
+      // in PARALLEL, not one waiting on the other's response.
+      expect(replaceQuestionImage).toHaveBeenCalledTimes(1);
+      expect(setAlternativeImages).toHaveBeenCalledTimes(1);
+      expect(navigate).not.toHaveBeenCalled();
+
+      // The image upload fails; the alternative-crops upload never resolves
+      // at all — a failure in EITHER must surface the same recoverable
+      // error, without ever navigating away.
+      imageSubject.error(new Error('upload failed'));
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'La pregunta se guardó, pero no se pudieron adjuntar las imágenes',
+      );
+      expect(navigate).not.toHaveBeenCalled();
+    });
+
+    it('retries both uploads on a resubmit after a partial failure, without calling createStructuredQuestion again', () => {
+      let imageCalls = 0;
+      const {
+        fixture,
+        compiled,
+        replaceQuestionImage,
+        setAlternativeImages,
+        createStructuredQuestion,
+      } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_FOR_L7),
+        replaceImageImpl: () => {
+          imageCalls++;
+          return imageCalls === 1 ? throwError(() => new Error('boom')) : of({ id: 'str-q' });
+        },
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+      expect(compiled.querySelector('[data-testid="save-error"]')).toBeTruthy();
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      // The question itself is never recreated — only the uploads retry.
+      expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+      expect(replaceQuestionImage).toHaveBeenCalledTimes(2);
+      expect(setAlternativeImages).toHaveBeenCalledTimes(2);
+    });
+  });
+
   describe('Important 2: the complement-image preview stays synced with what actually uploads', () => {
     it('shows a preview for the AI figure crop right after extraction (not blank)', () => {
       const { fixture, compiled } = setup({

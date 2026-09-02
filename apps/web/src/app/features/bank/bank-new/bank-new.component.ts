@@ -13,7 +13,7 @@ import {
 } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { TimeoutError } from 'rxjs';
+import { TimeoutError, forkJoin, of } from 'rxjs';
 import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
 import {
   LucideAngularModule,
@@ -1111,21 +1111,41 @@ export class BankNewComponent {
     );
   }
 
+  /**
+   * L7: uploads the complement image and the alternative crops IN PARALLEL
+   * via `forkJoin` — they only ever depend on the just-created `id`, never
+   * on each other, so the old chain (`attachStructuredImageAndFinish` ➜
+   * `attachAlternativeImagesAndFinish`) was paying for two sequential
+   * round trips where one concurrent pair would do. Whichever half has
+   * nothing to upload is represented by `of(null)` so `forkJoin` still
+   * completes without a real request for it. `forkJoin`'s own semantics —
+   * ANY source erroring fails the whole join immediately — are exactly the
+   * `failAfterCreate()` behavior this replaces: a failure in EITHER upload
+   * must leave `sCreatedQuestionId` set so a resubmit retries (both of)
+   * them, never re-running `createStructuredQuestion` and duplicating the
+   * question itself.
+   */
   private attachStructuredImageAndFinish(id: string): void {
     const image = this.sImage();
-    if (!image) {
-      this.attachAlternativeImagesAndFinish(id);
-      return;
-    }
-    this.bankService.replaceQuestionImage(id, image).subscribe({
-      next: () => this.attachAlternativeImagesAndFinish(id),
+    const imageUpload$ = image ? this.bankService.replaceQuestionImage(id, image) : of(null);
+
+    const crops = this.resolveAlternativeCropsToUpload();
+    const alternativesUpload$ =
+      crops.length > 0 ? this.bankService.setAlternativeImages(id, crops) : of(null);
+
+    forkJoin([imageUpload$, alternativesUpload$]).subscribe({
+      next: () => {
+        this.saving.set(false);
+        this.navigateToBank(id);
+      },
       error: () => this.failAfterCreate(),
     });
   }
 
   /**
-   * Second half of the save chain — uploads any alternative crops the
-   * teacher kept, sparse by design.
+   * The alternative crops to upload, each re-derived against the CURRENT
+   * alternatives list rather than trusting the index frozen at extraction
+   * time.
    *
    * Each crop's `alternativeIndex` was frozen at extraction time
    * (`buildCropSlots`), but `sAlternatives` is a free-text textarea the
@@ -1135,14 +1155,14 @@ export class BankNewComponent {
    * against the CURRENT list (via `reresolveAlternativeIndex`) instead of
    * trusting the frozen one is what closes Critical Finding 1.
    */
-  private attachAlternativeImagesAndFinish(id: string): void {
+  private resolveAlternativeCropsToUpload(): { alternativeIndex: number; file: File }[] {
     const currentAlternatives = this.alternativesList();
     // Each entry can be claimed by at most one crop — tracks which positions
     // are still available for matching so two crops whose ORIGINAL text
     // happened to be identical don't both claim the same occurrence.
     const available = currentAlternatives.map((text, index) => ({ text, index }));
 
-    const crops = this.cropSlots()
+    return this.cropSlots()
       .filter(
         (slot): slot is CropSlot & { target: { kind: 'alternative'; alternativeIndex: number } } =>
           slot.target.kind === 'alternative',
@@ -1157,20 +1177,6 @@ export class BankNewComponent {
           : { alternativeIndex, file: dataUrlToFile(slot.dataUrl, 'alternativa.png') };
       })
       .filter((crop): crop is { alternativeIndex: number; file: File } => crop !== null);
-
-    if (crops.length === 0) {
-      this.saving.set(false);
-      this.navigateToBank(id);
-      return;
-    }
-
-    this.bankService.setAlternativeImages(id, crops).subscribe({
-      next: () => {
-        this.saving.set(false);
-        this.navigateToBank(id);
-      },
-      error: () => this.failAfterCreate(),
-    });
   }
 
   /**
