@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { describe, it, expect, vi } from 'vitest';
-import { Observable, TimeoutError, of, throwError } from 'rxjs';
+import { Observable, Subject, TimeoutError, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
@@ -1459,6 +1459,63 @@ describe('BankNewComponent', () => {
         '[data-testid="extract-with-ai"] button',
       ) as HTMLButtonElement;
       expect(button.disabled).toBe(false);
+    });
+  });
+
+  describe('B3: stale recrop guard', () => {
+    const EXTRACTED_WITH_FIGURE_CROP: AiExtractedQuestion = {
+      bodyTypst: '¿Qué muestra la figura?',
+      alternatives: ['a', 'b'],
+      correctAnswer: '0',
+      extractionId: 'extraction-1',
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+      },
+    };
+
+    it('ignores a recrop response whose captured extractionId no longer matches the current extraction (photo swapped mid-recrop)', () => {
+      const recropSubject = new Subject<{ dataUrl: string; box: NormalizedBoxDto }>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => recropSubject.asObservable(),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        cropSlots(): readonly CropSlot[];
+        sImage(): File | null;
+        extractError(): string | null;
+      };
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      // Photo swapped mid-recrop — resets extractionId/cropSlots/sImage
+      // (Important Finding 3), same as if the teacher gave up on this
+      // extraction entirely.
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      expect(instance.cropSlots().length).toBe(0);
+      expect(instance.sImage()).toBeNull();
+
+      // The OLD extraction's recrop finally resolves.
+      recropSubject.next({
+        dataUrl: 'data:image/png;base64,ZZZZ',
+        box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+      });
+      fixture.detectChanges();
+
+      expect(instance.cropSlots().length).toBe(0);
+      expect(instance.sImage()).toBeNull();
+      expect(instance.extractError()).toBeNull();
     });
   });
 

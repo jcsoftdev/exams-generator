@@ -601,6 +601,18 @@ export class BankNewComponent {
     this.updateSlot(event.target, (slot) => ({ ...slot, busy: true }));
     this.aiService.recropExtraction(extractionId, event.box).subscribe({
       next: (crop) => {
+        // B3: a stale response — the teacher picked a new photo (or
+        // re-extracted) WHILE this recrop was in flight, which already reset
+        // `this.extractionId` and wiped `cropSlots`/`sImage` (Important
+        // Finding 3). Applying it anyway would silently resurrect a crop (and
+        // possibly `sImage`) from an extraction the teacher has moved past —
+        // `updateSlot` finding no matching slot wouldn't save `sImage`, which
+        // is set unconditionally below. Compare against the CAPTURED id, not
+        // a freshly-read `this.extractionId`, so this can only ever be "the
+        // extraction changed since this request was sent".
+        if (this.extractionId !== extractionId) {
+          return;
+        }
         this.updateSlot(event.target, (slot) => ({
           ...slot,
           dataUrl: crop.dataUrl,
@@ -616,6 +628,12 @@ export class BankNewComponent {
         }
       },
       error: (error: HttpErrorResponse) => {
+        // B3: same staleness guard as `next` above — a stale error must not
+        // overwrite `extractError` for an extraction the teacher already
+        // left behind.
+        if (this.extractionId !== extractionId) {
+          return;
+        }
         this.updateSlot(event.target, (slot) => ({ ...slot, busy: false }));
         // A 410 means the crop session expired, the id was never ours, or
         // it belongs to another account — the API deliberately returns the
