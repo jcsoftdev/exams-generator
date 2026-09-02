@@ -17,7 +17,7 @@ import {
   QUESTION_GENERATOR_PORT,
   TEXT_REGION_DETECTOR_PORT,
 } from "./ai.constants";
-import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
+import { correctAnswerLetterToIndexOrNull } from "./domain/correct-answer-letter-to-index";
 
 /** Raw multipart file shape this service needs — decoupled from Express/Multer types. */
 export interface ExtractQuestionFile {
@@ -36,9 +36,11 @@ export interface ExtractQuestionFile {
  * `correctAnswer` is a LETTER ("a".."e", or `null` when the photo doesn't show/imply
  * a key — see `ExtractedQuestion`) on the `QuestionGeneratorPort` contract but a
  * 0-based INDEX (or still `null`) in the response/PATCH edit contract — this service
- * converts the generator's LETTER output to an INDEX (`correctAnswerLetterToIndex`,
- * mirroring `ReviseQuestionService`/`GenerateQuestionsService`, with its null-safe
- * overload passing a `null` key straight through) BEFORE returning it.
+ * converts the generator's LETTER output to an INDEX
+ * (`correctAnswerLetterToIndexOrNull`, the null-safe wrapper around
+ * `ReviseQuestionService`/`GenerateQuestionsService`'s own
+ * `correctAnswerLetterToIndex`, passing a `null` key straight through) BEFORE
+ * returning it.
  *
  * Unlike `generate()`/`reviseQuestion()`, this endpoint does NOT run the bank's
  * `validateStructuredContent` (which requires >=2 alternatives and a non-null
@@ -91,10 +93,10 @@ export class ExtractQuestionService {
 
     // The generator returns a LETTER (or null); convert to the 0-based INDEX
     // response/PATCH convention expects BEFORE returning — the null-safe
-    // overload passes a `null` key straight through unconverted.
+    // wrapper passes a `null` key straight through unconverted.
     const extractedWithIndex: ExtractedQuestion = {
       ...extracted,
-      correctAnswer: correctAnswerLetterToIndex(extracted.correctAnswer),
+      correctAnswer: correctAnswerLetterToIndexOrNull(extracted.correctAnswer),
     };
 
     // Only bodyTypst is checked here — see this class's docstring for why
