@@ -9,12 +9,18 @@
         #container
         data-testid="crop-container"
         class="relative w-64 select-none touch-none"
+        [style.aspect-ratio]="aspectRatio()"
         (pointerdown)="startMove($event, container, slot)"
         (pointermove)="onPointerMove($event, container)"
         (pointerup)="onPointerUp()"
         (pointercancel)="onPointerUp()"
       >
-        <img [src]="photoUrl()" alt="" class="block w-full h-auto" />
+        <img
+          [src]="photoUrl()"
+          alt=""
+          class="block h-full w-full object-contain"
+          (load)="onPhotoLoad($event)"
+        />
         <div
           data-testid="crop-box"
           tabindex="0"

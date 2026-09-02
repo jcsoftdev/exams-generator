@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, input, output, signal } from '@angular/core';
 import { NormalizedBoxDto } from '@exams-generator/shared';
 
 export type CropTarget =
@@ -31,6 +31,28 @@ export interface CropSlot {
 export class CropReviewComponent {
   readonly photoUrl = input.required<string>();
   readonly slots = input.required<readonly CropSlot[]>();
+
+  /**
+   * L6: the `<img>` has no dimensions until it actually loads, so the
+   * container used to collapse to (near) zero height and then jump once it
+   * painted — a classic CLS shift, and worse here since the crop box's
+   * percentage-based position/size math (`boxFor`, `handleSize`) reads
+   * `getBoundingClientRect()` off this very container. Reserved up front
+   * with a plausible placeholder ratio (most exam photos are portrait-ish
+   * scans/pages, closer to A4 than to a photo's 4:3/16:9) and narrowed to
+   * the REAL ratio the moment `onPhotoLoad` fires. Every slot renders the
+   * SAME `photoUrl()`, just in its own container, so one shared signal
+   * (rather than one per slot) is correct — whichever `<img>` finishes
+   * loading first reports the ratio every container then uses.
+   */
+  protected readonly aspectRatio = signal<string>(DEFAULT_ASPECT_RATIO);
+
+  protected onPhotoLoad(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+      this.aspectRatio.set(`${img.naturalWidth} / ${img.naturalHeight}`);
+    }
+  }
 
   readonly recrop = output<{ target: CropTarget; box: NormalizedBoxDto }>();
   readonly discard = output<CropTarget>();
@@ -76,6 +98,15 @@ export class CropReviewComponent {
     effect(() => {
       this.slots();
       this.pendingKeyEdits.clear();
+    });
+
+    // L6: a NEW `photoUrl` (the teacher replaced the photo, or a fresh
+    // extraction ran) has its own dimensions — the PREVIOUS photo's learned
+    // ratio would reserve the wrong amount of space for it until ITS OWN
+    // `onPhotoLoad` fires.
+    effect(() => {
+      this.photoUrl();
+      this.aspectRatio.set(DEFAULT_ASPECT_RATIO);
     });
   }
 
@@ -385,3 +416,13 @@ const MOVE_STRIP_PX = 24;
 function clampHandleDimension(boxDimensionPx: number): number {
   return clamp(boxDimensionPx - MOVE_STRIP_PX, HANDLE_MIN_PX, HANDLE_MAX_PX);
 }
+
+/**
+ * Placeholder `aspect-ratio` (L6) reserved for the crop container before its
+ * photo has loaded and reported its real dimensions — close to an A4 scan's
+ * ratio, since these photos are overwhelmingly exam-page scans, not
+ * landscape photography. The `<w> / <h>` slash form (rather than a bare
+ * ratio number) is required — CSS accepts both, but this is also the only
+ * form some CSSOM implementations parse back out of `getPropertyValue`.
+ */
+const DEFAULT_ASPECT_RATIO = '3 / 4';
