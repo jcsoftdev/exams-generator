@@ -1,4 +1,5 @@
 import {
+  AiExtractedQuestion,
   AiRevisedQuestion,
   Difficulty,
   GENERATION_JOB_STATUSES,
@@ -7,7 +8,7 @@ import {
   Role,
 } from "@exams-generator/shared";
 import { GENERATION_JOB_STATUSES as DB_GENERATION_JOB_STATUSES } from "../../db/schema/enums";
-import { GeneratedQuestion } from "./domain/ports/question-generator.port";
+import { ExtractedQuestion, GeneratedQuestion } from "./domain/ports/question-generator.port";
 import { GenerationJobListRecord, GenerationJobRecord } from "./generation-jobs.repository";
 
 /**
@@ -108,5 +109,26 @@ describe("ai contract", () => {
     const wire: AiRevisedQuestion = generated;
 
     expect(wire.correctAnswer).toBe("0");
+  });
+
+  it("keeps the generator port's ExtractedQuestion — including its permissive empty-alternatives/null-key shape — assignable to the extract wire contract", () => {
+    // Compile-time assertion: `ExtractQuestionService.extract()` (via
+    // `AiController.extract()`) returns a value built from this port type.
+    // `alternatives: []` and `correctAnswer: null` are the exact shape
+    // `validateExtractedQuestionShape` allows through when the photo shows
+    // no alternatives/key at all — if `AiExtractedQuestion` ever tightened
+    // `alternatives`/`correctAnswer` back to the stricter `revise`/`generate`
+    // shape, this stops building instead of the mismatch surfacing as a
+    // runtime response shape nobody asked for.
+    const extracted: ExtractedQuestion = {
+      bodyTypst: "¿Cuánto es $1+1$?",
+      alternatives: [],
+      correctAnswer: null,
+    };
+
+    const wire: AiExtractedQuestion = extracted;
+
+    expect(wire.alternatives).toEqual([]);
+    expect(wire.correctAnswer).toBeNull();
   });
 });
