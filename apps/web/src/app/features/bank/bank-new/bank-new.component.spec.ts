@@ -13,6 +13,7 @@ import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
 import { CropSlot, CropTarget } from '../crop-review/crop-review.component';
+import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 
 const COURSES: Course[] = [
   { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
@@ -57,6 +58,7 @@ function setup(
       (() => of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } })),
   );
   const navigate = vi.fn();
+  const announce = vi.fn();
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
     providers: [
@@ -72,6 +74,7 @@ function setup(
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: AiService, useValue: { extractQuestionFromImage, recropExtraction } },
       { provide: Router, useValue: { navigate } },
+      { provide: LiveAnnouncerService, useValue: { announce } },
     ],
   });
   const fixture = TestBed.createComponent(BankNewComponent);
@@ -88,6 +91,7 @@ function setup(
     extractQuestionFromImage,
     recropExtraction,
     navigate,
+    announce,
   };
 }
 
@@ -584,6 +588,20 @@ describe('BankNewComponent', () => {
       expect(instance.sTopicId()).toBe('t1');
       expect(instance.tab()).toBe('structured');
       expect(instance.extracting()).toBe(false);
+    });
+
+    it('announces the read-in-progress and success messages through LiveAnnouncerService', () => {
+      const { fixture, compiled, announce } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      expect(announce).toHaveBeenCalledWith('Leyendo la foto…');
+
+      fixture.detectChanges();
+      expect(announce).toHaveBeenCalledWith(
+        'La IA leyó la foto. Revisa el enunciado, las alternativas y la clave.',
+      );
     });
 
     it('enables extraction with ONLY Grado + imagen (no Curso/Tema/Nivel picked), and matches the AI-suggested course/topic against the loaded taxonomy', () => {

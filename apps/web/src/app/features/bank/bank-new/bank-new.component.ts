@@ -32,6 +32,7 @@ import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { extractErrorMessage } from '../../ai/extract-error-message';
+import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 import {
   CropReviewComponent,
   CropSlot,
@@ -175,6 +176,7 @@ export class BankNewComponent {
   private readonly aiService = inject(AiService);
   private readonly router = inject(Router);
   private readonly injector = inject(Injector);
+  private readonly liveAnnouncer = inject(LiveAnnouncerService);
 
   /**
    * Template refs on the structured tab's own textareas — used only to move
@@ -529,6 +531,7 @@ export class BankNewComponent {
     if (this.saving() || !this.photoValid()) return;
     this.saving.set(true);
     this.saveError.set(null);
+    this.liveAnnouncer.announce('Guardando…');
     this.bankService
       .uploadImageQuestion({
         courseId: this.pCourseId(),
@@ -576,6 +579,7 @@ export class BankNewComponent {
     if (!image || !gradeLevel || this.extracting()) return;
     this.extracting.set(true);
     this.extractError.set(null);
+    this.liveAnnouncer.announce('Leyendo la foto…');
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
@@ -619,6 +623,9 @@ export class BankNewComponent {
 
         this.extracting.set(false);
         this.extractReviewNotice.set(true);
+        this.liveAnnouncer.announce(
+          'La IA leyó la foto. Revisa el enunciado, las alternativas y la clave.',
+        );
         this.setTab('structured');
         this.focusStructuredFirstField(hasAlternatives);
       },
@@ -629,7 +636,7 @@ export class BankNewComponent {
         // there is no status/body to read a message from. Handled first,
         // before anything below assumes an HttpErrorResponse shape.
         if (error instanceof TimeoutError) {
-          this.extractError.set('La lectura de la foto tardó demasiado. Inténtalo de nuevo.');
+          this.setExtractError('La lectura de la foto tardó demasiado. Inténtalo de nuevo.');
           return;
         }
         // 429 gets its own wording because the server's body says nothing
@@ -638,7 +645,7 @@ export class BankNewComponent {
         // is not a readable image — and swallowing those left the teacher
         // with "inténtalo de nuevo" for a problem retrying never fixes. The
         // edit flow (`bank-list`) already surfaced them; this one did not.
-        this.extractError.set(
+        this.setExtractError(
           error.status === 429
             ? 'La IA alcanzó su límite de uso gratuito. Espera unos minutos e inténtalo de nuevo.'
             : extractErrorMessage(
@@ -648,6 +655,16 @@ export class BankNewComponent {
         );
       },
     });
+  }
+
+  /**
+   * Sets `extractError` AND announces the same text through
+   * `LiveAnnouncerService` — the visible banner alone is silent to a screen
+   * reader, same rationale as bank-list's D3 announcements.
+   */
+  private setExtractError(message: string): void {
+    this.extractError.set(message);
+    this.liveAnnouncer.announce(message);
   }
 
   /**
@@ -823,6 +840,7 @@ export class BankNewComponent {
     if (this.saving() || !this.structuredValid()) return;
     this.saving.set(true);
     this.saveError.set(null);
+    this.liveAnnouncer.announce('Guardando…');
 
     const existingId = this.sCreatedQuestionId;
     if (existingId) {
