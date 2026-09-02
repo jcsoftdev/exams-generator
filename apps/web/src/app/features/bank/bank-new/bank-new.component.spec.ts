@@ -2137,5 +2137,100 @@ describe('BankNewComponent', () => {
       expect(instance.canDeactivate()).toBe(true);
       expect(confirmSpy).not.toHaveBeenCalled();
     });
+
+    it('confirms before leaving when a photo was picked and photo-tab fields are filled, even with no structured text', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalledWith(
+        'Tienes una pregunta a medio revisar. ¿Salir sin guardar?',
+      );
+    });
+
+    it('confirms before leaving when only a manually picked complement image (sImage) is set', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      pickStructuredImage(fixture, compiled);
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('confirms before leaving when only sAlternatives has text', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sAlternatives', 'a\nb');
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('confirms before leaving when only sCorrectAnswer has a value', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sCorrectAnswer', 'a');
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe('onBeforeUnload (browser-level leave guard)', () => {
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
+    it('prevents the default unload and sets returnValue when there is unsaved work', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      const event = {
+        preventDefault: vi.fn(),
+        returnValue: 'untouched',
+      } as unknown as BeforeUnloadEvent;
+      (
+        fixture.componentInstance as unknown as {
+          onBeforeUnload(e: BeforeUnloadEvent): void;
+        }
+      ).onBeforeUnload(event);
+
+      expect(event.preventDefault).toHaveBeenCalled();
+      // Some browsers only honor the legacy `returnValue` string, not
+      // `preventDefault()` alone — must be set too, not just called.
+      expect(event.returnValue).toBe('');
+    });
+
+    it('does nothing when there is no unsaved work', () => {
+      const { fixture } = setup();
+
+      const event = {
+        preventDefault: vi.fn(),
+        returnValue: 'untouched',
+      } as unknown as BeforeUnloadEvent;
+      (
+        fixture.componentInstance as unknown as {
+          onBeforeUnload(e: BeforeUnloadEvent): void;
+        }
+      ).onBeforeUnload(event);
+
+      expect(event.preventDefault).not.toHaveBeenCalled();
+      expect(event.returnValue).toBe('untouched');
+    });
   });
 });

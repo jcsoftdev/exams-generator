@@ -398,17 +398,38 @@ export class BankNewComponent {
 
   /**
    * True while there is AI/crop work in flight or unreviewed, or a
-   * structured question the teacher started writing but hasn't saved yet.
+   * question the teacher started (on EITHER tab) but hasn't saved yet.
    * `sBody` alone (not `sAlternatives`/`sCorrectAnswer`) is enough of a
-   * signal — an enunciado with content is the first thing a teacher types,
-   * so its presence already means "there is something here to lose."
+   * signal on the structured tab — an enunciado with content is the first
+   * thing a teacher types, so its presence already means "there is
+   * something here to lose." The photo tab has no such single-field
+   * shortcut (its first real action is picking an image or a taxonomy
+   * field), so `photoTabHasContent` checks all of it directly — this used
+   * to be entirely unchecked, so a photo pick + filled fields with no save
+   * left silently on navigation. See `photoTabHasContent`.
    */
   private hasUnsavedWork(): boolean {
     return (
       this.cropSlots().length > 0 ||
       this.extracting() ||
       this.saving() ||
-      this.sBody().trim().length > 0
+      this.sBody().trim().length > 0 ||
+      this.sAlternatives().trim().length > 0 ||
+      !!this.sCorrectAnswer() ||
+      !!this.sImage() ||
+      this.photoTabHasContent()
+    );
+  }
+
+  /** Any photo-tab field with a value — the tab this guard used to ignore entirely. */
+  private photoTabHasContent(): boolean {
+    return (
+      !!this.pImage() ||
+      !!this.pGradeLevel() ||
+      !!this.pCourseId() ||
+      !!this.pTopicId() ||
+      !!this.pDifficulty() ||
+      !!this.pCorrectAnswer()
     );
   }
 
@@ -419,6 +440,10 @@ export class BankNewComponent {
       return;
     }
     event.preventDefault();
+    // `preventDefault()` alone doesn't trigger the browser's confirmation
+    // dialog in every implementation — the legacy API also reads the
+    // string set here (any non-undefined value shows the prompt).
+    event.returnValue = '';
   }
 
   /**
