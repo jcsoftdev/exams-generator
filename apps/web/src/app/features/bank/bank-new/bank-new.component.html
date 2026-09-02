@@ -285,15 +285,21 @@
           (recrop)="onRecrop($event)"
           (discard)="onDiscard($event)"
         />
-        @if (extractError()) {
-          <p
-            data-testid="extract-error"
-            class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
-            role="alert"
-          >
-            {{ extractError() }}
-          </p>
-        }
+      }
+      @if (extractError()) {
+        <!--
+          Deliberately OUTSIDE the crop-review `@if` above: a recrop error
+          must stay visible even after the teacher discards the LAST crop
+          slot (cropSlots().length drops to 0), since discarding a slot is
+          not "resolving" whatever went wrong recropping it.
+        -->
+        <p
+          data-testid="extract-error"
+          class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+          role="alert"
+        >
+          {{ extractError() }}
+        </p>
       }
 
       @if (!structuredValid()) {

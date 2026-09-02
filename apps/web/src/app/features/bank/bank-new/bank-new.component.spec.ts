@@ -2097,6 +2097,150 @@ describe('BankNewComponent', () => {
       expect(instance.sImage()).toBeNull();
       expect(instance.extractError()).toBeNull();
     });
+
+    /**
+     * Stronger than the test above: there, `cropSlots` was already EMPTY by
+     * the time the stale response resolved, so `updateSlot` finding nothing
+     * to patch proved nothing about the guard specifically — the same
+     * assertions would pass even if the guard were deleted, as long as
+     * `updateSlot`'s own `.map()` over an empty array still no-ops. Here a
+     * FRESH extraction creates its own figure slot at the SAME target kind
+     * before the stale response resolves — without the guard, the stale
+     * response's `updateSlot` call would match and overwrite that fresh
+     * slot's data, since `updateSlot` only compares by `target.kind`, not
+     * by extraction.
+     */
+    it('a stale recrop SUCCESS does not overwrite a new slot created by a fresh extraction at the same target', () => {
+      const recropSubject = new Subject<{ dataUrl: string; box: NormalizedBoxDto }>();
+      let extractCall = 0;
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => {
+          extractCall++;
+          return of({
+            bodyTypst: '¿Qué muestra la figura?',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            extractionId: extractCall === 1 ? 'extraction-1' : 'extraction-2',
+            figureCrop: {
+              dataUrl:
+                extractCall === 1 ? 'data:image/png;base64,AAAA' : 'data:image/png;base64,BBBB',
+              box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+            },
+          } satisfies AiExtractedQuestion);
+        },
+        recropExtractionImpl: () => recropSubject.asObservable(),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.extractWithAi(); // extraction-1
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } }); // captures extraction-1
+
+      // Photo swap, then a FRESH extraction — its own figure slot, extraction-2.
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+      instance.extractWithAi(); // extraction-2
+      fixture.detectChanges();
+
+      expect(instance.cropSlots()[0]!.dataUrl).toBe('data:image/png;base64,BBBB');
+
+      // The STALE extraction-1 recrop finally resolves.
+      recropSubject.next({
+        dataUrl: 'data:image/png;base64,ZZZZ',
+        box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+      });
+      fixture.detectChanges();
+
+      expect(instance.cropSlots()[0]!.dataUrl).toBe('data:image/png;base64,BBBB');
+    });
+
+    it('ignores a stale recrop ERROR the same way, after the photo was swapped mid-recrop', () => {
+      const recropSubject = new Subject<{ dataUrl: string; box: NormalizedBoxDto }>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => recropSubject.asObservable(),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      recropSubject.error(new HttpErrorResponse({ status: 500 }));
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBeNull();
+    });
+
+    it('keeps showing a recrop error after the last crop slot is discarded — the error banner does not live inside the crop-review block', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        onDiscard(target: CropTarget): void;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'No se pudo recortar',
+      );
+
+      // Discards the ONLY slot — cropSlots().length drops to 0.
+      instance.onDiscard({ kind: 'figure' });
+      fixture.detectChanges();
+
+      expect(instance.cropSlots().length).toBe(0);
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'No se pudo recortar',
+      );
+    });
+
+    it('shows a recrop-specific timeout message on a TimeoutError from the recrop endpoint', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => throwError(() => new TimeoutError()),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBe('El recorte tardó demasiado. Inténtalo de nuevo.');
+    });
   });
 
   describe('Minor 7: a re-crop attempted after a failed cache write shows feedback instead of doing nothing', () => {

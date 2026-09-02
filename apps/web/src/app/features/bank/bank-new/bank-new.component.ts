@@ -813,7 +813,7 @@ export class BankNewComponent {
       // otherwise drag the rectangle and see nothing happen. Same message as
       // the 410 branch below since both mean "there is no live session to
       // re-cut against." See Minor Finding 7.
-      this.extractError.set(
+      this.setExtractError(
         'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.',
       );
       return;
@@ -848,7 +848,7 @@ export class BankNewComponent {
           this.sImageFromCrop = true;
         }
       },
-      error: (error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse | TimeoutError) => {
         // B3: same staleness guard as `next` above — a stale error must not
         // overwrite `extractError` for an extraction the teacher already
         // left behind.
@@ -856,11 +856,19 @@ export class BankNewComponent {
           return;
         }
         this.updateSlot(event.target, (slot) => ({ ...slot, busy: false }));
+        // The client-side watchdog (ai.service.ts `recropExtraction`) fires
+        // a TimeoutError, not an HttpErrorResponse — same reasoning as the
+        // extract timeout branch in `extractWithAi` above: it never reached
+        // the server, so there is no status/body to read a message from.
+        if (error instanceof TimeoutError) {
+          this.setExtractError('El recorte tardó demasiado. Inténtalo de nuevo.');
+          return;
+        }
         // A 410 means the crop session expired, the id was never ours, or
         // it belongs to another account — the API deliberately returns the
         // SAME status for all three so the response can't confirm an id
         // exists. Any other status is a plain re-crop failure.
-        this.extractError.set(
+        this.setExtractError(
           error.status === 410
             ? 'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.'
             : 'No se pudo recortar. Inténtalo de nuevo.',
