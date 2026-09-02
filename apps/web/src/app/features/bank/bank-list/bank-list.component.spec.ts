@@ -110,6 +110,17 @@ function setup(
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
     /** D1: what `router.getCurrentNavigation()?.extras.state` looks like on entry. `undefined` -> no current navigation (falls back to `history.state`). */
     getCurrentNavigationImpl?: () => unknown;
+    /**
+     * Overrides `listQuestionsPaged` directly instead of deriving it from
+     * `listImpl`'s shared `questionSource` (audit #13/#11 — needed to delay
+     * or control a SPECIFIC topic page fetch without also delaying the
+     * summary counts fetch that gates the whole tree skeleton).
+     */
+    listQuestionsPagedImpl?: (
+      filters: { topicId?: string },
+      page: number,
+      pageSize: number,
+    ) => unknown;
   } = {},
 ) {
   const questionSource = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
@@ -117,16 +128,17 @@ function setup(
     (questionSource() as Observable<BankQuestion[]>).pipe(map(countsFrom)),
   );
   const listQuestionsPaged = vi.fn(
-    (filters: { topicId?: string }, page: number, pageSize: number) =>
-      (questionSource() as Observable<BankQuestion[]>).pipe(
-        map((all) => {
-          const inTopic = all.filter((q) => q.topicId === filters.topicId);
-          return {
-            items: inTopic.slice((page - 1) * pageSize, page * pageSize),
-            total: inTopic.length,
-          };
-        }),
-      ),
+    over.listQuestionsPagedImpl ??
+      ((filters: { topicId?: string }, page: number, pageSize: number) =>
+        (questionSource() as Observable<BankQuestion[]>).pipe(
+          map((all) => {
+            const inTopic = all.filter((q) => q.topicId === filters.topicId);
+            return {
+              items: inTopic.slice((page - 1) * pageSize, page * pageSize),
+              total: inTopic.length,
+            };
+          }),
+        )),
   );
   const getQuestion = vi.fn(over.getQuestionImpl ?? ((id: string) => of(makeQuestion({ id }))));
   const archiveQuestion = vi.fn(
@@ -1436,6 +1448,10 @@ describe('BankListComponent', () => {
       });
 
       expect(getQuestion).toHaveBeenCalledWith('q1');
+      // audit #12: `select()` used to re-fetch the very same question a
+      // second time even though `revealCreatedQuestion` already had the
+      // full record in hand.
+      expect(getQuestion).toHaveBeenCalledTimes(1);
       expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
       expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
       expect(compiled.querySelector('[data-testid="bank-panel"]')).toBeTruthy();
@@ -1504,6 +1520,125 @@ describe('BankListComponent', () => {
       const { compiled } = setup();
       expect(compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
       expect(compiled.querySelector('[data-highlight="true"]')).toBeFalsy();
+    });
+
+    // audit #13: the highlight's 4s clear-timer used to start the instant
+    // `revealCreatedQuestion` ran, BEFORE the topic's page (and so the row)
+    // had actually loaded — on a slow topic fetch, part or all of the
+    // window could burn before the teacher ever saw the highlight. It must
+    // instead start once the topic's page has resolved.
+    it('starts the 4s highlight window only once the topic page resolves, not the instant the question is fetched (audit #13)', () => {
+      vi.useFakeTimers();
+      try {
+        const topicPage = new Subject<{ items: BankQuestion[]; total: number }>();
+        const { compiled, fixture } = setup({
+          getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+          // Counts (`listImpl`, left at its default) resolve synchronously —
+          // only THIS topic's own page fetch is held open, so the tree
+          // skeleton exists but the row inside it does not, yet.
+          listQuestionsPagedImpl: () => topicPage,
+        });
+        fixture.detectChanges();
+
+        // The topic page hasn't resolved yet — the row doesn't exist, and
+        // the highlight must not be showing (nothing to show it ON), and
+        // certainly must not already be counting down.
+        expect(compiled.querySelector('[data-question-id="q1"]')).toBeNull();
+
+        // Advancing the clock before the page ever resolves must NOT clear
+        // anything — with the bug, the timer would already be running and
+        // this would have cleared a highlight that (with the fix) hasn't
+        // even started yet.
+        vi.advanceTimersByTime(4000);
+        fixture.detectChanges();
+
+        topicPage.next({
+          items: [makeQuestion({ id: 'q1', courseId: 'c1', topicId: 't1' })],
+          total: 1,
+        });
+        topicPage.complete();
+        fixture.detectChanges();
+
+        // NOW the row exists and the highlight starts.
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBe('true');
+
+        // A further 4s from THIS point clears it — proving the window
+        // started at resolution, not at the original fetch.
+        vi.advanceTimersByTime(4000);
+        fixture.detectChanges();
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBeNull();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    // audit #11: both `setTimeout`s `revealCreatedQuestion` schedules must
+    // be cleared if the component is destroyed before they fire — otherwise
+    // a fast navigation away leaves a stray timer trying to mutate a
+    // destroyed component's signals.
+    it('clears its highlight-clear timer on destroy — the exact handle setTimeout(4000) returned reaches clearTimeout (audit #11)', () => {
+      // Real timers on purpose: this spies on the real global
+      // setTimeout/clearTimeout to prove the SPECIFIC handle scheduling
+      // produced is the one destroy hands to clearTimeout — a stronger,
+      // more targeted claim than "some timer, somewhere, got cleared" (which
+      // fake-timer bookkeeping can't distinguish from framework-internal
+      // timers unrelated to this bug).
+      const setTimeoutSpy = vi.spyOn(globalThis, 'setTimeout');
+      const clearTimeoutSpy = vi.spyOn(globalThis, 'clearTimeout');
+
+      const { fixture } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+      fixture.detectChanges();
+
+      // `HIGHLIGHT_DURATION_MS` (4000) is distinctive enough that a call
+      // with that exact delay can only be the highlight-clear timer.
+      const highlightCallIndex = setTimeoutSpy.mock.calls.findIndex((call) => call[1] === 4000);
+      expect(highlightCallIndex).toBeGreaterThanOrEqual(0);
+      const highlightHandle = setTimeoutSpy.mock.results[highlightCallIndex].value;
+
+      fixture.destroy();
+
+      expect(clearTimeoutSpy).toHaveBeenCalledWith(highlightHandle);
+
+      setTimeoutSpy.mockRestore();
+      clearTimeoutSpy.mockRestore();
+    });
+
+    // audit bank-list #10: `history.state` (unlike Angular's one-shot
+    // navigation extras) survives a reload / back-forward navigation to the
+    // same entry — so leaving `createdQuestionId` in it meant the SAME
+    // question got revealed again on every future visit to this history
+    // entry, not just the one right after saving it.
+    it('consumes createdQuestionId from history.state — a second component built against the same entry does not reveal it again (audit #10)', () => {
+      history.replaceState({ createdQuestionId: 'q1' }, '');
+      try {
+        const first = setup({
+          getCurrentNavigationImpl: () => null,
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+        expect(first.compiled.querySelector('[data-testid="created-banner"]')).toBeTruthy();
+
+        // Simulate a second, independent BankListComponent built against the
+        // same underlying `history.state` (e.g. a reload replaying the same
+        // history entry). `TestBed.resetTestingModule()` only tears down
+        // Angular's DI/providers — it never touches `history.state` itself,
+        // so this is a faithful "constructed twice against the same entry".
+        TestBed.resetTestingModule();
+        const second = setup({
+          getCurrentNavigationImpl: () => null,
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+        expect(second.compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
+      } finally {
+        history.replaceState(null, '');
+      }
     });
   });
 

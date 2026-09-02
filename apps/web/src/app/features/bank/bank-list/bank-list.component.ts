@@ -380,6 +380,17 @@ export class BankListComponent {
   protected readonly imageUrls = signal<Record<string, string>>({});
   /** Every object URL this component has ever created, revoked on destroy. */
   private readonly objectUrls: string[] = [];
+  /** Every `setTimeout` handle still pending, cleared on destroy (audit #11) — see `scheduleTimeout`. */
+  private readonly pendingTimeouts = new Set<ReturnType<typeof setTimeout>>();
+
+  /** `setTimeout` that self-unregisters on fire AND is cleared if the component is destroyed first (audit #11). */
+  private scheduleTimeout(fn: () => void, ms: number): void {
+    const handle = setTimeout(() => {
+      this.pendingTimeouts.delete(handle);
+      fn();
+    }, ms);
+    this.pendingTimeouts.add(handle);
+  }
   /**
    * Asset ids currently being fetched. `imageUrls` alone cannot stand in for
    * this: it is only populated when a response ARRIVES, so a second
@@ -458,6 +469,15 @@ export class BankListComponent {
       for (const url of this.objectUrls) {
         URL.revokeObjectURL(url);
       }
+      // audit #11: both `setTimeout`s in `revealCreatedQuestion` outlived the
+      // component otherwise — a fast navigation away right after creating a
+      // question left a stray timer trying to mutate a destroyed
+      // component's signals (or `document.querySelector` a row that's about
+      // to belong to a different screen entirely).
+      for (const handle of this.pendingTimeouts) {
+        clearTimeout(handle);
+      }
+      this.pendingTimeouts.clear();
     });
     // Lazy thumbnail loading: fetch a topic's images the first time it becomes visible+expanded.
     // Doubly bounded now — a topic's questions only exist client-side after its own page fetch,
@@ -510,7 +530,16 @@ export class BankListComponent {
     const fromHistory = (history.state as Record<string, unknown> | undefined)?.[
       'createdQuestionId'
     ];
-    return typeof fromHistory === 'string' && fromHistory ? fromHistory : null;
+    if (typeof fromHistory === 'string' && fromHistory) {
+      // Consume it (audit #10). Unlike the one-shot navigation extras above,
+      // `history.state` survives a reload or a back/forward navigation back
+      // to this same entry — left unconsumed, the SAME question would get
+      // "revealed" (expanded, selected, highlighted, announced) again on
+      // every future visit to this history entry, not just this one.
+      history.replaceState({ ...history.state, createdQuestionId: null }, '');
+      return fromHistory;
+    }
+    return null;
   }
 
   /**
@@ -529,17 +558,27 @@ export class BankListComponent {
       next: (question) => {
         this.expandedCourses.update((current) => addToSet(current, question.courseId));
         this.expandedTopics.update((current) => addToSet(current, question.topicId));
-        this.loadTopicQuestions(question.topicId);
-        this.select(question);
+        // `question` here is already the FULL record this same `getQuestion`
+        // call just fetched — apply it directly instead of through
+        // `select()`, which would issue a second, redundant `getQuestion`
+        // for the exact same id right after this one (audit #12).
+        this.applySelectedQuestion(question);
         this.createdBanner.set(true);
         this.liveAnnouncer.announce('Pregunta guardada.');
-        this.highlightedQuestionId.set(id);
-        setTimeout(() => this.highlightedQuestionId.set(null), HIGHLIGHT_DURATION_MS);
+        // The highlight's `HIGHLIGHT_DURATION_MS` window starts once the
+        // topic's page has actually resolved and the row exists to carry it
+        // — starting the clear-timer immediately (audit #13) could burn
+        // part, or on a slow/failed request all, of the window before the
+        // row — and the highlight on it — was ever rendered.
+        this.loadTopicQuestions(question.topicId, false, () => {
+          this.highlightedQuestionId.set(id);
+          this.scheduleTimeout(() => this.highlightedQuestionId.set(null), HIGHLIGHT_DURATION_MS);
+        });
         // Best-effort: scroll the row into view once the topic's page has
         // rendered. `scrollIntoView` doesn't exist in every test environment
         // (jsdom), hence the optional call — this is UX polish, not behavior
         // a test should depend on.
-        setTimeout(() => {
+        this.scheduleTimeout(() => {
           document
             .querySelector(`[data-testid="bank-question"][data-question-id="${id}"]`)
             ?.scrollIntoView?.({ block: 'center' });
@@ -697,12 +736,20 @@ export class BankListComponent {
    * never re-issues a request. `force` is the inline-retry escape hatch: it
    * re-runs the same page after a failure, which the `failedTopics` guard
    * would otherwise block.
+   *
+   * `onSettled`, when given, fires exactly once — synchronously for any
+   * no-op branch below (the topic's current page state, whatever it is, is
+   * already final), or once the request this call issues finishes (success
+   * or error) — so a caller can know when it's safe to assume the topic's
+   * loaded rows (and their rendered rows) reflect this call (audit #13).
    */
-  private loadTopicQuestions(topicId: string, force = false): void {
+  private loadTopicQuestions(topicId: string, force = false, onSettled?: () => void): void {
     if (this.loadingTopics().has(topicId)) {
+      onSettled?.();
       return;
     }
     if (!force && this.failedTopics().has(topicId)) {
+      onSettled?.();
       return;
     }
 
@@ -710,6 +757,7 @@ export class BankListComponent {
     const expectedTotal =
       this.topicCounts().find((bucket) => bucket.topicId === topicId)?.total ?? 0;
     if (alreadyLoaded.length > 0 && alreadyLoaded.length >= expectedTotal) {
+      onSettled?.();
       return;
     }
 
@@ -732,10 +780,12 @@ export class BankListComponent {
             return next;
           });
           this.loadingTopics.update((current) => removeFromSet(current, topicId));
+          onSettled?.();
         },
         error: () => {
           this.loadingTopics.update((current) => removeFromSet(current, topicId));
           this.failedTopics.update((current) => addToSet(current, topicId));
+          onSettled?.();
         },
       });
   }
@@ -844,14 +894,23 @@ export class BankListComponent {
   }
 
   protected select(question: BankQuestion): void {
-    this.actionError.set(null);
-    this.cancelEdit();
-    this.selected.set(question);
-    this.loadFullImage(question);
+    this.applySelectedQuestion(question);
+    // `question` here is typically the tree-leaf/summary shape, missing
+    // fields the detail panel needs — re-fetch the full record. (Not needed
+    // by `revealCreatedQuestion`, which already has the full one — see
+    // `applySelectedQuestion`'s doc, audit #12.)
     this.bankService.getQuestion(question.id).subscribe({
       next: (full) => this.selected.set(full),
       error: () => {},
     });
+  }
+
+  /** Shared by `select()` and `revealCreatedQuestion()` — see `select`'s doc (audit #12). */
+  private applySelectedQuestion(question: BankQuestion): void {
+    this.actionError.set(null);
+    this.cancelEdit();
+    this.selected.set(question);
+    this.loadFullImage(question);
   }
 
   /**
