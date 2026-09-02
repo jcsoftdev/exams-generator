@@ -275,3 +275,17 @@ Rama `mvp/integration` (53 commits sobre `main`): cuatro líneas en worktrees (A
 | Web typecheck + eslint | limpios |
 | API typecheck | falla solo por `packages/shared/dist` desactualizado (`AiExtractedQuestion` nuevo); requiere recompilar `shared` |
 | Browser (Playwright MCP, DeepSeek V4 real) | foto con circuito → extracción sin alternativas inventadas, aviso, sugerencia de taxonomía, recorte por teclado + recrop 200, 409 con mensaje correcto, guardado 201 + imagen 201, banner y anuncio en el banco |
+
+## Addendum 3 — deuda cerrada y listo para desplegar (2026-09-02, noche)
+
+Tres líneas más sobre `main`, mismo método (test de feature en rojo, worktree, merge):
+
+- **E, deuda web**: object URLs revocados en `DestroyRef` (M8); guard de staleness en los cuatro effects de taxonomía (M9); `ui-file-upload` con drag-and-drop real y anillo de foco, reemplaza el markup duplicado (L5, cierra del todo M2); `forkJoin` en la cadena de guardado (L7); `aspect-ratio` reservado en el recorte (L6); un solo `<h1>` (L8).
+- **F, API + select**: `gradeLevel` en `GET /bank/questions/summary` desde la tabla de taxonomía; el árbol etiqueta temas duplicados sin expandir (cierra L4). `ui-select` expone label + valor en `aria-labelledby` (cierra M14 en lo verificable sin lector de pantalla).
+- **G, partición**: `bank-new.component.ts` de 1264 a 657 líneas; `taxonomy-matcher.ts` (puro, con tests por función), `question-save-chain.service.ts`, `bank-new-extraction.service.ts`. Los 119 tests del componente pasan sin cambios. No bajó de 500 porque el spec accede a ~25 miembros del componente directamente; partir en hijos exigía reescribir 3000 líneas de spec (M10 parcial, documentado en el commit).
+
+**Estado del informe original:** todo cerrado salvo M10 parcial y M14 pendiente de una pasada manual con VoiceOver.
+
+**Verificación en `main` (`c465c57`):** API unit 1330/1330, API e2e ai+bank 99/99, web 1069/1069, typecheck API y web limpios (`shared` recompilado), lint limpio, smoke en browser con DeepSeek real sobre el código refactorizado.
+
+**Deploy:** `infra/dokploy.md` documenta las seis `AI_*`. Faltaba cargar en Dokploy `AI_BASE_URL`, `AI_API_KEY`, `AI_MODEL`, `AI_VISION_MODEL`, `AI_RESPONSE_FORMAT`, `AI_THINKING` (la key solo la puede poner el operador).
