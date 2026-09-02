@@ -184,7 +184,9 @@
                           [name]="chevronFor(isTopicExpanded(topic.topicId))"
                           class="h-3.5 w-3.5 shrink-0 text-n400"
                         ></lucide-angular>
-                        <span class="text-sm font-medium text-n700">{{ topic.name }}</span>
+                        <span class="text-sm font-medium text-n700">{{
+                          topicDisplayName(course, topic)
+                        }}</span>
                         <!-- Count comes from the server summary, NOT from the loaded leaves — it's the topic's real total even while collapsed. -->
                         <span class="text-xs text-n500">· {{ topic.questionCount }}</span>
                       </button>

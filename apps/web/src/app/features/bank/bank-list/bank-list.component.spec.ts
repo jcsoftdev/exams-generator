@@ -555,6 +555,42 @@ describe('BankListComponent', () => {
       expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
     });
 
+    it('shows a neutral "Pregunta con imagen" fallback when a leaf has no statement AND no sourceName (D2a — a web-created image question)', () => {
+      const image = makeQuestion({
+        id: 'qi-blank',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: null,
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent).toContain('Pregunta con imagen');
+    });
+
+    it('strips the file extension off sourceName before showing it as the snippet (D2a)', () => {
+      const image = makeQuestion({
+        id: 'qi-ext',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: '1d.PNG',
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent?.trim()).toBe('1d');
+    });
+
     it('labels an image question with where it came from, since it has no statement', () => {
       // The bank now holds ~1500 whole-question images harvested from published
       // exams. Without their provenance every one of those rows reads "Clave: c"
@@ -623,6 +659,34 @@ describe('BankListComponent', () => {
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).not.toContain('(clave C)');
+    });
+
+    it('shows the grade on each topic once two topics under the same course share a name (D2b)', () => {
+      const topics: Topic[] = [
+        { id: 't-bio-5', name: 'Genética y herencia', courseId: 'c1' },
+        { id: 't-bio-4', name: 'Genética y herencia', courseId: 'c1' },
+      ];
+      const questions: BankQuestion[] = [
+        makeQuestion({ id: 'gb5', courseId: 'c1', topicId: 't-bio-5', gradeLevel: 'secundaria_5' }),
+        makeQuestion({ id: 'gb4', courseId: 'c1', topicId: 't-bio-4', gradeLevel: 'secundaria_4' }),
+      ];
+      const { compiled, fixture } = setup({
+        getAllTopicsImpl: () => of(topics),
+        listImpl: () => of(questions),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't-bio-5');
+      expandTopic(compiled, fixture, 't-bio-4');
+
+      expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
+      expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
+    });
+
+    it('leaves a unique topic name bare — no grade suffix when nothing else under the course shares it', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
+
+      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
     });
   });
 

@@ -794,8 +794,39 @@ export class BankListComponent {
     // Its provenance names the exam and the question number, which is what
     // tells one of ~1500 harvested image questions from the next. The trailing
     // "(clave E)" the harvest writes is dropped: the row prints the key already.
-    const source = (question.sourceName ?? '').replace(/\s*\(clave\s+[a-eA-E]\)\s*$/, '').trim();
-    return source ? truncateTypst(source, 70) : null;
+    // The file extension a WEB UPLOAD writes into sourceName ("1d.PNG") is
+    // dropped too — it's not provenance, just noise (audit 2026-09-02, D2a).
+    const source = (question.sourceName ?? '')
+      .replace(/\s*\(clave\s+[a-eA-E]\)\s*$/, '')
+      .replace(/\.(png|jpe?g|gif|webp|bmp|heic|heif|tiff?)$/i, '')
+      .trim();
+    if (source) {
+      return truncateTypst(source, 70);
+    }
+    // No statement AND no source: a question created straight in the web UI
+    // from a bare image, with nothing else to identify it by. The row used to
+    // fall through to `null` here and render only "Clave: d" (audit 2026-09-02,
+    // L1) — this is the honest floor: it IS a question, it DOES have an image.
+    return 'Pregunta con imagen';
+  }
+
+  /**
+   * D2b (audit L4): "Genética y herencia · 5" and "· 4" side by side, with
+   * nothing telling the two topics apart — the trailing number there is
+   * `topic.questionCount`, easily mistaken for a grade. Only topics that
+   * ACTUALLY share a name within the same course get the grade suffix; a
+   * unique name stays bare, same as before. `topic.gradeLevel` is `null`
+   * until the topic's first page has loaded (see `QuestionTreeTopicNode`), so
+   * a same-named topic never expanded yet still renders bare rather than a
+   * dangling "· undefined".
+   */
+  protected topicDisplayName(course: QuestionTreeCourseNode, topic: QuestionTreeTopicNode): string {
+    const sharesNameWithSibling =
+      course.topics.filter((sibling) => sibling.name === topic.name).length > 1;
+    if (sharesNameWithSibling && topic.gradeLevel) {
+      return `${topic.name} · ${gradeLevelLabel(topic.gradeLevel)}`;
+    }
+    return topic.name;
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */

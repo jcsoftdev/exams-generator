@@ -15,6 +15,16 @@ export interface QuestionTreeTopicNode {
   readonly questions: readonly BankQuestion[];
   /** `true` once this topic's first page came back — distinguishes "not fetched yet" from "fetched, genuinely empty". */
   readonly loaded: boolean;
+  /**
+   * D2b (audit L4): the taxonomy API's `TopicListItem` does not return a
+   * topic's `gradeLevel` (it's DB-backed, but only used server-side to
+   * FILTER `findTopics`/`findTopicsByCourseIds` — see
+   * `apps/api/.../taxonomy.repository.ts`), so this is derived client-side
+   * from the first loaded question of the topic instead — every question in
+   * a topic shares the same grade by seeding convention. `null` until the
+   * topic's first page has loaded (mirrors `loaded`/`questions`).
+   */
+  readonly gradeLevel: string | null;
 }
 
 /** A course branch grouping its topics; hidden entirely when it has no questions. */
@@ -68,6 +78,7 @@ export function buildQuestionTree(
       questionCount: bucket.total,
       questions: loaded ?? [],
       loaded: loaded !== undefined,
+      gradeLevel: loaded?.[0]?.gradeLevel ?? null,
     });
   }
 
