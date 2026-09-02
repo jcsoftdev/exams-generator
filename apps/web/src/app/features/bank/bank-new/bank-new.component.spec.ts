@@ -6,6 +6,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { ButtonComponent } from '../../../ui/button/button.component';
+import { InputComponent } from '../../../ui/input/input.component';
 import { BankNewComponent } from './bank-new.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -35,6 +37,7 @@ function setup(
       id: string,
       crops: readonly { alternativeIndex: number; file: File }[],
     ) => unknown;
+    navigateImpl?: () => Promise<boolean>;
   } = {},
 ) {
   const uploadImageQuestion = vi.fn(over.uploadImpl ?? (() => of({ id: 'img-q' })));
@@ -57,7 +60,10 @@ function setup(
     over.recropExtractionImpl ??
       (() => of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } })),
   );
-  const navigate = vi.fn();
+  // Real `Router.navigate` always returns a `Promise<boolean>` — defaults
+  // to a resolved one so `navigateToBank`'s `.then()` chain has something
+  // to attach to in every test, not just the ones that care about it.
+  const navigate = vi.fn(over.navigateImpl ?? (() => Promise.resolve(true)));
   const announce = vi.fn();
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
@@ -329,6 +335,112 @@ describe('BankNewComponent', () => {
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="save-error"]')).toBeTruthy();
     expect(navigate).not.toHaveBeenCalled();
+  });
+
+  describe('save errors surface the server message instead of a generic one', () => {
+    it('maps a 409 from uploadImageQuestion to a dedicated duplicate-question message (photo tab)', () => {
+      const { fixture, compiled } = setup({
+        uploadImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 409,
+                error: { message: 'Question already exists (id: abc123)' },
+              }),
+          ),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      set(fixture, 'pCorrectAnswer', 'a');
+      (compiled.querySelector('[data-testid="photo-submit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'Ya existe una pregunta idéntica en el banco.',
+      );
+    });
+
+    it('surfaces a 422 validation message verbatim instead of the generic fallback (photo tab)', () => {
+      const { fixture, compiled } = setup({
+        uploadImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 422,
+                error: { message: ['correctAnswer must be one of a, b, c, d, e'] },
+              }),
+          ),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      set(fixture, 'pCorrectAnswer', 'z');
+      (compiled.querySelector('[data-testid="photo-submit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'correctAnswer must be one of a, b, c, d, e',
+      );
+    });
+
+    it('maps a 409 from createStructuredQuestion to a dedicated duplicate-question message (structured tab)', () => {
+      const { fixture, compiled } = setup({
+        structuredImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 409,
+                error: { message: 'Question already exists (id: abc123)' },
+              }),
+          ),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'a\nb');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'Ya existe una pregunta idéntica en el banco.',
+      );
+    });
+
+    it('surfaces a 422 validation message verbatim instead of the generic fallback (structured tab)', () => {
+      const { fixture, compiled } = setup({
+        structuredImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 422,
+                error: { message: ['bodyTypst is required'] },
+              }),
+          ),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'a\nb');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'bodyTypst is required',
+      );
+    });
   });
 
   describe('taxonomy dropdowns (no raw UUID text inputs)', () => {
@@ -749,6 +861,22 @@ describe('BankNewComponent', () => {
       expect(instance.extracting()).toBe(false);
     });
 
+    it('does not announce the extract error through LiveAnnouncerService — the role="alert" banner already announces on insertion, one channel only', () => {
+      const { fixture, compiled, announce } = setup({
+        extractQuestionFromImageImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      expect(announce).not.toHaveBeenCalledWith(
+        'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+      );
+    });
+
     it('surfaces a 4xx body verbatim instead of the generic retry message', () => {
       const { fixture, compiled } = setup({
         extractQuestionFromImageImpl: () =>
@@ -794,7 +922,19 @@ describe('BankNewComponent', () => {
       expect(instance.extractError()).toContain('límite de uso gratuito');
     });
 
-    it('does not leak a stale pending course/topic when the structured grade already equals the photo grade (same-grade no-op)', () => {
+    /**
+     * Renamed/re-scoped from "does not leak a STALE pending course/topic
+     * ... (same-grade no-op)": the OLD assertion here was that a same-grade
+     * extraction applied NOTHING (Curso/Tema stayed blank) because the
+     * grade→course effect never fires when `sGradeLevel.set()` gets the
+     * value it already had. That was the bug, not the spec — a
+     * same-grade extraction's own resolved course/topic is NOT "stale",
+     * it's simply this extraction's own (correct) result, and it must be
+     * applied even though the grade→course effect chain never runs for it.
+     * See "second extraction at the same grade" below for the case this
+     * guards against directly.
+     */
+    it("applies THIS extraction's resolved course/topic even when the structured grade already equals the photo grade (same-grade case)", () => {
       const { fixture, compiled } = setup();
       fillPhotoTaxonomy(fixture);
       pickImage(fixture, compiled);
@@ -809,19 +949,206 @@ describe('BankNewComponent', () => {
       instance.extractWithAi();
       fixture.detectChanges();
 
-      // Same-grade no-op: sGradeLevel.set() never notifies, so the
-      // grade→course effect doesn't fire and Curso/Tema are NOT preselected.
       expect(instance.sGradeLevel()).toBe('pre');
-      expect(instance.sCourseId()).not.toBe('c1');
-      expect(instance.sTopicId()).not.toBe('t1');
+      expect(instance.sCourseId()).toBe('c1');
+      expect(instance.sTopicId()).toBe('t1');
 
       // Later manual course pick on the structured tab, unrelated to the
-      // photo tab's course — without Fix 1's guard, pendingStructuredTopicId
-      // would still hold the photo tab's stale 't1' and leak into c2.
+      // photo tab's course — must reset the topic, never leak the previous
+      // extraction's 't1' into c2.
       set(fixture, 'sCourseId', 'c2');
       fixture.detectChanges();
 
       expect(instance.sTopicId()).toBe('');
+    });
+
+    describe('second extraction at the same grade applies its OWN resolved course/topic, not the previous one', () => {
+      it("a second extraction (same grade) overwrites the first extraction's matched course/topic", () => {
+        let call = 0;
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () => {
+            call++;
+            return call === 1
+              ? of({
+                  bodyTypst: 'uno',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'comunicación',
+                  suggestedTopicName: 'lectora',
+                } satisfies AiRevisedQuestion)
+              : of({
+                  bodyTypst: 'dos',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'Matemática',
+                  suggestedTopicName: 'Álgebra',
+                } satisfies AiRevisedQuestion);
+          },
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        const instance = fixture.componentInstance as unknown as {
+          extractWithAi(): void;
+          sCourseId(): string;
+          sTopicId(): string;
+        };
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+        expect(instance.sCourseId()).toBe('c2');
+        expect(instance.sTopicId()).toBe('t2');
+
+        // Second extraction — the structured grade is already 'pre' from
+        // the first extraction, so this is the same-grade path.
+        (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+
+        expect(instance.sCourseId()).toBe('c1');
+        expect(instance.sTopicId()).toBe('t1');
+      });
+
+      it('clears the selects and shows the B5 hint when the second extraction (same grade) matches nothing in the taxonomy', () => {
+        let call = 0;
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () => {
+            call++;
+            return call === 1
+              ? of({
+                  bodyTypst: 'uno',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'comunicación',
+                  suggestedTopicName: 'lectora',
+                } satisfies AiRevisedQuestion)
+              : of({
+                  bodyTypst: 'dos',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'Biología',
+                  suggestedTopicName: 'Fotosíntesis',
+                } satisfies AiRevisedQuestion);
+          },
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        const instance = fixture.componentInstance as unknown as {
+          extractWithAi(): void;
+          sCourseId(): string;
+          sTopicId(): string;
+        };
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+        expect(instance.sCourseId()).toBe('c2');
+
+        (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+
+        expect(instance.sCourseId()).toBe('');
+        expect(instance.sTopicId()).toBe('');
+        expect(compiled.querySelector('[data-testid="ai-taxonomy-hint"]')?.textContent).toContain(
+          'Biología',
+        );
+      });
+    });
+  });
+
+  describe('B-stale: extraction guard against a photo replaced mid-extraction', () => {
+    it('discards a stale extract response when the photo was replaced while it was in flight — nothing from the old photo lands', () => {
+      const extractSubject = new Subject<AiRevisedQuestion>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => extractSubject.asObservable(),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled); // foto1
+
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        sBody(): string;
+        sAlternatives(): string;
+        sCorrectAnswer(): string;
+        extracting(): boolean;
+        tab(): string;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extracting()).toBe(true);
+
+      // Teacher picks a DIFFERENT photo (foto2) while foto1's extraction is
+      // still in flight.
+      const file2 = new File(['bytes2'], 'foto2.png', { type: 'image/png' });
+      const nativeFileInput = compiled.querySelector(
+        '[data-testid="tab-photo-panel"] input[type="file"]',
+      ) as HTMLInputElement;
+      Object.defineProperty(nativeFileInput, 'files', { value: [file2], configurable: true });
+      nativeFileInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      // The stale extraction — for foto1 — finally resolves.
+      extractSubject.next({
+        bodyTypst: 'Enunciado de foto1',
+        alternatives: ['A', 'B'],
+        correctAnswer: '0',
+      });
+      fixture.detectChanges();
+
+      expect(instance.sBody()).toBe('');
+      expect(instance.sAlternatives()).toBe('');
+      expect(instance.sCorrectAnswer()).toBe('');
+      expect(instance.tab()).toBe('photo');
+      expect(instance.extracting()).toBe(false);
+    });
+
+    it('discards a stale extract ERROR the same way, when the photo was replaced while the request was in flight', () => {
+      const extractSubject = new Subject<AiRevisedQuestion>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => extractSubject.asObservable(),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractError(): string | null;
+        extracting(): boolean;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+
+      const nativeFileInput = compiled.querySelector(
+        '[data-testid="tab-photo-panel"] input[type="file"]',
+      ) as HTMLInputElement;
+      const file2 = new File(['bytes2'], 'foto2.png', { type: 'image/png' });
+      Object.defineProperty(nativeFileInput, 'files', { value: [file2], configurable: true });
+      nativeFileInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      extractSubject.error(new HttpErrorResponse({ status: 500 }));
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBeNull();
+      expect(instance.extracting()).toBe(false);
+    });
+
+    it('disables the photo file input while extracting()', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => new Observable(() => {}),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const nativeFileInput = compiled.querySelector(
+        '[data-testid="tab-photo-panel"] input[type="file"]',
+      ) as HTMLInputElement;
+      expect(nativeFileInput.disabled).toBe(false);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      expect(nativeFileInput.disabled).toBe(true);
     });
   });
 
@@ -903,16 +1230,25 @@ describe('BankNewComponent', () => {
     });
 
     it('renders "Extraer con IA" as the primary action, and "Guardar foto tal cual" as the secondary/ghost action', () => {
-      const { compiled } = setup();
-      const extractButton = compiled.querySelector(
-        '[data-testid="extract-with-ai"] button',
-      ) as HTMLButtonElement;
+      const { fixture, compiled } = setup();
+      // Reads the `variant` INPUT bound to each `ui-button`, not a CSS class
+      // string — a class assertion breaks the moment `ui-button`'s own
+      // internal styling changes, even though the component's intent
+      // (primary vs. ghost) hasn't.
+      const extractButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="extract-with-ai"] ui-button'),
+      );
+      const submitButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="photo-submit"] ui-button'),
+      );
+      const extractButtonInstance = extractButtonDebug.componentInstance as ButtonComponent;
+      const submitButtonInstance = submitButtonDebug.componentInstance as ButtonComponent;
       const submitButton = compiled.querySelector(
         '[data-testid="photo-submit"] button',
       ) as HTMLButtonElement;
 
-      expect(extractButton.className).toContain('bg-primary-500');
-      expect(submitButton.className).not.toContain('bg-primary-500');
+      expect(extractButtonInstance.variant()).toBe('primary');
+      expect(submitButtonInstance.variant()).toBe('ghost');
       expect(submitButton.textContent).toContain('Guardar foto tal cual');
     });
 
@@ -926,6 +1262,91 @@ describe('BankNewComponent', () => {
       pickImage(fixture, compiled);
 
       expect(compiled.querySelector('[data-testid="extract-helper"]')).toBeFalsy();
+    });
+  });
+
+  describe('D4: wiring the required/ariaDescribedBy primitives', () => {
+    function selectInstance(
+      fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } },
+      testid: string,
+    ): SelectComponent<unknown> {
+      const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-select`));
+      return debugEl!.componentInstance as SelectComponent<unknown>;
+    }
+
+    function inputInstance(
+      fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } },
+      testid: string,
+    ): InputComponent {
+      const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-input`));
+      return debugEl!.componentInstance as InputComponent;
+    }
+
+    it('marks every required select/input as required=true on the photo tab', () => {
+      const { fixture } = setup();
+      expect(selectInstance(fixture, 'photo-grade-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'photo-course-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'photo-topic-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'photo-difficulty-select').required()).toBe(true);
+      expect(inputInstance(fixture, 'photo-correct-answer-input').required()).toBe(true);
+    });
+
+    it('marks every required select/input as required=true on the structured tab', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(selectInstance(fixture, 'structured-grade-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'structured-course-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'structured-topic-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'structured-difficulty-select').required()).toBe(true);
+      expect(inputInstance(fixture, 'structured-correct-answer-input').required()).toBe(true);
+    });
+
+    it('links the disabled "Extraer con IA" button to its helper text via ariaDescribedBy', () => {
+      const { fixture, compiled } = setup();
+      const helper = compiled.querySelector('[data-testid="extract-helper"]') as HTMLElement;
+      expect(helper.id).toBeTruthy();
+      const extractButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="extract-with-ai"] ui-button'),
+      );
+      const extractButtonInstance = extractButtonDebug!.componentInstance as ButtonComponent;
+      expect(extractButtonInstance.ariaDescribedBy()).toBe(helper.id);
+    });
+
+    it('clears ariaDescribedBy on "Extraer con IA" once photo taxonomy is complete (helper text is gone)', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      const extractButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="extract-with-ai"] ui-button'),
+      );
+      const extractButtonInstance = extractButtonDebug!.componentInstance as ButtonComponent;
+      expect(extractButtonInstance.ariaDescribedBy()).toBeFalsy();
+    });
+
+    it('links the photo-tab submit button to its missing-fields hint via ariaDescribedBy', () => {
+      const { fixture, compiled } = setup();
+      const hint = compiled.querySelector('[data-testid="photo-validation"]') as HTMLElement;
+      expect(hint.id).toBeTruthy();
+      const submitButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="photo-submit"] ui-button'),
+      );
+      const submitButtonInstance = submitButtonDebug!.componentInstance as ButtonComponent;
+      expect(submitButtonInstance.ariaDescribedBy()).toBe(hint.id);
+    });
+
+    it('links the structured-tab submit button to its missing-fields hint via ariaDescribedBy', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const hint = compiled.querySelector('[data-testid="structured-validation"]') as HTMLElement;
+      expect(hint.id).toBeTruthy();
+      const submitButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="structured-submit"] ui-button'),
+      );
+      const submitButtonInstance = submitButtonDebug!.componentInstance as ButtonComponent;
+      expect(submitButtonInstance.ariaDescribedBy()).toBe(hint.id);
     });
   });
 
@@ -1636,6 +2057,170 @@ describe('BankNewComponent', () => {
       const instance = fixture.componentInstance as unknown as { sCorrectAnswer(): string };
       expect(instance.sCorrectAnswer()).toBe('');
     });
+
+    it('leaves the clave input empty when alternatives is empty, even though correctAnswer carries an index', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'Enunciado sin alternativas',
+            alternatives: [],
+            correctAnswer: '0',
+          }),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      // An index into an EMPTY alternatives list is meaningless — prefilling
+      // 'a' here would silently point the clave at an alternative that does
+      // not exist.
+      const instance = fixture.componentInstance as unknown as { sCorrectAnswer(): string };
+      expect(instance.sCorrectAnswer()).toBe('');
+    });
+  });
+
+  describe('notices (extractNoAlternatives/extractReviewNotice/aiTaxonomyHint) get cleared, not stuck', () => {
+    const NOTICE_PRODUCING_EXTRACTION: AiRevisedQuestion = {
+      bodyTypst: 'x',
+      alternatives: [],
+      correctAnswer: '0',
+      suggestedCourseName: 'Biología',
+      suggestedTopicName: 'Fotosíntesis',
+    };
+
+    it('clears all three notices when a new photo is picked on the photo tab', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(NOTICE_PRODUCING_EXTRACTION),
+      });
+      // Only the grade is set (no manual pCourseId/pTopicId) so the AI's
+      // non-matching suggestion actually produces the B5 hint — a manual
+      // pick on the photo tab always wins over the suggestion.
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractNoAlternatives(): boolean;
+        extractReviewNotice(): boolean;
+        aiTaxonomyHint(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extractNoAlternatives()).toBe(true);
+      expect(instance.extractReviewNotice()).toBe(true);
+      expect(instance.aiTaxonomyHint()).not.toBeNull();
+
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      expect(instance.extractNoAlternatives()).toBe(false);
+      expect(instance.extractReviewNotice()).toBe(false);
+      expect(instance.aiTaxonomyHint()).toBeNull();
+    });
+
+    it('clears all three notices at the START of a new extraction on the SAME photo, even if this run then fails', () => {
+      let call = 0;
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => {
+          call++;
+          return call === 1
+            ? of(NOTICE_PRODUCING_EXTRACTION)
+            : throwError(() => new HttpErrorResponse({ status: 500 }));
+        },
+      });
+      // Only the grade is set (no manual pCourseId/pTopicId) so the AI's
+      // non-matching suggestion actually produces the B5 hint — a manual
+      // pick on the photo tab always wins over the suggestion.
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractNoAlternatives(): boolean;
+        extractReviewNotice(): boolean;
+        aiTaxonomyHint(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extractNoAlternatives()).toBe(true);
+      expect(instance.extractReviewNotice()).toBe(true);
+      expect(instance.aiTaxonomyHint()).not.toBeNull();
+
+      // Back to the photo tab WITHOUT picking a new photo — re-running the
+      // extraction on the SAME photo, which fails this time. `setImage` is
+      // never called here, so only the reset at the top of `extractWithAi`
+      // itself can be responsible for clearing these.
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      instance.extractWithAi();
+      fixture.detectChanges();
+
+      expect(instance.extractNoAlternatives()).toBe(false);
+      expect(instance.extractReviewNotice()).toBe(false);
+      expect(instance.aiTaxonomyHint()).toBeNull();
+    });
+
+    it('clears extractNoAlternatives once the teacher types alternatives into the textarea', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({ bodyTypst: 'x', alternatives: [], correctAnswer: '0' } satisfies AiRevisedQuestion),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractNoAlternatives(): boolean;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extractNoAlternatives()).toBe(true);
+
+      set(fixture, 'sAlternatives', 'a\nb');
+
+      expect(instance.extractNoAlternatives()).toBe(false);
+    });
+  });
+
+  describe('clave range check: the letter must index an actual alternative', () => {
+    it('rejects a clave whose letter index is out of range for the current alternatives, with a dedicated missing-field message', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'x\ny'); // 2 alternatives — valid letters are a, b
+      set(fixture, 'sCorrectAnswer', 'e'); // index 4, out of range
+
+      const instance = fixture.componentInstance as unknown as { structuredValid(): boolean };
+      expect(instance.structuredValid()).toBe(false);
+      const hint = compiled.querySelector('[data-testid="structured-validation"]');
+      expect(hint?.textContent).toContain('clave fuera de rango');
+      expect(
+        (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement)
+          .disabled,
+      ).toBe(true);
+    });
+
+    it('accepts a clave whose letter index IS within range for the current alternatives', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'x\ny');
+      set(fixture, 'sCorrectAnswer', 'b'); // index 1, within range for 2 alternatives
+
+      const instance = fixture.componentInstance as unknown as { structuredValid(): boolean };
+      expect(instance.structuredValid()).toBe(true);
+      expect(compiled.querySelector('[data-testid="structured-validation"]')).toBeFalsy();
+    });
   });
 
   describe('B7: announces the tab switch after a successful extraction', () => {
@@ -1708,8 +2293,12 @@ describe('BankNewComponent', () => {
 
       const instance = fixture.componentInstance as unknown as { extractError(): string | null };
       const message = instance.extractError();
+      // The shared helper (extract-error-message.ts) only returns the
+      // neutral half — bank-new appends its own photo-specific sentence on
+      // top, since exam-review/bank-list/ai-review-queue (the helper's
+      // other callers) never show a photo tab.
       expect(message).toBe(
-        'La extracción con IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.',
+        'La IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.',
       );
       expect(message?.toLowerCase()).not.toContain('inténtalo de nuevo');
       expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
@@ -1814,6 +2403,150 @@ describe('BankNewComponent', () => {
       expect(instance.cropSlots().length).toBe(0);
       expect(instance.sImage()).toBeNull();
       expect(instance.extractError()).toBeNull();
+    });
+
+    /**
+     * Stronger than the test above: there, `cropSlots` was already EMPTY by
+     * the time the stale response resolved, so `updateSlot` finding nothing
+     * to patch proved nothing about the guard specifically — the same
+     * assertions would pass even if the guard were deleted, as long as
+     * `updateSlot`'s own `.map()` over an empty array still no-ops. Here a
+     * FRESH extraction creates its own figure slot at the SAME target kind
+     * before the stale response resolves — without the guard, the stale
+     * response's `updateSlot` call would match and overwrite that fresh
+     * slot's data, since `updateSlot` only compares by `target.kind`, not
+     * by extraction.
+     */
+    it('a stale recrop SUCCESS does not overwrite a new slot created by a fresh extraction at the same target', () => {
+      const recropSubject = new Subject<{ dataUrl: string; box: NormalizedBoxDto }>();
+      let extractCall = 0;
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => {
+          extractCall++;
+          return of({
+            bodyTypst: '¿Qué muestra la figura?',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            extractionId: extractCall === 1 ? 'extraction-1' : 'extraction-2',
+            figureCrop: {
+              dataUrl:
+                extractCall === 1 ? 'data:image/png;base64,AAAA' : 'data:image/png;base64,BBBB',
+              box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+            },
+          } satisfies AiExtractedQuestion);
+        },
+        recropExtractionImpl: () => recropSubject.asObservable(),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.extractWithAi(); // extraction-1
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } }); // captures extraction-1
+
+      // Photo swap, then a FRESH extraction — its own figure slot, extraction-2.
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+      instance.extractWithAi(); // extraction-2
+      fixture.detectChanges();
+
+      expect(instance.cropSlots()[0]!.dataUrl).toBe('data:image/png;base64,BBBB');
+
+      // The STALE extraction-1 recrop finally resolves.
+      recropSubject.next({
+        dataUrl: 'data:image/png;base64,ZZZZ',
+        box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+      });
+      fixture.detectChanges();
+
+      expect(instance.cropSlots()[0]!.dataUrl).toBe('data:image/png;base64,BBBB');
+    });
+
+    it('ignores a stale recrop ERROR the same way, after the photo was swapped mid-recrop', () => {
+      const recropSubject = new Subject<{ dataUrl: string; box: NormalizedBoxDto }>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => recropSubject.asObservable(),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      recropSubject.error(new HttpErrorResponse({ status: 500 }));
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBeNull();
+    });
+
+    it('keeps showing a recrop error after the last crop slot is discarded — the error banner does not live inside the crop-review block', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        onDiscard(target: CropTarget): void;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'No se pudo recortar',
+      );
+
+      // Discards the ONLY slot — cropSlots().length drops to 0.
+      instance.onDiscard({ kind: 'figure' });
+      fixture.detectChanges();
+
+      expect(instance.cropSlots().length).toBe(0);
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'No se pudo recortar',
+      );
+    });
+
+    it('shows a recrop-specific timeout message on a TimeoutError from the recrop endpoint', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_FIGURE_CROP),
+        recropExtractionImpl: () => throwError(() => new TimeoutError()),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBe('El recorte tardó demasiado. Inténtalo de nuevo.');
     });
   });
 
@@ -1937,6 +2670,154 @@ describe('BankNewComponent', () => {
       const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
       expect(instance.canDeactivate()).toBe(true);
       expect(confirmSpy).not.toHaveBeenCalled();
+    });
+
+    it('resets the savedSuccessfully latch (so canDeactivate confirms again) when router.navigate resolves false', async () => {
+      const { fixture, compiled } = setup({
+        navigateImpl: () => Promise.resolve(false),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', '¿Cuánto es 2+2?');
+      set(fixture, 'sAlternatives', '4\n3\n5\n6');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      // The navigation never actually happened — the teacher is still on
+      // this page with all their unsaved work, so the guard must confirm
+      // again, not treat this as a completed save forever.
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('resets the savedSuccessfully latch when router.navigate REJECTS', async () => {
+      const { fixture, compiled } = setup({
+        navigateImpl: () => Promise.reject(new Error('navigation failed')),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', '¿Cuánto es 2+2?');
+      set(fixture, 'sAlternatives', '4\n3\n5\n6');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('confirms before leaving when a photo was picked and photo-tab fields are filled, even with no structured text', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalledWith(
+        'Tienes una pregunta a medio revisar. ¿Salir sin guardar?',
+      );
+    });
+
+    it('confirms before leaving when only a manually picked complement image (sImage) is set', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      pickStructuredImage(fixture, compiled);
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('confirms before leaving when only sAlternatives has text', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sAlternatives', 'a\nb');
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('confirms before leaving when only sCorrectAnswer has a value', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sCorrectAnswer', 'a');
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+  });
+
+  describe('onBeforeUnload (browser-level leave guard)', () => {
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
+    it('prevents the default unload and sets returnValue when there is unsaved work', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      const event = {
+        preventDefault: vi.fn(),
+        returnValue: 'untouched',
+      } as unknown as BeforeUnloadEvent;
+      (
+        fixture.componentInstance as unknown as {
+          onBeforeUnload(e: BeforeUnloadEvent): void;
+        }
+      ).onBeforeUnload(event);
+
+      expect(event.preventDefault).toHaveBeenCalled();
+      // Some browsers only honor the legacy `returnValue` string, not
+      // `preventDefault()` alone — must be set too, not just called.
+      expect(event.returnValue).toBe('');
+    });
+
+    it('does nothing when there is no unsaved work', () => {
+      const { fixture } = setup();
+
+      const event = {
+        preventDefault: vi.fn(),
+        returnValue: 'untouched',
+      } as unknown as BeforeUnloadEvent;
+      (
+        fixture.componentInstance as unknown as {
+          onBeforeUnload(e: BeforeUnloadEvent): void;
+        }
+      ).onBeforeUnload(event);
+
+      expect(event.preventDefault).not.toHaveBeenCalled();
+      expect(event.returnValue).toBe('untouched');
     });
   });
 });

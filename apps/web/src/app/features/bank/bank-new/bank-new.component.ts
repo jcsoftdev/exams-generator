@@ -31,7 +31,7 @@ import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
-import { extractErrorMessage } from '../../ai/extract-error-message';
+import { AI_NOT_CONFIGURED_MESSAGE, extractErrorMessage } from '../../ai/extract-error-message';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 import {
   CropReviewComponent,
@@ -376,6 +376,17 @@ export class BankNewComponent {
       this.sCorrectAnswer();
       this.extractError.set(null);
     });
+
+    // The B1 "no alternatives" notice describes the alternatives textarea
+    // specifically — clears the moment the teacher types something into it.
+    // Kept as its own effect (rather than folded into the one above) since
+    // it must NOT clear on an unrelated enunciado/clave edit alone, only on
+    // the alternatives textarea actually gaining content.
+    effect(() => {
+      if (this.sAlternatives().trim().length > 0) {
+        this.extractNoAlternatives.set(false);
+      }
+    });
   }
 
   protected setTab(t: Tab): void {
@@ -398,17 +409,38 @@ export class BankNewComponent {
 
   /**
    * True while there is AI/crop work in flight or unreviewed, or a
-   * structured question the teacher started writing but hasn't saved yet.
+   * question the teacher started (on EITHER tab) but hasn't saved yet.
    * `sBody` alone (not `sAlternatives`/`sCorrectAnswer`) is enough of a
-   * signal — an enunciado with content is the first thing a teacher types,
-   * so its presence already means "there is something here to lose."
+   * signal on the structured tab — an enunciado with content is the first
+   * thing a teacher types, so its presence already means "there is
+   * something here to lose." The photo tab has no such single-field
+   * shortcut (its first real action is picking an image or a taxonomy
+   * field), so `photoTabHasContent` checks all of it directly — this used
+   * to be entirely unchecked, so a photo pick + filled fields with no save
+   * left silently on navigation. See `photoTabHasContent`.
    */
   private hasUnsavedWork(): boolean {
     return (
       this.cropSlots().length > 0 ||
       this.extracting() ||
       this.saving() ||
-      this.sBody().trim().length > 0
+      this.sBody().trim().length > 0 ||
+      this.sAlternatives().trim().length > 0 ||
+      !!this.sCorrectAnswer() ||
+      !!this.sImage() ||
+      this.photoTabHasContent()
+    );
+  }
+
+  /** Any photo-tab field with a value — the tab this guard used to ignore entirely. */
+  private photoTabHasContent(): boolean {
+    return (
+      !!this.pImage() ||
+      !!this.pGradeLevel() ||
+      !!this.pCourseId() ||
+      !!this.pTopicId() ||
+      !!this.pDifficulty() ||
+      !!this.pCorrectAnswer()
     );
   }
 
@@ -419,6 +451,10 @@ export class BankNewComponent {
       return;
     }
     event.preventDefault();
+    // `preventDefault()` alone doesn't trigger the browser's confirmation
+    // dialog in every implementation — the legacy API also reads the
+    // string set here (any non-undefined value shows the prompt).
+    event.returnValue = '';
   }
 
   /**
@@ -458,6 +494,12 @@ export class BankNewComponent {
     // B8: a stale extraction/recrop error talks about the PREVIOUS photo —
     // pointless (and confusing) to leave it up once that photo is gone.
     this.extractError.set(null);
+    // Same reasoning for the extraction NOTICES — they describe whatever
+    // the PREVIOUS photo's extraction produced (or didn't), which no
+    // longer applies the moment the photo itself changes.
+    this.extractNoAlternatives.set(false);
+    this.extractReviewNotice.set(false);
+    this.aiTaxonomyHint.set(null);
 
     // Crops (and any pending re-crop handle) are always cut FROM the photo
     // that was just replaced — the moment it changes (or is cleared), they
@@ -546,11 +588,9 @@ export class BankNewComponent {
           this.saving.set(false);
           this.navigateToBank(id);
         },
-        error: (_e: HttpErrorResponse) => {
+        error: (e: HttpErrorResponse) => {
           this.saving.set(false);
-          this.saveError.set(
-            'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
-          );
+          this.saveError.set(this.saveErrorMessage(e));
         },
       });
   }
@@ -563,10 +603,26 @@ export class BankNewComponent {
    * doesn't ask the teacher to confirm leaving a page they just finished
    * saving — the dirty state has to be cleared BEFORE navigating, not after,
    * since the guard runs synchronously as part of the navigation itself.
+   *
+   * `Router.navigate()` can still say no — another guard elsewhere rejects
+   * it, or it resolves `false` for any other reason, or it flat-out
+   * rejects — and the teacher is left on THIS page with every field still
+   * filled. `savedSuccessfully` was a one-way latch: once set, nothing ever
+   * unset it, so the leave guard would trust a save that never actually
+   * left. Both failure shapes reset it back to `false`.
    */
   private navigateToBank(id: string): void {
     this.savedSuccessfully = true;
-    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } });
+    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } }).then(
+      (navigated) => {
+        if (!navigated) {
+          this.savedSuccessfully = false;
+        }
+      },
+      () => {
+        this.savedSuccessfully = false;
+      },
+    );
   }
 
   protected extractWithAi(): void {
@@ -577,12 +633,37 @@ export class BankNewComponent {
     const photoCourseId = this.pCourseId();
     const photoTopicId = this.pTopicId();
     if (!image || !gradeLevel || this.extracting()) return;
+    // Captured by VALUE so a stale response can be told apart from a live
+    // one later — comparing against a freshly-read `this.pImage()` at that
+    // point would just say "yes, there is still a photo", not "is it the
+    // SAME photo this request was sent for". See the guard in `next`/`error`
+    // below.
+    const capturedImage = image;
     this.extracting.set(true);
     this.extractError.set(null);
+    // A NEW extraction run — on this same photo or a different one — starts
+    // with a clean slate: leftover notices from a PREVIOUS extraction (no
+    // alternatives, the review banner, a taxonomy hint) describe THAT run,
+    // not this one. Without this, a second extraction that then fails would
+    // leave the first extraction's notices on screen, describing a result
+    // that this run never produced.
+    this.extractNoAlternatives.set(false);
+    this.extractReviewNotice.set(false);
+    this.aiTaxonomyHint.set(null);
     this.liveAnnouncer.announce('Leyendo la foto…');
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
+        // The teacher replaced the photo (or picked a new one) WHILE this
+        // extraction was in flight — applying it now would silently
+        // overwrite whatever the CURRENT photo's own extraction produced (or
+        // is about to produce) with results that describe a photo no longer
+        // selected. Reset `extracting` only; nothing else from this response
+        // is trustworthy anymore.
+        if (this.pImage() !== capturedImage) {
+          this.extracting.set(false);
+          return;
+        }
         const hasAlternatives = extracted.alternatives.length > 0;
         this.sBody.set(extracted.bodyTypst);
         // Empty `alternatives` (B1) means the model couldn't read any off
@@ -595,8 +676,13 @@ export class BankNewComponent {
         // never invents a key the photo didn't show.
         // `indexToCorrectAnswerLetter` handles `null` itself (returns `''`),
         // which matches the field's initial value and correctly requires
-        // the teacher to pick one by hand.
-        this.sCorrectAnswer.set(indexToCorrectAnswerLetter(extracted.correctAnswer));
+        // the teacher to pick one by hand. When `alternatives` is EMPTY
+        // (B1), any index the model returned is meaningless — there is
+        // nothing for it to point at — so the clave is forced blank
+        // regardless of what `correctAnswer` says, same as the `null` case.
+        this.sCorrectAnswer.set(
+          hasAlternatives ? indexToCorrectAnswerLetter(extracted.correctAnswer) : '',
+        );
         // sDifficulty is intentionally left untouched — Nivel is never
         // auto-filled from AI, the human always picks it.
 
@@ -631,6 +717,11 @@ export class BankNewComponent {
       },
       error: (error: HttpErrorResponse | TimeoutError) => {
         this.extracting.set(false);
+        // Same staleness guard as `next` above — a stale error must not
+        // surface a message about a photo the teacher already replaced.
+        if (this.pImage() !== capturedImage) {
+          return;
+        }
         // B2: the client-side watchdog (ai.service.ts) fires a TimeoutError,
         // not an HttpErrorResponse — it never reached the server at all, so
         // there is no status/body to read a message from. Handled first,
@@ -645,26 +736,36 @@ export class BankNewComponent {
         // is not a readable image — and swallowing those left the teacher
         // with "inténtalo de nuevo" for a problem retrying never fixes. The
         // edit flow (`bank-list`) already surfaced them; this one did not.
+        const message = extractErrorMessage(
+          error,
+          'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+        );
         this.setExtractError(
           error.status === 429
             ? 'La IA alcanzó su límite de uso gratuito. Espera unos minutos e inténtalo de nuevo.'
-            : extractErrorMessage(
-                error,
-                'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
-              ),
+            : // B10: extractErrorMessage() only returns the neutral half —
+              // this photo-specific sentence only makes sense here, the ONLY
+              // caller of the shared helper with a photo tab to fall back to.
+              message === AI_NOT_CONFIGURED_MESSAGE
+              ? `${message} Escribe la pregunta o guarda la foto tal cual.`
+              : message,
         );
       },
     });
   }
 
   /**
-   * Sets `extractError` AND announces the same text through
-   * `LiveAnnouncerService` — the visible banner alone is silent to a screen
-   * reader, same rationale as bank-list's D3 announcements.
+   * Sets `extractError` — rendered with `role="alert"` in the template
+   * (both the photo-tab banner and the structured-tab crop-review one),
+   * which assistive tech announces on its own the moment it's inserted
+   * into the DOM. A SECOND announcement via `LiveAnnouncerService` used to
+   * fire here too — same text, same moment, through the OTHER live-region
+   * channel — so a screen reader user heard it twice. `role="alert"` alone
+   * is the single channel now; every call site (extract, timeout, 429,
+   * recrop) routes through this one method precisely so that stays true.
    */
   private setExtractError(message: string): void {
     this.extractError.set(message);
-    this.liveAnnouncer.announce(message);
   }
 
   /**
@@ -688,17 +789,45 @@ export class BankNewComponent {
     const { gradeLevel, photoCourseId, photoTopicId, suggestedCourseName, suggestedTopicName } =
       params;
 
+    /**
+     * Always applies THIS extraction's resolved `courseId`/`topicId` —
+     * never "stale", even on a second extraction at the same grade whose
+     * suggestion differs from (or contradicts) the first's. The pending
+     * mechanism is only a relay for the two chained effects
+     * (`sGradeLevel`→`sCourseId`, `sCourseId`→`sTopicId`) below, and a
+     * signal `.set()` to the SAME value it already holds never notifies —
+     * so a genuine grade OR course change is applied by that effect chain,
+     * but a same-grade (or same-course) extraction must be applied
+     * directly here instead, or it would silently vanish along with
+     * whatever the PREVIOUS extraction (or the teacher) had picked.
+     */
     const applyPreselect = (courseId: string, topicId: string): void => {
-      if (this.sGradeLevel() !== gradeLevel) {
-        this.pendingStructuredCourseId = courseId;
-        this.pendingStructuredTopicId = topicId;
-      }
-      this.sGradeLevel.set(gradeLevel);
       this.aiTaxonomyHint.set(
         (!!suggestedCourseName && !courseId) || (!!suggestedTopicName && !topicId)
           ? `La IA sugiere: ${suggestedCourseName ?? '—'} / ${suggestedTopicName ?? '—'}`
           : null,
       );
+
+      const gradeChanged = this.sGradeLevel() !== gradeLevel;
+      this.pendingStructuredCourseId = courseId;
+      this.pendingStructuredTopicId = topicId;
+      this.sGradeLevel.set(gradeLevel);
+      if (gradeChanged) {
+        return;
+      }
+
+      // Same grade as before — the grade→course effect above was a no-op,
+      // so `pendingStructuredCourseId` was never consumed. Apply the
+      // course ourselves.
+      this.pendingStructuredCourseId = null;
+      const courseChanged = this.sCourseId() !== courseId;
+      this.sCourseId.set(courseId);
+      if (!courseChanged) {
+        // Same course too — the course→topic effect is ALSO a no-op here,
+        // one level down from the guard above. Apply the topic directly.
+        this.pendingStructuredTopicId = null;
+        this.sTopicId.set(topicId);
+      }
     };
 
     const courseId =
@@ -724,7 +853,7 @@ export class BankNewComponent {
       // otherwise drag the rectangle and see nothing happen. Same message as
       // the 410 branch below since both mean "there is no live session to
       // re-cut against." See Minor Finding 7.
-      this.extractError.set(
+      this.setExtractError(
         'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.',
       );
       return;
@@ -759,7 +888,7 @@ export class BankNewComponent {
           this.sImageFromCrop = true;
         }
       },
-      error: (error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse | TimeoutError) => {
         // B3: same staleness guard as `next` above — a stale error must not
         // overwrite `extractError` for an extraction the teacher already
         // left behind.
@@ -767,11 +896,19 @@ export class BankNewComponent {
           return;
         }
         this.updateSlot(event.target, (slot) => ({ ...slot, busy: false }));
+        // The client-side watchdog (ai.service.ts `recropExtraction`) fires
+        // a TimeoutError, not an HttpErrorResponse — same reasoning as the
+        // extract timeout branch in `extractWithAi` above: it never reached
+        // the server, so there is no status/body to read a message from.
+        if (error instanceof TimeoutError) {
+          this.setExtractError('El recorte tardó demasiado. Inténtalo de nuevo.');
+          return;
+        }
         // A 410 means the crop session expired, the id was never ours, or
         // it belongs to another account — the API deliberately returns the
         // SAME status for all three so the response can't confirm an id
         // exists. Any other status is a plain re-crop failure.
-        this.extractError.set(
+        this.setExtractError(
           error.status === 410
             ? 'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.'
             : 'No se pudo recortar. Inténtalo de nuevo.',
@@ -804,8 +941,32 @@ export class BankNewComponent {
       !!this.sGradeLevel() &&
       !!this.sBody().trim() &&
       this.alternativesList().length >= 2 &&
-      !!this.sCorrectAnswer()
+      !!this.sCorrectAnswer() &&
+      this.correctAnswerInRange()
     );
+  }
+
+  /**
+   * A letter that IS present but indexes past the current alternatives list
+   * — e.g. clave "e" with only 2 alternatives typed/edited — used to be
+   * accepted at face value: `structuredValid()` only checked `sCorrectAnswer`
+   * was non-empty, never that the index it names actually exists.
+   * `alternativesList()` can shrink after extraction (teacher edits) or the
+   * clave itself is manually mistyped, so this has to be re-checked live,
+   * not just at extraction time (see B1's "empty alternatives" fix above,
+   * which handles the extraction-time case this can't: alternatives
+   * present but the letter outgrowing them afterwards).
+   */
+  private correctAnswerInRange(): boolean {
+    const letter = this.sCorrectAnswer().trim().toLowerCase();
+    const index = CORRECT_ANSWER_LETTERS.indexOf(letter);
+    if (index === -1) {
+      // Not a recognized a-e letter at all — a different, pre-existing
+      // concern (whatever the server does with an unrecognized clave on
+      // submit), not this range check's job.
+      return true;
+    }
+    return index < this.alternativesList().length;
   }
 
   /** B8: names only the fields still missing, in the structured tab's visual order, instead of always listing all six. */
@@ -817,7 +978,11 @@ export class BankNewComponent {
     if (!this.sDifficulty()) missing.push('nivel');
     if (!this.sBody().trim()) missing.push('enunciado');
     if (this.alternativesList().length < 2) missing.push('al menos 2 alternativas');
-    if (!this.sCorrectAnswer()) missing.push('clave');
+    if (!this.sCorrectAnswer()) {
+      missing.push('clave');
+    } else if (!this.correctAnswerInRange()) {
+      missing.push('clave fuera de rango');
+    }
     return missing.join(', ');
   }
 
@@ -863,13 +1028,32 @@ export class BankNewComponent {
           this.sCreatedQuestionId = id;
           this.attachStructuredImageAndFinish(id);
         },
-        error: (_e: HttpErrorResponse) => {
+        error: (e: HttpErrorResponse) => {
           this.saving.set(false);
-          this.saveError.set(
-            'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
-          );
+          this.saveError.set(this.saveErrorMessage(e));
         },
       });
+  }
+
+  /**
+   * Save-error message for BOTH submit paths (`uploadImageQuestion` and
+   * `createStructuredQuestion`) — previously each swallowed whatever the
+   * server actually said in favor of the same generic "revisa los datos"
+   * wording, even for a 422 whose body names EXACTLY which field failed.
+   * 409 gets dedicated wording because the API's own message ("Question
+   * already exists (id: …)", `bank.service.ts` on a duplicate `bodyTypst`)
+   * is English and references an internal id the teacher has no use for;
+   * every other 4xx (422 included) is specific enough via
+   * `extractErrorMessage` to show verbatim.
+   */
+  private saveErrorMessage(error: HttpErrorResponse): string {
+    if (error.status === 409) {
+      return 'Ya existe una pregunta idéntica en el banco.';
+    }
+    return extractErrorMessage(
+      error,
+      'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
+    );
   }
 
   private attachStructuredImageAndFinish(id: string): void {
