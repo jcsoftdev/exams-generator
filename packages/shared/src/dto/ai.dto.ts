@@ -213,8 +213,21 @@ export interface AiAlternativeCrop extends AiQuestionCrop {
  * re-crop (i.e. whenever `figureCrop`/`alternativeCrops` are present); a
  * text-only extraction never populates it, since there is nothing to hold a
  * cache entry open for.
+ *
+ * `correctAnswer` OVERRIDES `AiRevisedQuestion`'s (via `Omit`, since
+ * TypeScript won't let `extends` narrow-then-widen a property in place) to
+ * `string | null`: extraction transcribes a PHOTO, and the photo may show
+ * alternatives with no visible/inferable correct answer at all — the API
+ * responds `null` rather than inventing a key (see `ExtractedQuestion` in
+ * the API's `domain/ports/question-generator.port.ts`, the port type this
+ * shape mirrors). `revise`'s `correctAnswer` stays non-null: an existing
+ * bank question always already has a key. Same reasoning extends to
+ * `alternatives` (inherited from `AiRevisedQuestion` unchanged, already a
+ * loose `readonly string[]`) — extraction may return FEWER than 5, even an
+ * empty array, when the photo shows fewer; it never pads or invents up to 5.
  */
-export interface AiExtractedQuestion extends AiRevisedQuestion {
+export interface AiExtractedQuestion extends Omit<AiRevisedQuestion, "correctAnswer"> {
+  readonly correctAnswer: string | null;
   readonly figureCrop?: AiQuestionCrop;
   /**
    * Sparse — only the alternatives that are drawings appear here, at most ONE

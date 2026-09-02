@@ -2,6 +2,7 @@ import {
   AiGenerationError,
   AiInvalidResponseError,
   AiRateLimitError,
+  ExtractedQuestion,
   ExtractQuestionInput,
   GenerateProgressEvent,
   GenerateQuestionInput,
@@ -20,7 +21,11 @@ import {
 import { assessGeneratedQuestionPlausibility } from "./openrouter-content-plausibility-validator";
 import { assertDifficultyMatchesSelfReport } from "./openrouter-difficulty-gate";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
-import { QuestionSelfReport, validateGeneratedQuestionShape } from "./openrouter-response-validator";
+import {
+  QuestionSelfReport,
+  validateExtractedQuestionShape,
+  validateGeneratedQuestionShape,
+} from "./openrouter-response-validator";
 import { parseOpenRouterSseBuffer } from "./openrouter-sse-parser";
 
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
@@ -167,9 +172,9 @@ export interface OpenRouterAdapterConfig {
   readonly baseUrl?: string;
 }
 
-interface AttemptOutcome {
+interface AttemptOutcome<Q> {
   readonly ok: boolean;
-  readonly question?: GeneratedQuestion;
+  readonly question?: Q;
   readonly error?: string;
   readonly rawContent?: string;
 }
@@ -215,6 +220,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
           responseFormat: this.config.responseFormat,
           thinking: this.config.thinking,
         }),
+      validateGeneratedQuestionShape,
       onProgress,
       previousCompileError,
       (question, selfReport) => {
@@ -233,27 +239,36 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    * that's the calling service's job.
    */
   async reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion> {
-    return this.runWithRetries((previousError) =>
-      buildOpenRouterReviseRequestBody(this.config.model, input, {
-        previousError,
-        responseFormat: this.config.responseFormat,
-        thinking: this.config.thinking,
-      }),
+    return this.runWithRetries(
+      (previousError) =>
+        buildOpenRouterReviseRequestBody(this.config.model, input, {
+          previousError,
+          responseFormat: this.config.responseFormat,
+          thinking: this.config.thinking,
+        }),
+      validateGeneratedQuestionShape,
     );
   }
 
   /**
-   * Same retry/parse/validate pipeline as `generate()` — the request is a
-   * MULTIMODAL chat message with an `image_url` data-URI part built from the
-   * raw image bytes, asking for the SAME JSON schema.
+   * Same retry/parse pipeline as `generate()` — the request is a MULTIMODAL
+   * chat message with an `image_url` data-URI part built from the raw image
+   * bytes, asking for the extract-only JSON schema — but validated against
+   * `validateExtractedQuestionShape`, NOT `validateGeneratedQuestionShape`:
+   * a photo may show fewer than 5 alternatives or no identifiable key, and
+   * this path must never invent either to satisfy the stricter shape
+   * `generate()`/`reviseQuestion()` require (see `ExtractedQuestion`'s
+   * docstring in `question-generator.port.ts`).
    */
-  async extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion> {
-    return this.runWithRetries((previousError) =>
-      buildOpenRouterExtractRequestBody(this.visionModel, input, {
-        previousError,
-        responseFormat: this.config.responseFormat,
-        thinking: this.config.thinking,
-      }),
+  async extractFromImage(input: ExtractQuestionInput): Promise<ExtractedQuestion> {
+    return this.runWithRetries(
+      (previousError) =>
+        buildOpenRouterExtractRequestBody(this.visionModel, input, {
+          previousError,
+          responseFormat: this.config.responseFormat,
+          thinking: this.config.thinking,
+        }),
+      validateExtractedQuestionShape,
     );
   }
 
@@ -270,21 +285,27 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    * value of `lastOutcome.error`; the adapter's own validation-retry error
    * (if attempt 1 fails differently) overwrites it for attempt 2, same as always.
    */
-  private async runWithRetries(
+  private async runWithRetries<Q>(
     buildRequestBody: (previousError: string | undefined) => OpenRouterRequestBody,
+    validate: (parsed: unknown) => { readonly question: Q; readonly selfReport: QuestionSelfReport },
     onProgress?: (event: GenerateProgressEvent) => void,
     seedError?: string,
-    contentGuard?: (question: GeneratedQuestion, selfReport: QuestionSelfReport) => void,
-  ): Promise<GeneratedQuestion> {
-    let lastOutcome: AttemptOutcome | undefined = seedError ? { ok: false, error: seedError } : undefined;
+    contentGuard?: (question: Q, selfReport: QuestionSelfReport) => void,
+  ): Promise<Q> {
+    let lastOutcome: AttemptOutcome<Q> | undefined = seedError ? { ok: false, error: seedError } : undefined;
 
     for (let attemptNumber = 1; attemptNumber <= MAX_ATTEMPTS; attemptNumber++) {
       if (attemptNumber > 1) {
         onProgress?.({ type: "restart" });
       }
       const outcome = onProgress
-        ? await this.attemptStreaming(buildRequestBody(lastOutcome?.error), onProgress, contentGuard)
-        : await this.attempt(buildRequestBody(lastOutcome?.error), contentGuard);
+        ? await this.attemptStreaming(
+            buildRequestBody(lastOutcome?.error),
+            validate,
+            onProgress,
+            contentGuard,
+          )
+        : await this.attempt(buildRequestBody(lastOutcome?.error), validate, contentGuard);
       if (outcome.ok && outcome.question) {
         return outcome.question;
       }
@@ -297,10 +318,11 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     );
   }
 
-  private async attempt(
+  private async attempt<Q>(
     requestBody: OpenRouterRequestBody,
-    contentGuard?: (question: GeneratedQuestion, selfReport: QuestionSelfReport) => void,
-  ): Promise<AttemptOutcome> {
+    validate: (parsed: unknown) => { readonly question: Q; readonly selfReport: QuestionSelfReport },
+    contentGuard?: (question: Q, selfReport: QuestionSelfReport) => void,
+  ): Promise<AttemptOutcome<Q>> {
     const response = await this.httpClient(this.baseUrl, {
       method: "POST",
       headers: {
@@ -325,7 +347,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     try {
       rawContent = extractMessageContent(json);
       const parsed = parseGeneratedQuestionContent(rawContent);
-      const { question, selfReport } = validateGeneratedQuestionShape(parsed);
+      const { question, selfReport } = validate(parsed);
       contentGuard?.(question, selfReport);
       return { ok: true, question };
     } catch (err) {
@@ -333,11 +355,12 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     }
   }
 
-  private async attemptStreaming(
+  private async attemptStreaming<Q>(
     requestBody: OpenRouterRequestBody,
+    validate: (parsed: unknown) => { readonly question: Q; readonly selfReport: QuestionSelfReport },
     onProgress: (event: GenerateProgressEvent) => void,
-    contentGuard?: (question: GeneratedQuestion, selfReport: QuestionSelfReport) => void,
-  ): Promise<AttemptOutcome> {
+    contentGuard?: (question: Q, selfReport: QuestionSelfReport) => void,
+  ): Promise<AttemptOutcome<Q>> {
     const response = await this.sseHttpClient(this.baseUrl, {
       method: "POST",
       headers: {
@@ -378,7 +401,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
 
     try {
       const parsed = parseGeneratedQuestionContent(rawContent);
-      const { question, selfReport } = validateGeneratedQuestionShape(parsed);
+      const { question, selfReport } = validate(parsed);
       contentGuard?.(question, selfReport);
       return { ok: true, question };
     } catch (err) {

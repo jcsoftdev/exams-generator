@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import {
+  ExtractedQuestion,
   ExtractQuestionInput,
   GenerateProgressEvent,
   GenerateQuestionInput,
@@ -58,7 +59,7 @@ export class InMemoryQuestionGeneratorAdapter implements QuestionGeneratorPort {
     };
   }
 
-  async extractFromImage(_input: ExtractQuestionInput): Promise<GeneratedQuestion> {
+  async extractFromImage(_input: ExtractQuestionInput): Promise<ExtractedQuestion> {
     return {
       bodyTypst: "¿Cuánto es $2 + 2$? (extraída de imagen)",
       alternatives: ["3", "4", "5", "6", "7"],
