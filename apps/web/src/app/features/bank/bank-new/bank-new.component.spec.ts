@@ -335,6 +335,112 @@ describe('BankNewComponent', () => {
     expect(navigate).not.toHaveBeenCalled();
   });
 
+  describe('save errors surface the server message instead of a generic one', () => {
+    it('maps a 409 from uploadImageQuestion to a dedicated duplicate-question message (photo tab)', () => {
+      const { fixture, compiled } = setup({
+        uploadImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 409,
+                error: { message: 'Question already exists (id: abc123)' },
+              }),
+          ),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      set(fixture, 'pCorrectAnswer', 'a');
+      (compiled.querySelector('[data-testid="photo-submit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'Ya existe una pregunta idéntica en el banco.',
+      );
+    });
+
+    it('surfaces a 422 validation message verbatim instead of the generic fallback (photo tab)', () => {
+      const { fixture, compiled } = setup({
+        uploadImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 422,
+                error: { message: ['correctAnswer must be one of a, b, c, d, e'] },
+              }),
+          ),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      set(fixture, 'pCorrectAnswer', 'z');
+      (compiled.querySelector('[data-testid="photo-submit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'correctAnswer must be one of a, b, c, d, e',
+      );
+    });
+
+    it('maps a 409 from createStructuredQuestion to a dedicated duplicate-question message (structured tab)', () => {
+      const { fixture, compiled } = setup({
+        structuredImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 409,
+                error: { message: 'Question already exists (id: abc123)' },
+              }),
+          ),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'a\nb');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'Ya existe una pregunta idéntica en el banco.',
+      );
+    });
+
+    it('surfaces a 422 validation message verbatim instead of the generic fallback (structured tab)', () => {
+      const { fixture, compiled } = setup({
+        structuredImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 422,
+                error: { message: ['bodyTypst is required'] },
+              }),
+          ),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'a\nb');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'bodyTypst is required',
+      );
+    });
+  });
+
   describe('taxonomy dropdowns (no raw UUID text inputs)', () => {
     it('does not load courses until a grade level is picked, and disables the course select (photo tab)', () => {
       const { compiled, getCourses } = setup();

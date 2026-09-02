@@ -588,11 +588,9 @@ export class BankNewComponent {
           this.saving.set(false);
           this.navigateToBank(id);
         },
-        error: (_e: HttpErrorResponse) => {
+        error: (e: HttpErrorResponse) => {
           this.saving.set(false);
-          this.saveError.set(
-            'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
-          );
+          this.saveError.set(this.saveErrorMessage(e));
         },
       });
   }
@@ -1030,13 +1028,32 @@ export class BankNewComponent {
           this.sCreatedQuestionId = id;
           this.attachStructuredImageAndFinish(id);
         },
-        error: (_e: HttpErrorResponse) => {
+        error: (e: HttpErrorResponse) => {
           this.saving.set(false);
-          this.saveError.set(
-            'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
-          );
+          this.saveError.set(this.saveErrorMessage(e));
         },
       });
+  }
+
+  /**
+   * Save-error message for BOTH submit paths (`uploadImageQuestion` and
+   * `createStructuredQuestion`) — previously each swallowed whatever the
+   * server actually said in favor of the same generic "revisa los datos"
+   * wording, even for a 422 whose body names EXACTLY which field failed.
+   * 409 gets dedicated wording because the API's own message ("Question
+   * already exists (id: …)", `bank.service.ts` on a duplicate `bodyTypst`)
+   * is English and references an internal id the teacher has no use for;
+   * every other 4xx (422 included) is specific enough via
+   * `extractErrorMessage` to show verbatim.
+   */
+  private saveErrorMessage(error: HttpErrorResponse): string {
+    if (error.status === 409) {
+      return 'Ya existe una pregunta idéntica en el banco.';
+    }
+    return extractErrorMessage(
+      error,
+      'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
+    );
   }
 
   private attachStructuredImageAndFinish(id: string): void {
