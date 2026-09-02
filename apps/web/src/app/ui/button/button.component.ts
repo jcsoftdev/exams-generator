@@ -19,6 +19,7 @@ import { ButtonSize, ButtonVariant } from '../ui.types';
       [attr.aria-label]="ariaLabel() || null"
       [attr.aria-disabled]="disabled() || loading() ? 'true' : null"
       [attr.aria-busy]="loading() ? 'true' : null"
+      [attr.aria-describedby]="ariaDescribedBy() || null"
       (click)="onClick()"
     >
       <ng-content></ng-content>
@@ -45,6 +46,14 @@ export class ButtonComponent {
    * it belongs to (audit 2026-08-15).
    */
   readonly ariaLabel = input<string>();
+  /**
+   * D4 (audit M11): "Botón deshabilitado sin vínculo a la razón" — a disabled
+   * button with a helper text nearby ("Necesita grado e imagen") has no
+   * programmatic link between the two unless something passes that hint's id
+   * through as `aria-describedby`. Passthrough only — the id itself is the
+   * caller's to own (same pattern as `ui-input`'s `errorId`).
+   */
+  readonly ariaDescribedBy = input<string>();
 
   readonly clicked = output<void>();
 

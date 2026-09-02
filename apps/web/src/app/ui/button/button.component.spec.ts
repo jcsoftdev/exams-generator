@@ -148,4 +148,22 @@ describe('ButtonComponent', () => {
     expect(button.getAttribute('aria-busy')).toBeNull();
     expect(button.querySelector('.sr-only')).toBeFalsy();
   });
+
+  // D4 (audit M11): no way to point a button at the hint that explains why it's disabled.
+  it('passes ariaDescribedBy through to aria-describedby', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('ariaDescribedBy', 'extract-hint');
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('button')!.getAttribute('aria-describedby')).toBe(
+      'extract-hint',
+    );
+  });
+
+  it('omits aria-describedby when ariaDescribedBy is not set', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('button')!.hasAttribute('aria-describedby')).toBe(false);
+  });
 });

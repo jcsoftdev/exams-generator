@@ -295,4 +295,44 @@ describe('SelectComponent', () => {
       'Selecciona una opción',
     );
   });
+
+  // D4 (audit M11): "ui-select renderiza el error sin aria-invalid" — same gap
+  // ui-input already closed (input.component.ts:21-22), now closed here too.
+  it('wires the trigger to the error text via aria-invalid + aria-describedby, the way ui-input already does', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('error', 'Selecciona una opción');
+    fixture.detectChanges();
+
+    const button = trigger(compiled);
+    expect(button.getAttribute('aria-invalid')).toBe('true');
+    const describedbyId = button.getAttribute('aria-describedby');
+    expect(describedbyId).toBeTruthy();
+    expect(compiled.querySelector(`#${describedbyId}`)?.textContent).toContain(
+      'Selecciona una opción',
+    );
+  });
+
+  it('omits aria-invalid/aria-describedby when there is no error', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    const button = trigger(compiled);
+    expect(button.hasAttribute('aria-invalid')).toBe(false);
+    expect(button.hasAttribute('aria-describedby')).toBe(false);
+  });
+
+  it('renders aria-required="true" on the trigger when required=true', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('required', true);
+    fixture.detectChanges();
+
+    expect(trigger(compiled).getAttribute('aria-required')).toBe('true');
+  });
+
+  it('omits aria-required when required is not set', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    expect(trigger(compiled).hasAttribute('aria-required')).toBe(false);
+  });
 });

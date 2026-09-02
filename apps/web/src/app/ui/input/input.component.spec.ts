@@ -94,4 +94,21 @@ describe('InputComponent', () => {
 
     expect(compiled.querySelector('input')?.hasAttribute('disabled')).toBe(true);
   });
+
+  // D4 (audit M11): "ningún campo marca `required`" — nothing programmatically
+  // told assistive tech which fields the hint text ("para poder guardar") means.
+  it('renders aria-required="true" when required=true', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('required', true);
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('input')?.getAttribute('aria-required')).toBe('true');
+  });
+
+  it('omits aria-required when required is not set', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('input')?.hasAttribute('aria-required')).toBe(false);
+  });
 });
