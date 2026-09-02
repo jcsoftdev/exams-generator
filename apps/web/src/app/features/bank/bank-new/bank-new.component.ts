@@ -577,12 +577,28 @@ export class BankNewComponent {
     const photoCourseId = this.pCourseId();
     const photoTopicId = this.pTopicId();
     if (!image || !gradeLevel || this.extracting()) return;
+    // Captured by VALUE so a stale response can be told apart from a live
+    // one later — comparing against a freshly-read `this.pImage()` at that
+    // point would just say "yes, there is still a photo", not "is it the
+    // SAME photo this request was sent for". See the guard in `next`/`error`
+    // below.
+    const capturedImage = image;
     this.extracting.set(true);
     this.extractError.set(null);
     this.liveAnnouncer.announce('Leyendo la foto…');
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
+        // The teacher replaced the photo (or picked a new one) WHILE this
+        // extraction was in flight — applying it now would silently
+        // overwrite whatever the CURRENT photo's own extraction produced (or
+        // is about to produce) with results that describe a photo no longer
+        // selected. Reset `extracting` only; nothing else from this response
+        // is trustworthy anymore.
+        if (this.pImage() !== capturedImage) {
+          this.extracting.set(false);
+          return;
+        }
         const hasAlternatives = extracted.alternatives.length > 0;
         this.sBody.set(extracted.bodyTypst);
         // Empty `alternatives` (B1) means the model couldn't read any off
@@ -631,6 +647,11 @@ export class BankNewComponent {
       },
       error: (error: HttpErrorResponse | TimeoutError) => {
         this.extracting.set(false);
+        // Same staleness guard as `next` above — a stale error must not
+        // surface a message about a photo the teacher already replaced.
+        if (this.pImage() !== capturedImage) {
+          return;
+        }
         // B2: the client-side watchdog (ai.service.ts) fires a TimeoutError,
         // not an HttpErrorResponse — it never reached the server at all, so
         // there is no status/body to read a message from. Handled first,

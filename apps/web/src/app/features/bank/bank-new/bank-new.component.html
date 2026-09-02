@@ -23,7 +23,13 @@
         <label
           class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
         >
-          <input type="file" accept="image/*" class="sr-only" (change)="onImageSelected($event)" />
+          <input
+            type="file"
+            accept="image/*"
+            class="sr-only"
+            [disabled]="extracting()"
+            (change)="onImageSelected($event)"
+          />
           @if (pImagePreviewUrl()) {
             <img
               data-testid="image-upload-preview"

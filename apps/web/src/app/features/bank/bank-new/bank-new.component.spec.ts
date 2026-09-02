@@ -825,6 +825,101 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('B-stale: extraction guard against a photo replaced mid-extraction', () => {
+    it('discards a stale extract response when the photo was replaced while it was in flight — nothing from the old photo lands', () => {
+      const extractSubject = new Subject<AiRevisedQuestion>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => extractSubject.asObservable(),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled); // foto1
+
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        sBody(): string;
+        sAlternatives(): string;
+        sCorrectAnswer(): string;
+        extracting(): boolean;
+        tab(): string;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extracting()).toBe(true);
+
+      // Teacher picks a DIFFERENT photo (foto2) while foto1's extraction is
+      // still in flight.
+      const file2 = new File(['bytes2'], 'foto2.png', { type: 'image/png' });
+      const nativeFileInput = compiled.querySelector(
+        '[data-testid="tab-photo-panel"] input[type="file"]',
+      ) as HTMLInputElement;
+      Object.defineProperty(nativeFileInput, 'files', { value: [file2], configurable: true });
+      nativeFileInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      // The stale extraction — for foto1 — finally resolves.
+      extractSubject.next({
+        bodyTypst: 'Enunciado de foto1',
+        alternatives: ['A', 'B'],
+        correctAnswer: '0',
+      });
+      fixture.detectChanges();
+
+      expect(instance.sBody()).toBe('');
+      expect(instance.sAlternatives()).toBe('');
+      expect(instance.sCorrectAnswer()).toBe('');
+      expect(instance.tab()).toBe('photo');
+      expect(instance.extracting()).toBe(false);
+    });
+
+    it('discards a stale extract ERROR the same way, when the photo was replaced while the request was in flight', () => {
+      const extractSubject = new Subject<AiRevisedQuestion>();
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => extractSubject.asObservable(),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractError(): string | null;
+        extracting(): boolean;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+
+      const nativeFileInput = compiled.querySelector(
+        '[data-testid="tab-photo-panel"] input[type="file"]',
+      ) as HTMLInputElement;
+      const file2 = new File(['bytes2'], 'foto2.png', { type: 'image/png' });
+      Object.defineProperty(nativeFileInput, 'files', { value: [file2], configurable: true });
+      nativeFileInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      extractSubject.error(new HttpErrorResponse({ status: 500 }));
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBeNull();
+      expect(instance.extracting()).toBe(false);
+    });
+
+    it('disables the photo file input while extracting()', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => new Observable(() => {}),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const nativeFileInput = compiled.querySelector(
+        '[data-testid="tab-photo-panel"] input[type="file"]',
+      ) as HTMLInputElement;
+      expect(nativeFileInput.disabled).toBe(false);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      expect(nativeFileInput.disabled).toBe(true);
+    });
+  });
+
   describe('extract-with-ai button (photo tab)', () => {
     it('is disabled until photo taxonomy + image are complete, then enabled', () => {
       const { fixture, compiled } = setup();
