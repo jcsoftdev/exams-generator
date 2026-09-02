@@ -15,18 +15,12 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TimeoutError, forkJoin, of } from 'rxjs';
 import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
-import {
-  LucideAngularModule,
-  Upload,
-  Image as ImageIcon,
-  Check,
-  ChevronDown,
-  Sparkles,
-} from 'lucide-angular';
+import { LucideAngularModule, Check, ChevronDown, Sparkles } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TabsComponent, TabItem } from '../../../ui/tabs/tabs.component';
+import { FileUploadComponent } from '../../../ui/file-upload/file-upload.component';
 import { BankService } from '../bank.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -161,14 +155,14 @@ function buildCropSlots(extracted: AiExtractedQuestion): readonly CropSlot[] {
     TabsComponent,
     LucideAngularModule,
     CropReviewComponent,
+    FileUploadComponent,
   ],
   // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
   // this component-level `.pick()` shadows the root `app.config.ts` registration
   // for its own subtree, so the nested `ui-select` instances can't fall back to it.
-  providers: [
-    LucideAngularModule.pick({ Upload, Image: ImageIcon, Check, ChevronDown, Sparkles })
-      .providers ?? [],
-  ],
+  // L5: Upload/Image moved out with the upload control itself — `ui-file-upload`
+  // now registers those two icons for its OWN subtree.
+  providers: [LucideAngularModule.pick({ Check, ChevronDown, Sparkles }).providers ?? []],
   templateUrl: './bank-new.component.html',
 })
 export class BankNewComponent {
@@ -534,9 +528,9 @@ export class BankNewComponent {
     );
   }
 
-  protected onImageSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    this.setImage(input.files?.[0] ?? null);
+  /** L5: `ui-file-upload`'s `fileSelected` output already hands over the `File | null` directly. */
+  protected onImageSelected(file: File | null): void {
+    this.setImage(file);
   }
 
   private setImage(file: File | null): void {
@@ -573,9 +567,9 @@ export class BankNewComponent {
     }
   }
 
-  protected onStructuredImageSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    this.setStructuredImage(input.files?.[0] ?? null);
+  /** L5: same as `onImageSelected` — `ui-file-upload` emits the `File | null` directly. */
+  protected onStructuredImageSelected(file: File | null): void {
+    this.setStructuredImage(file);
     // A manual pick from the structured tab's own file input always
     // supersedes anything AI-derived.
     this.sImageFromCrop = false;
