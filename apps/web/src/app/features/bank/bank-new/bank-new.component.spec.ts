@@ -856,6 +856,61 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('B6: photo tab reordered around "Extraer con IA"', () => {
+    /** True when `a` appears earlier in the document than `b`. */
+    function isBefore(a: Element, b: Element): boolean {
+      return !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+    }
+
+    function testid(compiled: HTMLElement, id: string): Element {
+      const el = compiled.querySelector(`[data-testid="${id}"]`);
+      if (!el) throw new Error(`missing [data-testid="${id}"]`);
+      return el;
+    }
+
+    it('orders Imagen -> Grado -> Extraer con IA -> Curso/Tema/Nivel/Clave -> Guardar foto tal cual', () => {
+      const { compiled } = setup();
+      const image = testid(compiled, 'image-upload');
+      const grade = testid(compiled, 'photo-grade-select');
+      const extract = testid(compiled, 'extract-with-ai');
+      const course = testid(compiled, 'photo-course-select');
+      const topic = testid(compiled, 'photo-topic-select');
+      const submit = testid(compiled, 'photo-submit');
+
+      expect(isBefore(image, grade)).toBe(true);
+      expect(isBefore(grade, extract)).toBe(true);
+      expect(isBefore(extract, course)).toBe(true);
+      expect(isBefore(course, topic)).toBe(true);
+      expect(isBefore(topic, submit)).toBe(true);
+    });
+
+    it('renders "Extraer con IA" as the primary action, and "Guardar foto tal cual" as the secondary/ghost action', () => {
+      const { compiled } = setup();
+      const extractButton = compiled.querySelector(
+        '[data-testid="extract-with-ai"] button',
+      ) as HTMLButtonElement;
+      const submitButton = compiled.querySelector(
+        '[data-testid="photo-submit"] button',
+      ) as HTMLButtonElement;
+
+      expect(extractButton.className).toContain('bg-primary-500');
+      expect(submitButton.className).not.toContain('bg-primary-500');
+      expect(submitButton.textContent).toContain('Guardar foto tal cual');
+    });
+
+    it('shows the extract-helper text while grado/imagen are incomplete, hidden once complete', () => {
+      const { fixture, compiled } = setup();
+      expect(compiled.querySelector('[data-testid="extract-helper"]')?.textContent).toContain(
+        'Necesita grado e imagen. Lee el enunciado, las alternativas y la clave por ti.',
+      );
+
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+
+      expect(compiled.querySelector('[data-testid="extract-helper"]')).toBeFalsy();
+    });
+  });
+
   describe('AI crops', () => {
     const EXTRACTED_WITH_CROPS: AiExtractedQuestion = {
       bodyTypst: '¿Qué muestra la figura?',

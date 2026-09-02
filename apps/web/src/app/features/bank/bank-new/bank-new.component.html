@@ -18,6 +18,37 @@
       data-testid="tab-photo-panel"
       class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4"
     >
+      <div data-testid="image-upload" class="flex flex-col gap-2">
+        <span class="text-sm font-medium text-n700">Imagen del enunciado</span>
+        <label
+          class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
+        >
+          <input type="file" accept="image/*" class="sr-only" (change)="onImageSelected($event)" />
+          @if (pImagePreviewUrl()) {
+            <img
+              data-testid="image-upload-preview"
+              [src]="pImagePreviewUrl()"
+              alt="Vista previa de la imagen del enunciado"
+              class="h-24 w-24 rounded-field object-cover"
+            />
+            <span
+              data-testid="image-upload-filename"
+              class="flex items-center gap-1.5 text-sm font-medium text-n900"
+            >
+              <lucide-angular name="image" class="h-4 w-4 text-primary-500"></lucide-angular>
+              {{ pImage()?.name }}
+            </span>
+            <span data-testid="image-upload-change" class="text-sm font-medium text-primary-500"
+              >Cambiar imagen</span
+            >
+          } @else {
+            <lucide-angular name="upload" class="h-6 w-6 text-n500"></lucide-angular>
+            <span class="text-sm text-n700">Arrastra una imagen o haz clic para elegirla</span>
+            <span class="text-xs text-n500">PNG o JPG</span>
+          }
+        </label>
+      </div>
+
       <div data-testid="photo-grade-select">
         <ui-select
           label="Grado"
@@ -27,6 +58,40 @@
           placeholder="Elige un grado"
         ></ui-select>
       </div>
+
+      <div data-testid="extract-with-ai">
+        <ui-button
+          variant="primary"
+          [loading]="extracting()"
+          [disabled]="!photoTaxonomyValid() || extracting()"
+          (clicked)="extractWithAi()"
+        >
+          <span class="flex items-center gap-1">
+            <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
+            Extraer con IA
+          </span>
+        </ui-button>
+      </div>
+      @if (!photoTaxonomyValid()) {
+        <p data-testid="extract-helper" class="text-xs text-n500">
+          Necesita grado e imagen. Lee el enunciado, las alternativas y la clave por ti.
+        </p>
+      }
+      @if (extracting()) {
+        <p data-testid="extract-progress" class="text-xs text-n500">
+          Leyendo la foto… puede tardar hasta un minuto.
+        </p>
+      }
+      @if (extractError()) {
+        <p
+          data-testid="extract-error"
+          class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+          role="alert"
+        >
+          {{ extractError() }}
+        </p>
+      }
+
       <div data-testid="photo-course-select">
         <ui-select
           label="Curso"
@@ -60,51 +125,6 @@
         (valueChange)="pCorrectAnswer.set($event)"
       ></ui-input>
 
-      <div data-testid="image-upload" class="flex flex-col gap-2">
-        <span class="text-sm font-medium text-n700">Imagen del enunciado</span>
-        <label
-          class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
-        >
-          <input type="file" accept="image/*" class="sr-only" (change)="onImageSelected($event)" />
-          @if (pImagePreviewUrl()) {
-            <img
-              data-testid="image-upload-preview"
-              [src]="pImagePreviewUrl()"
-              alt="Vista previa de la imagen del enunciado"
-              class="h-24 w-24 rounded-field object-cover"
-            />
-            <span
-              data-testid="image-upload-filename"
-              class="flex items-center gap-1.5 text-sm font-medium text-n900"
-            >
-              <lucide-angular name="image" class="h-4 w-4 text-primary-500"></lucide-angular>
-              {{ pImage()?.name }}
-            </span>
-            <span data-testid="image-upload-change" class="text-sm font-medium text-primary-500"
-              >Cambiar imagen</span
-            >
-          } @else {
-            <lucide-angular name="upload" class="h-6 w-6 text-n500"></lucide-angular>
-            <span class="text-sm text-n700">Arrastra una imagen o haz clic para elegirla</span>
-            <span class="text-xs text-n500">PNG o JPG</span>
-          }
-        </label>
-      </div>
-
-      @if (extracting()) {
-        <p data-testid="extract-progress" class="text-xs text-n500">
-          Leyendo la foto… puede tardar hasta un minuto.
-        </p>
-      }
-      @if (extractError()) {
-        <p
-          data-testid="extract-error"
-          class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
-          role="alert"
-        >
-          {{ extractError() }}
-        </p>
-      }
       @if (!photoValid()) {
         <p data-testid="photo-validation" class="text-xs text-hard-text">
           Completa grado, curso, tema, nivel, clave e imagen para poder guardar.
@@ -113,25 +133,12 @@
       <div class="flex flex-wrap gap-2">
         <div data-testid="photo-submit">
           <ui-button
-            variant="primary"
+            variant="ghost"
             [loading]="saving()"
             [disabled]="!photoValid()"
             (clicked)="submitPhoto()"
-            >Guardar pregunta</ui-button
+            >Guardar foto tal cual</ui-button
           >
-        </div>
-        <div data-testid="extract-with-ai">
-          <ui-button
-            variant="ghost"
-            [loading]="extracting()"
-            [disabled]="!photoTaxonomyValid() || extracting()"
-            (clicked)="extractWithAi()"
-          >
-            <span class="flex items-center gap-1">
-              <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
-              Extraer con IA
-            </span>
-          </ui-button>
         </div>
       </div>
     </div>
