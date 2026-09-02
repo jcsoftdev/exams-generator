@@ -175,6 +175,22 @@ export class AiRateLimitError extends AiGenerationError {
 }
 
 /**
+ * Raised by `resolveAiProviderConfig` when the deployment is missing the AI
+ * model or API key env vars — a configuration gap, not a transient provider
+ * failure. `AiController.mapAiProviderError` maps this to HTTP 503 with
+ * `code: "ai_not_configured"`, distinct from the generic `AiGenerationError`
+ * 502 mapping: a teacher hitting "retry" on this can never succeed until an
+ * operator sets the env, and the response should say so rather than imply
+ * the provider is just down.
+ */
+export class AiNotConfiguredError extends AiGenerationError {
+  constructor(message: string) {
+    super(message);
+    this.name = "AiNotConfiguredError";
+  }
+}
+
+/**
  * Raised when the provider's response can't be turned into a valid
  * `GeneratedQuestion`, after the adapter's single retry has also failed.
  * `rawResponse` is kept for debugging/logging — never persisted.
