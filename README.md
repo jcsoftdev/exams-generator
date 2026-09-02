@@ -47,7 +47,7 @@ pnpm dev:infra
 pnpm db:setup
 
 # 4. Run everything — api on :3012, web on :4201 (proxied to the api), and
-#    the landing dev server
+#    the landing dev server on :4322
 pnpm dev
 ```
 
