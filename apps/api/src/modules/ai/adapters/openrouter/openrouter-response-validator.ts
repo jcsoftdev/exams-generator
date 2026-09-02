@@ -1,4 +1,3 @@
-import { NormalizedBox, isValidNormalizedBox } from "../../domain/normalized-box";
 import { GeneratedAlternatives, GeneratedQuestion } from "../../domain/ports/question-generator.port";
 
 const VALID_ANSWER_LETTERS = new Set(["a", "b", "c", "d", "e"]);
@@ -45,6 +44,36 @@ function findLatexCommandInMath(bodyTypst: string): string | undefined {
 }
 
 /**
+ * A verdict the model appended to a proposition it was asked to TRANSCRIBE,
+ * not solve: `-> V`, `→ F`, a trailing `(V)`, a tick or a cross. Anchored to
+ * the end of a line, because that is where an annotation lands — a legitimate
+ * `->` mid-sentence (a mapping, an implication inside the question's own
+ * wording) never is.
+ */
+const ANSWER_ANNOTATION = /(?:->|→|=>)\s*[VF]\s*\$?\s*$|[✓✗]\s*\$?\s*$|\(\s*[VF]\s*\)\s*\$?\s*$/gmu;
+
+/** How many annotated lines it takes before this is the model solving, not coincidence. */
+const ANSWER_ANNOTATION_THRESHOLD = 2;
+
+/**
+ * Counts lines that end in a true/false verdict.
+ *
+ * This is the same shape as `findLatexCommandInMath` above: a known-bad
+ * pattern inside `bodyTypst` becomes a validation error, which the adapter
+ * feeds back into a retry (`previousError`) instead of shipping. Prompting
+ * alone did not hold — the rule leads the extract prompt and a weak model
+ * still annotated every proposition — and the failure is invisible until the
+ * exam prints, handing the candidate the answer key.
+ *
+ * Requires TWO such lines, not one: a single `-> V` could plausibly belong to
+ * the question's own text, while a column of them is the model showing its
+ * work.
+ */
+function countAnswerAnnotations(bodyTypst: string): number {
+  return [...bodyTypst.matchAll(ANSWER_ANNOTATION)].length;
+}
+
+/**
  * The model's self-reported structural metadata about the question it just
  * produced — which distinct concepts/relations the solution combines, and
  * how many reasoning steps it takes. Required by `RESPONSE_JSON_SCHEMA`
@@ -62,37 +91,6 @@ export interface QuestionSelfReport {
 export interface ValidatedGeneratedQuestion {
   readonly question: GeneratedQuestion;
   readonly selfReport: QuestionSelfReport;
-}
-
-/**
- * Crop boxes are best-effort geometry, never a validation error: a model that
- * reports a box spilling off the canvas hallucinated the geometry, not the
- * question. Dropping the box costs the human one manual crop; failing the
- * whole response would cost them the entire transcription.
- */
-function readFigureBox(value: unknown): NormalizedBox | undefined {
-  return isValidNormalizedBox(value) ? value : undefined;
-}
-
-/**
- * One slot per alternative, or nothing at all — a shape a length-mismatched
- * or all-null array can never satisfy trustworthily:
- * - A length mismatch means the model lost track of which box belongs to
- *   which alternative, so no individual entry in it can be trusted either;
- *   the whole array is dropped rather than padded/truncated into a guess.
- * - An array where every entry is `null` means there is nothing to crop —
- *   normalized to `undefined` so the UI can key off the field's absence to
- *   render no crop controls at all, instead of five empty slots.
- */
-function readAlternativeBoxes(
-  value: unknown,
-  alternativeCount: number,
-): readonly (NormalizedBox | null)[] | undefined {
-  if (!Array.isArray(value) || value.length !== alternativeCount) {
-    return undefined;
-  }
-  const boxes = value.map((entry) => (isValidNormalizedBox(entry) ? entry : null));
-  return boxes.some((box) => box !== null) ? boxes : undefined;
 }
 
 /**
@@ -123,6 +121,13 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
         `bodyTypst contains the LaTeX command "${latexCommand}" inside math mode ($...$) — Typst cannot compile LaTeX commands, rewrite that math using Typst syntax (no backslash)`,
       );
     }
+
+    const annotations = countAnswerAnnotations(payload.bodyTypst);
+    if (annotations >= ANSWER_ANNOTATION_THRESHOLD) {
+      errors.push(
+        `bodyTypst has ${annotations} lines ending in a true/false verdict (-> V, -> F, ✓, ✗) — you were asked to TRANSCRIBE the question, not solve it. Those marks would print on the exam and hand the candidate the answer. Remove every one of them and put the answer only in correctAnswer`,
+      );
+    }
   }
 
   const alternatives = payload.alternatives;
@@ -134,7 +139,17 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
     errors.push("alternatives must be an array of exactly 5 non-empty strings");
   }
 
-  if (typeof payload.correctAnswer !== "string" || !VALID_ANSWER_LETTERS.has(payload.correctAnswer)) {
+  // Uppercase is unambiguous and models emit it constantly ("E" for the fifth
+  // option). Rejecting it with a 422 burns a paid call over letter case, and
+  // this validator already normalizes defensively elsewhere (it strips letter
+  // prefixes and unwraps JSON-wrapped alternatives) — being strict about only
+  // this one is incoherent.
+  const correctAnswer =
+    typeof payload.correctAnswer === "string"
+      ? payload.correctAnswer.trim().toLowerCase()
+      : payload.correctAnswer;
+
+  if (typeof correctAnswer !== "string" || !VALID_ANSWER_LETTERS.has(correctAnswer)) {
     errors.push('correctAnswer must be one of "a", "b", "c", "d", "e"');
   }
 
@@ -173,7 +188,7 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
     question: {
       bodyTypst: payload.bodyTypst as string,
       alternatives: alternatives as unknown as GeneratedAlternatives,
-      correctAnswer: payload.correctAnswer as string,
+      correctAnswer: correctAnswer as string,
       figureCode: typeof rawFigureCode === "string" && rawFigureCode.length > 0 ? rawFigureCode : undefined,
       suggestedCourseName:
         typeof rawSuggestedCourse === "string" && rawSuggestedCourse.trim().length > 0
@@ -183,8 +198,6 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
         typeof rawSuggestedTopic === "string" && rawSuggestedTopic.trim().length > 0
           ? rawSuggestedTopic
           : undefined,
-      figureBox: readFigureBox(payload.figureBox),
-      alternativeBoxes: readAlternativeBoxes(payload.alternativeBoxes, (alternatives as string[]).length),
     },
     selfReport: {
       conceptsUsed: conceptsUsed as string[],

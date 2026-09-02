@@ -6,3 +6,6 @@ export const IMAGE_CROPPER_PORT = Symbol("ImageCropperPort");
 
 /** DI token for the `ExtractionCachePort` implementation the ai module uses. */
 export const EXTRACTION_CACHE_PORT = Symbol("ExtractionCachePort");
+
+/** DI token for the `TextRegionDetectorPort` implementation the ai module uses. */
+export const TEXT_REGION_DETECTOR_PORT = Symbol("TextRegionDetectorPort");

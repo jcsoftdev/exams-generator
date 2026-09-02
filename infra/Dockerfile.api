@@ -5,7 +5,7 @@ ENV CI=true
 # Pinned version — bump deliberately when upgrading Typst.
 ARG TYPST_VERSION=0.15.1
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends curl ca-certificates xz-utils \
+  && apt-get install -y --no-install-recommends curl ca-certificates xz-utils tesseract-ocr tesseract-ocr-spa \
   && curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
        -o /tmp/typst.tar.xz \
   && tar -xJf /tmp/typst.tar.xz -C /tmp \
@@ -50,6 +50,20 @@ COPY --from=build /app/deploy ./
 # fail at app boot, not here. Zero network dependency: sharp's binary was
 # already installed by the `deps` stage above.
 RUN node -e "require('sharp')"
+
+# Gate on the LANGUAGE, not just the binary. `tesseract --version` exits 0
+# with zero language packs installed, while `TesseractCliAdapter` invokes
+# `-l spa`; a missing `spa.traineddata` exits non-zero at runtime, `buildCrops`
+# swallows it by design, and every extraction silently loses its figure behind
+# a `logger.warn`. The tesseract packages are installed in the same `apt-get`
+# line as curl/xz-utils, which are purged and `autoremove`d further up — an
+# `autoremove` that ever treats `tesseract-ocr-spa` as an orphan produces
+# exactly that while a `--version` gate stays green.
+# `grep -qx` (Debian ships it; ripgrep is not in this image) requires the
+# whole line to be exactly `spa`, so a language merely containing those
+# letters cannot satisfy it. `2>&1` because tesseract writes the list header
+# to stderr.
+RUN tesseract --list-langs 2>&1 | grep -qx spa
 
 # Non-root (audit 2026-08-20 H5). The `node` user ships with the base image;
 # the app only ever writes to os.tmpdir() (exam-generation temp dirs), which

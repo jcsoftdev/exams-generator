@@ -216,7 +216,12 @@ export interface AiAlternativeCrop extends AiQuestionCrop {
  */
 export interface AiExtractedQuestion extends AiRevisedQuestion {
   readonly figureCrop?: AiQuestionCrop;
-  /** Sparse — only the alternatives that are drawings appear here. */
+  /**
+   * Sparse — only the alternatives that are drawings appear here, at most ONE
+   * entry per `alternativeIndex`. The UI renders one crop slot per entry, so a
+   * repeated index would show the teacher two slots for the same alternative;
+   * `attributeFigureToAlternative` keeps the topmost figure of each band.
+   */
   readonly alternativeCrops?: readonly AiAlternativeCrop[];
   readonly extractionId?: string;
 }

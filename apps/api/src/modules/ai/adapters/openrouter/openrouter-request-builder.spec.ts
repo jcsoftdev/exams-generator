@@ -143,6 +143,13 @@ describe("buildOpenRouterRequestBody", () => {
     expect(promptText).toContain("@preview/cetz:0.5.2");
   });
 
+  it("spells out that a negated symbol takes the .not suffix — `notsubset` is not a Typst variable", () => {
+    const promptText = promptTextOf(buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT));
+
+    expect(promptText).toContain("subset.not");
+    expect(promptText).toContain("notsubset");
+  });
+
   it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
@@ -300,10 +307,21 @@ describe("buildOpenRouterExtractRequestBody", () => {
     expect(promptText).toMatch(/transcribe/i);
   });
 
-  it("tells the model to leave figureCode null when the figure is a photograph it cannot draw", () => {
+  it("tells the model figureCode is ALWAYS null, because a photographed figure is cropped out as an image", () => {
     const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
 
-    expect(promptText).toMatch(/fotograf|afiche|escaneo/i);
+    expect(promptText).toMatch(/figureCode SIEMPRE null/i);
+    expect(promptText).toMatch(/se recortan como imagen/i);
+  });
+
+  it("MUST: tells the model to transcribe and never solve — a V/F annotation would print the answer on the exam", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/NO RESUELVES/);
+    // The rule leads the prompt: buried among the numbering rules it did not
+    // take, and the model kept annotating each proposition with -> V / -> F.
+    expect(promptText.indexOf("NO RESUELVES")).toBeLessThan(200);
+    expect(promptText).toMatch(/correctAnswer/);
   });
 
   it("tells the model to guess course/topic ONLY when confident, null otherwise", () => {
@@ -344,11 +362,15 @@ describe("buildOpenRouterExtractRequestBody", () => {
     expect(textPart!.text).toContain("boom");
   });
 
-  it("pins the CeTZ package version compatible with the deployed typst binary", () => {
+  it("carries NO CeTZ drawing rules — extraction never draws a figure, it crops one", () => {
     const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 
+    // A third of the prompt used to teach CeTZ here, for an output this path
+    // is now told to leave null. `generate` still carries them (asserted in
+    // its own test above); re-adding them here is the regression to catch.
     const systemMessage = body.messages.find((m) => m.role === "system");
-    expect(systemMessage!.content as string).toContain("@preview/cetz:0.5.2");
+    expect(systemMessage!.content as string).not.toContain("@preview/cetz");
+    expect(systemMessage!.content as string).not.toContain("#canvas(");
   });
 
   it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
@@ -357,32 +379,24 @@ describe("buildOpenRouterExtractRequestBody", () => {
     const systemMessage = body.messages.find((m) => m.role === "system");
     expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
   });
-});
 
-describe("buildOpenRouterExtractRequestBody — crop boxes", () => {
-  it("asks the schema for figureBox and alternativeBoxes", () => {
-    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
-      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
-      mimeType: "image/png",
-    });
+  it("no longer asks the model for crop boxes — the figure is found by OCR, not reported", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
 
-    const schema = body.response_format!.json_schema!.schema;
-    expect(schema.properties).toHaveProperty("figureBox");
-    expect(schema.properties).toHaveProperty("alternativeBoxes");
-    // `strict: true` schemas require every declared property to be listed.
-    expect(schema.required).toEqual(expect.arrayContaining(["figureBox", "alternativeBoxes"]));
+    // Asking a vision model for pixel coordinates is what this design replaced.
+    // Re-adding these rules is the regression to catch.
+    expect(promptText).not.toMatch(/figureBox/);
+    expect(promptText).not.toMatch(/alternativeBoxes/);
+    expect(promptText).not.toMatch(/recuadro/i);
   });
 
-  it("tells the model the coordinates are fractions of the image, not pixels", () => {
-    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
-      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
-      mimeType: "image/png",
-    });
+  it("the extract schema no longer declares the box fields", () => {
+    const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 
-    const systemPrompt = body.messages[0]!.content as string;
-    expect(systemPrompt).toContain("fracción");
-    expect(systemPrompt).toContain("figureBox");
-    expect(systemPrompt).toContain("alternativeBoxes");
+    const schema = body.response_format!.json_schema!.schema;
+    expect(schema.properties).not.toHaveProperty("figureBox");
+    expect(schema.properties).not.toHaveProperty("alternativeBoxes");
+    expect(schema.required).not.toContain("figureBox");
   });
 });
 

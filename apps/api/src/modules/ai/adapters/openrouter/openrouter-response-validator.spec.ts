@@ -157,8 +157,59 @@ describe("validateGeneratedQuestionShape", () => {
   });
 });
 
-describe("validateGeneratedQuestionShape — crop boxes", () => {
-  /** A payload that already satisfies every pre-existing rule. */
+describe("validateGeneratedQuestionShape — answer leaked into the statement", () => {
+  function withBody(bodyTypst: string): Record<string, unknown> {
+    return {
+      bodyTypst,
+      alternatives: ["1", "2", "3", "4", "5"],
+      correctAnswer: "e",
+      conceptsUsed: ["conjuntos"],
+      solutionSteps: 2,
+    };
+  }
+
+  /** Verbatim from a real extraction: every proposition annotated with its verdict. */
+  const LEAKED = [
+    "Si: $A = {13; 5}$ indicar cuantas proposiciones son verdaderas.",
+    "",
+    "$(3; {5}] subset A -> F$",
+    "",
+    "$(3; 5] subset.not A -> V$",
+    "",
+    "$emptyset in P(A) -> V$",
+  ].join("\n");
+
+  it("MUST: rejects a body whose propositions carry -> V / -> F verdicts", () => {
+    // Shipping this prints the answer key inside the exam question.
+    expect(() => validateGeneratedQuestionShape(withBody(LEAKED))).toThrow(/TRANSCRIBE/i);
+  });
+
+  it("names the count in the error, so the retry knows how much to remove", () => {
+    expect(() => validateGeneratedQuestionShape(withBody(LEAKED))).toThrow(/3 lines/);
+  });
+
+  it("also catches ticks and crosses, and a trailing (V)", () => {
+    const ticks = "Proposición uno ✓\n\nProposición dos ✗";
+    const parens = "Proposición uno (V)\n\nProposición dos (F)";
+
+    expect(() => validateGeneratedQuestionShape(withBody(ticks))).toThrow(/TRANSCRIBE/i);
+    expect(() => validateGeneratedQuestionShape(withBody(parens))).toThrow(/TRANSCRIBE/i);
+  });
+
+  it("leaves a legitimate arrow alone — a limit is not a verdict", () => {
+    const legit = "Si $x -> 3$ entonces el límite es $9$.\n\nHalla el valor de $y$.";
+
+    expect(() => validateGeneratedQuestionShape(withBody(legit))).not.toThrow();
+  });
+
+  it("tolerates ONE annotation — a column of them is the model solving, a single one may be the question's own wording", () => {
+    const single = "La proposición $p -> V$ se lee así.\n\n¿Cuál es el valor?";
+
+    expect(() => validateGeneratedQuestionShape(withBody(single))).not.toThrow();
+  });
+});
+
+describe("validateGeneratedQuestionShape — correctAnswer casing", () => {
   function basePayload(): Record<string, unknown> {
     return {
       bodyTypst: "¿Cuánto es $2 + 2$?",
@@ -169,67 +220,72 @@ describe("validateGeneratedQuestionShape — crop boxes", () => {
     };
   }
 
-  it("keeps a valid figureBox", () => {
+  it('accepts an uppercase letter and normalizes it — models emit "E" constantly', () => {
+    const { question } = validateGeneratedQuestionShape({ ...basePayload(), correctAnswer: "E" });
+
+    expect(question.correctAnswer).toBe("e");
+  });
+
+  it("tolerates surrounding whitespace", () => {
+    const { question } = validateGeneratedQuestionShape({ ...basePayload(), correctAnswer: " c " });
+
+    expect(question.correctAnswer).toBe("c");
+  });
+
+  it("still rejects a letter outside a..e", () => {
+    expect(() => validateGeneratedQuestionShape({ ...basePayload(), correctAnswer: "Z" })).toThrow(
+      /correctAnswer/,
+    );
+  });
+});
+
+describe("validateGeneratedQuestionShape — the model's boxes are ignored", () => {
+  it("a model that still sends figureBox does not leak it into the question", () => {
     const { question } = validateGeneratedQuestionShape({
-      ...basePayload(),
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["3", "4", "5", "6", "7"],
+      correctAnswer: "b",
+      conceptsUsed: ["suma"],
+      solutionSteps: 1,
       figureBox: { x: 0.1, y: 0.2, w: 0.5, h: 0.3 },
-    });
-
-    expect(question.figureBox).toEqual({ x: 0.1, y: 0.2, w: 0.5, h: 0.3 });
-  });
-
-  it("drops an out-of-canvas figureBox without failing the extraction", () => {
-    const { question } = validateGeneratedQuestionShape({
-      ...basePayload(),
-      figureBox: { x: 0.8, y: 0.2, w: 0.5, h: 0.3 },
-    });
-
-    expect(question.figureBox).toBeUndefined();
-    expect(question.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
-  });
-
-  it("normalizes a null figureBox to undefined", () => {
-    const { question } = validateGeneratedQuestionShape({ ...basePayload(), figureBox: null });
-
-    expect(question.figureBox).toBeUndefined();
-  });
-
-  it("keeps alternativeBoxes with nulls for the text-only alternatives", () => {
-    const box = { x: 0.1, y: 0.6, w: 0.15, h: 0.1 };
-    const { question } = validateGeneratedQuestionShape({
-      ...basePayload(),
-      alternativeBoxes: [box, null, box, null, null],
-    });
-
-    expect(question.alternativeBoxes).toEqual([box, null, box, null, null]);
-  });
-
-  it("nulls out only the invalid entries of alternativeBoxes", () => {
-    const good = { x: 0.1, y: 0.6, w: 0.15, h: 0.1 };
-    const { question } = validateGeneratedQuestionShape({
-      ...basePayload(),
-      alternativeBoxes: [good, { x: 0.5, y: 0.5, w: 0.9, h: 0.1 }, null, null, null],
-    });
-
-    expect(question.alternativeBoxes).toEqual([good, null, null, null, null]);
-  });
-
-  it("drops alternativeBoxes entirely when its length does not match the alternatives", () => {
-    const box = { x: 0.1, y: 0.6, w: 0.15, h: 0.1 };
-    const { question } = validateGeneratedQuestionShape({
-      ...basePayload(),
-      alternativeBoxes: [box, null],
-    });
-
-    expect(question.alternativeBoxes).toBeUndefined();
-  });
-
-  it("drops alternativeBoxes when every entry is null — nothing to crop", () => {
-    const { question } = validateGeneratedQuestionShape({
-      ...basePayload(),
       alternativeBoxes: [null, null, null, null, null],
     });
 
-    expect(question.alternativeBoxes).toBeUndefined();
+    expect(question).not.toHaveProperty("figureBox");
+    expect(question).not.toHaveProperty("alternativeBoxes");
+    // The transcription still comes through untouched.
+    expect(question.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
+  });
+});
+
+describe("validateGeneratedQuestionShape — excess properties never reach the question", () => {
+  it("carries over only the declared fields, whatever else the payload adds", () => {
+    const { question } = validateGeneratedQuestionShape({
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["3", "4", "5", "6", "7"],
+      correctAnswer: "b",
+      conceptsUsed: ["suma"],
+      solutionSteps: 1,
+      // The two fields this plan removed from the contract, plus an
+      // arbitrary one — this is about excess properties in general, not
+      // only about figureBox/alternativeBoxes specifically.
+      // `validateGeneratedQuestionShape` builds `question` field-by-field
+      // from `payload.*`; a future maintainer "simplifying" that into
+      // `{ ...payload, bodyTypst }` would silently reopen this leak on the
+      // OpenRouter path, and nothing else in this suite would catch it.
+      // Scoped to THIS validator: it is the only thing under test here, and
+      // adapters that never route through it — `InMemoryQuestionGeneratorAdapter`
+      // returns object literals directly — are not covered by this guard.
+      figureBox: { x: 0.1, y: 0.2, w: 0.5, h: 0.3 },
+      alternativeBoxes: [null, null, null, null, null],
+      somethingElse: "x",
+    });
+
+    expect(question).not.toHaveProperty("figureBox");
+    expect(question).not.toHaveProperty("alternativeBoxes");
+    expect(question).not.toHaveProperty("somethingElse");
+    // Without this, an empty `question` would also satisfy every check
+    // above — proving a real field still comes through rules that out.
+    expect(question.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
   });
 });

@@ -651,6 +651,51 @@ describe('BankNewComponent', () => {
       expect(instance.extracting()).toBe(false);
     });
 
+    it('surfaces a 4xx body verbatim instead of the generic retry message', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 422,
+                error: {
+                  message: ['alternatives must be an array of exactly 5 non-empty strings'],
+                },
+              }),
+          ),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        extractError: () => string | null;
+      };
+      // Retrying never fixes a 422 — the teacher has to see WHY it failed.
+      expect(instance.extractError()).toBe(
+        'alternatives must be an array of exactly 5 non-empty strings',
+      );
+    });
+
+    it('keeps the free-tier wording for a 429, whose body explains nothing', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 429 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        extractError: () => string | null;
+      };
+      expect(instance.extractError()).toContain('límite de uso gratuito');
+    });
+
     it('does not leak a stale pending course/topic when the structured grade already equals the photo grade (same-grade no-op)', () => {
       const { fixture, compiled } = setup();
       fillPhotoTaxonomy(fixture);
