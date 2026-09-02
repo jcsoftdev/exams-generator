@@ -55,6 +55,15 @@ export class CropReviewComponent {
    */
   protected moved = false;
 
+  /**
+   * Local keyboard-edit state — mirrors `dragTarget`/`dragBox` but for the
+   * keyboard path (Task audit H2): arrow presses accumulate here without
+   * touching the server until Enter, and Escape discards them by clearing
+   * both fields so `boxFor` falls back to the slot's own (unedited) box.
+   */
+  protected keyTarget: CropTarget | null = null;
+  protected keyBox: NormalizedBoxDto | null = null;
+
   /** Called by the drag handler once the teacher lets go of the rectangle. */
   applyBox(target: CropTarget, box: NormalizedBoxDto): void {
     const slot = this.slots().find((candidate) => sameTarget(candidate.target, target));
@@ -72,10 +81,17 @@ export class CropReviewComponent {
     return slot.label;
   }
 
-  /** The rectangle to draw for `slot` — the in-progress drag box while dragging it, otherwise its saved box. */
+  /**
+   * The rectangle to draw for `slot` — the in-progress drag box while
+   * dragging it, the in-progress keyboard edit while arrow-editing it,
+   * otherwise its saved box.
+   */
   protected boxFor(slot: CropSlot): NormalizedBoxDto {
     if (this.dragBox && this.dragTarget && sameTarget(this.dragTarget, slot.target)) {
       return this.dragBox;
+    }
+    if (this.keyBox && this.keyTarget && sameTarget(this.keyTarget, slot.target)) {
+      return this.keyBox;
     }
     return slot.box;
   }
@@ -160,6 +176,73 @@ export class CropReviewComponent {
     this.dragHandle = null;
     this.dragStartBox = null;
     this.moved = false;
+  }
+
+  /**
+   * Keyboard path for moving/resizing the crop box (audit H2) — mirrors the
+   * pointer path through the same `clampMove`/`clampResize` functions so it
+   * can never produce a box the API would reject that a drag wouldn't.
+   * Arrows move by 1% of the container (10% with Ctrl/Meta); Shift+Arrow
+   * resizes from the box's own right/bottom edge, so Right/Down grow it and
+   * Left/Up shrink it; Enter applies the edit exactly like the "Aplicar
+   * recorte" button; Escape discards it back to the slot's own box.
+   */
+  protected onKeyDown(event: KeyboardEvent, slot: CropSlot): void {
+    if (slot.busy) {
+      return;
+    }
+    const current =
+      this.keyBox && this.keyTarget && sameTarget(this.keyTarget, slot.target)
+        ? this.keyBox
+        : slot.box;
+    const step = event.ctrlKey || event.metaKey ? 0.1 : 0.01;
+
+    switch (event.key) {
+      case 'ArrowLeft':
+        event.preventDefault();
+        this.setKeyBox(
+          slot.target,
+          event.shiftKey ? clampResize(current, 'e', -step, 0) : clampMove(current, -step, 0),
+        );
+        return;
+      case 'ArrowRight':
+        event.preventDefault();
+        this.setKeyBox(
+          slot.target,
+          event.shiftKey ? clampResize(current, 'e', step, 0) : clampMove(current, step, 0),
+        );
+        return;
+      case 'ArrowUp':
+        event.preventDefault();
+        this.setKeyBox(
+          slot.target,
+          event.shiftKey ? clampResize(current, 's', 0, -step) : clampMove(current, 0, -step),
+        );
+        return;
+      case 'ArrowDown':
+        event.preventDefault();
+        this.setKeyBox(
+          slot.target,
+          event.shiftKey ? clampResize(current, 's', 0, step) : clampMove(current, 0, step),
+        );
+        return;
+      case 'Enter':
+        event.preventDefault();
+        this.applyBox(slot.target, current);
+        this.keyTarget = null;
+        this.keyBox = null;
+        return;
+      case 'Escape':
+        event.preventDefault();
+        this.keyTarget = null;
+        this.keyBox = null;
+        return;
+    }
+  }
+
+  private setKeyBox(target: CropTarget, box: NormalizedBoxDto): void {
+    this.keyTarget = target;
+    this.keyBox = box;
   }
 }
 
