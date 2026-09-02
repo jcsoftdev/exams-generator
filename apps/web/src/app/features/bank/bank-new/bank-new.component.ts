@@ -425,7 +425,16 @@ export class BankNewComponent {
       next: (extracted) => {
         this.sBody.set(extracted.bodyTypst);
         this.sAlternatives.set(extracted.alternatives.join('\n'));
-        this.sCorrectAnswer.set(indexToCorrectAnswerLetter(extracted.correctAnswer));
+        // `extracted.correctAnswer` is `string | null` now — extraction
+        // never invents a key the photo didn't show. `null` clears the
+        // field (same as its initial `''`) so the "can save" gate at
+        // `!!this.sCorrectAnswer()` correctly requires the teacher to pick
+        // one by hand.
+        this.sCorrectAnswer.set(
+          extracted.correctAnswer !== null
+            ? indexToCorrectAnswerLetter(extracted.correctAnswer)
+            : '',
+        );
         // sDifficulty is intentionally left untouched — Nivel is never
         // auto-filled from AI, the human always picks it.
 

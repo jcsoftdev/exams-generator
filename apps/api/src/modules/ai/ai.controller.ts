@@ -32,6 +32,7 @@ import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generat
 import {
   AiGenerationError,
   AiInvalidResponseError,
+  AiNotConfiguredError,
   AiRateLimitError,
 } from "./domain/ports/question-generator.port";
 import { RecropQuestionService } from "./recrop-question.service";
@@ -74,6 +75,17 @@ function mapAiProviderError(error: unknown): never {
   }
   if (error instanceof AiInvalidResponseError) {
     throw new UnprocessableEntityException(error.message);
+  }
+  // MUST come before the generic `AiGenerationError` branch below —
+  // `AiNotConfiguredError` extends it, and a missing AI_MODEL/AI_API_KEY is a
+  // deployment gap the teacher can never fix by retrying, not a transient
+  // provider failure. 503 (not 502) plus a stable `code` says so explicitly,
+  // instead of implying "the provider is down, try again".
+  if (error instanceof AiNotConfiguredError) {
+    throw new HttpException(
+      { statusCode: HttpStatus.SERVICE_UNAVAILABLE, code: "ai_not_configured", message: error.message },
+      HttpStatus.SERVICE_UNAVAILABLE,
+    );
   }
   if (error instanceof AiGenerationError) {
     throw new HttpException(error.message, HttpStatus.BAD_GATEWAY);

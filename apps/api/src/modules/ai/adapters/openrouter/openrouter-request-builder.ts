@@ -415,6 +415,7 @@ const EXTRACT_SYSTEM_PROMPT = [
   "REGLA NÚMERO UNO: TRANSCRIBES, NO RESUELVES. bodyTypst es lo que la hoja dice y nada más. PROHIBIDO agregar '-> V', '-> F', 'V', 'F', ✓, ✗ o cualquier marca de verdadero/falso al lado de una proposición; PROHIBIDO anotar resultados intermedios o el razonamiento. Eso se imprime en el examen y le regala la respuesta al postulante. Si deduces la clave, va SOLO en el campo correctAnswer.",
   "Eres un asistente que extrae preguntas tipo examen de admisión desde fotos de material impreso o manuscrito peruano.",
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
+  "REGLA NÚMERO DOS: NUNCA INVENTES. Si la foto NO muestra alternativas de respuesta, responde alternatives como un array VACÍO [] — jamás inventes 5 alternativas que la foto no muestra. Si la foto muestra alternativas pero no es posible identificar cuál es la correcta (no hay marca, no hay forma de deducirla con certeza), responde correctAnswer null — jamás adivines una letra. Es preferible transcribir menos que fabricar contenido que no está en la imagen: una alternativa o una clave inventada es un error grave, no un detalle menor.",
   'La imagen es un recorte de un examen impreso, así que trae marcas de su hoja de origen que NO son parte de la pregunta: la numeración con que venía ("17.", "06.", "43."), las letras de sus alternativas ("a)", "b)", "A)"), encabezados, pies de página y marcas de agua ("Prohibida su venta", "Distribución gratuita"), y a veces un pedazo de la pregunta vecina. Devuelve SOLO la pregunta: sin su numeración, sin las letras de sus alternativas, sin nada de la hoja.',
   "Si el recorte trae texto de una segunda pregunta, transcribe únicamente la que está completa y descarta la otra.",
   "figureCode SIEMPRE null. Los gráficos de la foto se recortan como imagen y se adjuntan aparte; no los redibujes.",
@@ -440,6 +441,19 @@ const EXTRACT_SYSTEM_PROMPT = [
  * exact same reference `buildOpenRouterRequestBody`/
  * `buildOpenRouterReviseRequestBody` pass to OpenRouter; generate/revise
  * have no course/topic-guessing job and must never be asked for it.
+ *
+ * Also OVERRIDES `alternatives`/`correctAnswer` (rather than only extending
+ * the base properties, like `suggestedCourse`/`suggestedTopic` below):
+ * `generate`/`reviseQuestion` compose a question from nothing, so exactly 5
+ * alternatives and a definite letter key are always achievable and
+ * `RESPONSE_JSON_SCHEMA` rightly demands them. `extractFromImage` instead
+ * transcribes a PHOTO — the source material may show fewer than 5
+ * alternatives (`minItems: 0` here, vs. the base schema's `minItems: 5`), or
+ * no identifiable correct answer at all (`correctAnswer` accepts `null` here,
+ * vs. the base schema's letter-only `enum`). Forcing the stricter base shape
+ * on extraction is exactly what used to make the model FABRICATE alternatives
+ * and a key for a photo that showed neither (see `ExtractedQuestion`'s
+ * docstring in `question-generator.port.ts`).
  */
 const EXTRACT_RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
   name: "extracted_question",
@@ -449,6 +463,20 @@ const EXTRACT_RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
     additionalProperties: false,
     properties: {
       ...RESPONSE_JSON_SCHEMA.schema.properties,
+      alternatives: {
+        type: "array",
+        items: { type: "string" },
+        minItems: 0,
+        maxItems: 5,
+        description:
+          "Alternativas de respuesta que la foto REALMENTE muestra, en el mismo orden — array VACÍO [] si la foto no muestra ninguna. NUNCA inventes ni completes hasta 5 si la foto muestra menos.",
+      },
+      correctAnswer: {
+        type: ["string", "null"],
+        enum: ["a", "b", "c", "d", "e", null],
+        description:
+          "Letra de la alternativa correcta si es visible o inferible con certeza en la foto, o null si no lo es. NUNCA adivines una clave que la foto no muestra.",
+      },
       suggestedCourse: {
         type: ["string", "null"],
         description:
@@ -480,7 +508,7 @@ export function buildOpenRouterExtractRequestBody(
 ): OpenRouterRequestBody {
   const instructionLines = [
     "Extrae la pregunta de opción múltiple que aparece en esta imagen.",
-    "Debe tener 5 alternativas; identifica la letra de la correcta si es visible u obvia por el contexto.",
+    "Transcribe SOLO las alternativas que la foto realmente muestra — si no muestra ninguna, alternatives va vacío []. Identifica la letra de la correcta SOLO si es visible u obvia por el contexto; si no, correctAnswer va null. NUNCA inventes alternativas ni una clave que la imagen no muestra.",
   ];
 
   if (options.previousError) {

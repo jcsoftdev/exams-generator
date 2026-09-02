@@ -275,7 +275,16 @@ describe("buildOpenRouterExtractRequestBody", () => {
       properties: Record<string, unknown>;
       required: readonly string[];
     };
-    expect(schema.properties).toMatchObject(generateSchema.properties);
+    // `alternatives`/`correctAnswer` are DELIBERATELY excluded from this
+    // comparison — extraction relaxes exactly those two (see the dedicated
+    // "A1" describe block below); every other property must match generate's
+    // base schema exactly.
+    const {
+      alternatives: _genAlternatives,
+      correctAnswer: _genCorrectAnswer,
+      ...restOfGenerateProps
+    } = generateSchema.properties;
+    expect(schema.properties).toMatchObject(restOfGenerateProps);
     expect(schema.properties.suggestedCourse).toEqual({
       type: ["string", "null"],
       description: expect.any(String),
@@ -287,6 +296,51 @@ describe("buildOpenRouterExtractRequestBody", () => {
     expect(schema.required).toEqual(
       expect.arrayContaining([...generateSchema.required, "suggestedCourse", "suggestedTopic"]),
     );
+  });
+
+  describe("A1: extraction must not invent alternatives or a key the photo doesn't show", () => {
+    it("allows alternatives to be empty (minItems: 0) — generate/revise still require exactly 5", () => {
+      const extractSchema = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT)
+        .response_format.json_schema.schema as unknown as { properties: Record<string, unknown> };
+      const generateSchema = expectedGeneratedQuestionSchema() as unknown as {
+        properties: Record<string, unknown>;
+      };
+
+      expect(extractSchema.properties.alternatives).toMatchObject({ minItems: 0, maxItems: 5 });
+      expect(extractSchema.properties.alternatives).not.toMatchObject({ minItems: 5 });
+      // Regression guard: generate/revise's OWN schema must stay untouched.
+      expect(generateSchema.properties.alternatives).toMatchObject({ minItems: 5, maxItems: 5 });
+    });
+
+    it("allows correctAnswer to be null — generate/revise still require a letter", () => {
+      const extractSchema = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT)
+        .response_format.json_schema.schema as unknown as { properties: Record<string, unknown> };
+      const generateSchema = expectedGeneratedQuestionSchema() as unknown as {
+        properties: Record<string, unknown>;
+      };
+
+      expect(extractSchema.properties.correctAnswer).toEqual({
+        type: ["string", "null"],
+        enum: ["a", "b", "c", "d", "e", null],
+        description: expect.any(String),
+      });
+      // Regression guard: generate/revise's OWN schema must stay untouched.
+      expect(generateSchema.properties.correctAnswer).toEqual({
+        type: "string",
+        enum: ["a", "b", "c", "d", "e"],
+        description: expect.any(String),
+      });
+    });
+
+    it("tells the model, in the prompt, to leave alternatives empty / correctAnswer null rather than invent either", () => {
+      const promptText = promptTextOf(
+        buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT),
+      );
+
+      expect(promptText).toMatch(/NUNCA INVENTES/);
+      expect(promptText).toMatch(/array VACÍO/);
+      expect(promptText).toMatch(/correctAnswer null/);
+    });
   });
 
   it("tells the model to drop the numbering the source printed on the question", () => {

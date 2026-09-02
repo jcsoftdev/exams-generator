@@ -1,4 +1,8 @@
-import { GeneratedAlternatives, GeneratedQuestion } from "../../domain/ports/question-generator.port";
+import {
+  ExtractedQuestion,
+  GeneratedAlternatives,
+  GeneratedQuestion,
+} from "../../domain/ports/question-generator.port";
 
 const VALID_ANSWER_LETTERS = new Set(["a", "b", "c", "d", "e"]);
 
@@ -93,25 +97,30 @@ export interface ValidatedGeneratedQuestion {
   readonly selfReport: QuestionSelfReport;
 }
 
+export interface ValidatedExtractedQuestion {
+  readonly question: ExtractedQuestion;
+  readonly selfReport: QuestionSelfReport;
+}
+
+/** Fields validated the SAME way regardless of caller — everything except `alternatives`/`correctAnswer`, where extraction is deliberately more permissive (see `ExtractedQuestion`'s docstring). */
+interface CommonValidatedFields {
+  readonly bodyTypst: string;
+  readonly figureCode?: string;
+  readonly conceptsUsed: readonly string[];
+  readonly solutionSteps: number;
+  readonly suggestedCourseName?: string;
+  readonly suggestedTopicName?: string;
+}
+
 /**
- * Validates an already-parsed (but untyped) JSON value against the
- * `GeneratedQuestion` shape. This is the ONLY gate content is allowed
- * through before the port resolves — per design doc §7 the AI response is
- * "nunca se guarda sin validar contra schema". Throws `TypeError` (with a
- * message describing every violated rule) when the payload doesn't match.
- *
- * `figureCode: null` (a common JSON-schema idiom for "optional field") is
- * normalized to `undefined` to match the port's TypeScript contract.
+ * Validates every field `validateGeneratedQuestionShape` and
+ * `validateExtractedQuestionShape` check IDENTICALLY — `bodyTypst` (+ its
+ * LaTeX/answer-annotation guards), `figureCode`, `conceptsUsed`,
+ * `solutionSteps`, and the best-effort `suggestedCourse`/`suggestedTopic`.
+ * Pushes onto the SHARED `errors` array the two callers each own, so a
+ * single combined `TypeError` still names every violated rule in one message.
  */
-export function validateGeneratedQuestionShape(value: unknown): ValidatedGeneratedQuestion {
-  const errors: string[] = [];
-
-  if (typeof value !== "object" || value === null || Array.isArray(value)) {
-    throw new TypeError("AI response payload must be a JSON object");
-  }
-
-  const payload = value as Record<string, unknown>;
-
+function validateCommonFields(payload: Record<string, unknown>, errors: string[]): CommonValidatedFields {
   if (typeof payload.bodyTypst !== "string" || payload.bodyTypst.trim().length === 0) {
     errors.push("bodyTypst must be a non-empty string");
   } else {
@@ -128,29 +137,6 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
         `bodyTypst has ${annotations} lines ending in a true/false verdict (-> V, -> F, ✓, ✗) — you were asked to TRANSCRIBE the question, not solve it. Those marks would print on the exam and hand the candidate the answer. Remove every one of them and put the answer only in correctAnswer`,
       );
     }
-  }
-
-  const alternatives = payload.alternatives;
-  if (
-    !Array.isArray(alternatives) ||
-    alternatives.length !== 5 ||
-    !alternatives.every((alt) => typeof alt === "string" && alt.trim().length > 0)
-  ) {
-    errors.push("alternatives must be an array of exactly 5 non-empty strings");
-  }
-
-  // Uppercase is unambiguous and models emit it constantly ("E" for the fifth
-  // option). Rejecting it with a 422 burns a paid call over letter case, and
-  // this validator already normalizes defensively elsewhere (it strips letter
-  // prefixes and unwraps JSON-wrapped alternatives) — being strict about only
-  // this one is incoherent.
-  const correctAnswer =
-    typeof payload.correctAnswer === "string"
-      ? payload.correctAnswer.trim().toLowerCase()
-      : payload.correctAnswer;
-
-  if (typeof correctAnswer !== "string" || !VALID_ANSWER_LETTERS.has(correctAnswer)) {
-    errors.push('correctAnswer must be one of "a", "b", "c", "d", "e"');
   }
 
   const rawFigureCode = payload.figureCode;
@@ -172,10 +158,6 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
     errors.push("solutionSteps must be an integer >= 1");
   }
 
-  if (errors.length > 0) {
-    throw new TypeError(`Invalid AI-generated question: ${errors.join("; ")}`);
-  }
-
   // `suggestedCourse`/`suggestedTopic` are extract-only, best-effort, and
   // never validated as errors — a `null`/absent/blank guess just means
   // "not confident enough", not a malformed response (mirrors `figureCode`'s
@@ -185,23 +167,162 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
   const rawSuggestedTopic = payload.suggestedTopic;
 
   return {
+    bodyTypst: payload.bodyTypst as string,
+    figureCode: typeof rawFigureCode === "string" && rawFigureCode.length > 0 ? rawFigureCode : undefined,
+    conceptsUsed: conceptsUsed as string[],
+    solutionSteps: solutionSteps as number,
+    suggestedCourseName:
+      typeof rawSuggestedCourse === "string" && rawSuggestedCourse.trim().length > 0
+        ? rawSuggestedCourse
+        : undefined,
+    suggestedTopicName:
+      typeof rawSuggestedTopic === "string" && rawSuggestedTopic.trim().length > 0
+        ? rawSuggestedTopic
+        : undefined,
+  };
+}
+
+/**
+ * Uppercase is unambiguous and models emit it constantly ("E" for the fifth
+ * option). Rejecting it with a 422 burns a paid call over letter case, and
+ * this validator already normalizes defensively elsewhere (it strips letter
+ * prefixes and unwraps JSON-wrapped alternatives) — being strict about only
+ * this one is incoherent.
+ */
+function normalizeCorrectAnswer(value: unknown): unknown {
+  return typeof value === "string" ? value.trim().toLowerCase() : value;
+}
+
+/**
+ * Validates an already-parsed (but untyped) JSON value against the
+ * `GeneratedQuestion` shape — used by `generate()`/`reviseQuestion()`, which
+ * compose a question from nothing and so must always produce exactly 5
+ * alternatives and a definite letter key. This is the ONLY gate content is
+ * allowed through before the port resolves — per design doc §7 the AI
+ * response is "nunca se guarda sin validar contra schema". Throws
+ * `TypeError` (with a message describing every violated rule) when the
+ * payload doesn't match.
+ *
+ * `figureCode: null` (a common JSON-schema idiom for "optional field") is
+ * normalized to `undefined` to match the port's TypeScript contract.
+ *
+ * For `extractFromImage()`'s own, deliberately more permissive shape (the
+ * photo may show fewer than 5 alternatives, or no identifiable key), see
+ * `validateExtractedQuestionShape` below — NOT this function.
+ */
+export function validateGeneratedQuestionShape(value: unknown): ValidatedGeneratedQuestion {
+  const errors: string[] = [];
+
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    throw new TypeError("AI response payload must be a JSON object");
+  }
+
+  const payload = value as Record<string, unknown>;
+  const common = validateCommonFields(payload, errors);
+
+  const alternatives = payload.alternatives;
+  if (
+    !Array.isArray(alternatives) ||
+    alternatives.length !== 5 ||
+    !alternatives.every((alt) => typeof alt === "string" && alt.trim().length > 0)
+  ) {
+    errors.push("alternatives must be an array of exactly 5 non-empty strings");
+  }
+
+  const correctAnswer = normalizeCorrectAnswer(payload.correctAnswer);
+  if (typeof correctAnswer !== "string" || !VALID_ANSWER_LETTERS.has(correctAnswer)) {
+    errors.push('correctAnswer must be one of "a", "b", "c", "d", "e"');
+  }
+
+  if (errors.length > 0) {
+    throw new TypeError(`Invalid AI-generated question: ${errors.join("; ")}`);
+  }
+
+  return {
     question: {
-      bodyTypst: payload.bodyTypst as string,
+      bodyTypst: common.bodyTypst,
       alternatives: alternatives as unknown as GeneratedAlternatives,
       correctAnswer: correctAnswer as string,
-      figureCode: typeof rawFigureCode === "string" && rawFigureCode.length > 0 ? rawFigureCode : undefined,
-      suggestedCourseName:
-        typeof rawSuggestedCourse === "string" && rawSuggestedCourse.trim().length > 0
-          ? rawSuggestedCourse
-          : undefined,
-      suggestedTopicName:
-        typeof rawSuggestedTopic === "string" && rawSuggestedTopic.trim().length > 0
-          ? rawSuggestedTopic
-          : undefined,
+      figureCode: common.figureCode,
+      suggestedCourseName: common.suggestedCourseName,
+      suggestedTopicName: common.suggestedTopicName,
     },
     selfReport: {
-      conceptsUsed: conceptsUsed as string[],
-      solutionSteps: solutionSteps as number,
+      conceptsUsed: common.conceptsUsed,
+      solutionSteps: common.solutionSteps,
+    },
+  };
+}
+
+/**
+ * Validates an already-parsed (but untyped) JSON value against the
+ * `ExtractedQuestion` shape — used ONLY by `extractFromImage()`. Everything
+ * except `alternatives`/`correctAnswer` is validated identically to
+ * `validateGeneratedQuestionShape` (via `validateCommonFields`); those two
+ * fields are deliberately more permissive here, because a photo is a source
+ * of TRUTH the model transcribes, not content it composes:
+ *   - `alternatives`: 0..5 non-empty strings — an empty photo section means
+ *     an empty array, never 5 invented options.
+ *   - `correctAnswer`: a letter "a".."e" when visible/inferable, or `null`
+ *     when it is not — never a guessed letter.
+ *
+ * A `correctAnswer` letter that IS present must still be one of "a".."e" —
+ * only `null` is accepted as "not visible"; anything else malformed still
+ * fails validation the same way `validateGeneratedQuestionShape` does.
+ */
+export function validateExtractedQuestionShape(value: unknown): ValidatedExtractedQuestion {
+  const errors: string[] = [];
+
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    throw new TypeError("AI response payload must be a JSON object");
+  }
+
+  const payload = value as Record<string, unknown>;
+  const common = validateCommonFields(payload, errors);
+
+  const rawAlternatives = payload.alternatives;
+  let alternatives: readonly string[] = [];
+  if (
+    !Array.isArray(rawAlternatives) ||
+    rawAlternatives.length > 5 ||
+    !rawAlternatives.every((alt) => typeof alt === "string" && alt.trim().length > 0)
+  ) {
+    errors.push(
+      "alternatives must be an array of at most 5 non-empty strings (empty when the photo shows none)",
+    );
+  } else {
+    alternatives = rawAlternatives as string[];
+  }
+
+  const rawCorrectAnswer = payload.correctAnswer;
+  let correctAnswer: string | null = null;
+  if (rawCorrectAnswer !== null) {
+    const normalized = normalizeCorrectAnswer(rawCorrectAnswer);
+    if (typeof normalized !== "string" || !VALID_ANSWER_LETTERS.has(normalized)) {
+      errors.push(
+        'correctAnswer must be one of "a", "b", "c", "d", "e", or null when not visible in the photo',
+      );
+    } else {
+      correctAnswer = normalized;
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new TypeError(`Invalid AI-extracted question: ${errors.join("; ")}`);
+  }
+
+  return {
+    question: {
+      bodyTypst: common.bodyTypst,
+      alternatives,
+      correctAnswer,
+      figureCode: common.figureCode,
+      suggestedCourseName: common.suggestedCourseName,
+      suggestedTopicName: common.suggestedTopicName,
+    },
+    selfReport: {
+      conceptsUsed: common.conceptsUsed,
+      solutionSteps: common.solutionSteps,
     },
   };
 }

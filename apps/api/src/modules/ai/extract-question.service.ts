@@ -2,9 +2,8 @@ import { randomUUID } from "node:crypto";
 import { Inject, Injectable, Logger, UnprocessableEntityException } from "@nestjs/common";
 import { AiAlternativeCrop, AiExtractedQuestion, AiQuestionCrop } from "@exams-generator/shared";
 import { requireImageMime } from "../assets/image-mime";
-import { validateStructuredContent } from "../bank/domain/validate-structured-content";
 import { AuthTokenPayload } from "../auth/token.service";
-import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import { ExtractedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { TextRegionDetectorPort } from "./domain/ports/text-region-detector.port";
@@ -34,12 +33,22 @@ export interface ExtractQuestionFile {
  * produces a brand-new, unsaved draft the caller may later persist via the existing
  * bank creation endpoints.
  *
- * `correctAnswer` is a LETTER ("a".."e") on the `QuestionGeneratorPort` contract but
- * a 0-based INDEX in bank storage/the PATCH edit contract — this service converts the
- * generator's LETTER output to an INDEX (`correctAnswerLetterToIndex`, mirroring
- * `ReviseQuestionService`/`GenerateQuestionsService`) BEFORE validating or returning
- * it, so neither `validateStructuredContent` nor the HTTP caller ever see the letter
- * representation.
+ * `correctAnswer` is a LETTER ("a".."e", or `null` when the photo doesn't show/imply
+ * a key — see `ExtractedQuestion`) on the `QuestionGeneratorPort` contract but a
+ * 0-based INDEX (or still `null`) in the response/PATCH edit contract — this service
+ * converts the generator's LETTER output to an INDEX (`correctAnswerLetterToIndex`,
+ * mirroring `ReviseQuestionService`/`GenerateQuestionsService`, with its null-safe
+ * overload passing a `null` key straight through) BEFORE returning it.
+ *
+ * Unlike `generate()`/`reviseQuestion()`, this endpoint does NOT run the bank's
+ * `validateStructuredContent` (which requires >=2 alternatives and a non-null
+ * `correctAnswer` — the rule a SAVEABLE question must satisfy). A photo may
+ * legitimately show only a stem, or alternatives with no visible key, and
+ * `extractFromImage` never invents either to force that shape (see
+ * `ExtractedQuestion`'s docstring) — this response is a DRAFT the teacher may
+ * still need to complete by hand before the bank creation endpoints (which DO
+ * run `validateStructuredContent`) will accept it. Only `bodyTypst` is checked
+ * here, since a blank transcription is never useful to return at all.
  *
  * The response also carries finished `data:` URL crops for the question's
  * figures — but their boxes never come from the model: `QuestionGeneratorPort`
@@ -80,20 +89,22 @@ export class ExtractQuestionService {
       mimeType,
     });
 
-    // The generator returns a LETTER; convert to the 0-based INDEX bank
-    // storage/PATCH convention expects BEFORE validating or returning.
-    const extractedWithIndex: GeneratedQuestion = {
+    // The generator returns a LETTER (or null); convert to the 0-based INDEX
+    // response/PATCH convention expects BEFORE returning — the null-safe
+    // overload passes a `null` key straight through unconverted.
+    const extractedWithIndex: ExtractedQuestion = {
       ...extracted,
       correctAnswer: correctAnswerLetterToIndex(extracted.correctAnswer),
     };
 
-    const errors = validateStructuredContent({
-      bodyTypst: extractedWithIndex.bodyTypst,
-      alternatives: extractedWithIndex.alternatives,
-      correctAnswer: extractedWithIndex.correctAnswer,
-    });
-    if (errors.length > 0) {
-      throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
+    // Only bodyTypst is checked here — see this class's docstring for why
+    // `validateStructuredContent`'s alternatives/correctAnswer rules
+    // (>=2 alternatives, non-null key) do NOT apply to an extraction draft.
+    if (!extractedWithIndex.bodyTypst || extractedWithIndex.bodyTypst.trim().length === 0) {
+      throw new UnprocessableEntityException({
+        message: "AI produced invalid content",
+        errors: ["bodyTypst is required"],
+      });
     }
 
     const crops = await this.buildCrops(file.buffer, mimeType);

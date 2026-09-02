@@ -1,6 +1,6 @@
 import { BadRequestException, UnprocessableEntityException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
-import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import { ExtractedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { TextRegionDetectorPort } from "./domain/ports/text-region-detector.port";
@@ -10,7 +10,7 @@ import { fakePng } from "../../test-support/image-fixtures";
 
 const USER = { sub: "user-1", tenantId: "tenant-1" } as unknown as AuthTokenPayload;
 
-const EXTRACTED_QUESTION: GeneratedQuestion = {
+const EXTRACTED_QUESTION: ExtractedQuestion = {
   bodyTypst: "¿Cuánto es $2 + 2$?",
   alternatives: ["3", "4", "5", "6", "7"],
   // LETTER (QuestionGeneratorPort contract) — "b" is index 1.
@@ -146,12 +146,11 @@ describe("ExtractQuestionService.extract", () => {
     expect(result.correctAnswer).toBe("1");
   });
 
-  it("throws UnprocessableEntityException when the AI output fails validateStructuredContent", async () => {
+  it("throws UnprocessableEntityException when the AI output has a blank bodyTypst", async () => {
     const { service, generator } = buildDeps();
     generator.extractFromImage.mockResolvedValue({
-      bodyTypst: "¿Cuánto es $2 + 2$?",
-      // Only 1 alternative — fails validateStructuredContent's MIN_ALTERNATIVES=2 rule.
-      alternatives: ["4"] as unknown as GeneratedQuestion["alternatives"],
+      bodyTypst: "   ",
+      alternatives: ["4"],
       correctAnswer: "a",
     });
     const file = { buffer: fakePng(), mimetype: "image/png" };
