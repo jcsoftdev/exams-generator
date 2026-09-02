@@ -35,6 +35,7 @@ function setup(
       id: string,
       crops: readonly { alternativeIndex: number; file: File }[],
     ) => unknown;
+    navigateImpl?: () => Promise<boolean>;
   } = {},
 ) {
   const uploadImageQuestion = vi.fn(over.uploadImpl ?? (() => of({ id: 'img-q' })));
@@ -57,7 +58,10 @@ function setup(
     over.recropExtractionImpl ??
       (() => of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } })),
   );
-  const navigate = vi.fn();
+  // Real `Router.navigate` always returns a `Promise<boolean>` — defaults
+  // to a resolved one so `navigateToBank`'s `.then()` chain has something
+  // to attach to in every test, not just the ones that care about it.
+  const navigate = vi.fn(over.navigateImpl ?? (() => Promise.resolve(true)));
   const announce = vi.fn();
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
@@ -2464,6 +2468,59 @@ describe('BankNewComponent', () => {
       const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
       expect(instance.canDeactivate()).toBe(true);
       expect(confirmSpy).not.toHaveBeenCalled();
+    });
+
+    it('resets the savedSuccessfully latch (so canDeactivate confirms again) when router.navigate resolves false', async () => {
+      const { fixture, compiled } = setup({
+        navigateImpl: () => Promise.resolve(false),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', '¿Cuánto es 2+2?');
+      set(fixture, 'sAlternatives', '4\n3\n5\n6');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      // The navigation never actually happened — the teacher is still on
+      // this page with all their unsaved work, so the guard must confirm
+      // again, not treat this as a completed save forever.
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('resets the savedSuccessfully latch when router.navigate REJECTS', async () => {
+      const { fixture, compiled } = setup({
+        navigateImpl: () => Promise.reject(new Error('navigation failed')),
+      });
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', '¿Cuánto es 2+2?');
+      set(fixture, 'sAlternatives', '4\n3\n5\n6');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
     });
 
     it('confirms before leaving when a photo was picked and photo-tab fields are filled, even with no structured text', () => {

@@ -605,10 +605,26 @@ export class BankNewComponent {
    * doesn't ask the teacher to confirm leaving a page they just finished
    * saving — the dirty state has to be cleared BEFORE navigating, not after,
    * since the guard runs synchronously as part of the navigation itself.
+   *
+   * `Router.navigate()` can still say no — another guard elsewhere rejects
+   * it, or it resolves `false` for any other reason, or it flat-out
+   * rejects — and the teacher is left on THIS page with every field still
+   * filled. `savedSuccessfully` was a one-way latch: once set, nothing ever
+   * unset it, so the leave guard would trust a save that never actually
+   * left. Both failure shapes reset it back to `false`.
    */
   private navigateToBank(id: string): void {
     this.savedSuccessfully = true;
-    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } });
+    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } }).then(
+      (navigated) => {
+        if (!navigated) {
+          this.savedSuccessfully = false;
+        }
+      },
+      () => {
+        this.savedSuccessfully = false;
+      },
+    );
   }
 
   protected extractWithAi(): void {
