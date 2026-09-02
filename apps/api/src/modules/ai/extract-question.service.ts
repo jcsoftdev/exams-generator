@@ -122,7 +122,7 @@ export class ExtractQuestionService {
       });
     }
 
-    const crops = await this.buildCrops(file.buffer, mimeType);
+    const crops = await this.buildCrops(file.buffer, mimeType, extractedWithIndex.alternatives.length);
 
     const hasCrops = !!crops.figureCrop || (crops.alternativeCrops?.length ?? 0) > 0;
     if (!hasCrops) {
@@ -172,10 +172,18 @@ export class ExtractQuestionService {
    * tesseract, an image sharp cannot decode, a downscale or a crop that
    * throws — is logged and swallowed, and the caller still gets the
    * transcription. The text is the valuable half of this endpoint.
+   *
+   * `alternativesLength` bounds `alternativeCrops`: the page's own OCR marks
+   * a figure band for any `A)`–`E)` marker it finds, regardless of how many
+   * alternatives the model actually transcribed — an out-of-range entry
+   * (`alternativeIndex >= alternativesLength`) is skipped BEFORE it is ever
+   * cropped, never surfaced for the teacher to match against an alternative
+   * that doesn't exist.
    */
   private async buildCrops(
     image: Buffer,
     mimeType: string,
+    alternativesLength: number,
   ): Promise<{ figureCrop?: AiQuestionCrop; alternativeCrops?: readonly AiAlternativeCrop[] }> {
     try {
       // Detection runs on a BOUNDED raster, never on the raw upload. See
@@ -208,6 +216,12 @@ export class ExtractQuestionService {
 
       const alternativeCrops: AiAlternativeCrop[] = [];
       for (const entry of attributed.byAlternative) {
+        // The photo may show a marker band for an alternative slot the
+        // transcription never confirmed — never crop (or return) a figure
+        // the teacher has no matching alternative text for.
+        if (entry.alternativeIndex >= alternativesLength) {
+          continue;
+        }
         alternativeCrops.push({ alternativeIndex: entry.alternativeIndex, ...(await cropAt(entry.box)) });
       }
 

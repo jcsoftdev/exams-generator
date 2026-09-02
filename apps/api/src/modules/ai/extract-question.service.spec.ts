@@ -219,6 +219,22 @@ describe("ExtractQuestionService.extract — crops", () => {
     expect(cropper.crop).toHaveBeenCalledTimes(2);
   });
 
+  it("drops an alternative crop whose index the transcribed alternatives don't cover (alternativeCrops must never be unbounded)", async () => {
+    const { service, generator, cropper, detector } = buildDeps();
+    // The page's own markers attribute figures to alternativeIndex 1 ("b")
+    // and 2 ("c"), but only 2 alternatives were transcribed (indices 0-1) —
+    // the crop for index 2 has no matching alternative and must be dropped.
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, alternatives: ["3", "4"] });
+    cropper.raster.mockResolvedValue(RASTER_WITH_TWO_ALTERNATIVE_FIGURES);
+    detector.detect.mockResolvedValue(ALTERNATIVE_MARKERS);
+
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result.alternativeCrops?.map((crop) => crop.alternativeIndex)).toEqual([1]);
+    // Never even crops the out-of-range figure — not just filters it after.
+    expect(cropper.crop).toHaveBeenCalledTimes(1);
+  });
+
   it("caches the photo and returns an extractionId only when there is something to re-crop", async () => {
     const { service, cropper, cache } = buildDeps();
     const file = { buffer: fakePng(), mimetype: "image/png" };

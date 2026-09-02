@@ -197,7 +197,13 @@ export interface AiQuestionCrop {
   readonly box: NormalizedBoxDto;
 }
 
-/** A crop belonging to one alternative slot. `alternativeIndex` is 0-based. */
+/**
+ * A crop belonging to one alternative slot. `alternativeIndex` is 0-based
+ * and ALWAYS `< AiExtractedQuestion.alternatives.length` — the API drops any
+ * crop whose marker/figure band the transcription didn't confirm an
+ * alternative for, so the client never has to guard against an index with
+ * no matching entry in `alternatives`.
+ */
 export interface AiAlternativeCrop extends AiQuestionCrop {
   readonly alternativeIndex: number;
 }
