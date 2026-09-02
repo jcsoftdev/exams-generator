@@ -90,6 +90,13 @@
       </div>
     </ui-topbar>
     <main class="flex-1 overflow-auto p-4">
+      <!--
+        D3 (audit M12): single aria-live sink for LiveAnnouncerService, moved
+        here from bank-list at merge (integration) so it mounts once app-wide
+        instead of only while bank-list is routed. See LiveRegionComponent's
+        doc.
+      -->
+      <ui-live-region></ui-live-region>
       <router-outlet></router-outlet>
     </main>
   </div>

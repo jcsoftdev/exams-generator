@@ -14,6 +14,7 @@ import { LucideAngularModule } from 'lucide-angular';
 import { SidebarComponent } from '../../ui/sidebar/sidebar.component';
 import { TopbarComponent } from '../../ui/topbar/topbar.component';
 import { TagComponent } from '../../ui/tag/tag.component';
+import { LiveRegionComponent } from '../../ui/live-region/live-region.component';
 import { NavGroup } from '../../ui/ui.types';
 import { AuthService } from '../../core/auth/auth.service';
 import { roleLabel } from '../../core/auth/role-label.util';
@@ -58,7 +59,14 @@ const ADMIN_GROUP: NavGroup = {
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, TopbarComponent, TagComponent, LucideAngularModule],
+  imports: [
+    RouterOutlet,
+    SidebarComponent,
+    TopbarComponent,
+    TagComponent,
+    LiveRegionComponent,
+    LucideAngularModule,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './shell.component.html',
 })

@@ -28,6 +28,7 @@ import { BankQuestion, BankTopicCount } from '../bank.models';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
+import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 
 function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
   return {
@@ -1507,9 +1508,20 @@ describe('BankListComponent', () => {
   });
 
   describe('accessibility (D3)', () => {
-    it('mounts a single live-region for the LiveAnnouncerService, so it can be moved to the shell at merge', () => {
-      const { compiled } = setup();
-      expect(compiled.querySelector('[data-testid="live-region"]')).toBeTruthy();
+    // `ui-live-region` itself moved to the app shell at integration (mounted
+    // once app-wide instead of once per bank-list instance) — this component
+    // no longer renders a sink locally, it only calls the root-provided
+    // `LiveAnnouncerService.announce()`. Assert against the service's own
+    // signals rather than a local DOM node.
+    it('announces "Pregunta guardada." through the root LiveAnnouncerService when the created-question banner shows', () => {
+      setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+
+      const announcer = TestBed.inject(LiveAnnouncerService);
+      expect(announcer.message()).toBe('Pregunta guardada.');
+      expect(announcer.politeness()).toBe('polite');
     });
   });
 });
