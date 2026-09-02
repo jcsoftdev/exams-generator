@@ -25,7 +25,7 @@ const LOTS_DIR = join(__dirname, "..", "db", "data", "lots");
 export function previewLot(lot: string, filters: readonly string[]): { rendered: number; pdf: string } {
   const entries = readLot(lot);
   const questions = entries
-    .filter((entry) => entry.bodyTypst)
+    .filter((entry): entry is LotEntry & { bodyTypst: string } => typeof entry.bodyTypst === "string")
     .filter((entry) => filters.length === 0 || filters.some((needle) => entry.sourceName.includes(needle)))
     .map((entry, index) => ({
       id: `q-${index}`,
