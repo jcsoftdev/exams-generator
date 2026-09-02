@@ -101,6 +101,10 @@ export class BankService {
     formData.set('gradeLevel', payload.gradeLevel);
     formData.set('correctAnswer', payload.correctAnswer);
     formData.set('image', payload.image);
+    // B9 (audit L1): image-only questions otherwise have nothing to show as
+    // a title in the bank list — the API already accepts this optional
+    // field, so pass the picked file's own name through.
+    formData.set('sourceName', payload.image.name);
 
     return this.http.post<{ id: string }>(
       `${environment.apiBaseUrl}/bank/questions/image`,
@@ -173,7 +177,9 @@ export class BankService {
    * (docs/audit-2026-08-26-prod-latency.md §3.2).
    */
   fetchQuestionThumbnail(imageAssetId: string): Observable<Blob> {
-    return this.http.get(`${this.buildImageAssetUrl(imageAssetId)}/thumb`, { responseType: 'blob' });
+    return this.http.get(`${this.buildImageAssetUrl(imageAssetId)}/thumb`, {
+      responseType: 'blob',
+    });
   }
 
   /**
