@@ -16,11 +16,16 @@
       >
         <img [src]="photoUrl()" alt="" class="block w-full h-auto" />
         <div
-          class="absolute cursor-move border-2 border-primary-500 bg-primary-500/10"
+          data-testid="crop-box"
+          tabindex="0"
+          role="group"
+          aria-label="Recorte de la figura, usa las flechas para mover y Shift+flechas para redimensionar"
+          class="absolute cursor-move border-2 border-primary-500 bg-primary-500/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           [style.left.%]="boxFor(slot).x * 100"
           [style.top.%]="boxFor(slot).y * 100"
           [style.width.%]="boxFor(slot).w * 100"
           [style.height.%]="boxFor(slot).h * 100"
+          (keydown)="onKeyDown($event, slot)"
         >
           @for (handle of resizeHandles; track handle) {
             <div
@@ -44,6 +49,10 @@
         class="h-32 w-32 rounded-field border border-n200 object-contain"
       />
     </div>
+
+    <p data-testid="crop-keyboard-hint" class="text-xs text-n500">
+      Arrastra la caja o usa las flechas; Shift+flechas cambia el tamaño; Enter aplica.
+    </p>
 
     <div class="flex gap-2">
       <button
