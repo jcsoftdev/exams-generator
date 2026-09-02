@@ -31,7 +31,7 @@ import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
-import { extractErrorMessage } from '../../ai/extract-error-message';
+import { AI_NOT_CONFIGURED_MESSAGE, extractErrorMessage } from '../../ai/extract-error-message';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 import {
   CropReviewComponent,
@@ -691,13 +691,19 @@ export class BankNewComponent {
         // is not a readable image — and swallowing those left the teacher
         // with "inténtalo de nuevo" for a problem retrying never fixes. The
         // edit flow (`bank-list`) already surfaced them; this one did not.
+        const message = extractErrorMessage(
+          error,
+          'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+        );
         this.setExtractError(
           error.status === 429
             ? 'La IA alcanzó su límite de uso gratuito. Espera unos minutos e inténtalo de nuevo.'
-            : extractErrorMessage(
-                error,
-                'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
-              ),
+            : // B10: extractErrorMessage() only returns the neutral half —
+              // this photo-specific sentence only makes sense here, the ONLY
+              // caller of the shared helper with a photo tab to fall back to.
+              message === AI_NOT_CONFIGURED_MESSAGE
+              ? `${message} Escribe la pregunta o guarda la foto tal cual.`
+              : message,
         );
       },
     });

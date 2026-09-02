@@ -1907,8 +1907,12 @@ describe('BankNewComponent', () => {
 
       const instance = fixture.componentInstance as unknown as { extractError(): string | null };
       const message = instance.extractError();
+      // The shared helper (extract-error-message.ts) only returns the
+      // neutral half — bank-new appends its own photo-specific sentence on
+      // top, since exam-review/bank-list/ai-review-queue (the helper's
+      // other callers) never show a photo tab.
       expect(message).toBe(
-        'La extracción con IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.',
+        'La IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.',
       );
       expect(message?.toLowerCase()).not.toContain('inténtalo de nuevo');
       expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
