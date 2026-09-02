@@ -1875,6 +1875,107 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('notices (extractNoAlternatives/extractReviewNotice/aiTaxonomyHint) get cleared, not stuck', () => {
+    const NOTICE_PRODUCING_EXTRACTION: AiRevisedQuestion = {
+      bodyTypst: 'x',
+      alternatives: [],
+      correctAnswer: '0',
+      suggestedCourseName: 'Biología',
+      suggestedTopicName: 'Fotosíntesis',
+    };
+
+    it('clears all three notices when a new photo is picked on the photo tab', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(NOTICE_PRODUCING_EXTRACTION),
+      });
+      // Only the grade is set (no manual pCourseId/pTopicId) so the AI's
+      // non-matching suggestion actually produces the B5 hint — a manual
+      // pick on the photo tab always wins over the suggestion.
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractNoAlternatives(): boolean;
+        extractReviewNotice(): boolean;
+        aiTaxonomyHint(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extractNoAlternatives()).toBe(true);
+      expect(instance.extractReviewNotice()).toBe(true);
+      expect(instance.aiTaxonomyHint()).not.toBeNull();
+
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      expect(instance.extractNoAlternatives()).toBe(false);
+      expect(instance.extractReviewNotice()).toBe(false);
+      expect(instance.aiTaxonomyHint()).toBeNull();
+    });
+
+    it('clears all three notices at the START of a new extraction on the SAME photo, even if this run then fails', () => {
+      let call = 0;
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => {
+          call++;
+          return call === 1
+            ? of(NOTICE_PRODUCING_EXTRACTION)
+            : throwError(() => new HttpErrorResponse({ status: 500 }));
+        },
+      });
+      // Only the grade is set (no manual pCourseId/pTopicId) so the AI's
+      // non-matching suggestion actually produces the B5 hint — a manual
+      // pick on the photo tab always wins over the suggestion.
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractNoAlternatives(): boolean;
+        extractReviewNotice(): boolean;
+        aiTaxonomyHint(): string | null;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extractNoAlternatives()).toBe(true);
+      expect(instance.extractReviewNotice()).toBe(true);
+      expect(instance.aiTaxonomyHint()).not.toBeNull();
+
+      // Back to the photo tab WITHOUT picking a new photo — re-running the
+      // extraction on the SAME photo, which fails this time. `setImage` is
+      // never called here, so only the reset at the top of `extractWithAi`
+      // itself can be responsible for clearing these.
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      instance.extractWithAi();
+      fixture.detectChanges();
+
+      expect(instance.extractNoAlternatives()).toBe(false);
+      expect(instance.extractReviewNotice()).toBe(false);
+      expect(instance.aiTaxonomyHint()).toBeNull();
+    });
+
+    it('clears extractNoAlternatives once the teacher types alternatives into the textarea', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({ bodyTypst: 'x', alternatives: [], correctAnswer: '0' } satisfies AiRevisedQuestion),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        extractNoAlternatives(): boolean;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+      expect(instance.extractNoAlternatives()).toBe(true);
+
+      set(fixture, 'sAlternatives', 'a\nb');
+
+      expect(instance.extractNoAlternatives()).toBe(false);
+    });
+  });
+
   describe('clave range check: the letter must index an actual alternative', () => {
     it('rejects a clave whose letter index is out of range for the current alternatives, with a dedicated missing-field message', () => {
       const { fixture, compiled } = setup();

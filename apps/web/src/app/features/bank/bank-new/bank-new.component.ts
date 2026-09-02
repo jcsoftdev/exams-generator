@@ -376,6 +376,17 @@ export class BankNewComponent {
       this.sCorrectAnswer();
       this.extractError.set(null);
     });
+
+    // The B1 "no alternatives" notice describes the alternatives textarea
+    // specifically — clears the moment the teacher types something into it.
+    // Kept as its own effect (rather than folded into the one above) since
+    // it must NOT clear on an unrelated enunciado/clave edit alone, only on
+    // the alternatives textarea actually gaining content.
+    effect(() => {
+      if (this.sAlternatives().trim().length > 0) {
+        this.extractNoAlternatives.set(false);
+      }
+    });
   }
 
   protected setTab(t: Tab): void {
@@ -483,6 +494,12 @@ export class BankNewComponent {
     // B8: a stale extraction/recrop error talks about the PREVIOUS photo —
     // pointless (and confusing) to leave it up once that photo is gone.
     this.extractError.set(null);
+    // Same reasoning for the extraction NOTICES — they describe whatever
+    // the PREVIOUS photo's extraction produced (or didn't), which no
+    // longer applies the moment the photo itself changes.
+    this.extractNoAlternatives.set(false);
+    this.extractReviewNotice.set(false);
+    this.aiTaxonomyHint.set(null);
 
     // Crops (and any pending re-crop handle) are always cut FROM the photo
     // that was just replaced — the moment it changes (or is cleared), they
@@ -610,6 +627,15 @@ export class BankNewComponent {
     const capturedImage = image;
     this.extracting.set(true);
     this.extractError.set(null);
+    // A NEW extraction run — on this same photo or a different one — starts
+    // with a clean slate: leftover notices from a PREVIOUS extraction (no
+    // alternatives, the review banner, a taxonomy hint) describe THAT run,
+    // not this one. Without this, a second extraction that then fails would
+    // leave the first extraction's notices on screen, describing a result
+    // that this run never produced.
+    this.extractNoAlternatives.set(false);
+    this.extractReviewNotice.set(false);
+    this.aiTaxonomyHint.set(null);
     this.liveAnnouncer.announce('Leyendo la foto…');
 
     this.aiService.extractQuestionFromImage(image).subscribe({
