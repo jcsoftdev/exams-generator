@@ -20,9 +20,17 @@ export interface QuestionTreeTopicNode {
    * topic's `gradeLevel` (it's DB-backed, but only used server-side to
    * FILTER `findTopics`/`findTopicsByCourseIds` — see
    * `apps/api/.../taxonomy.repository.ts`), so this is derived client-side
-   * from the first loaded question of the topic instead — every question in
-   * a topic shares the same grade by seeding convention. `null` until the
-   * topic's first page has loaded (mirrors `loaded`/`questions`).
+   * from the loaded question(s) of the topic instead — every question in a
+   * topic normally shares the same grade by seeding convention. `null`
+   * until the topic's first page has loaded (mirrors `loaded`/`questions`),
+   * AND `null` if that loaded page turns out NOT grade-uniform (audit #15) —
+   * a wrong/misleading suffix is worse than none. Because it's derived from
+   * only the loaded page, the label can also only ever appear once a topic
+   * has been expanded — the summary the unexpanded tree renders from has no
+   * grade data to draw from at all.
+   *
+   * TODO(api): expose gradeLevel on TopicListItem so this no longer depends
+   * on a topic having been expanded (and loaded) at least once.
    */
   readonly gradeLevel: string | null;
 }
@@ -78,7 +86,7 @@ export function buildQuestionTree(
       questionCount: bucket.total,
       questions: loaded ?? [],
       loaded: loaded !== undefined,
-      gradeLevel: loaded?.[0]?.gradeLevel ?? null,
+      gradeLevel: uniformGradeLevel(loaded),
     });
   }
 
@@ -99,6 +107,22 @@ export function buildQuestionTree(
 
 function normalize(value: string): string {
   return value.trim().toLowerCase();
+}
+
+/**
+ * The shared `gradeLevel` of `questions`, or `null` if it hasn't loaded yet
+ * OR the loaded page turns out to mix grades (audit #15) — seeding
+ * convention says a topic's questions all share one grade, but that's a
+ * convention, not a guarantee this transform should assume blindly.
+ */
+function uniformGradeLevel(questions: readonly BankQuestion[] | undefined): string | null {
+  if (!questions || questions.length === 0) {
+    return null;
+  }
+  const [first, ...rest] = questions;
+  return rest.every((question) => question.gradeLevel === first.gradeLevel)
+    ? first.gradeLevel
+    : null;
 }
 
 /**

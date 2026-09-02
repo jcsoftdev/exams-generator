@@ -175,6 +175,25 @@ describe('buildQuestionTree', () => {
 
     expect(fracciones?.gradeLevel).toBeNull();
   });
+
+  it('leaves gradeLevel null when the loaded page mixes grades — a wrong suffix is worse than none (audit #15)', () => {
+    const loaded = new Map<string, readonly BankQuestion[]>([
+      [
+        't1',
+        [
+          q({ id: 'q1', courseId: 'c1', topicId: 't1', gradeLevel: 'secundaria_5' }),
+          q({ id: 'q2', courseId: 'c1', topicId: 't1', gradeLevel: 'secundaria_4' }),
+        ],
+      ],
+    ]);
+
+    const tree = buildQuestionTree(COUNTS, loaded, COURSE_NAMES, TOPIC_NAMES);
+    const fracciones = tree
+      .find((c) => c.courseId === 'c1')
+      ?.topics.find((t) => t.topicId === 't1');
+
+    expect(fracciones?.gradeLevel).toBeNull();
+  });
 });
 
 describe('filterQuestionTree', () => {

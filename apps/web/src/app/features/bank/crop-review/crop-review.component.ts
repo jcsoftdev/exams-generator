@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, input, output } from '@angular/core';
 import { NormalizedBoxDto } from '@exams-generator/shared';
 
 export type CropTarget =
@@ -56,13 +56,28 @@ export class CropReviewComponent {
   protected moved = false;
 
   /**
-   * Local keyboard-edit state — mirrors `dragTarget`/`dragBox` but for the
-   * keyboard path (Task audit H2): arrow presses accumulate here without
-   * touching the server until Enter, and Escape discards them by clearing
-   * both fields so `boxFor` falls back to the slot's own (unedited) box.
+   * Local keyboard-edit state — mirrors `dragBox` but for the keyboard path
+   * (Task audit H2): arrow presses accumulate here without touching the
+   * server until Enter, and Escape discards them by removing the entry so
+   * `boxFor` falls back to the slot's own (unedited) box.
+   *
+   * Keyed per target (audit crop-review #5) rather than a single pair — a
+   * teacher who arrow-edits one slot and then moves focus to another must
+   * not lose the first slot's in-progress edit; each target keeps its own
+   * pending box until ITS OWN Enter or Escape resolves it.
    */
-  protected keyTarget: CropTarget | null = null;
-  protected keyBox: NormalizedBoxDto | null = null;
+  private readonly pendingKeyEdits = new Map<string, NormalizedBoxDto>();
+
+  constructor() {
+    // A `slots` value from the caller is the server's own truth for every
+    // box — any pending arrow-key edit still around from a PREVIOUS value
+    // (e.g. a recrop that just landed, or the whole list being replaced) is
+    // stale the moment that happens (audit crop-review #3).
+    effect(() => {
+      this.slots();
+      this.pendingKeyEdits.clear();
+    });
+  }
 
   /** Called by the drag handler once the teacher lets go of the rectangle. */
   applyBox(target: CropTarget, box: NormalizedBoxDto): void {
@@ -90,8 +105,9 @@ export class CropReviewComponent {
     if (this.dragBox && this.dragTarget && sameTarget(this.dragTarget, slot.target)) {
       return this.dragBox;
     }
-    if (this.keyBox && this.keyTarget && sameTarget(this.keyTarget, slot.target)) {
-      return this.keyBox;
+    const pending = this.pendingKeyEdits.get(targetKey(slot.target));
+    if (pending) {
+      return pending;
     }
     return slot.box;
   }
@@ -134,8 +150,45 @@ export class CropReviewComponent {
     this.dragStartX = (event.clientX - rect.left) / rect.width;
     this.dragStartY = (event.clientY - rect.top) / rect.height;
     this.moved = false;
+    // Starting a drag supersedes any in-progress arrow-key edit on THIS
+    // target — otherwise, once the drag ends and `dragBox` clears, `boxFor`
+    // would fall through to the now-stale key edit instead of the slot's
+    // real box (audit crop-review #3).
+    this.pendingKeyEdits.delete(targetKey(slot.target));
     // Keep receiving move/up events even if the pointer leaves the container mid-drag.
     container.setPointerCapture?.(event.pointerId);
+  }
+
+  /**
+   * The resize-handle wrapper's hit area for one axis (Task audit
+   * crop-review #1). Starts at the WCAG-minimum 44px, same as before, but
+   * shrinks along the axis the handle sits on — width for a handle on the
+   * left/right edge, height for one on the top/bottom edge — once the box
+   * itself is too small to fit two opposing 44px wrappers AND still leave a
+   * real strip in the middle to grab-and-move: below ~68px of box, a fixed
+   * 44px wrapper would leave less than `MOVE_STRIP_PX` of the box.
+   *
+   * Falls back to the full 44px when the container hasn't been measured yet
+   * (`rect.width`/`rect.height` is 0 — no layout in jsdom unless a test
+   * stubs `getBoundingClientRect`, or before the image has painted) rather
+   * than collapsing every handle to the floor on a zero reading.
+   */
+  protected handleSize(
+    container: HTMLElement,
+    slot: CropSlot,
+    handle: ResizeHandle,
+  ): { readonly width: string; readonly height: string } {
+    const rect = container.getBoundingClientRect();
+    const box = this.boxFor(slot);
+    const width =
+      rect.width > 0 && (handle.includes('w') || handle.includes('e'))
+        ? clampHandleDimension(box.w * rect.width)
+        : HANDLE_MAX_PX;
+    const height =
+      rect.height > 0 && (handle.includes('n') || handle.includes('s'))
+        ? clampHandleDimension(box.h * rect.height)
+        : HANDLE_MAX_PX;
+    return { width: `${width}px`, height: `${height}px` };
   }
 
   /** Percentage offsets for one resize handle, centered on the rectangle's corner/edge. */
@@ -191,10 +244,7 @@ export class CropReviewComponent {
     if (slot.busy) {
       return;
     }
-    const current =
-      this.keyBox && this.keyTarget && sameTarget(this.keyTarget, slot.target)
-        ? this.keyBox
-        : slot.box;
+    const current = this.pendingKeyEdits.get(targetKey(slot.target)) ?? slot.box;
     const step = event.ctrlKey || event.metaKey ? 0.1 : 0.01;
 
     switch (event.key) {
@@ -226,23 +276,30 @@ export class CropReviewComponent {
           event.shiftKey ? clampResize(current, 's', 0, step) : clampMove(current, 0, step),
         );
         return;
-      case 'Enter':
+      case 'Enter': {
         event.preventDefault();
-        this.applyBox(slot.target, current);
-        this.keyTarget = null;
-        this.keyBox = null;
+        // No pending arrow-key edit for THIS target — e.g. Enter pressed
+        // right after focusing the box, with no arrows pressed yet — must be
+        // a no-op: applying `current` (which just falls back to the slot's
+        // own unchanged box) would fire a wasted `recrop` round trip for a
+        // box that never moved (audit crop-review #2).
+        const pending = this.pendingKeyEdits.get(targetKey(slot.target));
+        if (!pending) {
+          return;
+        }
+        this.applyBox(slot.target, pending);
+        this.pendingKeyEdits.delete(targetKey(slot.target));
         return;
+      }
       case 'Escape':
         event.preventDefault();
-        this.keyTarget = null;
-        this.keyBox = null;
+        this.pendingKeyEdits.delete(targetKey(slot.target));
         return;
     }
   }
 
   private setKeyBox(target: CropTarget, box: NormalizedBoxDto): void {
-    this.keyTarget = target;
-    this.keyBox = box;
+    this.pendingKeyEdits.set(targetKey(target), box);
   }
 }
 
@@ -312,4 +369,19 @@ export function sameTarget(a: CropTarget, b: CropTarget): boolean {
     a.kind === 'figure' ||
     a.alternativeIndex === (b as { alternativeIndex: number }).alternativeIndex
   );
+}
+
+/** String key for `CropTarget`, so it can be used in a `Map` (audit crop-review #5). */
+function targetKey(target: CropTarget): string {
+  return target.kind === 'figure' ? 'figure' : `alternative:${target.alternativeIndex}`;
+}
+
+/** WCAG-minimum resize-handle hit area, and the floor/strip constants `handleSize` shrinks between (audit crop-review #1). */
+const HANDLE_MAX_PX = 44;
+const HANDLE_MIN_PX = 8;
+const MOVE_STRIP_PX = 24;
+
+/** `boxDimensionPx` shrunk just enough to leave `MOVE_STRIP_PX` free, never past the [MIN, MAX] hit-area bounds. */
+function clampHandleDimension(boxDimensionPx: number): number {
+  return clamp(boxDimensionPx - MOVE_STRIP_PX, HANDLE_MIN_PX, HANDLE_MAX_PX);
 }
