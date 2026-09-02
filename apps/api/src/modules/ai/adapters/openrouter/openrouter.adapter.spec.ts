@@ -586,6 +586,197 @@ describe("OpenRouterAdapter", () => {
       await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiRateLimitError);
       expect(httpClient).toHaveBeenCalledTimes(1);
     });
+
+    /**
+     * `validateExtractedQuestionShape` had zero tests of its own — every case
+     * below (accept/reject) is exercised through the real adapter/HTTP-client
+     * seam, not by calling the validator directly, so a regression here is
+     * caught exactly where it would actually surface (the retry-then-422
+     * pipeline `runWithRetries` drives).
+     */
+    describe("validateExtractedQuestionShape (accept/reject paths)", () => {
+      function extractedContent(overrides: Record<string, unknown>): string {
+        return JSON.stringify({
+          bodyTypst: "¿Cuánto es $2 + 2$?",
+          alternatives: [],
+          correctAnswer: null,
+          figureCode: null,
+          conceptsUsed: ["suma"],
+          solutionSteps: 1,
+          ...overrides,
+        });
+      }
+
+      it("accepts an empty alternatives array with a null correctAnswer — an empty photo section, never 5 invented options", async () => {
+        const httpClient = jest
+          .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+          .mockReturnValueOnce(jsonResponse(200, chatCompletion({ content: extractedContent({}) })));
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        const result = await adapter.extractFromImage(EXTRACT_INPUT);
+
+        expect(httpClient).toHaveBeenCalledTimes(1);
+        expect(result.alternatives).toEqual([]);
+        expect(result.correctAnswer).toBeNull();
+      });
+
+      it("rejects and retries a correctAnswer that isn't a recognized letter, failing with AiInvalidResponseError after both attempts", async () => {
+        const httpClient = jest
+          .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+          .mockReturnValue(
+            jsonResponse(200, chatCompletion({ content: extractedContent({ correctAnswer: "0" }) })),
+          );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+        expect(httpClient).toHaveBeenCalledTimes(2);
+      });
+
+      it("rejects more than 5 alternatives", async () => {
+        const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValue(
+          jsonResponse(
+            200,
+            chatCompletion({
+              content: extractedContent({ alternatives: ["1", "2", "3", "4", "5", "6"] }),
+            }),
+          ),
+        );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+        expect(httpClient).toHaveBeenCalledTimes(2);
+      });
+
+      it("rejects a blank alternative entry", async () => {
+        const httpClient = jest
+          .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+          .mockReturnValue(
+            jsonResponse(200, chatCompletion({ content: extractedContent({ alternatives: ["1", "  "] }) })),
+          );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+        expect(httpClient).toHaveBeenCalledTimes(2);
+      });
+
+      it('rejects an unrecognized letter like "f"', async () => {
+        const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValue(
+          jsonResponse(
+            200,
+            chatCompletion({
+              content: extractedContent({ alternatives: ["1", "2", "3", "4", "5", "6"], correctAnswer: "f" }),
+            }),
+          ),
+        );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+      });
+
+      it("normalizes an uppercase correctAnswer letter, same as today", async () => {
+        const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValueOnce(
+          jsonResponse(
+            200,
+            chatCompletion({
+              content: extractedContent({ alternatives: ["1", "2", "3"], correctAnswer: "C" }),
+            }),
+          ),
+        );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        const result = await adapter.extractFromImage(EXTRACT_INPUT);
+
+        expect(result.correctAnswer).toBe("c");
+      });
+
+      /**
+       * The actual bug this fix closes: a letter that IS one of a..e but
+       * whose index has no matching entry in `alternatives` must be rejected
+       * (and fed back into the retry), never silently accepted as a key the
+       * photo never showed — see `validateExtractedQuestionShape`'s
+       * docstring. Reverting the out-of-range check makes both of these
+       * fail (the adapter would resolve instead of throwing).
+       */
+      it("MUST: rejects a correctAnswer letter with no matching alternative when alternatives is empty (out-of-range key)", async () => {
+        const httpClient = jest
+          .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+          .mockReturnValue(
+            jsonResponse(200, chatCompletion({ content: extractedContent({ correctAnswer: "c" }) })),
+          );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+        expect(httpClient).toHaveBeenCalledTimes(2);
+      });
+
+      it("MUST: rejects a correctAnswer letter whose index is past the end of a non-empty alternatives array (out-of-range key)", async () => {
+        const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValue(
+          jsonResponse(
+            200,
+            chatCompletion({
+              // "e" -> index 4, but only 2 alternatives were transcribed (indices 0-1).
+              content: extractedContent({ alternatives: ["x", "y"], correctAnswer: "e" }),
+            }),
+          ),
+        );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+        expect(httpClient).toHaveBeenCalledTimes(2);
+      });
+
+      it("accepts a correctAnswer letter whose index IS within the transcribed alternatives", async () => {
+        const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValueOnce(
+          jsonResponse(
+            200,
+            chatCompletion({
+              content: extractedContent({ alternatives: ["x", "y", "z"], correctAnswer: "c" }),
+            }),
+          ),
+        );
+        const adapter = new OpenRouterAdapter({
+          apiKey: "sk-test-key",
+          model: "deepseek/deepseek-r1:free",
+          httpClient,
+        });
+
+        const result = await adapter.extractFromImage(EXTRACT_INPUT);
+
+        expect(result.correctAnswer).toBe("c");
+      });
+    });
   });
 
   describe("streaming (onProgress provided)", () => {

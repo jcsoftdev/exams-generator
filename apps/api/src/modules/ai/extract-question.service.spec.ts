@@ -165,6 +165,20 @@ describe("ExtractQuestionService.extract", () => {
     await expect(service.extract(USER, file)).rejects.toBeInstanceOf(BadRequestException);
     expect(generator.extractFromImage).not.toHaveBeenCalled();
   });
+
+  it("nulls out correctAnswer when its index has no matching alternative, even if the generator adapter didn't catch it (residual guard, mirrors the validator's own out-of-range rule)", async () => {
+    const { service, generator } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["4"], // only index 0 exists
+      correctAnswer: "c", // letter c -> index 2, out of range
+    });
+    const file = { buffer: fakePng(), mimetype: "image/png" };
+
+    const result = await service.extract(USER, file);
+
+    expect(result.correctAnswer).toBeNull();
+  });
 });
 
 describe("ExtractQuestionService.extract — crops", () => {

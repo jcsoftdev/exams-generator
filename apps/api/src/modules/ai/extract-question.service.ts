@@ -94,9 +94,22 @@ export class ExtractQuestionService {
     // The generator returns a LETTER (or null); convert to the 0-based INDEX
     // response/PATCH convention expects BEFORE returning — the null-safe
     // wrapper passes a `null` key straight through unconverted.
+    const correctAnswerIndex = correctAnswerLetterToIndexOrNull(extracted.correctAnswer);
+
+    // Residual guard, mirroring `validateExtractedQuestionShape`'s own
+    // out-of-range rule (the adapter's validator is the primary gate — this
+    // is defense in depth, not a substitute for it): a key pointing past the
+    // alternatives actually transcribed must never reach the response, even
+    // from a `QuestionGeneratorPort` implementation that didn't enforce it
+    // itself.
+    const safeCorrectAnswerIndex =
+      correctAnswerIndex !== null && Number(correctAnswerIndex) >= extracted.alternatives.length
+        ? null
+        : correctAnswerIndex;
+
     const extractedWithIndex: ExtractedQuestion = {
       ...extracted,
-      correctAnswer: correctAnswerLetterToIndexOrNull(extracted.correctAnswer),
+      correctAnswer: safeCorrectAnswerIndex,
     };
 
     // Only bodyTypst is checked here — see this class's docstring for why
