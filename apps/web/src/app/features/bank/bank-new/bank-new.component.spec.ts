@@ -642,6 +642,72 @@ describe('BankNewComponent', () => {
       expect(instance.sTopicId()).toBe('');
     });
 
+    describe('B5: shows the AI suggestion when it does not match the taxonomy', () => {
+      it('shows the raw suggested names when neither course nor topic match the loaded taxonomy', () => {
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () =>
+            of({
+              bodyTypst: 'x',
+              alternatives: ['A', 'B'],
+              correctAnswer: '0',
+              suggestedCourseName: 'Biología',
+              suggestedTopicName: 'Fotosíntesis',
+            } satisfies AiRevisedQuestion),
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        pickImage(fixture, compiled);
+
+        (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+        fixture.detectChanges();
+
+        const hint = compiled.querySelector('[data-testid="ai-taxonomy-hint"]');
+        expect(hint?.textContent).toContain('La IA sugiere: Biología / Fotosíntesis');
+      });
+
+      it('does not show the hint when the AI suggestion matched a course/topic', () => {
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () =>
+            of({
+              bodyTypst: 'x',
+              alternatives: ['A', 'B'],
+              correctAnswer: '0',
+              suggestedCourseName: 'comunicación',
+              suggestedTopicName: 'lectora',
+            } satisfies AiRevisedQuestion),
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        pickImage(fixture, compiled);
+
+        (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+        fixture.detectChanges();
+
+        expect(compiled.querySelector('[data-testid="ai-taxonomy-hint"]')).toBeFalsy();
+      });
+
+      it('hides the hint once the teacher fills in both Curso and Tema manually', () => {
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () =>
+            of({
+              bodyTypst: 'x',
+              alternatives: ['A', 'B'],
+              correctAnswer: '0',
+              suggestedCourseName: 'Biología',
+              suggestedTopicName: 'Fotosíntesis',
+            } satisfies AiRevisedQuestion),
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        pickImage(fixture, compiled);
+        (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+        fixture.detectChanges();
+        expect(compiled.querySelector('[data-testid="ai-taxonomy-hint"]')).toBeTruthy();
+
+        set(fixture, 'sCourseId', 'c1');
+        set(fixture, 'sTopicId', 't1');
+
+        expect(compiled.querySelector('[data-testid="ai-taxonomy-hint"]')).toBeFalsy();
+      });
+    });
+
     it('on error: sets extractError, stays on the photo tab, and resets extracting()', () => {
       const { fixture, compiled } = setup({
         extractQuestionFromImageImpl: () =>

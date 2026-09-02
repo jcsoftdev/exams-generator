@@ -215,6 +215,17 @@ export class BankNewComponent {
   protected readonly extractError = signal<string | null>(null);
   /** True right after an extraction whose `alternatives` came back empty (B1). */
   protected readonly extractNoAlternatives = signal(false);
+  /**
+   * B5: the AI's raw course/topic guess, set whenever at least one of them
+   * didn't match anything in the loaded taxonomy — `resolveStructuredTaxonomy`
+   * used to just drop a non-matching suggestion silently, leaving the
+   * teacher with two blank selects and no idea the AI even tried.
+   */
+  protected readonly aiTaxonomyHint = signal<string | null>(null);
+  /** Visibility is live, not frozen at extraction time — hides the instant BOTH selects end up with a value, whether that came from the suggestion, the photo tab, or the teacher picking manually. */
+  protected readonly showAiTaxonomyHint = computed(
+    () => !!this.aiTaxonomyHint() && (!this.sCourseId() || !this.sTopicId()),
+  );
 
   // Foto
   protected readonly pCourses = signal<Course[]>([]);
@@ -609,7 +620,10 @@ export class BankNewComponent {
    * AI's suggested names against the taxonomy already loaded for this grade
    * (`pCourses`) and, once a course is known, that course's topics. No
    * match at any step just means both stay blank — the human picks them,
-   * same as before this feature existed.
+   * same as before this feature existed — but B5 additionally surfaces the
+   * AI's raw guess (`aiTaxonomyHint`) instead of dropping it silently, since
+   * "Biología" not matching a school's "Ciencia y Tecnología" is exactly the
+   * kind of near-miss a teacher can act on if they can see it.
    */
   private resolveStructuredTaxonomy(params: {
     gradeLevel: string;
@@ -627,6 +641,11 @@ export class BankNewComponent {
         this.pendingStructuredTopicId = topicId;
       }
       this.sGradeLevel.set(gradeLevel);
+      this.aiTaxonomyHint.set(
+        (!!suggestedCourseName && !courseId) || (!!suggestedTopicName && !topicId)
+          ? `La IA sugiere: ${suggestedCourseName ?? '—'} / ${suggestedTopicName ?? '—'}`
+          : null,
+      );
     };
 
     const courseId =

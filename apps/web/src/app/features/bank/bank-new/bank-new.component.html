@@ -169,6 +169,11 @@
           (valueChange)="sTopicId.set($event ?? '')"
         ></ui-select>
       </div>
+      @if (showAiTaxonomyHint()) {
+        <p data-testid="ai-taxonomy-hint" class="text-xs text-tint-text">
+          {{ aiTaxonomyHint() }}
+        </p>
+      }
       <ui-select
         label="Nivel"
         [options]="difficultyOptions"
