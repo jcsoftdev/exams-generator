@@ -268,6 +268,24 @@ describe('FolderTreeComponent', () => {
     expect(host.lastCreated).toEqual({ parentId: 'colegio', name: 'Subcarpeta' });
   });
 
+  // --- REGRESSION fix: menu clicks bubbling into (click) on <cdk-tree-node> --
+  //
+  // Moving (click) up to the node (for the a11y guardian / real keyboard
+  // focus fix above) made the node an ANCESTOR of the "Nueva
+  // subcarpeta"/"Renombrar"/"Eliminar" popup too — a plain click on any of
+  // those buttons started bubbling into folderSelected, so e.g. clicking
+  // "Eliminar" both requested removal AND selected the folder.
+  it('clicking "Nueva subcarpeta" in the menu does not also select the folder', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+    element.querySelector<HTMLButtonElement>('[data-testid="folder-action-create"]')!.click();
+    fixture.detectChanges();
+
+    expect(host.lastSelected).toBeNull();
+  });
+
   // UX fix: creating a subfolder under a COLLAPSED node used to leave the new
   // folder invisible until the teacher separately expanded the parent — the
   // "Nueva subcarpeta" input opened, but nothing showed where it would land.
@@ -446,9 +464,11 @@ describe('FolderTreeComponent', () => {
     fixture.detectChanges();
 
     expect(element.querySelector('[data-testid="folder-name-input"]')).not.toBeNull();
+    // REGRESSION fix: it must not ALSO select the folder — see the block above.
+    expect(host.lastSelected).toBeNull();
   });
 
-  it('clicking "Eliminar" in the menu emits remove', () => {
+  it('clicking "Eliminar" in the menu emits remove, not also select', () => {
     element
       .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
       .click();
@@ -456,6 +476,7 @@ describe('FolderTreeComponent', () => {
     element.querySelector<HTMLButtonElement>('[data-testid="folder-action-remove"]')!.click();
 
     expect(host.lastRemoved).toBe('colegio');
+    expect(host.lastSelected).toBeNull();
   });
 
   it('keeps role="menuitem" on the actual focusable button for each menu action', () => {

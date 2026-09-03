@@ -58,6 +58,11 @@ import {
  * allowlist entry, unlike the guardian's one documented `role="option"`
  * exemption — this is the existing custom-component rule doing its job.
  *
+ * REGRESSION fix: moving `(click)` onto the node also made it an ANCESTOR of
+ * the "Nueva subcarpeta"/"Renombrar"/"Eliminar" `role="menu"` popup, so those
+ * buttons' clicks started bubbling into selection too. `onNodeClick` (not a
+ * bare `(click)="onSelect(node)"`) guards against that — see its own doc.
+ *
  * Hierarchy is drawn with indentation plus one faint vertical guide per level —
  * no nested cards (design doc, "Dirección visual").
  */
@@ -112,7 +117,7 @@ import {
         (expandedChange)="onExpandedChange(node)"
         [attr.aria-selected]="node.id === selectedId() ? 'true' : 'false'"
         class="block"
-        (click)="onSelect(node)"
+        (click)="onNodeClick($event, node)"
         (keydown)="onRowKeydown($event, node)"
       >
         <div
@@ -360,6 +365,29 @@ export class FolderTreeComponent {
 
   protected onSelect(node: FolderTreeNode): void {
     this.folderSelected.emit(node.id);
+  }
+
+  /**
+   * Bound to `<cdk-tree-node>`'s `(click)` (see the class doc's "CRITICAL
+   * fix"). REGRESSION fix: because the node is now an ANCESTOR of the
+   * `role="menu"` popup ("Nueva subcarpeta"/"Renombrar"/"Eliminar"), a click
+   * on any of those menuitem buttons bubbles up through the node too — with
+   * no guard, that meant clicking "Eliminar" both requested removal AND
+   * selected the folder (bank-list then fetched that folder's questions
+   * right before/after removing it). The toggle chevron and the "…" menu
+   * trigger already `stopPropagation()` on their own `(click)`, so they never
+   * reach here; the three menuitem buttons never did. Rather than add
+   * `stopPropagation()` to three more places (easy to miss a fourth one
+   * later), this checks WHERE the click landed: any click whose target is
+   * inside a `button`, an `input`, or a `[role="menu"]` container is not a
+   * click on the row and must not select. A plain click on the row div (or
+   * its name/count text) still selects.
+   */
+  protected onNodeClick(event: MouseEvent, node: FolderTreeNode): void {
+    if ((event.target as HTMLElement).closest('button, input, [role="menu"]')) {
+      return;
+    }
+    this.onSelect(node);
   }
 
   /**
