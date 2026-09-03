@@ -50,6 +50,7 @@ function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
     sourceName: o.sourceName ?? null,
     figureCode: o.figureCode ?? null,
     aiGenerated: o.aiGenerated ?? false,
+    folderId: o.folderId ?? null,
   };
 }
 

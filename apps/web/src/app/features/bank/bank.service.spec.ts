@@ -241,6 +241,7 @@ describe('BankService', () => {
         sourceName: null,
         aiGenerated: false,
         usedInExamCount: 0,
+        folderId: null,
       };
       let result: BankQuestion | undefined;
 

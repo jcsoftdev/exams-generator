@@ -19,6 +19,7 @@ function question(overrides: Partial<BankQuestion>): BankQuestion {
     sourceName: null,
     aiGenerated: false,
     usedInExamCount: 0,
+    folderId: null,
     ...overrides,
   };
 }

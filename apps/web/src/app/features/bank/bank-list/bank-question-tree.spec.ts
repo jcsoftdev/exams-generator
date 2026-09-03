@@ -25,6 +25,7 @@ function q(
     figureCode: o.figureCode ?? null,
     aiGenerated: o.aiGenerated ?? false,
     usedInExamCount: o.usedInExamCount ?? 0,
+    folderId: o.folderId ?? null,
   };
 }
 
