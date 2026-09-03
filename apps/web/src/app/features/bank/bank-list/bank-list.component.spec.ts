@@ -2005,4 +2005,186 @@ describe('BankListComponent', () => {
       expect(TestBed.inject(LiveAnnouncerService).message()).toBe('Carpeta quitada.');
     });
   });
+
+  describe('question folder picker', () => {
+    /** Opens the trigger from `[data-testid="bank-question"]`'s detail panel — the picker only exists once a question is selected. */
+    function openPicker(compiled: HTMLElement, fixture: { detectChanges(): void }): void {
+      (
+        compiled.querySelector('[data-testid="question-folder-edit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+    }
+
+    function pickFolder(
+      compiled: HTMLElement,
+      fixture: { detectChanges(): void },
+      folderId: string,
+    ): void {
+      (
+        compiled.querySelector(
+          `[data-testid="question-folder-picker"] [data-folder-id="${folderId}"]`,
+        ) as HTMLElement
+      ).click();
+      fixture.detectChanges();
+    }
+
+    function saveFolder(compiled: HTMLElement, fixture: { detectChanges(): void }): void {
+      (
+        compiled.querySelector('[data-testid="question-folder-save"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+    }
+
+    it('shows the current folder name in the detail panel', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: 'trigo' })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="question-folder"]')!.textContent).toContain(
+        'Trigonometría',
+      );
+    });
+
+    it('shows "Sin carpeta" for an unfiled own question', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: null })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="question-folder"]')!.textContent).toContain(
+        'Sin carpeta',
+      );
+    });
+
+    it('hides the picker entirely for a CENTRAL question', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: null, folderId: null })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="question-folder-edit"]')).toBeNull();
+    });
+
+    it('opens the picker in `pick` mode — the tree renders with no folder actions', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: null })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+      openPicker(compiled, fixture);
+
+      const picker = compiled.querySelector('[data-testid="question-folder-picker"]');
+      expect(picker).toBeTruthy();
+      expect(picker!.querySelector('ui-folder-tree')).toBeTruthy();
+      expect(picker!.querySelector('[data-testid="folder-menu"]')).toBeNull();
+    });
+
+    it('PATCHes the question with the picked folder', () => {
+      const { compiled, fixture, updateQuestion } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: null })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+      openPicker(compiled, fixture);
+      pickFolder(compiled, fixture, 'colegio');
+      saveFolder(compiled, fixture);
+
+      expect(updateQuestion).toHaveBeenCalledWith('q1', { folderId: 'colegio' });
+    });
+
+    it('sends folderId: null when the picker\'s virtual "Sin carpeta" node is picked', () => {
+      const { compiled, fixture, updateQuestion } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: 'trigo' })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+      openPicker(compiled, fixture);
+      pickFolder(compiled, fixture, UNFILED_FOLDER_ID);
+      saveFolder(compiled, fixture);
+
+      expect(updateQuestion).toHaveBeenCalledWith('q1', { folderId: null });
+    });
+
+    it('closes the popover and re-lists the folder + refreshes the tree after saving', () => {
+      const { compiled, fixture, listQuestionsPaged, getFolders } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: null })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+      listQuestionsPaged.mockClear();
+      getFolders.mockClear();
+
+      openPicker(compiled, fixture);
+      pickFolder(compiled, fixture, 'colegio');
+      saveFolder(compiled, fixture);
+
+      expect(compiled.querySelector('[data-testid="question-folder-picker"]')).toBeNull();
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+      expect(getFolders).toHaveBeenCalledTimes(1);
+    });
+
+    it('surfaces the server error and keeps the previous folder value', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: 'trigo' })),
+        updateQuestionImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 404,
+                error: {
+                  statusCode: 404,
+                  code: 'folder_not_found',
+                  message: 'La carpeta no existe.',
+                },
+              }),
+          ),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+      openPicker(compiled, fixture);
+      pickFolder(compiled, fixture, 'colegio');
+      saveFolder(compiled, fixture);
+
+      expect(compiled.textContent).toContain('La carpeta no existe.');
+      expect(compiled.querySelector('[data-testid="question-folder"]')!.textContent).toContain(
+        'Trigonometría',
+      );
+    });
+
+    it('closes the popover on Escape and returns focus to the trigger', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', folderId: null })),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      const trigger = compiled.querySelector(
+        '[data-testid="question-folder-edit"] button',
+      ) as HTMLButtonElement;
+      trigger.click();
+      fixture.detectChanges();
+      expect(trigger.getAttribute('aria-expanded')).toBe('true');
+
+      compiled
+        .querySelector('[data-testid="question-folder-picker"]')!
+        .dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="question-folder-picker"]')).toBeNull();
+      expect(document.activeElement).toBe(trigger);
+    });
+  });
 });
