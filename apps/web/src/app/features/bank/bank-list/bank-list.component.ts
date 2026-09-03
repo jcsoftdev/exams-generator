@@ -31,6 +31,7 @@ import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.ser
 import { FolderTreeComponent } from '../../../ui/folder-tree/folder-tree.component';
 import {
   FolderCreateEvent,
+  FolderInlineError,
   FolderRenameEvent,
   FolderTreeNode,
 } from '../../../ui/folder-tree/folder-tree.types';
@@ -72,7 +73,13 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
   [Difficulty.Hard]: 'hard',
 };
 
-const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.';
+/**
+ * Shown when the TAXONOMY fetch fails — the only thing left gating the whole
+ * screen. It used to say "no se pudieron cargar las preguntas", which after the
+ * folder redesign named the one thing this branch is never about: the question
+ * list has its own inline error, and so does the folder tree.
+ */
+const ERROR_MESSAGE = 'No se pudo cargar el banco. Inténtalo de nuevo.';
 const FOLDER_QUESTIONS_ERROR_MESSAGE = 'No se pudieron cargar las preguntas de esta carpeta.';
 
 /**
@@ -283,8 +290,14 @@ export class BankListComponent {
   protected readonly pendingFolderDelete = signal<FolderTreeNode | null>(null);
   /** Post-delete banner text, cleared by its own dismiss button. */
   protected readonly folderRemovedNotice = signal<string | null>(null);
-  /** Inline error for a rejected create/rename/remove (`folder_name_taken`, `folder_name_invalid`, …). */
+  /** Screen-level message for a rejected write that names no input (404, 422 depth, network). */
   protected readonly folderError = signal<string | null>(null);
+  /**
+   * A rejected write that IS about the name the teacher typed — handed back to
+   * `ui-folder-tree` so it re-opens that editor and marks the input, instead of
+   * a paragraph above six folders that never says which one.
+   */
+  protected readonly folderInlineError = signal<FolderInlineError | null>(null);
 
   // --- the selected folder's questions -------------------------------------
   /** The pages loaded so far for the CURRENT selection, flat. A folder is one list; there is no cache per branch to invalidate. */
@@ -299,6 +312,8 @@ export class BankListComponent {
    * then re-request the page just loaded, forever.
    */
   private readonly folderPage = signal(0);
+  /** Monotonic id of the newest question request — see `loadQuestionsForFolder`; anything older is a stale answer. */
+  private questionRequestId = 0;
   protected readonly folderQuestionsLoading = signal(false);
   /** Last page request failed — renders an inline retry under the tree, never blanking the tree itself. */
   protected readonly folderQuestionsFailed = signal(false);
@@ -623,22 +638,28 @@ export class BankListComponent {
    */
   protected onFolderSelect(folderId: string): void {
     this.selectedFolderId.set(folderId);
-    this.folderError.set(null);
+    this.clearFolderErrors();
     this.loadQuestionsForFolder(folderId, 1);
   }
 
   protected onFolderCreate(event: FolderCreateEvent): void {
-    this.folderError.set(null);
+    this.clearFolderErrors();
     this.foldersStore.create(event.parentId, event.name).subscribe({
-      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error),
+      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, event.parentId),
     });
   }
 
   protected onFolderRename(event: FolderRenameEvent): void {
-    this.folderError.set(null);
+    this.clearFolderErrors();
     this.foldersStore.rename(event.id, event.name).subscribe({
-      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error),
+      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, event.id),
     });
+  }
+
+  /** Every write starts from a clean slate — that is also what "the teacher edited again" means here. */
+  private clearFolderErrors(): void {
+    this.folderError.set(null);
+    this.folderInlineError.set(null);
   }
 
   /** Removal is ALWAYS confirmed — the tree only asks; this opens the modal. */
@@ -658,20 +679,28 @@ export class BankListComponent {
     this.pendingFolderDelete.set(null);
     this.foldersStore.remove(folder.id).subscribe({
       next: (result) => {
-        if (this.selectedFolderId() === folder.id) {
+        // A removal takes the whole SUBTREE with it, so the open folder can
+        // disappear WITHOUT being the one addressed — comparing ids against
+        // `folder.id` misses every descendant and leaves the list showing rows
+        // of a folder that no longer exists. Ask the tree instead.
+        const selected = this.selectedFolderId();
+        if (selected !== null && findTreeNode(this.folderTree(), selected) === null) {
           this.selectedFolderId.set(null);
           this.clearFolderQuestions();
         }
         // The banner exists to answer "where did my questions go?". With
         // nothing unfiled there is no question to answer, so no banner.
-        this.folderRemovedNotice.set(
+        const notice =
           result.unfiledQuestions > 0
             ? `Carpeta quitada. ${result.unfiledQuestions} preguntas quedaron en Sin carpeta.`
-            : null,
-        );
-        this.liveAnnouncer.announce('Carpeta quitada.');
+            : null;
+        this.folderRemovedNotice.set(notice);
+        // The SAME words, not a shorter summary: the second sentence is where
+        // the questions went, and a screen-reader user has no banner to read it
+        // off later.
+        this.liveAnnouncer.announce(notice ?? 'Carpeta quitada.');
       },
-      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error),
+      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, folder.id),
     });
   }
 
@@ -682,14 +711,25 @@ export class BankListComponent {
   }
 
   /**
-   * A 404 on a folder write means another tab already deleted it, so no
-   * message about the name would be actionable — say the tree was refreshed
-   * instead. It does NOT reload here: `BankFoldersStore.rollback` already
-   * restores the snapshot AND re-loads on every failed write, and a second
-   * `load()` would only be a duplicate request racing the first. Everything
-   * else gets the server's own Spanish message inline next to the input.
+   * Where a rejected write is SHOWN depends on what it is about.
+   *
+   * `folder_name_taken` is about the name the teacher just typed, so it goes
+   * back down to that input (`folderInlineError`) — the tree re-opens the
+   * editor with her text intact and marks it invalid. Anything else names no
+   * input: a 404 means another tab already deleted the folder (no message
+   * about the name would be actionable — say the tree was refreshed, and do
+   * NOT reload, because `BankFoldersStore.rollback` already restores the
+   * snapshot AND re-loads on every failed write); everything else gets the
+   * server's own Spanish message as a paragraph above the tree.
    */
-  private handleFolderWriteError(error: HttpErrorResponse): void {
+  private handleFolderWriteError(error: HttpErrorResponse, nodeId: string | null): void {
+    if (folderErrorCode(error) === 'folder_name_taken' && nodeId !== null) {
+      this.folderInlineError.set({
+        id: nodeId,
+        message: extractErrorMessage(error, 'Ya existe una carpeta con ese nombre.'),
+      });
+      return;
+    }
     if (error.status === 404) {
       this.folderError.set('Esa carpeta ya no existe. Actualizamos el árbol.');
       return;
@@ -711,26 +751,39 @@ export class BankListComponent {
    * list (a new selection, or Buscar under new filters — the loaded rows came
    * from a query that no longer applies); any later page appends.
    *
-   * `onSettled`, when given, fires exactly once — synchronously if a request
-   * is already in flight (the state, whatever it is, is not this call's to
-   * settle), or once this call's request finishes, success or error — so a
-   * caller can know when the rendered rows reflect it (audit #13).
+   * EVERY call fires its request; only the NEWEST one is allowed to write to
+   * the screen. A global "is something in flight?" guard was tried first and
+   * is worse than the race it patched: clicking folder B while A was still
+   * travelling silently dropped B's request, so A's rows rendered under B's
+   * highlighted row and nothing short of re-clicking recovered. Sequencing the
+   * responses instead means both folders are asked for, and whichever the
+   * teacher is actually looking at wins regardless of which answer the network
+   * hands back first.
+   *
+   * `onSettled`, when given, fires exactly once — once this call's request
+   * finishes, success, error, or superseded — so a caller can know when the
+   * rendered rows reflect it (audit #13).
    */
   private loadQuestionsForFolder(folderId: string, page: number, onSettled?: () => void): void {
-    if (this.folderQuestionsLoading()) {
-      onSettled?.();
-      return;
-    }
+    const requestId = ++this.questionRequestId;
     if (page === 1) {
       this.clearFolderQuestions();
     }
     this.folderQuestionsLoading.set(true);
     this.folderQuestionsFailed.set(false);
 
+    /** A superseded request must not touch a single signal — not even the spinner the newer one owns. */
+    const isStale = (): boolean =>
+      requestId !== this.questionRequestId || folderId !== this.selectedFolderId();
+
     this.bankService
       .listQuestionsPaged({ ...this.currentFilters(), folderId }, page, FOLDER_PAGE_SIZE)
       .subscribe({
         next: (paged) => {
+          if (isStale()) {
+            onSettled?.();
+            return;
+          }
           this.folderQuestions.update((current) =>
             page === 1 ? [...paged.items] : [...current, ...paged.items],
           );
@@ -742,6 +795,10 @@ export class BankListComponent {
           onSettled?.();
         },
         error: () => {
+          if (isStale()) {
+            onSettled?.();
+            return;
+          }
           this.folderQuestionsLoading.set(false);
           this.folderQuestionsFailed.set(true);
           onSettled?.();
@@ -749,16 +806,13 @@ export class BankListComponent {
       });
   }
 
-  /** "Ver más": pulls the next page of the open folder. */
-  protected loadMoreFolderQuestions(): void {
-    const folderId = this.selectedFolderId();
-    if (folderId !== null) {
-      this.loadQuestionsForFolder(folderId, this.folderPage() + 1);
-    }
-  }
-
-  /** Inline retry for the failed page — never reloads the folder tree. */
-  protected retryFolderQuestions(): void {
+  /**
+   * Both "Ver más" and the inline retry ask for the same thing: the page after
+   * the last one that LANDED. `folderPage` only advances on a successful
+   * response, so after a failure `folderPage() + 1` is the page that failed —
+   * a retry, not a skip — and after a success it is the next one.
+   */
+  protected loadNextFolderPage(): void {
     const folderId = this.selectedFolderId();
     if (folderId !== null) {
       this.loadQuestionsForFolder(folderId, this.folderPage() + 1);
@@ -1268,6 +1322,20 @@ export class BankListComponent {
  */
 function normalizeCorrectAnswer(value: string): string {
   return /^[a-e]$/i.test(value) ? String(value.toLowerCase().charCodeAt(0) - 97) : value;
+}
+
+/**
+ * The STABLE `code` of a folder error body (`{ statusCode, code, message }` —
+ * see `bank-folder.dto.ts`). Discriminating on the code rather than on the
+ * status is what lets 409-the-name-is-taken behave differently from any other
+ * rejection without string-matching a Spanish message.
+ */
+function folderErrorCode(error: HttpErrorResponse): string | null {
+  const body = error.error as unknown;
+  if (body && typeof body === 'object' && typeof (body as { code?: unknown }).code === 'string') {
+    return (body as { code: string }).code;
+  }
+  return null;
 }
 
 /** Depth-first lookup over the RENDER tree — the modal needs the node's name and cumulative count. */

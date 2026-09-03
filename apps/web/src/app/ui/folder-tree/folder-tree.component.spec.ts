@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { LucideAngularModule, ChevronDown, ChevronRight, MoreHorizontal } from 'lucide-angular';
 import { FolderTreeComponent } from './folder-tree.component';
-import { FolderTreeNode } from './folder-tree.types';
+import { FolderInlineError, FolderTreeNode } from './folder-tree.types';
 
 function node(partial: Partial<FolderTreeNode> & { id: string; name: string }): FolderTreeNode {
   return {
@@ -44,6 +44,7 @@ const TREE: FolderTreeNode[] = [
       [nodes]="nodes()"
       [selectedId]="selectedId()"
       [mode]="mode()"
+      [inlineError]="inlineError()"
       (select)="lastSelected = $event"
       (toggle)="lastToggled = $event"
       (create)="lastCreated = $event"
@@ -56,6 +57,7 @@ class HostComponent {
   readonly nodes = signal<readonly FolderTreeNode[]>(TREE);
   readonly selectedId = signal<string | null>(null);
   readonly mode = signal<'browse' | 'pick'>('browse');
+  readonly inlineError = signal<FolderInlineError | null>(null);
   lastSelected: string | null = null;
   lastCreated: { parentId: string | null; name: string } | null = null;
   lastRenamed: { id: string; name: string } | null = null;
@@ -361,5 +363,106 @@ describe('FolderTreeComponent', () => {
 
     expect(host.lastSelected).toBeNull();
     expect(element.querySelector('[role="menu"]')).not.toBeNull();
+  });
+
+  // --- inline write errors (Task 10, fix round 1) -----------------------
+  //
+  // A 409 `folder_name_taken` has to land ON the name the teacher typed —
+  // a paragraph above the tree makes her hunt for which of six folders it
+  // is about, and closing the editor throws away the text she has to fix.
+
+  function renameTo(id: string, name: string): void {
+    rowFor(id).dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    fixture.detectChanges();
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-name-input"] input',
+    )!;
+    input.value = name;
+    input.dispatchEvent(new Event('input'));
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    fixture.detectChanges();
+  }
+
+  it('keeps the rejected rename open on its own node, marked invalid, with the typed name intact', () => {
+    renameTo('colegio', 'Sin carpeta');
+    host.inlineError.set({ id: 'colegio', message: 'Ya existe una carpeta con ese nombre' });
+    fixture.detectChanges();
+
+    const wrapper = element.querySelector('[data-testid="folder-name-input"]')!;
+    const input = wrapper.querySelector<HTMLInputElement>('input')!;
+    expect(input.value).toBe('Sin carpeta');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
+
+    const message = wrapper.querySelector('[data-testid="input-error"]')!;
+    expect(message.textContent).toContain('Ya existe una carpeta con ese nombre');
+    // The message is what `aria-describedby` points at, not merely adjacent text.
+    expect(input.getAttribute('aria-describedby')).toBe(message.getAttribute('id'));
+  });
+
+  it('closes the editor once the next commit is accepted', () => {
+    renameTo('colegio', 'Sin carpeta');
+    host.inlineError.set({ id: 'colegio', message: 'Ya existe una carpeta con ese nombre' });
+    fixture.detectChanges();
+
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-name-input"] input',
+    )!;
+    input.value = 'Colegio corregido';
+    input.dispatchEvent(new Event('input'));
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    host.inlineError.set(null);
+    fixture.detectChanges();
+
+    expect(host.lastRenamed).toEqual({ id: 'colegio', name: 'Colegio corregido' });
+    expect(element.querySelector('[data-testid="folder-name-input"]')).toBeNull();
+  });
+
+  it('Escape abandons the edit even while the inline error is showing', () => {
+    renameTo('colegio', 'Sin carpeta');
+    host.inlineError.set({ id: 'colegio', message: 'Ya existe una carpeta con ese nombre' });
+    fixture.detectChanges();
+
+    element
+      .querySelector<HTMLInputElement>('[data-testid="folder-name-input"] input')!
+      .dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(element.querySelector('[data-testid="folder-name-input"]')).toBeNull();
+  });
+
+  it('keeps a rejected NEW subfolder open under its parent, with its own message', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+    element.querySelector<HTMLButtonElement>('[data-testid="folder-action-create"]')!.click();
+    fixture.detectChanges();
+
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-new-input"] input',
+    )!;
+    input.value = 'Matemática';
+    input.dispatchEvent(new Event('input'));
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    host.inlineError.set({ id: 'colegio', message: 'Ya existe una carpeta con ese nombre' });
+    fixture.detectChanges();
+
+    const wrapper = element.querySelector('[data-testid="folder-new-input"]')!;
+    expect(wrapper.querySelector<HTMLInputElement>('input')!.value).toBe('Matemática');
+    expect(wrapper.querySelector('[data-testid="input-error"]')!.textContent).toContain(
+      'Ya existe una carpeta con ese nombre',
+    );
+    // The rename editor of that same node must NOT open — the two editors
+    // share a node id, only the one that was submitted comes back.
+    expect(element.querySelector('[data-testid="folder-name-input"]')).toBeNull();
+  });
+
+  it('ignores an inline error aimed at a node this tree was not editing', () => {
+    renameTo('colegio', 'Sin carpeta');
+    host.inlineError.set({ id: 'mate', message: 'Ya existe una carpeta con ese nombre' });
+    fixture.detectChanges();
+
+    expect(element.querySelector('[data-testid="folder-name-input"]')).toBeNull();
+    expect(element.querySelector('[data-testid="input-error"]')).toBeNull();
   });
 });

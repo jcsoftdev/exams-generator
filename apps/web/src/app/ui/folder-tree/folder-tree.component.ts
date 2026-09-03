@@ -13,6 +13,7 @@ import { LucideAngularModule } from 'lucide-angular';
 import { InputComponent } from '../input/input.component';
 import {
   FolderCreateEvent,
+  FolderInlineError,
   FolderRenameEvent,
   FolderTreeMode,
   FolderTreeNode,
@@ -82,7 +83,7 @@ import {
             <span class="w-5 shrink-0" aria-hidden="true"></span>
           }
 
-          @if (editingId() === node.id) {
+          @if (isRenaming(node)) {
             <!--
               Stops ANY keydown from reaching the row's onRowKeydown while
               editing — Critical fix (review round 1): Delete/F2 typed here
@@ -95,6 +96,7 @@ import {
             >
               <ui-input
                 [value]="draftName()"
+                [error]="rejectedMessage(node, 'rename')"
                 (valueChange)="draftName.set($event)"
                 (keydown.enter)="commitRename(node)"
                 (keydown.escape)="cancelEditing()"
@@ -105,7 +107,7 @@ import {
             <span class="shrink-0 text-xs text-n500">{{ node.totalCount }}</span>
           }
 
-          @if (mode() === 'browse' && node.editable && editingId() !== node.id) {
+          @if (mode() === 'browse' && node.editable && !isRenaming(node)) {
             <button
               type="button"
               data-testid="folder-menu"
@@ -155,7 +157,7 @@ import {
           </div>
         }
 
-        @if (creatingUnder() === node.id) {
+        @if (isCreatingUnder(node)) {
           <div
             data-testid="folder-new-input"
             class="ml-8 py-1"
@@ -164,6 +166,7 @@ import {
             <ui-input
               placeholder="Nombre de la carpeta"
               [value]="draftName()"
+              [error]="rejectedMessage(node, 'create')"
               (valueChange)="draftName.set($event)"
               (keydown.enter)="commitCreate(node)"
               (keydown.escape)="cancelEditing()"
@@ -183,6 +186,13 @@ export class FolderTreeComponent {
   readonly nodes = input<readonly FolderTreeNode[]>([]);
   readonly selectedId = input<string | null>(null);
   readonly mode = input<FolderTreeMode>('browse');
+  /**
+   * A write the OWNER rejected, so the message can land on the input that
+   * caused it. See `FolderInlineError`. The tree stays presentational: it does
+   * not decide what is wrong, it only puts the owner's verdict back where the
+   * teacher was typing.
+   */
+  readonly inlineError = input<FolderInlineError | null>(null);
 
   readonly select = output<string>();
   readonly toggle = output<string>();
@@ -195,6 +205,15 @@ export class FolderTreeComponent {
   protected readonly creatingUnder = signal<string | null>(null);
   protected readonly menuFor = signal<string | null>(null);
   protected readonly draftName = signal('');
+  /**
+   * The editor most recently SUBMITTED — which node, and which of its two
+   * editors. Kept because a commit closes the editor optimistically (the write
+   * usually succeeds, and leaving the input open would read as "nothing
+   * happened"), so when an `inlineError` comes back this is the only record of
+   * WHICH editor to re-open. Cleared by Escape and by starting a fresh edit,
+   * which is what stops a stale error from re-opening an abandoned editor.
+   */
+  private readonly submitted = signal<{ id: string; kind: 'rename' | 'create' } | null>(null);
 
   /** Actions are gone in `pick` mode and on the virtual "Sin carpeta" node. */
   protected readonly actionsEnabled = computed(() => this.mode() === 'browse');
@@ -284,7 +303,7 @@ export class FolderTreeComponent {
     if (event.target !== event.currentTarget) {
       return;
     }
-    if (this.editingId() === node.id || this.creatingUnder() === node.id) {
+    if (this.isRenaming(node) || this.isCreatingUnder(node)) {
       return;
     }
     if (event.key === 'Enter' || event.key === ' ') {
@@ -327,9 +346,36 @@ export class FolderTreeComponent {
       ?.focus();
   }
 
+  /** True while `node`'s name input should render — open by the teacher, or re-opened by a rejected commit. */
+  protected isRenaming(node: FolderTreeNode): boolean {
+    return this.editingId() === node.id || this.wasRejected(node.id, 'rename');
+  }
+
+  protected isCreatingUnder(node: FolderTreeNode): boolean {
+    return this.creatingUnder() === node.id || this.wasRejected(node.id, 'create');
+  }
+
+  /** The message to show under `node`'s editor, or `undefined` — `ui-input`'s `error` already wires `aria-invalid`/`aria-describedby`. */
+  protected rejectedMessage(node: FolderTreeNode, kind: 'rename' | 'create'): string | undefined {
+    return this.wasRejected(node.id, kind) ? this.inlineError()!.message : undefined;
+  }
+
+  /**
+   * Both halves must agree: the OWNER points at a node, and this tree
+   * remembers submitting that node's editor of this kind. Without the second
+   * half an error would open BOTH editors of the node (they share an id), and
+   * an error left over from another screen state would open an editor the
+   * teacher never asked for.
+   */
+  private wasRejected(id: string, kind: 'rename' | 'create'): boolean {
+    const submitted = this.submitted();
+    return this.inlineError()?.id === id && submitted?.id === id && submitted.kind === kind;
+  }
+
   protected startEditing(node: FolderTreeNode): void {
     this.menuFor.set(null);
     this.creatingUnder.set(null);
+    this.submitted.set(null);
     this.draftName.set(node.name);
     this.editingId.set(node.id);
   }
@@ -337,6 +383,7 @@ export class FolderTreeComponent {
   protected startCreating(node: FolderTreeNode): void {
     this.menuFor.set(null);
     this.editingId.set(null);
+    this.submitted.set(null);
     this.draftName.set('');
     this.creatingUnder.set(node.id);
   }
@@ -344,24 +391,36 @@ export class FolderTreeComponent {
   protected cancelEditing(): void {
     this.editingId.set(null);
     this.creatingUnder.set(null);
+    this.submitted.set(null);
     this.draftName.set('');
   }
 
-  /** A blank name is a cancel, not a request — the server would 422 it anyway. */
+  /**
+   * A blank or unchanged name is a cancel, not a request — the server would
+   * 422 it anyway. A real one closes the editor and emits; `draftName` is
+   * deliberately NOT cleared, so a rejection can re-open the editor with the
+   * teacher's own text still in it instead of an empty box.
+   */
   protected commitRename(node: FolderTreeNode): void {
     const name = this.draftName().trim();
-    if (name && name !== node.name) {
-      this.rename.emit({ id: node.id, name });
+    if (!name || name === node.name) {
+      this.cancelEditing();
+      return;
     }
-    this.cancelEditing();
+    this.editingId.set(null);
+    this.submitted.set({ id: node.id, kind: 'rename' });
+    this.rename.emit({ id: node.id, name });
   }
 
   protected commitCreate(node: FolderTreeNode): void {
     const name = this.draftName().trim();
-    if (name) {
-      this.create.emit({ parentId: node.id, name });
+    if (!name) {
+      this.cancelEditing();
+      return;
     }
-    this.cancelEditing();
+    this.creatingUnder.set(null);
+    this.submitted.set({ id: node.id, kind: 'create' });
+    this.create.emit({ parentId: node.id, name });
   }
 
   protected requestRemove(node: FolderTreeNode): void {

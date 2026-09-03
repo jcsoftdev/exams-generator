@@ -36,3 +36,19 @@ export interface FolderCreateEvent {
   readonly parentId: string | null;
   readonly name: string;
 }
+
+/**
+ * A rejected write, pushed back DOWN so the message lands on the input that
+ * caused it instead of somewhere else on the page.
+ *
+ * `id` is the node whose editor was submitted — the folder being renamed, or
+ * the PARENT under which a new subfolder was being named (this tree only ever
+ * creates UNDER a node, never at the root, so a parent id always exists). The
+ * tree re-opens that same editor with the typed name intact, marks it
+ * `aria-invalid` and shows `message` under it; it closes again on the next
+ * accepted commit or on Escape.
+ */
+export interface FolderInlineError {
+  readonly id: string;
+  readonly message: string;
+}

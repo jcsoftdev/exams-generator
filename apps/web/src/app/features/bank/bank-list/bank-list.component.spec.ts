@@ -549,15 +549,68 @@ describe('BankListComponent', () => {
       expect(renamedFolders).toEqual([{ id: 'trigo', name: 'Trigo II' }]);
     });
 
-    it('marks the inline name as taken when the server answers 409 folder_name_taken', () => {
+    /**
+     * The spec asks for the INPUT to be marked, not a paragraph somewhere on
+     * the screen: with six folders on screen, "ya existe una carpeta con ese
+     * nombre" floating above the tree does not say WHICH name, and closing
+     * the editor throws away the text the teacher now has to fix.
+     */
+    it('marks the rejected name on its own input when the server answers 409 folder_name_taken', () => {
       const { compiled, fixture, failNextFolderWrite } = setup();
       failNextFolderWrite({ status: 409, code: 'folder_name_taken' });
-      internals(fixture).onFolderRename({ id: 'trigo', name: 'Colegio' });
+
+      folderRow(compiled, 'colegio').dispatchEvent(
+        new KeyboardEvent('keydown', { key: 'F2', bubbles: true }),
+      );
+      fixture.detectChanges();
+      const input = compiled.querySelector(
+        '[data-testid="folder-name-input"] input',
+      ) as HTMLInputElement;
+      input.value = 'Sin carpeta';
+      input.dispatchEvent(new Event('input'));
+      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+      fixture.detectChanges();
+
+      const wrapper = compiled.querySelector('[data-testid="folder-name-input"]')!;
+      expect(wrapper.querySelector('input')!.getAttribute('aria-invalid')).toBe('true');
+      expect(wrapper.querySelector('[data-testid="input-error"]')!.textContent).toContain(
+        'Ya existe una carpeta con ese nombre',
+      );
+      // …and NOT also as a paragraph above the tree, saying the same thing twice.
+      expect(compiled.querySelector('[data-testid="folder-error"]')).toBeNull();
+    });
+
+    it('keeps the paragraph above the tree for a write error that names no input', () => {
+      const { compiled, fixture, failNextFolderWrite } = setup();
+      failNextFolderWrite({ status: 422, code: 'folder_depth_exceeded' });
+      internals(fixture).onFolderCreate({ parentId: 'colegio', name: 'Demasiado hondo' });
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="folder-error"]')!.textContent).toContain(
-        'Ya existe una carpeta con ese nombre',
+        'Las carpetas admiten como máximo 6 niveles',
       );
+      expect(compiled.querySelector('[data-testid="input-error"]')).toBeNull();
+    });
+
+    /**
+     * `BankFoldersStore.remove` drops the whole SUBTREE, so the open folder can
+     * vanish without being the one the teacher addressed. Comparing ids against
+     * the deleted one misses exactly that case and leaves the list showing rows
+     * of a folder that no longer exists, with no way back.
+     */
+    it('drops the selection when an ANCESTOR of the open folder is removed', () => {
+      const { compiled, fixture } = setup();
+      openFolder(compiled, fixture, 'trigo');
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+
+      requestFolderRemoval(compiled, fixture, 'colegio');
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeTruthy();
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
     });
 
     /**
@@ -693,6 +746,70 @@ describe('BankListComponent', () => {
 
       expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeTruthy();
       expect(listQuestionsPaged).not.toHaveBeenCalled();
+    });
+
+    /**
+     * A teacher on a school connection clicks folder A, sees nothing happen,
+     * and clicks B. Whichever request the network hands back FIRST used to
+     * decide what she looked at — and a global in-flight guard was worse
+     * still: B's request was never sent at all, so A's rows rendered under
+     * B's highlighted row with no way back except re-clicking.
+     */
+    it('shows the folder she landed on, not the one she left, when two selections overlap', () => {
+      const pages: Record<string, Subject<{ items: BankQuestion[]; total: number }>> = {
+        colegio: new Subject(),
+        trigo: new Subject(),
+      };
+      const { compiled, fixture, listQuestionsPaged } = setup({
+        listQuestionsPagedImpl: (filters) => pages[filters.folderId as string],
+      });
+
+      openFolder(compiled, fixture, 'colegio');
+      openFolder(compiled, fixture, 'trigo');
+
+      // Both folders were actually asked for — one request each, none dropped.
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(2);
+
+      // The abandoned folder answers FIRST, then the current one.
+      pages['colegio'].next({
+        items: [makeQuestion({ id: 'stale', folderId: 'colegio' })],
+        total: 1,
+      });
+      pages['trigo'].next({
+        items: [makeQuestion({ id: 'b1' }), makeQuestion({ id: 'b2' })],
+        total: 2,
+      });
+      fixture.detectChanges();
+
+      const ids = Array.from(compiled.querySelectorAll('[data-testid="bank-question"]')).map(
+        (row) => row.getAttribute('data-question-id'),
+      );
+      expect(ids).toEqual(['b1', 'b2']);
+    });
+
+    it('drops a stale answer that arrives LAST, too', () => {
+      const pages: Record<string, Subject<{ items: BankQuestion[]; total: number }>> = {
+        colegio: new Subject(),
+        trigo: new Subject(),
+      };
+      const { compiled, fixture } = setup({
+        listQuestionsPagedImpl: (filters) => pages[filters.folderId as string],
+      });
+
+      openFolder(compiled, fixture, 'colegio');
+      openFolder(compiled, fixture, 'trigo');
+
+      pages['trigo'].next({ items: [makeQuestion({ id: 'b1' })], total: 1 });
+      pages['colegio'].next({
+        items: [makeQuestion({ id: 'stale', folderId: 'colegio' })],
+        total: 1,
+      });
+      fixture.detectChanges();
+
+      const ids = Array.from(compiled.querySelectorAll('[data-testid="bank-question"]')).map(
+        (row) => row.getAttribute('data-question-id'),
+      );
+      expect(ids).toEqual(['b1']);
     });
 
     /**
@@ -1572,6 +1689,18 @@ describe('BankListComponent', () => {
 
       expect(listQuestionsPaged).not.toHaveBeenCalled();
     });
+
+    /** …and the button says so, instead of being a control that silently does nothing. */
+    it('disables Buscar until a folder is selected', () => {
+      const { compiled, fixture } = setup();
+      const buscar = () =>
+        compiled.querySelector('[data-testid="bank-search"] button') as HTMLButtonElement;
+
+      expect(buscar().disabled).toBe(true);
+
+      openFolder(compiled, fixture, 'trigo');
+      expect(buscar().disabled).toBe(false);
+    });
   });
 
   describe('loading', () => {
@@ -1615,7 +1744,11 @@ describe('BankListComponent', () => {
         getCoursesImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
-      expect(compiled.textContent).toMatch(/no se pudieron cargar/i);
+      // Names what actually failed: this branch is now the TAXONOMY fetch (the
+      // edit form's cursos/temas), never the question list.
+      expect(compiled.querySelector('[data-testid="error-state"]')!.textContent).toMatch(
+        /no se pudo cargar el banco/i,
+      );
 
       getCourses.mockReturnValue(of(COURSES));
       (compiled.querySelector('[data-testid="retry-button"] button') as HTMLButtonElement).click();
@@ -1837,8 +1970,27 @@ describe('BankListComponent', () => {
       expect(announcer.politeness()).toBe('polite');
     });
 
-    it('announces the folder removal too — the banner alone is silent to a screen reader', () => {
+    /**
+     * The announcement carries the WHOLE notice, not just "Carpeta quitada.":
+     * the banner's second sentence — where the questions went — is the half a
+     * screen-reader user cannot get any other way.
+     */
+    it('announces the folder removal with the same words the banner shows', () => {
       const { compiled, fixture } = setup();
+      requestFolderRemoval(compiled, fixture, 'trigo');
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(TestBed.inject(LiveAnnouncerService).message()).toBe(
+        'Carpeta quitada. 12 preguntas quedaron en Sin carpeta.',
+      );
+    });
+
+    it('announces the bare "Carpeta quitada." when nothing was left unfiled', () => {
+      const { compiled, fixture, deleteFolder } = setup();
+      deleteFolder.mockReturnValueOnce(of({ deletedFolders: 1, unfiledQuestions: 0 }));
       requestFolderRemoval(compiled, fixture, 'trigo');
       (
         compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
