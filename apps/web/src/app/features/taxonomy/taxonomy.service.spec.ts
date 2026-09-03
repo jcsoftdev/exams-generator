@@ -48,9 +48,7 @@ describe('TaxonomyService', () => {
     it('GETs /topics with courseId as a query param', () => {
       service.getTopics('course-1').subscribe();
 
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/topics`,
-      );
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
       expect(req.request.method).toBe('GET');
       expect(req.request.params.get('courseId')).toBe('course-1');
       req.flush([]);
@@ -58,15 +56,13 @@ describe('TaxonomyService', () => {
 
     it('resolves with the list of topics returned by the API', () => {
       const topics: Topic[] = [
-        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1', gradeLevel: null },
+        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1', gradeLevels: ['secundaria_1'] },
       ];
       let result: Topic[] | undefined;
 
       service.getTopics('course-1').subscribe((response) => (result = response));
 
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/topics`,
-      );
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
       req.flush(topics);
 
       expect(result).toEqual(topics);
@@ -86,9 +82,7 @@ describe('TaxonomyService', () => {
     it('GETs /topics with a comma-joined courseId param for multiple ids', () => {
       service.getTopicsForCourses(['course-1', 'course-2']).subscribe();
 
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/topics`,
-      );
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
       expect(req.request.method).toBe('GET');
       expect(req.request.params.get('courseId')).toBe('course-1,course-2');
       req.flush([]);
@@ -97,17 +91,15 @@ describe('TaxonomyService', () => {
     it('forwards gradeLevel as a query param when provided', () => {
       service.getTopicsForCourses(['course-1', 'course-2'], 'secundaria_2').subscribe();
 
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/topics`,
-      );
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
       expect(req.request.params.get('gradeLevel')).toBe('secundaria_2');
       req.flush([]);
     });
 
     it('resolves with the combined list of topics returned by the API', () => {
       const topics: Topic[] = [
-        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1', gradeLevel: null },
-        { id: 'topic-2', name: 'Álgebra', courseId: 'course-2', gradeLevel: null },
+        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1', gradeLevels: ['secundaria_1'] },
+        { id: 'topic-2', name: 'Álgebra', courseId: 'course-2', gradeLevels: [] },
       ];
       let result: Topic[] | undefined;
 
@@ -115,9 +107,7 @@ describe('TaxonomyService', () => {
         .getTopicsForCourses(['course-1', 'course-2'])
         .subscribe((response) => (result = response));
 
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/topics`,
-      );
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
       req.flush(topics);
 
       expect(result).toEqual(topics);

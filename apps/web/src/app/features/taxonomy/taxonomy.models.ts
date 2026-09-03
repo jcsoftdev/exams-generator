@@ -16,11 +16,13 @@ export interface Topic {
   readonly name: string;
   readonly courseId: string;
   /**
-   * The grade this topic is assessed at, or `null` when it applies to the
-   * whole stage. `GET /topics` now projects `topics.grade_level` (round 2 of
-   * this task) on both `findTopics` and `findTopicsByCourseIds`, so every
-   * producer of a `Topic` supplies it — `bank-new`'s folder field reads it to
-   * preselect Grado from a folder's linked topic.
+   * Every grade this topic is taught at, ordered by the catalog's sort order.
+   * Replaced `gradeLevel: string | null` when a topic stopped being one row per
+   * grade (design doc 2026-09-03): the select of Tema no longer shows the same
+   * concept once per grade, and `bank-new` reads this list to preselect Grado
+   * from a folder's linked topic.
+   *
+   * EMPTY means "taught across the whole stage" — nothing to preselect.
    */
-  readonly gradeLevel: string | null;
+  readonly gradeLevels: readonly string[];
 }

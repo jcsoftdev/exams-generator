@@ -467,16 +467,21 @@ export class BankNewComponent {
    * `resolveStructuredTaxonomy` uses for the extraction's own preselect.
    *
    * Grado is only touched when the topic actually says which grade it is
-   * assessed at (`Topic.gradeLevel`); when it does not, Grado stays the
+   * assessed at (`Topic.gradeLevels`); when it does not, Grado stays the
    * teacher's to pick and the snapshot is what keeps Curso/Tema alive when
    * she picks it.
+   *
+   * TODO(taxonomy-topic-grades task 8): `topic.gradeLevels[0]` is a
+   * placeholder for the "not in `gradeLevels` -> first grade" prefill rule
+   * the design doc (2026-09-03) describes — this task only keeps the model
+   * compiling without changing the single-grade behaviour below.
    */
   private prefillTaxonomyFrom(tab: Tab, topic: Topic): void {
     const gradeSignal = tab === 'photo' ? this.pGradeLevel : this.sGradeLevel;
     const courseSignal = tab === 'photo' ? this.pCourseId : this.sCourseId;
     const topicSignal = tab === 'photo' ? this.pTopicId : this.sTopicId;
 
-    const grade = topic.gradeLevel ?? null;
+    const grade = topic.gradeLevels[0] ?? null;
     this.folderDerivedTaxonomy[tab] = true;
     this.folderTaxonomy[tab] = { courseId: topic.courseId, topicId: topic.id, gradeLevel: grade };
 

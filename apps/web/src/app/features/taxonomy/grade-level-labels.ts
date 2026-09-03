@@ -1,10 +1,13 @@
 import { Stage } from '@exams-generator/shared';
 
 /**
- * The grade labels are a CONTRACT now, not just web copy: the API's folder
- * seeder generates folder names with the same suffix (`folderNameForTopic`).
- * Re-exported from `@exams-generator/shared` so this file stays the single
- * import site the bank/ai/exams models already use.
+ * The grade labels are pure WEB copy again: the API's folder seeder used to
+ * generate folder names with a ` · <grade>` suffix (`folderNameForTopic`), and
+ * that is gone — a topic is one row per concept now, so two folders of one
+ * course can no longer share a name and nothing on the server renders a grade
+ * (design doc 2026-09-03). The map still LIVES in `@exams-generator/shared`
+ * rather than here so this file stays the single import site the bank/ai/exams
+ * models already use; moving it back would be churn for no reader.
  */
 export { GRADE_LEVEL_LABELS } from '@exams-generator/shared';
 

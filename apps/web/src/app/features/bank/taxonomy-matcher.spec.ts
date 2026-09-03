@@ -76,7 +76,7 @@ describe('findTopicMatch', () => {
       id: 't1',
       name: 'sintaxis - complementos oracionales (complemento agente)',
       courseId: 'c1',
-      gradeLevel: null,
+      gradeLevels: [],
     },
   ];
 
