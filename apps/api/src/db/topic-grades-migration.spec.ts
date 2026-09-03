@@ -158,6 +158,25 @@ describe("0023_topic_grades migration", () => {
     const dupName = `Dup ${suffix}`;
     const dupA = await insertTopic(course.id, dupName, "secundaria_4");
     const dupB = await insertTopic(course2.id, dupName, "secundaria_4");
+    // The same pair again, but with a topic name long enough that
+    // "<name> · <label>" does not fit in `MAX_FOLDER_NAME_LENGTH` — so both
+    // seeded folder names are CLAMPED and the second was numbered on top of the
+    // clamp, which is where the numbering arithmetic gets delicate.
+    const longName = `Larga ${suffix}`.padEnd(70, "y").slice(0, 70);
+    const longA = await insertTopic(course.id, longName, "secundaria_4");
+    const longB = await insertTopic(course2.id, longName, "secundaria_4");
+    // Group L: a merge whose two colliding child names are already a clamped
+    // "… (2)" of EXACTLY 80 characters.
+    const largName = `Larg ${suffix}`;
+    const larg4 = await insertTopic(course.id, largName, "secundaria_4");
+    const larg5 = await insertTopic(course.id, largName, "secundaria_5");
+    // Two groups interleaved along one branch, for the parent_id cycle case.
+    const cycloName = `Ciclo ${suffix}`;
+    const cyclo4 = await insertTopic(course.id, cycloName, "secundaria_4");
+    const cyclo5 = await insertTopic(course.id, cycloName, "secundaria_5");
+    const cyclo2Name = `Ciclo2 ${suffix}`;
+    const cyclo24 = await insertTopic(course.id, cyclo2Name, "secundaria_4");
+    const cyclo25 = await insertTopic(course.id, cyclo2Name, "secundaria_5");
 
     const tenant = await one<{ id: string }>(
       `insert into tenants (name, slug) values ($1, $2) returning id`,
@@ -248,6 +267,39 @@ describe("0023_topic_grades migration", () => {
     const dupFolderA = await insertFolder(tenant.id, `${dupName} · 4° secundaria`, null, dupA, 40);
     const dupFolderB = await insertFolder(tenant.id, `${dupName} · 4° secundaria (2)`, null, dupB, 41);
 
+    // Long clamped names, both stripping to the same 70-character base. The
+    // seeder had to clamp "<topic> · 4° secundaria" to 80 and then number the
+    // second one on top of that clamp — both still strip to the topic's name.
+    const longFolderAName = `${longName} · 4° secundaria`.slice(0, 80);
+    const longFolderBName = `${longFolderAName.slice(0, 76)} (2)`;
+    const longFolderA = await insertFolder(tenant.id, longFolderAName, null, longA, 80);
+    const longFolderB = await insertFolder(tenant.id, longFolderBName, null, longB, 81);
+
+    // Group L: keeper and loser each hold a child whose name is EXACTLY 80
+    // characters and already ends in " (2)" — precisely what the seeder's own
+    // clamp-then-number produces. Deriving the next candidate by cutting four
+    // characters off THAT name and appending " (2)" reproduces the same string,
+    // so the naive candidate list contains a duplicate and runs dry.
+    const largStem = `Repaso ${suffix}`.padEnd(76, "z").slice(0, 76);
+    const largClampedDup = `${largStem} (2)`;
+    expect(largClampedDup).toHaveLength(80);
+    const largKeeper = await insertFolder(tenant.id, `${largName} · 4° secundaria`, null, larg4, 70);
+    const largLoser = await insertFolder(tenant.id, `${largName} · 5° secundaria`, null, larg5, 71);
+    const largKeepChild = await insertFolder(tenant.id, largClampedDup, largKeeper, null, 0);
+    const largMoveChild = await insertFolder(tenant.id, largClampedDup, largLoser, null, 1);
+
+    // The cycle: L'(root) → A → L → K → K2, where {L', K2} is one merge group
+    // (K2 the keeper) and {L, K} is another (K the keeper). Lifting K to the
+    // nearest ancestor the merge does not DELETE lands on A — but A is itself
+    // moving under K2, and K2 is K's own child, so K → A → K2 → K closes a
+    // parent_id loop that no constraint forbids and every recursive tree query
+    // in the app would hang on.
+    const cycLPrime = await insertFolder(tenant.id, `${cycloName} · 5° secundaria`, null, cyclo5, 61);
+    const cycA = await insertFolder(tenant.id, `Intermedia ${suffix}`, cycLPrime, null, 0);
+    const cycL = await insertFolder(tenant.id, `${cyclo2Name} · 5° secundaria`, cycA, cyclo25, 63);
+    const cycK = await insertFolder(tenant.id, `${cyclo2Name} · 4° secundaria`, cycL, cyclo24, 62);
+    const cycK2 = await insertFolder(tenant.id, `${cycloName} · 4° secundaria`, cycK, cyclo4, 60);
+
     // Tenant 2's lone folder points at the LOSING copy — it is its own keeper,
     // so it is only re-pointed and stripped, never merged or deleted.
     const tenant2Folder = await insertFolder(tenant2.id, `${trigoName} · 5° secundaria`, null, topic5, 0);
@@ -328,7 +380,9 @@ describe("0023_topic_grades migration", () => {
       `select id from topics where course_id = $1`,
       [course.id],
     );
-    expect(remaining.map((row) => row.id).sort()).toEqual([arit4, geo4, topic4, chain3, ejer3, dupA].sort());
+    expect(remaining.map((row) => row.id).sort()).toEqual(
+      [arit4, geo4, topic4, chain3, ejer3, dupA, longA, larg4, cyclo4, cyclo24].sort(),
+    );
 
     // 2. Both grades survive as topic_grades rows on the canonical topic.
     async function gradesOf(topicId: string): Promise<string[]> {
@@ -429,6 +483,44 @@ describe("0023_topic_grades migration", () => {
     // order keeps it, the second is numbered again.
     expect(folders.get(dupFolderA)!.name).toBe(dupName);
     expect(folders.get(dupFolderB)!.name).toBe(`${dupName} (2)`);
+
+    // (b, clamped) Same, but the seeded names were clamped to 80 characters.
+    // Both strip to the topic's own 70-character name.
+    expect(folders.get(longFolderA)!.name).toBe(longName);
+    expect(folders.get(longFolderB)!.name).toBe(`${longName} (2)`);
+
+    // (distinctness) The colliding children are named "<76 chars> (2)" at
+    // exactly 80 characters. Cutting 4 characters off that and appending " (2)"
+    // gives the SAME string back, so a candidate list built that way repeats
+    // itself and the family runs out of names — the migration then either
+    // aborts on the unique index or refuses to run. The survivor keeps its
+    // name and the moved one goes to " (3)".
+    expect(folders.has(largLoser)).toBe(false);
+    expect(folders.get(largKeepChild)!.parent_id).toBe(largKeeper);
+    expect(folders.get(largKeepChild)!.name).toBe(largClampedDup);
+    expect(folders.get(largMoveChild)!.parent_id).toBe(largKeeper);
+    expect(folders.get(largMoveChild)!.name).toBe(`${largStem} (3)`);
+    expect(folders.get(largMoveChild)!.name).toHaveLength(80);
+
+    // (cycle) K was lifted past A — which is itself moving, under K's own
+    // child — all the way to the root, so no parent_id loop is left behind.
+    expect(folders.has(cycLPrime)).toBe(false);
+    expect(folders.has(cycL)).toBe(false);
+    expect(folders.get(cycK)!.parent_id).toBeNull();
+    expect(folders.get(cycK2)!.parent_id).toBe(cycK);
+    expect(folders.get(cycA)!.parent_id).toBe(cycK2);
+
+    // No folder in the tenant can reach itself by walking up `parent_id`.
+    const parentOf = new Map(folderRows.map((row) => [row.id, row.parent_id]));
+    for (const start of parentOf.keys()) {
+      const seen = new Set<string>([start]);
+      let node = parentOf.get(start) ?? null;
+      while (node !== null) {
+        expect(seen.has(node)).toBe(false);
+        seen.add(node);
+        node = parentOf.get(node) ?? null;
+      }
+    }
 
     // (3) The second school's folder survives, re-pointed and stripped.
     const { rows: tenant2Folders } = await pool.query<{

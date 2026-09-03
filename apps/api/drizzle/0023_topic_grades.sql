@@ -219,6 +219,17 @@ BEGIN
       -- `question_folders_root_name_idx`, so NULL is a group like any other.
       COALESCE(i."new_parent_id", '00000000-0000-0000-0000-000000000000'::uuid) AS grp,
       left(i."base_name", 80) AS base_name,
+      -- The name with any trailing " (2)", " (3)" … taken off, which is what
+      -- the numbered candidates below are built from. Numbering "Foo (2)" as
+      -- "Foo (2) (2)" would be silly on its own, but the real reason is
+      -- arithmetic: `dedupeSiblingNames` produces names of EXACTLY 80
+      -- characters ending in " (n)", and cutting four characters off one of
+      -- those to append " (n)" hands back the very string it started from.
+      -- Stripping first makes every candidate provably distinct (see below).
+      COALESCE(
+        NULLIF(regexp_replace(left(i."base_name", 80), '( \(\d+\))+$', ''), ''),
+        left(i."base_name", 80)
+      ) AS stem,
       i."position"
     FROM "folder_rename_input" i
   ),
@@ -252,38 +263,52 @@ BEGIN
       r."tenant_id",
       r.grp,
       r.base_name,
+      r.stem,
       max(r.rn) AS needed,
       (SELECT count(*) FROM taken t WHERE t."tenant_id" = r."tenant_id" AND t.grp = r.grp) AS blocked,
       (SELECT count(DISTINCT o.base_name) FROM plan o
         WHERE o."tenant_id" = r."tenant_id" AND o.grp = r.grp AND o.base_name <> r.base_name) AS rival
     FROM ranked r
-    GROUP BY r."tenant_id", r.grp, r.base_name
+    GROUP BY r."tenant_id", r.grp, r.base_name, r.stem
   ),
-  -- "Foo", "Foo (2)", "Foo (3)", … clamped to the 80 characters
-  -- `MAX_FOLDER_NAME_LENGTH` allows.
+  -- The name the folder asked for, then "<stem> (2)", "<stem> (3)", … each
+  -- clamped to the 80 characters `MAX_FOLDER_NAME_LENGTH` allows.
   --
-  -- Why `needed + blocked + rival` is enough: the candidates of one family are
-  -- pairwise distinct strings, and `free` below rejects a candidate for exactly
-  -- two reasons — it equals one of the `blocked` names the destination group
-  -- already holds, or one of the `rival` base names another family is claiming
-  -- in that same group. Each rejected candidate consumes one of those distinct
-  -- names, so at most `blocked + rival` can be rejected and at least `needed`
-  -- survive. Budgeting only `blocked` (as this did before) left families short
-  -- whenever a rival bit, and the shortfall was SILENT: the join below simply
-  -- matched no slot, the folder stayed under a loser, and the delete two
-  -- statements down cascaded it and its subtree away.
+  -- DISTINCTNESS. Every numbered candidate ends in " (n)", and a string has at
+  -- most one trailing ` \(\d+\)`, so two numbered candidates with different n
+  -- are different strings. The stem has had its own trailing " (n)" removed, so
+  -- candidate 1 carries no such suffix and cannot equal a numbered one either —
+  -- EXCEPT when the folder's own name already was "<stem> (n)", in which case
+  -- candidate 1 and candidate n are the same string; the DISTINCT ON below
+  -- collapses that one pair and keeps the earlier ordinal. Building the
+  -- numbered forms from `base_name` instead of `stem` was what produced
+  -- duplicates: an 80-character "<76 chars> (2)" cut to 76 and given " (2)"
+  -- back is itself, so the family could run dry and abort the deploy.
+  --
+  -- BUDGET. `free` rejects a candidate for exactly two reasons: it is one of
+  -- the `blocked` names the destination group already holds, or one of the
+  -- `rival` base names another family is claiming in that group. Each rejection
+  -- consumes one of those distinct names, and at most one candidate is lost to
+  -- the DISTINCT ON above, so `needed + blocked + rival + 1` generated forms
+  -- always leave at least `needed` free ones.
   candidates AS (
-    SELECT
+    SELECT DISTINCT ON (f."tenant_id", f.grp, f.base_name, cand.candidate)
       f."tenant_id",
       f.grp,
       f.base_name,
-      s.i,
-      CASE
-        WHEN s.i = 1 THEN f.base_name
-        ELSE left(f.base_name, 80 - length(' (' || s.i || ')')) || ' (' || s.i || ')'
-      END AS candidate
+      cand.i,
+      cand.candidate
     FROM families f
-    CROSS JOIN LATERAL generate_series(1, f.needed + f.blocked + f.rival) AS s(i)
+    CROSS JOIN LATERAL (
+      SELECT
+        s.i,
+        CASE
+          WHEN s.i = 1 THEN f.base_name
+          ELSE left(f.stem, 80 - length(' (' || s.i || ')')) || ' (' || s.i || ')'
+        END AS candidate
+      FROM generate_series(1, f.needed + f.blocked + f.rival + 1) AS s(i)
+    ) cand
+    ORDER BY f."tenant_id", f.grp, f.base_name, cand.candidate, cand.i
   ),
   free AS (
     SELECT
@@ -367,13 +392,30 @@ WHERE fm.loser_id = q."folder_id" AND fm.keeper_id <> q."folder_id";
 -- `M -> L -> K` whose three folders all belong to ONE merge group and where K
 -- is the keeper, "L's parent" is M, and M's keeper is K again — a one-step lift
 -- makes K its own parent and the delete then orphans it. So the keeper WALKS UP
--- `parent_id` until it reaches an ancestor that this migration is not about to
--- delete (and that is not itself), or runs out and becomes a root. `depth < 100`
--- is a cycle brake, not a real limit: no tenant nests folders anywhere near that
--- deep, and without it corrupt data would spin here forever.
+-- `parent_id` until it reaches an ancestor this statement leaves alone, or runs
+-- out and becomes a root.
+--
+-- "Leaves alone" has to mean more than "does not delete". An ancestor that is
+-- itself being re-parented can land anywhere — including inside the keeper's
+-- own subtree, which closes a `parent_id` loop that no constraint forbids and
+-- every recursive tree query in the app would hang on. The reviewer's shape:
+-- `L'(root) -> A -> L -> K -> K2` with `{L', K2}` one merge group (K2 the
+-- keeper) and `{L, K}` another (K the keeper). A moves under K2, K2 is K's own
+-- child, so lifting K onto A gives K -> A -> K2 -> K. Skipping every unstable
+-- ancestor walks K past A and past L' to the root instead.
+--
+-- `depth < 100` is a cycle brake, not a real limit: no tenant nests folders
+-- anywhere near that deep, and without it corrupt data would spin here forever.
 INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name", "position")
-WITH RECURSIVE "doomed" AS (
+WITH RECURSIVE "unstable" AS (
+  -- Deleted by the merge …
   SELECT loser_id AS id FROM "folder_merge_map" WHERE keeper_id <> loser_id
+  UNION
+  -- … or moved elsewhere by this very statement.
+  SELECT moved."id"
+  FROM "question_folders" moved
+  JOIN "folder_merge_map" fm
+    ON fm.loser_id = moved."parent_id" AND fm.keeper_id <> moved."parent_id"
 ),
 "lift" AS (
   SELECT keeper."id" AS keeper_id, loser."parent_id" AS candidate, 0 AS depth
@@ -387,13 +429,13 @@ WITH RECURSIVE "doomed" AS (
   FROM "lift" l
   JOIN "question_folders" up ON up."id" = l.candidate
   WHERE l.depth < 100
-    AND (l.candidate IN (SELECT id FROM "doomed") OR l.candidate = l.keeper_id)
+    AND (l.candidate IN (SELECT id FROM "unstable") OR l.candidate = l.keeper_id)
 ),
 "lifted" AS (
   SELECT DISTINCT ON (keeper_id) keeper_id, candidate
   FROM "lift"
   WHERE candidate IS NULL
-     OR (candidate NOT IN (SELECT id FROM "doomed") AND candidate <> keeper_id)
+     OR (candidate NOT IN (SELECT id FROM "unstable") AND candidate <> keeper_id)
   ORDER BY keeper_id, depth
 )
 SELECT
@@ -407,6 +449,40 @@ JOIN "folder_merge_map" fm ON fm.loser_id = f."parent_id" AND fm.keeper_id <> f.
 LEFT JOIN "lifted" ON "lifted".keeper_id = f."id";
 --> statement-breakpoint
 SELECT pg_temp.apply_folder_rename_plan();
+--> statement-breakpoint
+
+-- The only statement in this file that changes `parent_id` has just run. A
+-- `parent_id` loop is not a constraint violation — Postgres would accept one
+-- happily — but it makes the tenant's tree unwalkable: every recursive CTE in
+-- the folders module would spin on it. The skip rule above is designed so this
+-- cannot happen; this is the proof that it did not, and the deploy stops here
+-- if the reasoning was ever wrong. 100 is a depth ceiling, not a real limit:
+-- the seeder builds two levels and nothing in the app nests remotely that far.
+DO $$
+DECLARE
+  offender uuid;
+BEGIN
+  WITH RECURSIVE walk AS (
+    SELECT f."id" AS start_id, f."parent_id" AS node, 1 AS depth
+    FROM "question_folders" f
+    WHERE f."parent_id" IS NOT NULL
+    UNION ALL
+    SELECT w.start_id, up."parent_id", w.depth + 1
+    FROM walk w
+    JOIN "question_folders" up ON up."id" = w.node
+    WHERE w.node <> w.start_id AND w.depth < 100
+  )
+  SELECT w.start_id INTO offender
+  FROM walk w
+  WHERE w.node = w.start_id OR w.depth >= 100
+  LIMIT 1;
+
+  IF offender IS NOT NULL THEN
+    RAISE EXCEPTION
+      '0023_topic_grades: re-parenting left folder % able to reach itself through parent_id (or nested past 100 levels) — refusing to commit an unwalkable tree.',
+      offender;
+  END IF;
+END $$;
 --> statement-breakpoint
 DELETE FROM "question_folders" f
 USING "folder_merge_map" fm
