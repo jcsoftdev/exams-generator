@@ -462,25 +462,17 @@
                   <dt class="text-n500">Grado:</dt>
                   <dd>{{ gradeLevelLabel(q.gradeLevel) }}</dd>
                 </div>
-                <div class="flex gap-2">
-                  <dt class="text-n500">Carpeta:</dt>
-                  <dd data-testid="question-folder" class="flex items-center gap-2">
-                    <span>{{ selectedQuestionFolderLabel() }}</span>
-                    @if (canPickFolder(q)) {
-                      <span data-testid="question-folder-edit">
-                        <button
-                          type="button"
-                          class="rounded-field border border-tint-text px-2 py-0.5 text-xs text-tint-text transition-colors hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-300"
-                          aria-haspopup="dialog"
-                          [attr.aria-expanded]="folderPickerOpen() ? 'true' : 'false'"
-                          (click)="openFolderPicker()"
-                        >
-                          Cambiar
-                        </button>
-                      </span>
-                    }
-                  </dd>
-                </div>
+                @if (!isCentral(q)) {
+                  <div class="flex gap-2">
+                    <dt class="text-n500">Carpeta:</dt>
+                    <dd data-testid="question-folder">
+                      <app-question-folder-picker
+                        [question]="q"
+                        (moved)="onQuestionMoved($event)"
+                      ></app-question-folder-picker>
+                    </dd>
+                  </div>
+                }
                 <div class="flex gap-2">
                   <dt class="text-n500">Usada en:</dt>
                   <dd>{{ examCountLabel(q.usedInExamCount) }}</dd>
@@ -492,35 +484,6 @@
                   </div>
                 }
               </dl>
-
-              @if (folderPickerOpen()) {
-                <div
-                  data-testid="question-folder-picker"
-                  role="dialog"
-                  aria-label="Elegir carpeta"
-                  class="mb-4 rounded-card border border-n200 bg-surface p-2 shadow-lg"
-                  (keydown.escape)="closeFolderPickerFromEscape()"
-                >
-                  <ui-folder-tree
-                    [nodes]="pickerTree()"
-                    [selectedId]="folderPickerChoice()"
-                    mode="pick"
-                    (select)="folderPickerChoice.set($event)"
-                  ></ui-folder-tree>
-                  <div class="mt-2 flex justify-end gap-2">
-                    <ui-button variant="ghost" (clicked)="closeFolderPicker()">Cancelar</ui-button>
-                    <span data-testid="question-folder-save">
-                      <ui-button
-                        variant="primary"
-                        [loading]="folderPickerSaving()"
-                        (clicked)="saveQuestionFolder()"
-                      >
-                        Guardar
-                      </ui-button>
-                    </span>
-                  </div>
-                </div>
-              }
 
               @if (actionError()) {
                 <p

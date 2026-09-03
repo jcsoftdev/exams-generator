@@ -1,4 +1,4 @@
-import { Component, DestroyRef, ElementRef, computed, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { EMPTY, Observable, catchError, forkJoin, from, map, mergeMap } from 'rxjs';
@@ -58,6 +58,7 @@ import { filterFolderTree } from '../folders/folder-tree.model';
 import { QuestionTaxonomyFieldsComponent } from '../question-edit/question-taxonomy-fields.component';
 import { QuestionContentFieldsComponent } from '../question-edit/question-content-fields.component';
 import { AiReviseBoxComponent } from '../question-edit/ai-revise-box.component';
+import { QuestionFolderPickerComponent } from './question-folder-picker.component';
 import { parseAlternativesList } from '../question-edit/parse-alternatives.util';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
@@ -224,6 +225,7 @@ const HIGHLIGHT_DURATION_MS = 4000;
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
+    QuestionFolderPickerComponent,
     LucideAngularModule,
   ],
   // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
@@ -260,8 +262,6 @@ export class BankListComponent {
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
   private readonly liveAnnouncer = inject(LiveAnnouncerService);
-  /** Task 11: focus-return target for the folder picker's Escape handler — see `closeFolderPickerFromEscape`. */
-  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly difficultyLabels = DIFFICULTY_LABELS;
@@ -332,15 +332,6 @@ export class BankListComponent {
   protected readonly actionError = signal<string | null>(null);
   protected readonly pendingDelete = signal<BankQuestion | null>(null);
   protected readonly pendingArchive = signal<BankQuestion | null>(null);
-
-  // --- Task 11: question detail folder picker ------------------------------
-  /** Popover state for the detail panel's folder picker — open, and what has been picked but not saved. */
-  protected readonly folderPickerOpen = signal(false);
-  protected readonly folderPickerChoice = signal<string | null>(null);
-  protected readonly folderPickerSaving = signal(false);
-
-  /** The picker is `pick` mode: selection only, no actions — a form must never mutate the tree. */
-  protected readonly pickerTree = this.foldersStore.tree;
 
   // --- Task 8: inline edit mode -------------------------------------------------
   protected readonly editing = signal(false);
@@ -978,82 +969,21 @@ export class BankListComponent {
   }
 
   /**
-   * The folder label for the selected question. Central questions never have
-   * one — they surface inside a folder through its `topicId`, they do not
-   * belong to it — so the picker itself is not rendered for them at all (see
-   * `canPickFolder`); this still reads "Sin carpeta" for them since their
-   * `folderId` is always null.
+   * `app-question-folder-picker`'s `moved` output — fires on every
+   * successful folder PATCH, even one for a question that isn't SELECTED any
+   * more by the time the response lands (see that component's doc). This is
+   * the "still reload the tree/list either way" half of that contract: the
+   * child already decided (by matching `updated.id` against its own input)
+   * whether ITS state should reflect the response; here we decide the same
+   * thing for `selected`, independently, and always refresh the tree +
+   * currently open folder regardless of which question the response was for.
    */
-  protected selectedQuestionFolderLabel(): string {
-    const folderId = this.selected()?.folderId ?? null;
-    if (!folderId) {
-      return 'Sin carpeta';
+  protected onQuestionMoved(updated: BankQuestion): void {
+    if (this.selected()?.id === updated.id) {
+      this.selected.set(updated);
     }
-    return this.foldersStore.folderName(folderId) ?? 'Sin carpeta';
-  }
-
-  protected canPickFolder(question: BankQuestion): boolean {
-    return questionOrigin(question) !== 'central';
-  }
-
-  protected openFolderPicker(): void {
-    this.folderPickerChoice.set(this.selected()?.folderId ?? null);
-    this.folderPickerOpen.set(true);
-  }
-
-  protected closeFolderPicker(): void {
-    this.folderPickerOpen.set(false);
-    this.folderPickerChoice.set(null);
-  }
-
-  /**
-   * Escape on the popover: close it AND return focus to the trigger that
-   * opened it. The CDK tree owns focus while the popover is open (arrow-key
-   * navigation, `TreeKeyManager`); nothing else puts it back on dismiss.
-   * Mirrors `FolderTreeComponent.closeMenu`'s own pattern for the same reason.
-   */
-  protected closeFolderPickerFromEscape(): void {
-    this.closeFolderPicker();
-    this.elementRef.nativeElement
-      .querySelector<HTMLButtonElement>('[data-testid="question-folder-edit"] button')
-      ?.focus();
-  }
-
-  /**
-   * PATCHes `folderId` for the selected question. The picker's virtual "Sin
-   * carpeta" node (`UNFILED_FOLDER_ID`) means "unfile it", which on the wire
-   * is `null` — same translation `saveEdit`'s sibling flows never needed
-   * because they never touch this field.
-   */
-  protected saveQuestionFolder(): void {
-    const question = this.selected();
-    if (!question || this.folderPickerSaving()) {
-      return;
-    }
-    const choice = this.folderPickerChoice();
-    const folderId = choice === null || choice === UNFILED_FOLDER_ID ? null : choice;
-
-    this.folderPickerSaving.set(true);
-    this.bankService.updateQuestion(question.id, { folderId }).subscribe({
-      next: (updated) => {
-        this.folderPickerSaving.set(false);
-        this.selected.set(updated);
-        this.closeFolderPicker();
-        // The question may have just left the folder currently listed —
-        // re-fetch it (same move `confirmArchive`/`confirmDelete` make)
-        // rather than patch the row list by hand, and refresh the tree's
-        // counts on both sides.
-        this.foldersStore.load();
-        this.search();
-        this.liveAnnouncer.announce('Carpeta actualizada.');
-      },
-      error: (error: HttpErrorResponse) => {
-        this.folderPickerSaving.set(false);
-        this.actionError.set(
-          extractErrorMessage(error, 'No se pudo cambiar la carpeta de la pregunta.'),
-        );
-      },
-    });
+    this.foldersStore.load();
+    this.search();
   }
 
   protected requestArchive(question: BankQuestion): void {
