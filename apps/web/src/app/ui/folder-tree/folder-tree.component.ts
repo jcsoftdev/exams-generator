@@ -1,5 +1,14 @@
 import { CdkTreeModule } from '@angular/cdk/tree';
-import { ChangeDetectionStrategy, Component, computed, input, output, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  ElementRef,
+  inject,
+  input,
+  output,
+  signal,
+} from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { InputComponent } from '../input/input.component';
 import {
@@ -39,7 +48,12 @@ import {
       [childrenAccessor]="childrenAccessor"
       class="block"
     >
-      <cdk-tree-node *cdkTreeNodeDef="let node" class="block">
+      <cdk-tree-node
+        *cdkTreeNodeDef="let node"
+        [isExpandable]="node.children.length > 0"
+        (expandedChange)="onExpandedChange(node)"
+        class="block"
+      >
         <div
           data-testid="folder-row"
           [attr.data-folder-id]="node.id"
@@ -57,7 +71,7 @@ import {
               [attr.data-folder-id]="node.id"
               [attr.aria-label]="(tree.isExpanded(node) ? 'Colapsar ' : 'Expandir ') + node.name"
               class="shrink-0 rounded p-0.5 text-n500 hover:text-n700 focus:outline-none focus:ring-2 focus:ring-primary-300"
-              (click)="onToggleClick($event, node)"
+              (click)="$event.stopPropagation()"
             >
               <lucide-angular
                 [name]="tree.isExpanded(node) ? 'chevron-down' : 'chevron-right'"
@@ -69,7 +83,16 @@ import {
           }
 
           @if (editingId() === node.id) {
-            <div data-testid="folder-name-input" class="flex-1">
+            <!--
+              Stops ANY keydown from reaching the row's onRowKeydown while
+              editing — Critical fix (review round 1): Delete/F2 typed here
+              used to bubble up and delete the folder / discard the draft.
+            -->
+            <div
+              data-testid="folder-name-input"
+              class="flex-1"
+              (keydown)="$event.stopPropagation()"
+            >
               <ui-input
                 [value]="draftName()"
                 (valueChange)="draftName.set($event)"
@@ -99,12 +122,12 @@ import {
         </div>
 
         @if (menuFor() === node.id) {
-          <div role="menu" class="ml-8 flex gap-2 py-1 text-xs">
+          <div role="menu" class="ml-8 flex gap-2 py-1 text-xs" (keydown.escape)="closeMenu(node)">
             <button
               type="button"
               role="menuitem"
               data-testid="folder-action-create"
-              class="underline"
+              [class]="menuItemClasses()"
               (click)="startCreating(node)"
             >
               Nueva subcarpeta
@@ -113,7 +136,7 @@ import {
               type="button"
               role="menuitem"
               data-testid="folder-action-rename"
-              class="underline"
+              [class]="menuItemClasses()"
               (click)="startEditing(node)"
             >
               Renombrar
@@ -122,7 +145,7 @@ import {
               type="button"
               role="menuitem"
               data-testid="folder-action-remove"
-              class="underline text-hard-text"
+              [class]="menuItemClasses(true)"
               (click)="requestRemove(node)"
             >
               Eliminar
@@ -131,7 +154,11 @@ import {
         }
 
         @if (creatingUnder() === node.id) {
-          <div data-testid="folder-new-input" class="ml-8 py-1">
+          <div
+            data-testid="folder-new-input"
+            class="ml-8 py-1"
+            (keydown)="$event.stopPropagation()"
+          >
             <ui-input
               placeholder="Nombre de la carpeta"
               [value]="draftName()"
@@ -178,31 +205,77 @@ export class FolderTreeComponent {
    */
   protected readonly mutableNodes = computed(() => this.nodes() as FolderTreeNode[]);
 
-  /** CdkTree requires exactly one accessor; the data is already nested, so it is this one. */
+  /**
+   * CdkTree requires exactly one accessor; the data is already nested, so it
+   * is this one. Cast for the same reason as `mutableNodes` above — `T[]`,
+   * not `readonly T[]`, at this one boundary only.
+   */
   protected readonly childrenAccessor = (node: FolderTreeNode): FolderTreeNode[] =>
     node.children as FolderTreeNode[];
+
+  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+
+  /**
+   * Review round 1, Important #2: the three text-labelled menu actions were
+   * meant to use `ui-button` (ghost/danger variants), but `ButtonComponent`
+   * renders its real interactive `<button>` inside its OWN template — a
+   * static `role="menuitem"` placed on `<ui-button>` lands on the outer
+   * custom-element host, not on the focusable inner `<button>`, which breaks
+   * the WAI-ARIA menu pattern (role and focus target must be the same
+   * element). `ui-button` has no `[attr.role]` pass-through to fix that
+   * without changing the shared primitive itself, which is out of scope
+   * here. Kept as raw `<button role="menuitem">`, sharing one class
+   * constant so the visual language still matches `ui-button`'s ghost/danger
+   * variants (mirrors `ButtonComponent.classes()`'s own BASE + variant
+   * pattern).
+   */
+  private static readonly MENU_ITEM_BASE =
+    'rounded-field px-2 py-1 text-left text-tint-text hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-300';
+  private static readonly MENU_ITEM_DANGER = 'text-hard-text hover:opacity-90';
+
+  protected menuItemClasses(danger = false): string {
+    return danger
+      ? `${FolderTreeComponent.MENU_ITEM_BASE} ${FolderTreeComponent.MENU_ITEM_DANGER}`
+      : FolderTreeComponent.MENU_ITEM_BASE;
+  }
 
   protected onSelect(node: FolderTreeNode): void {
     this.select.emit(node.id);
   }
 
   /**
-   * `cdkTreeNodeToggle` already drives the expand/collapse state through the
-   * CDK's `TreeKeyManager` — this handler only stops the click from also
-   * reaching the row's `onSelect`, and tells the outside world (e.g. a
-   * caller persisting which folders are open) which node just toggled.
+   * Bound to `CdkTreeNode`'s `(expandedChange)` (review round 1, Important
+   * #3) rather than the toggle button's `(click)` — `expandedChange` fires
+   * for BOTH the mouse click (via `cdkTreeNodeToggle`) and keyboard-driven
+   * expansion (ArrowRight/ArrowLeft through the CDK's `TreeKeyManager`), so
+   * `toggle` now reflects every way a node can expand or collapse, not just
+   * the mouse. Emits only the id, matching this primitive's frozen contract
+   * (`toggle: OutputEmitterRef<string>`).
    */
-  protected onToggleClick(event: Event, node: FolderTreeNode): void {
-    event.stopPropagation();
+  protected onExpandedChange(node: FolderTreeNode): void {
     this.toggle.emit(node.id);
   }
 
   /**
-   * F2 renames, Delete removes — the two shortcuts the spec asks for on top of
-   * the CDK's own arrow/Home/End navigation. Guarded by the same rule as the
-   * menu: nothing mutating in `pick` mode, nothing at all on a non-editable node.
+   * F2 renames, Delete removes, Enter/Space select — shortcuts on top of the
+   * CDK's own arrow/Home/End navigation.
+   *
+   * Critical fix (review round 1): this guard used to be reachable from the
+   * rename/create `<ui-input>`, whose keydown events bubble up through this
+   * same row — pressing Delete while renaming deleted the folder, and a
+   * second F2 reset the in-progress draft. The inputs now `stopPropagation`
+   * on their own wrapper so this handler never even runs for them; this
+   * early return is a second line of defense in case that wrapper ever moves.
    */
   protected onRowKeydown(event: KeyboardEvent, node: FolderTreeNode): void {
+    if (this.editingId() === node.id || this.creatingUnder() === node.id) {
+      return;
+    }
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.onSelect(node);
+      return;
+    }
     if (!this.actionsEnabled() || !node.editable) {
       return;
     }
@@ -218,6 +291,14 @@ export class FolderTreeComponent {
   protected toggleMenu(event: Event, node: FolderTreeNode): void {
     event.stopPropagation();
     this.menuFor.update((current) => (current === node.id ? null : node.id));
+  }
+
+  /** Minor fix (review round 1): Escape closes the action menu and returns focus to its trigger. */
+  protected closeMenu(node: FolderTreeNode): void {
+    this.menuFor.set(null);
+    this.elementRef.nativeElement
+      .querySelector<HTMLButtonElement>(`[data-testid="folder-menu"][data-folder-id="${node.id}"]`)
+      ?.focus();
   }
 
   protected startEditing(node: FolderTreeNode): void {

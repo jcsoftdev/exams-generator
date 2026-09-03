@@ -45,6 +45,7 @@ const TREE: FolderTreeNode[] = [
       [selectedId]="selectedId()"
       [mode]="mode()"
       (select)="lastSelected = $event"
+      (toggle)="lastToggled = $event"
       (create)="lastCreated = $event"
       (rename)="lastRenamed = $event"
       (remove)="lastRemoved = $event"
@@ -59,6 +60,7 @@ class HostComponent {
   lastCreated: { parentId: string | null; name: string } | null = null;
   lastRenamed: { id: string; name: string } | null = null;
   lastRemoved: string | null = null;
+  lastToggled: string | null = null;
 }
 
 describe('FolderTreeComponent', () => {
@@ -208,5 +210,132 @@ describe('FolderTreeComponent', () => {
     host.nodes.set([]);
     fixture.detectChanges();
     expect(element.querySelectorAll('[data-testid="folder-row"]')).toHaveLength(0);
+  });
+
+  // --- Fix round 1 -----------------------------------------------------
+
+  it('does not let Delete inside the rename input bubble to the row (would delete the folder)', () => {
+    const row = rowFor('colegio');
+    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    fixture.detectChanges();
+
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-name-input"] input',
+    )!;
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(host.lastRemoved).toBeNull();
+    expect(element.querySelector('[data-testid="folder-name-input"]')).not.toBeNull();
+  });
+
+  it('does not let a second F2 inside the rename input discard the in-progress draft', () => {
+    const row = rowFor('colegio');
+    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    fixture.detectChanges();
+
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-name-input"] input',
+    )!;
+    input.value = 'En progreso';
+    input.dispatchEvent(new Event('input'));
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    fixture.detectChanges();
+
+    const stillInput = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-name-input"] input',
+    )!;
+    expect(stillInput.value).toBe('En progreso');
+  });
+
+  it('emits select on Enter when a row is focused and not being edited', () => {
+    rowFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    expect(host.lastSelected).toBe('colegio');
+  });
+
+  it('emits select on Space when a row is focused and not being edited', () => {
+    rowFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true }));
+    expect(host.lastSelected).toBe('colegio');
+  });
+
+  it('emits toggle when a node is expanded via the keyboard, not just by click', () => {
+    document.body.appendChild(fixture.nativeElement);
+    try {
+      const item = rowFor('colegio').closest<HTMLElement>('[role="treeitem"]')!;
+      item.focus();
+      item.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+      fixture.detectChanges();
+
+      expect(host.lastToggled).toBe('colegio');
+      expect(rowFor('mate')).not.toBeNull();
+    } finally {
+      fixture.nativeElement.remove();
+    }
+  });
+
+  it('flips aria-expanded on the treeitem when a node is toggled', () => {
+    const item = rowFor('colegio').closest<HTMLElement>('[role="treeitem"]')!;
+    expect(item.getAttribute('aria-expanded')).toBe('false');
+
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-toggle"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+
+    expect(item.getAttribute('aria-expanded')).toBe('true');
+  });
+
+  it('closes the action menu on Escape and returns focus to its trigger', () => {
+    document.body.appendChild(fixture.nativeElement);
+    try {
+      const trigger = element.querySelector<HTMLButtonElement>(
+        '[data-testid="folder-menu"][data-folder-id="colegio"]',
+      )!;
+      trigger.click();
+      fixture.detectChanges();
+
+      const menu = element.querySelector('[role="menu"]')!;
+      menu.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+      fixture.detectChanges();
+
+      expect(element.querySelector('[role="menu"]')).toBeNull();
+      expect(document.activeElement).toBe(trigger);
+    } finally {
+      fixture.nativeElement.remove();
+    }
+  });
+
+  it('clicking "Renombrar" in the menu opens inline rename mode', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+    element.querySelector<HTMLButtonElement>('[data-testid="folder-action-rename"]')!.click();
+    fixture.detectChanges();
+
+    expect(element.querySelector('[data-testid="folder-name-input"]')).not.toBeNull();
+  });
+
+  it('clicking "Eliminar" in the menu emits remove', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+    element.querySelector<HTMLButtonElement>('[data-testid="folder-action-remove"]')!.click();
+
+    expect(host.lastRemoved).toBe('colegio');
+  });
+
+  it('keeps role="menuitem" on the actual focusable button for each menu action', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+
+    const removeButton = element.querySelector<HTMLButtonElement>(
+      '[data-testid="folder-action-remove"]',
+    )!;
+    expect(removeButton.tagName).toBe('BUTTON');
+    expect(removeButton.getAttribute('role')).toBe('menuitem');
   });
 });
