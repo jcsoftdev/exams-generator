@@ -25,6 +25,18 @@ export { GRADE_LEVEL_LABELS } from '../taxonomy/grade-level-labels';
  */
 export type { QuestionStatus, BankQuestionDto } from '@exams-generator/shared';
 
+/**
+ * Folder DTOs re-exported from `@exams-generator/shared` so the bank feature
+ * keeps a single import site for its wire contracts (same pattern as
+ * `BankQuestionDto` above).
+ */
+export type {
+  BankFolderNode,
+  BankFoldersResponse,
+  DeleteBankFolderResponse,
+} from '@exams-generator/shared';
+export { UNFILED_FOLDER_ID } from '@exams-generator/shared';
+
 export type QuestionOrigin = 'school' | 'ai' | 'central';
 
 /**
@@ -88,6 +100,8 @@ export interface BankQuestionFilters {
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly gradeLevel?: string;
+  /** Tenant folder scope. `UNFILED_FOLDER_ID` selects the tenant's own questions with no folder. */
+  readonly folderId?: string;
 }
 
 export interface CreateImageQuestionPayload {
@@ -97,6 +111,7 @@ export interface CreateImageQuestionPayload {
   readonly gradeLevel: string;
   readonly correctAnswer: string;
   readonly image: File;
+  readonly folderId?: string | null;
 }
 
 /** Task 6: payload for `POST /bank/questions/structured` (JSON, no file). */
@@ -108,6 +123,7 @@ export interface CreateStructuredQuestionPayload {
   readonly correctAnswer: string;
   readonly bodyTypst: string;
   readonly alternatives: readonly string[];
+  readonly folderId?: string | null;
 }
 
 /**
@@ -125,4 +141,5 @@ export interface UpdateQuestionPayload {
   readonly bodyTypst?: string;
   readonly alternatives?: readonly string[];
   readonly figureCode?: string;
+  readonly folderId?: string | null;
 }

@@ -3,6 +3,11 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
+  BankFolderNode,
+  BankFoldersResponse,
+  DeleteBankFolderResponse,
+} from '@exams-generator/shared';
+import {
   BankQuestion,
   BankQuestionFilters,
   BankTopicCount,
@@ -31,6 +36,9 @@ function buildFilterParams(filters: BankQuestionFilters): HttpParams {
   }
   if (filters.gradeLevel) {
     params = params.set('gradeLevel', filters.gradeLevel);
+  }
+  if (filters.folderId) {
+    params = params.set('folderId', filters.folderId);
   }
   return params;
 }
@@ -105,6 +113,9 @@ export class BankService {
     // a title in the bank list — the API already accepts this optional
     // field, so pass the picked file's own name through.
     formData.set('sourceName', payload.image.name);
+    if (payload.folderId) {
+      formData.set('folderId', payload.folderId);
+    }
 
     return this.http.post<{ id: string }>(
       `${environment.apiBaseUrl}/bank/questions/image`,
@@ -200,6 +211,34 @@ export class BankService {
     return this.http.post<{ id: string }>(
       `${environment.apiBaseUrl}/bank/questions/${id}/alternative-images`,
       formData,
+    );
+  }
+
+  /**
+   * The tenant's folder tree with per-folder counts. The FIRST call by a tenant
+   * that has never been seeded also triggers the server-side seeding, so this is
+   * slower exactly once, ever — and never for anyone else.
+   */
+  getFolders(): Observable<BankFoldersResponse> {
+    return this.http.get<BankFoldersResponse>(`${environment.apiBaseUrl}/bank/folders`);
+  }
+
+  createFolder(body: { name: string; parentId: string | null }): Observable<BankFolderNode> {
+    return this.http.post<BankFolderNode>(`${environment.apiBaseUrl}/bank/folders`, body);
+  }
+
+  /** Renames and/or moves. Omit a key to leave it alone; `parentId: null` moves to the root. */
+  updateFolder(
+    id: string,
+    patch: { name?: string; parentId?: string | null },
+  ): Observable<BankFolderNode> {
+    return this.http.patch<BankFolderNode>(`${environment.apiBaseUrl}/bank/folders/${id}`, patch);
+  }
+
+  /** Returns the counts the post-delete banner shows — the questions themselves are never deleted. */
+  deleteFolder(id: string): Observable<DeleteBankFolderResponse> {
+    return this.http.delete<DeleteBankFolderResponse>(
+      `${environment.apiBaseUrl}/bank/folders/${id}`,
     );
   }
 }
