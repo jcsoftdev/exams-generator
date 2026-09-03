@@ -82,13 +82,7 @@ async function main(): Promise<void> {
       const [topicRow] = await db
         .select({ id: topics.id, courseId: topics.courseId })
         .from(topics)
-        .where(
-          and(
-            inArray(topics.courseId, courseIds),
-            eq(topics.name, entry.topicName),
-            eq(topics.gradeLevel, entry.gradeLevel),
-          ),
-        );
+        .where(and(inArray(topics.courseId, courseIds), eq(topics.name, entry.topicName)));
       if (!topicRow) {
         throw new Error(`Topic '${entry.topicName}' not found in course '${entry.courseName}'`);
       }

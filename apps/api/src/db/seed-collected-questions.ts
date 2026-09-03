@@ -8,8 +8,9 @@ import { findUnescapedTypstMarkup } from "../modules/bank/domain/find-unescaped-
 import { prepareCollectedContent } from "../modules/bank/domain/prepare-collected-content";
 import { validateStructuredContent } from "../modules/bank/domain/validate-structured-content";
 import { isGradeLevel } from "../modules/exams/domain/value-objects/grade-level";
+import type { GradeLevel } from "../modules/exams/domain/value-objects/grade-level";
 import { db } from "./client";
-import { courses, questions, topics } from "./schema";
+import { courses, questions, topicGrades, topics } from "./schema";
 
 const DATA_DIR = join(__dirname, "data");
 const COLLECTED_DIR = join(DATA_DIR, "collected");
@@ -91,12 +92,20 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
   }
 
   const topicRows = await db
-    .select({ id: topics.id, courseId: topics.courseId, name: topics.name, gradeLevel: topics.gradeLevel })
+    .select({ id: topics.id, courseId: topics.courseId, name: topics.name })
     .from(topics);
   const topicIdByKey = new Map<string, string>();
   for (const row of topicRows) {
-    topicIdByKey.set(`${row.courseId}|${row.name}|${row.gradeLevel}`, row.id);
+    topicIdByKey.set(`${row.courseId}|${row.name}`, row.id);
   }
+
+  /**
+   * Grades this pass discovers on entries whose topic does not list them yet.
+   * Collected in memory and written once at the end, rather than one INSERT
+   * per entry: the corpus is ~64k entries over ~626 topics, so the set is tiny
+   * and the write is a single statement.
+   */
+  const discoveredGrades = new Set<string>();
 
   const existingHashRows = await db
     .select({ hash: questions.bodyHash })
@@ -177,11 +186,16 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
           throw new Error(`course not found: ${entry.courseName}`);
         }
         const topicId = courseIds
-          .map((courseId) => topicIdByKey.get(`${courseId}|${entry.topicName}|${entry.gradeLevel}`))
+          .map((courseId) => topicIdByKey.get(`${courseId}|${entry.topicName}`))
           .find(Boolean);
         if (!topicId) {
-          throw new Error(`topic not found: ${entry.topicName} (${entry.gradeLevel}) in ${entry.courseName}`);
+          throw new Error(`topic not found: ${entry.topicName} in ${entry.courseName}`);
         }
+        // The entry's grade is the QUESTION's axis and always lands on
+        // `questions.grade_level` below. If the taxonomy does not list it for
+        // this topic yet, add it — a collected question is evidence the topic
+        // is assessed at that grade.
+        discoveredGrades.add(`${topicId}|${entry.gradeLevel}`);
 
         // Scraped prose is NOT Typst markup — escape it before it ever
         // reaches a column the PDF template embeds verbatim. `bodyHash`
@@ -258,6 +272,18 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
   }
 
   await flush();
+
+  if (discoveredGrades.size > 0) {
+    await db
+      .insert(topicGrades)
+      .values(
+        [...discoveredGrades].map((key) => {
+          const [topicId, gradeLevel] = key.split("|") as [string, GradeLevel];
+          return { topicId, gradeLevel };
+        }),
+      )
+      .onConflictDoNothing({ target: [topicGrades.topicId, topicGrades.gradeLevel] });
+  }
 
   console.log(
     `[seed-collected-questions] ${ok} seeded, ${skipped} already existed, ${unprintable} unprintable, ${failed} failed (${fileCount} files).`,

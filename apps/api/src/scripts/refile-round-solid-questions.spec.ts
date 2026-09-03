@@ -13,8 +13,8 @@ import { refileRoundSolidQuestions } from "./refile-round-solid-questions";
 
 /**
  * Integration test against the real docker-compose Postgres: the script's job
- * IS the topic lookup (same course, same grade), so mocking the db would test
- * nothing that matters.
+ * IS the topic lookup (same course, `cuerpos-redondos` slug), so mocking the
+ * db would test nothing that matters.
  */
 describe("refileRoundSolidQuestions", () => {
   const suffix = randomUUID().replace(/-/g, "");
@@ -61,13 +61,13 @@ describe("refileRoundSolidQuestions", () => {
 
     const [plane] = await db
       .insert(topics)
-      .values({ courseId, name: `Triángulos ${suffix}`, slug: "triangulos", gradeLevel: "pre" })
+      .values({ courseId, name: `Triángulos ${suffix}`, slug: "triangulos" })
       .returning({ id: topics.id });
     planeTopicId = plane!.id;
 
     const [solid] = await db
       .insert(topics)
-      .values({ courseId, name: `Cuerpos Redondos ${suffix}`, slug: "cuerpos-redondos", gradeLevel: "pre" })
+      .values({ courseId, name: `Cuerpos Redondos ${suffix}`, slug: "cuerpos-redondos" })
       .returning({ id: topics.id });
     solidTopicId = solid!.id;
 
@@ -116,7 +116,7 @@ describe("refileRoundSolidQuestions", () => {
     expect(moved).toBe(0);
   });
 
-  it("leaves a question alone when its course has no cuerpos-redondos topic at that grade", async () => {
+  it("leaves a question alone when its course has no cuerpos-redondos topic", async () => {
     const [orphanCourse] = await db
       .insert(courses)
       .values({ name: `Geometría sin sólidos ${suffix}`, stage: "colegio" })
@@ -127,7 +127,6 @@ describe("refileRoundSolidQuestions", () => {
         courseId: orphanCourse!.id,
         name: `Triángulos ${suffix} b`,
         slug: "triangulos",
-        gradeLevel: "secundaria_1",
       })
       .returning({ id: topics.id });
 

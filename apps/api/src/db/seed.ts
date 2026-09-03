@@ -25,6 +25,7 @@ import {
   subtopics,
   syllabusWeekMaps,
   tenants,
+  topicGrades,
   topics,
   tracks,
   universities,
@@ -1756,9 +1757,6 @@ export async function seed(): Promise<void> {
   const tenantId = await seedDemoTenant();
   await seedDemoAdmin(tenantId);
   await seedBankSampleAdmin();
-  // Converge any legacy null-grade topics (seeded before the stage migration)
-  // to preuniversitario's single grade so the unique index dedupes on reseed.
-  await db.update(topics).set({ gradeLevel: "pre" }).where(isNull(topics.gradeLevel));
   await seedStage("escuela", ESCUELA_SYLLABUS);
   await seedStage("colegio", COLEGIO_SYLLABUS);
   await seedStage("preuniversitario", PREUNI_SYLLABUS);
@@ -1818,15 +1816,15 @@ export async function seed(): Promise<void> {
  * from every legacy/variant label (`mapsFrom`) to its canonical target.
  *
  * Topics are resolved manually (slug match, then name match, then insert)
- * rather than a single batched `onConflictDoUpdate` on `(courseId, slug,
- * gradeLevel)`: a canonical topic's `name` sometimes exactly matches an
- * already-seeded LEGACY row's name for the same `(courseId, gradeLevel)`
- * (e.g. `seedStage`'s raw "Divisibilidad" and the canonical topic of the
- * same name) — inserting a fresh row would then violate the OTHER unique
- * index (`topics_course_id_name_grade_idx`), which `ON CONFLICT (slug, ...)`
- * cannot catch. Adopting that legacy row in place (setting its `slug`)
- * instead of inserting a duplicate avoids the collision and doubles as
- * reconciliation for that one row.
+ * rather than a single batched `onConflictDoUpdate` on `(courseId, slug)`: a
+ * canonical topic's `name` sometimes exactly matches an already-seeded
+ * LEGACY row's name for the same `courseId` (e.g. `seedStage`'s raw
+ * "Divisibilidad" and the canonical topic of the same name) — inserting a
+ * fresh row would then violate the OTHER unique index
+ * (`topics_course_id_name_idx`), which `ON CONFLICT (slug, ...)` cannot
+ * catch. Adopting that legacy row in place (setting its `slug`) instead of
+ * inserting a duplicate avoids the collision and doubles as reconciliation
+ * for that one row.
  */
 async function seedCanonicalTaxonomy(): Promise<CanonicalIndex> {
   const file = loadCanonicalTaxonomy();
@@ -1838,7 +1836,7 @@ async function seedCanonicalTaxonomy(): Promise<CanonicalIndex> {
     const existingRows = await db
       .select({ id: topics.id, name: topics.name, slug: topics.slug })
       .from(topics)
-      .where(and(eq(topics.courseId, courseId), eq(topics.gradeLevel, "pre")));
+      .where(eq(topics.courseId, courseId));
 
     const existingBySlug = new Map(
       existingRows
@@ -1868,7 +1866,7 @@ async function seedCanonicalTaxonomy(): Promise<CanonicalIndex> {
 
       const [inserted] = await db
         .insert(topics)
-        .values({ courseId, name: topic.name, slug: topic.slug, gradeLevel: "pre" as GradeLevel })
+        .values({ courseId, name: topic.name, slug: topic.slug })
         .returning({ id: topics.id });
       if (!inserted) {
         throw new Error(
@@ -1876,6 +1874,16 @@ async function seedCanonicalTaxonomy(): Promise<CanonicalIndex> {
         );
       }
       topicIdBySlug.set(topic.slug, inserted.id);
+    }
+
+    // Every canonical topic is preuniversitario, i.e. taught at the single
+    // `pre` grade. Written here rather than inside the branches above so an
+    // ADOPTED legacy row (slug set on an existing topic) gets its grade too.
+    if (topicIdBySlug.size > 0) {
+      await db
+        .insert(topicGrades)
+        .values([...topicIdBySlug.values()].map((topicId) => ({ topicId, gradeLevel: "pre" as GradeLevel })))
+        .onConflictDoNothing({ target: [topicGrades.topicId, topicGrades.gradeLevel] });
     }
 
     const subtopicSeeds = courseEntry.topics.flatMap((topic) => {
@@ -2156,8 +2164,9 @@ async function seedBankSampleAdmin(): Promise<void> {
 
 /**
  * Seeds one stage's courses and topics. A course is unique by `(stage, name)`;
- * a topic is written once per grade it lists (`grades`), or once at grade `pre`
- * when it lists none (whole-stage / preuniversitario). Every insert is
+ * a topic is ONE row per `(course_id, name)`, and the grades it lists
+ * (`grades`) become rows in `topic_grades` — or the single `pre` grade when it
+ * lists none (whole-stage / preuniversitario). Every insert is
  * `onConflictDoNothing`, so reseeding is a no-op.
  */
 async function seedStage(stage: Stage, courseList: readonly SyllabusCourse[]): Promise<void> {
@@ -2177,13 +2186,29 @@ async function seedStage(stage: Stage, courseList: readonly SyllabusCourse[]): P
     }
 
     for (const topic of course.topics) {
-      const topicGrades: readonly GradeLevel[] = topic.grades ?? (["pre"] as const);
-      for (const gradeLevel of topicGrades) {
-        await db
-          .insert(topics)
-          .values({ courseId: courseRow.id, name: topic.name, gradeLevel })
-          .onConflictDoNothing({ target: [topics.courseId, topics.name, topics.gradeLevel] });
+      await db
+        .insert(topics)
+        .values({ courseId: courseRow.id, name: topic.name })
+        .onConflictDoNothing({ target: [topics.courseId, topics.name] });
+
+      // Read back rather than `.returning()`: `onConflictDoNothing` returns no
+      // row when the topic already existed, which is the steady state.
+      const [topicRow] = await db
+        .select({ id: topics.id })
+        .from(topics)
+        .where(and(eq(topics.courseId, courseRow.id), eq(topics.name, topic.name)));
+
+      if (!topicRow) {
+        throw new Error(
+          `Seed invariant violated: topic '${topic.name}' (${course.name}/${stage}) missing after insert`,
+        );
       }
+
+      const topicGradeList: readonly GradeLevel[] = topic.grades ?? (["pre"] as const);
+      await db
+        .insert(topicGrades)
+        .values(topicGradeList.map((gradeLevel) => ({ topicId: topicRow.id, gradeLevel })))
+        .onConflictDoNothing({ target: [topicGrades.topicId, topicGrades.gradeLevel] });
     }
   }
 }

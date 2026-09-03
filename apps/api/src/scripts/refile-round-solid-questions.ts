@@ -44,7 +44,6 @@ export async function refileRoundSolidQuestions(): Promise<{
       id: questions.id,
       bodyTypst: questions.bodyTypst,
       courseId: topics.courseId,
-      gradeLevel: topics.gradeLevel,
     })
     .from(questions)
     .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -65,13 +64,7 @@ export async function refileRoundSolidQuestions(): Promise<{
     const [target] = await db
       .select({ id: topics.id })
       .from(topics)
-      .where(
-        and(
-          eq(topics.courseId, row.courseId),
-          eq(topics.slug, TARGET_SLUG),
-          row.gradeLevel === null ? isNull(topics.gradeLevel) : eq(topics.gradeLevel, row.gradeLevel),
-        ),
-      );
+      .where(and(eq(topics.courseId, row.courseId), eq(topics.slug, TARGET_SLUG)));
 
     if (!target) {
       skipped++;

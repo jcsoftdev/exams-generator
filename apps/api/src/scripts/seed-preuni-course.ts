@@ -106,13 +106,7 @@ async function main(): Promise<void> {
     const [topicRow] = await db
       .select({ id: topics.id, courseId: topics.courseId })
       .from(topics)
-      .where(
-        and(
-          inArray(topics.courseId, courseIds),
-          eq(topics.name, topic.name),
-          eq(topics.gradeLevel, data.gradeLevel),
-        ),
-      );
+      .where(and(inArray(topics.courseId, courseIds), eq(topics.name, topic.name)));
 
     if (!topicRow) {
       for (const question of topic.questions) {

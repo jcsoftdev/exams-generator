@@ -1,8 +1,8 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level";
 import { db, pool } from "./client";
 import { runMigrations } from "./migrate";
-import { courses, gradeLevels, tenants, topics, users } from "./schema";
+import { courses, gradeLevels, tenants, topicGrades, topics, users } from "./schema";
 import { seed } from "./seed";
 
 const DEMO_TENANT_SLUG = "colegio-demo";
@@ -57,10 +57,27 @@ describe("seed idempotency", () => {
       expect(courseRows).toHaveLength(1);
 
       const topicRows = await db.select().from(topics).where(eq(topics.courseId, courseRows[0]!.id));
-      // Idempotency: topics exist and no (name, grade) pair is duplicated on the second seed run.
+      // One row per CONCEPT now: the key is the name alone, and a second seed
+      // run must not add a copy (it used to be `name:gradeLevel`, back when a
+      // topic existed once per grade).
       expect(topicRows.length).toBeGreaterThan(0);
-      const keys = topicRows.map((row) => `${row.name}:${row.gradeLevel}`);
-      expect(new Set(keys).size).toBe(topicRows.length);
+      const names = topicRows.map((row) => row.name);
+      expect(new Set(names).size).toBe(topicRows.length);
+
+      // The grades moved to `topic_grades`, and that table must not grow on
+      // the second run either — `onConflictDoNothing` on its composite PK.
+      const gradeRows = await db
+        .select()
+        .from(topicGrades)
+        .where(
+          inArray(
+            topicGrades.topicId,
+            topicRows.map((row) => row.id),
+          ),
+        );
+      expect(gradeRows.length).toBeGreaterThan(0);
+      const gradeKeys = gradeRows.map((row) => `${row.topicId}:${row.gradeLevel}`);
+      expect(new Set(gradeKeys).size).toBe(gradeRows.length);
     }
   },
   // `seed()` now also seeds the UNCP approximated weekly syllabus (19
