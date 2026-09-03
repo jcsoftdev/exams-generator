@@ -192,7 +192,11 @@ export class BankNewComponent {
   private folderTaxonomy: Partial<
     Record<
       Tab,
-      { readonly courseId: string; readonly topicId: string; readonly gradeLevel: string | null }
+      {
+        readonly courseId: string;
+        readonly topicId: string;
+        readonly gradeLevels: readonly string[];
+      }
     >
   > = {};
 
@@ -466,24 +470,27 @@ export class BankNewComponent {
    * therefore has to be applied here instead, the same shape
    * `resolveStructuredTaxonomy` uses for the extraction's own preselect.
    *
-   * Grado is only touched when the topic actually says which grade it is
-   * assessed at (`Topic.gradeLevels`); when it does not, Grado stays the
-   * teacher's to pick and the snapshot is what keeps Curso/Tema alive when
-   * she picks it.
-   *
-   * TODO(taxonomy-topic-grades task 8): `topic.gradeLevels[0]` is a
-   * placeholder for the "not in `gradeLevels` -> first grade" prefill rule
-   * the design doc (2026-09-03) describes — this task only keeps the model
-   * compiling without changing the single-grade behaviour below.
+   * Grado rule, now that a topic carries a LIST of grades: keep whatever the
+   * teacher already picked IF the topic is taught at it; otherwise (Grado
+   * empty, or a grade the topic is not taught at) take the topic's FIRST
+   * grade. A topic with no grades at all leaves Grado untouched — the snapshot
+   * is what keeps Curso/Tema alive when she picks one.
    */
   private prefillTaxonomyFrom(tab: Tab, topic: Topic): void {
     const gradeSignal = tab === 'photo' ? this.pGradeLevel : this.sGradeLevel;
     const courseSignal = tab === 'photo' ? this.pCourseId : this.sCourseId;
     const topicSignal = tab === 'photo' ? this.pTopicId : this.sTopicId;
 
-    const grade = topic.gradeLevels[0] ?? null;
+    const current = gradeSignal();
+    const grade =
+      current && topic.gradeLevels.includes(current) ? current : (topic.gradeLevels[0] ?? null);
+
     this.folderDerivedTaxonomy[tab] = true;
-    this.folderTaxonomy[tab] = { courseId: topic.courseId, topicId: topic.id, gradeLevel: grade };
+    this.folderTaxonomy[tab] = {
+      courseId: topic.courseId,
+      topicId: topic.id,
+      gradeLevels: topic.gradeLevels,
+    };
 
     if (grade && gradeSignal() !== grade) {
       // Setting Grado blanks Curso via `loadCoursesFor`, which then blanks
@@ -502,12 +509,11 @@ export class BankNewComponent {
 
   /**
    * The folder's Curso for this tab — `''` once the teacher has taken
-   * Curso/Tema over, and also once she has moved to a grade OTHER than the one
-   * the folder's topic is assessed at. The course catalog is split by
-   * educational stage, so the folder's course is simply not in the list she is
-   * now looking at: keeping it would leave `pCourseId` holding an id the
-   * dropdown cannot render and the API would reject, while `photoValid()`
-   * happily reported the form complete.
+   * Curso/Tema over, and also once she has moved to a grade the folder's topic
+   * is NOT taught at. The course catalog is split by educational stage, so the
+   * folder's course is simply not in the list she is now looking at: keeping it
+   * would leave `pCourseId` holding an id the dropdown cannot render and the
+   * API would reject, while `photoValid()` happily reported the form complete.
    */
   private folderCourseFor(tab: Tab): string {
     const folder = this.folderDerivedTaxonomy[tab] ? this.folderTaxonomy[tab] : undefined;
@@ -515,7 +521,7 @@ export class BankNewComponent {
       return '';
     }
     const grade = tab === 'photo' ? this.pGradeLevel() : this.sGradeLevel();
-    if (folder.gradeLevel && grade && folder.gradeLevel !== grade) {
+    if (folder.gradeLevels.length > 0 && grade && !folder.gradeLevels.includes(grade)) {
       return '';
     }
     return folder.courseId;

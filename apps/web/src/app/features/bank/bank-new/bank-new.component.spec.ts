@@ -22,9 +22,9 @@ const COURSES: Course[] = [
   { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
   { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
 ];
-const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }];
+const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevels: [] }];
 const TOPICS_C2: Topic[] = [
-  { id: 't2', name: 'Comprensión lectora', courseId: 'c2', gradeLevel: null },
+  { id: 't2', name: 'Comprensión lectora', courseId: 'c2', gradeLevels: [] },
 ];
 
 /**
@@ -33,8 +33,15 @@ const TOPICS_C2: Topic[] = [
  * `topicId` back to the `courseId` the Curso select needs.
  */
 const ALL_TOPICS: Topic[] = [
-  { id: 't1', name: 'Trigonometría', courseId: 'c1', gradeLevel: 'secundaria_4' },
-  { id: 't2', name: 'Otro', courseId: 'c1', gradeLevel: null },
+  // Two grades: the folder must preselect the FIRST one when Grado is empty.
+  {
+    id: 't1',
+    name: 'Trigonometría',
+    courseId: 'c1',
+    gradeLevels: ['secundaria_4', 'secundaria_5'],
+  },
+  // No grades at all: the folder leaves Grado to the teacher.
+  { id: 't2', name: 'Otro', courseId: 'c1', gradeLevels: [] },
 ];
 
 /** `trigo` carries a `topicId` (prefills Curso/Tema); `colegio` does not (Curso/Tema stay as today). */
@@ -60,7 +67,7 @@ const FOLDERS: BankFolderNode[] = [
     children: [],
   },
   {
-    // Topic `t2` carries NO `gradeLevel` — the shape `GET /topics` returns
+    // Topic `t2` carries an EMPTY `gradeLevels` — the shape `GET /topics` returns
     // today, and the case where the folder cannot imply Grado on its own.
     id: 'sin-grado',
     name: 'Sin grado',
@@ -746,10 +753,10 @@ describe('BankNewComponent', () => {
       fixture.detectChanges();
 
       const secondCourseTopics: Topic[] = [
-        { id: 't9', name: 'Tema de c2', courseId: 'c2', gradeLevel: null },
+        { id: 't9', name: 'Tema de c2', courseId: 'c2', gradeLevels: [] },
       ];
       const firstCourseTopics: Topic[] = [
-        { id: 't1', name: 'Tema de c1', courseId: 'c1', gradeLevel: null },
+        { id: 't1', name: 'Tema de c1', courseId: 'c1', gradeLevels: [] },
       ];
       secondCourse.next(secondCourseTopics);
       firstCourse.next(firstCourseTopics);
@@ -3222,6 +3229,42 @@ describe('BankNewComponent', () => {
       expect(component.pTopicId()).toBe('t1');
     });
 
+    it("preselects the topic's FIRST grade when Grado is still empty", async () => {
+      pickFolder('photo', 'trigo'); // topic 't1', grades ['secundaria_4', 'secundaria_5']
+      await settleEffects(fixture);
+
+      expect(component.pGradeLevel()).toBe('secundaria_4');
+      expect(component.pCourseId()).toBe('c1');
+      expect(component.pTopicId()).toBe('t1');
+    });
+
+    it('keeps a Grado the teacher already picked when the topic is taught at it', async () => {
+      set(fixture, 'pGradeLevel', 'secundaria_5');
+      await settleEffects(fixture);
+
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+
+      // 'secundaria_5' IS one of the topic's grades — no reason to move her.
+      expect(component.pGradeLevel()).toBe('secundaria_5');
+      expect(component.pTopicId()).toBe('t1');
+    });
+
+    it("moves Grado to the topic's first grade when the current one is not in the list", async () => {
+      set(fixture, 'pGradeLevel', 'pre');
+      await settleEffects(fixture);
+
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+
+      // 'pre' is not a grade this topic is taught at, so the folder wins —
+      // otherwise Curso/Tema would hold ids the (stage-scoped) dropdowns
+      // cannot render and the API would reject.
+      expect(component.pGradeLevel()).toBe('secundaria_4');
+      expect(component.pCourseId()).toBe('c1');
+      expect(component.pTopicId()).toBe('t1');
+    });
+
     it('keeps the folder and shows the mismatch hint when the teacher changes Tema by hand', async () => {
       pickFolder('photo', 'trigo');
       await settleEffects(fixture);
@@ -3361,7 +3404,7 @@ describe('BankNewComponent', () => {
     });
 
     it('keeps the folder Curso/Tema when the teacher picks Grado by hand afterwards', async () => {
-      // `sin-grado`'s topic carries no `gradeLevel`, so the folder leaves Grado
+      // `sin-grado`'s topic carries no grades, so the folder leaves Grado
       // to the teacher — and picking it must NOT wipe the Curso/Tema the
       // folder just set. That is the regression fix round 1 is about.
       pickFolder('photo', 'sin-grado');

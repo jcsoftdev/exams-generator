@@ -48,7 +48,7 @@ describe("TaxonomyService", () => {
     it("delegates to TaxonomyRepository.findTopics with no filter when both args are omitted", async () => {
       const { service, repository } = buildDeps();
       const topics: TopicListItem[] = [
-        { id: "topic-1", name: "Fracciones", courseId: "course-1", gradeLevel: null },
+        { id: "topic-1", name: "Fracciones", courseId: "course-1", gradeLevels: [] },
       ];
       repository.findTopics.mockResolvedValue(topics);
 
@@ -71,7 +71,7 @@ describe("TaxonomyService", () => {
     it("delegates to TaxonomyRepository.findTopicsByCourseIds with no gradeLevel when omitted", async () => {
       const { service, repository } = buildDeps();
       const topics: TopicListItem[] = [
-        { id: "topic-1", name: "Fracciones", courseId: "course-1", gradeLevel: null },
+        { id: "topic-1", name: "Fracciones", courseId: "course-1", gradeLevels: [] },
       ];
       repository.findTopicsByCourseIds.mockResolvedValue(topics);
 
