@@ -310,6 +310,13 @@ export class BankFoldersService {
     if (questionTenantId === null) {
       throw bankFolderError("central_question_has_no_folder");
     }
+    // Same guard `resolveParent`/`resolveFolderScope` apply: a malformed id can
+    // never be a real folder, in this tenant or any other, and letting it
+    // through would hit Postgres as an invalid `uuid` literal (500) instead of
+    // the stable code.
+    if (!isUuid(folderId)) {
+      throw bankFolderError("folder_not_found");
+    }
     const tenantId = this.requireTenantId(user);
     const folder = await this.repository.findFolder(tenantId, folderId);
     if (!folder) {

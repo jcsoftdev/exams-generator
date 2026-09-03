@@ -7,7 +7,8 @@ import request from "supertest";
 import { AppModule } from "../../../app.module";
 import { db, pool } from "../../../db/client";
 import { runMigrations } from "../../../db/migrate";
-import { courses, questionFolders, questions, tenants, topics, users } from "../../../db/schema";
+import { assets, courses, questionFolders, questions, tenants, topics, users } from "../../../db/schema";
+import { fakePng } from "../../../test-support/image-fixtures";
 import { TokenService } from "../../auth/token.service";
 
 /**
@@ -40,6 +41,8 @@ describe("Bank folders (e2e)", () => {
   const insertedQuestionIds: string[] = [];
   /** Question rows created through the HTTP write paths (`folderId on question write paths`) — cleaned up in `afterAll`. */
   const createdQuestionIds: string[] = [];
+  /** Asset rows the multipart image-upload tests create — cleaned up in `afterAll` before tenants go. */
+  const createdAssetIds: string[] = [];
 
   const suffix = randomUUID();
 
@@ -153,6 +156,16 @@ describe("Bank folders (e2e)", () => {
           const ids = [...insertedQuestionIds, ...createdQuestionIds];
           return ids.length > 0 ? db.delete(questions).where(inArray(questions.id, ids)) : Promise.resolve();
         },
+      ],
+      // Must run AFTER "delete inserted questions" (a question's
+      // `imageAssetId` points at these) and BEFORE "delete tenants" (an
+      // asset's `tenantId` points there too, no cascade on either FK).
+      [
+        "delete created assets",
+        () =>
+          createdAssetIds.length > 0
+            ? db.delete(assets).where(inArray(assets.id, createdAssetIds))
+            : Promise.resolve(),
       ],
       // Folders cascade off the tenants below, but deleting them explicitly
       // keeps the failure readable if a FK ever changes.
@@ -847,6 +860,70 @@ describe("Bank folders (e2e)", () => {
         .set("Authorization", `Bearer ${token}`);
     }
 
+    function imageRequest(token: string) {
+      return request(app.getHttpServer())
+        .post("/bank/questions/image")
+        .set("Authorization", `Bearer ${token}`);
+    }
+
+    function getQuestionRequest(token: string, id: string) {
+      return request(app.getHttpServer())
+        .get(`/bank/questions/${id}`)
+        .set("Authorization", `Bearer ${token}`);
+    }
+
+    /** Tracks the uploaded question AND its backing asset row, both cleaned up in `afterAll`. */
+    async function trackCreatedImageQuestion(id: string): Promise<void> {
+      createdQuestionIds.push(id);
+      const [row] = await db
+        .select({ imageAssetId: questions.imageAssetId })
+        .from(questions)
+        .where(eq(questions.id, id));
+      if (row?.imageAssetId) {
+        createdAssetIds.push(row.imageAssetId);
+      }
+    }
+
+    it("POST /bank/questions/image stores the folderId from a multipart form field", async () => {
+      const folder = await makeFolder(tokenB, { name: `Imagen ${randomUUID()}` });
+
+      const response = await imageRequest(tokenB)
+        .field("courseId", coursePreId)
+        .field("topicId", preTopicId)
+        .field("difficulty", "medium")
+        .field("gradeLevel", "secundaria_4")
+        .field("correctAnswer", "b")
+        .field("folderId", folder.id)
+        .attach("image", fakePng(), "q.png")
+        .expect(201);
+      await trackCreatedImageQuestion(response.body.id);
+
+      const [row] = await db
+        .select({ folderId: questions.folderId })
+        .from(questions)
+        .where(eq(questions.id, response.body.id));
+      expect(row!.folderId).toBe(folder.id);
+    });
+
+    it("POST /bank/questions/image treats a blank folderId form field as absent", async () => {
+      const response = await imageRequest(tokenB)
+        .field("courseId", coursePreId)
+        .field("topicId", preTopicId)
+        .field("difficulty", "medium")
+        .field("gradeLevel", "secundaria_4")
+        .field("correctAnswer", "b")
+        .field("folderId", "")
+        .attach("image", fakePng(), "q.png")
+        .expect(201);
+      await trackCreatedImageQuestion(response.body.id);
+
+      const [row] = await db
+        .select({ folderId: questions.folderId })
+        .from(questions)
+        .where(eq(questions.id, response.body.id));
+      expect(row!.folderId).toBeNull();
+    });
+
     it("POST /bank/questions/structured stores the folderId", async () => {
       const folder = await makeFolder(tokenB, { name: `Destino nuevo ${randomUUID()}` });
 
@@ -884,6 +961,10 @@ describe("Bank folders (e2e)", () => {
         .send({ folderId: folder.id })
         .expect(200);
       expect(response.body.folderId).toBe(folder.id);
+
+      // GET /bank/questions/:id must reflect the same write, not just the PATCH response.
+      const fetched = await getQuestionRequest(tokenB, questionId).expect(200);
+      expect(fetched.body.folderId).toBe(folder.id);
     });
 
     it("PATCH with folderId: null unfiles a question", async () => {
@@ -910,6 +991,34 @@ describe("Bank folders (e2e)", () => {
 
       const response = await patchQuestionRequest(tokenA, questionOfA)
         .send({ folderId: folderOfB.id })
+        .expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("PATCH rejects a non-uuid folderId with 404 folder_not_found instead of leaking a Postgres error", async () => {
+      const questionId = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: teacherBId,
+      });
+
+      const response = await patchQuestionRequest(tokenB, questionId).send({ folderId: "abc" }).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("POST /bank/questions/structured rejects a non-uuid folderId with 404 folder_not_found", async () => {
+      const response = await structuredRequest(tokenB)
+        .send({
+          courseId: coursePreId,
+          topicId: preTopicId,
+          difficulty: "medium",
+          gradeLevel: "secundaria_4",
+          bodyTypst: `Enunciado ${randomUUID()}`,
+          alternatives: ["a", "b", "c", "d"],
+          correctAnswer: "0",
+          folderId: "abc",
+        })
         .expect(404);
       expect(response.body).toMatchObject({ code: "folder_not_found" });
     });

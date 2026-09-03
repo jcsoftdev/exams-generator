@@ -60,6 +60,19 @@ export function parseIndexes(raw: string | string[] | undefined): number[] | und
   );
 }
 
+/**
+ * Shared by both creation routes so a blank `folderId` (a multipart form's
+ * empty field, or a JSON caller sending `""`) means the same thing on either
+ * one: no folder — never a literal empty-string id reaching the service.
+ * `undefined` (the key absent entirely) also normalizes to `null` here, since
+ * both `createImageQuestion`/`createStructuredQuestion` treat "unfiled" as
+ * the create-time default regardless of whether the caller omitted the key
+ * or sent it blank.
+ */
+function normalizeFolderId(raw: string | undefined): string | null {
+  return raw?.trim() ? raw.trim() : null;
+}
+
 interface CreateImageQuestionBody {
   readonly courseId?: string;
   readonly topicId?: string;
@@ -166,7 +179,7 @@ export class BankController {
       file,
       sourceUrl: body.sourceUrl,
       sourceName: body.sourceName,
-      folderId: body.folderId?.trim() ? body.folderId.trim() : null,
+      folderId: normalizeFolderId(body.folderId),
     });
   }
 
@@ -187,7 +200,7 @@ export class BankController {
       figureFingerprint: body.figureFingerprint,
       sourceUrl: body.sourceUrl,
       sourceName: body.sourceName,
-      folderId: body.folderId,
+      folderId: normalizeFolderId(body.folderId),
     });
   }
 
