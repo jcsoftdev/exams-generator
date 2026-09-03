@@ -7,6 +7,7 @@ export * from "./dto/jwt-payload.dto";
 export * from "./dto/me-response.dto";
 export * from "./dto/exam-version-job.dto";
 export * from "./domain/grade-level";
+export * from "./domain/bank-folder";
 export * from "./dto/exam.dto";
 export * from "./dto/bank-question.dto";
 export * from "./dto/dashboard.dto";

@@ -13,10 +13,6 @@
  * level never constrains, nor is constrained by, its difficulty — "hard" exists
  * at every grade, "1ro primaria" accepts every difficulty. Do not introduce
  * cross-validation between the two.
- *
- * Labels are deliberately NOT here. "1° primaria" is Spanish UI copy that only
- * the web renders; the API had a `STAGE_LABELS` map that nothing on the server
- * ever read.
  */
 export const GRADE_LEVELS = [
   "primaria_1",
@@ -60,4 +56,33 @@ export function stageForGrade(grade: GradeLevel): Stage {
     return "preuniversitario";
   }
   return grade.startsWith("secundaria_") ? "colegio" : "escuela";
+}
+
+/**
+ * Spanish labels for the catalog. These USED to live only in the web, with a
+ * note here saying labels were deliberately excluded because "the API had a
+ * `STAGE_LABELS` map that nothing on the server ever read". That stopped being
+ * true: the question-folder seeder generates USER-VISIBLE folder names
+ * server-side (`folderNameForTopic`), and the seeded name has to be
+ * byte-identical to the suffix the bank tree already renders in the browser.
+ * One map, two consumers, no drift.
+ */
+export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
+  primaria_1: "1° primaria",
+  primaria_2: "2° primaria",
+  primaria_3: "3° primaria",
+  primaria_4: "4° primaria",
+  primaria_5: "5° primaria",
+  primaria_6: "6° primaria",
+  secundaria_1: "1° secundaria",
+  secundaria_2: "2° secundaria",
+  secundaria_3: "3° secundaria",
+  secundaria_4: "4° secundaria",
+  secundaria_5: "5° secundaria",
+  pre: "Pre-admisión",
+};
+
+/** Falls back to the raw code so an unknown/legacy grade renders as itself instead of `undefined`. */
+export function gradeLevelLabel(gradeLevel: string): string {
+  return GRADE_LEVEL_LABELS[gradeLevel as GradeLevel] ?? gradeLevel;
 }
