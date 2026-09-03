@@ -537,9 +537,7 @@ describe('BankListComponent', () => {
     it('creates a ROOT folder through the "+ Nueva carpeta" button', () => {
       const { compiled, fixture, createdFolders } = setup();
 
-      (
-        compiled.querySelector('[data-testid="folder-create-root"] button') as HTMLElement
-      ).click();
+      (compiled.querySelector('[data-testid="folder-create-root"] button') as HTMLElement).click();
       fixture.detectChanges();
 
       const input = compiled.querySelector<HTMLInputElement>(
