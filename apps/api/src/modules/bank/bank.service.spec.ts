@@ -74,6 +74,7 @@ function buildDeps() {
 
   const folders = {
     resolveFolderScope: jest.fn(),
+    assertAssignableFolder: jest.fn(),
   } as unknown as jest.Mocked<BankFoldersService>;
 
   const service = new BankService(repository, storage, pdfCompiler, folders);

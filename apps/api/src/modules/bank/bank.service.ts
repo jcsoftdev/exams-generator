@@ -59,6 +59,7 @@ export interface CreateImageQuestionDto {
   /** Provenance, filled by the seeders that ingest published exams. */
   readonly sourceUrl?: string | undefined;
   readonly sourceName?: string | undefined;
+  readonly folderId?: string | null;
 }
 
 /** A sha256 digest as the API accepts it: 64 lowercase hex characters. */
@@ -85,6 +86,7 @@ export interface CreateStructuredQuestionDto {
   /** Provenance, filled by the seeders that ingest published exams. */
   readonly sourceUrl?: string | undefined;
   readonly sourceName?: string | undefined;
+  readonly folderId?: string | null;
 }
 
 /**
@@ -101,6 +103,7 @@ export interface EditQuestionDto {
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
+  readonly folderId?: string | null;
 }
 
 export interface ListQuestionsQuery {
@@ -152,6 +155,7 @@ export class BankService {
 
   async createImageQuestion(user: AuthTokenPayload, dto: CreateImageQuestionDto): Promise<{ id: string }> {
     assertCanManageTenant(user.role, user.tenantId);
+    await this.folders.assertAssignableFolder(user, user.tenantId, dto.folderId ?? null);
 
     const validation = validateCreateImageQuestionInput({
       courseId: dto.courseId,
@@ -204,6 +208,7 @@ export class BankService {
       sourceName: dto.sourceName,
       createdBy: user.sub,
       image: { storageKey, mime },
+      folderId: dto.folderId ?? null,
     });
   }
 
@@ -220,6 +225,7 @@ export class BankService {
     dto: CreateStructuredQuestionDto,
   ): Promise<{ id: string }> {
     assertCanManageTenant(user.role, user.tenantId);
+    await this.folders.assertAssignableFolder(user, user.tenantId, dto.folderId ?? null);
 
     const validation = validateCreateStructuredQuestionInput({
       courseId: dto.courseId,
@@ -259,6 +265,7 @@ export class BankService {
       sourceUrl: dto.sourceUrl,
       sourceName: dto.sourceName,
       createdBy: user.sub,
+      folderId: dto.folderId ?? null,
     });
   }
 
@@ -489,6 +496,30 @@ export class BankService {
    */
   async editQuestion(user: AuthTokenPayload, id: string, dto: EditQuestionDto): Promise<QuestionListItem> {
     const question = await this.requireManageableQuestion(user, id);
+
+    /**
+     * `folderId` is applied as its own UPDATE, before the type-specific branch,
+     * for two reasons: it is the only field that applies to BOTH question types,
+     * and its validation (404 for another tenant's folder, 422 for a central
+     * question) has to run before a Typst compile spends time on a request that
+     * is going to be rejected anyway. `undefined` means "not mentioned" and is
+     * left untouched — only a present key moves the question.
+     */
+    const changingFolder = Object.prototype.hasOwnProperty.call(dto, "folderId");
+    if (changingFolder) {
+      const folderId = dto.folderId ?? null;
+      await this.folders.assertAssignableFolder(user, question.tenantId, folderId);
+      const filed = await this.repository.setQuestionFolder(id, user.tenantId, folderId);
+      if (!filed) {
+        throw new NotFoundException(`Question not found: ${id}`);
+      }
+      // A folder-only PATCH has nothing else to do — the type branches below
+      // would re-validate content the caller never sent.
+      if (Object.keys(dto).filter((key) => key !== "folderId").length === 0) {
+        return filed;
+      }
+    }
+
     if (question.type === "image") {
       return this.editImageQuestion(user, id, dto);
     }

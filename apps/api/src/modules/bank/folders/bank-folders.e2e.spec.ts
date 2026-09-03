@@ -38,6 +38,8 @@ describe("Bank folders (e2e)", () => {
 
   /** Real question rows the counts test inserts directly via Drizzle — cleaned up in `afterAll`. */
   const insertedQuestionIds: string[] = [];
+  /** Question rows created through the HTTP write paths (`folderId on question write paths`) — cleaned up in `afterAll`. */
+  const createdQuestionIds: string[] = [];
 
   const suffix = randomUUID();
 
@@ -147,10 +149,10 @@ describe("Bank folders (e2e)", () => {
       // would fail the FK, not just leave a dangling reference.
       [
         "delete inserted questions",
-        () =>
-          insertedQuestionIds.length > 0
-            ? db.delete(questions).where(inArray(questions.id, insertedQuestionIds))
-            : Promise.resolve(),
+        () => {
+          const ids = [...insertedQuestionIds, ...createdQuestionIds];
+          return ids.length > 0 ? db.delete(questions).where(inArray(questions.id, ids)) : Promise.resolve();
+        },
       ],
       // Folders cascade off the tenants below, but deleting them explicitly
       // keeps the failure readable if a FK ever changes.
@@ -829,6 +831,116 @@ describe("Bank folders (e2e)", () => {
 
       const response = await patchFolderRequest(tokenB, folder.id).send({ parentId: "abc" }).expect(404);
       expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+  });
+
+  describe("folderId on question write paths", () => {
+    function structuredRequest(token: string) {
+      return request(app.getHttpServer())
+        .post("/bank/questions/structured")
+        .set("Authorization", `Bearer ${token}`);
+    }
+
+    function patchQuestionRequest(token: string, id: string) {
+      return request(app.getHttpServer())
+        .patch(`/bank/questions/${id}`)
+        .set("Authorization", `Bearer ${token}`);
+    }
+
+    it("POST /bank/questions/structured stores the folderId", async () => {
+      const folder = await makeFolder(tokenB, { name: `Destino nuevo ${randomUUID()}` });
+
+      const created = await structuredRequest(tokenB)
+        .send({
+          courseId: coursePreId,
+          topicId: preTopicId,
+          difficulty: "medium",
+          gradeLevel: "secundaria_4",
+          bodyTypst: `Enunciado ${randomUUID()}`,
+          alternatives: ["a", "b", "c", "d"],
+          correctAnswer: "0",
+          folderId: folder.id,
+        })
+        .expect(201);
+      createdQuestionIds.push(created.body.id);
+
+      const [row] = await db
+        .select({ folderId: questions.folderId })
+        .from(questions)
+        .where(eq(questions.id, created.body.id));
+      expect(row!.folderId).toBe(folder.id);
+    });
+
+    it("PATCH /bank/questions/:id moves a question into a folder", async () => {
+      const folder = await makeFolder(tokenB, { name: `Mudanza ${randomUUID()}` });
+      const questionId = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: teacherBId,
+      });
+
+      const response = await patchQuestionRequest(tokenB, questionId)
+        .send({ folderId: folder.id })
+        .expect(200);
+      expect(response.body.folderId).toBe(folder.id);
+    });
+
+    it("PATCH with folderId: null unfiles a question", async () => {
+      const folder = await makeFolder(tokenB, { name: `Salida ${randomUUID()}` });
+      const questionId = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+      });
+
+      const response = await patchQuestionRequest(tokenB, questionId).send({ folderId: null }).expect(200);
+      expect(response.body.folderId).toBeNull();
+    });
+
+    it("rejects a folder from another tenant with 404 folder_not_found", async () => {
+      const folderOfB = await makeFolder(tokenB, { name: `De B ${randomUUID()}` });
+      const questionOfA = await insertQuestion({
+        tenantId: tenantAId,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: teacherAId,
+      });
+
+      const response = await patchQuestionRequest(tokenA, questionOfA)
+        .send({ folderId: folderOfB.id })
+        .expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("rejects filing a CENTRAL question with 422 central_question_has_no_folder", async () => {
+      const centralQuestionId = await insertQuestion({
+        tenantId: null,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: staffUserId,
+      });
+
+      const response = await patchQuestionRequest(staffToken, centralQuestionId)
+        .send({ folderId: randomUUID() })
+        .expect(422);
+      expect(response.body).toMatchObject({ code: "central_question_has_no_folder" });
+    });
+
+    it("leaves folderId alone when the PATCH body does not mention it", async () => {
+      const folder = await makeFolder(tokenB, { name: `Estable ${randomUUID()}` });
+      const questionId = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+      });
+
+      const response = await patchQuestionRequest(tokenB, questionId)
+        .send({ difficulty: "hard" })
+        .expect(200);
+      expect(response.body.folderId).toBe(folder.id);
     });
   });
 

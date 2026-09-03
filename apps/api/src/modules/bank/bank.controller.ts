@@ -71,6 +71,7 @@ interface CreateImageQuestionBody {
   /** Provenance of a seeded question: exact document URL and a readable label. */
   readonly sourceUrl?: string;
   readonly sourceName?: string;
+  readonly folderId?: string;
 }
 
 interface CreateStructuredQuestionBody {
@@ -87,6 +88,7 @@ interface CreateStructuredQuestionBody {
   /** Provenance of a seeded question: exact document URL and a readable label. */
   readonly sourceUrl?: string;
   readonly sourceName?: string;
+  readonly folderId?: string;
 }
 
 /**
@@ -103,6 +105,7 @@ interface EditDraftQuestionBody {
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
+  readonly folderId?: string | null;
 }
 
 /**
@@ -163,6 +166,7 @@ export class BankController {
       file,
       sourceUrl: body.sourceUrl,
       sourceName: body.sourceName,
+      folderId: body.folderId?.trim() ? body.folderId.trim() : null,
     });
   }
 
@@ -183,6 +187,7 @@ export class BankController {
       figureFingerprint: body.figureFingerprint,
       sourceUrl: body.sourceUrl,
       sourceName: body.sourceName,
+      folderId: body.folderId,
     });
   }
 
@@ -323,6 +328,9 @@ export class BankController {
       topicId: body.topicId,
       difficulty: body.difficulty,
       gradeLevel: body.gradeLevel,
+      ...(Object.prototype.hasOwnProperty.call(body ?? {}, "folderId")
+        ? { folderId: body.folderId ?? null }
+        : {}),
     });
   }
 

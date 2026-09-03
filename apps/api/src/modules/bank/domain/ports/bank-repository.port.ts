@@ -32,6 +32,8 @@ export interface CreateImageQuestionRecord {
     readonly width?: number;
     readonly height?: number;
   };
+  /** Tenant folder this question is filed under, or `null`/absent for unfiled. Never set on a central question. */
+  readonly folderId?: string | null;
 }
 
 export interface CreateStructuredQuestionRecord {
@@ -62,6 +64,8 @@ export interface CreateStructuredQuestionRecord {
   readonly status?: QuestionStatus;
   /** Defaults to `false`. `true` only for AI-generated drafts (Lane D3). */
   readonly aiGenerated?: boolean;
+  /** Tenant folder this question is filed under, or `null`/absent for unfiled. Never set on a central question. */
+  readonly folderId?: string | null;
 }
 
 export interface UpdateStructuredQuestionRecord {
@@ -109,11 +113,14 @@ export interface QuestionListItem {
   readonly sourceName: string | null;
   /**
    * The tenant folder this question is filed under, or `null` (unfiled, or a
-   * central-bank question). Selected by `listQuestions` and `findQuestionById`
-   * — the two read paths `BankQuestionDto.folderId` is documented to always
-   * carry. The three update-returning methods below (`updateStructuredQuestion`
-   * and friends) do not yet select it — same pre-existing gap `usedInExamCount`
-   * has on those paths, out of scope here.
+   * central-bank question). Selected by `listQuestions`, `findQuestionById`,
+   * `setQuestionFolder`, `updateStructuredQuestionAndTaxonomy` and
+   * `updateImageQuestionTaxonomyAndCorrectAnswer` — every path
+   * `BankQuestionDto.folderId` is documented to always carry, including
+   * `PATCH /bank/questions/:id`'s response. The plain `updateStructuredQuestion`
+   * (the Lane D3 AI-review overwrite, not reached by `editQuestion`) does not
+   * yet select it — same pre-existing gap `usedInExamCount` has there, out of
+   * scope here.
    */
   readonly folderId: string | null;
 }
@@ -195,6 +202,17 @@ export interface BankRepositoryPort {
    */
   countByCourseAndTopic(filter: QuestionListFilter): Promise<BankTopicQuestionCount[]>;
   findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined>;
+  /**
+   * Files/unfiles a question, tenant-scoped. Separate from
+   * `updateStructuredQuestionAndTaxonomy` on purpose: filing applies to BOTH
+   * question types (image and structured), while that method is the structured
+   * content path and has a Typst compile in front of it.
+   */
+  setQuestionFolder(
+    id: string,
+    tenantId: string | null,
+    folderId: string | null,
+  ): Promise<QuestionListItem | undefined>;
   /**
    * Scoped to the SAME `tenantId` the new row would be written to (not the
    * central+tenant visibility OR) — a duplicate only matters within the

@@ -178,6 +178,7 @@ export class BankRepository implements BankRepositoryPort {
           sourceUrl: record.sourceUrl,
           sourceName: record.sourceName,
           createdBy: record.createdBy,
+          folderId: record.folderId ?? null,
         })
         .returning({ id: questions.id });
 
@@ -214,6 +215,7 @@ export class BankRepository implements BankRepositoryPort {
         correctAnswer: record.correctAnswer,
         createdBy: record.createdBy,
         aiGenerated: record.aiGenerated ?? false,
+        folderId: record.folderId ?? null,
       })
       .returning({ id: questions.id });
 
@@ -411,6 +413,33 @@ export class BankRepository implements BankRepositoryPort {
   }
 
   /**
+   * Files/unfiles a question, tenant-scoped. Separate from
+   * `updateStructuredQuestionAndTaxonomy` on purpose: filing applies to BOTH
+   * question types (image and structured), while that method is the structured
+   * content path and has a Typst compile in front of it.
+   */
+  async setQuestionFolder(
+    id: string,
+    tenantId: string | null,
+    folderId: string | null,
+  ): Promise<QuestionListItem | undefined> {
+    const visibility = tenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const [row] = await this.db
+      .update(questions)
+      .set({ folderId })
+      .where(and(eq(questions.id, id), visibility))
+      .returning({ id: questions.id });
+
+    if (!row) {
+      return undefined;
+    }
+    return this.findQuestionById(id, tenantId);
+  }
+
+  /**
    * Resolves the human-readable course/topic names the AI prompt needs
    * (`QuestionGeneratorPort.generate()` takes `course`/`topic` as free text,
    * see design doc §5.2) from the client-supplied ids. Returns `undefined`
@@ -605,6 +634,7 @@ export class BankRepository implements BankRepositoryPort {
         figureCode: questions.figureCode,
         sourceName: questions.sourceName,
         usedInExamCount,
+        folderId: questions.folderId,
       };
 
       const [row] = await tx
@@ -698,6 +728,7 @@ export class BankRepository implements BankRepositoryPort {
       // thing a list row can show about it beyond the answer letter.
       sourceName: questions.sourceName,
       usedInExamCount,
+      folderId: questions.folderId,
     };
 
     // Nothing to change: still verify the row exists+is visible (so the caller

@@ -287,4 +287,33 @@ export class BankFoldersService {
     }
     return { unfiled: false, folderId: folder.id, folderTopicId: folder.topicId };
   }
+
+  /**
+   * The two rules that gate putting a question INTO a folder.
+   *
+   * 1. A central-bank question (`tenantId === null`) can never carry one:
+   *    folders are per-tenant, the central bank is shared, and a shared row
+   *    pointing at one school's cabinet is meaningless. 422, because the
+   *    request is well-formed and the caller may well be allowed to edit the
+   *    question — it is the COMBINATION that is impossible.
+   * 2. The folder must belong to the caller's tenant. 404, not 403: a folder id
+   *    must not be usable to probe another school's structure.
+   */
+  async assertAssignableFolder(
+    user: AuthTokenPayload,
+    questionTenantId: string | null,
+    folderId: string | null,
+  ): Promise<void> {
+    if (folderId === null) {
+      return;
+    }
+    if (questionTenantId === null) {
+      throw bankFolderError("central_question_has_no_folder");
+    }
+    const tenantId = this.requireTenantId(user);
+    const folder = await this.repository.findFolder(tenantId, folderId);
+    if (!folder) {
+      throw bankFolderError("folder_not_found");
+    }
+  }
 }
