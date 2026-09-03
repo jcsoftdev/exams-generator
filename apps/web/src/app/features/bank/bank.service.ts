@@ -10,7 +10,6 @@ import {
 import {
   BankQuestion,
   BankQuestionFilters,
-  BankTopicCount,
   CreateImageQuestionPayload,
   CreateStructuredQuestionPayload,
   PagedQuestions,
@@ -18,10 +17,8 @@ import {
 } from './bank.models';
 
 /**
- * The taxonomy/difficulty query params shared by every read of the bank:
- * the unpaginated list, the paginated list, and the tree summary. Extracted
- * so the three can never drift — the tree's counts and the per-topic fetch
- * that fills them in MUST be asking the server the same question.
+ * The taxonomy/difficulty/folder query params shared by every read of the
+ * bank that filters by them.
  */
 function buildFilterParams(filters: BankQuestionFilters): HttpParams {
   let params = new HttpParams();
@@ -53,19 +50,6 @@ function buildFilterParams(filters: BankQuestionFilters): HttpParams {
 @Injectable({ providedIn: 'root' })
 export class BankService {
   private readonly http = inject(HttpClient);
-
-  /**
-   * Per-topic question counts (`GET /bank/questions/summary`) — the skeleton
-   * the bank tree renders on entry: every course and topic with its real
-   * total, and zero question payload. The filters are the same ones
-   * `listQuestionsPaged` takes, so a topic's `total` is exactly what
-   * expanding that topic will fetch.
-   */
-  getQuestionCounts(filters: BankQuestionFilters = {}): Observable<BankTopicCount[]> {
-    return this.http.get<BankTopicCount[]>(`${environment.apiBaseUrl}/bank/questions/summary`, {
-      params: buildFilterParams(filters),
-    });
-  }
 
   /**
    * S6: `GET /bank/questions` with `page`/`pageSize` params, returns

@@ -68,27 +68,6 @@ export function questionOrigin(question: BankQuestion): QuestionOrigin {
   return question.aiGenerated ? 'ai' : 'school';
 }
 
-/**
- * One row of `GET /bank/questions/summary` — mirrors `BankTopicQuestionCount`
- * in apps/api/src/modules/bank/domain/ports/bank-repository.port.ts.
- *
- * This is what the bank tree loads on entry INSTEAD of the question list:
- * enough to render Curso -> Tema with real counts, and not one byte of
- * question payload. `total` is the count under the SAME filters the summary
- * request carried, so it always equals what fetching that topic returns.
- *
- * `gradeLevel` is the TOPIC's own grade from the taxonomy (`topics.gradeLevel`
- * on the API), never derived from any question — it lets the bank tree label
- * two same-named topics by grade WITHOUT expanding either one (D2b). `null`
- * means the topic applies to the whole stage (unscoped).
- */
-export interface BankTopicCount {
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly total: number;
-  readonly gradeLevel: string | null;
-}
-
 /** S6: paginated envelope for `GET /bank/questions?page=&pageSize=`. */
 export interface PagedQuestions {
   readonly items: readonly BankQuestion[];
