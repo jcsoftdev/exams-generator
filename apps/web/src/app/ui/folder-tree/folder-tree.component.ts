@@ -1,4 +1,4 @@
-import { CdkTreeModule } from '@angular/cdk/tree';
+import { CdkTree, CdkTreeModule } from '@angular/cdk/tree';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -9,6 +9,7 @@ import {
   output,
   signal,
   TrackByFunction,
+  viewChild,
 } from '@angular/core';
 import { ChevronDown, ChevronRight, LucideAngularModule, MoreHorizontal } from 'lucide-angular';
 import { InputComponent } from '../input/input.component';
@@ -281,6 +282,15 @@ export class FolderTreeComponent {
   /** Same reasoning one layer down: let the CDK REUSE a row whose id it already rendered instead of tearing it out. */
   protected readonly trackNodeById: TrackByFunction<FolderTreeNode> = (_index, node) => node.id;
 
+  /**
+   * The `#tree` template reference, read from the class — same instance the
+   * template already reads for `tree.isExpanded(node)`. Used by
+   * `startCreating` to programmatically EXPAND a collapsed node (see its
+   * doc): the template variable alone can't be reached from a `(click)`
+   * handler defined on the class.
+   */
+  private readonly treeRef = viewChild<CdkTree<FolderTreeNode>>('tree');
+
   private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
 
   /**
@@ -427,12 +437,27 @@ export class FolderTreeComponent {
     this.editingId.set(node.id);
   }
 
+  /**
+   * UX fix: a subfolder created under a COLLAPSED node used to be invisible
+   * — the "Nueva subcarpeta" input opened, the teacher typed a name and
+   * pressed Enter, and nothing on screen showed where it landed until she
+   * separately expanded the parent. Expanding it here, the moment the create
+   * editor opens, means the new row is already inside an open branch by the
+   * time it exists. Only expandable nodes (`children.length > 0`) can even
+   * BE collapsed — a leaf has no toggle to begin with — and `isExpanded`
+   * guards against re-collapsing (`CdkTree.expand` is not idempotent-safe to
+   * assume about) an already-open one.
+   */
   protected startCreating(node: FolderTreeNode): void {
     this.menuFor.set(null);
     this.editingId.set(null);
     this.submitted.set(null);
     this.draftName.set('');
     this.creatingUnder.set(node.id);
+    const tree = this.treeRef();
+    if (tree && node.children.length > 0 && !tree.isExpanded(node)) {
+      tree.expand(node);
+    }
   }
 
   protected cancelEditing(): void {

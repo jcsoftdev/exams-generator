@@ -246,6 +246,24 @@ describe('FolderTreeComponent', () => {
     expect(host.lastCreated).toEqual({ parentId: 'colegio', name: 'Subcarpeta' });
   });
 
+  // UX fix: creating a subfolder under a COLLAPSED node used to leave the new
+  // folder invisible until the teacher separately expanded the parent — the
+  // "Nueva subcarpeta" input opened, but nothing showed where it would land.
+  it('auto-expands a collapsed node when a subfolder is created under it', () => {
+    expect(rowFor('mate')).toBeNull();
+
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-menu"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+    element.querySelector<HTMLButtonElement>('[data-testid="folder-action-create"]')!.click();
+    fixture.detectChanges();
+
+    const item = rowFor('colegio').closest<HTMLElement>('[role="treeitem"]')!;
+    expect(item.getAttribute('aria-expanded')).toBe('true');
+    expect(rowFor('mate')).not.toBeNull();
+  });
+
   it('renders an empty tree without throwing', () => {
     host.nodes.set([]);
     fixture.detectChanges();
