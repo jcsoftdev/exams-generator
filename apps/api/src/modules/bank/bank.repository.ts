@@ -263,6 +263,7 @@ export class BankRepository implements BankRepositoryPort {
       // thing a list row can show about it beyond the answer letter.
       sourceName: questions.sourceName,
       usedInExamCount,
+      folderId: questions.folderId,
     };
 
     // Newest first, with `id` breaking ties. Both halves are load-bearing.
@@ -369,6 +370,7 @@ export class BankRepository implements BankRepositoryPort {
         figureCode: questions.figureCode,
         sourceName: questions.sourceName,
         usedInExamCount,
+        folderId: questions.folderId,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))

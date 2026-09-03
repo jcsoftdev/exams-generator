@@ -107,6 +107,15 @@ export interface QuestionListItem {
   readonly figureCode: string | null;
   /** Provenance, when the question came from a seeded source. */
   readonly sourceName: string | null;
+  /**
+   * The tenant folder this question is filed under, or `null` (unfiled, or a
+   * central-bank question). Selected by `listQuestions` and `findQuestionById`
+   * — the two read paths `BankQuestionDto.folderId` is documented to always
+   * carry. The three update-returning methods below (`updateStructuredQuestion`
+   * and friends) do not yet select it — same pre-existing gap `usedInExamCount`
+   * has on those paths, out of scope here.
+   */
+  readonly folderId: string | null;
 }
 
 export interface QuestionListFilter {
