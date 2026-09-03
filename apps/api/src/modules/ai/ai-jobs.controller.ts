@@ -12,7 +12,7 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import { Response } from "express";
-import { filter } from "rxjs";
+import { concatMap, filter, from } from "rxjs";
 import { clampPagination } from "../../common/pagination.util";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { Throttle } from "@nestjs/throttler";
@@ -113,13 +113,17 @@ export class AiJobsController {
       return;
     }
 
-    const subscription = this.events.updates$.pipe(filter((jobId) => jobId === id)).subscribe(async () => {
-      const job = await this.service.get(user, id);
-      writeJob(job);
-      if (TERMINAL_STATUSES.includes(job.status)) {
-        res.end();
-      }
-    });
+    const subscription = this.events.updates$
+      .pipe(
+        filter((jobId) => jobId === id),
+        concatMap(() => from(this.service.get(user, id))),
+      )
+      .subscribe((job) => {
+        writeJob(job);
+        if (TERMINAL_STATUSES.includes(job.status)) {
+          res.end();
+        }
+      });
 
     res.on("close", () => subscription.unsubscribe());
   }

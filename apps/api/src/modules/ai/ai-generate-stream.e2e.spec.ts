@@ -92,7 +92,6 @@ describeIfTypst("POST /ai/questions/generate/stream (e2e)", () => {
       try {
         await step();
       } catch (err) {
-        // eslint-disable-next-line no-console
         console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
       }
     }

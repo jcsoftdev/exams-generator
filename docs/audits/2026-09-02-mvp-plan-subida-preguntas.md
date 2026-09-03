@@ -6,7 +6,7 @@
 
 ## Fase 0 — cerrar lo que ya está hecho (hoy)
 
-- [ ] Commit de la rama actual: soporte DeepSeek (`AI_RESPONSE_FORMAT`, `AI_THINKING`, errores del proveedor con cuerpo, compose y `env.example`). Tests 1304/1304, typecheck limpio.
+- [x] Commit de la rama actual (`836e5c5`): soporte DeepSeek (`AI_RESPONSE_FORMAT`, `AI_THINKING`, errores del proveedor con cuerpo, compose y `env.example`). Tests 1304/1304, typecheck limpio.
 - [ ] Limpiar el `.env` local: borrar `AI_MODEL=deepseek-chat` y el `AI_VISION_MODEL` de nemotron duplicados arriba.
 - [ ] Dokploy: cargar las seis variables `AI_*` (base url, key, model, vision model, response format, thinking=disabled).
 - [ ] Borrar las tres preguntas de prueba de la DB local (dos "Genética y herencia" de biología y el circuito `ce72935a-…`), o dejarlas como ejemplos.
