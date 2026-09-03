@@ -18,6 +18,7 @@ import {
   questions,
   syllabusWeekMaps,
   tenants,
+  topicGrades,
   topics,
 } from "../../db/schema";
 import { TEST_TAXONOMY_NAME_PATTERN } from "../../db/test-taxonomy-name";
@@ -978,8 +979,12 @@ export class ExamsRepository implements ExamsRepositoryPort {
   }
 
   /**
-   * Every topic of the given courses, for the resolver to pre-select against
-   * (design doc §3.11) — the whole catalog, not a week slice.
+   * The topics of a set of courses that are TAUGHT at `gradeLevel` — the
+   * catalog `resolveBlueprint` expands a `week_scope='none'` exam type into.
+   *
+   * `exists (topic_grades …)` and not a join: a topic taught at several grades
+   * would otherwise come back once per grade row and the blueprint would carry
+   * the same topic twice.
    *
    * Carries the same test-fixture guard the product-facing taxonomy catalog
    * uses (audit 2026-08-20, H1): `courses`/`topics` are global, so an
@@ -1001,7 +1006,11 @@ export class ExamsRepository implements ExamsRepositoryPort {
           sql`${courses.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`,
           sql`${topics.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`,
           inArray(topics.courseId, [...courseIds]),
-          eq(topics.gradeLevel, gradeLevel),
+          sql`exists (
+            select 1 from ${topicGrades}
+            where ${topicGrades.topicId} = ${topics.id}
+              and ${topicGrades.gradeLevel} = ${gradeLevel}
+          )`,
         ),
       )
       .orderBy(asc(topics.name));

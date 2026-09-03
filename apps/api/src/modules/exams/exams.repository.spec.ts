@@ -18,6 +18,7 @@ import {
   questions,
   syllabusWeekMaps,
   tenants,
+  topicGrades,
   topics,
   tracks,
   universities,
@@ -1647,6 +1648,74 @@ describe("ExamsRepository", () => {
         const result = await repository.findActiveCycle(randomUUID(), null, tenantBId);
         expect(result).toBeNull();
       });
+    });
+  });
+
+  describe("getTopicsForCourses()", () => {
+    // Deviation from the task-4 brief: the brief's test reuses the shared
+    // outer `courseId`, but that course is named `ExamsRepo Course ${suffix}`
+    // with a full (dashed) `randomUUID()` — which always matches
+    // `TEST_TAXONOMY_NAME_PATTERN`, so `getTopicsForCourses`'s pre-existing
+    // `courses.name !~ TEST_TAXONOMY_NAME_PATTERN` guard would filter it out
+    // unconditionally, regardless of implementation. Using a dedicated course
+    // with a dash-stripped suffix — the same fixture pattern
+    // `taxonomy.repository.spec.ts` (Task 3) uses for this exact guard.
+    let gradeCourseId: string;
+    let gradedTopicId: string;
+    let otherGradeTopicId: string;
+
+    beforeAll(async () => {
+      const suffix = randomUUID().replace(/-/g, "");
+
+      const [course] = await db
+        .insert(courses)
+        .values({ name: `Blueprint Course ${suffix}` })
+        .returning({ id: courses.id });
+      gradeCourseId = course!.id;
+
+      const [preTopic] = await db
+        .insert(topics)
+        .values({ courseId: gradeCourseId, name: `Blueprint Pre Topic ${suffix}` })
+        .returning({ id: topics.id });
+      gradedTopicId = preTopic!.id;
+
+      const [schoolTopic] = await db
+        .insert(topics)
+        .values({ courseId: gradeCourseId, name: `Blueprint School Topic ${suffix}` })
+        .returning({ id: topics.id });
+      otherGradeTopicId = schoolTopic!.id;
+
+      await db.insert(topicGrades).values([
+        { topicId: gradedTopicId, gradeLevel: "pre" },
+        { topicId: otherGradeTopicId, gradeLevel: "secundaria_1" },
+      ]);
+    });
+
+    afterAll(async () => {
+      await db.delete(topics).where(inArray(topics.id, [gradedTopicId, otherGradeTopicId]));
+      await db.delete(courses).where(eq(courses.id, gradeCourseId));
+    });
+
+    it("returns only the topics taught at the requested grade", async () => {
+      const rows = await repository.getTopicsForCourses([gradeCourseId], "pre");
+      const ids = rows.map((row) => row.topicId);
+
+      expect(ids).toContain(gradedTopicId);
+      expect(ids).not.toContain(otherGradeTopicId);
+    });
+
+    it("returns a topic taught at several grades exactly ONCE per grade asked for", async () => {
+      // The regression the EXISTS exists for: a join on topic_grades would
+      // return one row per matching grade row, and `resolveBlueprint` would
+      // build duplicate blueprint rows for the same topic.
+      await db.insert(topicGrades).values({ topicId: gradedTopicId, gradeLevel: "secundaria_5" });
+
+      const rows = await repository.getTopicsForCourses([gradeCourseId], "pre");
+      expect(rows.filter((row) => row.topicId === gradedTopicId)).toHaveLength(1);
+    });
+
+    it("returns [] for an empty course list without querying", async () => {
+      await expect(repository.getTopicsForCourses([], "pre")).resolves.toEqual([]);
     });
   });
 });
