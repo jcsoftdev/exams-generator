@@ -72,6 +72,56 @@ export class BankFoldersRepository {
     return row?.highest === null || row?.highest === undefined ? 0 : Number(row.highest) + 1;
   }
 
+  /**
+   * Every id in the subtree rooted at `rootId` (including `rootId` itself), plus
+   * how many levels tall that subtree is. One recursive CTE instead of N queries
+   * — and it is what both the move rules and the delete flow walk.
+   *
+   * The anchor is tenant-scoped; the recursive half is not, and does not need to
+   * be: `parent_id` never crosses tenants (a folder's parent is always in the
+   * same cabinet), so reachability from a tenant-scoped anchor stays inside it.
+   */
+  async loadSubtree(tenantId: string, rootId: string): Promise<{ ids: string[]; height: number }> {
+    const result = await this.db.execute(sql`
+      WITH RECURSIVE subtree AS (
+        SELECT id, 1 AS depth
+          FROM question_folders
+         WHERE id = ${rootId} AND tenant_id = ${tenantId}
+        UNION ALL
+        SELECT f.id, s.depth + 1
+          FROM question_folders f
+          JOIN subtree s ON f.parent_id = s.id
+      )
+      SELECT id, depth FROM subtree
+    `);
+
+    const rows = result.rows as { id: string; depth: number }[];
+    return {
+      ids: rows.map((row) => row.id),
+      height: rows.reduce((tallest, row) => Math.max(tallest, Number(row.depth)), 0),
+    };
+  }
+
+  async updateFolder(
+    tenantId: string,
+    id: string,
+    patch: { name?: string; parentId?: string | null; position?: number },
+  ): Promise<FlatFolderRow | undefined> {
+    const [row] = await this.db
+      .update(questionFolders)
+      .set(patch)
+      .where(and(eq(questionFolders.id, id), eq(questionFolders.tenantId, tenantId)))
+      .returning({
+        id: questionFolders.id,
+        name: questionFolders.name,
+        parentId: questionFolders.parentId,
+        topicId: questionFolders.topicId,
+        position: questionFolders.position,
+      });
+
+    return row;
+  }
+
   async insertFolder(row: {
     tenantId: string;
     parentId: string | null;

@@ -1,5 +1,10 @@
-import { BankFolderNode, BankFoldersResponse, CreateBankFolderDto } from "@exams-generator/shared";
-import { Body, Controller, Get, Post, UseGuards } from "@nestjs/common";
+import {
+  BankFolderNode,
+  BankFoldersResponse,
+  CreateBankFolderDto,
+  UpdateBankFolderDto,
+} from "@exams-generator/shared";
+import { Body, Controller, Get, Param, ParseUUIDPipe, Patch, Post, UseGuards } from "@nestjs/common";
 import { CurrentUser } from "../../auth/current-user.decorator";
 import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../../auth/token.service";
@@ -33,5 +38,19 @@ export class BankFoldersController {
     @Body() body: CreateBankFolderDto,
   ): Promise<BankFolderNode> {
     return this.service.create(user, { name: body?.name, parentId: body?.parentId ?? null });
+  }
+
+  /**
+   * Rename and/or move. `ParseUUIDPipe` on `:id` means a malformed id is a 400
+   * before the service runs — a non-uuid can never be a folder of this tenant,
+   * so there is nothing 404 would tell the caller that 400 does not.
+   */
+  @Patch(":id")
+  async update(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id", ParseUUIDPipe) id: string,
+    @Body() body: UpdateBankFolderDto,
+  ): Promise<BankFolderNode> {
+    return this.service.update(user, id, body ?? {});
   }
 }

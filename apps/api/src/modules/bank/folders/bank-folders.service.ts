@@ -1,5 +1,11 @@
-import { BankFolderNode, BankFoldersResponse, CreateBankFolderDto } from "@exams-generator/shared";
+import {
+  BankFolderNode,
+  BankFoldersResponse,
+  CreateBankFolderDto,
+  UpdateBankFolderDto,
+} from "@exams-generator/shared";
 import { Injectable } from "@nestjs/common";
+import { isUUID } from "class-validator";
 import { AuthTokenPayload } from "../../auth/token.service";
 import { BankFoldersRepository, isUniqueViolation } from "./bank-folders.repository";
 import { bankFolderError } from "./bank-folders.errors";
@@ -7,6 +13,18 @@ import { FlatFolderRow, assembleFolderTree } from "./domain/assemble-folder-tree
 import { buildSeedFolderPlan } from "./domain/build-seed-folder-plan";
 import { checkFolderMove } from "./domain/check-folder-move";
 import { validateFolderName } from "./domain/folder-name";
+
+/**
+ * A malformed `parentId` (not a UUID at all) can never be a real folder, in
+ * this tenant or any other — so it is a 404 `folder_not_found`, same as a
+ * well-formed id that doesn't resolve. Checked before the id ever reaches a
+ * query: Postgres would otherwise reject it as an invalid `uuid` literal and
+ * that 500 would leak a database error to the caller instead of the stable
+ * error code the web already handles.
+ */
+function isUuid(value: string): boolean {
+  return isUUID(value);
+}
 
 @Injectable()
 export class BankFoldersService {
@@ -91,6 +109,9 @@ export class BankFoldersService {
 
     const parentId = dto.parentId ?? null;
     if (parentId !== null) {
+      if (!isUuid(parentId)) {
+        throw bankFolderError("folder_not_found");
+      }
       const parent = await this.repository.findFolder(tenantId, parentId);
       if (!parent) {
         // Another tenant's folder is indistinguishable from a missing one.
@@ -123,6 +144,84 @@ export class BankFoldersService {
     } catch (error) {
       // The unique indexes are the sibling-name rule; a SELECT-then-INSERT would
       // just be a slower way to lose the same race.
+      if (isUniqueViolation(error)) {
+        throw bankFolderError("folder_name_taken");
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Rename, move, or both. `parentId` is only touched when the key is PRESENT in
+   * the body — `undefined` means "leave it where it is", `null` means "make it a
+   * root". That distinction is the whole reason the DTO's field is
+   * `parentId?: string | null` and not just `string | null`.
+   */
+  async update(user: AuthTokenPayload, id: string, dto: UpdateBankFolderDto): Promise<BankFolderNode> {
+    const tenantId = this.requireTenantId(user);
+
+    const folder = await this.repository.findFolder(tenantId, id);
+    if (!folder) {
+      throw bankFolderError("folder_not_found");
+    }
+
+    const patch: { name?: string; parentId?: string | null; position?: number } = {};
+
+    if (dto.name !== undefined) {
+      const validated = validateFolderName(dto.name);
+      if (!validated.ok) {
+        throw bankFolderError(validated.code);
+      }
+      patch.name = validated.name;
+    }
+
+    const movingParent = Object.prototype.hasOwnProperty.call(dto, "parentId");
+    if (movingParent) {
+      const targetParentId = dto.parentId ?? null;
+
+      if (targetParentId !== null) {
+        if (!isUuid(targetParentId)) {
+          throw bankFolderError("folder_not_found");
+        }
+        const parent = await this.repository.findFolder(tenantId, targetParentId);
+        if (!parent) {
+          throw bankFolderError("folder_not_found");
+        }
+      }
+
+      const subtree = await this.repository.loadSubtree(tenantId, id);
+      const targetParentDepth =
+        targetParentId === null ? 0 : await this.repository.folderDepth(tenantId, targetParentId);
+
+      const move = checkFolderMove({
+        folderId: id,
+        targetParentId,
+        descendantIds: subtree.ids,
+        targetParentDepth,
+        subtreeHeight: subtree.height,
+      });
+      if (!move.ok) {
+        throw bankFolderError(move.code);
+      }
+
+      patch.parentId = targetParentId;
+      // Landing among new siblings: go last, same rule `create` applies.
+      patch.position = await this.repository.nextPosition(tenantId, targetParentId);
+    }
+
+    if (patch.name === undefined && !movingParent) {
+      // Nothing asked for — hand the folder back unchanged rather than issue an
+      // UPDATE with an empty SET (which Drizzle rejects at runtime).
+      return this.toNode(folder);
+    }
+
+    try {
+      const updated = await this.repository.updateFolder(tenantId, id, patch);
+      if (!updated) {
+        throw bankFolderError("folder_not_found");
+      }
+      return this.toNode(updated);
+    } catch (error) {
       if (isUniqueViolation(error)) {
         throw bankFolderError("folder_name_taken");
       }

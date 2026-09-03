@@ -190,6 +190,10 @@ describe("Bank folders (e2e)", () => {
     return request(app.getHttpServer()).post("/bank/folders").set("Authorization", `Bearer ${token}`);
   }
 
+  function patchFolderRequest(token: string, id: string) {
+    return request(app.getHttpServer()).patch(`/bank/folders/${id}`).set("Authorization", `Bearer ${token}`);
+  }
+
   /** Ids created by a test, torn down in `afterAll` before the tenants go. */
   const createdFolderIds: string[] = [];
 
@@ -414,6 +418,23 @@ describe("Bank folders (e2e)", () => {
       expect(response.body).toMatchObject({ code: "folder_not_found" });
     });
 
+    it("rejects a non-uuid parentId with 404 folder_not_found instead of leaking a Postgres error", async () => {
+      const response = await createFolderRequest(tokenB)
+        .send({ name: `Malformada ${randomUUID()}`, parentId: "abc" })
+        .expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("assigns a new root the next position after the current highest root", async () => {
+      const before = await foldersRequest(tokenB).expect(200);
+      const rootPositions = before.body.folders.map((node: any) => node.position);
+      const maxBefore = rootPositions.length > 0 ? Math.max(...rootPositions) : -1;
+
+      const folder = await makeFolder(tokenB, { name: `Segunda raíz ${randomUUID()}` });
+
+      expect(folder.position).toBe(maxBefore + 1);
+    });
+
     it("rejects a 7th level with 422 folder_depth_exceeded", async () => {
       let parentId: string | null = null;
       for (let level = 1; level <= 6; level += 1) {
@@ -428,6 +449,135 @@ describe("Bank folders (e2e)", () => {
     it("rejects a user with no tenant with 403 tenant_required", async () => {
       const response = await createFolderRequest(staffToken).send({ name: "X" }).expect(403);
       expect(response.body).toMatchObject({ code: "tenant_required" });
+    });
+  });
+
+  describe("PATCH /bank/folders/:id", () => {
+    it("renames a folder", async () => {
+      const folder = await makeFolder(tokenB, { name: `Antes ${randomUUID()}` });
+      const renamed = `Después ${randomUUID()}`;
+
+      const response = await patchFolderRequest(tokenB, folder.id).send({ name: renamed }).expect(200);
+      expect(response.body).toMatchObject({ id: folder.id, name: renamed, parentId: null });
+    });
+
+    it("moves a folder under another parent", async () => {
+      const parent = await makeFolder(tokenB, { name: `Destino ${randomUUID()}` });
+      const child = await makeFolder(tokenB, { name: `Viajera ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenB, child.id).send({ parentId: parent.id }).expect(200);
+      expect(response.body.parentId).toBe(parent.id);
+    });
+
+    it("moves a folder to the next position among its new siblings", async () => {
+      const parent = await makeFolder(tokenB, { name: `Posición padre ${randomUUID()}` });
+      const existingSibling = await makeFolder(tokenB, {
+        name: `Hermano existente ${randomUUID()}`,
+        parentId: parent.id,
+      });
+      const mover = await makeFolder(tokenB, { name: `Viajera posición ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenB, mover.id).send({ parentId: parent.id }).expect(200);
+
+      expect(response.body.position).toBe(existingSibling.position + 1);
+    });
+
+    it("moves a folder back to the root with parentId: null", async () => {
+      const parent = await makeFolder(tokenB, { name: `Origen ${randomUUID()}` });
+      const child = await makeFolder(tokenB, { name: `Hija ${randomUUID()}`, parentId: parent.id });
+
+      const response = await patchFolderRequest(tokenB, child.id).send({ parentId: null }).expect(200);
+      expect(response.body.parentId).toBeNull();
+    });
+
+    it("renames and moves in one request", async () => {
+      const parent = await makeFolder(tokenB, { name: `Combo padre ${randomUUID()}` });
+      const folder = await makeFolder(tokenB, { name: `Combo ${randomUUID()}` });
+      const newName = `Combo nuevo ${randomUUID()}`;
+
+      const response = await patchFolderRequest(tokenB, folder.id)
+        .send({ name: newName, parentId: parent.id })
+        .expect(200);
+      expect(response.body).toMatchObject({ name: newName, parentId: parent.id });
+    });
+
+    it("rejects moving a folder into itself with 422 folder_cycle", async () => {
+      const folder = await makeFolder(tokenB, { name: `Autoref ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenB, folder.id).send({ parentId: folder.id }).expect(422);
+      expect(response.body).toMatchObject({ code: "folder_cycle" });
+    });
+
+    it("rejects moving a folder into its own descendant with 422 folder_cycle", async () => {
+      const root = await makeFolder(tokenB, { name: `Abuela ${randomUUID()}` });
+      const child = await makeFolder(tokenB, { name: `Madre ${randomUUID()}`, parentId: root.id });
+      const grandchild = await makeFolder(tokenB, { name: `Nieta ${randomUUID()}`, parentId: child.id });
+
+      const response = await patchFolderRequest(tokenB, root.id)
+        .send({ parentId: grandchild.id })
+        .expect(422);
+      expect(response.body).toMatchObject({ code: "folder_cycle" });
+    });
+
+    it("rejects a move whose SUBTREE would pass level 6 with 422 folder_depth_exceeded", async () => {
+      // A 3-level subtree…
+      const a = await makeFolder(tokenB, { name: `A ${randomUUID()}` });
+      const b = await makeFolder(tokenB, { name: `B ${randomUUID()}`, parentId: a.id });
+      await makeFolder(tokenB, { name: `C ${randomUUID()}`, parentId: b.id });
+
+      // …dropped under a parent at level 4 would put its deepest leaf at 7.
+      let parentId: string | null = null;
+      for (let level = 1; level <= 4; level += 1) {
+        const node = await makeFolder(tokenB, { name: `D${level} ${randomUUID()}`, parentId });
+        parentId = node.id;
+      }
+
+      const response = await patchFolderRequest(tokenB, a.id).send({ parentId }).expect(422);
+      expect(response.body).toMatchObject({ code: "folder_depth_exceeded" });
+    });
+
+    it("rejects a rename that collides with a sibling with 409 folder_name_taken", async () => {
+      const taken = `Ocupado ${randomUUID()}`;
+      await makeFolder(tokenB, { name: taken });
+      const other = await makeFolder(tokenB, { name: `Libre ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenB, other.id).send({ name: taken }).expect(409);
+      expect(response.body).toMatchObject({ code: "folder_name_taken" });
+    });
+
+    it("rejects an invalid name with 422 folder_name_invalid", async () => {
+      const folder = await makeFolder(tokenB, { name: `Válida ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenB, folder.id).send({ name: "" }).expect(422);
+      expect(response.body).toMatchObject({ code: "folder_name_invalid" });
+    });
+
+    it("rejects another tenant's folder with 404 folder_not_found", async () => {
+      const folderOfB = await makeFolder(tokenB, { name: `Suya ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenA, folderOfB.id).send({ name: "Robada" }).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("rejects a target parent from another tenant with 404 folder_not_found", async () => {
+      const folderOfB = await makeFolder(tokenB, { name: `Mía ${randomUUID()}` });
+      const [folderOfA] = await db
+        .insert(questionFolders)
+        .values({ tenantId: tenantAId, parentId: null, name: `De A ${randomUUID()}`, position: 0 })
+        .returning({ id: questionFolders.id });
+      createdFolderIds.push(folderOfA!.id);
+
+      const response = await patchFolderRequest(tokenB, folderOfB.id)
+        .send({ parentId: folderOfA!.id })
+        .expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("rejects a non-uuid parentId with 404 folder_not_found instead of leaking a Postgres error", async () => {
+      const folder = await makeFolder(tokenB, { name: `Blindada ${randomUUID()}` });
+
+      const response = await patchFolderRequest(tokenB, folder.id).send({ parentId: "abc" }).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
     });
   });
 });
