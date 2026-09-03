@@ -34,12 +34,24 @@ const topicGradesAgg = sql<string[]>`coalesce(
  * the topic's OTHER grades from the aggregate above (the filter would prune
  * the joined rows), so the response would say a topic is taught only at the
  * grade you happened to ask for.
+ *
+ * `OR NOT EXISTS (any topic_grades row)`: a topic with zero rows in
+ * `topic_grades` is taught across its WHOLE stage (design doc 2026-09-03),
+ * so it has to match every grade filter, not just the ones that happen to be
+ * listed. A bare `EXISTS` would silently drop it from every grade-filtered
+ * result.
  */
 function topicTaughtAt(gradeLevel: string): SQL {
-  return sql`exists (
-    select 1 from ${topicGrades}
-    where ${topicGrades.topicId} = ${topics.id}
-      and ${topicGrades.gradeLevel} = ${gradeLevel}
+  return sql`(
+    exists (
+      select 1 from ${topicGrades}
+      where ${topicGrades.topicId} = ${topics.id}
+        and ${topicGrades.gradeLevel} = ${gradeLevel}
+    )
+    or not exists (
+      select 1 from ${topicGrades}
+      where ${topicGrades.topicId} = ${topics.id}
+    )
   )`;
 }
 
@@ -66,7 +78,8 @@ export interface TopicListItem {
    * now, and the grades are the attribute.
    *
    * An EMPTY array means "taught across the whole stage" — the `?gradeLevel=`
-   * filter below then excludes it, since there is no row to match.
+   * filter below MATCHES it regardless of the grade asked for, rather than
+   * excluding it for having no row to match (`topicTaughtAt`).
    */
   readonly gradeLevels: readonly string[];
 }

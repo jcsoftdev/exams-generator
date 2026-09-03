@@ -170,6 +170,27 @@ describe("TaxonomyRepository", () => {
       }
     });
 
+    it("returns a topic taught across its whole stage under ANY grade filter", async () => {
+      // Zero rows in `topic_grades` means "taught at every grade of its
+      // stage" (design doc 2026-09-03) — a bare `EXISTS` predicate would
+      // exclude it from every grade-filtered call instead.
+      const bare = await db
+        .insert(topics)
+        .values({ courseId: courseAId, name: `Topic Whole Stage ${suffix}` })
+        .returning({ id: topics.id });
+      try {
+        const bySecundaria1 = await repository.findTopics(courseAId, "secundaria_1");
+        expect(bySecundaria1.map((t) => t.id)).toContain(bare[0]!.id);
+
+        // A grade the topic was never given a row for still matches — the
+        // whole point of "no rows = whole stage".
+        const bySecundaria5 = await repository.findTopics(courseAId, "secundaria_5");
+        expect(bySecundaria5.map((t) => t.id)).toContain(bare[0]!.id);
+      } finally {
+        await db.delete(topics).where(eq(topics.id, bare[0]!.id));
+      }
+    });
+
     it("hides topics that belong to a test-factory course", async () => {
       const unfiltered = await repository.findTopics();
       expect(unfiltered.map((t) => t.id)).not.toContain(testFactoryTopicId);

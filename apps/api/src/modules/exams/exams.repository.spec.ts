@@ -1717,5 +1717,29 @@ describe("ExamsRepository", () => {
     it("returns [] for an empty course list without querying", async () => {
       await expect(repository.getTopicsForCourses([], "pre")).resolves.toEqual([]);
     });
+
+    it("returns a topic taught across its whole stage under ANY grade filter", async () => {
+      // Zero rows in `topic_grades` means "taught at every grade of its
+      // stage" (design doc 2026-09-03) — a bare `EXISTS` predicate would
+      // exclude it from every grade-filtered blueprint expansion instead.
+      const [bare] = await db
+        .insert(topics)
+        .values({
+          courseId: gradeCourseId,
+          name: `Blueprint Whole Stage Topic ${randomUUID().replace(/-/g, "")}`,
+        })
+        .returning({ id: topics.id });
+      try {
+        const byPre = await repository.getTopicsForCourses([gradeCourseId], "pre");
+        expect(byPre.map((row) => row.topicId)).toContain(bare!.id);
+
+        // A grade the topic was never given a row for still matches — the
+        // whole point of "no rows = whole stage".
+        const bySecundaria5 = await repository.getTopicsForCourses([gradeCourseId], "secundaria_5");
+        expect(bySecundaria5.map((row) => row.topicId)).toContain(bare!.id);
+      } finally {
+        await db.delete(topics).where(eq(topics.id, bare!.id));
+      }
+    });
   });
 });

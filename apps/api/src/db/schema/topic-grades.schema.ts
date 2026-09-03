@@ -15,8 +15,10 @@ import { topics } from "./topics.schema";
  *
  * A topic with NO rows here is taught across its whole stage. That state does
  * not exist today — the migration writes at least one row for every topic that
- * had a grade — but the readers (`EXISTS (topic_grades …)`) treat it as
- * "matches no grade filter", which is the conservative reading.
+ * had a grade — but the readers (`topicTaughtAt` in `taxonomy.repository.ts`
+ * and `getTopicsForCourses` in `exams.repository.ts`) match it against EVERY
+ * grade filter (`EXISTS (match) OR NOT EXISTS (any row)`), consistent with
+ * "taught across the whole stage" rather than "taught nowhere".
  *
  * `ON DELETE CASCADE` on `topic_id`: retiring a topic must not leave orphan
  * grade rows behind. `grade_level` references the seeded `grade_levels`

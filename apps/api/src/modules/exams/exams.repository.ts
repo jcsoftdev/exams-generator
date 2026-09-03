@@ -986,6 +986,11 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * would otherwise come back once per grade row and the blueprint would carry
    * the same topic twice.
    *
+   * `or not exists (any topic_grades row)`: a topic with zero rows in
+   * `topic_grades` is taught across its WHOLE stage (design doc 2026-09-03),
+   * so it belongs in the blueprint no matter which grade is asked for — a
+   * bare `EXISTS` would silently drop it.
+   *
    * Carries the same test-fixture guard the product-facing taxonomy catalog
    * uses (audit 2026-08-20, H1): `courses`/`topics` are global, so an
    * interrupted spec run must never seed a real teacher's exam with its
@@ -1006,10 +1011,16 @@ export class ExamsRepository implements ExamsRepositoryPort {
           sql`${courses.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`,
           sql`${topics.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`,
           inArray(topics.courseId, [...courseIds]),
-          sql`exists (
-            select 1 from ${topicGrades}
-            where ${topicGrades.topicId} = ${topics.id}
-              and ${topicGrades.gradeLevel} = ${gradeLevel}
+          sql`(
+            exists (
+              select 1 from ${topicGrades}
+              where ${topicGrades.topicId} = ${topics.id}
+                and ${topicGrades.gradeLevel} = ${gradeLevel}
+            )
+            or not exists (
+              select 1 from ${topicGrades}
+              where ${topicGrades.topicId} = ${topics.id}
+            )
           )`,
         ),
       )
