@@ -1,6 +1,6 @@
-import { and, asc, eq, inArray, sql } from "drizzle-orm";
+import { and, asc, eq, inArray, sql, type SQL } from "drizzle-orm";
 import { db } from "../../db/client";
-import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
+import { courses, examTypes, gradeLevels, topicGrades, topics, tracks, universities } from "../../db/schema";
 import { TEST_TAXONOMY_NAME_PATTERN } from "../../db/test-taxonomy-name";
 import type { Stage } from "../exams/domain/value-objects/grade-level";
 
@@ -17,6 +17,31 @@ import type { Stage } from "../exams/domain/value-objects/grade-level";
  */
 const excludesTestCourseName = sql`${courses.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`;
 const excludesTestTopicName = sql`${topics.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`;
+
+/**
+ * The grade list of the row being selected, in catalog order. `filter (where
+ * … is not null)` is load-bearing: a plain `array_agg` over a `left join` with
+ * no match yields `{NULL}`, and the web would render an empty option.
+ */
+const topicGradesAgg = sql<string[]>`coalesce(
+  array_agg(${topicGrades.gradeLevel} order by ${gradeLevels.sortOrder})
+    filter (where ${topicGrades.gradeLevel} is not null),
+  '{}'
+)`;
+
+/**
+ * `?gradeLevel=` as an EXISTS rather than a join condition. A join would drop
+ * the topic's OTHER grades from the aggregate above (the filter would prune
+ * the joined rows), so the response would say a topic is taught only at the
+ * grade you happened to ask for.
+ */
+function topicTaughtAt(gradeLevel: string): SQL {
+  return sql`exists (
+    select 1 from ${topicGrades}
+    where ${topicGrades.topicId} = ${topics.id}
+      and ${topicGrades.gradeLevel} = ${gradeLevel}
+  )`;
+}
 
 export interface CourseListItem {
   readonly id: string;
@@ -35,13 +60,15 @@ export interface TopicListItem {
   readonly name: string;
   readonly courseId: string;
   /**
-   * The grade this topic is assessed at, or `null` when it applies to the
-   * whole stage. The column already existed and was already filtered on
-   * (`?gradeLevel=`); it simply was not projected into the response —
-   * `bank-new`'s folder field (web) needs it to preselect Grado from a
-   * folder's linked topic.
+   * Every grade this topic is taught at, ordered by the catalog's
+   * `sort_order`. Replaced `gradeLevel: string | null` when a topic stopped
+   * being one row per grade (design doc 2026-09-03): the concept is one row
+   * now, and the grades are the attribute.
+   *
+   * An EMPTY array means "taught across the whole stage" — the `?gradeLevel=`
+   * filter below then excludes it, since there is no row to match.
    */
-  readonly gradeLevel: string | null;
+  readonly gradeLevels: readonly string[];
 }
 
 export interface UniversityListItem {
@@ -85,9 +112,16 @@ export class TaxonomyRepository {
   }
 
   /**
-   * Filters by `courseId` and/or the grade level a topic is assessed at, when
-   * provided; otherwise returns every topic. Grade filtering is exact — a topic
-   * is only returned for the grade(s) it was seeded for.
+   * Filters by `courseId` and/or the grade a topic is taught at, when
+   * provided; otherwise returns every topic. Grade filtering is an `EXISTS`
+   * over `topic_grades` — it must NOT be a join, or a topic taught at three
+   * grades would come back three times.
+   *
+   * The grade list itself comes from a `left join` + `array_agg` in the SAME
+   * query (no N+1): `filter (where …)` keeps the array empty instead of
+   * `[null]` for a topic with no grade rows, and the `order by` inside the
+   * aggregate is what makes the list deterministic (catalog order, not insert
+   * order).
    */
   async findTopics(courseId?: string, gradeLevel?: string): Promise<TopicListItem[]> {
     return db
@@ -95,18 +129,21 @@ export class TaxonomyRepository {
         id: topics.id,
         name: topics.name,
         courseId: topics.courseId,
-        gradeLevel: topics.gradeLevel,
+        gradeLevels: topicGradesAgg,
       })
       .from(topics)
       .innerJoin(courses, eq(topics.courseId, courses.id))
+      .leftJoin(topicGrades, eq(topicGrades.topicId, topics.id))
+      .leftJoin(gradeLevels, eq(gradeLevels.code, topicGrades.gradeLevel))
       .where(
         and(
           excludesTestCourseName,
           excludesTestTopicName,
           ...(courseId ? [eq(topics.courseId, courseId)] : []),
-          ...(gradeLevel ? [eq(topics.gradeLevel, gradeLevel)] : []),
+          ...(gradeLevel ? [topicTaughtAt(gradeLevel)] : []),
         ),
-      );
+      )
+      .groupBy(topics.id, topics.name, topics.courseId);
   }
 
   /**
@@ -128,18 +165,21 @@ export class TaxonomyRepository {
         id: topics.id,
         name: topics.name,
         courseId: topics.courseId,
-        gradeLevel: topics.gradeLevel,
+        gradeLevels: topicGradesAgg,
       })
       .from(topics)
       .innerJoin(courses, eq(topics.courseId, courses.id))
+      .leftJoin(topicGrades, eq(topicGrades.topicId, topics.id))
+      .leftJoin(gradeLevels, eq(gradeLevels.code, topicGrades.gradeLevel))
       .where(
         and(
           excludesTestCourseName,
           excludesTestTopicName,
           inArray(topics.courseId, courseIds),
-          ...(gradeLevel ? [eq(topics.gradeLevel, gradeLevel)] : []),
+          ...(gradeLevel ? [topicTaughtAt(gradeLevel)] : []),
         ),
-      );
+      )
+      .groupBy(topics.id, topics.name, topics.courseId);
   }
 
   /** Every university in the global catalog, ordered by name. */

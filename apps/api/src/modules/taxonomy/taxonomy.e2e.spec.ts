@@ -7,7 +7,7 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
+import { courses, examTypes, topicGrades, topics, tracks, universities } from "../../db/schema";
 import { createUserFixture, deleteUserFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 
@@ -73,6 +73,12 @@ describe("Taxonomy endpoints (e2e)", () => {
       .values({ courseId: courseBId, name: `E2E Topic B ${suffix}` })
       .returning({ id: topics.id });
     topicBId = topicB!.id;
+
+    await db.insert(topicGrades).values([
+      { topicId: topicAId, gradeLevel: "secundaria_1" },
+      { topicId: topicAId, gradeLevel: "secundaria_2" },
+    ]);
+    await db.insert(topicGrades).values({ topicId: topicBId, gradeLevel: "pre" });
 
     const [testFactoryCourse] = await db
       .insert(courses)
@@ -142,16 +148,50 @@ describe("Taxonomy endpoints (e2e)", () => {
       expect(ids).toContain(topicBId);
     });
 
-    it("filters topics by courseId", async () => {
+    it("filters topics by courseId and carries every grade the topic is taught at", async () => {
       const res = await request(app.getHttpServer())
         .get("/topics")
         .query({ courseId: courseAId })
         .set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
+      // ONE row for the concept, not one per grade — the whole point of 0023.
       expect(res.body).toEqual([
-        { id: topicAId, name: `E2E Topic A ${suffix}`, courseId: courseAId, gradeLevel: null },
+        {
+          id: topicAId,
+          name: `E2E Topic A ${suffix}`,
+          courseId: courseAId,
+          gradeLevels: ["secundaria_1", "secundaria_2"],
+        },
       ]);
+    });
+
+    it("includes a topic when ?gradeLevel= is one of its grades", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/topics")
+        .query({ courseId: courseAId, gradeLevel: "secundaria_2" })
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect((res.body as Array<{ id: string }>).map((topic) => topic.id)).toEqual([topicAId]);
+    });
+
+    it("excludes a topic when ?gradeLevel= is a grade it is NOT taught at", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/topics")
+        .query({ courseId: courseAId, gradeLevel: "secundaria_5" })
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual([]);
+    });
+
+    it("refuses a second topic with the same name in the same course", async () => {
+      // The taxonomy's new shape, enforced by `topics_course_id_name_idx`:
+      // a concept exists once per course, and its grades live in topic_grades.
+      await expect(
+        db.insert(topics).values({ courseId: courseAId, name: `E2E Topic A ${suffix}` }),
+      ).rejects.toThrow(/topics_course_id_name_idx/);
     });
 
     it("batch-fetches topics for a comma-separated courseId list", async () => {

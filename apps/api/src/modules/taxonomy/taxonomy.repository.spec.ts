@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
-import { inArray } from "drizzle-orm";
+import { eq, inArray } from "drizzle-orm";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
+import { courses, examTypes, topicGrades, topics, tracks, universities } from "../../db/schema";
 import { TaxonomyRepository } from "./taxonomy.repository";
 
 /**
@@ -47,13 +47,13 @@ describe("TaxonomyRepository", () => {
 
     const [topicA] = await db
       .insert(topics)
-      .values({ courseId: courseAId, name: `Topic A ${suffix}`, gradeLevel: "secundaria_1" })
+      .values({ courseId: courseAId, name: `Topic A ${suffix}` })
       .returning({ id: topics.id });
     topicAId = topicA!.id;
 
     const [topicB] = await db
       .insert(topics)
-      .values({ courseId: courseBId, name: `Topic B ${suffix}`, gradeLevel: "pre" })
+      .values({ courseId: courseBId, name: `Topic B ${suffix}` })
       .returning({ id: topics.id });
     topicBId = topicB!.id;
 
@@ -68,10 +68,16 @@ describe("TaxonomyRepository", () => {
       .values({
         courseId: testFactoryCourseId,
         name: `Test Topic ${testFactorySuffix}`,
-        gradeLevel: "secundaria_1",
       })
       .returning({ id: topics.id });
     testFactoryTopicId = testFactoryTopic!.id;
+
+    await db.insert(topicGrades).values([
+      { topicId: topicAId, gradeLevel: "secundaria_1" },
+      { topicId: topicAId, gradeLevel: "secundaria_2" },
+      { topicId: topicBId, gradeLevel: "pre" },
+      { topicId: testFactoryTopicId, gradeLevel: "secundaria_1" },
+    ]);
   });
 
   afterAll(async () => {
@@ -134,12 +140,34 @@ describe("TaxonomyRepository", () => {
       expect(result[0]!.name).toBe(`Topic A ${suffix}`);
     });
 
-    it("filters topics by grade level", async () => {
-      const bySecundaria = await repository.findTopics(courseAId, "secundaria_1");
-      expect(bySecundaria.map((t) => t.id)).toEqual([topicAId]);
+    it("filters topics by grade level through topic_grades, not by a column on the topic", async () => {
+      const bySecundaria1 = await repository.findTopics(courseAId, "secundaria_1");
+      expect(bySecundaria1.map((t) => t.id)).toEqual([topicAId]);
 
-      const byPre = await repository.findTopics(courseAId, "pre");
-      expect(byPre).toHaveLength(0);
+      // The SAME topic, matched by its second grade — one row, two grades.
+      const bySecundaria2 = await repository.findTopics(courseAId, "secundaria_2");
+      expect(bySecundaria2.map((t) => t.id)).toEqual([topicAId]);
+
+      const bySecundaria5 = await repository.findTopics(courseAId, "secundaria_5");
+      expect(bySecundaria5).toEqual([]);
+    });
+
+    it("projects the grades ordered by the catalog's sort_order", async () => {
+      const [topic] = await repository.findTopics(courseAId);
+      expect(topic!.gradeLevels).toEqual(["secundaria_1", "secundaria_2"]);
+    });
+
+    it("returns an empty grade list for a topic taught across its whole stage", async () => {
+      const bare = await db
+        .insert(topics)
+        .values({ courseId: courseAId, name: `Topic Bare ${suffix}` })
+        .returning({ id: topics.id });
+      try {
+        const found = (await repository.findTopics(courseAId)).find((t) => t.id === bare[0]!.id);
+        expect(found!.gradeLevels).toEqual([]);
+      } finally {
+        await db.delete(topics).where(eq(topics.id, bare[0]!.id));
+      }
     });
 
     it("hides topics that belong to a test-factory course", async () => {
