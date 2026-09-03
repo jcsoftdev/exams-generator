@@ -519,6 +519,23 @@ describe("Bank folders (e2e)", () => {
       expect(response.body).toMatchObject({ code: "folder_cycle" });
     });
 
+    it("allows a move that lands the subtree's deepest leaf EXACTLY at level 6", async () => {
+      // A target parent chain of depth 3…
+      let parentId: string | null = null;
+      for (let level = 1; level <= 3; level += 1) {
+        const node = await makeFolder(tokenB, { name: `P${level} ${randomUUID()}`, parentId });
+        parentId = node.id;
+      }
+
+      // …and a subtree of height 3: 3 + 3 = 6, exactly the cap.
+      const root = await makeFolder(tokenB, { name: `Raíz límite ${randomUUID()}` });
+      const child = await makeFolder(tokenB, { name: `Hijo límite ${randomUUID()}`, parentId: root.id });
+      await makeFolder(tokenB, { name: `Nieto límite ${randomUUID()}`, parentId: child.id });
+
+      const response = await patchFolderRequest(tokenB, root.id).send({ parentId }).expect(200);
+      expect(response.body.parentId).toBe(parentId);
+    });
+
     it("rejects a move whose SUBTREE would pass level 6 with 422 folder_depth_exceeded", async () => {
       // A 3-level subtree…
       const a = await makeFolder(tokenB, { name: `A ${randomUUID()}` });
@@ -543,6 +560,34 @@ describe("Bank folders (e2e)", () => {
 
       const response = await patchFolderRequest(tokenB, other.id).send({ name: taken }).expect(409);
       expect(response.body).toMatchObject({ code: "folder_name_taken" });
+    });
+
+    it("rejects moving a folder under a parent that already has a same-named child with 409 folder_name_taken", async () => {
+      const dupName = `Dup ${randomUUID()}`;
+      const parent = await makeFolder(tokenB, { name: `Padre colisión ${randomUUID()}` });
+      await makeFolder(tokenB, { name: dupName, parentId: parent.id });
+      const mover = await makeFolder(tokenB, { name: dupName });
+
+      const response = await patchFolderRequest(tokenB, mover.id).send({ parentId: parent.id }).expect(409);
+      expect(response.body).toMatchObject({ code: "folder_name_taken" });
+    });
+
+    it("allows renaming+moving to a name that only collided with a FORMER sibling under the OLD parent", async () => {
+      const oldParent = await makeFolder(tokenB, { name: `Padre viejo ${randomUUID()}` });
+      const formerSiblingName = `Compartido ${randomUUID()}`;
+      await makeFolder(tokenB, { name: formerSiblingName, parentId: oldParent.id });
+      const mover = await makeFolder(tokenB, {
+        name: `Original ${randomUUID()}`,
+        parentId: oldParent.id,
+      });
+      const newParent = await makeFolder(tokenB, { name: `Padre nuevo ${randomUUID()}` });
+
+      // Collision is judged against the NEW parent (empty), never the old one
+      // the former sibling still lives under.
+      const response = await patchFolderRequest(tokenB, mover.id)
+        .send({ name: formerSiblingName, parentId: newParent.id })
+        .expect(200);
+      expect(response.body).toMatchObject({ name: formerSiblingName, parentId: newParent.id });
     });
 
     it("rejects an invalid name with 422 folder_name_invalid", async () => {
