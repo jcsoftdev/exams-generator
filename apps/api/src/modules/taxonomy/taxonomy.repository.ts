@@ -34,6 +34,14 @@ export interface TopicListItem {
   readonly id: string;
   readonly name: string;
   readonly courseId: string;
+  /**
+   * The grade this topic is assessed at, or `null` when it applies to the
+   * whole stage. The column already existed and was already filtered on
+   * (`?gradeLevel=`); it simply was not projected into the response —
+   * `bank-new`'s folder field (web) needs it to preselect Grado from a
+   * folder's linked topic.
+   */
+  readonly gradeLevel: string | null;
 }
 
 export interface UniversityListItem {
@@ -83,7 +91,12 @@ export class TaxonomyRepository {
    */
   async findTopics(courseId?: string, gradeLevel?: string): Promise<TopicListItem[]> {
     return db
-      .select({ id: topics.id, name: topics.name, courseId: topics.courseId })
+      .select({
+        id: topics.id,
+        name: topics.name,
+        courseId: topics.courseId,
+        gradeLevel: topics.gradeLevel,
+      })
       .from(topics)
       .innerJoin(courses, eq(topics.courseId, courses.id))
       .where(
@@ -111,7 +124,12 @@ export class TaxonomyRepository {
     }
 
     return db
-      .select({ id: topics.id, name: topics.name, courseId: topics.courseId })
+      .select({
+        id: topics.id,
+        name: topics.name,
+        courseId: topics.courseId,
+        gradeLevel: topics.gradeLevel,
+      })
       .from(topics)
       .innerJoin(courses, eq(topics.courseId, courses.id))
       .where(

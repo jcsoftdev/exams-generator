@@ -149,7 +149,9 @@ describe("Taxonomy endpoints (e2e)", () => {
         .set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
-      expect(res.body).toEqual([{ id: topicAId, name: `E2E Topic A ${suffix}`, courseId: courseAId }]);
+      expect(res.body).toEqual([
+        { id: topicAId, name: `E2E Topic A ${suffix}`, courseId: courseAId, gradeLevel: null },
+      ]);
     });
 
     it("batch-fetches topics for a comma-separated courseId list", async () => {
