@@ -81,7 +81,7 @@ import { BankFoldersStore } from '../folders/bank-folders.store';
           [nodes]="tree()"
           [selectedId]="choice()"
           mode="pick"
-          (select)="choice.set($event)"
+          (folderSelected)="choice.set($event)"
         ></ui-folder-tree>
         @if (error(); as message) {
           <p data-testid="question-folder-error" class="mt-2 text-sm text-hard-text" role="alert">

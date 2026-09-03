@@ -197,8 +197,20 @@ export class FolderTreeComponent {
    */
   readonly inlineError = input<FolderInlineError | null>(null);
 
-  readonly select = output<string>();
-  readonly toggle = output<string>();
+  /**
+   * CRITICAL fix: renamed off `select`/`toggle` (review round 3). A native
+   * text `<input>` fires (and bubbles) its own `select`/`toggle`-adjacent DOM
+   * events — `select` in particular fires whenever text inside it is
+   * selected, including the inline rename `<input>` this same primitive
+   * renders. With no matching component output named `select`, Angular falls
+   * back to treating `(select)="…"` on a consumer as a NATIVE event
+   * listener — so a consumer bound to `(select)="onFolderSelect($event)"`
+   * could receive the bubbled native `Event` object instead of a folder id
+   * (observed: `GET /bank/questions?folderId=[object Event]`). Renaming to
+   * names no native DOM event uses removes the collision outright.
+   */
+  readonly folderSelected = output<string>();
+  readonly expandedChange = output<string>();
   readonly create = output<FolderCreateEvent>();
   readonly rename = output<FolderRenameEvent>();
   readonly remove = output<string>();
@@ -282,7 +294,7 @@ export class FolderTreeComponent {
   }
 
   protected onSelect(node: FolderTreeNode): void {
-    this.select.emit(node.id);
+    this.folderSelected.emit(node.id);
   }
 
   /**
@@ -290,12 +302,12 @@ export class FolderTreeComponent {
    * #3) rather than the toggle button's `(click)` — `expandedChange` fires
    * for BOTH the mouse click (via `cdkTreeNodeToggle`) and keyboard-driven
    * expansion (ArrowRight/ArrowLeft through the CDK's `TreeKeyManager`), so
-   * `toggle` now reflects every way a node can expand or collapse, not just
-   * the mouse. Emits only the id, matching this primitive's frozen contract
-   * (`toggle: OutputEmitterRef<string>`).
+   * `expandedChange` now reflects every way a node can expand or collapse,
+   * not just the mouse. Emits only the id, matching this primitive's frozen
+   * contract (`expandedChange: OutputEmitterRef<string>`).
    */
   protected onExpandedChange(node: FolderTreeNode): void {
-    this.toggle.emit(node.id);
+    this.expandedChange.emit(node.id);
   }
 
   /**

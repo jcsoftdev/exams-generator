@@ -45,8 +45,8 @@ const TREE: FolderTreeNode[] = [
       [selectedId]="selectedId()"
       [mode]="mode()"
       [inlineError]="inlineError()"
-      (select)="lastSelected = $event"
-      (toggle)="lastToggled = $event"
+      (folderSelected)="lastSelected = $event"
+      (expandedChange)="lastToggled = $event"
       (create)="lastCreated = $event"
       (rename)="lastRenamed = $event"
       (remove)="lastRemoved = $event"
@@ -502,5 +502,28 @@ describe('FolderTreeComponent', () => {
 
     expect(element.querySelector('[data-testid="folder-name-input"]')).toBeNull();
     expect(element.querySelector('[data-testid="input-error"]')).toBeNull();
+  });
+
+  // --- CRITICAL fix: outputs renamed off native DOM event names -----------
+  //
+  // `select` collided with the native `select` event, which a text `<input>`
+  // fires (and bubbles) whenever the user selects text inside it — including
+  // the inline rename input this same primitive renders. A consumer bound to
+  // `(select)="onFolderSelect($event)"` could receive that bubbled native
+  // `Event` instead of a folder id. Renaming to `folderSelected`/
+  // `expandedChange` removes the collision outright; this locks in that a
+  // native `select` event reaching the host never reaches the renamed output.
+  it('does not let a native "select" event bubbled from the rename input reach folderSelected', () => {
+    const row = rowFor('colegio');
+    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    fixture.detectChanges();
+
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-name-input"] input',
+    )!;
+    input.dispatchEvent(new Event('select', { bubbles: true }));
+    fixture.detectChanges();
+
+    expect(host.lastSelected).toBeNull();
   });
 });

@@ -107,7 +107,7 @@ function findNodeName(nodes: readonly FolderTreeNode[], id: string): string | nu
               [nodes]="nodes()"
               [selectedId]="value()"
               mode="pick"
-              (select)="onSelect($event)"
+              (folderSelected)="onSelect($event)"
             ></ui-folder-tree>
           }
         </div>

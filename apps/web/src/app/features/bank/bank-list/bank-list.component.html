@@ -140,7 +140,7 @@
               [selectedId]="selectedFolderId()"
               mode="browse"
               [inlineError]="folderInlineError()"
-              (select)="onFolderSelect($event)"
+              (folderSelected)="onFolderSelect($event)"
               (create)="onFolderCreate($event)"
               (rename)="onFolderRename($event)"
               (remove)="onFolderRemoveRequested($event)"
