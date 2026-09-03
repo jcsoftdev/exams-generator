@@ -534,6 +534,25 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-testid="folder-removed-banner"]')).toBeNull();
     });
 
+    it('creates a ROOT folder through the "+ Nueva carpeta" button', () => {
+      const { compiled, fixture, createdFolders } = setup();
+
+      (
+        compiled.querySelector('[data-testid="folder-create-root"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      const input = compiled.querySelector<HTMLInputElement>(
+        '[data-testid="folder-new-input-root"] input',
+      )!;
+      input.value = 'Otros';
+      input.dispatchEvent(new Event('input'));
+      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+      fixture.detectChanges();
+
+      expect(createdFolders).toEqual([{ parentId: null, name: 'Otros' }]);
+    });
+
     it("creates a subfolder through the tree's create output", () => {
       const { fixture, createdFolders } = setup();
       internals(fixture).onFolderCreate({ parentId: 'colegio', name: 'Nueva' });

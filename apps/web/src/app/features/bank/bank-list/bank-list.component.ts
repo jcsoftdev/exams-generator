@@ -1,4 +1,4 @@
-import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal, viewChild } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { EMPTY, Observable, catchError, forkJoin, from, map, mergeMap } from 'rxjs';
@@ -285,6 +285,16 @@ export class BankListComponent {
   protected readonly folderTree = this.foldersStore.tree;
   protected readonly foldersLoading = this.foldersStore.loading;
   protected readonly foldersError = this.foldersStore.error;
+  /**
+   * The `#folderTree` template-ref (item 3: "+ Nueva carpeta") — a
+   * TEMPLATE-REF query rather than `viewChild(FolderTreeComponent)` by TYPE
+   * on purpose: the detail panel's `app-question-folder-picker` mounts its
+   * OWN `ui-folder-tree` inside its `pick`-mode popover, and a type query
+   * would descend into that child component's view too, ambiguously
+   * matching whichever instance the CDK query resolves first. A name only
+   * this one element in this template carries has no such ambiguity.
+   */
+  private readonly folderTreeRef = viewChild<FolderTreeComponent>('folderTree');
 
   protected readonly selectedFolderId = signal<string | null>(null);
   /** The folder awaiting confirmation in the removal modal — the node, so the copy can name it and count it. */
@@ -648,6 +658,19 @@ export class BankListComponent {
     this.foldersStore.create(event.parentId, event.name).subscribe({
       error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, event.parentId),
     });
+  }
+
+  /**
+   * "+ Nueva carpeta" (item 3): the tree only ever offered "Nueva subcarpeta"
+   * UNDER an existing node, with no way to create a TOP-LEVEL one. Delegates
+   * to the tree's own `startCreatingRoot()` so the same inline `ui-input` +
+   * `folder-new-input-root` UX is reused rather than duplicated here.
+   * `folderTreeRef()` can be `undefined` only if the tree column is showing
+   * its loading/error state instead of `ui-folder-tree` — the button is a
+   * no-op then rather than throwing.
+   */
+  protected startRootFolderCreate(): void {
+    this.folderTreeRef()?.startCreatingRoot();
   }
 
   protected onFolderRename(event: FolderRenameEvent): void {

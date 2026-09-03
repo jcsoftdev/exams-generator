@@ -117,6 +117,11 @@
               (valueChange)="filterQuery.set($event)"
             ></ui-input>
           </div>
+          <div data-testid="folder-create-root">
+            <ui-button variant="ghost" (clicked)="startRootFolderCreate()"
+              >+ Nueva carpeta</ui-button
+            >
+          </div>
         </div>
 
         <div data-testid="bank-tree" class="flex max-h-[70vh] flex-col gap-1 overflow-y-auto">
@@ -136,6 +141,7 @@
             </div>
           } @else {
             <ui-folder-tree
+              #folderTree
               [nodes]="filteredFolderTree()"
               [selectedId]="selectedFolderId()"
               mode="browse"

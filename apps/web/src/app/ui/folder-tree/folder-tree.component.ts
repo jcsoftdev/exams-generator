@@ -59,6 +59,23 @@ import {
     LucideAngularModule.pick({ ChevronDown, ChevronRight, MoreHorizontal }).providers ?? [],
   ],
   template: `
+    @if (creatingRoot()) {
+      <!--
+        Root-level create (item 3): rendered OUTSIDE \`<cdk-tree>\` on purpose —
+        it has no parent node to attach to (an empty tree, zero folders yet,
+        still has to be able to create its first one), so it can't reuse
+        \`isCreatingUnder\`/\`folder-new-input\`, which are keyed by a node id.
+      -->
+      <div data-testid="folder-new-input-root" class="py-1" (keydown)="$event.stopPropagation()">
+        <ui-input
+          placeholder="Nombre de la carpeta"
+          [value]="draftName()"
+          (valueChange)="draftName.set($event)"
+          (keydown.enter)="commitCreateRoot()"
+          (keydown.escape)="cancelEditing()"
+        ></ui-input>
+      </div>
+    }
     <cdk-tree
       #tree
       [dataSource]="mutableNodes()"
@@ -233,6 +250,8 @@ export class FolderTreeComponent {
   /** Which node is being renamed inline, and which is having a child created under it. Never both. */
   protected readonly editingId = signal<string | null>(null);
   protected readonly creatingUnder = signal<string | null>(null);
+  /** A ROOT-level create editor, open via `startCreatingRoot()` — see that method's doc. Mutually exclusive with the above, same as they are with each other. */
+  protected readonly creatingRoot = signal(false);
   protected readonly menuFor = signal<string | null>(null);
   protected readonly draftName = signal('');
   /**
@@ -432,6 +451,7 @@ export class FolderTreeComponent {
   protected startEditing(node: FolderTreeNode): void {
     this.menuFor.set(null);
     this.creatingUnder.set(null);
+    this.creatingRoot.set(false);
     this.submitted.set(null);
     this.draftName.set(node.name);
     this.editingId.set(node.id);
@@ -451,6 +471,7 @@ export class FolderTreeComponent {
   protected startCreating(node: FolderTreeNode): void {
     this.menuFor.set(null);
     this.editingId.set(null);
+    this.creatingRoot.set(false);
     this.submitted.set(null);
     this.draftName.set('');
     this.creatingUnder.set(node.id);
@@ -460,9 +481,28 @@ export class FolderTreeComponent {
     }
   }
 
+  /**
+   * Opens a ROOT-level create editor — item 3: "there was no way to create a
+   * top-level folder from the UI", every existing entry point ("Nueva
+   * subcarpeta") only ever creates UNDER an existing node. PUBLIC (not
+   * `protected`, unlike every other `start*`/`commit*` method here): the
+   * OWNER calls this directly, via a template-ref `viewChild`, from a button
+   * that lives ABOVE the tree — outside any node's own menu, since a root
+   * folder has no node to hang that menu off of.
+   */
+  startCreatingRoot(): void {
+    this.menuFor.set(null);
+    this.editingId.set(null);
+    this.creatingUnder.set(null);
+    this.submitted.set(null);
+    this.draftName.set('');
+    this.creatingRoot.set(true);
+  }
+
   protected cancelEditing(): void {
     this.editingId.set(null);
     this.creatingUnder.set(null);
+    this.creatingRoot.set(false);
     this.submitted.set(null);
     this.draftName.set('');
   }
@@ -493,6 +533,22 @@ export class FolderTreeComponent {
     this.creatingUnder.set(null);
     this.submitted.set({ id: node.id, kind: 'create' });
     this.create.emit({ parentId: node.id, name });
+  }
+
+  /**
+   * Root-level counterpart of `commitCreate` — no node to key `submitted`/an
+   * inline error against, so a rejected root create simply closes (this
+   * primitive's inline-error re-open only ever applies to a create UNDER an
+   * existing node — see `FolderInlineError`'s doc).
+   */
+  protected commitCreateRoot(): void {
+    const name = this.draftName().trim();
+    if (!name) {
+      this.cancelEditing();
+      return;
+    }
+    this.creatingRoot.set(false);
+    this.create.emit({ parentId: null, name });
   }
 
   protected requestRemove(node: FolderTreeNode): void {

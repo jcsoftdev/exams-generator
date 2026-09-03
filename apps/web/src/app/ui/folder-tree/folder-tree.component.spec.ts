@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { LucideAngularModule, ChevronDown, ChevronRight, MoreHorizontal } from 'lucide-angular';
 import { FolderTreeComponent } from './folder-tree.component';
@@ -262,6 +263,54 @@ describe('FolderTreeComponent', () => {
     const item = rowFor('colegio').closest<HTMLElement>('[role="treeitem"]')!;
     expect(item.getAttribute('aria-expanded')).toBe('true');
     expect(rowFor('mate')).not.toBeNull();
+  });
+
+  // --- root-level create (item 3: "+ Nueva carpeta") -----------------------
+  //
+  // There was no way to create a TOP-LEVEL folder from the UI: the tree only
+  // ever offered "Nueva subcarpeta" UNDER an existing node. `startCreatingRoot`
+  // is the primitive's own public entry point for that — the OWNER (bank-list)
+  // calls it from a button that lives above the tree, outside any node's menu.
+
+  function treeInstance(): FolderTreeComponent {
+    return fixture.debugElement.query(By.directive(FolderTreeComponent))
+      .componentInstance as FolderTreeComponent;
+  }
+
+  it('opens a root-level create editor via startCreatingRoot(), independent of any node', () => {
+    treeInstance().startCreatingRoot();
+    fixture.detectChanges();
+
+    expect(element.querySelector('[data-testid="folder-new-input-root"]')).not.toBeNull();
+  });
+
+  it('creates a root folder: Enter in the root editor emits create with parentId null', () => {
+    treeInstance().startCreatingRoot();
+    fixture.detectChanges();
+
+    const input = element.querySelector<HTMLInputElement>(
+      '[data-testid="folder-new-input-root"] input',
+    )!;
+    input.value = 'Otros';
+    input.dispatchEvent(new Event('input'));
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(host.lastCreated).toEqual({ parentId: null, name: 'Otros' });
+    expect(element.querySelector('[data-testid="folder-new-input-root"]')).toBeNull();
+  });
+
+  it('Escape cancels the root create editor without emitting', () => {
+    treeInstance().startCreatingRoot();
+    fixture.detectChanges();
+
+    element
+      .querySelector<HTMLInputElement>('[data-testid="folder-new-input-root"] input')!
+      .dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(element.querySelector('[data-testid="folder-new-input-root"]')).toBeNull();
+    expect(host.lastCreated).toBeNull();
   });
 
   it('renders an empty tree without throwing', () => {
