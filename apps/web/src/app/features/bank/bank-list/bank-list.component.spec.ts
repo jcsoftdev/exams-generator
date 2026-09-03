@@ -16,19 +16,66 @@ import {
   ChevronDown,
   Image,
   FileText,
-  Expand,
-  Minimize2,
+  MoreHorizontal,
   X,
 } from 'lucide-angular';
-import { Difficulty } from '@exams-generator/shared';
+import {
+  BankFolderNode,
+  BankFolderErrorCode,
+  Difficulty,
+  UNFILED_FOLDER_ID,
+} from '@exams-generator/shared';
 import { BankListComponent } from './bank-list.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { BankQuestion, BankTopicCount } from '../bank.models';
+import { BankQuestion, BankQuestionFilters } from '../bank.models';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
+
+/**
+ * The tenant's folder tree, as `GET /bank/folders` sends it (DIRECT counts per
+ * folder — the roll-up into `totalCount` is `toFolderTreeNodes`' job).
+ * `trigo`'s 7 + 30 is where the "37 preguntas" of the removal copy comes from.
+ */
+const FOLDERS: BankFolderNode[] = [
+  {
+    id: 'colegio',
+    name: 'Colegio',
+    parentId: null,
+    topicId: null,
+    position: 0,
+    ownCount: 0,
+    centralCount: 0,
+    children: [
+      {
+        id: 'trigo',
+        name: 'Trigonometría',
+        parentId: 'colegio',
+        topicId: 't1',
+        position: 0,
+        ownCount: 7,
+        centralCount: 30,
+        children: [],
+      },
+    ],
+  },
+];
+
+/** Which ancestors have to be expanded before a given folder's row exists — see `expandTo`. */
+const FOLDER_ANCESTORS: Readonly<Record<string, readonly string[]>> = {
+  colegio: [],
+  trigo: ['colegio'],
+};
+
+/** Mirrors `apps/api/src/modules/bank/folders/bank-folders.errors.ts` — the server sends `{ statusCode, code, message }`. */
+const FOLDER_ERROR_MESSAGES: Readonly<Record<string, string>> = {
+  folder_name_invalid: 'El nombre de la carpeta debe tener entre 1 y 80 caracteres.',
+  folder_name_taken: 'Ya existe una carpeta con ese nombre en el mismo nivel.',
+  folder_not_found: 'La carpeta no existe.',
+  folder_depth_exceeded: 'Las carpetas admiten como máximo 6 niveles.',
+};
 
 function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
   return {
@@ -50,7 +97,10 @@ function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
     sourceName: o.sourceName ?? null,
     figureCode: o.figureCode ?? null,
     aiGenerated: o.aiGenerated ?? false,
-    folderId: o.folderId ?? null,
+    // Defaults to the fixture's leaf folder rather than null: the screen lists
+    // questions BY FOLDER now, so a fixture question with no folder would be
+    // unreachable from the tree. `null` (unfiled) is still expressible.
+    folderId: o.folderId === undefined ? 'trigo' : o.folderId,
   };
 }
 
@@ -74,48 +124,26 @@ const QUESTIONS: BankQuestion[] = [
     type: 'structured',
     imageAssetId: null,
   }),
-  makeQuestion({ id: 'q3', courseId: 'c1', topicId: 't2', difficulty: Difficulty.Hard }),
-  makeQuestion({ id: 'q4', courseId: 'c2', topicId: 't3' }),
+  makeQuestion({
+    id: 'q3',
+    courseId: 'c1',
+    topicId: 't2',
+    difficulty: Difficulty.Hard,
+    folderId: 'colegio',
+  }),
+  makeQuestion({ id: 'q4', courseId: 'c2', topicId: 't3', folderId: null }),
 ];
-
-/**
- * The fake bank's per-topic summary, derived from the same question array
- * the fake `listQuestionsPaged` pages through — mirroring the real backend,
- * where `GET /bank/questions/summary` and `GET /bank/questions` answer the
- * same filter set and therefore can never disagree.
- *
- * `topicGradeLevels` mirrors `topics.grade_level` on the real backend: the
- * TOPIC's own taxonomy grade, independent of any question's `gradeLevel` —
- * defaults to `null` (unscoped), same as a topic with no grade in the
- * taxonomy. Kept separate from `questions` on purpose so a test can prove
- * the summary's `gradeLevel` never gets confused with a question's.
- */
-function countsFrom(
-  questions: readonly BankQuestion[],
-  topicGradeLevels: ReadonlyMap<string, string | null> = new Map(),
-): BankTopicCount[] {
-  const byTopic = new Map<string, BankTopicCount>();
-  for (const question of questions) {
-    const existing = byTopic.get(question.topicId);
-    byTopic.set(question.topicId, {
-      courseId: question.courseId,
-      topicId: question.topicId,
-      total: (existing?.total ?? 0) + 1,
-      gradeLevel: topicGradeLevels.get(question.topicId) ?? null,
-    });
-  }
-  return [...byTopic.values()];
-}
 
 function setup(
   over: {
-    /** The fake bank's FULL contents — the summary counts and every per-topic page are both derived from it. */
+    /** The fake bank's FULL contents — every per-folder page is derived from it. */
     listImpl?: (...a: unknown[]) => unknown;
     getQuestionImpl?: (id: string) => unknown;
     archiveImpl?: (id: string) => unknown;
     deleteImpl?: (id: string) => unknown;
     getCoursesImpl?: () => unknown;
     getAllTopicsImpl?: () => unknown;
+    getFoldersImpl?: () => unknown;
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
@@ -124,33 +152,30 @@ function setup(
     /**
      * Overrides `listQuestionsPaged` directly instead of deriving it from
      * `listImpl`'s shared `questionSource` (audit #13/#11 — needed to delay
-     * or control a SPECIFIC topic page fetch without also delaying the
-     * summary counts fetch that gates the whole tree skeleton).
+     * or control a SPECIFIC folder page fetch without also delaying the
+     * folder tree that gates the whole screen).
      */
     listQuestionsPagedImpl?: (
-      filters: { topicId?: string },
+      filters: BankQuestionFilters,
       page: number,
       pageSize: number,
     ) => unknown;
-    /** The TOPIC's own taxonomy grade the fake summary carries — see `countsFrom`. */
-    topicGradeLevels?: ReadonlyMap<string, string | null>;
+    /** The virtual "Sin carpeta" node's count — > 0 makes the node render. */
+    unfiledCount?: number;
   } = {},
 ) {
   const questionSource = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
-  const getQuestionCounts = vi.fn((_filters?: unknown) =>
-    (questionSource() as Observable<BankQuestion[]>).pipe(
-      map((questions) => countsFrom(questions, over.topicGradeLevels)),
-    ),
-  );
   const listQuestionsPaged = vi.fn(
     over.listQuestionsPagedImpl ??
-      ((filters: { topicId?: string }, page: number, pageSize: number) =>
+      ((filters: BankQuestionFilters, page: number, pageSize: number) =>
         (questionSource() as Observable<BankQuestion[]>).pipe(
           map((all) => {
-            const inTopic = all.filter((q) => q.topicId === filters.topicId);
+            const inFolder = all.filter(
+              (q) => (q.folderId ?? UNFILED_FOLDER_ID) === filters.folderId,
+            );
             return {
-              items: inTopic.slice((page - 1) * pageSize, page * pageSize),
-              total: inTopic.length,
+              items: inFolder.slice((page - 1) * pageSize, page * pageSize),
+              total: inFolder.length,
             };
           }),
         )),
@@ -171,6 +196,72 @@ function setup(
   const fetchQuestionThumbnail = vi.fn((id: string) =>
     of(new Blob([`t-${id}`], { type: 'image/webp' })),
   );
+
+  // --- folder endpoints ---------------------------------------------------
+  const getFolders = vi.fn(
+    over.getFoldersImpl ?? (() => of({ folders: FOLDERS, unfiledCount: over.unfiledCount ?? 4 })),
+  );
+  /**
+   * Errors the NEXT folder write must fail with, in order — one shift per
+   * create/rename/delete, so a test can make exactly one write fail without
+   * also breaking the reload the store fires right after it.
+   */
+  const folderWriteFailures: HttpErrorResponse[] = [];
+  function failNextFolderWrite(o: {
+    status: number;
+    code: BankFolderErrorCode;
+    message?: string;
+  }): void {
+    folderWriteFailures.push(
+      new HttpErrorResponse({
+        status: o.status,
+        error: {
+          statusCode: o.status,
+          code: o.code,
+          message: o.message ?? FOLDER_ERROR_MESSAGES[o.code] ?? 'Error',
+        },
+      }),
+    );
+  }
+  function nextFolderWrite<T>(value: T): Observable<T> {
+    const failure = folderWriteFailures.shift();
+    return failure ? throwError(() => failure) : of(value);
+  }
+
+  const createdFolders: { parentId: string | null; name: string }[] = [];
+  const createFolder = vi.fn((body: { name: string; parentId: string | null }) => {
+    createdFolders.push({ parentId: body.parentId, name: body.name });
+    return nextFolderWrite<BankFolderNode>({
+      id: `created-${body.name}`,
+      name: body.name,
+      parentId: body.parentId,
+      topicId: null,
+      position: 0,
+      ownCount: 0,
+      centralCount: 0,
+      children: [],
+    });
+  });
+  const renamedFolders: { id: string; name: string | undefined }[] = [];
+  const updateFolder = vi.fn((id: string, patch: { name?: string }) => {
+    renamedFolders.push({ id, name: patch.name });
+    return nextFolderWrite<BankFolderNode>({
+      id,
+      name: patch.name ?? 'x',
+      parentId: null,
+      topicId: null,
+      position: 0,
+      ownCount: 0,
+      centralCount: 0,
+      children: [],
+    });
+  });
+  const deletedFolderIds: string[] = [];
+  const deleteFolder = vi.fn((id: string) => {
+    deletedFolderIds.push(id);
+    return nextFolderWrite({ deletedFolders: 1, unfiledQuestions: 12 });
+  });
+
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getAllTopics = vi.fn(over.getAllTopicsImpl ?? (() => of([...TOPICS_C1, ...TOPICS_C2])));
   const reviseQuestion = vi.fn(
@@ -212,15 +303,13 @@ function setup(
           ChevronDown,
           Image,
           FileText,
-          Expand,
-          Minimize2,
+          MoreHorizontal,
           X,
         }),
       ),
       {
         provide: BankService,
         useValue: {
-          getQuestionCounts,
           listQuestionsPaged,
           getQuestion,
           archiveQuestion,
@@ -230,6 +319,10 @@ function setup(
           buildImageAssetUrl,
           fetchQuestionImage,
           fetchQuestionThumbnail,
+          getFolders,
+          createFolder,
+          updateFolder,
+          deleteFolder,
         },
       },
       { provide: TaxonomyService, useValue: { getCourses, getAllTopics } },
@@ -243,7 +336,6 @@ function setup(
     fixture,
     compiled: fixture.nativeElement as HTMLElement,
     questionSource,
-    getQuestionCounts,
     listQuestionsPaged,
     getQuestion,
     archiveQuestion,
@@ -252,6 +344,14 @@ function setup(
     replaceQuestionImage,
     fetchQuestionImage,
     fetchQuestionThumbnail,
+    getFolders,
+    createFolder,
+    updateFolder,
+    deleteFolder,
+    createdFolders,
+    renamedFolders,
+    deletedFolderIds,
+    failNextFolderWrite,
     getCourses,
     getAllTopics,
     reviseQuestion,
@@ -261,160 +361,350 @@ function setup(
   };
 }
 
-function courseHeader(compiled: HTMLElement, courseId: string): HTMLElement {
+/** The component's protected surface, reachable from a spec without loosening the class itself. */
+type Internals = {
+  filterQuery: { (): string; set(value: string): void };
+  difficulty: { set(value: Difficulty): void };
+  editCorrectAnswer: { (): string };
+  courseOptions(): { value: string; label: string }[];
+  search(): void;
+  onEditCourseChange(value: string | null): void;
+  onFolderCreate(event: { parentId: string | null; name: string }): void;
+  onFolderRename(event: { id: string; name: string }): void;
+};
+
+function internals(fixture: { componentInstance: unknown }): Internals {
+  return fixture.componentInstance as Internals;
+}
+
+function folderRow(compiled: HTMLElement, folderId: string): HTMLElement {
   return compiled.querySelector(
-    `[data-testid="course-header"][data-course-id="${courseId}"]`,
+    `[data-testid="folder-row"][data-folder-id="${folderId}"]`,
   ) as HTMLElement;
 }
 
-function topicHeader(compiled: HTMLElement, topicId: string): HTMLElement {
-  return compiled.querySelector(
-    `[data-testid="topic-header"][data-topic-id="${topicId}"]`,
-  ) as HTMLElement;
-}
-
-function expandCourse(
+/** Clicks every ancestor's chevron so `folderId`'s own row is rendered by the CDK tree. */
+function expandTo(
   compiled: HTMLElement,
   fixture: { detectChanges(): void },
-  courseId: string,
+  folderId: string,
 ): void {
-  courseHeader(compiled, courseId).click();
+  for (const ancestorId of FOLDER_ANCESTORS[folderId] ?? []) {
+    (
+      compiled.querySelector(
+        `[data-testid="folder-toggle"][data-folder-id="${ancestorId}"]`,
+      ) as HTMLButtonElement
+    ).click();
+    fixture.detectChanges();
+  }
+}
+
+/** Expands down to the folder and selects it — the new "show me these questions" gesture. */
+function openFolder(
+  compiled: HTMLElement,
+  fixture: { detectChanges(): void },
+  folderId: string,
+): void {
+  expandTo(compiled, fixture, folderId);
+  folderRow(compiled, folderId).click();
   fixture.detectChanges();
 }
 
-function expandTopic(
+/** Opens the removal modal the way the tree does: Delete on the row. */
+function requestFolderRemoval(
   compiled: HTMLElement,
   fixture: { detectChanges(): void },
-  topicId: string,
+  folderId: string,
 ): void {
-  topicHeader(compiled, topicId).click();
+  expandTo(compiled, fixture, folderId);
+  folderRow(compiled, folderId).dispatchEvent(
+    new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }),
+  );
   fixture.detectChanges();
 }
 
 describe('BankListComponent', () => {
-  describe('tree structure', () => {
-    it('fetches the whole topic catalog in ONE request, not one per course', () => {
-      const { getAllTopics } = setup();
-      expect(getAllTopics).toHaveBeenCalledTimes(1);
+  describe('folder tree', () => {
+    it('renders the tenant folder tree instead of the course/topic tree', () => {
+      const { compiled } = setup();
+
+      expect(compiled.querySelector('ui-folder-tree')).not.toBeNull();
+      expect(compiled.querySelector('[data-testid="course-header"]')).toBeNull();
+      expect(compiled.querySelector('[data-testid="topic-header"]')).toBeNull();
+      expect(folderRow(compiled, 'colegio')).not.toBeNull();
+    });
+
+    it('loads the tree from GET /bank/folders alone — not a single question row is fetched on entry', () => {
+      const { getFolders, listQuestionsPaged } = setup();
+
+      expect(getFolders).toHaveBeenCalledTimes(1);
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
+    });
+
+    it('shows folder names and rolled-up counts, never raw ids', () => {
+      const { compiled, fixture } = setup();
+
+      expect(folderRow(compiled, 'colegio').textContent).toMatch(/Colegio/);
+      // 0 + 0 own/central on the root, plus 7 + 30 from its child.
+      expect(folderRow(compiled, 'colegio').textContent).toMatch(/37/);
+      expect(compiled.textContent).not.toMatch(/\btrigo\b/);
+
+      expandTo(compiled, fixture, 'trigo');
+      expect(folderRow(compiled, 'trigo').textContent).toMatch(/Trigonometría/);
+    });
+
+    it("lists a folder's questions when the folder is selected", () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      folderRow(compiled, 'colegio').click();
+      fixture.detectChanges();
+
+      expect(listQuestionsPaged.mock.calls.at(-1)?.[0]).toMatchObject({ folderId: 'colegio' });
+    });
+
+    it('shows the exact confirmation copy before removing a folder', () => {
+      const { compiled, fixture } = setup();
+      requestFolderRemoval(compiled, fixture, 'trigo');
+
+      const text = compiled
+        .querySelector<HTMLElement>('[data-testid="folder-delete-confirm"]')!
+        .textContent!.replace(/\s+/g, ' ')
+        .trim();
+
+      expect(text).toBe(
+        'Se quitará la carpeta «Trigonometría» y sus 37 preguntas dejarán de verse aquí. Las preguntas no se borran del banco.',
+      );
+      expect(
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"]')!.textContent,
+      ).toContain('Quitar carpeta');
+      expect(compiled.querySelector('[data-testid="modal-actions"]')!.textContent).toContain(
+        'Cancelar',
+      );
+    });
+
+    it('does not call the API until the teacher confirms', () => {
+      const { compiled, fixture, deletedFolderIds } = setup();
+      requestFolderRemoval(compiled, fixture, 'trigo');
+
+      expect(deletedFolderIds).toEqual([]);
+    });
+
+    it('shows the post-delete banner with the unfiled count', () => {
+      const { compiled, fixture, deletedFolderIds } = setup();
+      requestFolderRemoval(compiled, fixture, 'trigo');
+
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(deletedFolderIds).toEqual(['trigo']);
+      expect(
+        compiled.querySelector('[data-testid="folder-removed-banner"]')!.textContent,
+      ).toContain('Carpeta quitada. 12 preguntas quedaron en Sin carpeta.');
+    });
+
+    it('offers a jump to "Sin carpeta" from the post-delete banner', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      requestFolderRemoval(compiled, fixture, 'trigo');
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="folder-removed-goto"] button') as HTMLElement).click();
+      fixture.detectChanges();
+
+      expect(listQuestionsPaged.mock.calls.at(-1)?.[0]).toMatchObject({
+        folderId: UNFILED_FOLDER_ID,
+      });
+      expect(compiled.querySelector('[data-testid="folder-removed-banner"]')).toBeNull();
+    });
+
+    it('stays silent when the removal left nothing unfiled — the banner answers a question nobody asked', () => {
+      const { compiled, fixture, deleteFolder } = setup();
+      deleteFolder.mockReturnValueOnce(of({ deletedFolders: 1, unfiledQuestions: 0 }));
+      requestFolderRemoval(compiled, fixture, 'trigo');
+
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="folder-removed-banner"]')).toBeNull();
+    });
+
+    it("creates a subfolder through the tree's create output", () => {
+      const { fixture, createdFolders } = setup();
+      internals(fixture).onFolderCreate({ parentId: 'colegio', name: 'Nueva' });
+      fixture.detectChanges();
+
+      expect(createdFolders).toEqual([{ parentId: 'colegio', name: 'Nueva' }]);
+    });
+
+    it("renames a folder through the tree's rename output", () => {
+      const { fixture, renamedFolders } = setup();
+      internals(fixture).onFolderRename({ id: 'trigo', name: 'Trigo II' });
+      fixture.detectChanges();
+
+      expect(renamedFolders).toEqual([{ id: 'trigo', name: 'Trigo II' }]);
+    });
+
+    it('marks the inline name as taken when the server answers 409 folder_name_taken', () => {
+      const { compiled, fixture, failNextFolderWrite } = setup();
+      failNextFolderWrite({ status: 409, code: 'folder_name_taken' });
+      internals(fixture).onFolderRename({ id: 'trigo', name: 'Colegio' });
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="folder-error"]')!.textContent).toContain(
+        'Ya existe una carpeta con ese nombre',
+      );
     });
 
     /**
-     * The ordering, not just the count. Topics used to be fetched by handing
-     * `getCourses()`'s ids back as a filter, which made the second request wait
-     * on the first for a result that excluded nothing — a wasted round-trip
-     * against an origin ~620ms away (docs/audit-2026-08-26-prod-latency.md §2).
-     * Counting calls alone would not have caught that; this asserts the topics
-     * request is already in flight while the courses one is still pending.
+     * `BankFoldersStore.rollback` ALREADY restores the snapshot and re-loads
+     * on every failed write (it has to: a concurrent confirmed write would
+     * otherwise be erased by the restore). So the component must NOT reload a
+     * second time on 404 — one reload, plus the one message that explains why
+     * the tree just changed under the teacher.
      */
-    it('does not wait for the courses response before asking for topics', () => {
-      const courses = new Subject<Course[]>();
-      const { getAllTopics } = setup({ getCoursesImpl: () => courses.asObservable() });
+    it('reloads the tree exactly once when a write comes back 404 — another tab deleted the folder', () => {
+      const { compiled, fixture, failNextFolderWrite, getFolders } = setup();
+      failNextFolderWrite({ status: 404, code: 'folder_not_found' });
+      const loadsBefore = getFolders.mock.calls.length;
 
-      expect(getAllTopics).toHaveBeenCalledTimes(1);
+      internals(fixture).onFolderRename({ id: 'trigo', name: 'Otra' });
+      fixture.detectChanges();
 
-      courses.next(COURSES);
-      courses.complete();
+      expect(getFolders.mock.calls.length).toBe(loadsBefore + 1);
+      expect(compiled.querySelector('[data-testid="folder-error"]')!.textContent).toContain(
+        'Esa carpeta ya no existe',
+      );
     });
 
-    it('groups questions by course -> topic with resolved names and counts, never raw UUIDs', () => {
-      const { compiled } = setup();
-      const headers = compiled.querySelectorAll('[data-testid="course-header"]');
-      expect(headers.length).toBe(2);
-      expect(courseHeader(compiled, 'c1').textContent).toMatch(/Aritmética/);
-      expect(courseHeader(compiled, 'c1').textContent).toMatch(/3/);
-      expect(courseHeader(compiled, 'c2').textContent).toMatch(/Álgebra/);
-      expect(compiled.textContent).not.toMatch(/\bc1\b/);
-      expect(compiled.textContent).not.toMatch(/\bc2\b/);
-      expect(compiled.textContent).not.toMatch(/\bt1\b/);
+    it('shows the tree-level error when GET /bank/folders fails, without blanking the screen', () => {
+      const { compiled } = setup({
+        getFoldersImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+
+      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
+        /No se pudieron cargar las carpetas/i,
+      );
+      expect(compiled.querySelector('[data-testid="error-state"]')).toBeNull();
     });
+  });
 
-    it('tells two same-named courses apart by their stage, and leaves unique names bare', () => {
-      // Audit 2026-08-20 M2: "Comunicación" ×3 in the tree, no way to know which to open.
-      const courses: Course[] = [
-        { id: 'c1', name: 'Comunicación', stage: 'colegio' },
-        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
-      ];
-      const { compiled } = setup({ getCoursesImpl: () => of(courses) });
+  describe('search filter', () => {
+    function typeSearch(
+      compiled: HTMLElement,
+      fixture: { detectChanges(): void },
+      value: string,
+    ): void {
+      const input = compiled.querySelector('[data-testid="tree-search"] input') as HTMLInputElement;
+      input.value = value;
+      input.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+    }
 
-      expect(courseHeader(compiled, 'c1').textContent).toMatch(/Comunicación · Colegio/);
-      expect(courseHeader(compiled, 'c2').textContent).toMatch(/Comunicación · Preuniversitario/);
-    });
-
-    it('leaves a course name alone when nothing else shares it', () => {
-      const { compiled } = setup();
-
-      expect(courseHeader(compiled, 'c1').textContent).not.toMatch(/·/);
-      expect(courseHeader(compiled, 'c1').textContent).toMatch(/Aritmética/);
-    });
-
-    it('renders ALL courses collapsed by default — no topics or leaves visible until a course is expanded (avoids the initial wall)', () => {
-      const { compiled } = setup();
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
-      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(0);
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('false');
-      expect(courseHeader(compiled, 'c2').getAttribute('aria-expanded')).toBe('false');
-    });
-
-    it('expanding a course reveals its topics, still collapsed — progressive disclosure', () => {
+    it('filters the tree by folder name', () => {
       const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(2);
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
+      internals(fixture).filterQuery.set('trigo');
+      fixture.detectChanges();
+
+      const ids = Array.from(compiled.querySelectorAll('[data-testid="folder-row"]')).map((row) =>
+        row.getAttribute('data-folder-id'),
+      );
+
+      // The ancestor survives so the match is reachable; "Sin carpeta" does not.
+      expect(ids).toContain('colegio');
+      expect(ids).not.toContain(UNFILED_FOLDER_ID);
     });
 
-    it('topics are collapsed by default — no question leaves render until a topic is expanded', () => {
+    it('matches accent- and case-insensitively from the search box', () => {
       const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-      expect(topicHeader(compiled, 't1')).toBeTruthy();
+      typeSearch(compiled, fixture, 'TRIGONOMETRIA');
+
+      const ids = Array.from(compiled.querySelectorAll('[data-testid="folder-row"]')).map((row) =>
+        row.getAttribute('data-folder-id'),
+      );
+      expect(ids).toContain('colegio');
+      expect(ids).not.toContain(UNFILED_FOLDER_ID);
     });
 
-    it('expanding a topic reveals its questions with clave and a difficulty tag', () => {
+    it('shows the search empty state when no folder name matches', () => {
       const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      typeSearch(compiled, fixture, 'zzz-nada');
+
+      expect(compiled.querySelectorAll('[data-testid="folder-row"]').length).toBe(0);
+      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
+        /No se encontraron carpetas para tu búsqueda/i,
+      );
+    });
+
+    it('restores the full tree when the search box is cleared', () => {
+      const { compiled, fixture } = setup();
+      typeSearch(compiled, fixture, 'zzz-nada');
+      expect(compiled.querySelectorAll('[data-testid="folder-row"]').length).toBe(0);
+
+      typeSearch(compiled, fixture, '');
+      const ids = Array.from(compiled.querySelectorAll('[data-testid="folder-row"]')).map((row) =>
+        row.getAttribute('data-folder-id'),
+      );
+      expect(ids).toEqual(['colegio', UNFILED_FOLDER_ID]);
+    });
+  });
+
+  describe('folder questions', () => {
+    it('lists the selected folder’s questions with clave and a difficulty tag', () => {
+      const { compiled, fixture } = setup();
+      openFolder(compiled, fixture, 'trigo');
+
       const leaves = compiled.querySelectorAll('[data-testid="bank-question"]');
       expect(leaves.length).toBe(2);
       expect(leaves[0].textContent).toMatch(/Clave: a/);
       expect(leaves[0].querySelector('[data-testid="tag"]')).toBeTruthy();
     });
 
-    it('collapsing a course hides its topics and their expanded questions', () => {
-      const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+    it('asks the API for exactly that folder, paginated', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      openFolder(compiled, fixture, 'trigo');
 
-      courseHeader(compiled, 'c1').click();
-      fixture.detectChanges();
-      expect(topicHeader(compiled, 't1')).toBeFalsy();
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ folderId: 'trigo' }),
+        1,
+        expect.any(Number),
+      );
     });
 
-    it('reflects expand/collapse state via aria-expanded on headers', () => {
-      const { compiled, fixture } = setup();
-      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('false');
+    it('lists the unfiled bucket through the "unfiled" sentinel', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      openFolder(compiled, fixture, UNFILED_FOLDER_ID);
 
-      expandCourse(compiled, fixture, 'c1');
-      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ folderId: UNFILED_FOLDER_ID }),
+        1,
+        expect.any(Number),
+      );
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(1);
+    });
 
-      expandTopic(compiled, fixture, 't1');
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+    it('prompts for a folder instead of listing the whole bank when nothing is selected', () => {
+      const { compiled, listQuestionsPaged } = setup();
+
+      expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeTruthy();
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
     });
 
     /**
      * The leaf row asks for the THUMBNAIL, never the original. It renders one
      * per question for a page of 50, and the originals are full-resolution
-     * scans — that row is where the ~3MB per expanded topic came from
+     * scans — that row is where the ~3MB per opened branch came from
      * (docs/audit-2026-08-26-prod-latency.md §3.2).
      */
     it('fetches the thumbnail — not the original — through an authenticated blob for a leaf question', () => {
       const { compiled, fixture, fetchQuestionThumbnail, fetchQuestionImage } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
+
       expect(fetchQuestionThumbnail).toHaveBeenCalledWith('asset-1');
       expect(fetchQuestionImage).not.toHaveBeenCalled();
       expect(compiled.querySelector('img')?.getAttribute('src')).toMatch(/^blob:/);
@@ -427,8 +717,7 @@ describe('BankListComponent', () => {
      */
     it('fetches the ORIGINAL once a question is selected', () => {
       const { compiled, fixture, fetchQuestionImage } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       expect(fetchQuestionImage).not.toHaveBeenCalled();
 
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
@@ -437,117 +726,66 @@ describe('BankListComponent', () => {
       expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
     });
 
-    it('does NOT fetch thumbnails for a topic that has never been expanded (lazy-load)', () => {
+    it('does NOT fetch thumbnails for a folder that has never been opened (lazy-load)', () => {
       const { fetchQuestionThumbnail } = setup();
       expect(fetchQuestionThumbnail).not.toHaveBeenCalled();
     });
 
-    it('loads the tree from the per-topic summary alone — not a single question row is fetched on entry', () => {
-      const { getQuestionCounts, listQuestionsPaged, compiled } = setup();
-
-      expect(getQuestionCounts).toHaveBeenCalledTimes(1);
-      expect(listQuestionsPaged).not.toHaveBeenCalled();
-      // …and the skeleton is complete anyway: both courses render, with their real counts.
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
-      expect(courseHeader(compiled, 'c1').textContent).toMatch(/3/);
-    });
-
-    it("shows a topic's real total on its header while it is still collapsed (count comes from the summary)", () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      expandCourse(compiled, fixture, 'c1');
-
-      expect(topicHeader(compiled, 't1').textContent).toMatch(/2/);
-      expect(listQuestionsPaged).not.toHaveBeenCalled();
-    });
-
-    it('expanding a course costs NO question request — only the topic list, which the summary already carries', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expect(listQuestionsPaged).not.toHaveBeenCalled();
-    });
-
-    it('expanding a topic fetches ONLY that topic, paginated', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-
-      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
-      expect(listQuestionsPaged).toHaveBeenCalledWith(
-        expect.objectContaining({ topicId: 't1' }),
-        1,
-        expect.any(Number),
-      );
-    });
-
-    it('re-expanding an already-loaded topic does NOT re-fetch it', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-      expandTopic(compiled, fixture, 't1'); // collapse
-      expandTopic(compiled, fixture, 't1'); // re-open
-
-      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
-    });
-
-    it('offers "Ver más" when the topic holds more than one page, and appends the next page on click', () => {
-      // 3 questions in t1 with a page size of 2 forces a second page.
+    it('offers "Ver más" when the folder holds more than one page, and appends the next page on click', () => {
       const many = [
-        makeQuestion({ id: 'm1', courseId: 'c1', topicId: 't1' }),
-        makeQuestion({ id: 'm2', courseId: 'c1', topicId: 't1' }),
-        makeQuestion({ id: 'm3', courseId: 'c1', topicId: 't1' }),
+        makeQuestion({ id: 'm1' }),
+        makeQuestion({ id: 'm2' }),
+        makeQuestion({ id: 'm3' }),
       ];
       const { compiled, fixture, listQuestionsPaged } = setup({ listImpl: () => of(many) });
-      listQuestionsPaged.mockImplementation((filters: { topicId?: string }, page: number) => {
-        const inTopic = many.filter((q) => q.topicId === filters.topicId);
-        return of({ items: inTopic.slice((page - 1) * 2, page * 2), total: inTopic.length });
-      });
+      listQuestionsPaged.mockImplementation((_filters: BankQuestionFilters, page: number) =>
+        of({ items: many.slice((page - 1) * 2, page * 2), total: many.length }),
+      );
 
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
 
       const loadMore = compiled.querySelector(
-        '[data-testid="topic-load-more"]',
+        '[data-testid="folder-load-more"]',
       ) as HTMLButtonElement;
       expect(loadMore.textContent).toMatch(/1/);
       loadMore.click();
       fixture.detectChanges();
 
       expect(listQuestionsPaged).toHaveBeenLastCalledWith(
-        expect.objectContaining({ topicId: 't1' }),
+        expect.objectContaining({ folderId: 'trigo' }),
         2,
         expect.any(Number),
       );
       expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(3);
-      expect(compiled.querySelector('[data-testid="topic-load-more"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="folder-load-more"]')).toBeFalsy();
     });
 
-    it('a failed topic page shows an inline retry inside that branch, leaving the rest of the tree intact', () => {
+    it('a failed page shows an inline retry under the tree, leaving the tree itself intact', () => {
       const { compiled, fixture, listQuestionsPaged } = setup();
       listQuestionsPaged.mockReturnValueOnce(
         throwError(() => new HttpErrorResponse({ status: 500 })),
       );
 
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
-      expect(compiled.querySelector('[data-testid="topic-error"]')).toBeTruthy();
-      // The whole-screen error state is NOT used — the other branches still render.
+      expect(compiled.querySelector('[data-testid="folder-questions-error"]')).toBeTruthy();
+      // The whole-screen error state is NOT used — the tree still renders.
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeFalsy();
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+      expect(folderRow(compiled, 'colegio')).toBeTruthy();
 
-      (compiled.querySelector('[data-testid="topic-retry"]') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="folder-questions-retry"]') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
-      expect(compiled.querySelector('[data-testid="topic-error"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="folder-questions-error"]')).toBeFalsy();
       expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
     });
 
     it('shows a neutral file-text placeholder (never blank gray) for a structured question with no image', () => {
       const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       const leaves = compiled.querySelectorAll('[data-testid="bank-question"]');
       const structuredLeaf = leaves[1]; // q2 is type: 'structured', imageAssetId: null
       const placeholder = structuredLeaf.querySelector('[data-testid="question-placeholder"]');
@@ -557,8 +795,7 @@ describe('BankListComponent', () => {
 
     it('shows an image placeholder icon (never blank gray) for an image-type question with no thumbnail asset', () => {
       const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't2'); // q3: type 'image', imageAssetId null
+      openFolder(compiled, fixture, 'colegio'); // q3: type 'image', imageAssetId null
       const leaf = compiled.querySelector('[data-testid="bank-question"]');
       const placeholder = leaf?.querySelector('[data-testid="question-placeholder"]');
       expect(placeholder).toBeTruthy();
@@ -568,16 +805,13 @@ describe('BankListComponent', () => {
     it('previews a structured question statement in the leaf instead of only its answer key', () => {
       const structured = makeQuestion({
         id: 'qs',
-        courseId: 'c1',
-        topicId: 't1',
         type: 'structured',
         imageAssetId: null,
         bodyTypst: '¿Cuál es el resultado de 2 + 3 × 4?',
         alternatives: ['14', '20', '24', '10'],
       });
       const { compiled, fixture } = setup({ listImpl: () => of([structured]) });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
@@ -590,8 +824,6 @@ describe('BankListComponent', () => {
     it('never shows "Pregunta con imagen" for a structured question with an empty body — falls back to the answer key instead (audit #14)', () => {
       const structuredBlank = makeQuestion({
         id: 'qs-blank',
-        courseId: 'c1',
-        topicId: 't1',
         type: 'structured',
         imageAssetId: null,
         bodyTypst: null,
@@ -599,8 +831,7 @@ describe('BankListComponent', () => {
         sourceName: null,
       });
       const { compiled, fixture } = setup({ listImpl: () => of([structuredBlank]) });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
       expect(compiled.querySelector('[data-testid="question-snippet"]')).toBeFalsy();
       const row = compiled.querySelector('[data-question-id="qs-blank"]');
@@ -611,16 +842,13 @@ describe('BankListComponent', () => {
     it('shows a neutral "Pregunta con imagen" fallback when a leaf has no statement AND no sourceName (D2a — a web-created image question)', () => {
       const image = makeQuestion({
         id: 'qi-blank',
-        courseId: 'c1',
-        topicId: 't1',
         type: 'image',
         bodyTypst: null,
         alternatives: null,
         sourceName: null,
       });
       const { compiled, fixture } = setup({ listImpl: () => of([image]) });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).toContain('Pregunta con imagen');
@@ -629,16 +857,13 @@ describe('BankListComponent', () => {
     it('strips the file extension off sourceName before showing it as the snippet (D2a)', () => {
       const image = makeQuestion({
         id: 'qi-ext',
-        courseId: 'c1',
-        topicId: 't1',
         type: 'image',
         bodyTypst: null,
         alternatives: null,
         sourceName: '1d.PNG',
       });
       const { compiled, fixture } = setup({ listImpl: () => of([image]) });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent?.trim()).toBe('1d');
@@ -650,16 +875,13 @@ describe('BankListComponent', () => {
       // and the teacher cannot tell them apart.
       const image = makeQuestion({
         id: 'qi',
-        courseId: 'c1',
-        topicId: 't1',
         type: 'image',
         bodyTypst: null,
         alternatives: null,
         sourceName: 'UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4 (clave E)',
       });
       const { compiled, fixture } = setup({ listImpl: () => of([image]) });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).toContain(
@@ -667,215 +889,77 @@ describe('BankListComponent', () => {
       );
     });
 
-    it('shows the source of a seeded question in the detail panel', () => {
-      // The central bank mixes licensing channels, so "where is this from" has
-      // to be answerable from the UI, not only from the database.
-      const image = makeQuestion({
-        id: 'qi3',
-        courseId: 'c1',
-        topicId: 't1',
-        type: 'image',
-        bodyTypst: null,
-        alternatives: null,
-        tenantId: null,
-        sourceName: 'UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)',
-      });
-      // The panel renders the detail fetch, not the list row.
-      const { compiled, fixture } = setup({
-        listImpl: () => of([image]),
-        getQuestionImpl: () => of(image),
-      });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-      (compiled.querySelector('[data-testid="bank-question"]') as HTMLButtonElement).click();
-      fixture.detectChanges();
-
-      const source = compiled.querySelector('[data-testid="panel-source"]');
-      expect(source?.textContent).toContain('UNI — Examen de Admisión 2019-1, Física, pregunta 7');
-    });
-
     it('does not repeat the answer key inside the provenance label', () => {
       // The row already prints "Clave: e" underneath; the "(clave E)" tail the
       // harvest writes into sourceName would say it twice.
       const image = makeQuestion({
         id: 'qi2',
-        courseId: 'c1',
-        topicId: 't1',
         type: 'image',
         bodyTypst: null,
         alternatives: null,
         sourceName: 'UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)',
       });
       const { compiled, fixture } = setup({ listImpl: () => of([image]) });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).not.toContain('(clave C)');
     });
-
-    it('shows the grade on each topic once two topics under the same course share a name (D2b)', () => {
-      const topics: Topic[] = [
-        { id: 't-bio-5', name: 'Genética y herencia', courseId: 'c1' },
-        { id: 't-bio-4', name: 'Genética y herencia', courseId: 'c1' },
-      ];
-      const questions: BankQuestion[] = [
-        makeQuestion({ id: 'gb5', courseId: 'c1', topicId: 't-bio-5', gradeLevel: 'secundaria_5' }),
-        makeQuestion({ id: 'gb4', courseId: 'c1', topicId: 't-bio-4', gradeLevel: 'secundaria_4' }),
-      ];
-      const { compiled, fixture } = setup({
-        getAllTopicsImpl: () => of(topics),
-        listImpl: () => of(questions),
-      });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't-bio-5');
-      expandTopic(compiled, fixture, 't-bio-4');
-
-      expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
-      expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
-    });
-
-    it('shows the grade on each same-named topic WITHOUT expanding either one — the summary carries it now (D2b, api gradeLevel)', () => {
-      const topics: Topic[] = [
-        { id: 't-bio-5', name: 'Genética y herencia', courseId: 'c1' },
-        { id: 't-bio-4', name: 'Genética y herencia', courseId: 'c1' },
-      ];
-      const questions: BankQuestion[] = [
-        makeQuestion({ id: 'gb5', courseId: 'c1', topicId: 't-bio-5' }),
-        makeQuestion({ id: 'gb4', courseId: 'c1', topicId: 't-bio-4' }),
-      ];
-      const { compiled, fixture } = setup({
-        getAllTopicsImpl: () => of(topics),
-        listImpl: () => of(questions),
-        topicGradeLevels: new Map([
-          ['t-bio-5', 'secundaria_5'],
-          ['t-bio-4', 'secundaria_4'],
-        ]),
-      });
-      expandCourse(compiled, fixture, 'c1');
-
-      // Collapsed — never expanded, so no question leaves were ever fetched.
-      expect(topicHeader(compiled, 't-bio-5').getAttribute('aria-expanded')).toBe('false');
-      expect(topicHeader(compiled, 't-bio-4').getAttribute('aria-expanded')).toBe('false');
-      expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
-      expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
-    });
-
-    it('leaves a unique topic name bare — no grade suffix when nothing else under the course shares it', () => {
-      const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-
-      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
-    });
-
-    // audit bank-list #15 — the test above never expands 't1', so its
-    // `gradeLevel` is null regardless of the uniqueness check, and would
-    // pass even if `sharesNameWithSibling` were broken. EXPANDING the unique
-    // topic gives it a real (non-null) `gradeLevel`, so this is the one that
-    // actually exercises "unique name -> bare" rather than "no grade loaded
-    // yet -> bare".
-    it('leaves a unique, EXPANDED topic bare too — the suffix is gated on sharing a name, not merely on having a loaded grade (audit #15)', () => {
-      const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
-      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
-    });
   });
 
-  describe('search filter', () => {
-    function searchInput(compiled: HTMLElement): HTMLInputElement {
-      return compiled.querySelector('[data-testid="tree-search"] input') as HTMLInputElement;
-    }
-
-    function typeSearch(
-      compiled: HTMLElement,
-      fixture: { detectChanges(): void },
-      value: string,
-    ): void {
-      const input = searchInput(compiled);
-      input.value = value;
-      input.dispatchEvent(new Event('input'));
-      fixture.detectChanges();
-    }
-
-    it('filters the tree live by course name, hiding non-matching branches', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'Álgebra');
-      const headers = compiled.querySelectorAll('[data-testid="course-header"]');
-      expect(headers.length).toBe(1);
-      expect(courseHeader(compiled, 'c2')).toBeTruthy();
-      expect(courseHeader(compiled, 'c1')).toBeFalsy();
+  describe('taxonomy', () => {
+    it('fetches the whole topic catalog in ONE request, not one per course', () => {
+      const { getAllTopics } = setup();
+      expect(getAllTopics).toHaveBeenCalledTimes(1);
     });
 
-    it('auto-expands matching COURSES so the matching topic is visible without a click', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'fracciones');
+    /**
+     * The ordering, not just the count. Topics used to be fetched by handing
+     * `getCourses()`'s ids back as a filter, which made the second request wait
+     * on the first for a result that excluded nothing — a wasted round-trip
+     * against an origin ~620ms away (docs/audit-2026-08-26-prod-latency.md §2).
+     */
+    it('does not wait for the courses response before asking for topics', () => {
+      const courses = new Subject<Course[]>();
+      const { getAllTopics } = setup({ getCoursesImpl: () => courses.asObservable() });
 
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(1);
-      expect(topicHeader(compiled, 't1')).toBeTruthy();
-      expect(topicHeader(compiled, 't2')).toBeFalsy();
+      expect(getAllTopics).toHaveBeenCalledTimes(1);
+
+      courses.next(COURSES);
+      courses.complete();
     });
 
-    it('does NOT auto-expand matching TOPICS — auto-opening every match would fire one request per topic', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      typeSearch(compiled, fixture, 'fracciones');
+    /**
+     * Audit 2026-08-20 M2: "Comunicación" ×3 with no way to tell them apart.
+     * The tree no longer shows courses at all, but the edit form's curso
+     * select still does — so the stage suffix has to survive there.
+     */
+    it('tells two same-named courses apart by their stage in the edit form’s curso options', () => {
+      const courses: Course[] = [
+        { id: 'c1', name: 'Comunicación', stage: 'colegio' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
+      ];
+      const { fixture } = setup({ getCoursesImpl: () => of(courses) });
 
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-      expect(listQuestionsPaged).not.toHaveBeenCalled();
+      expect(internals(fixture).courseOptions()).toEqual([
+        { value: 'c1', label: 'Comunicación · Colegio' },
+        { value: 'c2', label: 'Comunicación · Preuniversitario' },
+      ]);
     });
 
-    it('does NOT match a question clave — search scope is curso/tema only now that leaves load lazily', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'a'); // 'a' is every fixture question's correctAnswer
-      // 'a' still substring-matches the course names ("Aritmética"/"Álgebra"), so assert on
-      // a clave that matches NO name instead.
-      typeSearch(compiled, fixture, 'zzz-clave');
-      expect(compiled.querySelector('[data-testid="tree-no-matches"]')).toBeTruthy();
-    });
-
-    it('restores the full tree when the search box is cleared', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'Álgebra');
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(1);
-      typeSearch(compiled, fixture, '');
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
-    });
-  });
-
-  describe('expand all / collapse all', () => {
-    it('expand all opens every COURSE, revealing all topic lists without a single question request', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      (compiled.querySelector('[data-testid="expand-all"] button') as HTMLButtonElement).click();
-      fixture.detectChanges();
-
-      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
-      expect(courseHeader(compiled, 'c2').getAttribute('aria-expanded')).toBe('true');
-      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(3);
-      // Topics stay closed on purpose: opening all 3 here means opening all 276 in production.
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-      expect(listQuestionsPaged).not.toHaveBeenCalled();
-    });
-
-    it('collapse all hides every topic', () => {
-      const { compiled, fixture } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-      (compiled.querySelector('[data-testid="collapse-all"] button') as HTMLButtonElement).click();
-      fixture.detectChanges();
-      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(0);
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+    it('leaves a course name alone when nothing else shares it', () => {
+      const { fixture } = setup();
+      expect(internals(fixture).courseOptions()).toEqual([
+        { value: 'c1', label: 'Aritmética' },
+        { value: 'c2', label: 'Álgebra' },
+      ]);
     });
   });
 
   describe('detail panel', () => {
     it('opens the detail panel with actions when a leaf question is selected', () => {
       const { compiled, fixture, getQuestion } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
       expect(compiled.querySelector('[data-testid="bank-panel"]')).toBeTruthy();
@@ -888,8 +972,7 @@ describe('BankListComponent', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) => of(makeQuestion({ id, status: 'draft' })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
       expect(compiled.querySelector('[data-testid="panel-delete"]')).toBeTruthy();
@@ -900,8 +983,7 @@ describe('BankListComponent', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: null })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
       expect(compiled.querySelector('[data-testid="panel-readonly"]')).toBeTruthy();
@@ -923,8 +1005,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -953,8 +1034,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -982,8 +1062,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1022,8 +1101,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1055,8 +1133,7 @@ describe('BankListComponent', () => {
               }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1073,8 +1150,7 @@ describe('BankListComponent', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) => of(makeQuestion({ id, status: 'approved', usedInExamCount: 2 })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1093,8 +1169,7 @@ describe('BankListComponent', () => {
         getQuestionImpl: (id) =>
           of(makeQuestion({ id, tenantId: 't1', status: 'approved', usedInExamCount: 1 })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1115,8 +1190,7 @@ describe('BankListComponent', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', aiGenerated: true })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1125,13 +1199,35 @@ describe('BankListComponent', () => {
       expect(panel).toBeTruthy();
     });
 
+    it('shows the source of a seeded question in the detail panel', () => {
+      // The central bank mixes licensing channels, so "where is this from" has
+      // to be answerable from the UI, not only from the database.
+      const image = makeQuestion({
+        id: 'qi3',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        tenantId: null,
+        sourceName: 'UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)',
+      });
+      const { compiled, fixture } = setup({
+        listImpl: () => of([image]),
+        getQuestionImpl: () => of(image),
+      });
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const source = compiled.querySelector('[data-testid="panel-source"]');
+      expect(source?.textContent).toContain('UNI — Examen de Admisión 2019-1, Física, pregunta 7');
+    });
+
     it('cancelling edit mode discards changes and restores the read-only panel', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) =>
           of(makeQuestion({ id, type: 'structured', imageAssetId: null, bodyTypst: 'Original' })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1161,8 +1257,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1190,11 +1285,7 @@ describe('BankListComponent', () => {
       expect(alternatives.value).toBe('Uno revisado\nDos revisado');
       // correctAnswer '1' is ALREADY a 0-based index (AiRevisedQuestion's format = the edit form's
       // canonical format) — populated directly, no letter conversion.
-      expect(
-        (
-          fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } }
-        ).editCorrectAnswer(),
-      ).toBe('1');
+      expect(internals(fixture).editCorrectAnswer()).toBe('1');
 
       // AI revise never auto-saves — the teacher still has to click Guardar.
       expect(updateQuestion).not.toHaveBeenCalled();
@@ -1222,8 +1313,7 @@ describe('BankListComponent', () => {
           ),
         reviseQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1262,8 +1352,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1289,11 +1378,7 @@ describe('BankListComponent', () => {
       ) as HTMLTextAreaElement;
       expect(alternatives.value).toBe('Alt A extraída\nAlt B extraída');
       // correctAnswer '1' is ALREADY a 0-based index — populated directly, no letter conversion.
-      expect(
-        (
-          fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } }
-        ).editCorrectAnswer(),
-      ).toBe('1');
+      expect(internals(fixture).editCorrectAnswer()).toBe('1');
 
       // OCR extraction never auto-saves — the teacher still has to click Guardar.
       expect(updateQuestion).not.toHaveBeenCalled();
@@ -1314,8 +1399,7 @@ describe('BankListComponent', () => {
         extractQuestionFromImageImpl: () =>
           throwError(() => new HttpErrorResponse({ status: 500 })),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1351,8 +1435,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1394,8 +1477,7 @@ describe('BankListComponent', () => {
             }),
           ),
       });
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
 
@@ -1403,9 +1485,7 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
 
       // Changing curso resets tema to '' — the user must re-pick it before saving.
-      (
-        fixture.componentInstance as unknown as { onEditCourseChange(v: string | null): void }
-      ).onEditCourseChange('c2');
+      internals(fixture).onEditCourseChange('c2');
       fixture.detectChanges();
 
       const saveButton = compiled.querySelector(
@@ -1418,123 +1498,152 @@ describe('BankListComponent', () => {
       expect(updateQuestion).not.toHaveBeenCalled();
     });
 
-    it('archives the selected approved question and reloads the tree, after confirming', () => {
-      const { compiled, fixture, archiveQuestion, getQuestionCounts } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
+    it('archives the selected approved question, then re-lists the folder and refreshes its counts', () => {
+      const { compiled, fixture, archiveQuestion, listQuestionsPaged, getFolders } = setup();
+      openFolder(compiled, fixture, 'trigo');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
-      getQuestionCounts.mockClear();
+      listQuestionsPaged.mockClear();
+      getFolders.mockClear();
+
       (compiled.querySelector('[data-testid="panel-archive"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
       expect(archiveQuestion).not.toHaveBeenCalled();
+
       (
         compiled.querySelector('[data-testid="archive-confirm-yes"] button') as HTMLButtonElement
       ).click();
       fixture.detectChanges();
+
       expect(archiveQuestion).toHaveBeenCalledWith('q1');
-      expect(getQuestionCounts).toHaveBeenCalledTimes(1);
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+      expect(getFolders).toHaveBeenCalledTimes(1);
     });
   });
 
   describe('filters', () => {
-    it('re-fetches the summary with the selected nivel (difficulty) filter on Buscar', () => {
-      const { fixture, getQuestionCounts } = setup();
-      getQuestionCounts.mockClear();
-      (
-        fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }
-      ).difficulty.set(Difficulty.Hard);
-      (fixture.componentInstance as unknown as { search(): void }).search();
+    it('re-lists the selected folder with the nivel (difficulty) filter on Buscar', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      openFolder(compiled, fixture, 'trigo');
+      listQuestionsPaged.mockClear();
+
+      internals(fixture).difficulty.set(Difficulty.Hard);
+      internals(fixture).search();
       fixture.detectChanges();
-      expect(getQuestionCounts).toHaveBeenCalledWith(
-        expect.objectContaining({ difficulty: Difficulty.Hard }),
+
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ difficulty: Difficulty.Hard, folderId: 'trigo' }),
+        1,
+        expect.any(Number),
       );
     });
 
-    it('discards already-loaded topic pages on Buscar — they were fetched under the OLD filters', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
-      listQuestionsPaged.mockClear();
+    it('starts over from page 1 on Buscar — the loaded pages came from the OLD filters', () => {
+      const many = [
+        makeQuestion({ id: 'm1' }),
+        makeQuestion({ id: 'm2' }),
+        makeQuestion({ id: 'm3' }),
+      ];
+      const { compiled, fixture, listQuestionsPaged } = setup({ listImpl: () => of(many) });
+      listQuestionsPaged.mockImplementation((_filters: BankQuestionFilters, page: number) =>
+        of({ items: many.slice((page - 1) * 2, page * 2), total: many.length }),
+      );
 
-      (fixture.componentInstance as unknown as { search(): void }).search();
+      openFolder(compiled, fixture, 'trigo');
+      (compiled.querySelector('[data-testid="folder-load-more"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(3);
+
+      internals(fixture).search();
       fixture.detectChanges();
 
-      // Everything collapsed again, nothing stale on screen, and no page re-fetched behind the scenes.
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-      expect(listQuestionsPaged).not.toHaveBeenCalled();
+      expect(listQuestionsPaged).toHaveBeenLastCalledWith(
+        expect.objectContaining({ folderId: 'trigo' }),
+        1,
+        expect.any(Number),
+      );
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+    });
 
-      // Re-opening the same topic now goes back to the server, under the new filters.
-      expandCourse(compiled, fixture, 'c1');
-      expandTopic(compiled, fixture, 't1');
-      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+    it('is a no-op with no folder selected — an unscoped list over the 64k central bank is what this screen exists to avoid', () => {
+      const { fixture, listQuestionsPaged } = setup();
+      internals(fixture).search();
+      fixture.detectChanges();
+
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
     });
   });
 
   describe('loading', () => {
-    it('shows a loading indicator while the initial fetch is pending and no stale tree', () => {
-      const subject = new Subject<BankQuestion[]>();
-      const { compiled, fixture } = setup({ listImpl: () => subject.asObservable() });
+    it('shows a loading indicator while the initial taxonomy fetch is pending and no stale tree', () => {
+      const courses = new Subject<Course[]>();
+      const { compiled, fixture } = setup({ getCoursesImpl: () => courses.asObservable() });
       expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeTruthy();
-      subject.next(QUESTIONS);
-      subject.complete();
+      expect(compiled.querySelector('[data-testid="bank-tree"]')).toBeFalsy();
+
+      courses.next(COURSES);
+      courses.complete();
       fixture.detectChanges();
+
       expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeFalsy();
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+      expect(folderRow(compiled, 'colegio')).toBeTruthy();
     });
   });
 
   describe('empty states', () => {
-    it('shows "banco vacío" with CTA when the bank has zero questions overall', () => {
-      const { compiled } = setup({ listImpl: () => of([]) });
-      expect(compiled.querySelector('[data-testid="empty-bank"]')).toBeTruthy();
-      expect(compiled.textContent).toMatch(/banco vacío/i);
+    it('says the tenant has no folders yet instead of rendering an empty box', () => {
+      const { compiled } = setup({
+        getFoldersImpl: () => of({ folders: [], unfiledCount: 0 }),
+      });
+      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
+        /Todavía no tienes carpetas/i,
+      );
+      expect(compiled.querySelectorAll('[data-testid="folder-row"]').length).toBe(0);
     });
 
-    it('shows "sin resultados" when filters match none but bank is non-empty', () => {
-      const listImpl = vi.fn().mockReturnValueOnce(of(QUESTIONS)).mockReturnValueOnce(of([]));
-      const { compiled, fixture } = setup({ listImpl });
-      (
-        fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }
-      ).difficulty.set(Difficulty.Hard);
-      (fixture.componentInstance as unknown as { search(): void }).search();
-      fixture.detectChanges();
-      expect(compiled.querySelector('[data-testid="empty-no-results"]')).toBeTruthy();
-      expect(compiled.textContent).toMatch(/sin resultados|esos filtros/i);
+    it('says a folder is empty rather than leaving the list silently blank', () => {
+      const { compiled, fixture } = setup({ listImpl: () => of([]) });
+      openFolder(compiled, fixture, 'trigo');
+
+      expect(compiled.querySelector('[data-testid="folder-empty"]')).toBeTruthy();
     });
   });
 
   describe('error', () => {
-    it('shows an error state with retry that reloads the tree', () => {
-      const { compiled, fixture, questionSource } = setup({
-        listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    it('shows an error state with retry that reloads the screen', () => {
+      const { compiled, fixture, getCourses } = setup({
+        getCoursesImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
       expect(compiled.textContent).toMatch(/no se pudieron cargar/i);
-      questionSource.mockClear();
-      questionSource.mockReturnValue(of(QUESTIONS));
+
+      getCourses.mockReturnValue(of(COURSES));
       (compiled.querySelector('[data-testid="retry-button"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
-      expect(questionSource).toHaveBeenCalledTimes(1);
-      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+
+      expect(compiled.querySelector('[data-testid="error-state"]')).toBeFalsy();
+      expect(folderRow(compiled, 'colegio')).toBeTruthy();
     });
   });
 
   describe('created question banner (D1)', () => {
-    it('reveals the question just created: expands its course/topic, selects it, and shows a dismissible banner', () => {
-      const { compiled, getQuestion } = setup({
+    it('reveals the question just created: selects its folder, opens it, and shows a dismissible banner', () => {
+      const { compiled, fixture, getQuestion, listQuestionsPaged } = setup({
         getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
-        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
       });
+      fixture.detectChanges();
 
       expect(getQuestion).toHaveBeenCalledWith('q1');
       // audit #12: `select()` used to re-fetch the very same question a
       // second time even though `revealCreatedQuestion` already had the
       // full record in hand.
       expect(getQuestion).toHaveBeenCalledTimes(1);
-      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ folderId: 'trigo' }),
+        1,
+        expect.any(Number),
+      );
       expect(compiled.querySelector('[data-testid="bank-panel"]')).toBeTruthy();
 
       const banner = compiled.querySelector('[data-testid="created-banner"]');
@@ -1544,16 +1653,29 @@ describe('BankListComponent', () => {
       expect(row?.getAttribute('data-highlight')).toBe('true');
     });
 
+    it('reveals an unfiled question through the "Sin carpeta" bucket', () => {
+      const { listQuestionsPaged } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q4' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, folderId: null })),
+      });
+
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ folderId: UNFILED_FOLDER_ID }),
+        1,
+        expect.any(Number),
+      );
+    });
+
     it('falls back to history.state when there is no current Angular navigation', () => {
       history.replaceState({ createdQuestionId: 'q1' }, '');
       try {
         const { compiled } = setup({
           getCurrentNavigationImpl: () => null,
-          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+          getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
         });
 
         expect(compiled.querySelector('[data-testid="created-banner"]')).toBeTruthy();
-        expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+        expect(compiled.querySelector('[data-question-id="q1"]')).toBeTruthy();
       } finally {
         history.replaceState(null, '');
       }
@@ -1562,7 +1684,7 @@ describe('BankListComponent', () => {
     it('dismisses the banner on click, without touching the highlighted row', () => {
       const { compiled, fixture } = setup({
         getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
-        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
       });
 
       (
@@ -1578,7 +1700,7 @@ describe('BankListComponent', () => {
       try {
         const { compiled, fixture } = setup({
           getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
-          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+          getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
         });
         fixture.detectChanges();
 
@@ -1604,50 +1726,38 @@ describe('BankListComponent', () => {
     });
 
     // audit #13: the highlight's 4s clear-timer used to start the instant
-    // `revealCreatedQuestion` ran, BEFORE the topic's page (and so the row)
-    // had actually loaded — on a slow topic fetch, part or all of the
-    // window could burn before the teacher ever saw the highlight. It must
-    // instead start once the topic's page has resolved.
-    it('starts the 4s highlight window only once the topic page resolves, not the instant the question is fetched (audit #13)', () => {
+    // `revealCreatedQuestion` ran, BEFORE the folder's page (and so the row)
+    // had actually loaded — on a slow fetch, part or all of the window could
+    // burn before the teacher ever saw the highlight. It must instead start
+    // once the page has resolved.
+    it('starts the 4s highlight window only once the folder page resolves, not the instant the question is fetched (audit #13)', () => {
       vi.useFakeTimers();
       try {
-        const topicPage = new Subject<{ items: BankQuestion[]; total: number }>();
+        const folderPage = new Subject<{ items: BankQuestion[]; total: number }>();
         const { compiled, fixture } = setup({
           getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
-          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
-          // Counts (`listImpl`, left at its default) resolve synchronously —
-          // only THIS topic's own page fetch is held open, so the tree
-          // skeleton exists but the row inside it does not, yet.
-          listQuestionsPagedImpl: () => topicPage,
+          getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
+          // The folder tree resolves synchronously — only THIS folder's own
+          // page fetch is held open, so the tree exists but the row does not.
+          listQuestionsPagedImpl: () => folderPage,
         });
         fixture.detectChanges();
 
-        // The topic page hasn't resolved yet — the row doesn't exist, and
-        // the highlight must not be showing (nothing to show it ON), and
-        // certainly must not already be counting down.
         expect(compiled.querySelector('[data-question-id="q1"]')).toBeNull();
 
         // Advancing the clock before the page ever resolves must NOT clear
-        // anything — with the bug, the timer would already be running and
-        // this would have cleared a highlight that (with the fix) hasn't
-        // even started yet.
+        // anything — with the bug, the timer would already be running.
         vi.advanceTimersByTime(4000);
         fixture.detectChanges();
 
-        topicPage.next({
-          items: [makeQuestion({ id: 'q1', courseId: 'c1', topicId: 't1' })],
-          total: 1,
-        });
-        topicPage.complete();
+        folderPage.next({ items: [makeQuestion({ id: 'q1', folderId: 'trigo' })], total: 1 });
+        folderPage.complete();
         fixture.detectChanges();
 
-        // NOW the row exists and the highlight starts.
         expect(
           compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
         ).toBe('true');
 
-        // A further 4s from THIS point clears it — proving the window
-        // started at resolution, not at the original fetch.
         vi.advanceTimersByTime(4000);
         fixture.detectChanges();
         expect(
@@ -1663,23 +1773,15 @@ describe('BankListComponent', () => {
     // a fast navigation away leaves a stray timer trying to mutate a
     // destroyed component's signals.
     it('clears its highlight-clear timer on destroy — the exact handle setTimeout(4000) returned reaches clearTimeout (audit #11)', () => {
-      // Real timers on purpose: this spies on the real global
-      // setTimeout/clearTimeout to prove the SPECIFIC handle scheduling
-      // produced is the one destroy hands to clearTimeout — a stronger,
-      // more targeted claim than "some timer, somewhere, got cleared" (which
-      // fake-timer bookkeeping can't distinguish from framework-internal
-      // timers unrelated to this bug).
       const setTimeoutSpy = vi.spyOn(globalThis, 'setTimeout');
       const clearTimeoutSpy = vi.spyOn(globalThis, 'clearTimeout');
 
       const { fixture } = setup({
         getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
-        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
       });
       fixture.detectChanges();
 
-      // `HIGHLIGHT_DURATION_MS` (4000) is distinctive enough that a call
-      // with that exact delay can only be the highlight-clear timer.
       const highlightCallIndex = setTimeoutSpy.mock.calls.findIndex((call) => call[1] === 4000);
       expect(highlightCallIndex).toBeGreaterThanOrEqual(0);
       const highlightHandle = setTimeoutSpy.mock.results[highlightCallIndex].value;
@@ -1702,19 +1804,14 @@ describe('BankListComponent', () => {
       try {
         const first = setup({
           getCurrentNavigationImpl: () => null,
-          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+          getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
         });
         expect(first.compiled.querySelector('[data-testid="created-banner"]')).toBeTruthy();
 
-        // Simulate a second, independent BankListComponent built against the
-        // same underlying `history.state` (e.g. a reload replaying the same
-        // history entry). `TestBed.resetTestingModule()` only tears down
-        // Angular's DI/providers — it never touches `history.state` itself,
-        // so this is a faithful "constructed twice against the same entry".
         TestBed.resetTestingModule();
         const second = setup({
           getCurrentNavigationImpl: () => null,
-          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+          getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
         });
         expect(second.compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
       } finally {
@@ -1732,12 +1829,23 @@ describe('BankListComponent', () => {
     it('announces "Pregunta guardada." through the root LiveAnnouncerService when the created-question banner shows', () => {
       setup({
         getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
-        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        getQuestionImpl: (id) => of(makeQuestion({ id, folderId: 'trigo' })),
       });
 
       const announcer = TestBed.inject(LiveAnnouncerService);
       expect(announcer.message()).toBe('Pregunta guardada.');
       expect(announcer.politeness()).toBe('polite');
+    });
+
+    it('announces the folder removal too — the banner alone is silent to a screen reader', () => {
+      const { compiled, fixture } = setup();
+      requestFolderRemoval(compiled, fixture, 'trigo');
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(TestBed.inject(LiveAnnouncerService).message()).toBe('Carpeta quitada.');
     });
   });
 });

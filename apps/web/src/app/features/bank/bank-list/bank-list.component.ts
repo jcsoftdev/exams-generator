@@ -1,4 +1,4 @@
-import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { EMPTY, Observable, catchError, forkJoin, from, map, mergeMap } from 'rxjs';
@@ -13,28 +13,33 @@ import {
   Trash2,
   Image,
   FileText,
-  Expand,
-  Minimize2,
+  MoreHorizontal,
+  X,
   Check,
   Sparkles,
   Upload,
 } from 'lucide-angular';
-import { Difficulty } from '@exams-generator/shared';
+import { Difficulty, UNFILED_FOLDER_ID } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
-import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
+import { BannerComponent } from '../../../ui/banner/banner.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
+import { FolderTreeComponent } from '../../../ui/folder-tree/folder-tree.component';
+import {
+  FolderCreateEvent,
+  FolderRenameEvent,
+  FolderTreeNode,
+} from '../../../ui/folder-tree/folder-tree.types';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
 import {
   BankQuestion,
   BankQuestionFilters,
-  BankTopicCount,
   GRADE_LEVELS,
   GRADE_LEVEL_LABELS,
   UpdateQuestionPayload,
@@ -47,12 +52,8 @@ import { courseLabels } from '../../taxonomy/course-label';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { extractErrorMessage } from '../../ai/extract-error-message';
-import {
-  buildQuestionTree,
-  filterQuestionTree,
-  QuestionTreeCourseNode,
-  QuestionTreeTopicNode,
-} from './bank-question-tree';
+import { BankFoldersStore } from '../folders/bank-folders.store';
+import { filterFolderTree } from '../folders/folder-tree.model';
 import { QuestionTaxonomyFieldsComponent } from '../question-edit/question-taxonomy-fields.component';
 import { QuestionContentFieldsComponent } from '../question-edit/question-content-fields.component';
 import { AiReviseBoxComponent } from '../question-edit/ai-revise-box.component';
@@ -72,17 +73,17 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
 };
 
 const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.';
-const TOPIC_ERROR_MESSAGE = 'No se pudieron cargar las preguntas de este tema.';
+const FOLDER_QUESTIONS_ERROR_MESSAGE = 'No se pudieron cargar las preguntas de esta carpeta.';
 
 /**
- * How many questions one "page" of a topic holds. The API clamps `pageSize`
- * at 100 (`clampPagination`), and the seeded central bank averages ~230
- * questions per topic — so a topic genuinely can need more than one page,
- * which is what the "Ver más" affordance is for. 50 keeps the first paint of
- * an expanded topic small (it's also 50 thumbnail fetches at worst) while
- * making a second page rare for tenant-sized topics.
+ * How many questions one "page" of a folder holds. The API clamps `pageSize`
+ * at 100 (`clampPagination`), and a folder seeded from a topic inherits that
+ * topic's whole central-bank branch (~230 questions on average) — so a folder
+ * genuinely can need more than one page, which is what the "Ver más"
+ * affordance is for. 50 keeps the first paint of an opened folder small (it's
+ * also 50 thumbnail fetches at worst).
  */
-const TOPIC_PAGE_SIZE = 50;
+const FOLDER_PAGE_SIZE = 50;
 
 /**
  * How many thumbnail requests may be in flight at once.
@@ -103,73 +104,65 @@ const IMAGE_FETCH_CONCURRENCY = 6;
 const HIGHLIGHT_DURATION_MS = 4000;
 
 /**
- * Question-bank screen, tree redesign: a two-column split where the left
- * column is a collapsible Curso -> Tema -> preguntas tree (replacing the
- * flat paginated list + raw UUID subtitles) and the right column is the
- * unchanged `bank-panel` detail view.
+ * Question-bank screen: a two-column split where the left column is the
+ * tenant's own FOLDER tree plus the selected folder's questions, and the
+ * right column is the unchanged `bank-panel` detail view.
  *
- * LAZY BY BRANCH (this is the load-bearing decision — see the P0 in
- * `docs/audit-2026-08-14.md`). The tree used to be built by grouping the
- * flat, UNPAGINATED `GET /bank/questions` array client-side, on the premise
- * recorded in this very docstring: "no pagination needed, ~71 rows". That
- * premise died when the collected-questions seeder grew the central bank to
- * 64,257 rows, all `tenantId: null, status: 'approved'` and therefore
- * visible to every tenant: `/app/bank` — the first screen a teacher opens —
- * was downloading tens of MB and building a 64k-node client tree on load.
+ * FOLDERS REPLACED CURSO -> TEMA. The old left column was a Curso -> Tema
+ * tree built from `GET /bank/questions/summary`: a taxonomy the school never
+ * chose, imposed on a bank the school owns. It is gone, and with it the
+ * summary request, the per-topic page cache, the expand-state signals and
+ * "Expandir cursos". The taxonomy itself is NOT gone — the edit form still
+ * moves a question between cursos/temas — it just stopped being how a
+ * teacher navigates her own bank.
  *
- * Now the screen loads TWO cheap things up front: the taxonomy id->name maps
- * and `GET /bank/questions/summary` (`BankService.getQuestionCounts`), which
- * returns one `{courseId, topicId, total}` row per topic and no question
- * payload at all. That is enough to render the entire Curso -> Tema skeleton
- * with real counts. A topic's actual questions are fetched — paginated,
- * `TOPIC_PAGE_SIZE` at a time via `listQuestionsPaged` — only when that topic
- * is expanded (`loadTopicQuestions`), cached in `loadedQuestions`, and never
- * re-fetched while the current filter set holds.
+ * The tree comes from `BankFoldersStore` (`GET /bank/folders`): one cheap
+ * request that carries every folder with its direct own/central counts, and
+ * no question payload at all. `toFolderTreeNodes` rolls those into the
+ * cumulative `totalCount` each row shows and appends the virtual "Sin
+ * carpeta" node when there is anything in it.
  *
- * Taxonomy comes from `TaxonomyService.getCourses()` plus a single batched
- * `TaxonomyService.getTopicsForCourses()` call (the Angular wrapper requires
- * a `courseId`, and one `getTopics` request per course was an N+1 fan-out
- * that tripped the global ThrottlerGuard).
+ * LAZY BY FOLDER (the load-bearing decision — see the P0 in
+ * `docs/audit-2026-08-14.md`). Nothing lists questions until a folder is
+ * SELECTED; then exactly that folder is listed, paginated `FOLDER_PAGE_SIZE`
+ * at a time via `listQuestionsPaged({ folderId })`. With nothing selected the
+ * screen prompts for a folder rather than issuing an unfiltered
+ * `GET /bank/questions` over the 64,257-row central bank — which is the
+ * request this screen exists to avoid.
  *
- * Courses AND topics default COLLAPSED on every fetch (progressive
- * disclosure — and now also the thing that keeps the network bounded).
- * Expanding a course reveals only its topic list (still collapsed) and costs
- * NOTHING: the counts are already in hand. Expanding a topic is what issues
- * the one request that fills that branch. Only branches with at least one
- * question render (empty branches never appear).
+ * A folder is ONE list, not a cache per branch: selecting a folder (or
+ * pressing Buscar under new filters) starts over at page 1. The previous
+ * design cached a page per topic and then had to invalidate all of them on
+ * every filter change; with a single selection there is nothing to
+ * invalidate.
  *
- * "Expandir todo" opens every COURSE, not every topic. Opening 276 topics at
- * once would be 276 parallel requests — exactly the fan-out this redesign
- * exists to kill. The button's job (see every course's topics at a glance)
- * survives; the leaves stay one deliberate click away.
+ * WRITES GO THROUGH THE STORE, which applies them optimistically and rolls
+ * back (plus reloads) on failure. This component only decides what the
+ * teacher SEES on a rejection: `folder_name_taken` and friends surface the
+ * server's own Spanish message inline (`folderError`); a 404 means another
+ * tab already deleted the folder, so the message says the tree was refreshed
+ * — the store's rollback already did the refreshing, this must not reload a
+ * second time.
  *
- * Distinguishes TWO empty states (QB-R2): "banco vacío" (the tenant's bank
- * has zero questions at all, regardless of filters) vs "sin resultados"
- * (the bank has questions, but the current filters match none). Tracked via
- * `bankHasAnyQuestions`, set `true` the first time ANY summary (filtered or
- * not) reports at least one question.
+ * REMOVAL IS ALWAYS CONFIRMED. `ui-folder-tree` only ASKS (it emits
+ * `remove`); this opens a modal naming the folder and counting its questions,
+ * and only the modal's "Quitar carpeta" calls the API. Afterwards a banner
+ * says how many questions landed in "Sin carpeta" — and only when that number
+ * is > 0, because with nothing unfiled there is no "where did my questions
+ * go?" to answer.
  *
  * Thumbnails are fetched as authenticated blobs (see `loadImages` —
  * `/assets/:id` is Bearer-JWT protected, a raw `<img src>` never sends that
- * header), lazily: only for topics that are actually expanded/visible
- * (`visibleExpandedTopics` + an `effect` that fires `loadImages` once per
- * newly-visible topic). With lazy branches this is now doubly bounded — a
- * topic's questions don't even exist client-side until it's expanded, so the
- * worst case is one page (`TOPIC_PAGE_SIZE`) of thumbnails per opened topic
- * instead of the whole bank's. Structured questions (no `imageAssetId`) and
- * image questions with no asset yet get a neutral lucide placeholder icon
- * instead of a blank box.
+ * header), for the page just loaded and nothing else: at worst one page
+ * (`FOLDER_PAGE_SIZE`) of thumbnails per opened folder. Structured questions
+ * (no `imageAssetId`) and image questions with no asset yet get a neutral
+ * lucide placeholder icon instead of a blank box.
  *
- * The free-text search box (`filterQuery`) filters the tree live via the
- * pure `filterQuestionTree` transform. Its scope is CURSO/TEMA NAMES ONLY —
- * it deliberately no longer matches a question's clave, because with lazy
- * branches the leaves of a collapsed topic aren't in memory and a clave
- * match would silently only search whatever the user happened to have
- * opened. See `filterQuestionTree`'s doc. While a query is active every
- * surviving COURSE renders force-expanded (`isFiltering()` short-circuits
- * `isCourseExpanded`) so matching topics are visible without extra clicks;
- * topics are NOT force-expanded, for the same fan-out reason "Expandir todo"
- * isn't. Expand-all/collapse-all operate on the expand-state signals.
+ * The free-text search box (`filterQuery`) filters the tree live via the pure
+ * `filterFolderTree` transform. Its scope is FOLDER NAMES ONLY — the
+ * questions of an unopened folder are not in the browser, so matching them
+ * here would silently mean "the part you already opened". See
+ * `filterFolderTree`'s doc.
  *
  * Action gating (`canArchive`/`canDelete`/`isCentral`) mirrors the backend's
  * own rules (Lane D4: S4 archives only `approved`, S5 deletes only own
@@ -214,12 +207,13 @@ const HIGHLIGHT_DURATION_MS = 4000;
   standalone: true,
   imports: [
     ButtonComponent,
-    EmptyStateComponent,
+    BannerComponent,
     ModalComponent,
     InputComponent,
     SelectComponent,
     TagComponent,
     MathTextComponent,
+    FolderTreeComponent,
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
@@ -227,9 +221,10 @@ const HIGHLIGHT_DURATION_MS = 4000;
   ],
   // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
   // local `pick()` SHADOWS (does not merge with) the app-level one in app.config.ts. This must list
-  // every icon the template uses, including ones the global config also registers (search,
-  // chevron-down/right, lock, pencil, archive, trash-2), plus the new ones (image, file-text,
-  // expand, minimize-2) — otherwise those would 404 at runtime ("icon has not been provided").
+  // every icon the template uses AND every icon the CHILD components rendered inside it use, since
+  // they resolve the token through this element injector: `ui-folder-tree`'s chevrons and
+  // `more-horizontal`, and `ui-banner`'s `x` dismiss. Missing one 404s at runtime ("icon has not
+  // been provided").
   providers: [
     LucideAngularModule.pick({
       Search,
@@ -241,8 +236,8 @@ const HIGHLIGHT_DURATION_MS = 4000;
       Trash2,
       Image,
       FileText,
-      Expand,
-      Minimize2,
+      MoreHorizontal,
+      X,
       Check,
       Sparkles,
       Upload,
@@ -252,6 +247,7 @@ const HIGHLIGHT_DURATION_MS = 4000;
 })
 export class BankListComponent {
   private readonly bankService = inject(BankService);
+  private readonly foldersStore = inject(BankFoldersStore);
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly aiService = inject(AiService);
   private readonly destroyRef = inject(DestroyRef);
@@ -276,35 +272,44 @@ export class BankListComponent {
   protected readonly difficulty = signal<Difficulty | null>(null);
   protected readonly gradeLevel = signal<string | null>(null);
 
-  /** `GET /bank/questions/summary` — one `{courseId, topicId, total}` row per topic. The whole tree skeleton, no question payload. */
-  protected readonly topicCounts = signal<readonly BankTopicCount[]>([]);
-  /** `topicId` -> the questions fetched so far for that topic. Absent key = never expanded; the tree renders its count from `topicCounts` regardless. */
-  private readonly loadedQuestions = signal<ReadonlyMap<string, readonly BankQuestion[]>>(
-    new Map(),
-  );
+  // --- the folder tree ----------------------------------------------------
+  /** The folder tree, already rolled-up and with the virtual "Sin carpeta" node. */
+  protected readonly folderTree = this.foldersStore.tree;
+  protected readonly foldersLoading = this.foldersStore.loading;
+  protected readonly foldersError = this.foldersStore.error;
+
+  protected readonly selectedFolderId = signal<string | null>(null);
+  /** The folder awaiting confirmation in the removal modal — the node, so the copy can name it and count it. */
+  protected readonly pendingFolderDelete = signal<FolderTreeNode | null>(null);
+  /** Post-delete banner text, cleared by its own dismiss button. */
+  protected readonly folderRemovedNotice = signal<string | null>(null);
+  /** Inline error for a rejected create/rename/remove (`folder_name_taken`, `folder_name_invalid`, …). */
+  protected readonly folderError = signal<string | null>(null);
+
+  // --- the selected folder's questions -------------------------------------
+  /** The pages loaded so far for the CURRENT selection, flat. A folder is one list; there is no cache per branch to invalidate. */
+  protected readonly folderQuestions = signal<readonly BankQuestion[]>([]);
+  /** What the server says the folder holds in total — drives "Ver más". */
+  private readonly folderQuestionsTotal = signal(0);
   /**
-   * `topicId` -> highest page number already fetched. Tracked explicitly
-   * rather than derived from `loadedQuestions[topicId].length / PAGE_SIZE`:
-   * that division silently assumes every page came back full, which stops
-   * being true the moment the server trims a page (deleted rows, a smaller
-   * server-side cap) and would then re-request the page just loaded, forever.
+   * Highest page already fetched. Tracked explicitly rather than derived from
+   * `folderQuestions().length / FOLDER_PAGE_SIZE`: that division silently
+   * assumes every page came back full, which stops being true the moment the
+   * server trims a page (deleted rows, a smaller server-side cap) and would
+   * then re-request the page just loaded, forever.
    */
-  private readonly loadedPages = signal<ReadonlyMap<string, number>>(new Map());
-  /** Topics with a page request in flight — drives the per-branch spinner and guards against double-fetching on rapid toggles. */
-  private readonly loadingTopics = signal<ReadonlySet<string>>(new Set());
-  /** Topics whose last page request failed — renders an inline retry inside that branch only, never blanking the whole tree. */
-  private readonly failedTopics = signal<ReadonlySet<string>>(new Set());
+  private readonly folderPage = signal(0);
+  protected readonly folderQuestionsLoading = signal(false);
+  /** Last page request failed — renders an inline retry under the tree, never blanking the tree itself. */
+  protected readonly folderQuestionsFailed = signal(false);
+
   private readonly courseNames = signal<ReadonlyMap<string, string>>(new Map());
-  private readonly topicNames = signal<ReadonlyMap<string, string>>(new Map());
   /** Full taxonomy (every course/topic, unscoped by grade) loaded once in `fetchTaxonomy` — reused by the edit form's curso/tema selects instead of new HTTP calls. */
   private readonly courses = signal<readonly Course[]>([]);
   private readonly topics = signal<readonly Topic[]>([]);
-  private readonly taxonomyLoaded = signal(false);
 
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
-  /** Set true the first time ANY response (filtered or not) is non-empty — drives QB-R2's two-empty-states split. */
-  protected readonly bankHasAnyQuestions = signal(false);
 
   protected readonly selected = signal<BankQuestion | null>(null);
   protected readonly actionError = signal<string | null>(null);
@@ -401,16 +406,8 @@ export class BankListComponent {
   /** Asset ids already upgraded from thumbnail to original — see `loadFullImage`. */
   private readonly fullImagesLoaded = new Set<string>();
 
-  private readonly expandedCourses = signal<ReadonlySet<string>>(new Set());
-  private readonly expandedTopics = signal<ReadonlySet<string>>(new Set());
-
-  /** Free-text search box value — filters the tree live (clave, course name, or topic name). */
+  /** Free-text search box value — filters the folder tree live by NAME (see `filterFolderTree`). */
   protected readonly filterQuery = signal('');
-  /** True while a non-blank search query is active — forces every surviving branch open. */
-  protected readonly isFiltering = computed(() => this.filterQuery().trim().length > 0);
-
-  /** Every `topicId` an image fetch has already been requested for — guards the lazy-load effect against duplicate HTTP calls. */
-  private readonly requestedImageTopics = new Set<string>();
 
   // --- D1: highlight the question just created (bank-new -> here) --------------
   /** `router.getCurrentNavigation()?.extras.state['createdQuestionId']`, falling back to `history.state` — captured once, in the constructor, before Angular clears the current navigation. */
@@ -420,41 +417,15 @@ export class BankListComponent {
   /** The just-created question's id while its row should render `data-highlight="true"`; cleared after `HIGHLIGHT_DURATION_MS`. */
   protected readonly highlightedQuestionId = signal<string | null>(null);
 
-  /** Curso -> Tema -> preguntas: skeleton + counts from the server summary, leaves filled in per expanded topic (QB tree redesign, lazy by branch). */
-  protected readonly tree = computed<QuestionTreeCourseNode[]>(() =>
-    buildQuestionTree(
-      this.topicCounts(),
-      this.loadedQuestions(),
-      this.courseNames(),
-      this.topicNames(),
-    ),
+  /** Client-side name filter over the folder tree — see `filterFolderTree` for the honest scope. */
+  protected readonly filteredFolderTree = computed(() =>
+    filterFolderTree(this.folderTree(), this.filterQuery()),
   );
 
-  /** Total questions the current filters match, summed from the summary — drives the two empty states without holding a single question row. */
-  protected readonly totalQuestions = computed(() =>
-    this.topicCounts().reduce((sum, bucket) => sum + bucket.total, 0),
+  /** How many more questions the folder holds beyond the pages already fetched — "Ver más" renders only while this is > 0. */
+  protected readonly remainingInFolder = computed(() =>
+    Math.max(0, this.folderQuestionsTotal() - this.folderQuestions().length),
   );
-
-  /** `tree()` filtered live by `filterQuery()` — matching branches stay, non-matching hide. */
-  protected readonly filteredTree = computed<QuestionTreeCourseNode[]>(() =>
-    filterQuestionTree(this.tree(), this.filterQuery()),
-  );
-
-  /** Topics currently rendered AND expanded (manual toggle, or force-expanded while filtering) — drives lazy thumbnail loading. */
-  private readonly visibleExpandedTopics = computed<readonly QuestionTreeTopicNode[]>(() => {
-    const visible: QuestionTreeTopicNode[] = [];
-    for (const course of this.filteredTree()) {
-      if (!this.isCourseExpanded(course.courseId)) {
-        continue;
-      }
-      for (const topic of course.topics) {
-        if (this.isTopicExpanded(topic.topicId)) {
-          visible.push(topic);
-        }
-      }
-    }
-    return visible;
-  });
 
   constructor() {
     // Read BEFORE `loadInitial()`: `getCurrentNavigation()` is only non-null
@@ -479,35 +450,26 @@ export class BankListComponent {
       }
       this.pendingTimeouts.clear();
     });
-    // Lazy thumbnail loading: fetch a topic's images the first time it becomes visible+expanded.
-    // Doubly bounded now — a topic's questions only exist client-side after its own page fetch,
-    // so this can never see more than TOPIC_PAGE_SIZE questions per opened topic.
-    effect(() => {
-      for (const topic of this.visibleExpandedTopics()) {
-        if (!this.requestedImageTopics.has(topic.topicId)) {
-          this.requestedImageTopics.add(topic.topicId);
-          this.loadImages(topic.questions);
-        }
-      }
-    });
   }
 
+  /**
+   * The tree and the taxonomy load INDEPENDENTLY and in parallel: the folder
+   * tree is what the screen is for, while the taxonomy only feeds the edit
+   * form's curso/tema selects. A failed `GET /bank/folders` therefore shows
+   * its message inside the tree column (`foldersError`) instead of blanking
+   * the screen, and vice versa.
+   */
   private loadInitial(): void {
     this.loading.set(true);
     this.errorMessage.set(null);
+    this.foldersStore.load();
 
-    forkJoin({ taxonomy: this.fetchTaxonomy(), counts: this.fetchCounts() }).subscribe({
-      next: ({ taxonomy, counts }) => {
+    this.fetchTaxonomy().subscribe({
+      next: (taxonomy) => {
         this.courseNames.set(taxonomy.courseNames);
-        this.topicNames.set(taxonomy.topicNames);
         this.courses.set(taxonomy.courses);
         this.topics.set(taxonomy.topics);
-        this.taxonomyLoaded.set(true);
-        this.applyCounts(counts);
         this.loading.set(false);
-        // Called AFTER `applyCounts` (which resets expand state) — see its
-        // doc — so the reveal's own expand/select below is never clobbered by
-        // this same load collapsing everything back down.
         if (this.pendingCreatedQuestionId) {
           this.revealCreatedQuestion(this.pendingCreatedQuestionId);
         }
@@ -544,10 +506,10 @@ export class BankListComponent {
 
   /**
    * D1 (audit M1): "Guardar no da ningún feedback de éxito" — the teacher
-   * saved a question in `bank-new` and landed back on a collapsed tree with
-   * nothing selected. Fetches the full question, expands its course AND
-   * topic (loading that topic's page — the same path `toggleTopic` uses),
-   * selects it so the detail panel shows it, and flags its row
+   * saved a question in `bank-new` and landed back on a screen with nothing
+   * selected. Fetches the full question, SELECTS ITS FOLDER (falling back to
+   * the virtual "Sin carpeta" bucket when the question has none) and lists
+   * it, selects the question so the detail panel shows it, and flags its row
    * `data-highlight` for `HIGHLIGHT_DURATION_MS`. Also announces it through
    * `LiveAnnouncerService` (D3) — the visible banner alone is silent to a
    * screen reader. A failed lookup (question deleted/archived between save
@@ -556,8 +518,8 @@ export class BankListComponent {
   private revealCreatedQuestion(id: string): void {
     this.bankService.getQuestion(id).subscribe({
       next: (question) => {
-        this.expandedCourses.update((current) => addToSet(current, question.courseId));
-        this.expandedTopics.update((current) => addToSet(current, question.topicId));
+        const folderId = question.folderId ?? UNFILED_FOLDER_ID;
+        this.selectedFolderId.set(folderId);
         // `question` here is already the FULL record this same `getQuestion`
         // call just fetched — apply it directly instead of through
         // `select()`, which would issue a second, redundant `getQuestion`
@@ -566,11 +528,11 @@ export class BankListComponent {
         this.createdBanner.set(true);
         this.liveAnnouncer.announce('Pregunta guardada.');
         // The highlight's `HIGHLIGHT_DURATION_MS` window starts once the
-        // topic's page has actually resolved and the row exists to carry it
+        // folder's page has actually resolved and the row exists to carry it
         // — starting the clear-timer immediately (audit #13) could burn
         // part, or on a slow/failed request all, of the window before the
         // row — and the highlight on it — was ever rendered.
-        this.loadTopicQuestions(question.topicId, false, () => {
+        this.loadQuestionsForFolder(folderId, 1, () => {
           this.highlightedQuestionId.set(id);
           this.scheduleTimeout(() => this.highlightedQuestionId.set(null), HIGHLIGHT_DURATION_MS);
         });
@@ -592,40 +554,29 @@ export class BankListComponent {
     this.createdBanner.set(false);
   }
 
+  /**
+   * "Buscar": re-lists the SELECTED folder from page 1 under the current
+   * filters. With no folder selected this is deliberately a no-op — there is
+   * no such thing as "the whole bank" on this screen any more.
+   */
   protected search(): void {
-    this.loading.set(true);
-    this.errorMessage.set(null);
-
-    this.fetchCounts().subscribe({
-      next: (counts) => {
-        this.applyCounts(counts);
-        this.loading.set(false);
-      },
-      error: () => {
-        this.loading.set(false);
-        this.errorMessage.set(ERROR_MESSAGE);
-      },
-    });
+    const folderId = this.selectedFolderId();
+    if (folderId === null) {
+      return;
+    }
+    this.loadQuestionsForFolder(folderId, 1);
   }
 
   protected retry(): void {
-    if (this.taxonomyLoaded()) {
-      this.search();
-    } else {
-      this.loadInitial();
-    }
+    this.loadInitial();
   }
 
-  /** The active filter set, shared by the summary request and every per-topic page request so the counts can never disagree with the leaves. */
+  /** The active filter set, shared by every page request of the selected folder. */
   private currentFilters(): BankQuestionFilters {
     return {
       difficulty: this.difficulty() ?? undefined,
       gradeLevel: this.gradeLevel() ?? undefined,
     };
-  }
-
-  private fetchCounts(): Observable<readonly BankTopicCount[]> {
-    return this.bankService.getQuestionCounts(this.currentFilters());
   }
 
   /**
@@ -645,7 +596,6 @@ export class BankListComponent {
    */
   private fetchTaxonomy(): Observable<{
     courseNames: ReadonlyMap<string, string>;
-    topicNames: ReadonlyMap<string, string>;
     courses: readonly Course[];
     topics: readonly Topic[];
   }> {
@@ -657,165 +607,162 @@ export class BankListComponent {
         // Labels, not raw names: same-named courses from different stages
         // are indistinguishable otherwise (audit 2026-08-20, M2).
         courseNames: courseLabels(courses),
-        topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
         courses,
         topics,
       })),
     );
   }
 
+  protected readonly folderQuestionsErrorMessage = FOLDER_QUESTIONS_ERROR_MESSAGE;
+
   /**
-   * Applies a fresh summary. Every per-topic page already fetched is
-   * DISCARDED: the filters that produced those pages are exactly the ones
-   * that just changed, so keeping them would leave leaves that contradict
-   * their own branch's count. Expansion state resets to collapsed for the
-   * same reason (and because that's the progressive-disclosure default).
-   * Thumbnails are NOT loaded here — the `visibleExpandedTopics` effect
-   * lazy-loads a topic's images the first time it becomes visible+expanded.
+   * Selecting a folder is what drives the question list now. `null` (nothing
+   * selected) shows the bank's own prompt rather than an unscoped list — an
+   * unfiltered `GET /bank/questions` over the 64k central bank is exactly the
+   * request this screen exists to avoid.
    */
-  private applyCounts(counts: readonly BankTopicCount[]): void {
-    this.topicCounts.set([...counts]);
-    if (counts.some((bucket) => bucket.total > 0)) {
-      this.bankHasAnyQuestions.set(true);
+  protected onFolderSelect(folderId: string): void {
+    this.selectedFolderId.set(folderId);
+    this.folderError.set(null);
+    this.loadQuestionsForFolder(folderId, 1);
+  }
+
+  protected onFolderCreate(event: FolderCreateEvent): void {
+    this.folderError.set(null);
+    this.foldersStore.create(event.parentId, event.name).subscribe({
+      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error),
+    });
+  }
+
+  protected onFolderRename(event: FolderRenameEvent): void {
+    this.folderError.set(null);
+    this.foldersStore.rename(event.id, event.name).subscribe({
+      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error),
+    });
+  }
+
+  /** Removal is ALWAYS confirmed — the tree only asks; this opens the modal. */
+  protected onFolderRemoveRequested(folderId: string): void {
+    this.pendingFolderDelete.set(findTreeNode(this.folderTree(), folderId));
+  }
+
+  protected cancelFolderDelete(): void {
+    this.pendingFolderDelete.set(null);
+  }
+
+  protected confirmFolderDelete(): void {
+    const folder = this.pendingFolderDelete();
+    if (!folder) {
+      return;
     }
-    this.loadedQuestions.set(new Map());
-    this.loadedPages.set(new Map());
-    this.loadingTopics.set(new Set());
-    this.failedTopics.set(new Set());
-    this.requestedImageTopics.clear();
-    this.expandedCourses.set(new Set());
-    this.expandedTopics.set(new Set());
+    this.pendingFolderDelete.set(null);
+    this.foldersStore.remove(folder.id).subscribe({
+      next: (result) => {
+        if (this.selectedFolderId() === folder.id) {
+          this.selectedFolderId.set(null);
+          this.clearFolderQuestions();
+        }
+        // The banner exists to answer "where did my questions go?". With
+        // nothing unfiled there is no question to answer, so no banner.
+        this.folderRemovedNotice.set(
+          result.unfiledQuestions > 0
+            ? `Carpeta quitada. ${result.unfiledQuestions} preguntas quedaron en Sin carpeta.`
+            : null,
+        );
+        this.liveAnnouncer.announce('Carpeta quitada.');
+      },
+      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error),
+    });
   }
 
-  protected toggleCourse(courseId: string): void {
-    this.expandedCourses.update((current) => toggleInSet(current, courseId));
-  }
-
-  /** Expanding a topic is what triggers its (single, paginated) question fetch — collapsing keeps the page cached, so re-opening costs nothing. */
-  protected toggleTopic(topicId: string): void {
-    this.expandedTopics.update((current) => toggleInSet(current, topicId));
-    if (this.expandedTopics().has(topicId)) {
-      this.loadTopicQuestions(topicId);
-    }
-  }
-
-  protected isCourseExpanded(courseId: string): boolean {
-    return this.isFiltering() || this.expandedCourses().has(courseId);
+  /** Jumps to the virtual "Sin carpeta" node from the post-delete banner. */
+  protected goToUnfiled(): void {
+    this.folderRemovedNotice.set(null);
+    this.onFolderSelect(UNFILED_FOLDER_ID);
   }
 
   /**
-   * NOTE the asymmetry with `isCourseExpanded`: an active search force-opens
-   * matching COURSES (free — the topic list is already in the summary) but
-   * never topics, because each open topic is one HTTP request. Auto-opening
-   * every topic that matched a query would restore the fan-out this redesign
-   * removed.
+   * A 404 on a folder write means another tab already deleted it, so no
+   * message about the name would be actionable — say the tree was refreshed
+   * instead. It does NOT reload here: `BankFoldersStore.rollback` already
+   * restores the snapshot AND re-loads on every failed write, and a second
+   * `load()` would only be a duplicate request racing the first. Everything
+   * else gets the server's own Spanish message inline next to the input.
    */
-  protected isTopicExpanded(topicId: string): boolean {
-    return this.expandedTopics().has(topicId);
+  private handleFolderWriteError(error: HttpErrorResponse): void {
+    if (error.status === 404) {
+      this.folderError.set('Esa carpeta ya no existe. Actualizamos el árbol.');
+      return;
+    }
+    this.folderError.set(
+      extractErrorMessage(error, 'No se pudo actualizar la carpeta. Inténtalo de nuevo.'),
+    );
   }
 
-  protected isTopicLoading(topicId: string): boolean {
-    return this.loadingTopics().has(topicId);
-  }
-
-  protected hasTopicFailed(topicId: string): boolean {
-    return this.failedTopics().has(topicId);
-  }
-
-  protected readonly topicErrorMessage = TOPIC_ERROR_MESSAGE;
-
-  /** How many more questions the topic holds beyond the pages already fetched — the "Ver más" affordance renders only while this is > 0. */
-  protected remainingIn(topic: QuestionTreeTopicNode): number {
-    return Math.max(0, topic.questionCount - topic.questions.length);
+  private clearFolderQuestions(): void {
+    this.folderQuestions.set([]);
+    this.folderQuestionsTotal.set(0);
+    this.folderPage.set(0);
+    this.folderQuestionsFailed.set(false);
   }
 
   /**
-   * Fetches ONE page of a topic's questions and appends it to the cache.
-   * Idempotent per page: a topic already fully loaded (or with a request in
-   * flight) is a no-op, so re-expanding a branch — or the `expandAll` path —
-   * never re-issues a request. `force` is the inline-retry escape hatch: it
-   * re-runs the same page after a failure, which the `failedTopics` guard
-   * would otherwise block.
+   * Fetches ONE page of the selected folder's questions. Page 1 REPLACES the
+   * list (a new selection, or Buscar under new filters — the loaded rows came
+   * from a query that no longer applies); any later page appends.
    *
-   * `onSettled`, when given, fires exactly once — synchronously for any
-   * no-op branch below (the topic's current page state, whatever it is, is
-   * already final), or once the request this call issues finishes (success
-   * or error) — so a caller can know when it's safe to assume the topic's
-   * loaded rows (and their rendered rows) reflect this call (audit #13).
+   * `onSettled`, when given, fires exactly once — synchronously if a request
+   * is already in flight (the state, whatever it is, is not this call's to
+   * settle), or once this call's request finishes, success or error — so a
+   * caller can know when the rendered rows reflect it (audit #13).
    */
-  private loadTopicQuestions(topicId: string, force = false, onSettled?: () => void): void {
-    if (this.loadingTopics().has(topicId)) {
+  private loadQuestionsForFolder(folderId: string, page: number, onSettled?: () => void): void {
+    if (this.folderQuestionsLoading()) {
       onSettled?.();
       return;
     }
-    if (!force && this.failedTopics().has(topicId)) {
-      onSettled?.();
-      return;
+    if (page === 1) {
+      this.clearFolderQuestions();
     }
-
-    const alreadyLoaded = this.loadedQuestions().get(topicId) ?? [];
-    const expectedTotal =
-      this.topicCounts().find((bucket) => bucket.topicId === topicId)?.total ?? 0;
-    if (alreadyLoaded.length > 0 && alreadyLoaded.length >= expectedTotal) {
-      onSettled?.();
-      return;
-    }
-
-    const page = (this.loadedPages().get(topicId) ?? 0) + 1;
-    this.loadingTopics.update((current) => addToSet(current, topicId));
-    this.failedTopics.update((current) => removeFromSet(current, topicId));
+    this.folderQuestionsLoading.set(true);
+    this.folderQuestionsFailed.set(false);
 
     this.bankService
-      .listQuestionsPaged({ ...this.currentFilters(), topicId }, page, TOPIC_PAGE_SIZE)
+      .listQuestionsPaged({ ...this.currentFilters(), folderId }, page, FOLDER_PAGE_SIZE)
       .subscribe({
         next: (paged) => {
-          this.loadedQuestions.update((current) => {
-            const next = new Map(current);
-            next.set(topicId, [...(current.get(topicId) ?? []), ...paged.items]);
-            return next;
-          });
-          this.loadedPages.update((current) => {
-            const next = new Map(current);
-            next.set(topicId, page);
-            return next;
-          });
-          this.loadingTopics.update((current) => removeFromSet(current, topicId));
+          this.folderQuestions.update((current) =>
+            page === 1 ? [...paged.items] : [...current, ...paged.items],
+          );
+          this.folderQuestionsTotal.set(paged.total);
+          this.folderPage.set(page);
+          this.folderQuestionsLoading.set(false);
+          // Bounded by construction: at most one page of thumbnails per call.
+          this.loadImages(paged.items);
           onSettled?.();
         },
         error: () => {
-          this.loadingTopics.update((current) => removeFromSet(current, topicId));
-          this.failedTopics.update((current) => addToSet(current, topicId));
+          this.folderQuestionsLoading.set(false);
+          this.folderQuestionsFailed.set(true);
           onSettled?.();
         },
       });
   }
 
-  /** "Ver más": pulls the next page of an already-open topic. */
-  protected loadMoreQuestions(topicId: string): void {
-    this.loadTopicQuestions(topicId);
+  /** "Ver más": pulls the next page of the open folder. */
+  protected loadMoreFolderQuestions(): void {
+    const folderId = this.selectedFolderId();
+    if (folderId !== null) {
+      this.loadQuestionsForFolder(folderId, this.folderPage() + 1);
+    }
   }
 
-  /** Inline retry inside a branch whose page request failed — never reloads the whole tree. */
-  protected retryTopic(topicId: string): void {
-    this.loadTopicQuestions(topicId, true);
-  }
-
-  /**
-   * Expands every COURSE (revealing all topic lists), not every topic — see
-   * the class doc: opening every topic would fire one request per topic.
-   */
-  protected expandAll(): void {
-    this.expandedCourses.set(new Set(this.tree().map((course) => course.courseId)));
-  }
-
-  /** Collapses every course and topic. */
-  protected collapseAll(): void {
-    this.expandedCourses.set(new Set());
-    this.expandedTopics.set(new Set());
-  }
-
-  protected chevronFor(expanded: boolean): string {
-    return expanded ? 'chevron-down' : 'chevron-right';
+  /** Inline retry for the failed page — never reloads the folder tree. */
+  protected retryFolderQuestions(): void {
+    const folderId = this.selectedFolderId();
+    if (folderId !== null) {
+      this.loadQuestionsForFolder(folderId, this.folderPage() + 1);
+    }
   }
 
   /** Neutral lucide placeholder for a leaf with no loaded thumbnail: `file-text` for structured questions (no image asset at all), `image` otherwise (image-type question, thumbnail pending or missing). */
@@ -867,25 +814,6 @@ export class BankListComponent {
     // fall through to `null` here and render only "Clave: d" (audit 2026-09-02,
     // L1) — this is the honest floor: it IS a question, it DOES have an image.
     return 'Pregunta con imagen';
-  }
-
-  /**
-   * D2b (audit L4): "Genética y herencia · 5" and "· 4" side by side, with
-   * nothing telling the two topics apart — the trailing number there is
-   * `topic.questionCount`, easily mistaken for a grade. Only topics that
-   * ACTUALLY share a name within the same course get the grade suffix; a
-   * unique name stays bare, same as before. `topic.gradeLevel` is `null`
-   * until the topic's first page has loaded (see `QuestionTreeTopicNode`), so
-   * a same-named topic never expanded yet still renders bare rather than a
-   * dangling "· undefined".
-   */
-  protected topicDisplayName(course: QuestionTreeCourseNode, topic: QuestionTreeTopicNode): string {
-    const sharesNameWithSibling =
-      course.topics.filter((sibling) => sibling.name === topic.name).length > 1;
-    if (sharesNameWithSibling && topic.gradeLevel) {
-      return `${topic.name} · ${gradeLevelLabel(topic.gradeLevel)}`;
-    }
-    return topic.name;
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */
@@ -1000,7 +928,10 @@ export class BankListComponent {
     this.bankService.archiveQuestion(question.id).subscribe({
       next: () => {
         this.selected.set(null);
+        // Both, and in this order: the open folder's list no longer holds the
+        // row, and every ancestor's count in the tree is one lower.
         this.search();
+        this.foldersStore.load();
       },
       error: () => this.actionError.set('No se pudo archivar la pregunta. Inténtalo de nuevo.'),
     });
@@ -1023,6 +954,7 @@ export class BankListComponent {
       next: () => {
         this.selected.set(null);
         this.search();
+        this.foldersStore.load();
       },
       error: () => this.actionError.set('No se pudo borrar la pregunta. Inténtalo de nuevo.'),
     });
@@ -1187,8 +1119,8 @@ export class BankListComponent {
    *   `bodyTypst`/`alternatives`); and if the user picked a replacement file,
    *   `replaceQuestionImage` runs AFTER the patch succeeds so BOTH the
    *   taxonomy/clave edit and the image swap land.
-   * Either way, on success the tree + selected detail are reloaded and edit
-   * mode exits.
+   * Either way, on success the folder's list + selected detail are reloaded
+   * and edit mode exits.
    */
   protected saveEdit(): void {
     const question = this.selected();
@@ -1338,24 +1270,16 @@ function normalizeCorrectAnswer(value: string): string {
   return /^[a-e]$/i.test(value) ? String(value.toLowerCase().charCodeAt(0) - 97) : value;
 }
 
-function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
-  const next = new Set(current);
-  if (next.has(id)) {
-    next.delete(id);
-  } else {
-    next.add(id);
+/** Depth-first lookup over the RENDER tree — the modal needs the node's name and cumulative count. */
+function findTreeNode(nodes: readonly FolderTreeNode[], id: string): FolderTreeNode | null {
+  for (const node of nodes) {
+    if (node.id === id) {
+      return node;
+    }
+    const found = findTreeNode(node.children, id);
+    if (found) {
+      return found;
+    }
   }
-  return next;
-}
-
-function addToSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
-  const next = new Set(current);
-  next.add(id);
-  return next;
-}
-
-function removeFromSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
-  const next = new Set(current);
-  next.delete(id);
-  return next;
+  return null;
 }
