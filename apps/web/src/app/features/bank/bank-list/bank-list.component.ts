@@ -711,6 +711,16 @@ export class BankListComponent {
         if (selected !== null && findTreeNode(this.folderTree(), selected) === null) {
           this.selectedFolderId.set(null);
           this.clearFolderQuestions();
+        } else if (selected !== null) {
+          // UX fix: the open folder SURVIVED this removal, but its contents
+          // can still be stale — deleting ANY folder can move questions into
+          // "Sin carpeta", and the open folder might be exactly that virtual
+          // bucket (or any other folder whose count the tree just rolled up
+          // differently). Re-running the current selection's own query is
+          // what `search()` already does for "Buscar" under new filters;
+          // reusing it here means the list is never left showing a stale
+          // page after a delete that didn't touch its own selection.
+          this.search();
         }
         // The banner exists to answer "where did my questions go?". With
         // nothing unfiled there is no question to answer, so no banner.

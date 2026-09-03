@@ -639,6 +639,32 @@ describe('BankListComponent', () => {
     });
 
     /**
+     * UX fix: deleting a folder can move questions into "Sin carpeta" (the
+     * virtual unfiled bucket) — but the list stayed STALE unless the open
+     * folder happened to be an ancestor of the one just removed. With "Sin
+     * carpeta" open and some OTHER, unrelated folder deleted, the newly
+     * unfiled questions never showed up until the teacher re-clicked the
+     * folder herself.
+     */
+    it("refreshes the open folder's questions after ANY folder delete, not only when the open one was an ancestor of it", () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      openFolder(compiled, fixture, UNFILED_FOLDER_ID);
+      listQuestionsPaged.mockClear();
+
+      requestFolderRemoval(compiled, fixture, 'trigo');
+      (
+        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ folderId: UNFILED_FOLDER_ID }),
+        1,
+        expect.any(Number),
+      );
+    });
+
+    /**
      * `BankFoldersStore.rollback` ALREADY restores the snapshot and re-loads
      * on every failed write (it has to: a concurrent confirmed write would
      * otherwise be erased by the restore). So the component must NOT reload a
