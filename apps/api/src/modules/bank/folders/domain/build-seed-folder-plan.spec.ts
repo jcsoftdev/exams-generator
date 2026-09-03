@@ -1,3 +1,4 @@
+import { MAX_FOLDER_NAME_LENGTH } from "@exams-generator/shared";
 import { buildSeedFolderPlan, SeedCourseRow, SeedTopicRow } from "./build-seed-folder-plan";
 
 const COURSES: SeedCourseRow[] = [
@@ -71,5 +72,35 @@ describe("buildSeedFolderPlan", () => {
 
   it("returns an empty plan when there are no courses", () => {
     expect(buildSeedFolderPlan([], [])).toEqual([]);
+  });
+
+  it("disambiguates two NULL-grade topics that share a name in the same course", () => {
+    // `topics_course_id_name_grade_idx` treats every NULL grade as distinct,
+    // so the taxonomy allows this row pair even though `folderNameForTopic`
+    // has no grade to suffix either one with.
+    const courses: SeedCourseRow[] = [{ id: "c-1", name: "Curso Duplicado", stage: "colegio" }];
+    const topics: SeedTopicRow[] = [
+      { id: "t-1", courseId: "c-1", name: "Repaso", gradeLevel: null },
+      { id: "t-2", courseId: "c-1", name: "Repaso", gradeLevel: null },
+    ];
+
+    const plan = buildSeedFolderPlan(courses, topics);
+    const topicNodes = plan.filter((node) => node.topicId !== null);
+
+    expect(topicNodes.map((node) => node.name)).toEqual(["Repaso", "Repaso (2)"]);
+    // Still two distinct rows, each carrying its own topicId — disambiguation
+    // is cosmetic (the name), not a merge.
+    expect(topicNodes.map((node) => node.topicId)).toEqual(["t-1", "t-2"]);
+  });
+
+  it("truncates a course name longer than MAX_FOLDER_NAME_LENGTH", () => {
+    const longName = "Curso ".repeat(20); // 120 chars
+    const courses: SeedCourseRow[] = [{ id: "c-1", name: longName, stage: "colegio" }];
+
+    const plan = buildSeedFolderPlan(courses, []);
+    const courseNode = plan.find((node) => node.parentKey !== null)!;
+
+    expect(courseNode.name.length).toBeLessThanOrEqual(MAX_FOLDER_NAME_LENGTH);
+    expect(courseNode.name).toBe(longName.slice(0, MAX_FOLDER_NAME_LENGTH).trim());
   });
 });

@@ -1,3 +1,4 @@
+import { MAX_FOLDER_NAME_LENGTH } from "@exams-generator/shared";
 import { folderNameForTopic } from "./folder-name";
 
 export interface SeedCourseRow {
@@ -47,6 +48,50 @@ const STAGE_ROOT_LABELS: Readonly<Record<string, string>> = {
 const STAGE_ORDER = ["escuela", "colegio", "preuniversitario"] as const;
 
 /**
+ * Clamps a catalog-derived name to `MAX_FOLDER_NAME_LENGTH` and re-trims —
+ * `question_folders.name` has no DB-level length constraint, but the seeded
+ * name has to satisfy the SAME `validateFolderName` bound a teacher's manual
+ * rename does, or a course/topic name the catalog grows past 80 characters
+ * would insert a row `folder_name_invalid` would reject if resubmitted.
+ */
+function clampFolderName(name: string): string {
+  return name.length > MAX_FOLDER_NAME_LENGTH ? name.slice(0, MAX_FOLDER_NAME_LENGTH).trim() : name;
+}
+
+/**
+ * Disambiguates sibling names that collide after `clampFolderName`/
+ * `folderNameForTopic` have already run. The one real-world case: two topics
+ * in the SAME course sharing a name with a NULL `gradeLevel` — the taxonomy's
+ * own unique index (`topics_course_id_name_grade_idx`) treats every NULL grade
+ * as distinct, so the database happily stores both rows, but
+ * `folderNameForTopic` only adds the disambiguating grade suffix when
+ * `gradeLevel` is set. Left alone, the second insert would collide on
+ * `question_folders_sibling_name_idx` (`tenant_id, parent_id, name`) and the
+ * whole seed transaction would abort with a constraint violation instead of a
+ * folder appearing.
+ *
+ * First occurrence of a name keeps it; the second gets " (2)", the third
+ * " (3)", etc. — trimmed further if the suffix would push the total past
+ * `MAX_FOLDER_NAME_LENGTH`.
+ */
+function dedupeSiblingNames(names: readonly string[]): string[] {
+  const seenCount = new Map<string, number>();
+  return names.map((name) => {
+    const occurrence = (seenCount.get(name) ?? 0) + 1;
+    seenCount.set(name, occurrence);
+    if (occurrence === 1) {
+      return name;
+    }
+    const suffix = ` (${occurrence})`;
+    const base =
+      name.length + suffix.length > MAX_FOLDER_NAME_LENGTH
+        ? name.slice(0, MAX_FOLDER_NAME_LENGTH - suffix.length)
+        : name;
+    return `${base}${suffix}`;
+  });
+}
+
+/**
  * The default folder set a tenant receives on its first `GET /bank/folders`:
  * a root per stage that has courses, a folder per course under it (alphabetical),
  * and a folder per topic under each course, carrying `topicId` so central-bank
@@ -89,17 +134,20 @@ export function buildSeedFolderPlan(
       plan.push({
         key: courseKey,
         parentKey: rootKey,
-        name: course.name,
+        name: clampFolderName(course.name),
         topicId: null,
         position: coursePosition,
       });
 
       const courseTopics = topics.filter((topic) => topic.courseId === course.id);
+      const topicNames = dedupeSiblingNames(
+        courseTopics.map((topic) => clampFolderName(folderNameForTopic(topic, courseTopics))),
+      );
       for (const [topicPosition, topic] of courseTopics.entries()) {
         plan.push({
           key: `topic:${topic.id}`,
           parentKey: courseKey,
-          name: folderNameForTopic(topic, courseTopics),
+          name: topicNames[topicPosition]!,
           topicId: topic.id,
           position: topicPosition,
         });
