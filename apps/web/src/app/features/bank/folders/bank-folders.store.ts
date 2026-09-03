@@ -7,11 +7,15 @@ import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
 import { BankService } from '../bank.service';
 import { findFolderById, toFolderTreeNodes } from './folder-tree.model';
 
+/** `folder_cycle`, mirroring the server's own `BankFolderErrorCode` for this case (`bank-folder.dto.ts`). */
+const FOLDER_CYCLE_ERROR = 'folder_cycle';
+
 const LOAD_ERROR = 'No se pudieron cargar las carpetas. Inténtalo de nuevo.';
 
 /** Optimistic ids are prefixed so a `startsWith` check can tell a pending node from a real one. */
 const OPTIMISTIC_PREFIX = 'optimistic:';
 
+/** Module-level, not per-instance: safe only because `BankFoldersStore` is `providedIn: 'root'` — a single instance ever increments it. */
 let optimisticCounter = 0;
 
 /**
@@ -104,7 +108,19 @@ export class BankFoldersStore {
       .pipe(catchError((error: HttpErrorResponse) => this.rollback(snapshot, error)));
   }
 
+  /**
+   * Client-side cycle guard runs BEFORE touching state or the network: moving
+   * a folder under itself or under one of its own descendants would make the
+   * subtree vanish optimistically (its new "ancestor" no longer exists at the
+   * root, since it's a child of the very node being relocated) until the
+   * server's `folder_cycle` came back — so this rejects the same shapes the
+   * server would, without ever emitting the illegal optimistic state.
+   */
   move(id: string, parentId: string | null): Observable<BankFolderNode> {
+    if (parentId !== null && isWithinSubtree(this._folders(), id, parentId)) {
+      return throwError(() => new Error(FOLDER_CYCLE_ERROR));
+    }
+
     const snapshot = this._folders();
     const moving = findFolderById(snapshot, id);
     if (moving) {
@@ -118,15 +134,11 @@ export class BankFoldersStore {
 
   remove(id: string): Observable<DeleteBankFolderResponse> {
     const snapshot = this._folders();
-    const snapshotUnfiled = this._unfiledCount();
     this._folders.set(removeNode(snapshot, id));
 
     return this.bankService.deleteFolder(id).pipe(
       tap((result) => this._unfiledCount.update((count) => count + result.unfiledQuestions)),
-      catchError((error: HttpErrorResponse) => {
-        this._unfiledCount.set(snapshotUnfiled);
-        return this.rollback(snapshot, error);
-      }),
+      catchError((error: HttpErrorResponse) => this.rollback(snapshot, error)),
     );
   }
 
@@ -134,14 +146,36 @@ export class BankFoldersStore {
    * Restores the snapshot and re-throws, so the CALLER decides what the teacher
    * sees: `bank-list` maps `folder_name_taken` to a red inline input and
    * `folder_not_found` to a full reload (another tab deleted it).
+   *
+   * The snapshot restore alone is only correct for an ISOLATED failure: it was
+   * taken when THIS write started, so if a different write (on another node)
+   * was confirmed by the server while this one was in flight, restoring it
+   * verbatim would silently erase that other, already-confirmed write. The
+   * snapshot restore still happens first — it keeps the UI honest the instant
+   * the error lands — but `load()` immediately follows to reconcile with
+   * server truth, which folds any such concurrent write back in.
    */
   private rollback(
     snapshot: readonly BankFolderNode[],
     error: HttpErrorResponse,
   ): Observable<never> {
     this._folders.set(snapshot);
+    this.load();
     return throwError(() => error);
   }
+}
+
+/** True when `targetId` is `rootId` itself or lives anywhere in its subtree. */
+function isWithinSubtree(
+  folders: readonly BankFolderNode[],
+  rootId: string,
+  targetId: string,
+): boolean {
+  if (rootId === targetId) {
+    return true;
+  }
+  const root = findFolderById(folders, rootId);
+  return root !== null && findFolderById(root.children, targetId) !== null;
 }
 
 /** All four helpers rebuild the branch they touch and share the rest — no mutation, ever. */

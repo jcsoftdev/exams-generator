@@ -92,6 +92,12 @@ describe('BankFoldersStore', () => {
       .flush({ code: 'folder_name_taken' }, { status: 409, statusText: 'Conflict' });
 
     expect(store.tree()).toEqual(before);
+
+    // Rollback re-fetches server truth (fix round 1, defect 1) — flush it so
+    // the mock doesn't leave a dangling request.
+    httpMock
+      .expectOne(`${environment.apiBaseUrl}/bank/folders`)
+      .flush({ folders: TREE, unfiledCount: 0 });
   });
 
   it('renames optimistically and rolls back on failure', () => {
@@ -105,6 +111,45 @@ describe('BankFoldersStore', () => {
       .flush({ code: 'folder_name_taken' }, { status: 409, statusText: 'Conflict' });
 
     expect(store.tree()[0]!.children[0]!.name).toBe('Matemática');
+
+    httpMock
+      .expectOne(`${environment.apiBaseUrl}/bank/folders`)
+      .flush({ folders: TREE, unfiledCount: 0 });
+  });
+
+  it('reconciles overlapping writes: a stale rollback re-fetches instead of erasing a confirmed concurrent write', () => {
+    flushLoad();
+
+    store.rename('mate', 'A').subscribe({ error: () => {} });
+    store.rename('mate', 'B').subscribe({ error: () => {} });
+
+    const [requestA, requestB] = httpMock.match(`${environment.apiBaseUrl}/bank/folders/mate`);
+    expect(requestA).toBeDefined();
+    expect(requestB).toBeDefined();
+
+    // B is confirmed by the server first...
+    requestB!.flush(
+      wire({ id: 'mate', name: 'B', parentId: 'colegio', topicId: 't-1', ownCount: 3 }),
+    );
+    // ...then A fails. A naive rollback to A's call-time snapshot would erase
+    // B's confirmed rename — instead the store must re-fetch server truth.
+    requestA!.flush({ message: 'boom' }, { status: 500, statusText: 'Server Error' });
+
+    const reload = httpMock.expectOne(`${environment.apiBaseUrl}/bank/folders`);
+    reload.flush({
+      folders: [
+        wire({
+          id: 'colegio',
+          name: 'Colegio',
+          children: [
+            wire({ id: 'mate', name: 'B', parentId: 'colegio', topicId: 't-1', ownCount: 3 }),
+          ],
+        }),
+      ],
+      unfiledCount: 0,
+    });
+
+    expect(store.folderName('mate')).toBe('B');
   });
 
   it('moves a folder with a PATCH carrying parentId', () => {
@@ -117,6 +162,35 @@ describe('BankFoldersStore', () => {
     request.flush(wire({ id: 'mate', name: 'Matemática', parentId: null }));
 
     expect(store.tree().map((node) => node.id)).toEqual(['colegio', 'mate']);
+  });
+
+  it('refuses to move a folder under its own descendant — no request, tree unchanged, observable errors', () => {
+    const deepTree: BankFolderNode[] = [
+      wire({
+        id: 'colegio',
+        name: 'Colegio',
+        children: [
+          wire({
+            id: 'mate',
+            name: 'Matemática',
+            parentId: 'colegio',
+            children: [wire({ id: 'trigo', name: 'Trigonometría', parentId: 'mate' })],
+          }),
+        ],
+      }),
+    ];
+    store.load();
+    httpMock
+      .expectOne(`${environment.apiBaseUrl}/bank/folders`)
+      .flush({ folders: deepTree, unfiledCount: 0 });
+
+    const before = store.tree();
+    let error: unknown;
+    store.move('colegio', 'trigo').subscribe({ error: (e) => (error = e) });
+
+    httpMock.expectNone(`${environment.apiBaseUrl}/bank/folders/colegio`);
+    expect(store.tree()).toEqual(before);
+    expect(error).toBeDefined();
   });
 
   it('removes optimistically and returns the server counts', () => {
@@ -142,6 +216,10 @@ describe('BankFoldersStore', () => {
       .flush({ code: 'folder_not_found' }, { status: 404, statusText: 'Not Found' });
 
     expect(store.tree()[0]!.children.map((node) => node.id)).toEqual(['mate']);
+
+    httpMock
+      .expectOne(`${environment.apiBaseUrl}/bank/folders`)
+      .flush({ folders: TREE, unfiledCount: 0 });
   });
 
   it('answers name and topic lookups by id', () => {
