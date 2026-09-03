@@ -129,17 +129,30 @@
             <p class="p-4 text-sm text-n500">Cargando carpetas…</p>
           } @else if (foldersError(); as message) {
             <p role="alert" class="p-4 text-sm text-hard-text">{{ message }}</p>
-          } @else if (filteredFolderTree().length === 0) {
-            <div
-              class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500"
-            >
-              @if (filterQuery().trim()) {
-                No se encontraron carpetas para tu búsqueda.
-              } @else {
-                Todavía no tienes carpetas.
-              }
-            </div>
           } @else {
+            <!--
+              `ui-folder-tree` is mounted here EVEN WITH ZERO nodes (fix
+              round 4) — the spec does not re-seed a tenant that deletes
+              every folder, so a zero-folder tree is a real, reachable
+              state, not just a fresh signup. "+ Nueva carpeta" (above) needs
+              the `#folderTree` viewChild to resolve to SOMETHING in that
+              state too, or that tenant has no way to ever create a first
+              folder. The primitive renders no rows for an empty `nodes()`
+              (see its own 'renders an empty tree without throwing' spec),
+              so this placeholder still reads as an empty tree — it just
+              also hosts the root create editor when asked to.
+            -->
+            @if (filteredFolderTree().length === 0) {
+              <div
+                class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500"
+              >
+                @if (filterQuery().trim()) {
+                  No se encontraron carpetas para tu búsqueda.
+                } @else {
+                  Todavía no tienes carpetas.
+                }
+              </div>
+            }
             <ui-folder-tree
               #folderTree
               [nodes]="filteredFolderTree()"

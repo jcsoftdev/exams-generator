@@ -551,6 +551,37 @@ describe('BankListComponent', () => {
       expect(createdFolders).toEqual([{ parentId: null, name: 'Otros' }]);
     });
 
+    /**
+     * The spec doesn't re-seed a tenant that deletes every folder — a
+     * zero-folder tenant is a REAL, reachable state, not just a fresh
+     * signup. "+ Nueva carpeta" has to work there too, or that tenant is
+     * stuck with no way to ever create a first folder. `ui-folder-tree` is
+     * now mounted even with an empty tree (it renders no rows on its own,
+     * see 'renders an empty tree without throwing'), so the same
+     * `#folderTree` viewChild the non-empty case uses is never `undefined`.
+     */
+    it('creates a ROOT folder from a completely empty tree (zero folders, nothing unfiled)', () => {
+      const { compiled, fixture, createdFolders } = setup({
+        getFoldersImpl: () => of({ folders: [], unfiledCount: 0 }),
+      });
+      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
+        /Todavía no tienes carpetas/i,
+      );
+
+      (compiled.querySelector('[data-testid="folder-create-root"] button') as HTMLElement).click();
+      fixture.detectChanges();
+
+      const input = compiled.querySelector<HTMLInputElement>(
+        '[data-testid="folder-new-input-root"] input',
+      )!;
+      input.value = 'Otros';
+      input.dispatchEvent(new Event('input'));
+      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+      fixture.detectChanges();
+
+      expect(createdFolders).toEqual([{ parentId: null, name: 'Otros' }]);
+    });
+
     it("creates a subfolder through the tree's create output", () => {
       const { fixture, createdFolders } = setup();
       internals(fixture).onFolderCreate({ parentId: 'colegio', name: 'Nueva' });
