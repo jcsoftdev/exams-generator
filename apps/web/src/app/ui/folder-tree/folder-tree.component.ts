@@ -115,6 +115,8 @@ import {
               [attr.aria-label]="'Acciones de ' + node.name"
               class="shrink-0 rounded p-0.5 text-n400 opacity-0 transition-opacity hover:text-n700 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-primary-300 group-hover:opacity-100"
               (click)="toggleMenu($event, node)"
+              (keydown.enter)="toggleMenu($event, node)"
+              (keydown.space)="toggleMenu($event, node)"
             >
               <lucide-angular name="more-horizontal" class="h-4 w-4"></lucide-angular>
             </button>
@@ -266,8 +268,22 @@ export class FolderTreeComponent {
    * second F2 reset the in-progress draft. The inputs now `stopPropagation`
    * on their own wrapper so this handler never even runs for them; this
    * early return is a second line of defense in case that wrapper ever moves.
+   *
+   * Fix (review round 2): the toggle chevron and the "…" menu trigger also
+   * live inside this row, and neither one used to stop its own keydown from
+   * bubbling here. Enter/Space on either of them was (a) also emitting
+   * `select`, and (b) hitting `event.preventDefault()` below, which can
+   * suppress the button's own native Enter/Space activation (the CDK's own
+   * `cdkTreeNodeToggle` handles this correctly via its own keydown listener,
+   * but the menu trigger's native button activation was left exposed to
+   * this handler's `preventDefault()`). This handler now only acts on
+   * keydowns that originate on the row itself — not on any descendant
+   * button/input/menu.
    */
   protected onRowKeydown(event: KeyboardEvent, node: FolderTreeNode): void {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
     if (this.editingId() === node.id || this.creatingUnder() === node.id) {
       return;
     }
@@ -288,6 +304,16 @@ export class FolderTreeComponent {
     }
   }
 
+  /**
+   * Bound to the trigger's `(click)`, `(keydown.enter)` and `(keydown.space)`
+   * (review round 2) rather than relying on the browser's native Enter/Space
+   * button-activation default action — `onRowKeydown` above no longer
+   * `preventDefault()`s a bubbled event from this button, but a real native
+   * activation still isn't something a unit test can observe, so this
+   * mirrors the CDK's own `CdkTreeNodeToggle` pattern of listening to the
+   * keys directly. `event.stopPropagation()` also keeps the keydown from
+   * ever reaching the row.
+   */
   protected toggleMenu(event: Event, node: FolderTreeNode): void {
     event.stopPropagation();
     this.menuFor.update((current) => (current === node.id ? null : node.id));

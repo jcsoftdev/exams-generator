@@ -338,4 +338,28 @@ describe('FolderTreeComponent', () => {
     expect(removeButton.tagName).toBe('BUTTON');
     expect(removeButton.getAttribute('role')).toBe('menuitem');
   });
+
+  // --- Fix round 2 -----------------------------------------------------
+
+  it('does not emit select on Enter with focus on the toggle chevron (still toggles via the CDK)', () => {
+    const toggle = element.querySelector<HTMLButtonElement>(
+      '[data-testid="folder-toggle"][data-folder-id="colegio"]',
+    )!;
+    toggle.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(host.lastSelected).toBeNull();
+    expect(rowFor('mate')).not.toBeNull();
+  });
+
+  it('does not emit select on Enter with focus on the "…" menu trigger, and the menu opens', () => {
+    const trigger = element.querySelector<HTMLButtonElement>(
+      '[data-testid="folder-menu"][data-folder-id="colegio"]',
+    )!;
+    trigger.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(host.lastSelected).toBeNull();
+    expect(element.querySelector('[role="menu"]')).not.toBeNull();
+  });
 });
