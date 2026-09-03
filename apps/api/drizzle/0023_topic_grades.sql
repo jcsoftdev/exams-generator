@@ -17,6 +17,36 @@
 -- regenerates against `meta/0023_snapshot.json`, finds no schema drift, and so
 -- compares this file against itself.
 
+-- Pre-flight. Collapsing merges rows by `(course_id, name)`, so two DIFFERENT
+-- names that share one non-null `slug` inside a course survive as two rows and
+-- then fail `topics_course_id_slug_idx` at the bottom of this file with
+-- Postgres' generic "could not create unique index" — which says nothing about
+-- what to fix. This does not happen in any known database (the seeder derives
+-- the slug from the canonical name), so the check is cheap insurance whose only
+-- job is to name the offending rows if it ever does.
+DO $$
+DECLARE
+  offender text;
+BEGIN
+  SELECT format(
+           'course_id=%s slug=%s names=[%s]',
+           t."course_id", t."slug", string_agg(DISTINCT t."name", ' | ')
+         )
+    INTO offender
+    FROM "topics" t
+   WHERE t."slug" IS NOT NULL
+   GROUP BY t."course_id", t."slug"
+  HAVING count(DISTINCT t."name") > 1
+   LIMIT 1;
+
+  IF offender IS NOT NULL THEN
+    RAISE EXCEPTION
+      '0023_topic_grades: two topics in one course share a slug under different names (%). Reconcile them into one name before migrating.',
+      offender;
+  END IF;
+END $$;
+--> statement-breakpoint
+
 CREATE TABLE IF NOT EXISTS "topic_grades" (
 	"topic_id" uuid NOT NULL,
 	"grade_level" text NOT NULL,
@@ -40,7 +70,9 @@ CREATE INDEX IF NOT EXISTS "topic_grades_grade_level_idx" ON "topic_grades" USIN
 -- The canonical row of every `(course_id, name)` group: the copy whose grade
 -- has the lowest `grade_levels.sort_order`, id as the tie-break. `topics` has
 -- no `created_at`, so id IS the tie-break (the design doc's "created_at/id"
--- collapses to id). Grade-less rows sort last via the COALESCE sentinel.
+-- collapses to id). Grade-less rows sort last via the COALESCE sentinel, so a
+-- NULL-grade copy inside an otherwise graded group is collapsed INTO it and
+-- contributes no `topic_grades` row.
 -- TEMP + ON COMMIT DROP: the migrator holds one connection for the whole
 -- transaction, and the table must not survive it.
 CREATE TEMP TABLE "topic_collapse_map" ON COMMIT DROP AS
@@ -57,8 +89,8 @@ CREATE UNIQUE INDEX ON "topic_collapse_map" (copy_id);
 --> statement-breakpoint
 
 -- Every grade any copy of the group carried becomes a row on the canonical
--- topic. A topic with NULL grade contributes nothing and ends up with no rows
--- — "taught across the whole stage" (2 preuni topics today).
+-- topic. A group whose every copy has a NULL grade ends up with no rows —
+-- "taught across the whole stage".
 INSERT INTO "topic_grades" ("topic_id", "grade_level")
 SELECT DISTINCT m.canonical_id, t."grade_level"
 FROM "topics" t
@@ -139,15 +171,158 @@ JOIN "topic_collapse_map" m ON m.copy_id = f."topic_id";
 --> statement-breakpoint
 CREATE UNIQUE INDEX ON "folder_merge_map" (loser_id);
 --> statement-breakpoint
+
+-- Both remaining folder steps (re-parenting a loser's children under the
+-- keeper, and stripping the seeded ` · <label>` suffix) can land two folders
+-- on the same name inside one parent, and
+-- `question_folders_sibling_name_idx` / `question_folders_root_name_idx` are
+-- plain unique indexes: NOT DEFERRABLE, checked per row as the statement
+-- writes it. So the name a folder ENDS UP with has to be decided in the very
+-- same statement that moves or renames it — a "fix the duplicates afterwards"
+-- pass never runs, because the transaction has already aborted.
+--
+-- This table is that statement's input: the folders to touch, where each one
+-- is going, and the name it WANTS. `apply_folder_rename_plan()` turns the
+-- wanted name into a free one and applies both columns at once. Written as a
+-- temp function rather than twice inline because getting this right once is
+-- hard enough; dropped again below.
+CREATE TEMP TABLE "folder_rename_input" (
+  "id" uuid PRIMARY KEY,
+  "tenant_id" uuid NOT NULL,
+  "new_parent_id" uuid,
+  "base_name" text NOT NULL
+) ON COMMIT DROP;
+--> statement-breakpoint
+CREATE FUNCTION pg_temp.apply_folder_rename_plan() RETURNS void LANGUAGE plpgsql AS $fn$
+BEGIN
+  WITH plan AS (
+    SELECT
+      i."id",
+      i."tenant_id",
+      i."new_parent_id",
+      -- Root folders have a NULL parent and are deduped by
+      -- `question_folders_root_name_idx`, so NULL is a group like any other.
+      COALESCE(i."new_parent_id", '00000000-0000-0000-0000-000000000000'::uuid) AS grp,
+      left(i."base_name", 80) AS base_name
+    FROM "folder_rename_input" i
+  ),
+  -- Names the destination group ALREADY holds. Rows in the plan are excluded:
+  -- their current name is about to be replaced, so it is not an obstacle.
+  -- Losers still count — they are deleted only after this runs, so their names
+  -- genuinely occupy the index right now.
+  taken AS (
+    SELECT DISTINCT p."tenant_id", p.grp, e."name"
+    FROM plan p
+    JOIN "question_folders" e
+      ON e."tenant_id" = p."tenant_id"
+     AND COALESCE(e."parent_id", '00000000-0000-0000-0000-000000000000'::uuid) = p.grp
+    WHERE NOT EXISTS (SELECT 1 FROM plan p2 WHERE p2."id" = e."id")
+  ),
+  -- Ties inside one wanted name are broken by id, so the assignment is
+  -- deterministic and re-running the migration on a restored dump repeats it.
+  ranked AS (
+    SELECT
+      p.*,
+      row_number() OVER (
+        PARTITION BY p."tenant_id", p.grp, p.base_name
+        ORDER BY p.base_name, p."id"
+      ) AS rn
+    FROM plan p
+  ),
+  families AS (
+    SELECT
+      r."tenant_id",
+      r.grp,
+      r.base_name,
+      max(r.rn) AS needed,
+      (SELECT count(*) FROM taken t WHERE t."tenant_id" = r."tenant_id" AND t.grp = r.grp) AS blocked
+    FROM ranked r
+    GROUP BY r."tenant_id", r.grp, r.base_name
+  ),
+  -- "Foo", "Foo (2)", "Foo (3)", … clamped to the 80 characters
+  -- `MAX_FOLDER_NAME_LENGTH` allows. At most `blocked` of them can be taken,
+  -- so `needed + blocked` candidates always yield `needed` free ones.
+  candidates AS (
+    SELECT
+      f."tenant_id",
+      f.grp,
+      f.base_name,
+      s.i,
+      CASE
+        WHEN s.i = 1 THEN f.base_name
+        ELSE left(f.base_name, 80 - length(' (' || s.i || ')')) || ' (' || s.i || ')'
+      END AS candidate
+    FROM families f
+    CROSS JOIN LATERAL generate_series(1, f.needed + f.blocked) AS s(i)
+  ),
+  free AS (
+    SELECT
+      c."tenant_id",
+      c.grp,
+      c.base_name,
+      c.candidate,
+      row_number() OVER (PARTITION BY c."tenant_id", c.grp, c.base_name ORDER BY c.i) AS slot
+    FROM candidates c
+    WHERE NOT EXISTS (
+            SELECT 1 FROM taken t
+            WHERE t."tenant_id" = c."tenant_id" AND t.grp = c.grp AND t."name" = c.candidate
+          )
+      -- A folder literally named "Foo (2)" landing in the same group as "Foo"
+      -- would otherwise both be handed "Foo (2)". The bare name always wins.
+      AND NOT EXISTS (
+            SELECT 1 FROM plan o
+            WHERE o."tenant_id" = c."tenant_id"
+              AND o.grp = c.grp
+              AND o.base_name <> c.base_name
+              AND o.base_name = c.candidate
+          )
+  )
+  UPDATE "question_folders" f
+  SET "parent_id" = r."new_parent_id",
+      "name" = fr.candidate
+  FROM ranked r
+  JOIN free fr
+    ON fr."tenant_id" = r."tenant_id"
+   AND fr.grp = r.grp
+   AND fr.base_name = r.base_name
+   AND fr.slot = r.rn
+  WHERE f."id" = r."id";
+
+  DELETE FROM "folder_rename_input";
+END;
+$fn$;
+--> statement-breakpoint
 UPDATE "questions" q
 SET "folder_id" = fm.keeper_id
 FROM "folder_merge_map" fm
 WHERE fm.loser_id = q."folder_id" AND fm.keeper_id <> q."folder_id";
 --> statement-breakpoint
-UPDATE "question_folders" f
-SET "parent_id" = fm.keeper_id
-FROM "folder_merge_map" fm
-WHERE fm.loser_id = f."parent_id" AND fm.keeper_id <> f."parent_id";
+
+-- Case 1: every child of a losing folder moves under the keeper, keeping its
+-- own name where the keeper does not already have one like it.
+--
+-- The keeper itself can be one of those children (a seeded tree may nest the
+-- grade folders). It obviously cannot become its own parent, and
+-- `question_folders.parent_id` is ON DELETE CASCADE, so leaving it under the
+-- loser would delete the keeper AND its whole subtree three statements from
+-- now. It is lifted to the loser's own parent instead, resolved through the
+-- merge map in case that parent is itself a losing folder.
+INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name")
+SELECT
+  f."id",
+  f."tenant_id",
+  CASE
+    WHEN f."id" = fm.keeper_id THEN COALESCE(gm.keeper_id, loser."parent_id")
+    ELSE fm.keeper_id
+  END,
+  f."name"
+FROM "question_folders" f
+JOIN "folder_merge_map" fm ON fm.loser_id = f."parent_id" AND fm.keeper_id <> f."parent_id"
+JOIN "question_folders" loser ON loser."id" = f."parent_id"
+LEFT JOIN "folder_merge_map" gm
+  ON gm.loser_id = loser."parent_id" AND gm.keeper_id <> loser."parent_id";
+--> statement-breakpoint
+SELECT pg_temp.apply_folder_rename_plan();
 --> statement-breakpoint
 DELETE FROM "question_folders" f
 USING "folder_merge_map" fm
@@ -159,37 +334,21 @@ FROM "topic_collapse_map" m
 WHERE m.copy_id = f."topic_id" AND m.canonical_id <> f."topic_id";
 --> statement-breakpoint
 
--- Strip the seeded ` · <grade label>` suffix. Matched against the TOPIC's own
--- name rather than a list of the 12 labels: a folder named exactly
+-- Case 2, after case 1 so it sees the folders case 1 moved in: strip the
+-- seeded ` · <grade label>` suffix. Matched against the TOPIC's own name
+-- rather than a list of the 12 labels — a folder named exactly
 -- "<topic name> · <anything>" is one the seeder wrote, and a folder the
 -- teacher renamed by hand never matches, so her name survives.
-UPDATE "question_folders" f
-SET "name" = left(t."name", 80)
-FROM "topics" t
-WHERE f."topic_id" = t."id"
-  AND f."name" <> left(t."name", 80)
+INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name")
+SELECT f."id", f."tenant_id", f."parent_id", left(t."name", 80)
+FROM "question_folders" f
+JOIN "topics" t ON t."id" = f."topic_id"
+WHERE f."name" <> left(t."name", 80)
   AND starts_with(f."name", t."name" || ' · ');
 --> statement-breakpoint
-
--- Stripping a suffix (or re-parenting a child above) can land two siblings on
--- the same name, which `question_folders_sibling_name_idx` /
--- `question_folders_root_name_idx` forbid. Same rule the seeder used to apply
--- (`dedupeSiblingNames`): first one keeps the bare name, the rest get " (2)",
--- " (3)", … clamped to 80 characters.
-WITH ranked AS (
-  SELECT
-    "id",
-    row_number() OVER (
-      PARTITION BY "tenant_id", COALESCE("parent_id", '00000000-0000-0000-0000-000000000000'::uuid), "name"
-      ORDER BY "position", "id"
-    ) AS rn,
-    "name"
-  FROM "question_folders"
-)
-UPDATE "question_folders" f
-SET "name" = left(ranked."name", 80 - length(' (' || ranked.rn || ')')) || ' (' || ranked.rn || ')'
-FROM ranked
-WHERE ranked."id" = f."id" AND ranked.rn > 1;
+SELECT pg_temp.apply_folder_rename_plan();
+--> statement-breakpoint
+DROP FUNCTION pg_temp.apply_folder_rename_plan();
 --> statement-breakpoint
 
 -- Nothing references the copies any more.
