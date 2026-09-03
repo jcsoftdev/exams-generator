@@ -216,6 +216,8 @@ describe("Bank folders (e2e)", () => {
     topicId: string;
     folderId: string | null;
     createdBy: string;
+    /** Defaults to `Difficulty.Medium` — override to test filter composition. */
+    difficulty?: Difficulty;
   }): Promise<string> {
     const [row] = await db
       .insert(questions)
@@ -223,7 +225,7 @@ describe("Bank folders (e2e)", () => {
         tenantId: input.tenantId,
         topicId: input.topicId,
         folderId: input.folderId,
-        difficulty: Difficulty.Medium,
+        difficulty: input.difficulty ?? Difficulty.Medium,
         gradeLevel: "secundaria_4",
         status: "approved",
         type: "structured",
@@ -417,33 +419,37 @@ describe("Bank folders (e2e)", () => {
         folderId: seeded!.id,
         createdBy: teacherBId,
       });
-      const central = await insertQuestion({
-        tenantId: null,
-        topicId: preTopicId,
-        folderId: null,
-        createdBy: staffUserId,
-      });
-      // Same tenant, same topic, but filed nowhere -> must NOT appear.
-      const unrelated = await insertQuestion({
-        tenantId: tenantBId,
-        topicId: preTopicId,
-        folderId: null,
-        createdBy: teacherBId,
-      });
 
-      const response = await listRequest(tokenB).query({ folderId: seeded!.id }).expect(200);
-      const ids = response.body.map((row: any) => row.id);
+      try {
+        const central = await insertQuestion({
+          tenantId: null,
+          topicId: preTopicId,
+          folderId: null,
+          createdBy: staffUserId,
+        });
+        // Same tenant, same topic, but filed nowhere -> must NOT appear.
+        const unrelated = await insertQuestion({
+          tenantId: tenantBId,
+          topicId: preTopicId,
+          folderId: null,
+          createdBy: teacherBId,
+        });
 
-      expect(ids).toEqual(expect.arrayContaining([own, central]));
-      expect(ids).not.toContain(unrelated);
+        const response = await listRequest(tokenB).query({ folderId: seeded!.id }).expect(200);
+        const ids = response.body.map((row: any) => row.id);
 
-      // Unfile OWN before the later DELETE-folder tests run: this suite reuses
-      // the tenant's SEEDED per-topic folder (the only one that ever carries a
-      // `topicId`), and `bank-folders.e2e.spec.ts`'s own "leaves CENTRAL
-      // questions completely untouched" DELETE test asserts `unfiledQuestions:
-      // 0` when it later deletes this same folder — a row left filed here
-      // would falsify that unrelated assertion.
-      await db.update(questions).set({ folderId: null }).where(eq(questions.id, own));
+        expect(ids).toEqual(expect.arrayContaining([own, central]));
+        expect(ids).not.toContain(unrelated);
+      } finally {
+        // Unfile OWN before the later DELETE-folder tests run: this suite reuses
+        // the tenant's SEEDED per-topic folder (the only one that ever carries a
+        // `topicId`), and `bank-folders.e2e.spec.ts`'s own "leaves CENTRAL
+        // questions completely untouched" DELETE test asserts `unfiledQuestions:
+        // 0` when it later deletes this same folder — a row left filed here
+        // (even from a FAILED assertion above) would falsify that unrelated
+        // assertion, so this runs unconditionally.
+        await db.update(questions).set({ folderId: null }).where(eq(questions.id, own));
+      }
     });
 
     it("returns each row's folderId so the client can render where it lives", async () => {
@@ -507,6 +513,37 @@ describe("Bank folders (e2e)", () => {
 
       const response = await listRequest(tokenA).query({ folderId: folderOfB.id }).expect(404);
       expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("rejects a non-uuid folderId with 404 folder_not_found instead of leaking a Postgres error", async () => {
+      const response = await listRequest(tokenB).query({ folderId: "abc" }).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("composes with another filter — folderId AND difficulty narrow to the matching subset", async () => {
+      const folder = await makeFolder(tokenB, { name: `Compuesta ${randomUUID()}` });
+      const matching = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+        difficulty: Difficulty.Hard,
+      });
+      await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+        difficulty: Difficulty.Easy,
+      });
+
+      const response = await listRequest(tokenB)
+        .query({ folderId: folder.id, difficulty: Difficulty.Hard, page: "1", pageSize: "10" })
+        .expect(200);
+
+      expect(response.body).toMatchObject({ total: 1 });
+      expect(response.body.items).toHaveLength(1);
+      expect(response.body.items[0].id).toBe(matching);
     });
 
     it("keeps working with pagination", async () => {

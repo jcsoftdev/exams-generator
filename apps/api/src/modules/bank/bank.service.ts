@@ -263,12 +263,6 @@ export class BankService {
   }
 
   /**
-   * S6: `pagination` is opt-in — retro-compat with existing web consumers
-   * (`bank.service.ts`, `ai.service.ts`'s `listDrafts`) means omitting it
-   * MUST keep returning the flat `QuestionListItem[]` this always returned.
-   * Only passing `pagination` switches to the `{ items, total }` envelope.
-   */
-  /**
    * Folder scope is resolved HERE, not in the repository: it is a lookup plus an
    * authorization decision (404 for another tenant's folder), and the repository
    * layer only applies conditions.
@@ -286,6 +280,12 @@ export class BankService {
       : { folderId: scope.folderId, folderTopicId: scope.folderTopicId };
   }
 
+  /**
+   * S6: `pagination` is opt-in — retro-compat with existing web consumers
+   * (`bank.service.ts`, `ai.service.ts`'s `listDrafts`) means omitting it
+   * MUST keep returning the flat `QuestionListItem[]` this always returned.
+   * Only passing `pagination` switches to the `{ items, total }` envelope.
+   */
   async listQuestions(user: AuthTokenPayload, query: ListQuestionsQuery): Promise<QuestionListItem[]>;
   async listQuestions(
     user: AuthTokenPayload,

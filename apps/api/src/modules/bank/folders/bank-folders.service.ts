@@ -274,6 +274,13 @@ export class BankFoldersService {
       return { unfiled: true };
     }
 
+    // Same guard `resolveParent` applies: a malformed id can never be a real
+    // folder, in this tenant or any other, and letting it through would hit
+    // Postgres as an invalid `uuid` literal (500) instead of the stable code.
+    if (!isUuid(raw)) {
+      throw bankFolderError("folder_not_found");
+    }
+
     const folder = await this.repository.findFolder(tenantId, raw);
     if (!folder) {
       throw bankFolderError("folder_not_found");
