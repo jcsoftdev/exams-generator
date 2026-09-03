@@ -113,14 +113,13 @@ export interface QuestionListItem {
   readonly sourceName: string | null;
   /**
    * The tenant folder this question is filed under, or `null` (unfiled, or a
-   * central-bank question). Selected by `listQuestions`, `findQuestionById`,
-   * `setQuestionFolder`, `updateStructuredQuestionAndTaxonomy` and
-   * `updateImageQuestionTaxonomyAndCorrectAnswer` — every path
-   * `BankQuestionDto.folderId` is documented to always carry, including
-   * `PATCH /bank/questions/:id`'s response. The plain `updateStructuredQuestion`
-   * (the Lane D3 AI-review overwrite, not reached by `editQuestion`) does not
-   * yet select it — same pre-existing gap `usedInExamCount` has there, out of
-   * scope here.
+   * central-bank question). Selected by every write/read path that produces
+   * a `QuestionListItem` — `listQuestions`, `findQuestionById`,
+   * `setQuestionFolder`, `updateStructuredQuestion`,
+   * `updateStructuredQuestionAndTaxonomy` and
+   * `updateImageQuestionTaxonomyAndCorrectAnswer` — so `BankQuestionDto.folderId`
+   * is documented to always carry, including `PATCH /bank/questions/:id`'s
+   * response.
    */
   readonly folderId: string | null;
 }

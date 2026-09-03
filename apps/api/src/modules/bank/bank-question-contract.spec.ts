@@ -34,6 +34,7 @@ describe("bank question contract", () => {
       alternatives: ["3", "4", "5", "6"],
       figureCode: null,
       sourceName: null,
+      folderId: null,
     };
 
     // `alternatives` is `unknown` on the storage side (raw jsonb, no runtime
@@ -45,6 +46,7 @@ describe("bank question contract", () => {
     const wire: BankQuestionDto = {
       ...record,
       alternatives: record.alternatives as readonly string[] | null,
+      usedInExamCount: 0,
     };
 
     expect(wire.status).toBe("approved");

@@ -103,6 +103,8 @@ function structuredQuestionWith5Alternatives(): QuestionListItem {
     bodyTypst: "body",
     alternatives: ["a", "b", "c", "d", "e"],
     figureCode: null,
+    sourceName: null,
+    folderId: null,
   };
 }
 
@@ -567,6 +569,8 @@ describe("BankService.getQuestionById", () => {
     bodyTypst: null,
     alternatives: null,
     figureCode: null,
+    sourceName: null,
+    folderId: null,
   };
 
   it("scopes the repository lookup to the requester's own tenant and returns the question", async () => {
@@ -604,6 +608,8 @@ const DRAFT_QUESTION: QuestionListItem = {
   bodyTypst: "draft body",
   alternatives: ["1", "2", "3"],
   figureCode: null,
+  sourceName: null,
+  folderId: null,
 };
 
 describe("BankService.approveQuestion", () => {
@@ -883,6 +889,8 @@ describe("BankService.previewQuestion", () => {
       bodyTypst: null,
       alternatives: null,
       figureCode: null,
+      sourceName: null,
+      folderId: null,
     };
     repository.findQuestionById.mockResolvedValue(imageQuestion);
 

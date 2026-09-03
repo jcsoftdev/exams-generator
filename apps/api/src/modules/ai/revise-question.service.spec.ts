@@ -24,6 +24,8 @@ const EXISTING_QUESTION: QuestionListItem = {
   bodyTypst: "¿Cuánto es $1+1$?",
   alternatives: ["1", "2", "3", "4", "5"],
   figureCode: null,
+  sourceName: null,
+  folderId: null,
 };
 
 const REVISED_QUESTION: GeneratedQuestion = {

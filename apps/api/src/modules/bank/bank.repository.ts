@@ -549,6 +549,7 @@ export class BankRepository implements BankRepositoryPort {
         figureCode: questions.figureCode,
         sourceName: questions.sourceName,
         usedInExamCount,
+        folderId: questions.folderId,
       });
 
     if (!row) {
