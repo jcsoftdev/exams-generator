@@ -33,8 +33,30 @@ import {
  * `TreeKeyManager`. Never set `tabindex` on a node by hand; the key manager
  * owns it and a manual value fights it. What this component adds on top is the
  * part the CDK cannot know: a Spanish `aria-label` on the toggle ("Expandir
- * Matemática"), `aria-selected` on the row, and F2/Delete as shortcuts for
- * rename/remove.
+ * Matemática"), `aria-selected` on the treeitem, and F2/Delete as shortcuts
+ * for rename/remove.
+ *
+ * CRITICAL fix: `(click)`/`(keydown)` live on `<cdk-tree-node>` itself, NOT on
+ * the inner `.folder-row` div. `TreeKeyManager` (the CDK's roving-tabindex
+ * controller) focuses the `cdk-tree-node` host — that element carries the
+ * real `tabindex`/`role="treeitem"` — so a keyboard Enter/Space/F2/Delete
+ * fires ITS keydown, not the inner div's. A `(keydown)` on the div only ever
+ * looked correct because the old spec dispatched events directly on the div,
+ * bypassing the CDK's actual focus target entirely; a real keyboard user's
+ * keystroke would bubble UP past the div (it was never the target) and never
+ * reach the handler. The inner div stays purely presentational — no
+ * `role`/`tabindex`/keyboard binding of its own is needed there.
+ *
+ * This also satisfies `a11y-click-handlers.guard.spec.ts` for free, not via a
+ * new exemption: `cdk-tree-node` is a custom component tag (contains a `-`),
+ * which the guardian already treats as out of scope because a custom
+ * component "manage[s] their own host accessibility" — true here in the
+ * fullest sense, since the CDK statically sets `role="treeitem"` and drives
+ * `tabindex` via `TreeKeyManager`'s roving-tabindex host binding on that exact
+ * element (verified in `@angular/cdk/tree`'s host metadata: `attributes:
+ * { role: 'treeitem' }`, `properties: { tabindex: '_tabindex' }`). No new
+ * allowlist entry, unlike the guardian's one documented `role="option"`
+ * exemption — this is the existing custom-component rule doing its job.
  *
  * Hierarchy is drawn with indentation plus one faint vertical guide per level —
  * no nested cards (design doc, "Dirección visual").
@@ -88,16 +110,16 @@ import {
         *cdkTreeNodeDef="let node"
         [isExpandable]="node.children.length > 0"
         (expandedChange)="onExpandedChange(node)"
+        [attr.aria-selected]="node.id === selectedId() ? 'true' : 'false'"
         class="block"
+        (click)="onSelect(node)"
+        (keydown)="onRowKeydown($event, node)"
       >
         <div
           data-testid="folder-row"
           [attr.data-folder-id]="node.id"
-          [attr.aria-selected]="node.id === selectedId() ? 'true' : 'false'"
           class="group flex cursor-pointer items-center gap-1 rounded-field px-2 py-1.5 text-sm transition-colors hover:bg-n50"
           [class.bg-tint-active]="node.id === selectedId()"
-          (click)="onSelect(node)"
-          (keydown)="onRowKeydown($event, node)"
         >
           @if (node.children.length > 0) {
             <button
@@ -357,23 +379,30 @@ export class FolderTreeComponent {
    * F2 renames, Delete removes, Enter/Space select — shortcuts on top of the
    * CDK's own arrow/Home/End navigation.
    *
+   * Bound to `<cdk-tree-node>`'s `(keydown)`, NOT the inner row div — see the
+   * class doc's "CRITICAL fix" note. `TreeKeyManager` focuses the node
+   * itself, so that is where a real keyboard event's `target` lands.
+   *
    * Critical fix (review round 1): this guard used to be reachable from the
    * rename/create `<ui-input>`, whose keydown events bubble up through this
-   * same row — pressing Delete while renaming deleted the folder, and a
+   * same node — pressing Delete while renaming deleted the folder, and a
    * second F2 reset the in-progress draft. The inputs now `stopPropagation`
    * on their own wrapper so this handler never even runs for them; this
    * early return is a second line of defense in case that wrapper ever moves.
    *
    * Fix (review round 2): the toggle chevron and the "…" menu trigger also
-   * live inside this row, and neither one used to stop its own keydown from
+   * live inside this node, and neither one used to stop its own keydown from
    * bubbling here. Enter/Space on either of them was (a) also emitting
    * `select`, and (b) hitting `event.preventDefault()` below, which can
    * suppress the button's own native Enter/Space activation (the CDK's own
    * `cdkTreeNodeToggle` handles this correctly via its own keydown listener,
    * but the menu trigger's native button activation was left exposed to
    * this handler's `preventDefault()`). This handler now only acts on
-   * keydowns that originate on the row itself — not on any descendant
-   * button/input/menu.
+   * keydowns that originate on the node itself (`event.target ===
+   * event.currentTarget`) — not on any descendant button/input/menu, which
+   * is also exactly what makes a real focused-node Enter/Space/F2/Delete
+   * work: the CDK never moves DOM focus onto a descendant, so a genuine
+   * keystroke always has the node as its target.
    */
   protected onRowKeydown(event: KeyboardEvent, node: FolderTreeNode): void {
     if (event.target !== event.currentTarget) {

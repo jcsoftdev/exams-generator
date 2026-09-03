@@ -384,6 +384,17 @@ function folderRow(compiled: HTMLElement, folderId: string): HTMLElement {
   ) as HTMLElement;
 }
 
+/**
+ * The `<cdk-tree-node>` host — the REAL keyboard focus target (see
+ * `folder-tree.component.ts`'s "CRITICAL fix" doc: `TreeKeyManager`'s roving
+ * tabindex focuses the node, not the inner `folder-row` div, so `(keydown)`
+ * lives there now). Any Delete/F2 dispatch that used to target `folderRow`
+ * must target this instead.
+ */
+function folderTreeNode(compiled: HTMLElement, folderId: string): HTMLElement {
+  return folderRow(compiled, folderId).closest('[role="treeitem"]') as HTMLElement;
+}
+
 /** Clicks every ancestor's chevron so `folderId`'s own row is rendered by the CDK tree. */
 function expandTo(
   compiled: HTMLElement,
@@ -418,7 +429,7 @@ function requestFolderRemoval(
   folderId: string,
 ): void {
   expandTo(compiled, fixture, folderId);
-  folderRow(compiled, folderId).dispatchEvent(
+  folderTreeNode(compiled, folderId).dispatchEvent(
     new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }),
   );
   fixture.detectChanges();
@@ -613,7 +624,7 @@ describe('BankListComponent', () => {
       // survives that no matter what the tree does with expansion, and would
       // prove nothing about the folder six levels down this feature is for.
       expandTo(compiled, fixture, 'trigo');
-      folderRow(compiled, 'trigo').dispatchEvent(
+      folderTreeNode(compiled, 'trigo').dispatchEvent(
         new KeyboardEvent('keydown', { key: 'F2', bubbles: true }),
       );
       fixture.detectChanges();

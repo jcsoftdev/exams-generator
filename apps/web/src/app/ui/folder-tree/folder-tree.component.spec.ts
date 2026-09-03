@@ -90,6 +90,17 @@ describe('FolderTreeComponent', () => {
     )!;
   }
 
+  /**
+   * The `<cdk-tree-node>` host — the REAL keyboard focus target, per
+   * `TreeKeyManager`'s roving tabindex. `(keydown)` lives here, not on the
+   * inner `folder-row` div, so any spec that exercises Enter/Space/F2/Delete
+   * must dispatch on this element, not on `rowFor(id)`. A click test stays on
+   * `rowFor(id)` on purpose — the click bubbles up to the node either way.
+   */
+  function nodeFor(id: string): HTMLElement {
+    return rowFor(id).closest<HTMLElement>('[role="treeitem"]')!;
+  }
+
   it('renders the roots and the CDK tree role', () => {
     expect(element.querySelector('[role="tree"]')).not.toBeNull();
     expect(rowFor('colegio')).not.toBeNull();
@@ -163,10 +174,12 @@ describe('FolderTreeComponent', () => {
     expect(host.lastSelected).toBe('colegio');
   });
 
-  it('marks the selected row with aria-selected', () => {
+  it('marks the selected treeitem with aria-selected', () => {
     host.selectedId.set('colegio');
     fixture.detectChanges();
-    expect(rowFor('colegio').getAttribute('aria-selected')).toBe('true');
+    // `aria-selected` lives on the `cdk-tree-node` (the treeitem) — it
+    // belongs on the ARIA role it modifies, not the presentational row div.
+    expect(nodeFor('colegio').getAttribute('aria-selected')).toBe('true');
   });
 
   it('shows the cumulative count next to the name', () => {
@@ -174,8 +187,8 @@ describe('FolderTreeComponent', () => {
   });
 
   it('renames inline: F2 opens the input, Enter emits rename', () => {
-    const row = rowFor('colegio');
-    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    const treeNode = nodeFor('colegio');
+    treeNode.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
     fixture.detectChanges();
 
     const input = element.querySelector<HTMLInputElement>(
@@ -190,8 +203,8 @@ describe('FolderTreeComponent', () => {
   });
 
   it('cancels the inline edit on Escape without emitting', () => {
-    const row = rowFor('colegio');
-    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    const treeNode = nodeFor('colegio');
+    treeNode.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
     fixture.detectChanges();
 
     element
@@ -204,7 +217,9 @@ describe('FolderTreeComponent', () => {
   });
 
   it('emits remove on the Delete key', () => {
-    rowFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }));
+    nodeFor('colegio').dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }),
+    );
     expect(host.lastRemoved).toBe('colegio');
   });
 
@@ -212,7 +227,9 @@ describe('FolderTreeComponent', () => {
     const unfiled = rowFor('unfiled');
     expect(unfiled.querySelector('[data-testid="folder-menu"]')).toBeNull();
 
-    unfiled.dispatchEvent(new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }));
+    nodeFor('unfiled').dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }),
+    );
     expect(host.lastRemoved).toBeNull();
   });
 
@@ -221,9 +238,13 @@ describe('FolderTreeComponent', () => {
     fixture.detectChanges();
 
     expect(element.querySelector('[data-testid="folder-menu"]')).toBeNull();
-    rowFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }));
+    nodeFor('colegio').dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }),
+    );
     expect(host.lastRemoved).toBeNull();
     // Selecting still works — picking a folder IS the point of this mode.
+    // Click stays on the row div on purpose: it bubbles up to the node,
+    // which is where `(click)` now lives.
     rowFor('colegio').click();
     expect(host.lastSelected).toBe('colegio');
   });
@@ -322,8 +343,8 @@ describe('FolderTreeComponent', () => {
   // --- Fix round 1 -----------------------------------------------------
 
   it('does not let Delete inside the rename input bubble to the row (would delete the folder)', () => {
-    const row = rowFor('colegio');
-    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    const treeNode = nodeFor('colegio');
+    treeNode.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
     fixture.detectChanges();
 
     const input = element.querySelector<HTMLInputElement>(
@@ -337,8 +358,8 @@ describe('FolderTreeComponent', () => {
   });
 
   it('does not let a second F2 inside the rename input discard the in-progress draft', () => {
-    const row = rowFor('colegio');
-    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    const treeNode = nodeFor('colegio');
+    treeNode.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
     fixture.detectChanges();
 
     const input = element.querySelector<HTMLInputElement>(
@@ -355,13 +376,17 @@ describe('FolderTreeComponent', () => {
     expect(stillInput.value).toBe('En progreso');
   });
 
-  it('emits select on Enter when a row is focused and not being edited', () => {
-    rowFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  it('emits select on Enter when the treeitem is focused and not being edited', () => {
+    // Dispatched on the `cdk-tree-node` — the REAL focus target per
+    // `TreeKeyManager`'s roving tabindex, not the inner row div. A keystroke
+    // dispatched on the div (the old assertion) never proved anything: in a
+    // real browser, keyboard focus lands on the node, never on the div.
+    nodeFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
     expect(host.lastSelected).toBe('colegio');
   });
 
-  it('emits select on Space when a row is focused and not being edited', () => {
-    rowFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true }));
+  it('emits select on Space when the treeitem is focused and not being edited', () => {
+    nodeFor('colegio').dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true }));
     expect(host.lastSelected).toBe('colegio');
   });
 
@@ -477,7 +502,7 @@ describe('FolderTreeComponent', () => {
   // is about, and closing the editor throws away the text she has to fix.
 
   function renameTo(id: string, name: string): void {
-    rowFor(id).dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    nodeFor(id).dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
     fixture.detectChanges();
     const input = element.querySelector<HTMLInputElement>(
       '[data-testid="folder-name-input"] input',
@@ -581,8 +606,8 @@ describe('FolderTreeComponent', () => {
   // `expandedChange` removes the collision outright; this locks in that a
   // native `select` event reaching the host never reaches the renamed output.
   it('does not let a native "select" event bubbled from the rename input reach folderSelected', () => {
-    const row = rowFor('colegio');
-    row.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
+    const treeNode = nodeFor('colegio');
+    treeNode.dispatchEvent(new KeyboardEvent('keydown', { key: 'F2', bubbles: true }));
     fixture.detectChanges();
 
     const input = element.querySelector<HTMLInputElement>(
