@@ -1,5 +1,5 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { and, count, eq, inArray, isNull, sql } from "drizzle-orm";
+import { and, count, eq, inArray, isNotNull, isNull } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../../db/client";
 import { courses, questionFolders, questions, tenants, topics } from "../../../db/schema";
 import { FlatFolderRow } from "./domain/assemble-folder-tree";
@@ -20,6 +20,22 @@ export class BankFoldersRepository {
       })
       .from(questionFolders)
       .where(eq(questionFolders.tenantId, tenantId));
+  }
+
+  /**
+   * Cheap, UNLOCKED read of the seeding marker — the fast path every call to
+   * `GET /bank/folders` takes on every request after the first. Deliberately
+   * outside a transaction and takes no row lock: the service only escalates to
+   * `seedIfNeeded`'s `FOR UPDATE` path when this comes back `null`, so an
+   * already-seeded tenant (the overwhelming majority of requests) never loads
+   * the whole taxonomy or waits on a lock it doesn't need.
+   */
+  async getFoldersSeededAt(tenantId: string): Promise<Date | null> {
+    const [row] = await this.db
+      .select({ seededAt: tenants.foldersSeededAt })
+      .from(tenants)
+      .where(eq(tenants.id, tenantId));
+    return row?.seededAt ?? null;
   }
 
   /** The whole global taxonomy the seed plan is built from. Two flat reads, no join. */
@@ -86,9 +102,12 @@ export class BankFoldersRepository {
     const rows = await this.db
       .select({ folderId: questions.folderId, total: count() })
       .from(questions)
-      .where(and(eq(questions.tenantId, tenantId), sql`${questions.folderId} is not null`))
+      .where(and(eq(questions.tenantId, tenantId), isNotNull(questions.folderId)))
       .groupBy(questions.folderId);
 
+    // `isNotNull` above is a runtime WHERE clause, not something Drizzle's
+    // types narrow `folderId: string | null` on — the cast reflects what the
+    // filter actually guarantees, not what the compiler can infer.
     return new Map(rows.map((row) => [row.folderId as string, Number(row.total)]));
   }
 
