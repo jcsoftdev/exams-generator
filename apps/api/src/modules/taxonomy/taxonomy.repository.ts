@@ -135,6 +135,11 @@ export class TaxonomyRepository {
    * `[null]` for a topic with no grade rows, and the `order by` inside the
    * aggregate is what makes the list deterministic (catalog order, not insert
    * order).
+   *
+   * `orderBy` is not cosmetic: the aggregate above forces a `GROUP BY`, and a
+   * grouped query has no implicit order — Postgres returns whatever the hash
+   * aggregate produced, i.e. uuid order, so the picker lists the syllabus
+   * scrambled and reshuffles between requests.
    */
   async findTopics(courseId?: string, gradeLevel?: string): Promise<TopicListItem[]> {
     return db
@@ -156,7 +161,8 @@ export class TaxonomyRepository {
           ...(gradeLevel ? [topicTaughtAt(gradeLevel)] : []),
         ),
       )
-      .groupBy(topics.id, topics.name, topics.courseId);
+      .groupBy(topics.id, topics.name, topics.courseId)
+      .orderBy(asc(topics.name));
   }
 
   /**
@@ -167,6 +173,9 @@ export class TaxonomyRepository {
    * `[]` immediately WITHOUT querying — an empty `inArray(...)` is unsafe/
    * version-dependent (can behave as an always-false predicate rather than
    * "no filter"), so this never hands Drizzle an empty list.
+   *
+   * Ordered by name for the same reason as `findTopics`: the grade aggregate
+   * groups, and a grouped query with no `ORDER BY` comes back in uuid order.
    */
   async findTopicsByCourseIds(courseIds: string[], gradeLevel?: string): Promise<TopicListItem[]> {
     if (courseIds.length === 0) {
@@ -192,7 +201,8 @@ export class TaxonomyRepository {
           ...(gradeLevel ? [topicTaughtAt(gradeLevel)] : []),
         ),
       )
-      .groupBy(topics.id, topics.name, topics.courseId);
+      .groupBy(topics.id, topics.name, topics.courseId)
+      .orderBy(asc(topics.name));
   }
 
   /** Every university in the global catalog, ordered by name. */

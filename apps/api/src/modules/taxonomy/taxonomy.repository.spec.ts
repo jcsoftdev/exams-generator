@@ -191,6 +191,36 @@ describe("TaxonomyRepository", () => {
       }
     });
 
+    it("orders topics by name, not by the uuid the GROUP BY happens to return them in", async () => {
+      // The grade `array_agg` brought a `GROUP BY` with it, and a grouped
+      // query has no implicit order: with no explicit `ORDER BY` Postgres
+      // hands back whatever the hash aggregate produced — effectively random
+      // uuid order — and every topic picker lists the syllabus scrambled.
+      const zetaName = `Topic Zeta ${suffix}`;
+      const betaName = `Topic Beta ${suffix}`;
+      const [zeta] = await db
+        .insert(topics)
+        .values({ courseId: courseAId, name: zetaName })
+        .returning({ id: topics.id });
+      const [beta] = await db
+        .insert(topics)
+        .values({ courseId: courseAId, name: betaName })
+        .returning({ id: topics.id });
+      try {
+        const single = (await repository.findTopics(courseAId))
+          .map((t) => t.name)
+          .filter((name) => name === zetaName || name === betaName);
+        expect(single).toEqual([betaName, zetaName]);
+
+        const batched = (await repository.findTopicsByCourseIds([courseAId, courseBId]))
+          .map((t) => t.name)
+          .filter((name) => name === zetaName || name === betaName);
+        expect(batched).toEqual([betaName, zetaName]);
+      } finally {
+        await db.delete(topics).where(inArray(topics.id, [zeta!.id, beta!.id]));
+      }
+    });
+
     it("hides topics that belong to a test-factory course", async () => {
       const unfiltered = await repository.findTopics();
       expect(unfiltered.map((t) => t.id)).not.toContain(testFactoryTopicId);
