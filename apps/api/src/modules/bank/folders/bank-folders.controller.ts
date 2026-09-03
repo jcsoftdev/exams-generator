@@ -1,5 +1,5 @@
-import { BankFoldersResponse } from "@exams-generator/shared";
-import { Controller, Get, UseGuards } from "@nestjs/common";
+import { BankFolderNode, BankFoldersResponse, CreateBankFolderDto } from "@exams-generator/shared";
+import { Body, Controller, Get, Post, UseGuards } from "@nestjs/common";
 import { CurrentUser } from "../../auth/current-user.decorator";
 import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../../auth/token.service";
@@ -19,5 +19,19 @@ export class BankFoldersController {
   @Get()
   async getTree(@CurrentUser() user: AuthTokenPayload): Promise<BankFoldersResponse> {
     return this.service.getTree(user);
+  }
+
+  /**
+   * `name` and `parentId` are read off the raw body and validated in the
+   * service, NOT by a DTO class: the invalid-name case has to answer 422 with
+   * `code: "folder_name_invalid"`, and a `ValidationPipe` would answer 400 with
+   * its own message shape.
+   */
+  @Post()
+  async create(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: CreateBankFolderDto,
+  ): Promise<BankFolderNode> {
+    return this.service.create(user, { name: body?.name, parentId: body?.parentId ?? null });
   }
 }

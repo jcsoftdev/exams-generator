@@ -1,13 +1,93 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { and, count, eq, inArray, isNotNull, isNull } from "drizzle-orm";
+import { and, count, eq, inArray, isNotNull, isNull, max, sql } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../../db/client";
 import { courses, questionFolders, questions, tenants, topics } from "../../../db/schema";
 import { FlatFolderRow } from "./domain/assemble-folder-tree";
 import { SeedCourseRow, SeedFolderPlanNode, SeedTopicRow } from "./domain/build-seed-folder-plan";
 
+/**
+ * Postgres `23505 unique_violation`. The sibling-name rule is enforced by two
+ * unique indexes rather than a SELECT-then-INSERT, so the race between two tabs
+ * creating "Álgebra" at the same instant ends in a clean 409 instead of two
+ * folders with the same name. `pg` surfaces the code on the error object.
+ */
+export function isUniqueViolation(error: unknown): boolean {
+  return typeof error === "object" && error !== null && (error as { code?: string }).code === "23505";
+}
+
 @Injectable()
 export class BankFoldersRepository {
   constructor(@Inject(DRIZZLE_DB) private readonly db: Database) {}
+
+  async findFolder(tenantId: string, id: string): Promise<FlatFolderRow | undefined> {
+    const [row] = await this.db
+      .select({
+        id: questionFolders.id,
+        name: questionFolders.name,
+        parentId: questionFolders.parentId,
+        topicId: questionFolders.topicId,
+        position: questionFolders.position,
+      })
+      .from(questionFolders)
+      .where(and(eq(questionFolders.id, id), eq(questionFolders.tenantId, tenantId)))
+      .limit(1);
+
+    return row;
+  }
+
+  /**
+   * How deep a folder sits: 1 for a root, 2 for its child, and so on. Walks
+   * UPWARD through `parent_id` with a recursive CTE — cheap (the cap is 6) and,
+   * more importantly, scoped to the tenant at the anchor so a crafted id from
+   * another school can never be walked.
+   */
+  async folderDepth(tenantId: string, id: string): Promise<number> {
+    const result = await this.db.execute(sql`
+      WITH RECURSIVE chain AS (
+        SELECT id, parent_id, 1 AS depth
+          FROM question_folders
+         WHERE id = ${id} AND tenant_id = ${tenantId}
+        UNION ALL
+        SELECT f.id, f.parent_id, c.depth + 1
+          FROM question_folders f
+          JOIN chain c ON f.id = c.parent_id
+      )
+      SELECT COALESCE(MAX(depth), 0)::int AS depth FROM chain
+    `);
+    return Number((result.rows[0] as { depth: number } | undefined)?.depth ?? 0);
+  }
+
+  /** Next free `position` among the siblings of `parentId` — new folders go last. */
+  async nextPosition(tenantId: string, parentId: string | null): Promise<number> {
+    const [row] = await this.db
+      .select({ highest: max(questionFolders.position) })
+      .from(questionFolders)
+      .where(
+        and(
+          eq(questionFolders.tenantId, tenantId),
+          parentId === null ? isNull(questionFolders.parentId) : eq(questionFolders.parentId, parentId),
+        ),
+      );
+
+    return row?.highest === null || row?.highest === undefined ? 0 : Number(row.highest) + 1;
+  }
+
+  async insertFolder(row: {
+    tenantId: string;
+    parentId: string | null;
+    name: string;
+    position: number;
+  }): Promise<FlatFolderRow> {
+    const [inserted] = await this.db.insert(questionFolders).values(row).returning({
+      id: questionFolders.id,
+      name: questionFolders.name,
+      parentId: questionFolders.parentId,
+      topicId: questionFolders.topicId,
+      position: questionFolders.position,
+    });
+
+    return inserted!;
+  }
 
   async listFolders(tenantId: string): Promise<FlatFolderRow[]> {
     return this.db

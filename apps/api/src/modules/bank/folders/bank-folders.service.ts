@@ -1,10 +1,12 @@
-import { BankFoldersResponse } from "@exams-generator/shared";
+import { BankFolderNode, BankFoldersResponse, CreateBankFolderDto } from "@exams-generator/shared";
 import { Injectable } from "@nestjs/common";
 import { AuthTokenPayload } from "../../auth/token.service";
-import { BankFoldersRepository } from "./bank-folders.repository";
+import { BankFoldersRepository, isUniqueViolation } from "./bank-folders.repository";
 import { bankFolderError } from "./bank-folders.errors";
-import { assembleFolderTree } from "./domain/assemble-folder-tree";
+import { FlatFolderRow, assembleFolderTree } from "./domain/assemble-folder-tree";
 import { buildSeedFolderPlan } from "./domain/build-seed-folder-plan";
+import { checkFolderMove } from "./domain/check-folder-move";
+import { validateFolderName } from "./domain/folder-name";
 
 @Injectable()
 export class BankFoldersService {
@@ -58,5 +60,73 @@ export class BankFoldersService {
     ]);
 
     return { folders: assembleFolderTree(rows, ownCounts, centralCounts), unfiledCount };
+  }
+
+  /**
+   * A freshly created/renamed folder as the wire shape. Counts are always zero
+   * for a NEW folder and the children array empty; a rename returns the node
+   * with its stored counts refreshed by the caller's next `GET /bank/folders`,
+   * which the web issues anyway after an optimistic update settles.
+   */
+  private toNode(row: FlatFolderRow, ownCount = 0, centralCount = 0): BankFolderNode {
+    return {
+      id: row.id,
+      name: row.name,
+      parentId: row.parentId,
+      topicId: row.topicId,
+      position: row.position,
+      ownCount,
+      centralCount,
+      children: [],
+    };
+  }
+
+  async create(user: AuthTokenPayload, dto: CreateBankFolderDto): Promise<BankFolderNode> {
+    const tenantId = this.requireTenantId(user);
+
+    const validated = validateFolderName(dto.name);
+    if (!validated.ok) {
+      throw bankFolderError(validated.code);
+    }
+
+    const parentId = dto.parentId ?? null;
+    if (parentId !== null) {
+      const parent = await this.repository.findFolder(tenantId, parentId);
+      if (!parent) {
+        // Another tenant's folder is indistinguishable from a missing one.
+        throw bankFolderError("folder_not_found");
+      }
+      const parentDepth = await this.repository.folderDepth(tenantId, parentId);
+      // A brand-new folder is a leaf, so its subtree is exactly 1 level tall.
+      const move = checkFolderMove({
+        folderId: "new",
+        targetParentId: parentId,
+        descendantIds: [],
+        targetParentDepth: parentDepth,
+        subtreeHeight: 1,
+      });
+      if (!move.ok) {
+        throw bankFolderError(move.code);
+      }
+    }
+
+    const position = await this.repository.nextPosition(tenantId, parentId);
+
+    try {
+      const row = await this.repository.insertFolder({
+        tenantId,
+        parentId,
+        name: validated.name,
+        position,
+      });
+      return this.toNode(row);
+    } catch (error) {
+      // The unique indexes are the sibling-name rule; a SELECT-then-INSERT would
+      // just be a slower way to lose the same race.
+      if (isUniqueViolation(error)) {
+        throw bankFolderError("folder_name_taken");
+      }
+      throw error;
+    }
   }
 }

@@ -133,6 +133,14 @@ describe("Bank folders (e2e)", () => {
 
   afterAll(async () => {
     const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      [
+        "delete created folders",
+        async () => {
+          if (createdFolderIds.length > 0) {
+            await db.delete(questionFolders).where(inArray(questionFolders.id, createdFolderIds));
+          }
+        },
+      ],
       // Must run BEFORE "delete folders": the questions reference `folderId`
       // (ON DELETE SET NULL, harmless either order) but also `topicId`
       // (NOT NULL, no cascade) — deleting topics before these rows exist
@@ -176,6 +184,19 @@ describe("Bank folders (e2e)", () => {
 
   function foldersRequest(token: string) {
     return request(app.getHttpServer()).get("/bank/folders").set("Authorization", `Bearer ${token}`);
+  }
+
+  function createFolderRequest(token: string) {
+    return request(app.getHttpServer()).post("/bank/folders").set("Authorization", `Bearer ${token}`);
+  }
+
+  /** Ids created by a test, torn down in `afterAll` before the tenants go. */
+  const createdFolderIds: string[] = [];
+
+  async function makeFolder(token: string, body: Record<string, unknown>): Promise<any> {
+    const response = await createFolderRequest(token).send(body).expect(201);
+    createdFolderIds.push(response.body.id);
+    return response.body;
   }
 
   /** Flattens the nested response so a test can assert on one node without walking children by hand. */
@@ -331,5 +352,82 @@ describe("Bank folders (e2e)", () => {
 
   it("rejects an unauthenticated request with 401", async () => {
     await request(app.getHttpServer()).get("/bank/folders").expect(401);
+  });
+
+  describe("POST /bank/folders", () => {
+    it("creates a root folder and returns the node, appended after existing roots", async () => {
+      const folder = await makeFolder(tokenB, { name: "  Mis apuntes  " });
+
+      expect(folder).toMatchObject({
+        name: "Mis apuntes", // trimmed
+        parentId: null,
+        topicId: null,
+        ownCount: 0,
+        centralCount: 0,
+        children: [],
+      });
+      expect(typeof folder.id).toBe("string");
+    });
+
+    it("creates a child under an existing folder", async () => {
+      const parent = await makeFolder(tokenB, { name: `Padre ${randomUUID()}` });
+      const child = await makeFolder(tokenB, { name: "Hija", parentId: parent.id });
+
+      expect(child.parentId).toBe(parent.id);
+    });
+
+    it("rejects an empty name with 422 folder_name_invalid", async () => {
+      const response = await createFolderRequest(tokenB).send({ name: "   " }).expect(422);
+      expect(response.body).toMatchObject({ code: "folder_name_invalid" });
+    });
+
+    it("rejects a name longer than 80 characters with 422 folder_name_invalid", async () => {
+      const response = await createFolderRequest(tokenB)
+        .send({ name: "a".repeat(81) })
+        .expect(422);
+      expect(response.body).toMatchObject({ code: "folder_name_invalid" });
+    });
+
+    it("rejects a duplicate name among siblings with 409 folder_name_taken", async () => {
+      const name = `Repetida ${randomUUID()}`;
+      await makeFolder(tokenB, { name });
+
+      const response = await createFolderRequest(tokenB).send({ name }).expect(409);
+      expect(response.body).toMatchObject({ code: "folder_name_taken" });
+    });
+
+    it("allows the same name under a DIFFERENT parent", async () => {
+      const parent = await makeFolder(tokenB, { name: `Otro padre ${randomUUID()}` });
+      const name = `Compartida ${randomUUID()}`;
+      await makeFolder(tokenB, { name });
+
+      const nested = await makeFolder(tokenB, { name, parentId: parent.id });
+      expect(nested.name).toBe(name);
+    });
+
+    it("rejects a parent that belongs to another tenant with 404 folder_not_found", async () => {
+      const parentOfB = await makeFolder(tokenB, { name: `Ajena ${randomUUID()}` });
+
+      const response = await createFolderRequest(tokenA)
+        .send({ name: "Intrusa", parentId: parentOfB.id })
+        .expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("rejects a 7th level with 422 folder_depth_exceeded", async () => {
+      let parentId: string | null = null;
+      for (let level = 1; level <= 6; level += 1) {
+        const node = await makeFolder(tokenB, { name: `N${level} ${randomUUID()}`, parentId });
+        parentId = node.id;
+      }
+
+      const response = await createFolderRequest(tokenB).send({ name: "N7", parentId }).expect(422);
+      expect(response.body).toMatchObject({ code: "folder_depth_exceeded" });
+    });
+
+    it("rejects a user with no tenant with 403 tenant_required", async () => {
+      const response = await createFolderRequest(staffToken).send({ name: "X" }).expect(403);
+      expect(response.body).toMatchObject({ code: "tenant_required" });
+    });
   });
 });
