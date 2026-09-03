@@ -2,6 +2,7 @@ import { boolean, index, jsonb, pgTable, text, timestamp, uniqueIndex, uuid } fr
 import { assets } from "./assets.schema";
 import { difficultyEnum, questionStatusEnum, questionTypeEnum } from "./enums";
 import { gradeLevels } from "./grade-levels.schema";
+import { questionFolders } from "./question-folders.schema";
 import { subtopics } from "./subtopics.schema";
 import { tenants } from "./tenants.schema";
 import { topics } from "./topics.schema";
@@ -43,6 +44,16 @@ export const questions = pgTable(
      * parent so existing topic-scoped queries keep working unchanged.
      */
     subtopicId: uuid("subtopic_id").references(() => subtopics.id),
+    /**
+     * The tenant folder this question is filed under. Only meaningful when
+     * `tenant_id` is non-null: folders are per-tenant, so a CENTRAL question
+     * can never carry one (the service rejects it with 422
+     * `central_question_has_no_folder`) — it surfaces inside a folder through
+     * that folder's `topic_id` instead. `ON DELETE SET NULL` is the whole point
+     * of the delete flow: removing a folder unfiles its questions, it never
+     * deletes one.
+     */
+    folderId: uuid("folder_id").references(() => questionFolders.id, { onDelete: "set null" }),
     difficulty: difficultyEnum("difficulty").notNull(),
     gradeLevel: text("grade_level")
       .notNull()
@@ -85,6 +96,7 @@ export const questions = pgTable(
     tenantIdIdx: index("questions_tenant_id_idx").on(table.tenantId),
     topicIdIdx: index("questions_topic_id_idx").on(table.topicId),
     subtopicIdIdx: index("questions_subtopic_id_idx").on(table.subtopicId),
+    folderIdIdx: index("questions_folder_id_idx").on(table.folderId),
     gradeLevelIdx: index("questions_grade_level_idx").on(table.gradeLevel),
     difficultyIdx: index("questions_difficulty_idx").on(table.difficulty),
     statusIdx: index("questions_status_idx").on(table.status),

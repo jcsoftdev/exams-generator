@@ -6,6 +6,7 @@ export * from "./users.schema";
 export * from "./courses.schema";
 export * from "./topics.schema";
 export * from "./subtopics.schema";
+export * from "./question-folders.schema";
 export * from "./questions.schema";
 export * from "./question-alternative-images.schema";
 export * from "./exams.schema";

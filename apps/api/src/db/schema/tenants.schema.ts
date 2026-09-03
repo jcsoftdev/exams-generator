@@ -1,5 +1,5 @@
 import type { AnyPgColumn } from "drizzle-orm/pg-core";
-import { boolean, pgTable, text, uuid } from "drizzle-orm/pg-core";
+import { boolean, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 import { assets } from "./assets.schema";
 
 /**
@@ -18,4 +18,11 @@ export const tenants = pgTable("tenants", {
   city: text("city"),
   logoAssetId: uuid("logo_asset_id").references((): AnyPgColumn => assets.id),
   active: boolean("active").notNull().default(true),
+  /**
+   * Set the first time this tenant's default folder set is seeded
+   * (`BankFoldersService.getTree`). NULL means "never seeded". Without this
+   * marker, a tenant that deletes every folder on purpose would silently get
+   * the whole default set back on the next page load.
+   */
+  foldersSeededAt: timestamp("folders_seeded_at", { withTimezone: true }),
 });

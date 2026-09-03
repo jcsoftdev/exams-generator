@@ -1,11 +1,7 @@
-import { gradeLevelLabel } from "@exams-generator/shared";
-
-/** Spec §"Errores y bordes": name is 1..80 characters AFTER trimming. */
-export const MAX_FOLDER_NAME_LENGTH = 80;
+import { gradeLevelLabel, MAX_FOLDER_NAME_LENGTH } from "@exams-generator/shared";
 
 export type FolderNameResult =
-  | { readonly ok: true; readonly name: string }
-  | { readonly ok: false; readonly code: "folder_name_invalid" };
+  { readonly ok: true; readonly name: string } | { readonly ok: false; readonly code: "folder_name_invalid" };
 
 /**
  * `raw` is typed `unknown` on purpose: it comes off a JSON request body, so

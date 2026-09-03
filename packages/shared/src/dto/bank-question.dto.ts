@@ -72,4 +72,10 @@ export interface BankQuestionDto {
   readonly aiGenerated: boolean;
   /** Exams that already contain this question — 0, never absent. */
   readonly usedInExamCount: number;
+  /**
+   * The tenant folder this question is filed under, or `null` (unfiled, or a
+   * central-bank question — those never carry one). Nullable, never absent:
+   * every read path selects it.
+   */
+  readonly folderId: string | null;
 }

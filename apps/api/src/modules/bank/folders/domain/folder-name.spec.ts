@@ -42,15 +42,13 @@ describe("folderNameForTopic", () => {
 
   it("appends ' · <grade label>' when a sibling shares the name", () => {
     const siblings = [{ name: "Trigonometría" }, { name: "Trigonometría" }];
-    expect(
-      folderNameForTopic({ name: "Trigonometría", gradeLevel: "secundaria_4" }, siblings),
-    ).toBe("Trigonometría · 4° secundaria");
+    expect(folderNameForTopic({ name: "Trigonometría", gradeLevel: "secundaria_4" }, siblings)).toBe(
+      "Trigonometría · 4° secundaria",
+    );
   });
 
   it("stays bare when the name is shared but the topic has no grade", () => {
     const siblings = [{ name: "Trigonometría" }, { name: "Trigonometría" }];
-    expect(folderNameForTopic({ name: "Trigonometría", gradeLevel: null }, siblings)).toBe(
-      "Trigonometría",
-    );
+    expect(folderNameForTopic({ name: "Trigonometría", gradeLevel: null }, siblings)).toBe("Trigonometría");
   });
 });
