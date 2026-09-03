@@ -71,10 +71,9 @@ describe("Bank module (e2e)", () => {
       .returning({ id: topics.id });
     topicId = topic!.id;
 
-    // Grade-scoped topic — taxonomy-level grade, independent of any question's own gradeLevel.
     const [gradedTopic] = await db
       .insert(topics)
-      .values({ courseId, name: `E2E Graded Topic ${suffix}`, gradeLevel: "secundaria_5" })
+      .values({ courseId, name: `E2E Graded Topic ${suffix}` })
       .returning({ id: topics.id });
     gradedTopicId = gradedTopic!.id;
 
@@ -809,100 +808,17 @@ describe("Bank module (e2e)", () => {
     });
   });
 
-  /**
-   * `GET /bank/questions/summary` — the per-topic counts the web bank tree
-   * loads INSTEAD of the whole question list. The route is declared before
-   * `@Get(":id")` in the controller; the first test below is the regression
-   * guard for that ordering (a mis-ordered route would make `summary` land
-   * in `getQuestionById` and 404).
-   */
-  describe("GET /bank/questions/summary — lazy tree skeleton", () => {
-    it("returns one {courseId, topicId, total} bucket per topic — never any question payload", async () => {
-      const created = await structuredRequest(tenantAToken)
-        .send({
-          courseId,
-          topicId,
-          difficulty: Difficulty.Medium,
-          gradeLevel: "primaria_4",
-          bodyTypst: "summary fixture question",
-          alternatives: ["a", "b"],
-          correctAnswer: "0",
-        })
-        .expect(201);
-      await trackCreatedQuestion(created.body.id);
+  it("no longer serves the retired per-topic summary route", async () => {
+    // `GET /bank/questions/summary` fed the old Curso -> Tema bank tree, which
+    // folders replaced. With the route gone, `summary` falls through to
+    // `@Get(":id")` and `ParseUUIDPipe` rejects it — a 4xx either way, never a
+    // 200 with counts.
+    const res = await request(app.getHttpServer())
+      .get("/bank/questions/summary")
+      .set("Authorization", `Bearer ${tenantAToken}`);
 
-      const res = await request(app.getHttpServer())
-        .get("/bank/questions/summary")
-        .set("Authorization", `Bearer ${tenantAToken}`)
-        .expect(200);
-
-      expect(Array.isArray(res.body)).toBe(true);
-      const bucket = res.body.find((row: { topicId: string }) => row.topicId === topicId);
-      // topicId's fixture carries no taxonomy gradeLevel — null, not derived from the question above.
-      expect(bucket).toEqual({ courseId, topicId, total: expect.any(Number), gradeLevel: null });
-      expect(bucket.total).toBeGreaterThanOrEqual(1);
-      // The whole point: no `bodyTypst`/`alternatives`/`id` ever crosses the wire here.
-      expect(JSON.stringify(res.body)).not.toContain("summary fixture question");
-    });
-
-    it("carries the TOPIC's own gradeLevel from the taxonomy, not derived from its questions' gradeLevel", async () => {
-      const created = await structuredRequest(tenantAToken)
-        .send({
-          courseId,
-          topicId: gradedTopicId,
-          difficulty: Difficulty.Medium,
-          // Deliberately a DIFFERENT grade than the topic's own — proves the
-          // response reads the topic's taxonomy grade, never the question's.
-          gradeLevel: "primaria_4",
-          bodyTypst: "graded topic fixture question",
-          alternatives: ["a", "b"],
-          correctAnswer: "0",
-        })
-        .expect(201);
-      await trackCreatedQuestion(created.body.id);
-
-      const res = await request(app.getHttpServer())
-        .get("/bank/questions/summary")
-        .set("Authorization", `Bearer ${tenantAToken}`)
-        .expect(200);
-
-      const bucket = res.body.find((row: { topicId: string }) => row.topicId === gradedTopicId);
-      expect(bucket.gradeLevel).toBe("secundaria_5");
-    });
-
-    it("applies the same filters as the list endpoint, so the tree counts match what expanding a topic returns", async () => {
-      const filtered = await request(app.getHttpServer())
-        .get("/bank/questions/summary?difficulty=medium&gradeLevel=primaria_4")
-        .set("Authorization", `Bearer ${tenantAToken}`)
-        .expect(200);
-
-      const listed = await request(app.getHttpServer())
-        .get(`/bank/questions?difficulty=medium&gradeLevel=primaria_4&topicId=${topicId}&page=1&pageSize=100`)
-        .set("Authorization", `Bearer ${tenantAToken}`)
-        .expect(200);
-
-      const bucket = filtered.body.find((row: { topicId: string }) => row.topicId === topicId);
-      expect(bucket.total).toBe(listed.body.total);
-    });
-
-    it("NEVER counts another tenant's private questions", async () => {
-      const res = await request(app.getHttpServer())
-        .get("/bank/questions/summary")
-        .set("Authorization", `Bearer ${tenantBToken}`)
-        .expect(200);
-
-      const listed = await request(app.getHttpServer())
-        .get(`/bank/questions?topicId=${topicId}&page=1&pageSize=100`)
-        .set("Authorization", `Bearer ${tenantBToken}`)
-        .expect(200);
-
-      const bucket = res.body.find((row: { topicId: string }) => row.topicId === topicId);
-      expect(bucket?.total ?? 0).toBe(listed.body.total);
-    });
-
-    it("401 without an Authorization header", async () => {
-      await request(app.getHttpServer()).get("/bank/questions/summary").expect(401);
-    });
+    expect(res.status).toBeGreaterThanOrEqual(400);
+    expect(res.status).toBeLessThan(500);
   });
 
   /**

@@ -24,7 +24,7 @@ import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankService } from "./bank.service";
-import { BankTopicQuestionCount, QuestionListItem } from "./bank.repository";
+import { QuestionListItem } from "./bank.repository";
 import { clampPagination } from "../../common/pagination.util";
 
 // Question images only, never bulk data — 5MB is generous headroom for a
@@ -241,34 +241,6 @@ export class BankController {
     }
 
     return this.service.listQuestions(user, filters, clampPagination(query.page, query.pageSize));
-  }
-
-  /**
-   * Per-topic question counts — the skeleton the web bank tree loads instead
-   * of the full question list. Same filters as `GET /bank/questions`, same
-   * tenant visibility, but the response carries only
-   * `{courseId, topicId, total}` rows: the tree renders Curso -> Tema with
-   * real counts, and a topic's questions are fetched (paginated) only when
-   * that topic is expanded. `/app/bank` used to build the same tree from the
-   * unpaginated list, which meant downloading the whole 64k-row central bank
-   * on every load.
-   *
-   * Declared BEFORE `@Get(":id")` — a static-looking route must be
-   * registered before the generic `:id` catch-all in the same file for
-   * Nest's route matching to prefer it (same reason as `:id/preview`).
-   */
-  @Get("summary")
-  async questionSummary(
-    @CurrentUser() user: AuthTokenPayload,
-    @Query() query: ListQuestionsQueryParams,
-  ): Promise<BankTopicQuestionCount[]> {
-    return this.service.countQuestionsByTopic(user, {
-      courseId: query.courseId,
-      topicId: query.topicId,
-      difficulty: query.difficulty as Difficulty | undefined,
-      gradeLevel: query.gradeLevel,
-      status: query.status as QuestionStatus | undefined,
-    });
   }
 
   /**

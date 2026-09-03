@@ -16,7 +16,6 @@ import { hashBodyTypst } from "./domain/hash-body-typst";
 import {
   BankRepositoryPort,
   BankStatusDifficultyCount,
-  BankTopicQuestionCount,
   CreateImageQuestionRecord,
   CreateStructuredQuestionRecord,
   QuestionListFilter,
@@ -26,10 +25,7 @@ import {
 } from "./domain/ports/bank-repository.port";
 
 /**
- * The WHERE clause shared by `listQuestions` and `countByCourseAndTopic`.
- * Extracted so the two can never drift: the tree's per-topic counts and the
- * per-topic question fetch that fills them in MUST see the same rows (see
- * `countByCourseAndTopic`'s doc).
+ * The WHERE clause `listQuestions` builds.
  *
  * Visibility rule (design doc §3, MUST release gate): every query filters
  * `tenant_id IS NULL OR tenant_id = :current` — a tenant NEVER sees another
@@ -102,7 +98,6 @@ function buildQuestionListConditions(filter: QuestionListFilter): SQL[] {
 export type {
   BankRepositoryPort,
   BankStatusDifficultyCount,
-  BankTopicQuestionCount,
   CreateImageQuestionRecord,
   CreateStructuredQuestionRecord,
   QuestionListFilter,
@@ -256,9 +251,8 @@ export class BankRepository implements BankRepositoryPort {
   }
 
   /**
-   * Visibility + filter rules live in `buildQuestionListConditions` (shared
-   * with `countByCourseAndTopic`) — see its doc for the tenant-isolation
-   * release gate.
+   * Visibility + filter rules live in `buildQuestionListConditions` — see its
+   * doc for the tenant-isolation release gate.
    *
    * S6: `pagination` is opt-in and retro-compat is load-bearing — omitting it
    * returns the SAME flat array shape this always returned (existing web
@@ -334,43 +328,6 @@ export class BankRepository implements BankRepositoryPort {
       .offset((pagination.page - 1) * pagination.pageSize);
 
     return { items, total };
-  }
-
-  /**
-   * Per-topic totals for the web bank tree's lazy skeleton
-   * (`GET /bank/questions/summary`). Same `innerJoin(topics)` and the SAME
-   * condition set `listQuestions` builds (shared via
-   * `buildQuestionListConditions`) — that's not cosmetic reuse, it's the
-   * invariant the UI leans on: a bucket's `total` must equal the row count
-   * `listQuestions({...filter, topicId})` would return, or the tree would
-   * show a count that the topic's own fetch never fills.
-   *
-   * `groupBy(topics.courseId, questions.topicId)` instead of pulling every
-   * row and counting client-side: this is the query that replaced shipping
-   * 64k question rows to the browser on every `/app/bank` load.
-   */
-  async countByCourseAndTopic(filter: QuestionListFilter): Promise<BankTopicQuestionCount[]> {
-    const rows = await this.db
-      .select({
-        courseId: topics.courseId,
-        topicId: questions.topicId,
-        total: count(),
-        // The TOPIC's own grade (taxonomy), not any question's — grouped on
-        // so a topic never fans out into more than one bucket, see the port
-        // doc for why this must never read from `questions.grade_level`.
-        gradeLevel: topics.gradeLevel,
-      })
-      .from(questions)
-      .innerJoin(topics, eq(questions.topicId, topics.id))
-      .where(and(...buildQuestionListConditions(filter)))
-      .groupBy(topics.courseId, questions.topicId, topics.gradeLevel);
-
-    return rows.map((row) => ({
-      courseId: row.courseId,
-      topicId: row.topicId,
-      total: Number(row.total),
-      gradeLevel: row.gradeLevel,
-    }));
   }
 
   /**

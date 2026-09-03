@@ -161,27 +161,6 @@ export interface BankStatusDifficultyCount {
   readonly total: number;
 }
 
-/**
- * One `{courseId, topicId, total, gradeLevel}` bucket from
- * `countByCourseAndTopic` — feeds the web bank tree's lazy skeleton (`GET
- * /bank/questions/summary`). Deliberately carries NO question payload: the
- * whole point is that the tree can render Curso -> Tema with real counts
- * while a topic's leaves are only fetched when that topic is expanded.
- *
- * `gradeLevel` is the TOPIC's own grade from `topics.grade_level` (the
- * taxonomy scoping — see `topics.schema.ts`), NEVER derived from the
- * questions counted in `total`: a topic can hold questions tagged with any
- * grade (or none), so the topic's own grade is the only value stable enough
- * to label a collapsed tree branch with. `null` means the topic applies to
- * the whole stage (unscoped), same as `topics.grade_level IS NULL`.
- */
-export interface BankTopicQuestionCount {
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly total: number;
-  readonly gradeLevel: string | null;
-}
-
 /** Persistence port for the bank module — implemented by `BankRepository`. */
 export interface BankRepositoryPort {
   createImageQuestion(record: CreateImageQuestionRecord): Promise<{ id: string }>;
@@ -191,15 +170,6 @@ export interface BankRepositoryPort {
     filter: QuestionListFilter,
     pagination: QuestionListPagination,
   ): Promise<{ items: QuestionListItem[]; total: number }>;
-  /**
-   * Per-topic question totals under the SAME visibility rule and the SAME
-   * filters `listQuestions` applies — so a bucket's `total` is exactly the
-   * number of rows a `listQuestions` call with `{...filter, topicId}` would
-   * return. That equality is load-bearing: the web tree renders these counts
-   * next to a topic and then fetches that topic's questions on expand, and a
-   * count that disagreed with the fetch would surface as a phantom "Ver más".
-   */
-  countByCourseAndTopic(filter: QuestionListFilter): Promise<BankTopicQuestionCount[]>;
   findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined>;
   /**
    * Files/unfiles a question, tenant-scoped. Separate from

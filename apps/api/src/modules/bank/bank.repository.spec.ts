@@ -30,7 +30,6 @@ describe("BankRepository", () => {
   let courseId: string;
   let topicId: string;
   let otherTopicId: string;
-  let gradedTopicId: string;
   let centralUserId: string;
   let tenantAId: string;
   let tenantAUserId: string;
@@ -66,14 +65,6 @@ describe("BankRepository", () => {
       .values({ courseId, name: `Other Topic ${suffix}` })
       .returning({ id: topics.id });
     otherTopicId = topicOther!.id;
-
-    // Grade-scoped topic (taxonomy-level grade, independent of any question's
-    // own gradeLevel) — fixture for countByCourseAndTopic's gradeLevel column.
-    const [topicGraded] = await db
-      .insert(topics)
-      .values({ courseId, name: `Graded Topic ${suffix}`, gradeLevel: "secundaria_5" })
-      .returning({ id: topics.id });
-    gradedTopicId = topicGraded!.id;
 
     const [centralUser] = await db
       .insert(users)
@@ -136,7 +127,7 @@ describe("BankRepository", () => {
     }
     await db.delete(users).where(inArray(users.id, [centralUserId, tenantAUserId, tenantBUserId]));
     await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId, tenantCId]));
-    await db.delete(topics).where(inArray(topics.id, [topicId, otherTopicId, gradedTopicId]));
+    await db.delete(topics).where(inArray(topics.id, [topicId, otherTopicId]));
     await db.delete(courses).where(inArray(courses.id, [courseId]));
     await pool.end();
   });
@@ -720,90 +711,6 @@ describe("BankRepository", () => {
       );
 
       expect(once.items.map((q) => q.id)).toEqual(twice.items.map((q) => q.id));
-    });
-  });
-
-  describe("countByCourseAndTopic() — lazy tree summary", () => {
-    /**
-     * Every assertion here scopes the filter to THIS file's own `courseId`
-     * (created with a random suffix in `beforeAll`), so the aggregate is
-     * immune to central rows other spec files insert concurrently into the
-     * shared dev Postgres — unlike `countByDifficultyAndStatus` below, which
-     * has no course dimension to isolate on and has to compare deltas
-     * against a control tenant.
-     */
-    async function totalForTopic(
-      currentTenantId: string | null,
-      wantedTopicId: string,
-      extra: { difficulty?: Difficulty; gradeLevel?: string } = {},
-    ): Promise<number> {
-      const rows = await repository.countByCourseAndTopic({ currentTenantId, courseId, ...extra });
-      return rows.find((row) => row.topicId === wantedTopicId)?.total ?? 0;
-    }
-
-    it("returns one {courseId, topicId, total} bucket per topic that has questions", async () => {
-      const before = await totalForTopic(null, topicId);
-      await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
-      await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
-
-      const rows = await repository.countByCourseAndTopic({ currentTenantId: null, courseId });
-      const bucket = rows.find((row) => row.topicId === topicId);
-
-      // topicId's fixture carries no taxonomy gradeLevel — null, not derived from any question.
-      expect(bucket).toEqual({ courseId, topicId, total: before + 2, gradeLevel: null });
-    });
-
-    it("carries the TOPIC's own gradeLevel from the taxonomy, not derived from its questions' gradeLevel", async () => {
-      await createQuestion({
-        tenantId: null,
-        createdBy: centralUserId,
-        topicId: gradedTopicId,
-        // Deliberately a DIFFERENT grade than the topic's own — proves the
-        // bucket reads topics.grade_level, never questions.grade_level.
-        gradeLevel: "primaria_4",
-      });
-
-      const rows = await repository.countByCourseAndTopic({ currentTenantId: null, courseId });
-      const bucket = rows.find((row) => row.topicId === gradedTopicId);
-
-      expect(bucket?.gradeLevel).toBe("secundaria_5");
-    });
-
-    it("applies the SAME filters as listQuestions (difficulty/gradeLevel) so the tree counts match what expanding a topic returns", async () => {
-      const before = await totalForTopic(null, topicId, {
-        difficulty: Difficulty.Hard,
-        gradeLevel: "secundaria_5",
-      });
-      await createQuestion({
-        tenantId: null,
-        createdBy: centralUserId,
-        topicId,
-        difficulty: Difficulty.Hard,
-        gradeLevel: "secundaria_5",
-      });
-      await createQuestion({
-        tenantId: null,
-        createdBy: centralUserId,
-        topicId,
-        difficulty: Difficulty.Easy,
-        gradeLevel: "secundaria_5",
-      });
-
-      const after = await totalForTopic(null, topicId, {
-        difficulty: Difficulty.Hard,
-        gradeLevel: "secundaria_5",
-      });
-
-      expect(after).toBe(before + 1);
-    });
-
-    it("NEVER counts another tenant's private questions (same visibility rule as listQuestions)", async () => {
-      const before = await totalForTopic(tenantAId, otherTopicId);
-      await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, topicId: otherTopicId });
-
-      const after = await totalForTopic(tenantAId, otherTopicId);
-
-      expect(after).toBe(before);
     });
   });
 

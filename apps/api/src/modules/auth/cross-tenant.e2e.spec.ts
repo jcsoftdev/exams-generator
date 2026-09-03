@@ -636,21 +636,6 @@ describe("Cross-tenant visibility (e2e)", () => {
       expect(ids).toContain(centralQuestionId);
     });
 
-    it("does not count tenant B's questions in tenant A's summary (GET /bank/questions/summary)", async () => {
-      const res = await request(app.getHttpServer())
-        .get(`/bank/questions/summary?topicId=${topic.id}`)
-        .set("Authorization", `Bearer ${tokenTeacherA}`);
-
-      expect(res.status).toBe(200);
-      const rows = res.body as ReadonlyArray<{ topicId: string; total: number }>;
-      const total = rows
-        .filter((row) => row.topicId === topic.id)
-        .reduce((sum, row) => sum + Number(row.total), 0);
-      // Only the central question is visible to tenant A on this topic —
-      // B's two private rows must not be counted.
-      expect(total).toBe(1);
-    });
-
     it("denies tenant A editing tenant B's question (PATCH /bank/questions/:id)", async () => {
       const res = await request(app.getHttpServer())
         .patch(`/bank/questions/${questionBId}`)
