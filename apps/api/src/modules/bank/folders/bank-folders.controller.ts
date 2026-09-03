@@ -2,9 +2,10 @@ import {
   BankFolderNode,
   BankFoldersResponse,
   CreateBankFolderDto,
+  DeleteBankFolderResponse,
   UpdateBankFolderDto,
 } from "@exams-generator/shared";
-import { Body, Controller, Get, Param, ParseUUIDPipe, Patch, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post, UseGuards } from "@nestjs/common";
 import { CurrentUser } from "../../auth/current-user.decorator";
 import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../../auth/token.service";
@@ -52,5 +53,14 @@ export class BankFoldersController {
     @Body() body: UpdateBankFolderDto,
   ): Promise<BankFolderNode> {
     return this.service.update(user, id, body ?? {});
+  }
+
+  /** 200 with the counts, NOT 204: the UI's post-delete banner is built from this body. */
+  @Delete(":id")
+  async remove(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id", ParseUUIDPipe) id: string,
+  ): Promise<DeleteBankFolderResponse> {
+    return this.service.remove(user, id);
   }
 }

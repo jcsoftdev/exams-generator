@@ -2,6 +2,7 @@ import {
   BankFolderNode,
   BankFoldersResponse,
   CreateBankFolderDto,
+  DeleteBankFolderResponse,
   UpdateBankFolderDto,
 } from "@exams-generator/shared";
 import { Injectable } from "@nestjs/common";
@@ -233,5 +234,25 @@ export class BankFoldersService {
       }
       throw error;
     }
+  }
+
+  /**
+   * Removes the folder and its whole subtree FROM THE TENANT'S TREE. It never
+   * deletes a question: the tenant's own ones come back unfiled, and the central
+   * ones were never filed here to begin with — they simply stop being reachable
+   * through this branch. The returned counts are what the UI shows afterwards.
+   */
+  async remove(user: AuthTokenPayload, id: string): Promise<DeleteBankFolderResponse> {
+    const tenantId = this.requireTenantId(user);
+
+    const folder = await this.repository.findFolder(tenantId, id);
+    if (!folder) {
+      throw bankFolderError("folder_not_found");
+    }
+
+    const subtree = await this.repository.loadSubtree(tenantId, id);
+    const unfiledQuestions = await this.repository.deleteSubtree(tenantId, id, subtree.ids);
+
+    return { deletedFolders: subtree.ids.length, unfiledQuestions };
   }
 }

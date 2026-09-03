@@ -194,8 +194,50 @@ describe("Bank folders (e2e)", () => {
     return request(app.getHttpServer()).patch(`/bank/folders/${id}`).set("Authorization", `Bearer ${token}`);
   }
 
+  function deleteFolderRequest(token: string, id: string) {
+    return request(app.getHttpServer()).delete(`/bank/folders/${id}`).set("Authorization", `Bearer ${token}`);
+  }
+
   /** Ids created by a test, torn down in `afterAll` before the tenants go. */
   const createdFolderIds: string[] = [];
+
+  /**
+   * Inserts a question straight through Drizzle rather than through
+   * `POST /bank/questions/structured`: this suite is about FOLDERS, and the
+   * creation endpoint has its own taxonomy validation, dedup-by-hash and
+   * MinIO round-trip that would only add noise here.
+   *
+   * Pushes into `insertedQuestionIds` — the same cleanup list the counts
+   * test above already populates and `afterAll` already drains before
+   * folders/topics go — rather than a second parallel list.
+   */
+  async function insertQuestion(input: {
+    tenantId: string | null;
+    topicId: string;
+    folderId: string | null;
+    createdBy: string;
+  }): Promise<string> {
+    const [row] = await db
+      .insert(questions)
+      .values({
+        tenantId: input.tenantId,
+        topicId: input.topicId,
+        folderId: input.folderId,
+        difficulty: Difficulty.Medium,
+        gradeLevel: "secundaria_4",
+        status: "approved",
+        type: "structured",
+        bodyTypst: `Enunciado ${randomUUID()}`,
+        bodyHash: randomUUID(),
+        alternatives: ["a", "b", "c", "d"],
+        correctAnswer: "0",
+        createdBy: input.createdBy,
+      })
+      .returning({ id: questions.id });
+
+    insertedQuestionIds.push(row!.id);
+    return row!.id;
+  }
 
   async function makeFolder(token: string, body: Record<string, unknown>): Promise<any> {
     const response = await createFolderRequest(token).send(body).expect(201);
@@ -622,6 +664,108 @@ describe("Bank folders (e2e)", () => {
       const folder = await makeFolder(tokenB, { name: `Blindada ${randomUUID()}` });
 
       const response = await patchFolderRequest(tokenB, folder.id).send({ parentId: "abc" }).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+  });
+
+  describe("DELETE /bank/folders/:id", () => {
+    it("deletes the whole subtree and unfiles the tenant's own questions, without deleting a single question", async () => {
+      const root = await makeFolder(tokenB, { name: `Borrable ${randomUUID()}` });
+      const child = await makeFolder(tokenB, { name: `Hija ${randomUUID()}`, parentId: root.id });
+
+      const inRoot = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: root.id,
+        createdBy: teacherBId,
+      });
+      const inChild = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: child.id,
+        createdBy: teacherBId,
+      });
+
+      const response = await deleteFolderRequest(tokenB, root.id).expect(200);
+      expect(response.body).toEqual({ deletedFolders: 2, unfiledQuestions: 2 });
+
+      const rows = await db
+        .select({ id: questions.id, folderId: questions.folderId })
+        .from(questions)
+        .where(inArray(questions.id, [inRoot, inChild]));
+
+      expect(rows).toHaveLength(2);
+      expect(rows.every((row) => row.folderId === null)).toBe(true);
+
+      const remaining = await db
+        .select({ id: questionFolders.id })
+        .from(questionFolders)
+        .where(inArray(questionFolders.id, [root.id, child.id]));
+      expect(remaining).toEqual([]);
+    });
+
+    it("leaves CENTRAL questions completely untouched — they were never filed here", async () => {
+      // Both tenants seed their own copy of the "Arco" topic folder from the
+      // same global taxonomy, so this is scoped to B's row explicitly rather
+      // than picking whichever of the two rows Postgres happens to return
+      // first — deleting with `tokenB` against A's copy would 404.
+      const topicFolders = await db
+        .select({
+          id: questionFolders.id,
+          topicId: questionFolders.topicId,
+          tenantId: questionFolders.tenantId,
+        })
+        .from(questionFolders)
+        .where(eq(questionFolders.topicId, preTopicId));
+      const seeded = topicFolders.find((row) => row.tenantId === tenantBId)!;
+
+      const centralQuestionId = await insertQuestion({
+        tenantId: null,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: staffUserId,
+      });
+
+      const response = await deleteFolderRequest(tokenB, seeded.id).expect(200);
+      expect(response.body.unfiledQuestions).toBe(0);
+
+      const [central] = await db
+        .select({ id: questions.id, topicId: questions.topicId, folderId: questions.folderId })
+        .from(questions)
+        .where(eq(questions.id, centralQuestionId));
+
+      expect(central).toMatchObject({ topicId: preTopicId, folderId: null });
+    });
+
+    it("does not touch another tenant's folders", async () => {
+      const [folderOfA] = await db
+        .insert(questionFolders)
+        .values({ tenantId: tenantAId, parentId: null, name: `Intacta ${randomUUID()}`, position: 0 })
+        .returning({ id: questionFolders.id });
+      createdFolderIds.push(folderOfA!.id);
+
+      const mine = await makeFolder(tokenB, { name: `Propia ${randomUUID()}` });
+      await deleteFolderRequest(tokenB, mine.id).expect(200);
+
+      const [stillThere] = await db
+        .select({ id: questionFolders.id })
+        .from(questionFolders)
+        .where(eq(questionFolders.id, folderOfA!.id));
+      expect(stillThere).toBeDefined();
+    });
+
+    it("rejects another tenant's folder with 404 folder_not_found", async () => {
+      const folderOfB = await makeFolder(tokenB, { name: `Ajena del A ${randomUUID()}` });
+
+      const response = await deleteFolderRequest(tokenA, folderOfB.id).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("rejects a second delete of the same folder with 404 — the two-tab case", async () => {
+      const folder = await makeFolder(tokenB, { name: `Doble ${randomUUID()}` });
+      await deleteFolderRequest(tokenB, folder.id).expect(200);
+
+      const response = await deleteFolderRequest(tokenB, folder.id).expect(404);
       expect(response.body).toMatchObject({ code: "folder_not_found" });
     });
   });

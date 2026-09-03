@@ -102,6 +102,30 @@ export class BankFoldersRepository {
     };
   }
 
+  /**
+   * Unfiles then deletes, in ONE transaction. Order matters: the `folder_id` FK
+   * is `ON DELETE SET NULL`, so Postgres would unfile the rows anyway — doing it
+   * explicitly FIRST is what lets the response report `unfiledQuestions`, which
+   * is the whole point of the post-delete banner ("12 preguntas quedaron en Sin
+   * carpeta"). The DELETE then only names the subtree ROOT: the self-referencing
+   * `ON DELETE CASCADE` removes the rest.
+   */
+  async deleteSubtree(tenantId: string, rootId: string, subtreeIds: readonly string[]): Promise<number> {
+    return this.db.transaction(async (tx) => {
+      const unfiled = await tx
+        .update(questions)
+        .set({ folderId: null })
+        .where(and(eq(questions.tenantId, tenantId), inArray(questions.folderId, [...subtreeIds])))
+        .returning({ id: questions.id });
+
+      await tx
+        .delete(questionFolders)
+        .where(and(eq(questionFolders.id, rootId), eq(questionFolders.tenantId, tenantId)));
+
+      return unfiled.length;
+    });
+  }
+
   async updateFolder(
     tenantId: string,
     id: string,
