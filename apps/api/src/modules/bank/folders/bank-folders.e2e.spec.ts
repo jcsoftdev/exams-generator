@@ -1,13 +1,13 @@
 import { randomUUID } from "node:crypto";
-import { Role } from "@exams-generator/shared";
+import { Difficulty, Role } from "@exams-generator/shared";
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { eq, inArray } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../../app.module";
 import { db, pool } from "../../../db/client";
 import { runMigrations } from "../../../db/migrate";
-import { courses, questionFolders, tenants, topics, users } from "../../../db/schema";
+import { courses, questionFolders, questions, tenants, topics, users } from "../../../db/schema";
 import { TokenService } from "../../auth/token.service";
 
 /**
@@ -35,6 +35,9 @@ describe("Bank folders (e2e)", () => {
   let tokenA: string;
   let tokenB: string;
   let staffToken: string;
+
+  /** Real question rows the counts test inserts directly via Drizzle — cleaned up in `afterAll`. */
+  const insertedQuestionIds: string[] = [];
 
   const suffix = randomUUID();
 
@@ -130,6 +133,17 @@ describe("Bank folders (e2e)", () => {
 
   afterAll(async () => {
     const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      // Must run BEFORE "delete folders": the questions reference `folderId`
+      // (ON DELETE SET NULL, harmless either order) but also `topicId`
+      // (NOT NULL, no cascade) — deleting topics before these rows exist
+      // would fail the FK, not just leave a dangling reference.
+      [
+        "delete inserted questions",
+        () =>
+          insertedQuestionIds.length > 0
+            ? db.delete(questions).where(inArray(questions.id, insertedQuestionIds))
+            : Promise.resolve(),
+      ],
       // Folders cascade off the tenants below, but deleting them explicitly
       // keeps the failure readable if a FK ever changes.
       [
@@ -169,13 +183,18 @@ describe("Bank folders (e2e)", () => {
     return nodes.flatMap((node) => [node, ...flatten(node.children ?? [])]);
   }
 
-  it("seeds the default tree on the tenant's FIRST call: a root per stage, a folder per course, a folder per topic", async () => {
+  it("seeds the default tree on the tenant's FIRST call: a root per stage, a folder per course, a folder per topic, roots in school-progression order", async () => {
     const response = await foldersRequest(tokenA).expect(200);
     const all = flatten(response.body.folders);
 
-    // Roots the fixture guarantees exist (the real catalog may add more).
-    const roots = response.body.folders.map((node: any) => node.name);
-    expect(roots).toEqual(expect.arrayContaining(["Colegio", "Preuniversitario"]));
+    // Every root is a fixed STAGE, never a per-course thing — the local
+    // catalog already has courses in all three stages (seeded independently
+    // of this fixture), so this is an EXACT match, not `arrayContaining`.
+    expect(response.body.folders.map((node: any) => [node.name, node.position])).toEqual([
+      ["Escuela", 0],
+      ["Colegio", 1],
+      ["Preuniversitario", 2],
+    ]);
 
     const courseFolder = all.find((node) => node.name === `ZZ Folders Colegio ${suffix}`);
     expect(courseFolder).toBeDefined();
@@ -194,6 +213,86 @@ describe("Bank folders (e2e)", () => {
     expect(all.find((node) => node.topicId === preTopicId).name).toBe(`Arco ${suffix}`);
   });
 
+  it("keeps tenants isolated — B's tree shares no folder id with A's, and a lookup scoped to B never returns A's row", async () => {
+    // Captured HERE, from a fresh call, rather than relying on a side effect
+    // left over by another `it` — A's tree still fully exists at this point.
+    const responseA = await foldersRequest(tokenA).expect(200);
+    const idsA = flatten(responseA.body.folders).map((node: any) => node.id);
+    expect(idsA.length).toBeGreaterThan(0);
+
+    // B's FIRST call — seeds independently from the same global taxonomy.
+    const responseB = await foldersRequest(tokenB).expect(200);
+    const idsB = flatten(responseB.body.folders).map((node: any) => node.id);
+    expect(idsB.length).toBeGreaterThan(0);
+
+    for (const idA of idsA) {
+      expect(idsB).not.toContain(idA);
+    }
+
+    // Persistence-level check, independent of how the controller assembles
+    // the tree: a query scoped to tenant B can never resolve one of A's ids,
+    // because `tenant_id` is part of the row, not of the lookup.
+    const [oneOfAsFolderId] = idsA;
+    const crossTenantRow = await db
+      .select({ id: questionFolders.id })
+      .from(questionFolders)
+      .where(and(eq(questionFolders.id, oneOfAsFolderId), eq(questionFolders.tenantId, tenantBId)));
+    expect(crossTenantRow).toEqual([]);
+  });
+
+  it("computes direct (non-rolled-up) ownCount/centralCount and unfiledCount from real rows", async () => {
+    const treeA = flatten((await foldersRequest(tokenA).expect(200)).body.folders);
+    const topicFolderA = treeA.find((node) => node.topicId === sharedNameTopic4Id);
+    const courseFolderA = treeA.find((node) => node.id === topicFolderA.parentId);
+
+    const treeB = flatten((await foldersRequest(tokenB).expect(200)).body.folders);
+    const topicFolderB = treeB.find((node) => node.topicId === sharedNameTopic4Id);
+
+    const baseRow = {
+      topicId: sharedNameTopic4Id,
+      difficulty: Difficulty.Easy,
+      gradeLevel: "secundaria_4",
+      correctAnswer: "a",
+    };
+
+    // Tenant A's own question, filed under the topic folder.
+    const [ownA] = await db
+      .insert(questions)
+      .values({ ...baseRow, tenantId: tenantAId, folderId: topicFolderA.id, createdBy: teacherAId })
+      .returning({ id: questions.id });
+    // A CENTRAL question of the SAME topic — visible inside both A's and
+    // B's folder for that topic, without belonging to either (never carries a folderId).
+    const [central] = await db
+      .insert(questions)
+      .values({ ...baseRow, tenantId: null, folderId: null, createdBy: teacherAId })
+      .returning({ id: questions.id });
+    // Tenant A's own question with no folder at all.
+    const [unfiledA] = await db
+      .insert(questions)
+      .values({ ...baseRow, tenantId: tenantAId, folderId: null, createdBy: teacherAId })
+      .returning({ id: questions.id });
+    insertedQuestionIds.push(ownA!.id, central!.id, unfiledA!.id);
+
+    const responseA = await foldersRequest(tokenA).expect(200);
+    const allA = flatten(responseA.body.folders);
+    const refreshedTopicFolderA = allA.find((node) => node.id === topicFolderA.id);
+    const refreshedCourseFolderA = allA.find((node) => node.id === courseFolderA.id);
+
+    expect(refreshedTopicFolderA).toMatchObject({ ownCount: 1, centralCount: 1 });
+    // Direct counts only — the parent course folder does NOT roll up its
+    // children's counts.
+    expect(refreshedCourseFolderA).toMatchObject({ ownCount: 0, centralCount: 0 });
+    expect(responseA.body.unfiledCount).toBe(1);
+
+    const responseB = await foldersRequest(tokenB).expect(200);
+    const refreshedTopicFolderB = flatten(responseB.body.folders).find((node) => node.id === topicFolderB.id);
+
+    // Same central question, visible through B's OWN folder for that topic —
+    // but none of A's own/unfiled rows leak into B's counts.
+    expect(refreshedTopicFolderB).toMatchObject({ ownCount: 0, centralCount: 1 });
+    expect(responseB.body.unfiledCount).toBe(0);
+  });
+
   it("does not re-seed on a second call — folders_seeded_at is the marker, not 'has rows'", async () => {
     const first = await foldersRequest(tokenA).expect(200);
     const before = flatten(first.body.folders).length;
@@ -205,6 +304,9 @@ describe("Bank folders (e2e)", () => {
     expect(row!.seededAt).not.toBeNull();
 
     // Emptying the cabinet on purpose must NOT bring the default set back.
+    // Safe to run now (after the counts test above): the questions it
+    // inserted are cleaned up separately, by id, in `afterAll`, and
+    // `ON DELETE SET NULL` means deleting these folders only unfiles them.
     await db.delete(questionFolders).where(eq(questionFolders.tenantId, tenantAId));
     const second = await foldersRequest(tokenA).expect(200);
 
@@ -212,24 +314,11 @@ describe("Bank folders (e2e)", () => {
     expect(second.body.folders).toEqual([]);
   });
 
-  it("keeps tenants isolated — B's tree is its own, and B seeds independently", async () => {
-    const responseB = await foldersRequest(tokenB).expect(200);
-    const idsB = flatten(responseB.body.folders).map((node: any) => node.id);
-
-    const rowsA = await db
-      .select({ id: questionFolders.id })
-      .from(questionFolders)
-      .where(eq(questionFolders.tenantId, tenantAId));
-
-    expect(idsB.length).toBeGreaterThan(0);
-    for (const rowA of rowsA) {
-      expect(idsB).not.toContain(rowA.id);
-    }
-  });
-
-  it("returns unfiledCount and per-folder counts, both zero for a bank with no questions here", async () => {
+  it("returns unfiledCount and per-folder counts, both zero for a folder the counts test never touched", async () => {
+    // B's "Arco" topic folder — the counts test above only ever inserted
+    // rows against `sharedNameTopic4Id`, so this one stays untouched.
     const response = await foldersRequest(tokenB).expect(200);
-    const node = flatten(response.body.folders)[0];
+    const node = flatten(response.body.folders).find((n: any) => n.topicId === preTopicId);
 
     expect(response.body).toHaveProperty("unfiledCount", 0);
     expect(node).toMatchObject({ ownCount: 0, centralCount: 0 });
