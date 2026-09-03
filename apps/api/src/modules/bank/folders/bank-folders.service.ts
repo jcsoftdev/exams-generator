@@ -99,6 +99,25 @@ export class BankFoldersService {
     };
   }
 
+  /**
+   * Validates and loads a candidate parent — shared by `create` and `update`
+   * so the uuid-shape check and the tenant-scoped existence check live in one
+   * place. A malformed `parentId` and a well-formed one that doesn't resolve
+   * both end in the same `folder_not_found`: another tenant's folder is
+   * indistinguishable from a missing one, and neither can ever be a real
+   * folder of THIS tenant.
+   */
+  private async resolveParent(tenantId: string, parentId: string): Promise<FlatFolderRow> {
+    if (!isUuid(parentId)) {
+      throw bankFolderError("folder_not_found");
+    }
+    const parent = await this.repository.findFolder(tenantId, parentId);
+    if (!parent) {
+      throw bankFolderError("folder_not_found");
+    }
+    return parent;
+  }
+
   async create(user: AuthTokenPayload, dto: CreateBankFolderDto): Promise<BankFolderNode> {
     const tenantId = this.requireTenantId(user);
 
@@ -109,14 +128,7 @@ export class BankFoldersService {
 
     const parentId = dto.parentId ?? null;
     if (parentId !== null) {
-      if (!isUuid(parentId)) {
-        throw bankFolderError("folder_not_found");
-      }
-      const parent = await this.repository.findFolder(tenantId, parentId);
-      if (!parent) {
-        // Another tenant's folder is indistinguishable from a missing one.
-        throw bankFolderError("folder_not_found");
-      }
+      await this.resolveParent(tenantId, parentId);
       const parentDepth = await this.repository.folderDepth(tenantId, parentId);
       // A brand-new folder is a leaf, so its subtree is exactly 1 level tall.
       const move = checkFolderMove({
@@ -180,13 +192,7 @@ export class BankFoldersService {
       const targetParentId = dto.parentId ?? null;
 
       if (targetParentId !== null) {
-        if (!isUuid(targetParentId)) {
-          throw bankFolderError("folder_not_found");
-        }
-        const parent = await this.repository.findFolder(tenantId, targetParentId);
-        if (!parent) {
-          throw bankFolderError("folder_not_found");
-        }
+        await this.resolveParent(tenantId, targetParentId);
       }
 
       const subtree = await this.repository.loadSubtree(tenantId, id);
