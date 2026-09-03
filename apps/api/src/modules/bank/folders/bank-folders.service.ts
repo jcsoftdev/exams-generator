@@ -3,6 +3,7 @@ import {
   BankFoldersResponse,
   CreateBankFolderDto,
   DeleteBankFolderResponse,
+  UNFILED_FOLDER_ID,
   UpdateBankFolderDto,
 } from "@exams-generator/shared";
 import { Injectable } from "@nestjs/common";
@@ -26,6 +27,10 @@ import { validateFolderName } from "./domain/folder-name";
 function isUuid(value: string): boolean {
   return isUUID(value);
 }
+
+export type FolderScope =
+  | { readonly unfiled: true }
+  | { readonly unfiled: false; readonly folderId: string; readonly folderTopicId: string | null };
 
 @Injectable()
 export class BankFoldersService {
@@ -254,5 +259,25 @@ export class BankFoldersService {
     const unfiledQuestions = await this.repository.deleteSubtree(tenantId, id, subtree.ids);
 
     return { deletedFolders: subtree.ids.length, unfiledQuestions };
+  }
+
+  /**
+   * Turns the raw `?folderId=` value into the scope the questions repository
+   * understands. `unfiled` is a sentinel, not an id; anything else must be a
+   * folder of THIS tenant or the caller gets a 404 — the same
+   * id-enumeration guard `BankService.getQuestionById` applies to questions.
+   */
+  async resolveFolderScope(user: AuthTokenPayload, raw: string): Promise<FolderScope> {
+    const tenantId = this.requireTenantId(user);
+
+    if (raw === UNFILED_FOLDER_ID) {
+      return { unfiled: true };
+    }
+
+    const folder = await this.repository.findFolder(tenantId, raw);
+    if (!folder) {
+      throw bankFolderError("folder_not_found");
+    }
+    return { unfiled: false, folderId: folder.id, folderTopicId: folder.topicId };
   }
 }

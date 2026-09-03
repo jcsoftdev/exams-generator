@@ -400,6 +400,133 @@ describe("Bank folders (e2e)", () => {
     await request(app.getHttpServer()).get("/bank/folders").expect(401);
   });
 
+  describe("GET /bank/questions?folderId=", () => {
+    function listRequest(token: string) {
+      return request(app.getHttpServer()).get("/bank/questions").set("Authorization", `Bearer ${token}`);
+    }
+
+    it("mixes the folder's OWN questions with the CENTRAL ones of its topic", async () => {
+      const [seeded] = await db
+        .select({ id: questionFolders.id })
+        .from(questionFolders)
+        .where(and(eq(questionFolders.tenantId, tenantBId), eq(questionFolders.topicId, preTopicId)));
+
+      const own = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: seeded!.id,
+        createdBy: teacherBId,
+      });
+      const central = await insertQuestion({
+        tenantId: null,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: staffUserId,
+      });
+      // Same tenant, same topic, but filed nowhere -> must NOT appear.
+      const unrelated = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: teacherBId,
+      });
+
+      const response = await listRequest(tokenB).query({ folderId: seeded!.id }).expect(200);
+      const ids = response.body.map((row: any) => row.id);
+
+      expect(ids).toEqual(expect.arrayContaining([own, central]));
+      expect(ids).not.toContain(unrelated);
+
+      // Unfile OWN before the later DELETE-folder tests run: this suite reuses
+      // the tenant's SEEDED per-topic folder (the only one that ever carries a
+      // `topicId`), and `bank-folders.e2e.spec.ts`'s own "leaves CENTRAL
+      // questions completely untouched" DELETE test asserts `unfiledQuestions:
+      // 0` when it later deletes this same folder — a row left filed here
+      // would falsify that unrelated assertion.
+      await db.update(questions).set({ folderId: null }).where(eq(questions.id, own));
+    });
+
+    it("returns each row's folderId so the client can render where it lives", async () => {
+      const folder = await makeFolder(tokenB, { name: `Con folderId ${randomUUID()}` });
+      const own = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+      });
+
+      const response = await listRequest(tokenB).query({ folderId: folder.id }).expect(200);
+      expect(response.body.find((row: any) => row.id === own).folderId).toBe(folder.id);
+    });
+
+    it("folderId=unfiled returns ONLY the tenant's own questions with no folder — never central ones", async () => {
+      const unfiled = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: teacherBId,
+      });
+      const central = await insertQuestion({
+        tenantId: null,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: staffUserId,
+      });
+
+      const response = await listRequest(tokenB).query({ folderId: "unfiled" }).expect(200);
+      const ids = response.body.map((row: any) => row.id);
+
+      expect(ids).toContain(unfiled);
+      expect(ids).not.toContain(central);
+    });
+
+    it("a folder with no topicId returns only its own questions", async () => {
+      const folder = await makeFolder(tokenB, { name: `Sin tema ${randomUUID()}` });
+      const own = await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+      });
+      const central = await insertQuestion({
+        tenantId: null,
+        topicId: preTopicId,
+        folderId: null,
+        createdBy: staffUserId,
+      });
+
+      const response = await listRequest(tokenB).query({ folderId: folder.id }).expect(200);
+      const ids = response.body.map((row: any) => row.id);
+
+      expect(ids).toEqual([own]);
+      expect(ids).not.toContain(central);
+    });
+
+    it("rejects another tenant's folder with 404 folder_not_found", async () => {
+      const folderOfB = await makeFolder(tokenB, { name: `Privada ${randomUUID()}` });
+
+      const response = await listRequest(tokenA).query({ folderId: folderOfB.id }).expect(404);
+      expect(response.body).toMatchObject({ code: "folder_not_found" });
+    });
+
+    it("keeps working with pagination", async () => {
+      const folder = await makeFolder(tokenB, { name: `Paginada ${randomUUID()}` });
+      await insertQuestion({
+        tenantId: tenantBId,
+        topicId: preTopicId,
+        folderId: folder.id,
+        createdBy: teacherBId,
+      });
+
+      const response = await listRequest(tokenB)
+        .query({ folderId: folder.id, page: "1", pageSize: "10" })
+        .expect(200);
+
+      expect(response.body).toMatchObject({ total: 1 });
+      expect(response.body.items).toHaveLength(1);
+    });
+  });
+
   describe("POST /bank/folders", () => {
     it("creates a root folder and returns the node, appended after existing roots", async () => {
       const folder = await makeFolder(tokenB, { name: "  Mis apuntes  " });

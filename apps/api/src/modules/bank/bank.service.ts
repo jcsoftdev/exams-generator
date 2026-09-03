@@ -21,6 +21,7 @@ import {
   QuestionListPagination,
 } from "./bank.repository";
 import { assertStructuredQuestion } from "./domain/assert-structured-question";
+import { BankFoldersService } from "./folders/bank-folders.service";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { compilePreviewFromContent } from "./domain/compile-preview-from-content";
 import { hashBodyTypst } from "./domain/hash-body-typst";
@@ -108,6 +109,7 @@ export interface ListQuestionsQuery {
   readonly difficulty?: Difficulty;
   readonly gradeLevel?: string;
   readonly status?: QuestionStatus;
+  readonly folderId?: string;
 }
 
 /**
@@ -145,6 +147,7 @@ export class BankService {
     private readonly repository: BankRepository,
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
+    private readonly folders: BankFoldersService,
   ) {}
 
   async createImageQuestion(user: AuthTokenPayload, dto: CreateImageQuestionDto): Promise<{ id: string }> {
@@ -265,6 +268,24 @@ export class BankService {
    * MUST keep returning the flat `QuestionListItem[]` this always returned.
    * Only passing `pagination` switches to the `{ items, total }` envelope.
    */
+  /**
+   * Folder scope is resolved HERE, not in the repository: it is a lookup plus an
+   * authorization decision (404 for another tenant's folder), and the repository
+   * layer only applies conditions.
+   */
+  private async resolveFolderFilter(
+    user: AuthTokenPayload,
+    folderId: string | undefined,
+  ): Promise<{ folderId?: string; folderTopicId?: string | null; unfiled?: boolean }> {
+    if (!folderId) {
+      return {};
+    }
+    const scope = await this.folders.resolveFolderScope(user, folderId);
+    return scope.unfiled
+      ? { unfiled: true }
+      : { folderId: scope.folderId, folderTopicId: scope.folderTopicId };
+  }
+
   async listQuestions(user: AuthTokenPayload, query: ListQuestionsQuery): Promise<QuestionListItem[]>;
   async listQuestions(
     user: AuthTokenPayload,
@@ -276,6 +297,7 @@ export class BankService {
     query: ListQuestionsQuery,
     pagination?: QuestionListPagination,
   ): Promise<QuestionListItem[] | { items: QuestionListItem[]; total: number }> {
+    const folderFilter = await this.resolveFolderFilter(user, query.folderId);
     const filters = {
       currentTenantId: user.tenantId,
       courseId: query.courseId,
@@ -283,6 +305,7 @@ export class BankService {
       difficulty: query.difficulty,
       gradeLevel: query.gradeLevel,
       status: query.status,
+      ...folderFilter,
     };
 
     if (!pagination) {

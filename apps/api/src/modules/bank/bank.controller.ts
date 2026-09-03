@@ -121,6 +121,7 @@ interface ListQuestionsQueryParams {
   readonly difficulty?: string;
   readonly gradeLevel?: string;
   readonly status?: string;
+  readonly folderId?: string;
   /**
    * S6: optional pagination. `page === undefined` is the retro-compat
    * signal — the controller returns the legacy flat array in that case,
@@ -213,6 +214,7 @@ export class BankController {
       difficulty: query.difficulty as Difficulty | undefined,
       gradeLevel: query.gradeLevel,
       status: query.status as QuestionStatus | undefined,
+      folderId: query.folderId,
     };
 
     if (query.page === undefined) {

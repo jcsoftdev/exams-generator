@@ -12,6 +12,7 @@ import { parseIndexes } from "./bank.controller";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
 import { hashBodyTypst } from "./domain/hash-body-typst";
+import { BankFoldersService } from "./folders/bank-folders.service";
 
 const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
@@ -71,8 +72,12 @@ function buildDeps() {
     compileAnswerKey: jest.fn().mockResolvedValue(Buffer.from("fake-pdf-bytes")),
   };
 
-  const service = new BankService(repository, storage, pdfCompiler);
-  return { service, repository, storage, pdfCompiler };
+  const folders = {
+    resolveFolderScope: jest.fn(),
+  } as unknown as jest.Mocked<BankFoldersService>;
+
+  const service = new BankService(repository, storage, pdfCompiler, folders);
+  return { service, repository, storage, pdfCompiler, folders };
 }
 
 /** A Multer file whose buffer tag makes it distinguishable in test assertions. */
@@ -478,6 +483,41 @@ describe("BankService.listQuestions", () => {
     await service.listQuestions(STAFF_USER, {});
 
     expect(repository.listQuestions).toHaveBeenCalledWith(expect.objectContaining({ currentTenantId: null }));
+  });
+
+  it("resolves folderId through BankFoldersService and forwards folderId/folderTopicId to the repository", async () => {
+    const { service, repository, folders } = buildDeps();
+    folders.resolveFolderScope.mockResolvedValue({
+      unfiled: false,
+      folderId: "folder-1",
+      folderTopicId: "topic-1",
+    });
+
+    await service.listQuestions(TEACHER_USER, { folderId: "folder-1" });
+
+    expect(folders.resolveFolderScope).toHaveBeenCalledWith(TEACHER_USER, "folder-1");
+    expect(repository.listQuestions).toHaveBeenCalledWith(
+      expect.objectContaining({ folderId: "folder-1", folderTopicId: "topic-1" }),
+    );
+  });
+
+  it("forwards unfiled: true and NOT a folderId when the resolved scope is the unfiled bucket", async () => {
+    const { service, repository, folders } = buildDeps();
+    folders.resolveFolderScope.mockResolvedValue({ unfiled: true });
+
+    await service.listQuestions(TEACHER_USER, { folderId: "unfiled" });
+
+    expect(repository.listQuestions).toHaveBeenCalledWith(expect.objectContaining({ unfiled: true }));
+    const forwarded = repository.listQuestions.mock.calls[0]![0];
+    expect(forwarded).not.toHaveProperty("folderId");
+  });
+
+  it("never calls BankFoldersService when no folderId is given", async () => {
+    const { service, folders } = buildDeps();
+
+    await service.listQuestions(TEACHER_USER, {});
+
+    expect(folders.resolveFolderScope).not.toHaveBeenCalled();
   });
 });
 

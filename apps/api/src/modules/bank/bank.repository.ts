@@ -62,6 +62,37 @@ function buildQuestionListConditions(filter: QuestionListFilter): SQL[] {
     conditions.push(eq(questions.status, filter.status) as SQL);
   }
 
+  /**
+   * "Sin carpeta" is the tenant's OWN unfiled questions only. Central rows all
+   * have `folder_id IS NULL` (they can never carry one), so without the
+   * `tenant_id = :current` half this bucket would swallow the entire 64k central
+   * bank.
+   */
+  if (filter.unfiled) {
+    conditions.push(
+      and(
+        filter.currentTenantId
+          ? eq(questions.tenantId, filter.currentTenantId)
+          : (isNull(questions.tenantId) as SQL),
+        isNull(questions.folderId),
+      ) as SQL,
+    );
+  } else if (filter.folderId) {
+    /**
+     * A folder shows two things at once: what the school filed INTO it, and the
+     * central-bank questions of the topic it was seeded from. The second half is
+     * an OR, not a second query, so paging and counting stay one statement.
+     */
+    conditions.push(
+      (filter.folderTopicId
+        ? or(
+            eq(questions.folderId, filter.folderId),
+            and(isNull(questions.tenantId), eq(questions.topicId, filter.folderTopicId)),
+          )
+        : eq(questions.folderId, filter.folderId)) as SQL,
+    );
+  }
+
   return conditions;
 }
 

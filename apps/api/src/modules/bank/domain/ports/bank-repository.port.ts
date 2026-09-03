@@ -126,6 +126,20 @@ export interface QuestionListFilter {
   readonly difficulty?: Difficulty;
   readonly gradeLevel?: string;
   readonly status?: QuestionStatus;
+  /**
+   * Tenant folder scope (design doc "Listado de preguntas"). Resolved by the
+   * service from the raw query param BEFORE it gets here — the repository never
+   * looks a folder up, it just applies the condition.
+   */
+  readonly folderId?: string;
+  /**
+   * The `topic_id` of that folder, when it has one. Non-null is what pulls
+   * CENTRAL-bank questions of the same topic into the folder's listing; they
+   * have no `folder_id` of their own and never will.
+   */
+  readonly folderTopicId?: string | null;
+  /** `?folderId=unfiled` — the tenant's OWN questions with no folder. Mutually exclusive with `folderId`. */
+  readonly unfiled?: boolean;
 }
 
 /** S6: opt-in pagination for `listQuestions` — 1-indexed page, clamped by the caller (controller). */
