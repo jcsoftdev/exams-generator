@@ -10,7 +10,7 @@ import {
   signal,
   TrackByFunction,
 } from '@angular/core';
-import { LucideAngularModule } from 'lucide-angular';
+import { ChevronDown, ChevronRight, LucideAngularModule, MoreHorizontal } from 'lucide-angular';
 import { InputComponent } from '../input/input.component';
 import {
   FolderCreateEvent,
@@ -43,6 +43,20 @@ import {
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CdkTreeModule, InputComponent, LucideAngularModule],
+  // CRITICAL fix: a PRIMITIVE must render standalone, on its own, without
+  // depending on an ancestor happening to pick the icons it uses. This used
+  // to import bare `LucideAngularModule` (usable in the template, but no icon
+  // registered) and rely on whichever consumer mounted it — bank-list, by
+  // coincidence — to `pick()` chevron-down/chevron-right/more-horizontal at
+  // its own component level. `/app/bank/new`'s folder popover mounts this
+  // with no such ancestor and threw `The "chevron-right" icon has not been
+  // provided`. `providers` (not `imports`) mirrors bank-list's own working
+  // pattern — see that component's doc: Angular's Lucide icon token is NOT a
+  // multi-provider, so a local `pick()` SHADOWS (does not merge with) an
+  // ancestor's, which is exactly the isolation a primitive needs.
+  providers: [
+    LucideAngularModule.pick({ ChevronDown, ChevronRight, MoreHorizontal }).providers ?? [],
+  ],
   template: `
     <cdk-tree
       #tree

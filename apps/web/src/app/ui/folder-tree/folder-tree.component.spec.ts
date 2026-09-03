@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { LucideAngularModule, ChevronDown, ChevronRight, MoreHorizontal } from 'lucide-angular';
 import { FolderTreeComponent } from './folder-tree.component';
 import { FolderInlineError, FolderTreeNode } from './folder-tree.types';
@@ -525,5 +525,41 @@ describe('FolderTreeComponent', () => {
     fixture.detectChanges();
 
     expect(host.lastSelected).toBeNull();
+  });
+});
+
+// --- CRITICAL fix: the primitive provides its own Lucide icons -----------
+//
+// `ui-folder-tree` used to import `LucideAngularModule` without ever calling
+// `.pick(...)` — it rendered correctly ONLY when an ancestor happened to pick
+// `chevron-down`/`chevron-right`/`more-horizontal` (bank-list does, by
+// coincidence). Mounted anywhere that doesn't — `/app/bank/new`'s folder
+// popover — the toggle threw `The "chevron-right" icon has not been
+// provided`. A SEPARATE `describe`/TestBed here is the point: it must NOT
+// inherit the outer suite's `LucideAngularModule.pick(...)`, or this test
+// would pass for the wrong reason.
+@Component({
+  standalone: true,
+  imports: [FolderTreeComponent],
+  template: `<ui-folder-tree [nodes]="nodes()"></ui-folder-tree>`,
+})
+class BareHostComponent {
+  readonly nodes = signal<readonly FolderTreeNode[]>(TREE);
+}
+
+describe('FolderTreeComponent (standalone icon provisioning)', () => {
+  it('renders the toggle icon with no ancestor picking Lucide icons', () => {
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    TestBed.configureTestingModule({ imports: [BareHostComponent] });
+    const fixture = TestBed.createComponent(BareHostComponent);
+    fixture.detectChanges();
+    const element = fixture.nativeElement as HTMLElement;
+
+    const toggle = element.querySelector('[data-testid="folder-toggle"]');
+    expect(toggle?.querySelector('svg')).not.toBeNull();
+    expect(consoleErrorSpy).not.toHaveBeenCalled();
+
+    consoleErrorSpy.mockRestore();
   });
 });

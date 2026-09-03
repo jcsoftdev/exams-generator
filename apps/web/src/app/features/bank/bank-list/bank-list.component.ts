@@ -6,14 +6,12 @@ import {
   LucideAngularModule,
   Search,
   ChevronDown,
-  ChevronRight,
   Lock,
   Pencil,
   Archive,
   Trash2,
   Image,
   FileText,
-  MoreHorizontal,
   X,
   Check,
   Sparkles,
@@ -230,22 +228,23 @@ const HIGHLIGHT_DURATION_MS = 4000;
   ],
   // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
   // local `pick()` SHADOWS (does not merge with) the app-level one in app.config.ts. This must list
-  // every icon the template uses AND every icon the CHILD components rendered inside it use, since
-  // they resolve the token through this element injector: `ui-folder-tree`'s chevrons and
-  // `more-horizontal`, and `ui-banner`'s `x` dismiss. Missing one 404s at runtime ("icon has not
-  // been provided").
+  // every icon the TEMPLATE uses AND every icon a CHILD component rendered inside it resolves
+  // through this element injector — `ui-banner`'s `x` dismiss, and `ui-select`'s own dropdown arrow
+  // (`ChevronDown`, for "Nivel"/"Grado"). `ChevronRight` and `MoreHorizontal` are NOT listed here any
+  // more (fix round 3): those two were only ever for `ui-folder-tree`'s toggle/menu, and the
+  // primitive now provides them itself, so it renders standalone instead of depending on this
+  // ancestor pick by coincidence. Missing an icon this list DOES still own 404s at runtime ("icon has
+  // not been provided").
   providers: [
     LucideAngularModule.pick({
       Search,
       ChevronDown,
-      ChevronRight,
       Lock,
       Pencil,
       Archive,
       Trash2,
       Image,
       FileText,
-      MoreHorizontal,
       X,
       Check,
       Sparkles,
