@@ -190,11 +190,26 @@ CREATE TEMP TABLE "folder_rename_input" (
   "id" uuid PRIMARY KEY,
   "tenant_id" uuid NOT NULL,
   "new_parent_id" uuid,
-  "base_name" text NOT NULL
+  "base_name" text NOT NULL,
+  "position" integer NOT NULL
+) ON COMMIT DROP;
+--> statement-breakpoint
+-- The decision is materialised here rather than applied straight from the CTE
+-- so that "every planned folder actually got a name" can be CHECKED before a
+-- single row moves. Created outside the function, once, because a temp table
+-- created inside a plpgsql body gets a new OID on every call while the body's
+-- cached plans keep pointing at the old one.
+CREATE TEMP TABLE "folder_rename_assignment" (
+  "id" uuid PRIMARY KEY,
+  "new_parent_id" uuid,
+  "final_name" text NOT NULL
 ) ON COMMIT DROP;
 --> statement-breakpoint
 CREATE FUNCTION pg_temp.apply_folder_rename_plan() RETURNS void LANGUAGE plpgsql AS $fn$
+DECLARE
+  unplaced text;
 BEGIN
+  INSERT INTO "folder_rename_assignment" ("id", "new_parent_id", "final_name")
   WITH plan AS (
     SELECT
       i."id",
@@ -203,7 +218,8 @@ BEGIN
       -- Root folders have a NULL parent and are deduped by
       -- `question_folders_root_name_idx`, so NULL is a group like any other.
       COALESCE(i."new_parent_id", '00000000-0000-0000-0000-000000000000'::uuid) AS grp,
-      left(i."base_name", 80) AS base_name
+      left(i."base_name", 80) AS base_name,
+      i."position"
     FROM "folder_rename_input" i
   ),
   -- Names the destination group ALREADY holds. Rows in the plan are excluded:
@@ -218,14 +234,16 @@ BEGIN
      AND COALESCE(e."parent_id", '00000000-0000-0000-0000-000000000000'::uuid) = p.grp
     WHERE NOT EXISTS (SELECT 1 FROM plan p2 WHERE p2."id" = e."id")
   ),
-  -- Ties inside one wanted name are broken by id, so the assignment is
-  -- deterministic and re-running the migration on a restored dump repeats it.
+  -- Who gets the bare name when several folders want the same one: seed order
+  -- (`position`), id as the tie-break. Ordering by id alone would hand it to
+  -- whichever random uuid sorted first, which is neither meaningful to a
+  -- teacher looking at her tree nor reproducible from a restored dump.
   ranked AS (
     SELECT
       p.*,
       row_number() OVER (
         PARTITION BY p."tenant_id", p.grp, p.base_name
-        ORDER BY p.base_name, p."id"
+        ORDER BY p."position", p."id"
       ) AS rn
     FROM plan p
   ),
@@ -235,13 +253,25 @@ BEGIN
       r.grp,
       r.base_name,
       max(r.rn) AS needed,
-      (SELECT count(*) FROM taken t WHERE t."tenant_id" = r."tenant_id" AND t.grp = r.grp) AS blocked
+      (SELECT count(*) FROM taken t WHERE t."tenant_id" = r."tenant_id" AND t.grp = r.grp) AS blocked,
+      (SELECT count(DISTINCT o.base_name) FROM plan o
+        WHERE o."tenant_id" = r."tenant_id" AND o.grp = r.grp AND o.base_name <> r.base_name) AS rival
     FROM ranked r
     GROUP BY r."tenant_id", r.grp, r.base_name
   ),
   -- "Foo", "Foo (2)", "Foo (3)", … clamped to the 80 characters
-  -- `MAX_FOLDER_NAME_LENGTH` allows. At most `blocked` of them can be taken,
-  -- so `needed + blocked` candidates always yield `needed` free ones.
+  -- `MAX_FOLDER_NAME_LENGTH` allows.
+  --
+  -- Why `needed + blocked + rival` is enough: the candidates of one family are
+  -- pairwise distinct strings, and `free` below rejects a candidate for exactly
+  -- two reasons — it equals one of the `blocked` names the destination group
+  -- already holds, or one of the `rival` base names another family is claiming
+  -- in that same group. Each rejected candidate consumes one of those distinct
+  -- names, so at most `blocked + rival` can be rejected and at least `needed`
+  -- survive. Budgeting only `blocked` (as this did before) left families short
+  -- whenever a rival bit, and the shortfall was SILENT: the join below simply
+  -- matched no slot, the folder stayed under a loser, and the delete two
+  -- statements down cascaded it and its subtree away.
   candidates AS (
     SELECT
       f."tenant_id",
@@ -253,7 +283,7 @@ BEGIN
         ELSE left(f.base_name, 80 - length(' (' || s.i || ')')) || ' (' || s.i || ')'
       END AS candidate
     FROM families f
-    CROSS JOIN LATERAL generate_series(1, f.needed + f.blocked) AS s(i)
+    CROSS JOIN LATERAL generate_series(1, f.needed + f.blocked + f.rival) AS s(i)
   ),
   free AS (
     SELECT
@@ -277,17 +307,43 @@ BEGIN
               AND o.base_name = c.candidate
           )
   )
-  UPDATE "question_folders" f
-  SET "parent_id" = r."new_parent_id",
-      "name" = fr.candidate
+  SELECT r."id", r."new_parent_id", fr.candidate
   FROM ranked r
   JOIN free fr
     ON fr."tenant_id" = r."tenant_id"
    AND fr.grp = r.grp
    AND fr.base_name = r.base_name
-   AND fr.slot = r.rn
-  WHERE f."id" = r."id";
+   AND fr.slot = r.rn;
 
+  -- A folder with no name assigned would simply not be moved by the UPDATE
+  -- below, stay parented to a folder this migration deletes, and be cascaded
+  -- out of existence along with its subtree — data loss with no error anywhere.
+  -- The budget above is meant to make this impossible; if the reasoning is ever
+  -- wrong, the deploy stops here and says which folder.
+  SELECT format(
+           'folder %s (tenant %s, destination parent %s, wanted name %L)',
+           i."id", i."tenant_id", COALESCE(i."new_parent_id"::text, '<root>'), i."base_name"
+         )
+    INTO unplaced
+    FROM "folder_rename_input" i
+   WHERE NOT EXISTS (
+           SELECT 1 FROM "folder_rename_assignment" a WHERE a."id" = i."id"
+         )
+   LIMIT 1;
+
+  IF unplaced IS NOT NULL THEN
+    RAISE EXCEPTION
+      '0023_topic_grades: ran out of free sibling names for % — refusing to leave it behind for the cascading delete.',
+      unplaced;
+  END IF;
+
+  UPDATE "question_folders" f
+  SET "parent_id" = a."new_parent_id",
+      "name" = a."final_name"
+  FROM "folder_rename_assignment" a
+  WHERE f."id" = a."id";
+
+  DELETE FROM "folder_rename_assignment";
   DELETE FROM "folder_rename_input";
 END;
 $fn$;
@@ -305,22 +361,50 @@ WHERE fm.loser_id = q."folder_id" AND fm.keeper_id <> q."folder_id";
 -- grade folders). It obviously cannot become its own parent, and
 -- `question_folders.parent_id` is ON DELETE CASCADE, so leaving it under the
 -- loser would delete the keeper AND its whole subtree three statements from
--- now. It is lifted to the loser's own parent instead, resolved through the
--- merge map in case that parent is itself a losing folder.
-INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name")
+-- now.
+--
+-- Where it goes instead cannot be read off the loser in one step. With a chain
+-- `M -> L -> K` whose three folders all belong to ONE merge group and where K
+-- is the keeper, "L's parent" is M, and M's keeper is K again — a one-step lift
+-- makes K its own parent and the delete then orphans it. So the keeper WALKS UP
+-- `parent_id` until it reaches an ancestor that this migration is not about to
+-- delete (and that is not itself), or runs out and becomes a root. `depth < 100`
+-- is a cycle brake, not a real limit: no tenant nests folders anywhere near that
+-- deep, and without it corrupt data would spin here forever.
+INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name", "position")
+WITH RECURSIVE "doomed" AS (
+  SELECT loser_id AS id FROM "folder_merge_map" WHERE keeper_id <> loser_id
+),
+"lift" AS (
+  SELECT keeper."id" AS keeper_id, loser."parent_id" AS candidate, 0 AS depth
+  FROM "question_folders" keeper
+  JOIN "folder_merge_map" fm
+    ON fm.loser_id = keeper."parent_id" AND fm.keeper_id <> keeper."parent_id"
+  JOIN "question_folders" loser ON loser."id" = keeper."parent_id"
+  WHERE keeper."id" = fm.keeper_id
+  UNION ALL
+  SELECT l.keeper_id, up."parent_id", l.depth + 1
+  FROM "lift" l
+  JOIN "question_folders" up ON up."id" = l.candidate
+  WHERE l.depth < 100
+    AND (l.candidate IN (SELECT id FROM "doomed") OR l.candidate = l.keeper_id)
+),
+"lifted" AS (
+  SELECT DISTINCT ON (keeper_id) keeper_id, candidate
+  FROM "lift"
+  WHERE candidate IS NULL
+     OR (candidate NOT IN (SELECT id FROM "doomed") AND candidate <> keeper_id)
+  ORDER BY keeper_id, depth
+)
 SELECT
   f."id",
   f."tenant_id",
-  CASE
-    WHEN f."id" = fm.keeper_id THEN COALESCE(gm.keeper_id, loser."parent_id")
-    ELSE fm.keeper_id
-  END,
-  f."name"
+  CASE WHEN f."id" = fm.keeper_id THEN "lifted".candidate ELSE fm.keeper_id END,
+  f."name",
+  f."position"
 FROM "question_folders" f
 JOIN "folder_merge_map" fm ON fm.loser_id = f."parent_id" AND fm.keeper_id <> f."parent_id"
-JOIN "question_folders" loser ON loser."id" = f."parent_id"
-LEFT JOIN "folder_merge_map" gm
-  ON gm.loser_id = loser."parent_id" AND gm.keeper_id <> loser."parent_id";
+LEFT JOIN "lifted" ON "lifted".keeper_id = f."id";
 --> statement-breakpoint
 SELECT pg_temp.apply_folder_rename_plan();
 --> statement-breakpoint
@@ -339,8 +423,8 @@ WHERE m.copy_id = f."topic_id" AND m.canonical_id <> f."topic_id";
 -- rather than a list of the 12 labels — a folder named exactly
 -- "<topic name> · <anything>" is one the seeder wrote, and a folder the
 -- teacher renamed by hand never matches, so her name survives.
-INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name")
-SELECT f."id", f."tenant_id", f."parent_id", left(t."name", 80)
+INSERT INTO "folder_rename_input" ("id", "tenant_id", "new_parent_id", "base_name", "position")
+SELECT f."id", f."tenant_id", f."parent_id", left(t."name", 80), f."position"
 FROM "question_folders" f
 JOIN "topics" t ON t."id" = f."topic_id"
 WHERE f."name" <> left(t."name", 80)

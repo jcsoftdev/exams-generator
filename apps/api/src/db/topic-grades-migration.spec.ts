@@ -53,7 +53,8 @@ describe("0023_topic_grades migration", () => {
 
     await migrate(drizzle(pool), { migrationsFolder: tmpMigrationsDir });
     await pool.query(
-      `insert into grade_levels (code, sort_order) values ('secundaria_4', 9), ('secundaria_5', 10)`,
+      `insert into grade_levels (code, sort_order)
+       values ('secundaria_3', 8), ('secundaria_4', 9), ('secundaria_5', 10)`,
     );
     return pool;
   }
@@ -137,6 +138,26 @@ describe("0023_topic_grades migration", () => {
     // is stripped, and that strip collides with a hand-made folder.
     const aritName = `Arit ${suffix}`;
     const arit4 = await insertTopic(course.id, aritName, "secundaria_4");
+    // Group C: THREE copies whose folders form a chain root → child → keeper.
+    const chainName = `Cadena ${suffix}`;
+    const chain3 = await insertTopic(course.id, chainName, "secundaria_3");
+    const chain4 = await insertTopic(course.id, chainName, "secundaria_4");
+    const chain5 = await insertTopic(course.id, chainName, "secundaria_5");
+    // Group E: three copies again, for the "two losers each holding an
+    // 'Ejercicios' while one also holds 'Ejercicios (2)'" case.
+    const ejerName = `Ejer ${suffix}`;
+    const ejer3 = await insertTopic(course.id, ejerName, "secundaria_3");
+    const ejer4 = await insertTopic(course.id, ejerName, "secundaria_4");
+    const ejer5 = await insertTopic(course.id, ejerName, "secundaria_5");
+    // Two SEPARATE courses holding a topic of the same name: nothing collapses,
+    // but both seeded folders strip to the same name in one tenant's root.
+    const course2 = await one<{ id: string }>(
+      `insert into courses (name, stage) values ($1, 'colegio') returning id`,
+      [`Mig Course2 ${suffix}`],
+    );
+    const dupName = `Dup ${suffix}`;
+    const dupA = await insertTopic(course.id, dupName, "secundaria_4");
+    const dupB = await insertTopic(course2.id, dupName, "secundaria_4");
 
     const tenant = await one<{ id: string }>(
       `insert into tenants (name, slug) values ($1, $2) returning id`,
@@ -194,6 +215,38 @@ describe("0023_topic_grades migration", () => {
     // exactly like the topic → the stripped one becomes " (2)".
     const aritFolder = await insertFolder(tenant.id, `${aritName} · 4° secundaria`, null, arit4, 30);
     await insertFolder(tenant.id, aritName, null, null, 31);
+
+    // Group C, the chain: M (root) → L (child of M) → K (child of L), all three
+    // pointing at copies of ONE concept, K the lowest position and therefore
+    // the keeper. Lifting K to "its loser's parent" lands on M, whose own
+    // keeper IS K — so a one-step lift makes K its own parent and then orphans
+    // it. K has to walk up past every folder the merge deletes.
+    const chainM = await insertFolder(tenant.id, `${chainName} · 5° secundaria`, null, chain5, 9);
+    const chainL = await insertFolder(tenant.id, `${chainName} · 4° secundaria`, chainM, chain4, 8);
+    const chainK = await insertFolder(tenant.id, `${chainName} · 3° secundaria`, chainL, chain3, 7);
+    // K's own child and a question filed in a folder that disappears: both must
+    // come out of the merge intact.
+    const chainChild = await insertFolder(tenant.id, `Cadena hija ${suffix}`, chainK, null, 0);
+    const chainQuestion = await insertQuestion(chain5, "secundaria_5");
+    await pool.query(`update questions set folder_id = $1 where id = $2`, [chainL, chainQuestion]);
+
+    // Group E: the keeper has NO children; two losers each bring an
+    // "Ejercicios", and one of them also brings an "Ejercicios (2)". The
+    // second "Ejercicios" therefore cannot take "Ejercicios (2)" — that name
+    // belongs to a folder moving into the same parent — and needs a candidate
+    // beyond the naive budget.
+    const ejerKeeper = await insertFolder(tenant.id, `${ejerName} · 3° secundaria`, null, ejer3, 50);
+    const ejerLoser1 = await insertFolder(tenant.id, `${ejerName} · 4° secundaria`, null, ejer4, 51);
+    const ejerLoser2 = await insertFolder(tenant.id, `${ejerName} · 5° secundaria`, null, ejer5, 52);
+    const ejerChild1 = await insertFolder(tenant.id, "Ejercicios", ejerLoser1, null, 0);
+    const ejerChild2 = await insertFolder(tenant.id, "Ejercicios", ejerLoser2, null, 1);
+    const ejerChild3 = await insertFolder(tenant.id, "Ejercicios (2)", ejerLoser2, null, 2);
+
+    // Two seeded sibling folders for same-named topics in different courses.
+    // The seeder already had to number the second one; both strip to `dupName`,
+    // so the strip has to number it again instead of aborting.
+    const dupFolderA = await insertFolder(tenant.id, `${dupName} · 4° secundaria`, null, dupA, 40);
+    const dupFolderB = await insertFolder(tenant.id, `${dupName} · 4° secundaria (2)`, null, dupB, 41);
 
     // Tenant 2's lone folder points at the LOSING copy — it is its own keeper,
     // so it is only re-pointed and stripped, never merged or deleted.
@@ -275,7 +328,7 @@ describe("0023_topic_grades migration", () => {
       `select id from topics where course_id = $1`,
       [course.id],
     );
-    expect(remaining.map((row) => row.id).sort()).toEqual([arit4, geo4, topic4].sort());
+    expect(remaining.map((row) => row.id).sort()).toEqual([arit4, geo4, topic4, chain3, ejer3, dupA].sort());
 
     // 2. Both grades survive as topic_grades rows on the canonical topic.
     async function gradesOf(topicId: string): Promise<string[]> {
@@ -288,6 +341,8 @@ describe("0023_topic_grades migration", () => {
     expect(await gradesOf(topic4)).toEqual(["secundaria_4", "secundaria_5"]);
     expect(await gradesOf(geo4)).toEqual(["secundaria_4", "secundaria_5"]);
     expect(await gradesOf(arit4)).toEqual(["secundaria_4"]);
+    expect(await gradesOf(chain3)).toEqual(["secundaria_3", "secundaria_4", "secundaria_5"]);
+    expect(await gradesOf(ejer3)).toEqual(["secundaria_3", "secundaria_4", "secundaria_5"]);
 
     // 3. BOTH questions are on the canonical topic, neither lost, and each
     //    kept its OWN grade_level.
@@ -297,10 +352,11 @@ describe("0023_topic_grades migration", () => {
       grade_level: string;
       folder_id: string | null;
     }>(`select id, topic_id, grade_level, folder_id from questions`);
-    expect(questionRows).toHaveLength(2);
-    expect(questionRows.every((row) => row.topic_id === topic4)).toBe(true);
+    expect(questionRows).toHaveLength(3);
     const movedQuestion = questionRows.find((row) => row.id === questionOnLoser)!;
     const stayingQuestion = questionRows.find((row) => row.id === questionOnCanonical)!;
+    expect(movedQuestion.topic_id).toBe(topic4);
+    expect(stayingQuestion.topic_id).toBe(topic4);
     expect(movedQuestion.grade_level).toBe("secundaria_5");
     expect(stayingQuestion.grade_level).toBe("secundaria_4");
     // Both end up in the surviving folder.
@@ -343,6 +399,36 @@ describe("0023_topic_grades migration", () => {
     //     the stripped one is numbered.
     expect(folders.get(aritFolder)!.name).toBe(`${aritName} (2)`);
     expect(folderRows.filter((row) => row.name === aritName)).toHaveLength(1);
+
+    // (chain) The keeper walked up past BOTH folders the merge deletes and
+    // ended at the root — not as its own child, and not cascade-deleted.
+    expect(folders.has(chainM)).toBe(false);
+    expect(folders.has(chainL)).toBe(false);
+    expect(folders.get(chainK)!.parent_id).toBeNull();
+    expect(folders.get(chainK)!.name).toBe(chainName);
+    expect(folders.get(chainK)!.topic_id).toBe(chain3);
+    // Its subtree and the question filed in a deleted folder both landed on it.
+    expect(folders.get(chainChild)!.parent_id).toBe(chainK);
+    expect(questionRows.find((row) => row.id === chainQuestion)!.topic_id).toBe(chain3);
+    expect(questionRows.find((row) => row.id === chainQuestion)!.folder_id).toBe(chainK);
+
+    // (budget) All THREE children of the two losers moved under the keeper.
+    // "Ejercicios (2)" is claimed by a folder moving into the same parent, so
+    // the second "Ejercicios" has to skip past it — the naive candidate budget
+    // ran out here and silently left the row behind to be cascade-deleted.
+    expect(folders.has(ejerLoser1)).toBe(false);
+    expect(folders.has(ejerLoser2)).toBe(false);
+    for (const child of [ejerChild1, ejerChild2, ejerChild3]) {
+      expect(folders.get(child)!.parent_id).toBe(ejerKeeper);
+    }
+    expect(folders.get(ejerChild1)!.name).toBe("Ejercicios");
+    expect(folders.get(ejerChild2)!.name).toBe("Ejercicios (3)");
+    expect(folders.get(ejerChild3)!.name).toBe("Ejercicios (2)");
+
+    // (b) Two seeded siblings stripping to the SAME name: the first by seed
+    // order keeps it, the second is numbered again.
+    expect(folders.get(dupFolderA)!.name).toBe(dupName);
+    expect(folders.get(dupFolderB)!.name).toBe(`${dupName} (2)`);
 
     // (3) The second school's folder survives, re-pointed and stripped.
     const { rows: tenant2Folders } = await pool.query<{
