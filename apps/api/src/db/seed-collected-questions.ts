@@ -195,6 +195,11 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
         // `questions.grade_level` below. If the taxonomy does not list it for
         // this topic yet, add it — a collected question is evidence the topic
         // is assessed at that grade.
+        // Safe to add here, before this entry may still be skipped below
+        // (duplicate hash, private-use glyph): `entry.gradeLevel` was already
+        // validated with `isGradeLevel` above, so the batched insert after
+        // the loop (outside any try/catch) never sees a value that could
+        // violate the `grade_levels` FK.
         discoveredGrades.add(`${topicId}|${entry.gradeLevel}`);
 
         // Scraped prose is NOT Typst markup — escape it before it ever
