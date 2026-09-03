@@ -21,9 +21,13 @@ module.exports = {
       testEnvironment: "node",
       rootDir: "src",
       testRegex: "(?<!\\.e2e)\\.spec\\.ts$",
-      // `seed-idempotency` is excluded here and given its own serial project
-      // below — see the comment there for why it cannot share workers.
-      testPathIgnorePatterns: ["<rootDir>/db/seed-idempotency\\.spec\\.ts$"],
+      // `seed-idempotency` and `topic-grades-migration` are excluded here and
+      // given their own serial project below — see the comment there for why
+      // they cannot share workers.
+      testPathIgnorePatterns: [
+        "<rootDir>/db/seed-idempotency\\.spec\\.ts$",
+        "<rootDir>/db/topic-grades-migration\\.spec\\.ts$",
+      ],
       moduleFileExtensions: ["js", "json", "ts"],
       moduleNameMapper,
     },
@@ -41,12 +45,17 @@ module.exports = {
       // uses, rather than serializing all 758 non-e2e tests to fix one.
       // (jest has no per-project `maxWorkers`; serialization has to come from
       // the invocation.)
+      //
+      // `topic-grades-migration` shares this project for the same reason from
+      // the other direction: it CREATEs and DROPs a whole throwaway database
+      // and replays the migration history into it, which must not race the
+      // parallel `non-e2e` workers on the same Postgres server.
       displayName: "db-serial",
       preset: "ts-jest",
       transform: { "^.+\\.ts$": ["ts-jest", { isolatedModules: true }] },
       testEnvironment: "node",
       rootDir: "src",
-      testRegex: "db/seed-idempotency\\.spec\\.ts$",
+      testRegex: "db/(seed-idempotency|topic-grades-migration)\\.spec\\.ts$",
       moduleFileExtensions: ["js", "json", "ts"],
       moduleNameMapper,
       // Two full seeds of the real syllabus against real Postgres — needs the
