@@ -1,4 +1,5 @@
-import { checkFolderMove, MAX_FOLDER_DEPTH } from "./check-folder-move";
+import { MAX_FOLDER_DEPTH } from "@exams-generator/shared";
+import { checkFolderMove } from "./check-folder-move";
 
 describe("checkFolderMove", () => {
   it("allows a move to an unrelated parent that leaves the subtree within the depth cap", () => {

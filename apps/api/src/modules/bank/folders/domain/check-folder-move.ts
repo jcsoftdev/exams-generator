@@ -1,12 +1,5 @@
 import { MAX_FOLDER_DEPTH } from "@exams-generator/shared";
 
-/**
- * Re-exported (not just imported) so `check-folder-move.spec.ts` keeps
- * pinning the cap from the same module it tests — the single definition
- * lives in `@exams-generator/shared` (`packages/shared/src/dto/bank-folder.dto.ts`).
- */
-export { MAX_FOLDER_DEPTH };
-
 export type FolderMoveResult =
   { readonly ok: true } | { readonly ok: false; readonly code: "folder_cycle" | "folder_depth_exceeded" };
 
