@@ -31,7 +31,7 @@ const TOPICS_C2: Topic[] = [{ id: 't2', name: 'Comprensión lectora', courseId: 
  * `topicId` back to the `courseId` the Curso select needs.
  */
 const ALL_TOPICS: Topic[] = [
-  { id: 't1', name: 'Trigonometría', courseId: 'c1' },
+  { id: 't1', name: 'Trigonometría', courseId: 'c1', gradeLevel: 'secundaria_4' },
   { id: 't2', name: 'Otro', courseId: 'c1' },
 ];
 
@@ -53,6 +53,18 @@ const FOLDERS: BankFolderNode[] = [
     parentId: null,
     topicId: null,
     position: 1,
+    ownCount: 1,
+    centralCount: 0,
+    children: [],
+  },
+  {
+    // Topic `t2` carries NO `gradeLevel` — the shape `GET /topics` returns
+    // today, and the case where the folder cannot imply Grado on its own.
+    id: 'sin-grado',
+    name: 'Sin grado',
+    parentId: null,
+    topicId: 't2',
+    position: 2,
     ownCount: 1,
     centralCount: 0,
     children: [],
@@ -88,7 +100,9 @@ function setup(
   const getAllTopics = vi.fn(over.getAllTopics ?? (() => of(ALL_TOPICS)));
   const getFolders = vi.fn(
     over.getFolders ??
-      (() => of({ folders: FOLDERS, unfiledCount: 0, folderCount: FOLDERS.length })),
+      // `unfiledCount > 0` is what makes the tree render its virtual
+      // "Sin carpeta" node — the one the "unfile it" test needs to click.
+      (() => of({ folders: FOLDERS, unfiledCount: 3, folderCount: FOLDERS.length })),
   );
   const extracted: AiRevisedQuestion = {
     bodyTypst: 'Enunciado desde imagen',
@@ -232,10 +246,13 @@ interface BankNewInternals {
   setTab(tab: 'photo' | 'structured'): void;
   submitPhoto(): void;
   submitStructured(): void;
-  pFolderId: WritableSignalLike<string | null>;
-  sFolderId: WritableSignalLike<string | null>;
+  extractWithAi(): void;
+  /** ONE folder for the whole page — both tabs read and write this same signal. */
+  folderId: WritableSignalLike<string | null>;
+  pGradeLevel: WritableSignalLike<string | null>;
   pCourseId: WritableSignalLike<string>;
   pTopicId: WritableSignalLike<string>;
+  sGradeLevel: WritableSignalLike<string | null>;
   sCourseId: WritableSignalLike<string>;
   sTopicId: WritableSignalLike<string>;
 }
@@ -3203,9 +3220,9 @@ describe('BankNewComponent', () => {
       component.pTopicId.set('t2');
       fixture.detectChanges();
 
-      expect(component.pFolderId()).toBe('trigo');
+      expect(component.folderId()).toBe('trigo');
       expect(
-        compiled.querySelector('[data-testid="folder-topic-mismatch"]')!.textContent,
+        compiled.querySelector('[data-testid="folder-topic-mismatch-photo"]')!.textContent,
       ).toContain('El Tema no coincide con la carpeta');
     });
 
@@ -3215,7 +3232,7 @@ describe('BankNewComponent', () => {
 
       expect(component.pCourseId()).toBe('');
       expect(component.pTopicId()).toBe('');
-      expect(compiled.querySelector('[data-testid="folder-topic-mismatch"]')).toBeNull();
+      expect(compiled.querySelector('[data-testid="folder-topic-mismatch-photo"]')).toBeNull();
     });
 
     it('sends folderId when uploading a photo question', async () => {
@@ -3256,7 +3273,7 @@ describe('BankNewComponent', () => {
       second.detectChanges();
       await settleEffects(second);
 
-      expect(internals(second).pFolderId()).toBe('trigo');
+      expect(internals(second).folderId()).toBe('trigo');
     });
 
     it('ignores a remembered folder that no longer exists', async () => {
@@ -3266,7 +3283,143 @@ describe('BankNewComponent', () => {
       second.detectChanges();
       await settleEffects(second);
 
-      expect(internals(second).pFolderId()).toBeNull();
+      expect(internals(second).folderId()).toBeNull();
+    });
+
+    // Fix round 1, Important #1: the folder's Curso/Tema prefill used to be
+    // wiped the moment Grado was chosen AFTER the folder — which is ALWAYS
+    // the case on the restore path, where there is no grade yet.
+    it("prefills Grado, Curso and Tema on a fresh visit from the remembered folder's topic", async () => {
+      sessionStorage.setItem('bank-new:last-folder-id', 'trigo');
+
+      const second = TestBed.createComponent(BankNewComponent);
+      second.detectChanges();
+      await settleEffects(second);
+
+      const restored = internals(second);
+      expect(restored.pGradeLevel()).toBe('secundaria_4');
+      expect(restored.pCourseId()).toBe('c1');
+      expect(restored.pTopicId()).toBe('t1');
+    });
+
+    it('keeps the folder Curso/Tema when the teacher picks Grado by hand afterwards', async () => {
+      // `sin-grado`'s topic carries no `gradeLevel`, so the folder leaves Grado
+      // to the teacher — and picking it must NOT wipe the Curso/Tema the
+      // folder just set. That is the regression fix round 1 is about.
+      pickFolder('photo', 'sin-grado');
+      await settleEffects(fixture);
+      expect(component.pCourseId()).toBe('c1');
+      expect(component.pTopicId()).toBe('t2');
+
+      set(fixture, 'pGradeLevel', 'pre');
+      await settleEffects(fixture);
+
+      expect(component.pCourseId()).toBe('c1');
+      expect(component.pTopicId()).toBe('t2');
+    });
+
+    it('still resets Curso when the teacher moves to a grade the folder did not imply', async () => {
+      // The mirror image, pinned on purpose: `trigo`'s topic IS assessed at
+      // `secundaria_4`, so switching to `pre` is a deliberate move away from
+      // the folder's grade, and the course catalog for `pre` is a different
+      // list. Keeping the folder's course there would show a value that is not
+      // in the dropdown.
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+      expect(component.pGradeLevel()).toBe('secundaria_4');
+
+      set(fixture, 'pGradeLevel', 'pre');
+      await settleEffects(fixture);
+
+      expect(component.pCourseId()).toBe('');
+    });
+
+    // Fix round 1, Important #2: one value for the whole page, not one per tab.
+    it('carries the folder across a manual tab switch and saves it from the structured tab', async () => {
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+
+      component.setTab('structured');
+      fixture.detectChanges();
+
+      expect(
+        (
+          compiled.querySelector(
+            '[data-testid="folder-field-structured"] button',
+          ) as HTMLButtonElement
+        ).textContent?.trim(),
+      ).toBe('Trigonometría');
+
+      fillStructuredForm();
+      component.submitStructured();
+      fixture.detectChanges();
+
+      expect(lastSubmitStructuredParams()).toMatchObject({ folderId: 'trigo' });
+    });
+
+    it('forgets the remembered folder and saves folderId null when "Sin carpeta" is picked', async () => {
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+      expect(sessionStorage.getItem('bank-new:last-folder-id')).toBe('trigo');
+
+      pickFolder('photo', 'unfiled');
+      await settleEffects(fixture);
+      fillPhotoForm();
+      component.submitPhoto();
+      fixture.detectChanges();
+
+      expect(component.folderId()).toBeNull();
+      expect(sessionStorage.getItem('bank-new:last-folder-id')).toBeNull();
+      expect(lastUploadPayload()).toMatchObject({ folderId: null });
+    });
+
+    it('does not let the AI suggestion override Curso/Tema the folder fixed', async () => {
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+      pickImage(fixture, compiled);
+
+      component.extractWithAi();
+      await settleEffects(fixture);
+
+      expect(component.sCourseId()).toBe('c1');
+      expect(component.sTopicId()).toBe('t1');
+    });
+
+    it('lets the AI suggestion fill Curso/Tema when the folder has no topic of its own', async () => {
+      // Its own module: the shared `beforeEach` already instantiated one, and
+      // this case needs a different `extractQuestionFromImage` fake.
+      TestBed.resetTestingModule();
+      const local = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'x',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            suggestedCourseName: 'Matemática',
+            suggestedTopicName: 'Álgebra',
+          }),
+      });
+      const localComponent = internals(local.fixture);
+      (
+        local.compiled.querySelector(
+          '[data-testid="folder-field-photo"] button',
+        ) as HTMLButtonElement
+      ).click();
+      local.fixture.detectChanges();
+      (
+        local.compiled.querySelector(
+          '[data-testid="folder-field-photo"] [data-folder-id="colegio"]',
+        ) as HTMLElement
+      ).click();
+      local.fixture.detectChanges();
+      set(local.fixture, 'pGradeLevel', 'pre');
+      pickImage(local.fixture, local.compiled);
+
+      localComponent.extractWithAi();
+      await settleEffects(local.fixture);
+
+      expect(localComponent.sCourseId()).toBe('c1');
+      expect(localComponent.sTopicId()).toBe('t1');
     });
   });
 });

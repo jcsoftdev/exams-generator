@@ -76,40 +76,14 @@
         </p>
       }
 
-      <div data-testid="folder-field-photo" class="flex flex-col gap-1">
-        <span class="text-sm font-medium text-n700">Carpeta</span>
-        <button
-          type="button"
-          class="self-start rounded-field border border-n200 px-3 py-1.5 text-sm text-n800 transition-colors hover:bg-n50 focus:outline-none focus:ring-2 focus:ring-primary-300"
-          aria-haspopup="dialog"
-          aria-controls="bank-new-folder-picker-photo"
-          [attr.aria-expanded]="folderPickerFor() === 'photo' ? 'true' : 'false'"
-          (click)="openFolderPicker('photo')"
-        >
-          {{ folderName('photo') }}
-        </button>
-        @if (folderPickerFor() === 'photo') {
-          <div
-            id="bank-new-folder-picker-photo"
-            role="dialog"
-            aria-label="Elegir carpeta"
-            class="rounded-card border border-n200 bg-surface p-2 shadow-lg"
-            (keydown.escape)="closeFolderPickerFromEscape('photo')"
-          >
-            <ui-folder-tree
-              [nodes]="folderTree()"
-              [selectedId]="pFolderId()"
-              mode="pick"
-              (select)="onFolderPicked('photo', $event)"
-            ></ui-folder-tree>
-          </div>
-        }
-        @if (folderTopicMismatch('photo')) {
-          <p data-testid="folder-topic-mismatch" class="text-xs text-medium-text">
-            El Tema no coincide con la carpeta
-          </p>
-        }
-      </div>
+      <app-bank-new-folder-field
+        idPrefix="photo"
+        [value]="folderId()"
+        [nodes]="folderTree()"
+        [loading]="foldersLoading()"
+        [mismatch]="folderTopicMismatch('photo')"
+        (valueChange)="onFolderPicked($event)"
+      ></app-bank-new-folder-field>
 
       <div data-testid="photo-course-select">
         <ui-select
@@ -119,7 +93,7 @@
           [options]="pCourseOptions()"
           [value]="pCourseId()"
           [disabled]="!pGradeLevel()"
-          (valueChange)="pCourseId.set($event ?? '')"
+          (valueChange)="setCourseId('photo', $event ?? '')"
         ></ui-select>
       </div>
       <div data-testid="photo-topic-select">
@@ -130,7 +104,7 @@
           [options]="pTopicOptions()"
           [value]="pTopicId()"
           [disabled]="!pCourseId()"
-          (valueChange)="pTopicId.set($event ?? '')"
+          (valueChange)="setTopicId('photo', $event ?? '')"
         ></ui-select>
       </div>
       <div data-testid="photo-difficulty-select">
@@ -193,40 +167,14 @@
           placeholder="Elige un grado"
         ></ui-select>
       </div>
-      <div data-testid="folder-field-structured" class="flex flex-col gap-1">
-        <span class="text-sm font-medium text-n700">Carpeta</span>
-        <button
-          type="button"
-          class="self-start rounded-field border border-n200 px-3 py-1.5 text-sm text-n800 transition-colors hover:bg-n50 focus:outline-none focus:ring-2 focus:ring-primary-300"
-          aria-haspopup="dialog"
-          aria-controls="bank-new-folder-picker-structured"
-          [attr.aria-expanded]="folderPickerFor() === 'structured' ? 'true' : 'false'"
-          (click)="openFolderPicker('structured')"
-        >
-          {{ folderName('structured') }}
-        </button>
-        @if (folderPickerFor() === 'structured') {
-          <div
-            id="bank-new-folder-picker-structured"
-            role="dialog"
-            aria-label="Elegir carpeta"
-            class="rounded-card border border-n200 bg-surface p-2 shadow-lg"
-            (keydown.escape)="closeFolderPickerFromEscape('structured')"
-          >
-            <ui-folder-tree
-              [nodes]="folderTree()"
-              [selectedId]="sFolderId()"
-              mode="pick"
-              (select)="onFolderPicked('structured', $event)"
-            ></ui-folder-tree>
-          </div>
-        }
-        @if (folderTopicMismatch('structured')) {
-          <p data-testid="folder-topic-mismatch" class="text-xs text-medium-text">
-            El Tema no coincide con la carpeta
-          </p>
-        }
-      </div>
+      <app-bank-new-folder-field
+        idPrefix="structured"
+        [value]="folderId()"
+        [nodes]="folderTree()"
+        [loading]="foldersLoading()"
+        [mismatch]="folderTopicMismatch('structured')"
+        (valueChange)="onFolderPicked($event)"
+      ></app-bank-new-folder-field>
 
       <div data-testid="structured-course-select">
         <ui-select
@@ -236,7 +184,7 @@
           [options]="sCourseOptions()"
           [value]="sCourseId()"
           [disabled]="!sGradeLevel()"
-          (valueChange)="sCourseId.set($event ?? '')"
+          (valueChange)="setCourseId('structured', $event ?? '')"
         ></ui-select>
       </div>
       <div data-testid="structured-topic-select">
@@ -247,7 +195,7 @@
           [options]="sTopicOptions()"
           [value]="sTopicId()"
           [disabled]="!sCourseId()"
-          (valueChange)="sTopicId.set($event ?? '')"
+          (valueChange)="setTopicId('structured', $event ?? '')"
         ></ui-select>
       </div>
       @if (showAiTaxonomyHint()) {
