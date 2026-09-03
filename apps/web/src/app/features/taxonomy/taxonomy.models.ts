@@ -16,14 +16,11 @@ export interface Topic {
   readonly name: string;
   readonly courseId: string;
   /**
-   * The grade this topic is assessed at. OPTIONAL because `GET /topics` does
-   * NOT project `topics.grade_level` today — the column exists and is already
-   * filtered on (`findTopics`'s `?gradeLevel=`), it is simply not selected
-   * into `TopicListItem`. `bank-new`'s folder field reads it to preselect
-   * Grado from the folder's topic and degrades to "leave Grado alone" while
-   * it is absent, so exposing it API-side is a purely additive change (two
-   * `select({...})` calls, the interface, and the one `toEqual` in
-   * `taxonomy.e2e.spec.ts`) with no client migration.
+   * The grade this topic is assessed at, or `null` when it applies to the
+   * whole stage. `GET /topics` now projects `topics.grade_level` (round 2 of
+   * this task) on both `findTopics` and `findTopicsByCourseIds`, so every
+   * producer of a `Topic` supplies it — `bank-new`'s folder field reads it to
+   * preselect Grado from a folder's linked topic.
    */
-  readonly gradeLevel?: string | null;
+  readonly gradeLevel: string | null;
 }

@@ -57,7 +57,9 @@ describe('TaxonomyService', () => {
     });
 
     it('resolves with the list of topics returned by the API', () => {
-      const topics: Topic[] = [{ id: 'topic-1', name: 'Fracciones', courseId: 'course-1' }];
+      const topics: Topic[] = [
+        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1', gradeLevel: null },
+      ];
       let result: Topic[] | undefined;
 
       service.getTopics('course-1').subscribe((response) => (result = response));
@@ -104,8 +106,8 @@ describe('TaxonomyService', () => {
 
     it('resolves with the combined list of topics returned by the API', () => {
       const topics: Topic[] = [
-        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1' },
-        { id: 'topic-2', name: 'Álgebra', courseId: 'course-2' },
+        { id: 'topic-1', name: 'Fracciones', courseId: 'course-1', gradeLevel: null },
+        { id: 'topic-2', name: 'Álgebra', courseId: 'course-2', gradeLevel: null },
       ];
       let result: Topic[] | undefined;
 

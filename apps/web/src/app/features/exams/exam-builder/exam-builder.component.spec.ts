@@ -31,7 +31,7 @@ import {
 import { ExamVersionJob } from '../../exam-versions/exam-versions.models';
 
 const COURSES: Course[] = [{ id: 'c1', name: 'Matemática', stage: 'preuniversitario' }];
-const TOPICS: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
+const TOPICS: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }];
 
 const FULL_STOCK: StockBatchResult = {
   results: [
@@ -928,8 +928,8 @@ describe('ExamBuilderComponent', () => {
         { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
-        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
-        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2', gradeLevel: null }],
       };
       const { compiled, fixture, getTopicsForCourses } = setup({
         getCourses: () => of(courses),
@@ -949,8 +949,8 @@ describe('ExamBuilderComponent', () => {
         { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
-        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
-        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2', gradeLevel: null }],
       };
       const stock: StockBatchResult = {
         results: [
@@ -984,8 +984,8 @@ describe('ExamBuilderComponent', () => {
         { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
-        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
-        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2', gradeLevel: null }],
       };
       const stock: StockBatchResult = {
         results: [
@@ -1063,8 +1063,8 @@ describe('ExamBuilderComponent', () => {
         { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
-        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
-        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2', gradeLevel: null }],
       };
       const stock: StockBatchResult = {
         results: [

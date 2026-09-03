@@ -109,10 +109,10 @@ const COURSES: Course[] = [
   { id: 'c2', name: 'Álgebra', stage: 'preuniversitario' },
 ];
 const TOPICS_C1: Topic[] = [
-  { id: 't1', name: 'Fracciones', courseId: 'c1' },
-  { id: 't2', name: 'Porcentajes', courseId: 'c1' },
+  { id: 't1', name: 'Fracciones', courseId: 'c1', gradeLevel: null },
+  { id: 't2', name: 'Porcentajes', courseId: 'c1', gradeLevel: null },
 ];
-const TOPICS_C2: Topic[] = [{ id: 't3', name: 'Ecuaciones', courseId: 'c2' }];
+const TOPICS_C2: Topic[] = [{ id: 't3', name: 'Ecuaciones', courseId: 'c2', gradeLevel: null }];
 
 const QUESTIONS: BankQuestion[] = [
   makeQuestion({ id: 'q1', courseId: 'c1', topicId: 't1', imageAssetId: 'asset-1' }),

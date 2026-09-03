@@ -72,7 +72,12 @@ describe('findCourseMatch', () => {
 
 describe('findTopicMatch', () => {
   const topics: Topic[] = [
-    { id: 't1', name: 'sintaxis - complementos oracionales (complemento agente)', courseId: 'c1' },
+    {
+      id: 't1',
+      name: 'sintaxis - complementos oracionales (complemento agente)',
+      courseId: 'c1',
+      gradeLevel: null,
+    },
   ];
 
   it('matches by exact normalized name', () => {

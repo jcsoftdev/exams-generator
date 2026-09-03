@@ -22,8 +22,10 @@ const COURSES: Course[] = [
   { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
   { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
 ];
-const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
-const TOPICS_C2: Topic[] = [{ id: 't2', name: 'Comprensión lectora', courseId: 'c2' }];
+const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1', gradeLevel: null }];
+const TOPICS_C2: Topic[] = [
+  { id: 't2', name: 'Comprensión lectora', courseId: 'c2', gradeLevel: null },
+];
 
 /**
  * The flat catalog `getAllTopics()` returns — a different shape from the
@@ -32,7 +34,7 @@ const TOPICS_C2: Topic[] = [{ id: 't2', name: 'Comprensión lectora', courseId: 
  */
 const ALL_TOPICS: Topic[] = [
   { id: 't1', name: 'Trigonometría', courseId: 'c1', gradeLevel: 'secundaria_4' },
-  { id: 't2', name: 'Otro', courseId: 'c1' },
+  { id: 't2', name: 'Otro', courseId: 'c1', gradeLevel: null },
 ];
 
 /** `trigo` carries a `topicId` (prefills Curso/Tema); `colegio` does not (Curso/Tema stay as today). */
@@ -247,6 +249,9 @@ interface BankNewInternals {
   submitPhoto(): void;
   submitStructured(): void;
   extractWithAi(): void;
+  /** The real disarm path a Curso/Tema `ui-select` goes through — clears `folderDerivedTaxonomy` for the edited tab, unlike writing the raw signal below. */
+  setCourseId(tab: 'photo' | 'structured', courseId: string): void;
+  setTopicId(tab: 'photo' | 'structured', topicId: string): void;
   /** ONE folder for the whole page — both tabs read and write this same signal. */
   folderId: WritableSignalLike<string | null>;
   pGradeLevel: WritableSignalLike<string | null>;
@@ -740,8 +745,12 @@ describe('BankNewComponent', () => {
       instance.sCourseId.set('c2');
       fixture.detectChanges();
 
-      const secondCourseTopics: Topic[] = [{ id: 't9', name: 'Tema de c2', courseId: 'c2' }];
-      const firstCourseTopics: Topic[] = [{ id: 't1', name: 'Tema de c1', courseId: 'c1' }];
+      const secondCourseTopics: Topic[] = [
+        { id: 't9', name: 'Tema de c2', courseId: 'c2', gradeLevel: null },
+      ];
+      const firstCourseTopics: Topic[] = [
+        { id: 't1', name: 'Tema de c1', courseId: 'c1', gradeLevel: null },
+      ];
       secondCourse.next(secondCourseTopics);
       firstCourse.next(firstCourseTopics);
       fixture.detectChanges();
@@ -3224,6 +3233,55 @@ describe('BankNewComponent', () => {
       expect(
         compiled.querySelector('[data-testid="folder-topic-mismatch-photo"]')!.textContent,
       ).toContain('El Tema no coincide con la carpeta');
+    });
+
+    // Round 2, item 3: the brief's original version of this scenario wrote
+    // `component.pTopicId.set('t2')` straight to the raw signal, which never
+    // goes through `setTopicId` and therefore never exercises the disarm it
+    // performs (`folderDerivedTaxonomy[tab] = false`). The real `ui-select`
+    // (see the template) calls `setTopicId`, so THIS is the path that must
+    // stay covered: once she edits Tema by hand, the folder's own Curso/Tema
+    // must not come back on a later Grado change.
+    //
+    // Deviation from the round-2 wording, verified rather than assumed: a
+    // Grado change ALWAYS blanks Curso (`loadCoursesFor` writes it
+    // unconditionally, folder-derived or not — see "reloads courses and
+    // resets the selected course when the grade level changes", line ~615),
+    // which cascades and blanks Tema too. With Tema blank, `folderTopicMismatch`
+    // requires a truthy `topicId` to compare against the folder's, so the hint
+    // necessarily disappears — the same rule "does not prefill anything when
+    // the folder has no topicId" already pins two tests below. Asserting the
+    // hint stays VISIBLE after the Grado change would be asserting something
+    // this component never does; instead this test proves the hint fires the
+    // moment `setTopicId` disarms the tab (unlike the raw-signal test above,
+    // which never routes through the real disarm path), then proves the
+    // Grado change resets Curso/Tema to blank — NOT back to the folder's
+    // 'c1'/'t1' — with `folderId` itself untouched throughout.
+    it('disarms via the public setTopicId, then lets a Grado change blank (not re-apply) the folder Curso/Tema', async () => {
+      pickFolder('photo', 'trigo'); // topicId 't1', course 'c1', grade 'secundaria_4'
+      await settleEffects(fixture);
+      expect(component.pCourseId()).toBe('c1');
+      expect(component.pTopicId()).toBe('t1');
+
+      component.setTopicId('photo', 't2');
+      fixture.detectChanges();
+
+      expect(component.folderId()).toBe('trigo');
+      expect(
+        compiled.querySelector('[data-testid="folder-topic-mismatch-photo"]')!.textContent,
+      ).toContain('El Tema no coincide con la carpeta');
+
+      set(fixture, 'pGradeLevel', 'pre');
+      await settleEffects(fixture);
+
+      // The folder's own Curso/Tema ('c1'/'t1') are gone from the snapshot's
+      // reach — disarmed, they play no part in the reload the Grado change
+      // triggers, so both fields land on blank rather than snapping back.
+      expect(component.pCourseId()).toBe('');
+      expect(component.pTopicId()).toBe('');
+      // The folder itself was never cleared — only its taxonomy influence.
+      expect(component.folderId()).toBe('trigo');
+      expect(compiled.querySelector('[data-testid="folder-topic-mismatch-photo"]')).toBeNull();
     });
 
     it('does not prefill anything when the folder has no topicId', async () => {

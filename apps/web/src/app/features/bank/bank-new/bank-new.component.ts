@@ -438,10 +438,17 @@ export class BankNewComponent {
 
     const topicId = folderId ? this.foldersStore.folderTopicId(folderId) : null;
     if (!topicId) {
+      // No topic to prefill from (folder cleared, "Sin carpeta", or a folder
+      // with no topic of its own): the PREVIOUS folder's prefill no longer
+      // applies, so the flag saying "these fields are folder-derived" must
+      // clear too — otherwise a stale `true` would keep `taxonomyTouchedByHand`
+      // blind to Curso/Tema the teacher may now be typing by hand.
+      this.folderDerivedTaxonomy = { photo: false, structured: false };
       return;
     }
     const topic = this.allTopics().find((candidate) => candidate.id === topicId);
     if (!topic) {
+      this.folderDerivedTaxonomy = { photo: false, structured: false };
       return;
     }
 
