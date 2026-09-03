@@ -106,6 +106,44 @@ describe('FolderTreeComponent', () => {
     expect(rowFor('mate')).not.toBeNull();
   });
 
+  /**
+   * The owner rebuilds this view model from scratch on EVERY write —
+   * `toFolderTreeNodes` maps fresh objects out of the wire tree — so the array
+   * that arrives after a create, a rename, a delete or a rollback reload has
+   * the same ids and none of the same object identities. Keying expansion on
+   * identity meant the whole tree snapped shut every time, which is worst
+   * exactly where it hurts: renaming a folder six levels down.
+   */
+  it('keeps a node expanded when the tree is re-emitted as new objects with the same ids', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-toggle"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+    expect(rowFor('mate')).not.toBeNull();
+
+    host.nodes.set(structuredClone(TREE));
+    fixture.detectChanges();
+
+    expect(rowFor('mate')).not.toBeNull();
+    expect(rowFor('colegio').closest('[role="treeitem"]')!.getAttribute('aria-expanded')).toBe(
+      'true',
+    );
+  });
+
+  it('still collapses a node whose id is gone from the re-emitted tree', () => {
+    element
+      .querySelector<HTMLButtonElement>('[data-testid="folder-toggle"][data-folder-id="colegio"]')!
+      .click();
+    fixture.detectChanges();
+
+    // The child was deleted server-side: nothing to keep open under it.
+    host.nodes.set([{ ...structuredClone(TREE[0]), children: [] }, structuredClone(TREE[1])]);
+    fixture.detectChanges();
+
+    expect(rowFor('mate')).toBeNull();
+    expect(rowFor('colegio')).not.toBeNull();
+  });
+
   it('labels the toggle for assistive tech', () => {
     const toggle = element.querySelector<HTMLButtonElement>(
       '[data-testid="folder-toggle"][data-folder-id="colegio"]',

@@ -8,6 +8,7 @@ import {
   input,
   output,
   signal,
+  TrackByFunction,
 } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { InputComponent } from '../input/input.component';
@@ -47,6 +48,8 @@ import {
       #tree
       [dataSource]="mutableNodes()"
       [childrenAccessor]="childrenAccessor"
+      [expansionKey]="expansionKey"
+      [trackBy]="trackNodeById"
       class="block"
     >
       <cdk-tree-node
@@ -233,6 +236,24 @@ export class FolderTreeComponent {
    */
   protected readonly childrenAccessor = (node: FolderTreeNode): FolderTreeNode[] =>
     node.children as FolderTreeNode[];
+
+  /**
+   * Expansion is keyed by folder ID, never by object identity.
+   *
+   * The owner rebuilds this whole view model on every write —
+   * `toFolderTreeNodes` maps fresh objects out of the wire tree — so the array
+   * arriving after a create, a rename, a delete, or a failed write's rollback
+   * reload has the same ids and not one of the same object references. With the
+   * CDK's default (identity) key that read as "every node is new", and the tree
+   * snapped shut on each one: renaming a folder six levels down closed the six
+   * levels the teacher had just opened to reach it. Keying on `id` is also
+   * exactly right for the case that SHOULD collapse — a node whose id is gone
+   * from the new tree has no expansion left to restore.
+   */
+  protected readonly expansionKey = (node: FolderTreeNode): string => node.id;
+
+  /** Same reasoning one layer down: let the CDK REUSE a row whose id it already rendered instead of tearing it out. */
+  protected readonly trackNodeById: TrackByFunction<FolderTreeNode> = (_index, node) => node.id;
 
   private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
 

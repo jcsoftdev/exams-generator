@@ -559,14 +559,19 @@ describe('BankListComponent', () => {
       const { compiled, fixture, failNextFolderWrite } = setup();
       failNextFolderWrite({ status: 409, code: 'folder_name_taken' });
 
-      folderRow(compiled, 'colegio').dispatchEvent(
+      // A NESTED node on purpose: the rejection makes the store roll back AND
+      // reload, which re-emits the whole tree as brand-new objects. A root row
+      // survives that no matter what the tree does with expansion, and would
+      // prove nothing about the folder six levels down this feature is for.
+      expandTo(compiled, fixture, 'trigo');
+      folderRow(compiled, 'trigo').dispatchEvent(
         new KeyboardEvent('keydown', { key: 'F2', bubbles: true }),
       );
       fixture.detectChanges();
       const input = compiled.querySelector(
         '[data-testid="folder-name-input"] input',
       ) as HTMLInputElement;
-      input.value = 'Sin carpeta';
+      input.value = 'Colegio';
       input.dispatchEvent(new Event('input'));
       input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
       fixture.detectChanges();
