@@ -8,10 +8,10 @@ const COURSES: SeedCourseRow[] = [
 ];
 
 const TOPICS: SeedTopicRow[] = [
-  { id: "t-1", courseId: "c-mat-col", name: "Trigonometría", gradeLevel: "secundaria_4" },
-  { id: "t-2", courseId: "c-mat-col", name: "Trigonometría", gradeLevel: "secundaria_5" },
-  { id: "t-3", courseId: "c-com-col", name: "Comprensión lectora", gradeLevel: null },
-  { id: "t-4", courseId: "c-tri-pre", name: "Longitud de arco", gradeLevel: "pre" },
+  { id: "t-1", courseId: "c-mat-col", name: "Trigonometría" },
+  { id: "t-2", courseId: "c-mat-col", name: "Fracciones" },
+  { id: "t-3", courseId: "c-com-col", name: "Comprensión lectora" },
+  { id: "t-4", courseId: "c-tri-pre", name: "Longitud de arco" },
 ];
 
 describe("buildSeedFolderPlan", () => {
@@ -38,20 +38,20 @@ describe("buildSeedFolderPlan", () => {
     expect(courses.every((c) => c.topicId === null)).toBe(true);
   });
 
-  it("puts one folder per topic under its course, carrying topicId and the grade suffix", () => {
-    const plan = buildSeedFolderPlan(COURSES, TOPICS);
-    const matKey = plan.find((node) => node.name === "Matemática")!.key;
-    const topics = plan.filter((node) => node.parentKey === matKey);
+  it("puts one folder per topic under its course, named exactly like the topic", () => {
+    const plan = buildSeedFolderPlan(
+      [{ id: "c1", name: "Matemática", stage: "colegio" }],
+      [
+        { id: "t1", courseId: "c1", name: "Trigonometría" },
+        { id: "t2", courseId: "c1", name: "Fracciones" },
+      ],
+    );
 
-    expect(topics).toEqual([
-      expect.objectContaining({ name: "Trigonometría · 4° secundaria", topicId: "t-1", position: 0 }),
-      expect.objectContaining({ name: "Trigonometría · 5° secundaria", topicId: "t-2", position: 1 }),
+    const topicNodes = plan.filter((node) => node.topicId !== null);
+    expect(topicNodes.map((node) => [node.name, node.topicId, node.position])).toEqual([
+      ["Trigonometría", "t1", 0],
+      ["Fracciones", "t2", 1],
     ]);
-  });
-
-  it("leaves a topic whose name is unique in its course bare", () => {
-    const plan = buildSeedFolderPlan(COURSES, TOPICS);
-    expect(plan.find((node) => node.topicId === "t-3")!.name).toBe("Comprensión lectora");
   });
 
   it("gives every node a unique key, so the repository can wire parents before ids exist", () => {
@@ -72,25 +72,6 @@ describe("buildSeedFolderPlan", () => {
 
   it("returns an empty plan when there are no courses", () => {
     expect(buildSeedFolderPlan([], [])).toEqual([]);
-  });
-
-  it("disambiguates two NULL-grade topics that share a name in the same course", () => {
-    // `topics_course_id_name_grade_idx` treats every NULL grade as distinct,
-    // so the taxonomy allows this row pair even though `folderNameForTopic`
-    // has no grade to suffix either one with.
-    const courses: SeedCourseRow[] = [{ id: "c-1", name: "Curso Duplicado", stage: "colegio" }];
-    const topics: SeedTopicRow[] = [
-      { id: "t-1", courseId: "c-1", name: "Repaso", gradeLevel: null },
-      { id: "t-2", courseId: "c-1", name: "Repaso", gradeLevel: null },
-    ];
-
-    const plan = buildSeedFolderPlan(courses, topics);
-    const topicNodes = plan.filter((node) => node.topicId !== null);
-
-    expect(topicNodes.map((node) => node.name)).toEqual(["Repaso", "Repaso (2)"]);
-    // Still two distinct rows, each carrying its own topicId — disambiguation
-    // is cosmetic (the name), not a merge.
-    expect(topicNodes.map((node) => node.topicId)).toEqual(["t-1", "t-2"]);
   });
 
   it("truncates a course name longer than MAX_FOLDER_NAME_LENGTH", () => {

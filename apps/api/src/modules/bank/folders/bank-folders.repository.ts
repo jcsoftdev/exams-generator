@@ -201,7 +201,6 @@ export class BankFoldersRepository {
           id: topics.id,
           courseId: topics.courseId,
           name: topics.name,
-          gradeLevel: topics.gradeLevel,
         })
         .from(topics),
     ]);

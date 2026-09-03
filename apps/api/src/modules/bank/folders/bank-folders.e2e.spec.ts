@@ -7,7 +7,16 @@ import request from "supertest";
 import { AppModule } from "../../../app.module";
 import { db, pool } from "../../../db/client";
 import { runMigrations } from "../../../db/migrate";
-import { assets, courses, questionFolders, questions, tenants, topics, users } from "../../../db/schema";
+import {
+  assets,
+  courses,
+  questionFolders,
+  questions,
+  tenants,
+  topicGrades,
+  topics,
+  users,
+} from "../../../db/schema";
 import { fakePng } from "../../../test-support/image-fixtures";
 import { TokenService } from "../../auth/token.service";
 
@@ -23,8 +32,7 @@ describe("Bank folders (e2e)", () => {
 
   let courseColegioId: string;
   let coursePreId: string;
-  let sharedNameTopic4Id: string;
-  let sharedNameTopic5Id: string;
+  let sharedNameTopicId: string;
   let preTopicId: string;
 
   let tenantAId: string;
@@ -66,19 +74,17 @@ describe("Bank folders (e2e)", () => {
       .returning({ id: courses.id });
     coursePreId = preCourse!.id;
 
-    // Two topics of the SAME course sharing a name, differing only in grade —
-    // the exact case the grade suffix exists for.
-    const [t4] = await db
+    // ONE topic taught at two grades — the shape that replaced two rows that
+    // differed only in grade. The seeded folder must be ONE folder, bare.
+    const [trigo] = await db
       .insert(topics)
-      .values({ courseId: courseColegioId, name: `Trigo ${suffix}`, gradeLevel: "secundaria_4" })
+      .values({ courseId: courseColegioId, name: `Trigo ${suffix}` })
       .returning({ id: topics.id });
-    sharedNameTopic4Id = t4!.id;
-
-    const [t5] = await db
-      .insert(topics)
-      .values({ courseId: courseColegioId, name: `Trigo ${suffix}`, gradeLevel: "secundaria_5" })
-      .returning({ id: topics.id });
-    sharedNameTopic5Id = t5!.id;
+    sharedNameTopicId = trigo!.id;
+    await db.insert(topicGrades).values([
+      { topicId: sharedNameTopicId, gradeLevel: "secundaria_4" },
+      { topicId: sharedNameTopicId, gradeLevel: "secundaria_5" },
+    ]);
 
     const [tPre] = await db
       .insert(topics)
@@ -178,11 +184,7 @@ describe("Bank folders (e2e)", () => {
         () => db.delete(users).where(inArray(users.id, [teacherAId, teacherBId, staffUserId])),
       ],
       ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]))],
-      [
-        "delete topics",
-        () =>
-          db.delete(topics).where(inArray(topics.id, [sharedNameTopic4Id, sharedNameTopic5Id, preTopicId])),
-      ],
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [sharedNameTopicId, preTopicId]))],
       ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseColegioId, coursePreId]))],
       ["close app", () => app.close()],
     ];
@@ -285,13 +287,11 @@ describe("Bank folders (e2e)", () => {
     expect(courseFolder.topicId).toBeNull();
 
     const topicFolders = all.filter((node) => node.parentId === courseFolder.id);
-    expect(topicFolders.map((node) => node.name).sort()).toEqual([
-      `Trigo ${suffix} · 4° secundaria`,
-      `Trigo ${suffix} · 5° secundaria`,
-    ]);
-    expect(topicFolders.map((node) => node.topicId).sort()).toEqual(
-      [sharedNameTopic4Id, sharedNameTopic5Id].sort(),
-    );
+    // One folder per TOPIC, named exactly like the topic — no grade suffix
+    // exists any more, because two topics of one course can no longer share a
+    // name (`topics_course_id_name_idx`).
+    expect(topicFolders.map((node) => node.name)).toEqual([`Trigo ${suffix}`]);
+    expect(topicFolders.map((node) => node.topicId)).toEqual([sharedNameTopicId]);
 
     // A topic whose name is unique in its course keeps its bare name.
     expect(all.find((node) => node.topicId === preTopicId).name).toBe(`Arco ${suffix}`);
@@ -326,14 +326,14 @@ describe("Bank folders (e2e)", () => {
 
   it("computes direct (non-rolled-up) ownCount/centralCount and unfiledCount from real rows", async () => {
     const treeA = flatten((await foldersRequest(tokenA).expect(200)).body.folders);
-    const topicFolderA = treeA.find((node) => node.topicId === sharedNameTopic4Id);
+    const topicFolderA = treeA.find((node) => node.topicId === sharedNameTopicId);
     const courseFolderA = treeA.find((node) => node.id === topicFolderA.parentId);
 
     const treeB = flatten((await foldersRequest(tokenB).expect(200)).body.folders);
-    const topicFolderB = treeB.find((node) => node.topicId === sharedNameTopic4Id);
+    const topicFolderB = treeB.find((node) => node.topicId === sharedNameTopicId);
 
     const baseRow = {
-      topicId: sharedNameTopic4Id,
+      topicId: sharedNameTopicId,
       difficulty: Difficulty.Easy,
       gradeLevel: "secundaria_4",
       correctAnswer: "a",
@@ -400,7 +400,7 @@ describe("Bank folders (e2e)", () => {
 
   it("returns unfiledCount and per-folder counts, both zero for a folder the counts test never touched", async () => {
     // B's "Arco" topic folder — the counts test above only ever inserted
-    // rows against `sharedNameTopic4Id`, so this one stays untouched.
+    // rows against `sharedNameTopicId`, so this one stays untouched.
     const response = await foldersRequest(tokenB).expect(200);
     const node = flatten(response.body.folders).find((n: any) => n.topicId === preTopicId);
 
