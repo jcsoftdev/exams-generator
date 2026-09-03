@@ -13,13 +13,15 @@ import {
 } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
+import { Difficulty, NormalizedBoxDto, UNFILED_FOLDER_ID } from '@exams-generator/shared';
 import { LucideAngularModule, Check, ChevronDown, Sparkles } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TabsComponent, TabItem } from '../../../ui/tabs/tabs.component';
 import { FileUploadComponent } from '../../../ui/file-upload/file-upload.component';
+import { FolderTreeComponent } from '../../../ui/folder-tree/folder-tree.component';
+import { BankFoldersStore } from '../folders/bank-folders.store';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
@@ -40,6 +42,9 @@ const DIFFICULTY_LABELS: Record<Difficulty, string> = {
 };
 
 const CORRECT_ANSWER_LETTERS = ['a', 'b', 'c', 'd', 'e'];
+
+/** Survives a reload of `/app/bank/new` within the same tab — long enough to upload a batch, gone when the tab closes. */
+const LAST_FOLDER_STORAGE_KEY = 'bank-new:last-folder-id';
 
 function toOptions(items: readonly { id: string; name: string }[]): SelectOption<string>[] {
   return items.map((item) => ({ value: item.id, label: item.name }));
@@ -74,6 +79,7 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
     LucideAngularModule,
     CropReviewComponent,
     FileUploadComponent,
+    FolderTreeComponent,
   ],
   // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
   // this component-level `.pick()` shadows the root `app.config.ts` registration
@@ -89,8 +95,10 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
 })
 export class BankNewComponent {
   private readonly taxonomyService = inject(TaxonomyService);
+  private readonly foldersStore = inject(BankFoldersStore);
   private readonly router = inject(Router);
   private readonly injector = inject(Injector);
+  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
   private readonly liveAnnouncer = inject(LiveAnnouncerService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly extraction = inject(BankNewExtractionService);
@@ -143,6 +151,29 @@ export class BankNewComponent {
   protected readonly showAiTaxonomyHint = computed(
     () => !!this.aiTaxonomyHint() && (!this.sCourseId() || !this.sTopicId()),
   );
+
+  // Carpeta — one value shared by both tabs' fields (`pFolderId`/`sFolderId`
+  // are kept in step by `applyFolderSelection` and by the photo->structured
+  // hand-off in `extractWithAi`), because a teacher who filed the photo and
+  // then let the AI move her to the structured tab must not pick it twice.
+  protected readonly folderTree = this.foldersStore.tree;
+  protected readonly pFolderId = signal<string | null>(null);
+  protected readonly sFolderId = signal<string | null>(null);
+  /** Which tab's picker popover is open, if any — only ever one at a time. */
+  protected readonly folderPickerFor = signal<Tab | null>(null);
+  /** Every topic in the catalog, loaded once — the folder field needs `topicId -> courseId` to prefill Curso. */
+  private readonly allTopics = signal<readonly Topic[]>([]);
+  /** Flips once `getAllTopics` has SETTLED (next OR error) — see the restore effect in the constructor. */
+  private readonly taxonomyReady = signal(false);
+
+  /**
+   * Relay for the folder-driven topic preselect, mirroring
+   * `BankNewExtractionService`'s pending mechanism: setting `pCourseId` fires
+   * the course->topics effect, which BLANKS `pTopicId` before the new topics
+   * land. Stashing the id here lets `loadTopicsFor` restore it on the way
+   * through instead of racing the effect.
+   */
+  private pendingFolderTopicId: Partial<Record<Tab, string>> = {};
 
   // Foto
   protected readonly pCourses = signal<Course[]>([]);
@@ -218,6 +249,35 @@ export class BankNewComponent {
       }
     });
 
+    this.foldersStore.load();
+    this.taxonomyService.getAllTopics().subscribe({
+      next: (topics) => {
+        this.allTopics.set(topics);
+        this.taxonomyReady.set(true);
+      },
+      error: () => {
+        // A missing catalog only costs the Curso/Tema PREFILL — filing the
+        // question under the folder still works, so this is not a save error.
+        this.allTopics.set([]);
+        this.taxonomyReady.set(true);
+      },
+    });
+
+    /**
+     * Restores the remembered folder the first time BOTH the tree has content
+     * and the topic catalog has settled — both load asynchronously, so this
+     * cannot run inline in the constructor, and restoring before the catalog
+     * arrived would drop the Curso/Tema prefill on the floor. Guarded so it
+     * fires once and never fights a folder the teacher just picked.
+     */
+    let restored = false;
+    effect(() => {
+      if (!restored && this.folderTree().length > 0 && this.taxonomyReady()) {
+        restored = true;
+        this.restoreRememberedFolder();
+      }
+    });
+
     // M8: `setImage`/`setStructuredImage` only revoke the PREVIOUS object
     // URL when a new one replaces it — whichever is still live at teardown
     // never gets revoked otherwise.
@@ -264,10 +324,14 @@ export class BankNewComponent {
   /** Shared body for the "load topics for this course" effects — same M9 guard, keyed on the course. */
   private loadTopicsFor(tab: Tab, courseId: string): void {
     if (tab === 'photo') {
-      this.pTopicId.set('');
+      this.pTopicId.set(this.consumePendingFolderTopicId('photo'));
       this.pTopics.set([]);
     } else {
-      this.sTopicId.set(this.extraction.consumePendingTopicId());
+      // An extraction's own preselect wins over the folder's: the AI read
+      // THIS photo, the folder is just where the batch is being filed.
+      this.sTopicId.set(
+        this.extraction.consumePendingTopicId() || this.consumePendingFolderTopicId('structured'),
+      );
       this.sTopics.set([]);
     }
     if (!courseId) return;
@@ -282,6 +346,119 @@ export class BankNewComponent {
         this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.');
       },
     });
+  }
+
+  protected folderName(tab: Tab): string {
+    const id = tab === 'photo' ? this.pFolderId() : this.sFolderId();
+    return (id && this.foldersStore.folderName(id)) ?? 'Sin carpeta';
+  }
+
+  /**
+   * True when the folder is linked to a topic AND the teacher picked a
+   * different one. NOT an error: a folder can legitimately hold mixed
+   * topics, so the folder stays and the hint just says the two disagree.
+   */
+  protected folderTopicMismatch(tab: Tab): boolean {
+    const folderId = tab === 'photo' ? this.pFolderId() : this.sFolderId();
+    if (!folderId) {
+      return false;
+    }
+    const folderTopicId = this.foldersStore.folderTopicId(folderId);
+    const topicId = tab === 'photo' ? this.pTopicId() : this.sTopicId();
+    return !!folderTopicId && !!topicId && folderTopicId !== topicId;
+  }
+
+  protected openFolderPicker(tab: Tab): void {
+    this.folderPickerFor.set(this.folderPickerFor() === tab ? null : tab);
+  }
+
+  protected onFolderPicked(tab: Tab, folderId: string): void {
+    this.folderPickerFor.set(null);
+    // The tree's virtual "Sin carpeta" node means "file it nowhere", which
+    // on the wire is `null` — never that literal id.
+    this.applyFolderSelection(tab, folderId === UNFILED_FOLDER_ID ? null : folderId);
+  }
+
+  /**
+   * Escape on the popover: close it AND return focus to the trigger that
+   * opened it. The CDK tree owns focus while the popover is open (arrow-key
+   * navigation via `TreeKeyManager`); nothing else puts it back on dismiss.
+   * Same reasoning as `QuestionFolderPickerComponent.closeFromEscape`.
+   */
+  protected closeFolderPickerFromEscape(tab: Tab): void {
+    this.folderPickerFor.set(null);
+    this.elementRef.nativeElement
+      .querySelector<HTMLButtonElement>(`[data-testid="folder-field-${tab}"] button`)
+      ?.focus();
+  }
+
+  /**
+   * Applies a folder choice: remembers it, and — when the folder is linked to
+   * a topic — preselects Curso and Tema from it. The teacher can still change
+   * either by hand; the folder does not follow (`folderTopicMismatch` just
+   * says so), because one folder grouping several topics is a legitimate way
+   * to file.
+   */
+  private applyFolderSelection(tab: Tab, folderId: string | null): void {
+    (tab === 'photo' ? this.pFolderId : this.sFolderId).set(folderId);
+    this.rememberFolder(folderId);
+
+    const topicId = folderId ? this.foldersStore.folderTopicId(folderId) : null;
+    if (!topicId) {
+      return;
+    }
+    const topic = this.allTopics().find((candidate) => candidate.id === topicId);
+    if (!topic) {
+      return;
+    }
+
+    const courseSignal = tab === 'photo' ? this.pCourseId : this.sCourseId;
+    const topicSignal = tab === 'photo' ? this.pTopicId : this.sTopicId;
+
+    this.pendingFolderTopicId[tab] = topic.id;
+    const courseChanged = courseSignal() !== topic.courseId;
+    courseSignal.set(topic.courseId);
+    if (!courseChanged) {
+      // Same course -> the course->topics effect was a no-op and never
+      // consumed the relay. Apply it directly, exactly as
+      // `resolveStructuredTaxonomy` does one level up.
+      delete this.pendingFolderTopicId[tab];
+      topicSignal.set(topic.id);
+    }
+  }
+
+  private consumePendingFolderTopicId(tab: Tab): string {
+    const id = this.pendingFolderTopicId[tab] ?? '';
+    delete this.pendingFolderTopicId[tab];
+    return id;
+  }
+
+  private rememberFolder(folderId: string | null): void {
+    try {
+      if (folderId) {
+        sessionStorage.setItem(LAST_FOLDER_STORAGE_KEY, folderId);
+      } else {
+        sessionStorage.removeItem(LAST_FOLDER_STORAGE_KEY);
+      }
+    } catch {
+      // Private mode / storage disabled: remembering the folder is a
+      // convenience, never a requirement. Losing it must not break the upload.
+    }
+  }
+
+  /** Restores the remembered folder ONCE the tree is loaded — a folder deleted meanwhile is dropped silently. */
+  private restoreRememberedFolder(): void {
+    let remembered: string | null = null;
+    try {
+      remembered = sessionStorage.getItem(LAST_FOLDER_STORAGE_KEY);
+    } catch {
+      return;
+    }
+    if (!remembered || !this.foldersStore.folderName(remembered)) {
+      return;
+    }
+    this.applyFolderSelection('photo', remembered);
+    this.applyFolderSelection('structured', remembered);
   }
 
   protected setTab(t: Tab): void {
@@ -441,6 +618,7 @@ export class BankNewComponent {
         gradeLevel: this.pGradeLevel()!,
         correctAnswer: this.pCorrectAnswer(),
         image: this.pImage()!,
+        folderId: this.pFolderId(),
       })
       .subscribe({
         next: ({ id }) => {
@@ -507,6 +685,13 @@ export class BankNewComponent {
           extracted.figureCrop ? dataUrlToFile(extracted.figureCrop.dataUrl, 'figura.png') : null,
         );
         this.sImageFromCrop = !!extracted.figureCrop;
+
+        // The folder the teacher chose on the photo tab follows the
+        // extraction into the structured tab. Curso/Tema need no special
+        // casing: they were already set from the folder, and
+        // `resolveStructuredTaxonomy` treats a manual photo-tab pick as the
+        // winner over the AI's suggestion.
+        this.sFolderId.set(this.pFolderId());
 
         this.extraction.resolveStructuredTaxonomy({
           gradeLevel,
@@ -621,6 +806,7 @@ export class BankNewComponent {
         image: this.sImage(),
         cropSlots: this.cropSlots(),
         extractedAlternatives: this.extraction.lastExtractedAlternatives,
+        folderId: this.sFolderId(),
       })
       .subscribe({
         next: ({ id }) => {

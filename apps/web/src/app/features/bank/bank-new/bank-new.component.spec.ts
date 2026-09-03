@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { describe, it, expect, vi, afterEach } from 'vitest';
+import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import { Observable, Subject, TimeoutError, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
+import { BankFolderNode, NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
@@ -16,6 +16,7 @@ import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
 import { CropSlot, CropTarget } from '../crop-review/crop-review.component';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
+import { QuestionSaveChainService } from '../question-save-chain.service';
 
 const COURSES: Course[] = [
   { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
@@ -24,6 +25,40 @@ const COURSES: Course[] = [
 const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
 const TOPICS_C2: Topic[] = [{ id: 't2', name: 'Comprensión lectora', courseId: 'c2' }];
 
+/**
+ * The flat catalog `getAllTopics()` returns — a different shape from the
+ * per-course `getTopics` above, and the only thing that can map a folder's
+ * `topicId` back to the `courseId` the Curso select needs.
+ */
+const ALL_TOPICS: Topic[] = [
+  { id: 't1', name: 'Trigonometría', courseId: 'c1' },
+  { id: 't2', name: 'Otro', courseId: 'c1' },
+];
+
+/** `trigo` carries a `topicId` (prefills Curso/Tema); `colegio` does not (Curso/Tema stay as today). */
+const FOLDERS: BankFolderNode[] = [
+  {
+    id: 'trigo',
+    name: 'Trigonometría',
+    parentId: null,
+    topicId: 't1',
+    position: 0,
+    ownCount: 2,
+    centralCount: 0,
+    children: [],
+  },
+  {
+    id: 'colegio',
+    name: 'Colegio',
+    parentId: null,
+    topicId: null,
+    position: 1,
+    ownCount: 1,
+    centralCount: 0,
+    children: [],
+  },
+];
+
 function setup(
   over: {
     uploadImpl?: () => unknown;
@@ -31,6 +66,8 @@ function setup(
     replaceImageImpl?: () => unknown;
     getCourses?: () => unknown;
     getTopics?: (courseId: string) => unknown;
+    getAllTopics?: () => unknown;
+    getFolders?: () => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     recropExtractionImpl?: (extractionId: string, box: NormalizedBoxDto) => unknown;
     setAlternativeImagesImpl?: (
@@ -47,6 +84,11 @@ function setup(
   const getCourses = vi.fn(over.getCourses ?? (() => of(COURSES)));
   const getTopics = vi.fn(
     over.getTopics ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
+  );
+  const getAllTopics = vi.fn(over.getAllTopics ?? (() => of(ALL_TOPICS)));
+  const getFolders = vi.fn(
+    over.getFolders ??
+      (() => of({ folders: FOLDERS, unfiledCount: 0, folderCount: FOLDERS.length })),
   );
   const extracted: AiRevisedQuestion = {
     bodyTypst: 'Enunciado desde imagen',
@@ -75,9 +117,10 @@ function setup(
           createStructuredQuestion,
           replaceQuestionImage,
           setAlternativeImages,
+          getFolders,
         },
       },
-      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: TaxonomyService, useValue: { getCourses, getTopics, getAllTopics } },
       { provide: AiService, useValue: { extractQuestionFromImage, recropExtraction } },
       { provide: Router, useValue: { navigate } },
       { provide: LiveAnnouncerService, useValue: { announce } },
@@ -94,6 +137,8 @@ function setup(
     setAlternativeImages,
     getCourses,
     getTopics,
+    getAllTopics,
+    getFolders,
     extractQuestionFromImage,
     recropExtraction,
     navigate,
@@ -174,6 +219,43 @@ function pickStructuredImage(fixture: { detectChanges(): void }, compiled: HTMLE
   return file;
 }
 
+/**
+ * The component's own members are `protected` (template-only by design), so
+ * the folder tests reach them through this one narrow cast instead of
+ * sprinkling `as any` across every assertion.
+ */
+interface WritableSignalLike<T> {
+  (): T;
+  set(value: T): void;
+}
+interface BankNewInternals {
+  setTab(tab: 'photo' | 'structured'): void;
+  submitPhoto(): void;
+  submitStructured(): void;
+  pFolderId: WritableSignalLike<string | null>;
+  sFolderId: WritableSignalLike<string | null>;
+  pCourseId: WritableSignalLike<string>;
+  pTopicId: WritableSignalLike<string>;
+  sCourseId: WritableSignalLike<string>;
+  sTopicId: WritableSignalLike<string>;
+}
+
+function internals(fixture: { componentInstance: unknown }): BankNewInternals {
+  return fixture.componentInstance as unknown as BankNewInternals;
+}
+
+/**
+ * One turn of the wheel: the component's grade->course->topic `effect`
+ * chain needs a flush before the folder-driven preselect has landed.
+ */
+async function settleEffects(fixture: {
+  whenStable(): Promise<unknown>;
+  detectChanges(): void;
+}): Promise<void> {
+  await fixture.whenStable();
+  fixture.detectChanges();
+}
+
 describe('BankNewComponent', () => {
   describe('L8: one h1 per page (the topbar owns it, this is a section heading)', () => {
     it('does not render an h1 inside app-bank-new', () => {
@@ -225,6 +307,8 @@ describe('BankNewComponent', () => {
       correctAnswer: '0',
       bodyTypst: '¿Cuánto es 2+2?',
       alternatives: ['4', '3', '5', '6'],
+      // No folder picked — the question is filed at the root.
+      folderId: null,
     });
     // No complement image was picked — the second-step call must not fire.
     expect(replaceQuestionImage).not.toHaveBeenCalled();
@@ -3028,6 +3112,161 @@ describe('BankNewComponent', () => {
       const { fixture } = setup();
 
       expect(() => fixture.destroy()).not.toThrow();
+    });
+  });
+
+  /**
+   * Task 12: the "Carpeta" field. It sits ABOVE Curso/Tema on both tabs and
+   * holds the same value on both, because a teacher who picked a folder on
+   * the photo tab and let the AI move her to the structured tab must not
+   * have to pick it again.
+   */
+  describe('folder field', () => {
+    let harness: ReturnType<typeof setup>;
+    let fixture: ReturnType<typeof setup>['fixture'];
+    let compiled: HTMLElement;
+    let component: BankNewInternals;
+    let submitStructuredSpy: ReturnType<typeof vi.spyOn>;
+
+    beforeEach(() => {
+      submitStructuredSpy = vi.spyOn(QuestionSaveChainService.prototype, 'submitStructured');
+      harness = setup();
+      fixture = harness.fixture;
+      compiled = harness.compiled;
+      component = internals(fixture);
+    });
+
+    afterEach(() => {
+      sessionStorage.clear();
+      submitStructuredSpy.mockRestore();
+    });
+
+    /** Opens the tab's picker, then clicks the row for `folderId` inside it. */
+    function pickFolder(tab: 'photo' | 'structured', folderId: string): void {
+      (
+        compiled.querySelector(`[data-testid="folder-field-${tab}"] button`) as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      (
+        compiled.querySelector(
+          `[data-testid="folder-field-${tab}"] [data-folder-id="${folderId}"]`,
+        ) as HTMLElement
+      ).click();
+      fixture.detectChanges();
+    }
+
+    function fillPhotoForm(): void {
+      set(fixture, 'pGradeLevel', 'pre');
+      set(fixture, 'pCourseId', 'c1');
+      set(fixture, 'pTopicId', 't1');
+      set(fixture, 'pDifficulty', 'easy');
+      set(fixture, 'pCorrectAnswer', 'a');
+      pickImage(fixture, compiled);
+    }
+
+    function fillStructuredForm(): void {
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', '¿Cuánto es 2+2?');
+      set(fixture, 'sAlternatives', '4\n3');
+      set(fixture, 'sCorrectAnswer', 'a');
+    }
+
+    // The fakes in `setup()` are declared parameterless, so their recorded
+    // call tuples type as `[]` — the cast is what lets the payload be read.
+    const lastUploadPayload = () =>
+      (harness.uploadImageQuestion.mock.calls.at(-1) as unknown[] | undefined)?.[0];
+    const lastSubmitStructuredParams = () => submitStructuredSpy.mock.calls.at(-1)?.[0];
+
+    it('shows the folder picker above Curso/Tema on both tabs', () => {
+      expect(compiled.querySelector('[data-testid="folder-field-photo"]')).not.toBeNull();
+
+      component.setTab('structured');
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="folder-field-structured"]')).not.toBeNull();
+    });
+
+    it('prefills Curso and Tema when the picked folder carries a topicId', async () => {
+      pickFolder('photo', 'trigo'); // topicId: 't1', course 'c1'
+      await settleEffects(fixture);
+
+      expect(component.pCourseId()).toBe('c1');
+      expect(component.pTopicId()).toBe('t1');
+    });
+
+    it('keeps the folder and shows the mismatch hint when the teacher changes Tema by hand', async () => {
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+
+      component.pTopicId.set('t2');
+      fixture.detectChanges();
+
+      expect(component.pFolderId()).toBe('trigo');
+      expect(
+        compiled.querySelector('[data-testid="folder-topic-mismatch"]')!.textContent,
+      ).toContain('El Tema no coincide con la carpeta');
+    });
+
+    it('does not prefill anything when the folder has no topicId', async () => {
+      pickFolder('photo', 'colegio'); // topicId: null
+      await settleEffects(fixture);
+
+      expect(component.pCourseId()).toBe('');
+      expect(component.pTopicId()).toBe('');
+      expect(compiled.querySelector('[data-testid="folder-topic-mismatch"]')).toBeNull();
+    });
+
+    it('sends folderId when uploading a photo question', async () => {
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+      fillPhotoForm();
+
+      component.submitPhoto();
+      fixture.detectChanges();
+
+      expect(lastUploadPayload()).toMatchObject({ folderId: 'trigo' });
+    });
+
+    it('sends folderId when saving a structured question', async () => {
+      component.setTab('structured');
+      fixture.detectChanges();
+      pickFolder('structured', 'trigo');
+      await settleEffects(fixture);
+      fillStructuredForm();
+
+      component.submitStructured();
+      fixture.detectChanges();
+
+      expect(lastSubmitStructuredParams()).toMatchObject({ folderId: 'trigo' });
+    });
+
+    it('remembers the last folder in sessionStorage', async () => {
+      pickFolder('photo', 'trigo');
+      await settleEffects(fixture);
+
+      expect(sessionStorage.getItem('bank-new:last-folder-id')).toBe('trigo');
+    });
+
+    it('restores the remembered folder on a fresh visit', async () => {
+      sessionStorage.setItem('bank-new:last-folder-id', 'trigo');
+
+      const second = TestBed.createComponent(BankNewComponent);
+      second.detectChanges();
+      await settleEffects(second);
+
+      expect(internals(second).pFolderId()).toBe('trigo');
+    });
+
+    it('ignores a remembered folder that no longer exists', async () => {
+      sessionStorage.setItem('bank-new:last-folder-id', 'deleted-folder');
+
+      const second = TestBed.createComponent(BankNewComponent);
+      second.detectChanges();
+      await settleEffects(second);
+
+      expect(internals(second).pFolderId()).toBeNull();
     });
   });
 });

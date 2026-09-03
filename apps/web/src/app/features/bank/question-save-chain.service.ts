@@ -48,6 +48,13 @@ export interface SubmitStructuredParams {
    * current snapshot through on every submit.
    */
   readonly extractedAlternatives: readonly string[];
+  /**
+   * Tenant folder the question is filed under, or `null` for unfiled.
+   * REQUIRED, not optional: a caller that simply forgot to pass it would
+   * silently file every question at the root, and the compiler is the only
+   * thing that can tell "no folder chosen" apart from "forgot the field".
+   */
+  readonly folderId: string | null;
 }
 
 @Injectable()
@@ -87,6 +94,7 @@ export class QuestionSaveChainService {
         correctAnswer: correctAnswerLetterToIndex(params.correctAnswer),
         bodyTypst: params.bodyTypst,
         alternatives: params.alternatives as string[],
+        folderId: params.folderId,
       })
       .pipe(
         catchError((httpError: HttpErrorResponse) =>
