@@ -41,8 +41,19 @@ export const routes: Routes = [
           import('./features/dashboard/dashboard.component').then((m) => m.DashboardComponent),
         title: `Panel${TITLE_SUFFIX}`,
       },
+      // The bank landing is the folder GRID; the list of questions lives one
+      // level down, scoped to a folder. Both keep the same title because to a
+      // teacher they are one screen with two depths.
       {
         path: 'bank',
+        loadComponent: () =>
+          import('./features/bank/bank-browser/bank-browser.component').then(
+            (m) => m.BankBrowserComponent,
+          ),
+        title: `Banco de preguntas${TITLE_SUFFIX}`,
+      },
+      {
+        path: 'bank/carpeta/:folderId',
         loadComponent: () =>
           import('./features/bank/bank-list/bank-list.component').then((m) => m.BankListComponent),
         title: `Banco de preguntas${TITLE_SUFFIX}`,
