@@ -42,6 +42,14 @@ export class LoginComponent {
     this.route.snapshot.queryParamMap.get('expired') === '1',
   );
 
+  constructor() {
+    // Skip login for an already-authenticated visitor (valid, unexpired
+    // token in localStorage) — e.g. reopening the tab or a bookmark to /login.
+    if (this.authService.isAuthenticated()) {
+      this.router.navigateByUrl('/app');
+    }
+  }
+
   private isValid(): boolean {
     return /\S+@\S+\.\S+/.test(this.email()) && this.password().length > 0;
   }
