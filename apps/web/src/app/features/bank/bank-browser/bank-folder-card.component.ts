@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
-import { BookOpen, LucideAngularModule } from 'lucide-angular';
+import { BookOpen, HelpCircle, LucideAngularModule } from 'lucide-angular';
 import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
 
 /**
@@ -21,24 +21,44 @@ import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
   standalone: true,
   imports: [LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [LucideAngularModule.pick({ BookOpen }).providers ?? []],
+  providers: [LucideAngularModule.pick({ BookOpen, HelpCircle }).providers ?? []],
   template: `
     <button
       type="button"
       data-testid="folder-card"
-      class="flex w-full flex-col gap-3 rounded-card border border-n200 bg-surface p-4 text-left transition-colors hover:border-primary-300 hover:bg-primary-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+      [attr.data-variant]="variant()"
+      class="flex w-full flex-col gap-3 rounded-card p-4 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+      [class.border]="true"
+      [class.border-n200]="node().editable"
+      [class.bg-surface]="node().editable"
+      [class.hover:border-primary-300]="node().editable"
+      [class.hover:bg-primary-50]="node().editable"
+      [class.border-dashed]="!node().editable"
+      [class.border-n300]="!node().editable"
+      [class.bg-n50]="!node().editable"
+      [class.hover:bg-n100]="!node().editable"
       (click)="open.emit(node().id)"
     >
       <span
         aria-hidden="true"
-        class="flex h-10 w-10 items-center justify-center rounded-field bg-primary-50 text-tint-text"
+        class="flex h-10 w-10 items-center justify-center rounded-field"
+        [class.bg-primary-50]="node().editable"
+        [class.text-tint-text]="node().editable"
+        [class.bg-n100]="!node().editable"
+        [class.text-n600]="!node().editable"
       >
-        <lucide-angular name="book-open" class="h-5 w-5"></lucide-angular>
+        <lucide-angular [name]="node().editable ? 'book-open' : 'help-circle'" class="h-5 w-5"></lucide-angular>
       </span>
 
       <span class="flex flex-col gap-0.5">
         <span class="text-[15px] font-semibold text-n900">{{ node().name }}</span>
-        <span data-testid="card-children" class="text-[13px] text-n600">{{ childrenLabel() }}</span>
+        @if (node().editable) {
+          <span data-testid="card-children" class="text-[13px] text-n600">{{
+            childrenLabel()
+          }}</span>
+        } @else {
+          <span class="text-[13px] text-n600">Preguntas que aún no tienen carpeta</span>
+        }
       </span>
 
       <span class="flex items-center gap-1.5 border-t border-n100 pt-2.5 text-xs text-n600">
@@ -60,6 +80,14 @@ export class BankFolderCardComponent {
 
   /** The id of the folder the teacher asked to open. */
   readonly open = output<string>();
+
+  /**
+   * "Sin carpeta" arrives as a node with `editable: false`. It is a view over
+   * `folder_id IS NULL`, not a folder — it cannot be renamed, moved or
+   * deleted — so it is drawn apart rather than inviting actions that would
+   * fail.
+   */
+  protected readonly variant = computed(() => (this.node().editable ? 'folder' : 'unfiled'));
 
   protected readonly childrenLabel = computed(() => {
     const count = this.node().children.length;

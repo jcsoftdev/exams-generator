@@ -4,7 +4,7 @@ import { Router, provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { of, throwError } from 'rxjs';
 import { describe, it, expect, vi } from 'vitest';
-import { BankFolderNode, BankFoldersResponse } from '@exams-generator/shared';
+import { BankFolderNode, BankFoldersResponse, UNFILED_FOLDER_ID } from '@exams-generator/shared';
 import { BankService } from '../bank.service';
 import { BankBrowserComponent } from './bank-browser.component';
 
@@ -167,6 +167,38 @@ describe('BankBrowserComponent', () => {
 
     expect(el().querySelectorAll('[data-testid="folder-card"]').length).toBe(0);
     expect(el().querySelector('[data-testid="browser-empty"]')).toBeTruthy();
+  });
+
+  /**
+   * Questions with no folder are only reachable through this bucket. Once the
+   * grid is the only way in, dropping it would strand them.
+   */
+  it('shows the unfiled bucket among the root cards when something is in it', async () => {
+    const { el } = await setup('/app/bank', {
+      getFoldersImpl: () => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 4 }),
+    });
+
+    const cards = Array.from(el().querySelectorAll('[data-testid="folder-card"]'));
+    expect(cards.map((c) => c.textContent)).toEqual(
+      expect.arrayContaining([expect.stringContaining('Sin carpeta')]),
+    );
+  });
+
+  it('does not show an empty unfiled bucket', async () => {
+    const { el } = await setup();
+
+    const cards = Array.from(el().querySelectorAll('[data-testid="folder-card"]'));
+    expect(cards.some((c) => c.textContent?.includes('Sin carpeta'))).toBe(false);
+  });
+
+  it('opens the unfiled bucket like any other leaf', async () => {
+    const { harness, el, router } = await setup('/app/bank', {
+      getFoldersImpl: () => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 4 }),
+    });
+
+    await clickCard(harness, el, 'Sin carpeta');
+
+    expect(router.url).toBe('/app/bank/carpeta/' + UNFILED_FOLDER_ID);
   });
 
   it('surfaces a failed folder load instead of showing an empty bank', async () => {

@@ -83,6 +83,34 @@ describe('BankFolderCardComponent', () => {
     expect(seen).toEqual(['mate']);
   });
 
+  /**
+   * "Sin carpeta" is a view over `folder_id IS NULL`, not a folder — it cannot
+   * be renamed, moved or deleted. Drawing it like a real folder invites the
+   * teacher to try, so it is marked apart.
+   */
+  it('marks a non-editable node as the unfiled bucket rather than a folder', () => {
+    const { compiled } = setup({ ...NODE, editable: false, children: [] });
+
+    expect(compiled.querySelector('[data-testid="folder-card"]')!.getAttribute('data-variant')).toBe(
+      'unfiled',
+    );
+  });
+
+  it('marks a real folder as one', () => {
+    const { compiled } = setup();
+
+    expect(compiled.querySelector('[data-testid="folder-card"]')!.getAttribute('data-variant')).toBe(
+      'folder',
+    );
+  });
+
+  /** The bucket holds loose questions, never subfolders — the line would be a lie. */
+  it('does not talk about subfolders on the unfiled bucket', () => {
+    const { compiled } = setup({ ...NODE, editable: false, children: [] });
+
+    expect(compiled.querySelector('[data-testid="card-children"]')).toBeFalsy();
+  });
+
   /** A card is one keyboard stop, so it has to be a real button. */
   it('is a button, not a div with a click handler', () => {
     const { compiled } = setup();
