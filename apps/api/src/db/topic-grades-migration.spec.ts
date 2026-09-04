@@ -177,6 +177,21 @@ describe("0023_topic_grades migration", () => {
     const cyclo2Name = `Ciclo2 ${suffix}`;
     const cyclo24 = await insertTopic(course.id, cyclo2Name, "secundaria_4");
     const cyclo25 = await insertTopic(course.id, cyclo2Name, "secundaria_5");
+    // Group S: the canonical copy has NO slug and the doomed copy carries one.
+    // Deleting the copy would take the group's only slug with it, and the very
+    // next `seed()` — prod runs `migrate && seed && main` — reads a slug-less
+    // preuniversitario topic as a LEGACY row to repoint or delete
+    // (`reconcileLegacyTopics`). The slug has to be lifted onto the survivor
+    // before the copy goes.
+    const slugName = `Slug ${suffix}`;
+    const slugSurvivor = await one<{ id: string }>(
+      `insert into topics (course_id, name, slug, grade_level) values ($1, $2, null, 'secundaria_4') returning id`,
+      [course.id, slugName],
+    );
+    await pool.query(
+      `insert into topics (course_id, name, slug, grade_level) values ($1, $2, $3, 'secundaria_5')`,
+      [course.id, slugName, `slug-donor-${suffix}`],
+    );
 
     const tenant = await one<{ id: string }>(
       `insert into tenants (name, slug) values ($1, $2) returning id`,
@@ -381,8 +396,15 @@ describe("0023_topic_grades migration", () => {
       [course.id],
     );
     expect(remaining.map((row) => row.id).sort()).toEqual(
-      [arit4, geo4, topic4, chain3, ejer3, dupA, longA, larg4, cyclo4, cyclo24].sort(),
+      [arit4, geo4, topic4, chain3, ejer3, dupA, longA, larg4, cyclo4, cyclo24, slugSurvivor.id].sort(),
     );
+
+    // 1b. The doomed copy's slug was lifted onto the slug-less canonical row,
+    //     so the survivor is not a legacy row for the next `seed()` to eat.
+    const slugRow = await one<{ slug: string | null }>(`select slug from topics where id = $1`, [
+      slugSurvivor.id,
+    ]);
+    expect(slugRow.slug).toBe(`slug-donor-${suffix}`);
 
     // 2. Both grades survive as topic_grades rows on the canonical topic.
     async function gradesOf(topicId: string): Promise<string[]> {

@@ -88,6 +88,37 @@ LEFT JOIN "grade_levels" g ON g."code" = t."grade_level";
 CREATE UNIQUE INDEX ON "topic_collapse_map" (copy_id);
 --> statement-breakpoint
 
+-- Lift a slug onto a canonical row that has none. The copies are deleted a few
+-- statements below, and with them any `slug` only THEY carried — the seeder
+-- wrote the slug per copy, so which of a group's rows holds it is an accident
+-- of the old (course_id, slug, grade_level) uniqueness, not a decision.
+--
+-- Why it matters beyond tidiness: `reconcileLegacyTopics` (db/seed) treats a
+-- preuniversitario topic with no slug as a legacy row and either throws or
+-- deletes it on the very next `seed()` — and prod runs `migrate && seed &&
+-- main`. Losing the slug here is therefore not cosmetic; it is the next boot.
+--
+-- It cannot collide with `topics_course_id_slug_idx` (created at the bottom of
+-- this file, unique on (course_id, slug) where slug is not null):
+--   * inside the group, DISTINCT ON picks exactly ONE donor slug per canonical
+--     row, and only rows that have none are written;
+--   * across groups, a slug shared by two DIFFERENT names in one course is
+--     precisely what the pre-flight check above refuses to migrate, and the old
+--     unique (course_id, slug, grade_level) allowed that shape ONLY across
+--     different grades — which is what the pre-flight scans for.
+-- Donor tie-break is the copy's id, so a restored dump migrates identically.
+UPDATE "topics" t
+SET "slug" = src.slug
+FROM (
+  SELECT DISTINCT ON (m.canonical_id) m.canonical_id, c."slug"
+  FROM "topic_collapse_map" m
+  JOIN "topics" c ON c."id" = m.copy_id
+  WHERE c."slug" IS NOT NULL
+  ORDER BY m.canonical_id, c."id"
+) src
+WHERE t."id" = src.canonical_id AND t."slug" IS NULL;
+--> statement-breakpoint
+
 -- Every grade any copy of the group carried becomes a row on the canonical
 -- topic. A group whose every copy has a NULL grade ends up with no rows —
 -- "taught across the whole stage".
