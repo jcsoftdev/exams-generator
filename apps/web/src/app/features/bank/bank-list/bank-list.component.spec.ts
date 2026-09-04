@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { Observable, Subject, map, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import {
   LucideAngularModule,
   Lock,
@@ -147,6 +147,8 @@ function setup(
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
+    /** The `:folderId` the /app/bank/carpeta/:folderId route landed on. `null` (the default) keeps every pre-existing test on the old "nothing selected yet" entry state. */
+    routeFolderId?: string | null;
     /** D1: what `router.getCurrentNavigation()?.extras.state` looks like on entry. `undefined` -> no current navigation (falls back to `history.state`). */
     getCurrentNavigationImpl?: () => unknown;
     /**
@@ -328,6 +330,10 @@ function setup(
       { provide: TaxonomyService, useValue: { getCourses, getAllTopics } },
       { provide: AiService, useValue: { reviseQuestion, extractQuestionFromImage } },
       { provide: Router, useValue: { navigate, getCurrentNavigation } },
+      {
+        provide: ActivatedRoute,
+        useValue: { paramMap: of(convertToParamMap({ folderId: over.routeFolderId ?? null })) },
+      },
     ],
   });
   const fixture = TestBed.createComponent(BankListComponent);
@@ -2200,6 +2206,36 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-testid="question-folder-picker"]')).toBeNull();
       expect(getFolders).toHaveBeenCalledTimes(1);
       expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+    });
+  });
+  /**
+   * The bank landing is the folder grid now; this screen is reached at
+   * /app/bank/carpeta/:folderId, already scoped. Waiting for a click that the
+   * teacher already made one screen earlier would show her an empty prompt
+   * over the folder she just opened.
+   */
+  describe('opened from the folder route', () => {
+    it('loads the folder in the url without waiting for a click on the tree', () => {
+      const { compiled } = setup({ routeFolderId: 'trigo' });
+
+      expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="folder-questions"]')).toBeTruthy();
+    });
+
+    it('shows the trail back to the grid, ending on the open folder', () => {
+      const { compiled } = setup({ routeFolderId: 'trigo' });
+
+      const crumbs = Array.from(compiled.querySelectorAll('[data-testid="breadcrumb-crumb"]')).map(
+        (crumb) => crumb.textContent?.trim(),
+      );
+      expect(crumbs[0]).toBe('Mi banco');
+      expect(crumbs[crumbs.length - 1]).toContain('Trigonometría');
+    });
+
+    it('still shows the prompt when no folder is named in the url', () => {
+      const { compiled } = setup();
+
+      expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeTruthy();
     });
   });
 });

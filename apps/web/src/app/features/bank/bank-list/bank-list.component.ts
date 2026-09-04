@@ -1,6 +1,7 @@
 import { Component, DestroyRef, computed, inject, signal, viewChild } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EMPTY, Observable, catchError, forkJoin, from, map, mergeMap } from 'rxjs';
 import {
   LucideAngularModule,
@@ -28,11 +29,16 @@ import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 import { FolderTreeComponent } from '../../../ui/folder-tree/folder-tree.component';
 import {
+  BreadcrumbComponent,
+  BreadcrumbCrumb,
+} from '../../../ui/breadcrumb/breadcrumb.component';
+import {
   FolderCreateEvent,
   FolderInlineError,
   FolderRenameEvent,
   FolderTreeNode,
 } from '../../../ui/folder-tree/folder-tree.types';
+import { findFolderPath } from '../folders/folder-path';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
@@ -58,6 +64,9 @@ import { QuestionContentFieldsComponent } from '../question-edit/question-conten
 import { AiReviseBoxComponent } from '../question-edit/ai-revise-box.component';
 import { QuestionFolderPickerComponent } from './question-folder-picker.component';
 import { parseAlternativesList } from '../question-edit/parse-alternatives.util';
+
+/** Stands for the grid's root in the breadcrumb, where every crumb needs an id. */
+const ROOT_CRUMB_ID = '__root__';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -220,6 +229,7 @@ const HIGHLIGHT_DURATION_MS = 4000;
     TagComponent,
     MathTextComponent,
     FolderTreeComponent,
+    BreadcrumbComponent,
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
@@ -260,6 +270,7 @@ export class BankListComponent {
   private readonly aiService = inject(AiService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
   private readonly liveAnnouncer = inject(LiveAnnouncerService);
 
   protected readonly difficulties = Object.values(Difficulty);
@@ -462,6 +473,19 @@ export class BankListComponent {
     // same history entry).
     this.pendingCreatedQuestionId = this.readCreatedQuestionId();
     this.loadInitial();
+
+    // The grid at /app/bank is what picks the folder now; by the time this
+    // screen renders, the teacher has already chosen one. Waiting for a click
+    // on the tree would show her the "elige una carpeta" prompt over the
+    // folder she just opened. Subscribed rather than read off the snapshot so
+    // that navigating between two folders — which Angular serves by reusing
+    // this component — reloads the questions instead of keeping the first.
+    this.route.paramMap.pipe(takeUntilDestroyed()).subscribe((params) => {
+      const folderId = params.get('folderId');
+      if (folderId !== null && folderId !== this.selectedFolderId()) {
+        this.onFolderSelect(folderId);
+      }
+    });
     this.destroyRef.onDestroy(() => {
       for (const url of this.objectUrls) {
         URL.revokeObjectURL(url);
@@ -651,6 +675,26 @@ export class BankListComponent {
     this.selectedFolderId.set(folderId);
     this.clearFolderErrors();
     this.loadQuestionsForFolder(folderId, 1);
+  }
+
+  /**
+   * The trail back to the grid. Resolved from the folder tree, so it fills in
+   * as soon as the folders land and stays a single crumb ("Mi banco") for a
+   * folder that is no longer there.
+   */
+  protected readonly crumbs = computed<readonly BreadcrumbCrumb[]>(() => [
+    { id: ROOT_CRUMB_ID, label: 'Mi banco' },
+    ...findFolderPath(this.foldersStore.tree(), this.selectedFolderId()).map((node) => ({
+      id: node.id,
+      label: node.name,
+    })),
+  ]);
+
+  /** Back to the grid, opened at the crumb that was clicked. */
+  protected backToGrid(id: string): void {
+    void this.router.navigate(['/app/bank'], {
+      queryParams: { carpeta: id === ROOT_CRUMB_ID ? null : id },
+    });
   }
 
   protected onFolderCreate(event: FolderCreateEvent): void {
