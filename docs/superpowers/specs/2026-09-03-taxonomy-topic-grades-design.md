@@ -50,7 +50,35 @@ Resultado esperado con los datos actuales, verificado corriendo `0023` contra la
 
 Los 2 temas preuni con `grade_level` NULL no quedan sueltos, que es de donde salían el 626 y el 951 de la estimación previa: como el colapso agrupa por `(course_id, name)`, cada uno cae dentro de un grupo que sí tiene grado, se colapsa en él y no aporta ninguna fila a `topic_grades` — el grupo conserva los grados de sus otras copias. Un tema queda sin filas (dictado en toda su etapa) solo si TODAS las copias de su grupo tienen el grado en NULL, caso que hoy no se da.
 
-**Antes de desplegar en prod:** `pg_dump` del esquema y datos de `topics`, `topic_grades` (vacía), `questions(id, topic_id)`, `question_folders` y las cuatro tablas de FK, guardado fuera del contenedor. La migración es reversible solo desde ese respaldo.
+**Antes de desplegar en prod**, tres pasos, en este orden:
+
+**1. Respaldo.** `pg_dump` del esquema y de los datos de todo lo que `0023` toca, guardado **fuera del contenedor**. La migración es irreversible salvo desde ese respaldo, así que la lista tiene que estar completa:
+
+```
+pg_dump --data-only \
+  -t courses -t grade_levels -t topics -t topic_grades \
+  -t question_folders -t subtopics -t syllabus_week_maps \
+  -t exam_blueprint_rows -t exam_blueprint_template_rows -t generation_jobs \
+  "$DATABASE_URL" > 0023-pre.sql
+psql "$DATABASE_URL" -c "\copy (select id, topic_id, folder_id, grade_level, tenant_id \
+  from questions) to '0023-pre-questions.csv' csv header"
+```
+
+`questions` va por `\copy` y no por `pg_dump` porque de sus 67k filas solo hacen falta cinco columnas — `(id, topic_id, folder_id, grade_level, tenant_id)`, las únicas que `0023` puede mover — y `pg_dump` no sabe recortar columnas. **`folder_id` es obligatoria** — el merge de carpetas reasigna `questions.folder_id` a la carpeta que sobrevive, y un respaldo sin esa columna no permite reconstruir en qué carpeta estaba cada pregunta. `courses` y `grade_levels` no se modifican, pero sin ellas el volcado no se puede restaurar en una base limpia (son el destino de las FK y la fuente del `sort_order` que decide la fila canónica).
+
+**2. Ensayo cronometrado.** Restaurar ese volcado en una base de scratch (`createdb exams_0023_dry`, `migrate` hasta `0022`, cargar el dump), correr `0023` ahí y **anotar la sentencia más lenta**:
+
+```
+psql "$SCRATCH_URL" --single-transaction --echo-all \
+  -c '\timing on' -f apps/api/drizzle/0023_topic_grades.sql 2>&1 | tee 0023-dry-run.log
+rg '^Time: ' 0023-dry-run.log | sort -k2 -g -r | head -5
+```
+
+`\timing` en vez de `pg_stat_statements`: la extensión necesita `shared_preload_libraries` y este Postgres no la carga. `--single-transaction` importa — sin ella `SET LOCAL` solo emite un warning y no hace nada, y el ensayo no reproduciría la transacción única del migrador.
+
+Es el único número que dice si el deploy real se va a quedar corto: el archivo abre con `SET LOCAL statement_timeout = 0` (las conexiones del pool traen 30 s desde `POOL_STATEMENT_TIMEOUT_MS`), así que ya no aborta por tiempo, pero sí mantiene la tabla `questions` bloqueada mientras corre. Si el peor caso se acerca al minuto, la ventana de mantenimiento deja de ser opcional.
+
+**3. Verificar la estrategia de despliegue en Dokploy.** Tiene que ser **stop-first** (detener el contenedor viejo antes de arrancar el nuevo), no rolling. El entrypoint es `migrate && seed && main` (`infra/docker-compose.dokploy.yml`) y el servicio corre con `replicas: 1`: en un despliegue rolling el contenedor nuevo ejecutaría `0023` mientras el viejo sigue sirviendo tráfico contra un esquema que la migración está borrando — `topics.grade_level` desaparece a mitad de una consulta viva. Con stop-first hay unos segundos de caída y ningún lector concurrente.
 
 ## Seed y datos
 
@@ -65,7 +93,7 @@ Los 2 temas preuni con `grade_level` NULL no quedan sueltos, que es de donde sal
 - `TopicListItem` y el DTO web `Topic`: `gradeLevel: string | null` se reemplaza por `gradeLevels: readonly string[]` (ordenado por `sort_order`).
 - `GET /topics?gradeLevel=` y `findTopicsByCourseIds(…, gradeLevel)` filtran con `EXISTS (topic_grades)`; sin filtro devuelven todos los temas con su lista de grados (un `array_agg` con `left join`, sin N+1).
 - `exams.repository.getTopicsForCourses(courseIds, gradeLevel)` usa el mismo `EXISTS`.
-- `GET /bank/questions/summary` y `countByCourseAndTopic` se eliminan: ningún consumidor queda en la web tras las carpetas (`rg` en `apps/web/src` solo encuentra un comentario). `BankTopicQuestionCount` sale de `packages/shared`.
+- `GET /bank/questions/summary` y `countByCourseAndTopic` se eliminan: ningún consumidor queda en la web tras las carpetas (`rg` en `apps/web/src` solo encuentra un comentario). `BankTopicQuestionCount` sale de `bank-repository.port.ts`, donde estaba declarada; `packages/shared` no cambia.
 - Carpetas: `SeedTopicRow` pierde `gradeLevel`; `folderNameForTopic` y `dedupeSiblingNames` desaparecen porque dos temas de un curso ya no pueden compartir nombre (el `clamp` a 80 caracteres se mantiene). La siembra crea una carpeta por tema, nombre igual al del tema.
 - `GRADE_LEVEL_LABELS` se queda en `packages/shared` (lo usa la web); el API deja de generar copy con grado.
 - AI (`topicId` + `gradeLevel` independientes) y `validate-question-taxonomy` no cambian.
