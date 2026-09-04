@@ -47,6 +47,22 @@ export class LoginComponent {
     // token in localStorage) — e.g. reopening the tab or a bookmark to /login.
     if (this.authService.isAuthenticated()) {
       this.router.navigateByUrl('/app');
+      return;
+    }
+
+    // The bare root domain (`creaexamen.com`, no subdomain) can't see a
+    // tenant subdomain's localStorage — different origin. If this browser
+    // has logged into a tenant before (the `lastTenant` cookie, set by
+    // AuthService.login()), send it there instead of asking for credentials
+    // again; that subdomain's own LoginComponent constructor (this same
+    // check, `isAuthenticated()`) then decides if the session is still good.
+    const hostname = window.location.hostname;
+    if (isTenantScopedHost(hostname) && extractTenantSlug(hostname) === null) {
+      this.authService.getLastTenant().subscribe(({ slug }) => {
+        if (slug) {
+          window.location.href = `https://${slug}${TENANT_ROOT_DOMAIN}/login`;
+        }
+      });
     }
   }
 

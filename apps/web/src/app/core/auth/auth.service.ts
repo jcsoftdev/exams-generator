@@ -1,7 +1,7 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { MeResponseDto, Role } from '@exams-generator/shared';
+import { LastTenantResponseDto, MeResponseDto, Role } from '@exams-generator/shared';
 import { environment } from '../../../environments/environment';
 import { decodeJwtPayload } from './jwt.util';
 import {
@@ -37,9 +37,27 @@ export class AuthService {
   );
 
   login(credentials: LoginCredentials): Observable<LoginResponse> {
+    // `withCredentials` so the browser stores the (non-sensitive) lastTenant
+    // cookie the API sets on this response — see `getLastTenant()`. The
+    // access token itself still travels only in the response body, never a
+    // cookie.
     return this.http
-      .post<LoginResponse>(`${environment.apiBaseUrl}/auth/login`, credentials)
+      .post<LoginResponse>(`${environment.apiBaseUrl}/auth/login`, credentials, {
+        withCredentials: true,
+      })
       .pipe(tap((response) => this.setToken(response.accessToken)));
+  }
+
+  /**
+   * Which tenant subdomain this browser last logged into, if any — read from
+   * the `lastTenant` cookie via `GET /auth/last-tenant`. Lets the root
+   * domain's /login page (which can't see a tenant subdomain's localStorage)
+   * offer a redirect instead of asking for credentials again.
+   */
+  getLastTenant(): Observable<LastTenantResponseDto> {
+    return this.http.get<LastTenantResponseDto>(`${environment.apiBaseUrl}/auth/last-tenant`, {
+      withCredentials: true,
+    });
   }
 
   logout(): void {

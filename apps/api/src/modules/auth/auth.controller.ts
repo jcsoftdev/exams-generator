@@ -5,15 +5,19 @@ import {
   Get,
   HttpCode,
   Post,
+  Req,
+  Res,
   UnauthorizedException,
   UseGuards,
 } from "@nestjs/common";
 import { Throttle } from "@nestjs/throttler";
+import type { Request, Response } from "express";
 import {
   ExchangeCodeRequestDto,
   ExchangeCodeResponseDto,
   ExchangeTokenRequestDto,
   ExchangeTokenResponseDto,
+  LastTenantResponseDto,
   LoginRequestDto,
   LoginResponseDto,
   MeResponseDto,
@@ -23,6 +27,7 @@ import { JwtAuthGuard } from "./jwt-auth.guard";
 import { AuthService } from "./auth.service";
 import { AuthTokenPayload, InvalidTokenError, TokenService } from "./token.service";
 import { LoginExchangeService } from "./login-exchange.service";
+import { LAST_TENANT_COOKIE_NAME, lastTenantCookieOptions } from "./cookie.util";
 
 @Controller("auth")
 export class AuthController {
@@ -37,11 +42,26 @@ export class AuthController {
   // 5 attempts/min per IP — tighter than the global default, since this is
   // the one endpoint brute-force actually targets.
   @Throttle({ default: { ttl: 60_000, limit: 5 } })
-  async login(@Body() body: LoginRequestDto): Promise<LoginResponseDto> {
+  async login(
+    @Body() body: LoginRequestDto,
+    @Res({ passthrough: true }) res: Response,
+  ): Promise<LoginResponseDto> {
     if (!body?.email || !body?.password) {
       throw new BadRequestException("email and password are required");
     }
-    return this.authService.login(body.email, body.password);
+    const response = await this.authService.login(body.email, body.password);
+    // Never for platform staff (`tenantSlug: null`) — there's no subdomain to
+    // hint at, and clearing any stale cookie from a prior tenant login on
+    // this same browser avoids offering a redirect to the wrong tenant.
+    const { maxAge, ...cookieOptions } = lastTenantCookieOptions();
+    if (response.tenantSlug) {
+      res.cookie(LAST_TENANT_COOKIE_NAME, response.tenantSlug, { ...cookieOptions, maxAge });
+    } else {
+      // `clearCookie` sets its own past-dated `Expires`; passing `maxAge`
+      // here is deprecated on Express 4 and a no-op on 5.
+      res.clearCookie(LAST_TENANT_COOKIE_NAME, cookieOptions);
+    }
+    return response;
   }
 
   // Cross-origin login handoff, step 1: the caller already holds a valid
@@ -104,5 +124,16 @@ export class AuthController {
     // `user.sub` comes from the verified JWT, never from a client-supplied
     // param — see `AuthService.me()`.
     return this.authService.me(user.sub);
+  }
+
+  // Public and unauthenticated by design: the root domain's /login page
+  // calls this BEFORE any credentials exist in that browser context, to
+  // learn which tenant subdomain (if any) to offer a redirect to. Reads
+  // only the non-sensitive `lastTenant` cookie set by `login()` above —
+  // never touches the JWT, so this route can't be used to check whether a
+  // session is still valid, only which tenant it last belonged to.
+  @Get("last-tenant")
+  lastTenant(@Req() req: Request): LastTenantResponseDto {
+    return { slug: req.cookies?.[LAST_TENANT_COOKIE_NAME] ?? null };
   }
 }

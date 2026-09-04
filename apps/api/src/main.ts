@@ -3,6 +3,7 @@ import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { NestExpressApplication } from "@nestjs/platform-express";
 import compression from "compression";
+import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import { Logger } from "nestjs-pino";
 import { AppModule } from "./app.module";
@@ -25,15 +26,23 @@ async function bootstrap() {
   // `pnpm deploy --prod` isolated bundle only carries direct deps, and a
   // transitive import crash-loops prod with `Cannot find module`.
   app.use(compression({ filter: shouldCompress }));
+  // Parses the `Cookie` request header into `req.cookies` — needed only for
+  // the non-sensitive `lastTenant` hint (see auth/cookie.util.ts). Auth
+  // itself is still Bearer-token-in-header (apps/web auth.interceptor);
+  // no session or credential ever lives in a cookie.
+  app.use(cookieParser());
   // The web app now lives on a tenant subdomain (`{slug}.creaexamen.com`)
   // while the API is centralized on `api.creaexamen.com` — no longer
-  // same-origin, so cross-origin browser reads need explicit CORS. Auth is
-  // Bearer-token-in-header (see apps/web auth.interceptor), never cookies,
-  // so `credentials` stays false — no `Access-Control-Allow-Credentials`
-  // needed and no CSRF exposure from enabling this.
+  // same-origin, so cross-origin browser reads need explicit CORS.
+  // `credentials: true` is required for the browser to send/store the
+  // `lastTenant` cookie across that origin split — it does NOT enable
+  // cookie-based auth (still Bearer-token-in-header) and carries no CSRF
+  // exposure of its own, since the cookie is non-sensitive (a tenant slug,
+  // never the access token) and every state-changing route still requires
+  // the bearer token.
   app.enableCors({
     origin: [/^https:\/\/([a-z0-9-]+\.)?creaexamen\.com$/],
-    credentials: false,
+    credentials: true,
   });
   // Safety net for any FUTURE class-based DTO (class-validator decorators).
   // Every DTO today (`LoginRequestDto` etc., see @exams-generator/shared) is

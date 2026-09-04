@@ -1,7 +1,9 @@
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
+import cookieParser from "cookie-parser";
 import request from "supertest";
 import { Role } from "@exams-generator/shared";
+import { LAST_TENANT_COOKIE_NAME } from "./cookie.util";
 import {
   closeDbPool,
   createTenantFixture,
@@ -32,6 +34,7 @@ describe("Auth (e2e)", () => {
     }).compile();
 
     app = moduleRef.createNestApplication();
+    app.use(cookieParser());
     await app.init();
 
     tenantA = await createTenantFixture();
@@ -99,6 +102,46 @@ describe("Auth (e2e)", () => {
         .send({ email: "nobody@test.local", password: "whatever" });
 
       expect(res.status).toBe(401);
+    });
+
+    it("sets a lastTenant cookie carrying the slug, never the access token", async () => {
+      const res = await request(app.getHttpServer())
+        .post("/auth/login")
+        .send({ email: schoolAdminTenantA.email, password: schoolAdminTenantA.plainPassword });
+
+      const setCookie = res.headers["set-cookie"] as unknown as string[];
+      const lastTenantCookie = setCookie.find((c) => c.startsWith(`${LAST_TENANT_COOKIE_NAME}=`));
+      expect(lastTenantCookie).toContain(`${LAST_TENANT_COOKIE_NAME}=${tenantA.slug}`);
+      expect(lastTenantCookie).toMatch(/HttpOnly/);
+      expect(lastTenantCookie).not.toContain(res.body.accessToken);
+    });
+
+    it("clears any lastTenant cookie for a tenant-less platform user", async () => {
+      const res = await request(app.getHttpServer())
+        .post("/auth/login")
+        .send({ email: platformAdmin.email, password: platformAdmin.plainPassword });
+
+      const setCookie = (res.headers["set-cookie"] as unknown as string[] | undefined) ?? [];
+      const lastTenantCookie = setCookie.find((c) => c.startsWith(`${LAST_TENANT_COOKIE_NAME}=`));
+      expect(lastTenantCookie).toContain(`${LAST_TENANT_COOKIE_NAME}=;`);
+    });
+  });
+
+  describe("GET /auth/last-tenant", () => {
+    it("returns the slug carried by the lastTenant cookie", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/auth/last-tenant")
+        .set("Cookie", [`${LAST_TENANT_COOKIE_NAME}=${tenantA.slug}`]);
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual({ slug: tenantA.slug });
+    });
+
+    it("returns a null slug when no lastTenant cookie is present", async () => {
+      const res = await request(app.getHttpServer()).get("/auth/last-tenant");
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual({ slug: null });
     });
   });
 

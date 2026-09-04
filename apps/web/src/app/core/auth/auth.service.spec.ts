@@ -47,10 +47,25 @@ describe('AuthService', () => {
     const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`);
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ email: 'teacher@school.dev', password: 'secret' });
+    // The API sets the (non-sensitive) lastTenant cookie on this response —
+    // the browser only stores it if the request carried credentials.
+    expect(req.request.withCredentials).toBe(true);
     req.flush({
       accessToken: buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP }),
       tenantSlug: 'colegio-demo',
     });
+  });
+
+  it('getLastTenant() reads /auth/last-tenant with credentials, for the root-domain login page', () => {
+    let result: { slug: string | null } | undefined;
+    service.getLastTenant().subscribe((res) => (result = res));
+
+    const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/last-tenant`);
+    expect(req.request.method).toBe('GET');
+    expect(req.request.withCredentials).toBe(true);
+    req.flush({ slug: 'colegio-demo' });
+
+    expect(result).toEqual({ slug: 'colegio-demo' });
   });
 
   it('stores the accessToken in localStorage and exposes role/isAuthenticated on success', () => {

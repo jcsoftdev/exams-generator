@@ -30,6 +30,7 @@ function setup(
     isAuthenticated?: boolean;
     loginImpl?: (...a: unknown[]) => unknown;
     requestExchangeCodeImpl?: (...a: unknown[]) => unknown;
+    getLastTenantImpl?: (...a: unknown[]) => unknown;
   } = {},
 ) {
   const login = vi.fn(opts.loginImpl ?? (() => of({ accessToken: 'jwt', tenantSlug: null })));
@@ -37,11 +38,15 @@ function setup(
     opts.requestExchangeCodeImpl ?? (() => of({ code: 'one-time-code' })),
   );
   const isAuthenticated = vi.fn(() => opts.isAuthenticated ?? false);
+  const getLastTenant = vi.fn(opts.getLastTenantImpl ?? (() => of({ slug: null })));
   const navigateByUrl = vi.fn();
   TestBed.configureTestingModule({
     imports: [LoginComponent],
     providers: [
-      { provide: AuthService, useValue: { login, requestExchangeCode, isAuthenticated } },
+      {
+        provide: AuthService,
+        useValue: { login, requestExchangeCode, isAuthenticated, getLastTenant },
+      },
       { provide: Router, useValue: { navigateByUrl } },
       {
         provide: ActivatedRoute,
@@ -54,7 +59,15 @@ function setup(
   const fixture = TestBed.createComponent(LoginComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
-  return { fixture, compiled, login, requestExchangeCode, isAuthenticated, navigateByUrl };
+  return {
+    fixture,
+    compiled,
+    login,
+    requestExchangeCode,
+    isAuthenticated,
+    getLastTenant,
+    navigateByUrl,
+  };
 }
 
 function typeInto(compiled: HTMLElement, testid: string, value: string) {
@@ -226,6 +239,54 @@ describe('LoginComponent', () => {
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="login-error"]')).toBeTruthy();
+    });
+  });
+
+  describe('root-domain last-tenant detection', () => {
+    afterEach(() => restoreLocation());
+
+    it('redirects to the last-used tenant subdomain on the bare root domain', () => {
+      setHostname('creaexamen.com');
+      const { getLastTenant } = setup({
+        getLastTenantImpl: () => of({ slug: 'colegio-demo' }),
+      });
+
+      expect(getLastTenant).toHaveBeenCalled();
+      expect(window.location.href).toBe('https://colegio-demo.creaexamen.com/login');
+    });
+
+    it('stays on the login form when no last tenant is known', () => {
+      setHostname('creaexamen.com');
+      const { compiled, getLastTenant } = setup({
+        getLastTenantImpl: () => of({ slug: null }),
+      });
+
+      expect(getLastTenant).toHaveBeenCalled();
+      expect(compiled.querySelector('[data-testid="login-submit"]')).toBeTruthy();
+    });
+
+    it('does not check last-tenant on a tenant subdomain — it already has its own localStorage session (or not)', () => {
+      setHostname('colegio-demo.creaexamen.com');
+      const { getLastTenant } = setup();
+
+      expect(getLastTenant).not.toHaveBeenCalled();
+    });
+
+    it.each(['localhost', 'exams-generator-fabvti-fe6ea2-45-8-132-213.sslip.io'])(
+      'does not check last-tenant on %s — outside the tenant-subdomain scheme entirely',
+      (hostname) => {
+        setHostname(hostname);
+        const { getLastTenant } = setup();
+
+        expect(getLastTenant).not.toHaveBeenCalled();
+      },
+    );
+
+    it('skips the last-tenant check when a valid local session already redirects to /app', () => {
+      setHostname('creaexamen.com');
+      const { getLastTenant } = setup({ isAuthenticated: true });
+
+      expect(getLastTenant).not.toHaveBeenCalled();
     });
   });
 });

@@ -39,23 +39,65 @@ describe("AuthController", () => {
   });
 
   describe("login", () => {
+    function fakeRes() {
+      return { cookie: jest.fn(), clearCookie: jest.fn() };
+    }
+
     it("delegates to AuthService.login and returns its result", async () => {
       authService.login.mockResolvedValue({ accessToken: "signed-token", tenantSlug: "colegio-demo" });
 
-      const result = await controller.login({ email: "a@b.com", password: "pw" });
+      const result = await controller.login({ email: "a@b.com", password: "pw" }, fakeRes() as never);
 
       expect(authService.login).toHaveBeenCalledWith("a@b.com", "pw");
       expect(result).toEqual({ accessToken: "signed-token", tenantSlug: "colegio-demo" });
     });
 
     it("throws BadRequestException when email is missing", async () => {
-      await expect(controller.login({ email: "", password: "pw" })).rejects.toThrow(BadRequestException);
+      await expect(controller.login({ email: "", password: "pw" }, fakeRes() as never)).rejects.toThrow(
+        BadRequestException,
+      );
       expect(authService.login).not.toHaveBeenCalled();
     });
 
     it("throws BadRequestException when password is missing", async () => {
-      await expect(controller.login({ email: "a@b.com", password: "" })).rejects.toThrow(BadRequestException);
+      await expect(controller.login({ email: "a@b.com", password: "" }, fakeRes() as never)).rejects.toThrow(
+        BadRequestException,
+      );
       expect(authService.login).not.toHaveBeenCalled();
+    });
+
+    it("sets the lastTenant cookie for a tenant-scoped login", async () => {
+      authService.login.mockResolvedValue({ accessToken: "signed-token", tenantSlug: "colegio-demo" });
+      const res = fakeRes();
+
+      await controller.login({ email: "a@b.com", password: "pw" }, res as never);
+
+      expect(res.cookie).toHaveBeenCalledWith("lastTenant", "colegio-demo", expect.any(Object));
+      expect(res.clearCookie).not.toHaveBeenCalled();
+    });
+
+    it("clears the lastTenant cookie for a tenant-less (platform staff) login", async () => {
+      authService.login.mockResolvedValue({ accessToken: "signed-token", tenantSlug: null });
+      const res = fakeRes();
+
+      await controller.login({ email: "a@b.com", password: "pw" }, res as never);
+
+      expect(res.clearCookie).toHaveBeenCalledWith("lastTenant", expect.any(Object));
+      expect(res.cookie).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("lastTenant", () => {
+    it("returns the slug read from the lastTenant cookie", () => {
+      const result = controller.lastTenant({ cookies: { lastTenant: "colegio-demo" } } as never);
+
+      expect(result).toEqual({ slug: "colegio-demo" });
+    });
+
+    it("returns a null slug when no cookie is present", () => {
+      const result = controller.lastTenant({ cookies: {} } as never);
+
+      expect(result).toEqual({ slug: null });
     });
   });
 
