@@ -773,7 +773,13 @@ export class BankNewComponent {
    */
   private navigateToBank(id: string): void {
     this.savedSuccessfully = true;
-    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } }).then(
+    // Back to the FOLDER, not to the bank root: /app/bank is the folder grid
+    // and it ignores router state, so landing there would drop the teacher a
+    // level above her question and swallow the reveal. Unfiled questions have
+    // no folder route to go to, so those still land on the grid.
+    const folderId = this.folderId();
+    const target = folderId === null ? ['/app/bank'] : ['/app/bank/carpeta', folderId];
+    this.router.navigate(target, { state: { createdQuestionId: id } }).then(
       (navigated) => {
         if (!navigated) {
           this.savedSuccessfully = false;

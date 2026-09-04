@@ -346,6 +346,33 @@ describe('BankNewComponent', () => {
     expect(navigate).toHaveBeenCalledWith(['/app/bank'], { state: { createdQuestionId: 'str-q' } });
   });
 
+  /**
+   * /app/bank is the folder GRID now, and it ignores router state. Landing
+   * there after a save would drop the teacher one level above her question
+   * and silently swallow the "creada" reveal, so a question filed in a folder
+   * goes back to that folder's own list.
+   */
+  it('returns to the folder it filed the question in, not to the grid', () => {
+    const { fixture, compiled, navigate } = setup();
+    (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    internals(fixture).folderId.set('trigo');
+    set(fixture, 'sGradeLevel', 'pre');
+    set(fixture, 'sCourseId', 'c1');
+    set(fixture, 'sTopicId', 't1');
+    set(fixture, 'sDifficulty', 'easy');
+    set(fixture, 'sBody', '¿Cuánto es 2+2?');
+    set(fixture, 'sAlternatives', '4\n3\n5\n6');
+    set(fixture, 'sCorrectAnswer', 'a');
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
+
+    expect(navigate).toHaveBeenCalledWith(['/app/bank/carpeta', 'trigo'], {
+      state: { createdQuestionId: 'str-q' },
+    });
+  });
+
   it('attaches a picked complement image after creating the structured question, then navigates back', () => {
     const { fixture, compiled, replaceQuestionImage, navigate } = setup();
     (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
