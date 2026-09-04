@@ -183,6 +183,21 @@ describe("0023_topic_grades migration", () => {
     // preuniversitario topic as a LEGACY row to repoint or delete
     // (`reconcileLegacyTopics`). The slug has to be lifted onto the survivor
     // before the copy goes.
+    // Group N: graded copies PLUS one copy carrying no grade at all — the shape
+    // the real bank holds for a topic someone filed without picking a year. The
+    // COALESCE sentinel in the ranking sorts it last, so it is collapsed INTO
+    // the graded canonical and contributes no `topic_grades` row of its own.
+    const nullName = `Nula ${suffix}`;
+    const null4 = await insertTopic(course.id, nullName, "secundaria_4");
+    const null5 = await insertTopic(course.id, nullName, "secundaria_5");
+    const nullBare = await insertTopic(course.id, nullName, null);
+    // Group W: its ONLY copy has no grade. Nothing to collapse, and it must end
+    // with ZERO `topic_grades` rows — the encoding of "taught across the whole
+    // stage" that `topicTaughtAt` reads as matching every grade filter. A
+    // migration that invented a row here (or dropped the topic) would turn a
+    // whole-stage topic into a single-grade one.
+    const wholeStageName = `Etapa ${suffix}`;
+    const wholeStage = await insertTopic(course.id, wholeStageName, null);
     const slugName = `Slug ${suffix}`;
     const slugSurvivor = await one<{ id: string }>(
       `insert into topics (course_id, name, slug, grade_level) values ($1, $2, null, 'secundaria_4') returning id`,
@@ -396,8 +411,26 @@ describe("0023_topic_grades migration", () => {
       [course.id],
     );
     expect(remaining.map((row) => row.id).sort()).toEqual(
-      [arit4, geo4, topic4, chain3, ejer3, dupA, longA, larg4, cyclo4, cyclo24, slugSurvivor.id].sort(),
+      [
+        arit4,
+        geo4,
+        topic4,
+        chain3,
+        ejer3,
+        dupA,
+        longA,
+        larg4,
+        cyclo4,
+        cyclo24,
+        slugSurvivor.id,
+        null4,
+        wholeStage,
+      ].sort(),
     );
+    // The grade-less copy of a graded group was collapsed away, not kept as a
+    // second row and not made canonical over the graded copies.
+    expect(remaining.map((row) => row.id)).not.toContain(nullBare);
+    expect(remaining.map((row) => row.id)).not.toContain(null5);
 
     // 1b. The doomed copy's slug was lifted onto the slug-less canonical row,
     //     so the survivor is not a legacy row for the next `seed()` to eat.
@@ -419,6 +452,13 @@ describe("0023_topic_grades migration", () => {
     expect(await gradesOf(arit4)).toEqual(["secundaria_4"]);
     expect(await gradesOf(chain3)).toEqual(["secundaria_3", "secundaria_4", "secundaria_5"]);
     expect(await gradesOf(ejer3)).toEqual(["secundaria_3", "secundaria_4", "secundaria_5"]);
+    // (a) The grade-less copy folded into the graded canonical and left no
+    //     trace: only the two REAL grades became rows. A NULL slipping through
+    //     would fail `topic_grades.grade_level NOT NULL` and abort the deploy.
+    expect(await gradesOf(null4)).toEqual(["secundaria_4", "secundaria_5"]);
+    // (b) A group whose only copy had no grade survives with NO rows at all —
+    //     "taught across the whole stage", which every grade filter matches.
+    expect(await gradesOf(wholeStage)).toEqual([]);
 
     // 3. BOTH questions are on the canonical topic, neither lost, and each
     //    kept its OWN grade_level.
