@@ -17,6 +17,21 @@
 -- regenerates against `meta/0023_snapshot.json`, finds no schema drift, and so
 -- compares this file against itself.
 
+-- Every pooled connection carries a 30 s `statement_timeout`
+-- (`POOL_STATEMENT_TIMEOUT_MS`, db/env.ts) — `runMigrations` clears it only on
+-- the connection holding the advisory lock, and `migrate()` runs its DDL on a
+-- different, still-capped one. One slow statement in this file (the collapse
+-- rewrites `questions` on a 67k-row bank) would therefore abort the whole
+-- transaction, and since prod's entrypoint is `migrate && seed && main` the
+-- container would exit and crash-loop with a timeout error that reads like a
+-- bug in the migration.
+--
+-- `LOCAL`, not `SET`: drizzle wraps every pending migration in ONE transaction
+-- (drizzle-orm/pg-core/dialect.js), so the ceiling comes back the moment this
+-- commits and the connection returns to the pool with its guard intact.
+SET LOCAL statement_timeout = 0;
+--> statement-breakpoint
+
 -- Pre-flight. Collapsing merges rows by `(course_id, name)`, so two DIFFERENT
 -- names that share one non-null `slug` inside a course survive as two rows and
 -- then fail `topics_course_id_slug_idx` at the bottom of this file with
