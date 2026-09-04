@@ -27,6 +27,7 @@ function restoreLocation(): void {
 function setup(
   opts: {
     expired?: boolean;
+    isAuthenticated?: boolean;
     loginImpl?: (...a: unknown[]) => unknown;
     requestExchangeCodeImpl?: (...a: unknown[]) => unknown;
   } = {},
@@ -35,11 +36,12 @@ function setup(
   const requestExchangeCode = vi.fn(
     opts.requestExchangeCodeImpl ?? (() => of({ code: 'one-time-code' })),
   );
+  const isAuthenticated = vi.fn(() => opts.isAuthenticated ?? false);
   const navigateByUrl = vi.fn();
   TestBed.configureTestingModule({
     imports: [LoginComponent],
     providers: [
-      { provide: AuthService, useValue: { login, requestExchangeCode } },
+      { provide: AuthService, useValue: { login, requestExchangeCode, isAuthenticated } },
       { provide: Router, useValue: { navigateByUrl } },
       {
         provide: ActivatedRoute,
@@ -52,7 +54,7 @@ function setup(
   const fixture = TestBed.createComponent(LoginComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
-  return { fixture, compiled, login, requestExchangeCode, navigateByUrl };
+  return { fixture, compiled, login, requestExchangeCode, isAuthenticated, navigateByUrl };
 }
 
 function typeInto(compiled: HTMLElement, testid: string, value: string) {
@@ -66,6 +68,11 @@ function submit(compiled: HTMLElement) {
 }
 
 describe('LoginComponent', () => {
+  it('redirects to /app immediately when a valid session already exists', () => {
+    const { navigateByUrl } = setup({ isAuthenticated: true });
+    expect(navigateByUrl).toHaveBeenCalledWith('/app');
+  });
+
   it('renders the brand promise on the dark panel', () => {
     const { compiled } = setup();
     expect(compiled.querySelector('[data-testid="login-brand-panel"]')).toBeTruthy();
