@@ -25,8 +25,9 @@ import { LucideAngularModule, Upload, Image as ImageIcon } from 'lucide-angular'
  * focus) — neither existed before; the old markup only ever reacted to a
  * native `(change)` from clicking through the `<label>`.
  *
- * Presentational only — emits the picked/dropped `File` (or `null`) and
- * leaves the object-URL preview, validation, etc. entirely to the caller.
+ * Presentational only — emits the picked/dropped `File[]` (supports multiple
+ * files and directories via `webkitdirectory`) and leaves validation etc.
+ * entirely to the caller.
  */
 @Component({
   selector: 'ui-file-upload',
@@ -58,6 +59,8 @@ import { LucideAngularModule, Upload, Image as ImageIcon } from 'lucide-angular'
           #fileInput
           type="file"
           [attr.accept]="accept()"
+          multiple
+          webkitdirectory
           class="sr-only"
           [disabled]="disabled()"
           [attr.aria-label]="label() || null"
@@ -110,14 +113,14 @@ export class FileUploadComponent {
    */
   readonly testIdPrefix = input('file-upload');
 
-  readonly fileSelected = output<File | null>();
+  readonly fileSelected = output<File[]>();
 
   private readonly fileInput = viewChild.required<ElementRef<HTMLInputElement>>('fileInput');
   protected readonly dragOver = signal(false);
 
   protected onChange(event: Event): void {
     const input = event.target as HTMLInputElement;
-    this.fileSelected.emit(input.files?.[0] ?? null);
+    this.fileSelected.emit(input.files ? Array.from(input.files) : []);
   }
 
   /**
@@ -149,6 +152,6 @@ export class FileUploadComponent {
     event.preventDefault();
     this.dragOver.set(false);
     if (this.disabled()) return;
-    this.fileSelected.emit(event.dataTransfer?.files?.[0] ?? null);
+    this.fileSelected.emit(event.dataTransfer?.files ? Array.from(event.dataTransfer.files) : []);
   }
 }

@@ -667,7 +667,8 @@ export class BankNewComponent {
   }
 
   /** L5: `ui-file-upload`'s `fileSelected` output already hands over the `File | null` directly. */
-  protected onImageSelected(file: File | null): void {
+  protected onImageSelected(files: File[]): void {
+    const file = files?.[0] ?? null;
     const previous = this.pImagePreviewUrl();
     if (previous) {
       URL.revokeObjectURL(previous);
@@ -684,9 +685,9 @@ export class BankNewComponent {
     }
   }
 
-  /** L5: same as `onImageSelected` — `ui-file-upload` emits the `File | null` directly. */
-  protected onStructuredImageSelected(file: File | null): void {
-    this.setStructuredImage(file);
+  /** L5: same as `onImageSelected` — `ui-file-upload` emits the `File[]` directly. */
+  protected onStructuredImageSelected(files: File[]): void {
+    this.setStructuredImage(files?.[0] ?? null);
     // A manual pick from the structured tab's own file input always
     // supersedes anything AI-derived.
     this.sImageFromCrop = false;

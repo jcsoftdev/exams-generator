@@ -64,28 +64,28 @@ describe('FileUploadComponent', () => {
   it('emits fileSelected when a file is picked via the native input', () => {
     const { fixture, compiled } = setup();
     fixture.detectChanges();
-    const emitted: (File | null)[] = [];
-    fixture.componentInstance.fileSelected.subscribe((f) => emitted.push(f));
+    const emitted: File[][] = [];
+    fixture.componentInstance.fileSelected.subscribe((files) => emitted.push(files));
     const file = new File(['x'], 'foto.png', { type: 'image/png' });
     const input = compiled.querySelector<HTMLInputElement>('input[type="file"]')!;
     Object.defineProperty(input, 'files', { value: [file], configurable: true });
 
     input.dispatchEvent(new Event('change'));
 
-    expect(emitted).toEqual([file]);
+    expect(emitted).toEqual([[file]]);
   });
 
   it('emits fileSelected with the dropped file — real drag-and-drop, not just the native picker', () => {
     const { fixture, compiled } = setup();
     fixture.detectChanges();
-    const emitted: (File | null)[] = [];
-    fixture.componentInstance.fileSelected.subscribe((f) => emitted.push(f));
+    const emitted: File[][] = [];
+    fixture.componentInstance.fileSelected.subscribe((files) => emitted.push(files));
     const file = new File(['x'], 'grafico.png', { type: 'image/png' });
     const dropZone = compiled.querySelector('label')!;
 
     dropZone.dispatchEvent(dropEventWith(file));
 
-    expect(emitted).toEqual([file]);
+    expect(emitted).toEqual([[file]]);
   });
 
   it('shows a visible drag-over style while a file is dragged over the control, cleared again on drop', () => {
@@ -123,8 +123,8 @@ describe('FileUploadComponent', () => {
     const { fixture, compiled } = setup();
     fixture.componentRef.setInput('disabled', true);
     fixture.detectChanges();
-    const emitted: (File | null)[] = [];
-    fixture.componentInstance.fileSelected.subscribe((f) => emitted.push(f));
+    const emitted: File[][] = [];
+    fixture.componentInstance.fileSelected.subscribe((files) => emitted.push(files));
     const dropZone = compiled.querySelector('label')!;
 
     dropZone.dispatchEvent(dropEventWith(new File(['x'], 'a.png', { type: 'image/png' })));
