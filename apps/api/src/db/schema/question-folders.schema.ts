@@ -51,8 +51,9 @@ export const questionFolders = pgTable(
     /**
      * Sibling uniqueness for NON-root folders. Postgres treats every NULL as
      * distinct in a unique index, so this one silently permits any number of
-     * same-named ROOTS — which is why the partial index below exists. Same
-     * NULL-distinct trap `topics_course_id_slug_grade_idx` documents.
+     * same-named ROOTS — which is why the partial index below exists.
+     * `question_folders_root_name_idx` is the worked example of the same
+     * NULL-distinct trap: a partial index is the only way to close it.
      */
     siblingNameIdx: uniqueIndex("question_folders_sibling_name_idx").on(
       table.tenantId,
