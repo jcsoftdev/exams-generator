@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router, provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
+import { HttpErrorResponse } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
 import { describe, it, expect, vi } from 'vitest';
 import { BankFolderNode, BankFoldersResponse, UNFILED_FOLDER_ID } from '@exams-generator/shared';
@@ -41,11 +42,29 @@ const FOLDERS: BankFolderNode[] = [
 
 async function setup(
   url = '/app/bank',
-  over: { getFoldersImpl?: () => ReturnType<BankService['getFolders']> } = {},
+  over: {
+    getFoldersImpl?: () => ReturnType<BankService['getFolders']>;
+    createFolderImpl?: () => ReturnType<BankService['createFolder']>;
+  } = {},
 ) {
   const getFolders = vi.fn(
     over.getFoldersImpl ??
       (() => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 0 })),
+  );
+
+  const createFolder = vi.fn(
+    over.createFolderImpl ??
+      ((body: { parentId: string | null; name: string }) =>
+        of({
+          id: 'nueva',
+          name: body.name,
+          parentId: body.parentId,
+          topicId: null,
+          position: 0,
+          ownCount: 0,
+          centralCount: 0,
+          children: [],
+        } satisfies BankFolderNode)),
   );
 
   TestBed.configureTestingModule({
@@ -54,7 +73,7 @@ async function setup(
         { path: 'app/bank', component: BankBrowserComponent },
         { path: 'app/bank/carpeta/:folderId', component: ListStubComponent },
       ]),
-      { provide: BankService, useValue: { getFolders } },
+      { provide: BankService, useValue: { getFolders, createFolder } },
     ],
   });
 
@@ -63,6 +82,7 @@ async function setup(
   return {
     harness,
     getFolders,
+    createFolder,
     router: TestBed.inject(Router),
     el: () => harness.routeNativeElement as HTMLElement,
   };
@@ -199,6 +219,100 @@ describe('BankBrowserComponent', () => {
     await clickCard(harness, el, 'Sin carpeta');
 
     expect(router.url).toBe('/app/bank/carpeta/' + UNFILED_FOLDER_ID);
+  });
+
+  describe('creating a folder', () => {
+    /**
+     * Creation belongs to the level the teacher is looking at, not to a menu
+     * inside one of the cards: a sibling is what she is about to make, and a
+     * per-card menu would ask her to pick a parent she is already standing in.
+     */
+    it('creates the new folder under the folder currently open', async () => {
+      const { harness, el, createFolder } = await setup('/app/bank?carpeta=colegio');
+
+      el().querySelector<HTMLButtonElement>('[data-testid="new-folder"] button')!.click();
+      harness.detectChanges();
+      const input = el().querySelector<HTMLInputElement>('[data-testid="new-folder-name"] input')!;
+      input.value = 'Simulacros';
+      input.dispatchEvent(new Event('input'));
+      harness.detectChanges();
+      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
+        new Event('submit'),
+      );
+      harness.detectChanges();
+
+      expect(createFolder).toHaveBeenCalledWith(
+        expect.objectContaining({ parentId: 'colegio', name: 'Simulacros' }),
+      );
+    });
+
+    it('creates at the root when no folder is open', async () => {
+      const { harness, el, createFolder } = await setup();
+
+      el().querySelector<HTMLButtonElement>('[data-testid="new-folder"] button')!.click();
+      harness.detectChanges();
+      const input = el().querySelector<HTMLInputElement>('[data-testid="new-folder-name"] input')!;
+      input.value = 'Colegio B';
+      input.dispatchEvent(new Event('input'));
+      harness.detectChanges();
+      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
+        new Event('submit'),
+      );
+      harness.detectChanges();
+
+      expect(createFolder).toHaveBeenCalledWith(
+        expect.objectContaining({ parentId: null, name: 'Colegio B' }),
+      );
+    });
+
+    it('ignores a blank name instead of creating an untitled folder', async () => {
+      const { harness, el, createFolder } = await setup();
+
+      el().querySelector<HTMLButtonElement>('[data-testid="new-folder"] button')!.click();
+      harness.detectChanges();
+      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
+        new Event('submit'),
+      );
+      harness.detectChanges();
+
+      expect(createFolder).not.toHaveBeenCalled();
+    });
+
+    it('closes the editor on Escape without creating anything', async () => {
+      const { harness, el, createFolder } = await setup();
+
+      el().querySelector<HTMLButtonElement>('[data-testid="new-folder"] button')!.click();
+      harness.detectChanges();
+      el()
+        .querySelector('[data-testid="new-folder-name"] input')!
+        .dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+      harness.detectChanges();
+
+      expect(el().querySelector('[data-testid="new-folder-form"]')).toBeFalsy();
+      expect(createFolder).not.toHaveBeenCalled();
+    });
+
+    it('shows the reason when the server refuses the name', async () => {
+      const { harness, el } = await setup('/app/bank', {
+        createFolderImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 409, error: { message: 'Ya existe' } })),
+      });
+
+      el().querySelector<HTMLButtonElement>('[data-testid="new-folder"] button')!.click();
+      harness.detectChanges();
+      const input = el().querySelector<HTMLInputElement>('[data-testid="new-folder-name"] input')!;
+      input.value = 'Colegio';
+      input.dispatchEvent(new Event('input'));
+      harness.detectChanges();
+      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
+        new Event('submit'),
+      );
+      harness.detectChanges();
+
+      expect(el().querySelector('[data-testid="new-folder-error"]')!.textContent).toContain(
+        'Ya existe',
+      );
+    });
   });
 
   it('surfaces a failed folder load instead of showing an empty bank', async () => {
