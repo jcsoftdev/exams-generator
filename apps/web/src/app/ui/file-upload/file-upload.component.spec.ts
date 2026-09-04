@@ -139,4 +139,29 @@ describe('FileUploadComponent', () => {
 
     expect(compiled.querySelector('input[type="file"]')?.hasAttribute('disabled')).toBe(true);
   });
+
+  /**
+   * `webkitdirectory` does not ADD folder picking, it REPLACES the dialog: with
+   * the attribute present the browser only offers a directory chooser, so a
+   * teacher can no longer pick one image — and `accept` stops being honoured.
+   * It has to be opt-in, which is what these two cover.
+   */
+  it('picks files, not folders, by default — no webkitdirectory on the native input', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    const input = compiled.querySelector('input[type="file"]')!;
+    expect(input.hasAttribute('webkitdirectory')).toBe(false);
+    expect(input.hasAttribute('multiple')).toBe(true);
+  });
+
+  it('picks folders only when directory=true', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('directory', true);
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('input[type="file"]')!.hasAttribute('webkitdirectory')).toBe(
+      true,
+    );
+  });
 });

@@ -60,7 +60,7 @@ import { LucideAngularModule, Upload, Image as ImageIcon } from 'lucide-angular'
           type="file"
           [attr.accept]="accept()"
           multiple
-          webkitdirectory
+          [attr.webkitdirectory]="directory() ? '' : null"
           class="sr-only"
           [disabled]="disabled()"
           [attr.aria-label]="label() || null"
@@ -103,6 +103,14 @@ export class FileUploadComponent {
   readonly fileName = input<string | null>(null);
   readonly disabled = input(false);
   readonly accept = input('image/*');
+  /**
+   * Opt-in folder picking. OFF by default, and that default is the whole
+   * point: `webkitdirectory` does not add a folder option next to the file
+   * one, it swaps the native dialog for a directory-only chooser and makes
+   * the browser ignore `accept`. Hardcoding it (a014513) is what stopped a
+   * teacher from picking a single image at all.
+   */
+  readonly directory = input(false);
   /** Alt text for the preview `<img>` — varies by what's actually being uploaded (exam photo vs. complement figure). */
   readonly previewAlt = input('Vista previa de la imagen');
   /**
