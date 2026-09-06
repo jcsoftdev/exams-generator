@@ -3,9 +3,10 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { FolderPlus, LucideAngularModule } from 'lucide-angular';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map } from 'rxjs';
+import { catchError, map, of } from 'rxjs';
 import { BreadcrumbComponent, BreadcrumbCrumb } from '../../../ui/breadcrumb/breadcrumb.component';
 import { BankFoldersStore } from '../folders/bank-folders.store';
+import { Topic } from '../../taxonomy/taxonomy.models';
 import {
   FolderMatch,
   childrenOf,
@@ -13,6 +14,9 @@ import {
   isLeafFolder,
   searchFolders,
 } from '../folders/folder-path';
+import { folderServesGrade, gradesInUse, topicGradesById } from '../folders/folder-grades';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { gradeLevelLabel } from '../question-display.util';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
@@ -75,6 +79,28 @@ const ROOT_CRUMB_ID = '__root__';
         </div>
       </div>
 
+      @if (grades().length > 0) {
+        <div data-testid="grade-chips" class="flex flex-wrap items-center gap-2">
+          @for (grade of grades(); track grade) {
+            <button
+              type="button"
+              data-testid="grade-chip"
+              [attr.data-grade]="grade"
+              [attr.aria-pressed]="selectedGrade() === grade"
+              class="rounded-full border px-3 py-1 text-xs transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+              [class.border-primary-500]="selectedGrade() === grade"
+              [class.bg-primary-50]="selectedGrade() === grade"
+              [class.text-tint-text]="selectedGrade() === grade"
+              [class.border-n200]="selectedGrade() !== grade"
+              [class.text-n700]="selectedGrade() !== grade"
+              (click)="toggleGrade(grade)"
+            >
+              {{ gradeLabel(grade) }}
+            </button>
+          }
+        </div>
+      }
+
       @if (creating()) {
         <form
           data-testid="new-folder-form"
@@ -103,11 +129,11 @@ const ROOT_CRUMB_ID = '__root__';
         <p data-testid="browser-error" role="alert" class="text-sm text-hard-text">
           {{ store.error() }}
         </p>
-      } @else if (searching() && visible().length === 0) {
+      } @else if (filtering() && visible().length === 0) {
         <p data-testid="browser-no-results" class="text-sm text-n600">
-          Ninguna carpeta de aquí para abajo se llama así.
+          Ninguna carpeta de aquí para abajo cumple lo que buscas.
         </p>
-      } @else if (!searching() && children().length === 0) {
+      } @else if (!filtering() && children().length === 0) {
         <p data-testid="browser-empty" class="text-sm text-n600">
           Esta carpeta todavía no tiene subcarpetas.
         </p>
@@ -163,6 +189,7 @@ const ROOT_CRUMB_ID = '__root__';
 })
 export class BankBrowserComponent {
   protected readonly store = inject(BankFoldersStore);
+  private readonly taxonomy = inject(TaxonomyService);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
 
@@ -184,6 +211,31 @@ export class BankBrowserComponent {
 
   protected readonly searching = computed(() => this.query().trim() !== '');
 
+  /**
+   * The grade chip in effect, or `null` for "todos". One at a time: a teacher
+   * prepares one grade's material at a sitting, and a multi-select would leave
+   * her reading which of five chips is still down.
+   */
+  protected readonly selectedGrade = signal<string | null>(null);
+
+  /**
+   * The topic catalog, fetched once. A folder has no grade of its own — its
+   * TOPIC is what is taught at one or more grades (`topic_grades`) — so the
+   * chips need the catalog, and a failed fetch simply means no chips rather
+   * than a broken screen: browsing never depended on it.
+   */
+  private readonly topics = toSignal(
+    this.taxonomy.getAllTopics().pipe(catchError(() => of<Topic[]>([]))),
+    { initialValue: [] as Topic[] },
+  );
+
+  private readonly topicGrades = computed(() => topicGradesById(this.topics()));
+
+  /** Only the grades this school's own tree actually reaches, in catalog order. */
+  protected readonly grades = computed(() => gradesInUse(this.store.tree(), this.topicGrades()));
+
+  protected readonly filtering = computed(() => this.searching() || this.selectedGrade() !== null);
+
   protected readonly searchPlaceholder = computed(() => {
     const path = this.path();
     return path.length === 0 ? 'Buscar en mi banco' : `Buscar en ${path[path.length - 1].name}`;
@@ -194,11 +246,27 @@ export class BankBrowserComponent {
    * is on — every match below it, each carrying the trail that says where it
    * lives. Both shapes are `FolderMatch` so the template has one loop.
    */
-  protected readonly visible = computed<readonly FolderMatch[]>(() =>
-    this.searching()
+  protected readonly visible = computed<readonly FolderMatch[]>(() => {
+    const matches = this.searching()
       ? searchFolders(this.store.tree(), this.folderId(), this.query())
-      : this.children().map((node) => ({ node, trail: [] as readonly string[] })),
-  );
+      : this.children().map((node) => ({ node, trail: [] as readonly string[] }));
+
+    const grade = this.selectedGrade();
+    if (grade === null) {
+      return matches;
+    }
+    const topicGrades = this.topicGrades();
+    return matches.filter((match) => folderServesGrade(match.node, grade, topicGrades));
+  });
+
+  protected gradeLabel(grade: string): string {
+    return gradeLevelLabel(grade);
+  }
+
+  /** Clicking the chip that is already down means "todos" again. */
+  protected toggleGrade(grade: string): void {
+    this.selectedGrade.update((current) => (current === grade ? null : grade));
+  }
 
   protected readonly crumbs = computed<readonly BreadcrumbCrumb[]>(() => [
     { id: ROOT_CRUMB_ID, label: 'Mi banco' },

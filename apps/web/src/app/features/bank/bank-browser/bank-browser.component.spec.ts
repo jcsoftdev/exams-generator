@@ -7,6 +7,8 @@ import { of, throwError } from 'rxjs';
 import { describe, it, expect, vi } from 'vitest';
 import { BankFolderNode, BankFoldersResponse, UNFILED_FOLDER_ID } from '@exams-generator/shared';
 import { BankService } from '../bank.service';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Topic } from '../../taxonomy/taxonomy.models';
 import { BankBrowserComponent } from './bank-browser.component';
 
 @Component({ selector: 'app-list-stub', standalone: true, template: 'lista' })
@@ -16,13 +18,13 @@ function folder(
   id: string,
   name: string,
   children: BankFolderNode[] = [],
-  counts: { own?: number; central?: number } = {},
+  counts: { own?: number; central?: number; topicId?: string } = {},
 ): BankFolderNode {
   return {
     id,
     name,
     parentId: null,
-    topicId: null,
+    topicId: counts.topicId ?? null,
     position: 0,
     ownCount: counts.own ?? 0,
     centralCount: counts.central ?? 0,
@@ -32,12 +34,20 @@ function folder(
 
 const FOLDERS: BankFolderNode[] = [
   folder('colegio', 'Colegio', [
-    folder('mate', 'Matemática', [folder('cuad', 'Ecuaciones cuadráticas', [], { own: 18 })], {
-      own: 142,
-      central: 1208,
-    }),
+    folder(
+      'mate',
+      'Matemática',
+      [folder('cuad', 'Ecuaciones cuadráticas', [], { own: 18, topicId: 't-cuad' })],
+      { own: 142, central: 1208, topicId: 't-mate' },
+    ),
   ]),
   folder('preuni', 'Preuniversitario'),
+];
+
+/** The catalog behind the grade chips: a folder has no grade, its TOPIC does. */
+const TOPICS: Topic[] = [
+  { id: 't-mate', name: 'Números', courseId: 'c1', gradeLevels: ['primaria_5'] },
+  { id: 't-cuad', name: 'Ecuaciones', courseId: 'c1', gradeLevels: ['secundaria_4'] },
 ];
 
 async function setup(
@@ -46,6 +56,7 @@ async function setup(
     getFoldersImpl?: () => ReturnType<BankService['getFolders']>;
     createFolderImpl?: () => ReturnType<BankService['createFolder']>;
     updateFolderImpl?: () => ReturnType<BankService['updateFolder']>;
+    getAllTopicsImpl?: () => ReturnType<TaxonomyService['getAllTopics']>;
     deleteFolderImpl?: () => ReturnType<BankService['deleteFolder']>;
   } = {},
 ) {
@@ -88,6 +99,8 @@ async function setup(
     over.deleteFolderImpl ?? (() => of({ deletedFolders: 1, unfiledQuestions: 3 })),
   );
 
+  const getAllTopics = vi.fn(over.getAllTopicsImpl ?? (() => of(TOPICS)));
+
   TestBed.configureTestingModule({
     providers: [
       provideRouter([
@@ -95,6 +108,7 @@ async function setup(
         { path: 'app/bank/carpeta/:folderId', component: ListStubComponent },
       ]),
       { provide: BankService, useValue: { getFolders, createFolder, updateFolder, deleteFolder } },
+      { provide: TaxonomyService, useValue: { getAllTopics } },
     ],
   });
 
@@ -106,6 +120,7 @@ async function setup(
     createFolder,
     updateFolder,
     deleteFolder,
+    getAllTopics,
     router: TestBed.inject(Router),
     el: () => harness.routeNativeElement as HTMLElement,
   };
@@ -550,5 +565,103 @@ describe('BankBrowserComponent — searching for a folder', () => {
     expect(el().querySelector<HTMLInputElement>('[data-testid="folder-search"] input')!.value).toBe(
       '',
     );
+  });
+});
+
+/**
+ * A teacher preparing 4° secundaria does not want the primaria half of the
+ * bank on screen. The chips come from `topic_grades`: a folder has no grade of
+ * its own, its TOPIC is what is taught at one or more grades, so the grid asks
+ * the topic catalog once and filters locally.
+ */
+describe('BankBrowserComponent — filtering by grade', () => {
+  function chip(el: () => HTMLElement, grade: string): HTMLButtonElement {
+    return el().querySelector<HTMLButtonElement>(`[data-testid="grade-chip"][data-grade="${grade}"]`)!;
+  }
+
+  it('offers only the grades the bank actually reaches', async () => {
+    const { el } = await setup();
+
+    const grades = Array.from(el().querySelectorAll('[data-testid="grade-chip"]')).map((c) =>
+      c.getAttribute('data-grade'),
+    );
+    expect(grades).toEqual(['primaria_5', 'secundaria_4']);
+  });
+
+  it('names each chip the way a teacher says it', async () => {
+    const { el } = await setup();
+
+    expect(chip(el, 'secundaria_4').textContent).toContain('4° secundaria');
+  });
+
+  it('keeps only the folders that lead to that grade', async () => {
+    const { harness, el } = await setup();
+
+    chip(el, 'secundaria_4').click();
+    harness.detectChanges();
+
+    const cards = Array.from(el().querySelectorAll('[data-testid="folder-card"]')).map(
+      (card) => card.textContent,
+    );
+    expect(cards.length).toBe(1);
+    expect(cards[0]).toContain('Colegio');
+  });
+
+  it('shows everything again when the chip is switched off', async () => {
+    const { harness, el } = await setup();
+
+    chip(el, 'secundaria_4').click();
+    harness.detectChanges();
+    chip(el, 'secundaria_4').click();
+    harness.detectChanges();
+
+    expect(el().querySelectorAll('[data-testid="folder-card"]').length).toBe(2);
+  });
+
+  it('says so when the open folder has nothing at that grade', async () => {
+    const { harness, el } = await setup('/app/bank?carpeta=preuni');
+
+    chip(el, 'secundaria_4').click();
+    harness.detectChanges();
+
+    expect(el().querySelector('[data-testid="browser-no-results"]')).toBeTruthy();
+  });
+
+  /** The filter is about grades, and the bucket has no topic to be taught at one. */
+  it('drops the unfiled bucket while a grade is chosen', async () => {
+    const { harness, el } = await setup('/app/bank', {
+      getFoldersImpl: () => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 4 }),
+    });
+
+    chip(el, 'secundaria_4').click();
+    harness.detectChanges();
+
+    const cards = Array.from(el().querySelectorAll('[data-testid="folder-card"]'));
+    expect(cards.some((c) => c.textContent?.includes('Sin carpeta'))).toBe(false);
+  });
+
+  it('narrows a search by the chosen grade too', async () => {
+    const { harness, el } = await setup();
+
+    const input = el().querySelector<HTMLInputElement>('[data-testid="folder-search"] input')!;
+    input.value = 'a';
+    input.dispatchEvent(new Event('input'));
+    harness.detectChanges();
+    chip(el, 'primaria_5').click();
+    harness.detectChanges();
+
+    const cards = Array.from(el().querySelectorAll('[data-testid="folder-card"]')).map(
+      (card) => card.textContent,
+    );
+    expect(cards.every((text) => !text?.includes('Ecuaciones cuadráticas'))).toBe(true);
+  });
+
+  /** No catalog, no chips — never a row of empty buttons. */
+  it('shows no chip row when the topics never arrive', async () => {
+    const { el } = await setup('/app/bank', {
+      getAllTopicsImpl: () => throwError(() => new Error('boom')),
+    });
+
+    expect(el().querySelector('[data-testid="grade-chips"]')).toBeFalsy();
   });
 });
