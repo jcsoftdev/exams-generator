@@ -43,9 +43,13 @@
   }
 
   @if (loading()) {
-    <div data-testid="loading-indicator" class="grid gap-2">
-      @for (i of [1, 2, 3]; track i) {
-        <div class="h-16 animate-pulse rounded-card bg-n100"></div>
+    <!-- The skeleton stands in for cards, so it is drawn on the card grid. -->
+    <div
+      data-testid="loading-indicator"
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    >
+      @for (i of [1, 2, 3, 4, 5, 6, 7, 8]; track i) {
+        <div class="h-40 animate-pulse rounded-card bg-n100"></div>
       }
     </div>
   } @else if (errorMessage()) {
@@ -73,44 +77,33 @@
       </ui-empty-state>
     </div>
   } @else {
-    <div class="flex flex-col gap-2">
+    <div
+      data-testid="exam-grid"
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    >
       @for (exam of exams(); track exam.id) {
         <!--
-          Below md the card STACKS: title on its own line, then tag + actions.
-          Side by side at 390px the actions took the width they needed and the
-          title collapsed to "Co…", so every card looked identical (audit
-          2026-08-20, M3). md (768px) is the same breakpoint the shell drawer
-          switches at.
+          A card, not a row: the exams grid mirrors the bank folder grid, so
+          the same rule applies — the card has to claim the full height of its
+          grid row, or a two-line title beside a one-line one leaves the
+          borders ragged (2026-09-06). Hence h-full here, flex-1 on the body
+          and mt-auto on the footer.
+
+          The title wraps to two lines rather than truncating. Audit
+          2026-08-20 (M3) found it cut to "Co…" at 390px when the actions
+          shared the line; on a card it owns the full width.
         -->
         <div
           data-testid="exam-row"
-          class="flex flex-col gap-2 rounded-card border border-n200 bg-surface p-3 md:flex-row md:items-center md:gap-3"
+          class="flex h-full flex-col gap-3 rounded-card border border-n200 bg-surface p-4"
         >
-          <div class="min-w-0 flex-1">
-            <p class="truncate font-medium text-n900">{{ exam.title }}</p>
-            <p data-testid="exam-meta" class="text-xs text-n500">
-              {{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas ·
-              {{ exam.versionCount }} formas
-            </p>
-          </div>
-          <div data-testid="exam-row-actions" class="flex items-center gap-2 md:gap-3">
+          <div data-testid="exam-card-header" class="flex items-start justify-between gap-2">
             <ui-tag [variant]="statusTag(exam.status)">{{ statusLabel(exam) }}</ui-tag>
-            @if (exam.status === 'ready') {
-              <div data-testid="exam-open">
-                <ui-button variant="ghost" (clicked)="open(exam)">Abrir ›</ui-button>
-              </div>
-            } @else {
-              <div data-testid="exam-continue">
-                <ui-button variant="ghost" (clicked)="continueDraft(exam)"
-                  >Seguir armando ›</ui-button
-                >
-              </div>
-            }
             <div class="relative">
               <button
                 type="button"
                 data-testid="exam-menu"
-                class="rounded-field p-2 text-n500 hover:bg-n50"
+                class="rounded-field p-1.5 text-n500 hover:bg-n50"
                 (click)="toggleMenu(exam.id)"
                 aria-label="Más acciones"
               >
@@ -136,6 +129,33 @@
                 </div>
               }
             </div>
+          </div>
+
+          <div data-testid="exam-card-body" class="min-w-0 flex-1">
+            <p data-testid="exam-title" class="line-clamp-2 font-medium text-n900">
+              {{ exam.title }}
+            </p>
+            <p data-testid="exam-meta" class="mt-1 text-xs text-n500">
+              {{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas ·
+              {{ exam.versionCount }} formas
+            </p>
+          </div>
+
+          <div
+            data-testid="exam-row-actions"
+            class="mt-auto flex items-center justify-end border-t border-n100 pt-2"
+          >
+            @if (exam.status === 'ready') {
+              <div data-testid="exam-open">
+                <ui-button variant="ghost" (clicked)="open(exam)">Abrir ›</ui-button>
+              </div>
+            } @else {
+              <div data-testid="exam-continue">
+                <ui-button variant="ghost" (clicked)="continueDraft(exam)"
+                  >Seguir armando ›</ui-button
+                >
+              </div>
+            }
           </div>
         </div>
       }

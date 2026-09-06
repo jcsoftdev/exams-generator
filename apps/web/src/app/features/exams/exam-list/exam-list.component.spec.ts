@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { NEVER, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
@@ -95,28 +95,84 @@ describe('ExamListComponent', () => {
     expect(compiled.querySelectorAll('[data-testid="tag"]').length).toBe(2);
   });
 
-  it('stacks the card below md so the title keeps the full width', () => {
-    // Audit 2026-08-20 M3: at 390px the actions ate the row and the title
-    // truncated to "Co…", so every card looked the same. md (768px) is the
-    // app's mobile breakpoint — same one the shell drawer uses.
-    const { compiled } = setup();
-    const row = compiled.querySelector('[data-testid="exam-row"]') as HTMLElement;
+  /**
+   * The exams are cards on a grid, the same shape the bank browser uses for
+   * folders — a full-width row per exam wasted the whole right half of a
+   * desktop screen and made a list of ten exams a scroll.
+   */
+  /**
+   * The skeleton has to be the shape it is standing in for. Three full-width
+   * bars collapsing into a four-column grid of cards is a visible jump on
+   * every load.
+   */
+  it('draws the loading skeleton in the same grid as the cards', () => {
+    const { compiled } = setup({ listImpl: () => NEVER });
+    const skeleton = compiled.querySelector('[data-testid="loading-indicator"]') as HTMLElement;
 
-    const classes = row.className.split(/\s+/);
-    expect(classes).toContain('flex-col');
-    expect(classes).toContain('md:flex-row');
-    // Centring only from md up: stacked, the tag must not sit centred under the title.
-    expect(classes).not.toContain('items-center');
-    expect(classes).toContain('md:items-center');
+    expect(skeleton).not.toBeNull();
+    const classes = skeleton.className.split(/\s+/);
+    expect(classes).toContain('grid-cols-1');
+    expect(classes).toContain('sm:grid-cols-2');
+    expect(classes).toContain('lg:grid-cols-3');
+    expect(classes).toContain('xl:grid-cols-4');
   });
 
-  it('keeps tag and actions together in their own group', () => {
+  it('lays the exams out as a responsive card grid', () => {
     const { compiled } = setup();
+    const grid = compiled.querySelector('[data-testid="exam-grid"]') as HTMLElement;
+
+    expect(grid).not.toBeNull();
+    const classes = grid.className.split(/\s+/);
+    expect(classes).toContain('grid');
+    expect(classes).toContain('grid-cols-1');
+    expect(classes).toContain('sm:grid-cols-2');
+    expect(classes).toContain('lg:grid-cols-3');
+    expect(classes).toContain('xl:grid-cols-4');
+  });
+
+  /**
+   * A grid item only fills its row if it says so. Without this a two-line
+   * title next to a one-line one leaves the cards ragged, which is exactly
+   * what the folder grid had to fix (2026-09-06).
+   */
+  it('gives every card the full height of its row, footer pinned to the bottom', () => {
+    const { compiled } = setup();
+    const card = compiled.querySelector('[data-testid="exam-row"]') as HTMLElement;
+    const body = compiled.querySelector('[data-testid="exam-card-body"]') as HTMLElement;
     const actions = compiled.querySelector('[data-testid="exam-row-actions"]') as HTMLElement;
 
-    expect(actions).not.toBeNull();
-    expect(actions.querySelector('[data-testid="tag"]')).not.toBeNull();
-    expect(actions.querySelector('[data-testid="exam-menu"]')).not.toBeNull();
+    expect(card.className).toContain('h-full');
+    expect(card.className).toContain('flex-col');
+    expect(body.className).toContain('flex-1');
+    expect(actions.className).toContain('mt-auto');
+  });
+
+  /**
+   * Audit 2026-08-20 M3: at 390px the title truncated to "Co…" and every card
+   * looked identical. On a card the title owns the full width and wraps to two
+   * lines instead of being cut at the first word.
+   */
+  it('wraps the title over two lines instead of truncating it', () => {
+    const { compiled } = setup();
+    const title = compiled.querySelector('[data-testid="exam-title"]') as HTMLElement;
+
+    expect(title).not.toBeNull();
+    expect(title.className).toContain('line-clamp-2');
+    expect(title.className).not.toContain('truncate');
+  });
+
+  /**
+   * On a card the status and the "⋮" menu ride the top edge together, so the
+   * status of a whole row of cards reads on one line — the scan that the old
+   * list got for free from its aligned tag column.
+   */
+  it('keeps the status tag and the menu together on the card header', () => {
+    const { compiled } = setup();
+    const header = compiled.querySelector('[data-testid="exam-card-header"]') as HTMLElement;
+
+    expect(header).not.toBeNull();
+    expect(header.querySelector('[data-testid="tag"]')).not.toBeNull();
+    expect(header.querySelector('[data-testid="exam-menu"]')).not.toBeNull();
   });
 
   it('lets the meta line wrap as words, not one word per line', () => {
