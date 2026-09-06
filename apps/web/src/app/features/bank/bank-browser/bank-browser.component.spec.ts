@@ -45,6 +45,8 @@ async function setup(
   over: {
     getFoldersImpl?: () => ReturnType<BankService['getFolders']>;
     createFolderImpl?: () => ReturnType<BankService['createFolder']>;
+    updateFolderImpl?: () => ReturnType<BankService['updateFolder']>;
+    deleteFolderImpl?: () => ReturnType<BankService['deleteFolder']>;
   } = {},
 ) {
   const getFolders = vi.fn(
@@ -67,13 +69,32 @@ async function setup(
         } satisfies BankFolderNode)),
   );
 
+  const updateFolder = vi.fn(
+    over.updateFolderImpl ??
+      ((id: string, patch: { name?: string }) =>
+        of({
+          id,
+          name: patch.name ?? 'sin nombre',
+          parentId: null,
+          topicId: null,
+          position: 0,
+          ownCount: 0,
+          centralCount: 0,
+          children: [],
+        } satisfies BankFolderNode)),
+  );
+
+  const deleteFolder = vi.fn(
+    over.deleteFolderImpl ?? (() => of({ deletedFolders: 1, unfiledQuestions: 3 })),
+  );
+
   TestBed.configureTestingModule({
     providers: [
       provideRouter([
         { path: 'app/bank', component: BankBrowserComponent },
         { path: 'app/bank/carpeta/:folderId', component: ListStubComponent },
       ]),
-      { provide: BankService, useValue: { getFolders, createFolder } },
+      { provide: BankService, useValue: { getFolders, createFolder, updateFolder, deleteFolder } },
     ],
   });
 
@@ -83,6 +104,8 @@ async function setup(
     harness,
     getFolders,
     createFolder,
+    updateFolder,
+    deleteFolder,
     router: TestBed.inject(Router),
     el: () => harness.routeNativeElement as HTMLElement,
   };
@@ -322,5 +345,136 @@ describe('BankBrowserComponent', () => {
 
     expect(el().querySelector('[data-testid="browser-error"]')).toBeTruthy();
     expect(el().querySelectorAll('[data-testid="folder-card"]').length).toBe(0);
+  });
+});
+
+/**
+ * The card's own menu is where a folder is maintained now that the grid
+ * replaced the tree: rename, add a subfolder under it, remove it. Creation of
+ * a SIBLING still lives in the header, because that one belongs to the level
+ * the teacher is standing in rather than to any card.
+ */
+describe('BankBrowserComponent — maintaining a folder from its card', () => {
+  function openCardMenu(harness: RouterTestingHarness, el: () => HTMLElement, id: string): void {
+    el()
+      .querySelector<HTMLButtonElement>(`[data-testid="card-menu"][data-folder-id="${id}"]`)!
+      .click();
+    harness.detectChanges();
+  }
+
+  function clickMenuItem(
+    harness: RouterTestingHarness,
+    el: () => HTMLElement,
+    testid: string,
+  ): void {
+    el().querySelector<HTMLButtonElement>(`[data-testid="${testid}"]`)!.click();
+    harness.detectChanges();
+  }
+
+  it('renames the folder the menu belongs to', async () => {
+    const { harness, el, updateFolder } = await setup();
+
+    openCardMenu(harness, el, 'colegio');
+    clickMenuItem(harness, el, 'card-menu-rename');
+    const input = el().querySelector<HTMLInputElement>('[data-testid="card-rename-input"]')!;
+    input.value = 'Colegio San Juan';
+    input.dispatchEvent(new Event('input'));
+    harness.detectChanges();
+    el()
+      .querySelector<HTMLFormElement>('[data-testid="card-rename-form"]')!
+      .dispatchEvent(new Event('submit'));
+    harness.detectChanges();
+
+    expect(updateFolder).toHaveBeenCalledWith('colegio', { name: 'Colegio San Juan' });
+    expect(el().textContent).toContain('Colegio San Juan');
+  });
+
+  it('says why the server refused the new name', async () => {
+    const { harness, el } = await setup('/app/bank', {
+      updateFolderImpl: () =>
+        throwError(() => new HttpErrorResponse({ status: 409, error: { message: 'Ya existe' } })),
+    });
+
+    openCardMenu(harness, el, 'colegio');
+    clickMenuItem(harness, el, 'card-menu-rename');
+    const input = el().querySelector<HTMLInputElement>('[data-testid="card-rename-input"]')!;
+    input.value = 'Preuniversitario';
+    input.dispatchEvent(new Event('input'));
+    harness.detectChanges();
+    el()
+      .querySelector<HTMLFormElement>('[data-testid="card-rename-form"]')!
+      .dispatchEvent(new Event('submit'));
+    harness.detectChanges();
+
+    expect(el().querySelector('[data-testid="folder-action-error"]')!.textContent).toContain(
+      'Ya existe',
+    );
+  });
+
+  /** "Nueva subcarpeta" is the one creation that names its parent explicitly. */
+  it('creates a subfolder under the card, not under the open level', async () => {
+    const { harness, el, createFolder } = await setup();
+
+    openCardMenu(harness, el, 'colegio');
+    clickMenuItem(harness, el, 'card-menu-subfolder');
+    const input = el().querySelector<HTMLInputElement>('[data-testid="new-folder-name"] input')!;
+    input.value = 'Secundaria';
+    input.dispatchEvent(new Event('input'));
+    harness.detectChanges();
+    el()
+      .querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!
+      .dispatchEvent(new Event('submit'));
+    harness.detectChanges();
+
+    expect(createFolder).toHaveBeenCalledWith({ parentId: 'colegio', name: 'Secundaria' });
+  });
+
+  /** Removing a folder unfiles every question under it — never silently. */
+  it('confirms before removing, naming the folder', async () => {
+    const { harness, el, deleteFolder } = await setup();
+
+    openCardMenu(harness, el, 'colegio');
+    clickMenuItem(harness, el, 'card-menu-delete');
+
+    expect(el().querySelector('[data-testid="folder-delete-confirm"]')!.textContent).toContain(
+      'Colegio',
+    );
+    expect(deleteFolder).not.toHaveBeenCalled();
+  });
+
+  it('removes the folder once the teacher confirms', async () => {
+    const { harness, el, deleteFolder } = await setup();
+
+    openCardMenu(harness, el, 'colegio');
+    clickMenuItem(harness, el, 'card-menu-delete');
+    el()
+      .querySelector<HTMLButtonElement>('[data-testid="folder-delete-confirm-yes"] button')!
+      .click();
+    harness.detectChanges();
+
+    expect(deleteFolder).toHaveBeenCalledWith('colegio');
+    expect(el().querySelector('[data-testid="folder-removed-notice"]')!.textContent).toContain('3');
+  });
+
+  it('keeps the folder when the confirmation is dismissed', async () => {
+    const { harness, el, deleteFolder } = await setup();
+
+    openCardMenu(harness, el, 'colegio');
+    clickMenuItem(harness, el, 'card-menu-delete');
+    el().querySelector<HTMLButtonElement>('[data-testid="folder-delete-cancel"] button')!.click();
+    harness.detectChanges();
+
+    expect(deleteFolder).not.toHaveBeenCalled();
+    expect(el().querySelectorAll('[data-testid="folder-card"]').length).toBe(2);
+  });
+
+  it('gives the unfiled bucket no menu at all', async () => {
+    const { el } = await setup('/app/bank', {
+      getFoldersImpl: () => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 4 }),
+    });
+
+    expect(
+      el().querySelector(`[data-testid="card-menu"][data-folder-id="${UNFILED_FOLDER_ID}"]`),
+    ).toBeFalsy();
   });
 });

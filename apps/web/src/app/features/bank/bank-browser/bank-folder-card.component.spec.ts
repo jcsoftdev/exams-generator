@@ -118,3 +118,117 @@ describe('BankFolderCardComponent', () => {
     expect(compiled.querySelector('[data-testid="folder-card"]')!.tagName).toBe('BUTTON');
   });
 });
+
+describe('BankFolderCardComponent — the per-card menu', () => {
+  function openMenu(compiled: HTMLElement, fixture: { detectChanges(): void }): void {
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu"]')!.click();
+    fixture.detectChanges();
+  }
+
+  it('offers a menu on a real folder', () => {
+    const { compiled } = setup();
+
+    expect(compiled.querySelector('[data-testid="card-menu"]')).toBeTruthy();
+  });
+
+  /** Nothing in the menu can succeed on a bucket that is not a row anywhere. */
+  it('offers no menu on the unfiled bucket', () => {
+    const { compiled } = setup({ ...NODE, editable: false, children: [] });
+
+    expect(compiled.querySelector('[data-testid="card-menu"]')).toBeFalsy();
+  });
+
+  it('asks for a subfolder of this folder', () => {
+    const { fixture, compiled } = setup();
+    const seen: string[] = [];
+    fixture.componentInstance.subfolderRequested.subscribe((id: string) => seen.push(id));
+
+    openMenu(compiled, fixture);
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu-subfolder"]')!.click();
+
+    expect(seen).toEqual(['mate']);
+  });
+
+  it('asks for removal of this folder', () => {
+    const { fixture, compiled } = setup();
+    const seen: string[] = [];
+    fixture.componentInstance.removeRequested.subscribe((id: string) => seen.push(id));
+
+    openMenu(compiled, fixture);
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu-delete"]')!.click();
+
+    expect(seen).toEqual(['mate']);
+  });
+
+  /**
+   * Renaming happens on the card itself: the teacher is looking at the name
+   * she wants to change, and a dialog would take it off screen to type it.
+   */
+  it('renames inline, starting from the name already there', () => {
+    const { fixture, compiled } = setup();
+    const seen: string[] = [];
+    fixture.componentInstance.renamed.subscribe((name: string) => seen.push(name));
+
+    openMenu(compiled, fixture);
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu-rename"]')!.click();
+    fixture.detectChanges();
+
+    const input = compiled.querySelector<HTMLInputElement>('[data-testid="card-rename-input"]')!;
+    expect(input.value).toBe('Matemática');
+
+    input.value = 'Matemáticas';
+    input.dispatchEvent(new Event('input'));
+    compiled
+      .querySelector<HTMLFormElement>('[data-testid="card-rename-form"]')!
+      .dispatchEvent(new Event('submit'));
+    fixture.detectChanges();
+
+    expect(seen).toEqual(['Matemáticas']);
+  });
+
+  it('does not emit a rename that changes nothing', () => {
+    const { fixture, compiled } = setup();
+    const seen: string[] = [];
+    fixture.componentInstance.renamed.subscribe((name: string) => seen.push(name));
+
+    openMenu(compiled, fixture);
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu-rename"]')!.click();
+    fixture.detectChanges();
+    compiled
+      .querySelector<HTMLFormElement>('[data-testid="card-rename-form"]')!
+      .dispatchEvent(new Event('submit'));
+    fixture.detectChanges();
+
+    expect(seen).toEqual([]);
+  });
+
+  it('abandons the rename on Escape', () => {
+    const { fixture, compiled } = setup();
+    const seen: string[] = [];
+    fixture.componentInstance.renamed.subscribe((name: string) => seen.push(name));
+
+    openMenu(compiled, fixture);
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu-rename"]')!.click();
+    fixture.detectChanges();
+    compiled
+      .querySelector('[data-testid="card-rename-input"]')!
+      .dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="card-rename-form"]')).toBeFalsy();
+    expect(seen).toEqual([]);
+  });
+
+  /** Opening the menu must not also open the folder behind it. */
+  it('does not open the folder when the menu is used', () => {
+    const { fixture, compiled } = setup();
+    const seen: string[] = [];
+    fixture.componentInstance.open.subscribe((id: string) => seen.push(id));
+
+    openMenu(compiled, fixture);
+    compiled.querySelector<HTMLButtonElement>('[data-testid="card-menu-rename"]')!.click();
+    fixture.detectChanges();
+
+    expect(seen).toEqual([]);
+  });
+});

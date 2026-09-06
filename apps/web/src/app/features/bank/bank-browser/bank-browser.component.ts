@@ -9,6 +9,8 @@ import { BankFoldersStore } from '../folders/bank-folders.store';
 import { childrenOf, findFolderPath, isLeafFolder } from '../folders/folder-path';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
+import { ModalComponent } from '../../../ui/modal/modal.component';
+import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
 import { BankFolderCardComponent } from './bank-folder-card.component';
 
 /** Stands for "no folder open" in the breadcrumb, where every crumb needs an id. */
@@ -32,7 +34,14 @@ const ROOT_CRUMB_ID = '__root__';
 @Component({
   selector: 'app-bank-browser',
   standalone: true,
-  imports: [BankFolderCardComponent, BreadcrumbComponent, ButtonComponent, InputComponent, LucideAngularModule],
+  imports: [
+    BankFolderCardComponent,
+    BreadcrumbComponent,
+    ButtonComponent,
+    InputComponent,
+    ModalComponent,
+    LucideAngularModule,
+  ],
   providers: [LucideAngularModule.pick({ FolderPlus }).providers ?? []],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -57,7 +66,7 @@ const ROOT_CRUMB_ID = '__root__';
         >
           <div data-testid="new-folder-name" class="max-w-sm">
             <ui-input
-              label="Nombre de la carpeta"
+              [label]="newFolderLabel()"
               [value]="newFolderName()"
               (valueChange)="newFolderName.set($event)"
               (keydown)="onNewFolderKeydown($event)"
@@ -84,10 +93,49 @@ const ROOT_CRUMB_ID = '__root__';
       } @else {
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           @for (node of children(); track node.id) {
-            <bank-folder-card [node]="node" (open)="openFolder($event)"></bank-folder-card>
+            <bank-folder-card
+              [node]="node"
+              (open)="openFolder($event)"
+              (renamed)="renameFolder(node.id, $event)"
+              (subfolderRequested)="startCreatingUnder($event)"
+              (removeRequested)="askToRemove($event)"
+            ></bank-folder-card>
           }
         </div>
       }
+
+      @if (actionError()) {
+        <p data-testid="folder-action-error" role="alert" class="text-sm text-hard-text">
+          {{ actionError() }}
+        </p>
+      }
+
+      @if (removedNotice()) {
+        <p data-testid="folder-removed-notice" role="status" class="text-sm text-n700">
+          {{ removedNotice() }}
+        </p>
+      }
+
+      <ui-modal
+        [open]="pendingRemoval() !== null"
+        title="Quitar carpeta"
+        (openChange)="cancelRemoval()"
+      >
+        @if (pendingRemoval(); as folder) {
+          <p data-testid="folder-delete-confirm" class="text-sm text-n700">
+            Se quitará la carpeta «{{ folder.name }}» y sus {{ folder.totalCount }} preguntas
+            dejarán de verse aquí. Las preguntas no se borran del banco.
+          </p>
+        }
+        <div actions class="flex justify-end gap-2">
+          <div data-testid="folder-delete-cancel">
+            <ui-button variant="ghost" (clicked)="cancelRemoval()">Cancelar</ui-button>
+          </div>
+          <div data-testid="folder-delete-confirm-yes">
+            <ui-button variant="danger" (clicked)="confirmRemoval()">Quitar carpeta</ui-button>
+          </div>
+        </div>
+      </ui-modal>
     </div>
   `,
 })
@@ -119,13 +167,50 @@ export class BankBrowserComponent {
   protected readonly newFolderName = signal('');
   protected readonly createError = signal<string | null>(null);
 
+  /**
+   * Where the next new folder goes. `null` means the open level — the header's
+   * "Nueva carpeta" — while a card's "Nueva subcarpeta" points it at that card
+   * instead, which is the one creation that names a parent the teacher is not
+   * standing in.
+   */
+  private readonly newFolderParent = signal<string | null>(null);
+
+  protected readonly newFolderLabel = computed(() => {
+    const parent = this.newFolderParent();
+    const name = parent === null ? null : this.nodeById(parent)?.name;
+    return name === null || name === undefined
+      ? 'Nombre de la carpeta'
+      : `Nombre de la subcarpeta en «${name}»`;
+  });
+
+  /** Rename and removal failures: one line under the grid, not per card. */
+  protected readonly actionError = signal<string | null>(null);
+
+  /** The folder awaiting confirmation — the node, so the copy can name it and count it. */
+  protected readonly pendingRemoval = signal<FolderTreeNode | null>(null);
+
+  /** What the removal left behind, cleared by the next action. */
+  protected readonly removedNotice = signal<string | null>(null);
+
   constructor() {
     this.store.load();
   }
 
   protected startCreating(): void {
+    this.openCreator(null);
+  }
+
+  /** "Nueva subcarpeta" on a card: same editor, aimed one level deeper. */
+  protected startCreatingUnder(parentId: string): void {
+    this.openCreator(parentId);
+  }
+
+  private openCreator(parentId: string | null): void {
     this.createError.set(null);
+    this.actionError.set(null);
+    this.removedNotice.set(null);
     this.newFolderName.set('');
+    this.newFolderParent.set(parentId);
     this.creating.set(true);
   }
 
@@ -149,7 +234,7 @@ export class BankBrowserComponent {
       return;
     }
     this.createError.set(null);
-    this.store.create(this.folderId(), name).subscribe({
+    this.store.create(this.newFolderParent() ?? this.folderId(), name).subscribe({
       next: () => {
         this.creating.set(false);
         this.newFolderName.set('');
@@ -161,6 +246,58 @@ export class BankBrowserComponent {
             : 'No se pudo crear la carpeta.',
         ),
     });
+  }
+
+  /**
+   * Renaming is optimistic in the store, so the card shows the new name at
+   * once and a refusal rolls it back — the message then has to say why, or the
+   * name would silently snap back to the old one.
+   */
+  protected renameFolder(id: string, name: string): void {
+    this.actionError.set(null);
+    this.removedNotice.set(null);
+    this.store.rename(id, name).subscribe({
+      error: (error: HttpErrorResponse) => this.actionError.set(this.messageOf(error, 'renombrar')),
+    });
+  }
+
+  /** Asking only. Removal unfiles every question under the folder, so it is always confirmed. */
+  protected askToRemove(id: string): void {
+    this.actionError.set(null);
+    this.removedNotice.set(null);
+    this.pendingRemoval.set(this.nodeById(id) ?? null);
+  }
+
+  protected cancelRemoval(): void {
+    this.pendingRemoval.set(null);
+  }
+
+  protected confirmRemoval(): void {
+    const folder = this.pendingRemoval();
+    if (folder === null) {
+      return;
+    }
+    this.pendingRemoval.set(null);
+    this.store.remove(folder.id).subscribe({
+      next: (result) =>
+        this.removedNotice.set(
+          result.unfiledQuestions === 1
+            ? `Se quitó «${folder.name}». 1 pregunta quedó sin carpeta.`
+            : `Se quitó «${folder.name}». ${result.unfiledQuestions} preguntas quedaron sin carpeta.`,
+        ),
+      error: (error: HttpErrorResponse) => this.actionError.set(this.messageOf(error, 'quitar')),
+    });
+  }
+
+  /** Only the level on screen can be acted on, so its cards are the whole search space. */
+  private nodeById(id: string): FolderTreeNode | undefined {
+    return this.children().find((node) => node.id === id);
+  }
+
+  private messageOf(error: HttpErrorResponse, verb: string): string {
+    return typeof error.error?.message === 'string'
+      ? error.error.message
+      : `No se pudo ${verb} la carpeta.`;
   }
 
   protected openFolder(id: string): void {
