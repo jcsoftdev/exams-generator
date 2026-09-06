@@ -92,6 +92,25 @@ describe('typstMathToLatex', () => {
     );
   });
 
+  // Statements promoted out of scraped prose carry the operator the source
+  // page typed, not the Typst spelling of it. An unmapped symbol used to be
+  // dropped silently, which rendered `2 × 3` as `2 3`.
+  it('keeps a typed multiplication sign', () => {
+    expect(typstMathToLatex('4 × 17^4')).toBe('4 \\times 17^{4}');
+  });
+
+  it('keeps a typed middle dot, division sign and comparators', () => {
+    expect(typstMathToLatex('6 · 2 ÷ 3 ≤ 9 ≥ 1 ≠ 0')).toBe(
+      '6 \\cdot 2 \\div 3 \\le 9 \\ge 1 \\ne 0',
+    );
+  });
+
+  it('keeps a greek letter typed as its own character', () => {
+    // A typed greek letter is an OPERAND, so `/` takes it as the numerator on
+    // its own — `2π/3` is `2 · (π/3)`, which is what Typst renders too.
+    expect(typstMathToLatex('2π/3 + θ')).toBe('2 \\frac{\\pi}{3} + \\theta');
+  });
+
   it('treats named operators as operators, leaving their argument parens alone', () => {
     expect(typstMathToLatex('log_3 (x)')).toBe('\\log_{3} \\left(x\\right)');
     expect(typstMathToLatex('sin(x) + arcsin(y)')).toBe(
@@ -124,10 +143,27 @@ describe('typstMathToLatex', () => {
 
 describe('typstToPlainText', () => {
   it('drops the math delimiters and the in-math quoting', () => {
-    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe(
-      'El área es 36 pi cm^2 exacto',
-    );
+    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe('El área es 36 π cm^2 exacto');
     expect(typstToPlainText('$"MCD"(a, b) = 36$')).toBe('MCD(a, b) = 36');
+  });
+
+  // A harvested statement carries the call syntax Typst needs to typeset it.
+  // Left alone, the row printed `Se sabe que overline(a b c d) es igual…`,
+  // which is the markup, not the question (uni-2019-2, 2026-09-06).
+  it('unwraps the call syntax that only exists for the typesetter', () => {
+    expect(typstToPlainText('Se sabe que $overline(a b c d)$ es igual')).toBe(
+      'Se sabe que abcd es igual',
+    );
+    expect(typstToPlainText('$[a_(i j)]_(4 times 4)$ con $a_(i j) = min{i, j}$')).toBe(
+      '[a_ij]_4 × 4 con a_ij = min{i, j}',
+    );
+    expect(typstToPlainText('Determine $abs(A)$.')).toBe('Determine |A|.');
+    expect(typstToPlainText('$frac(1, n - 1)$ y $sqrt(x)$')).toBe('1/n - 1 y √(x)');
+  });
+
+  it('writes the symbol words as the glyphs they stand for', () => {
+    expect(typstToPlainText('$f: RR without {0} -> RR$')).toBe('f: ℝ ∖ {0} → ℝ');
+    expect(typstToPlainText('$n in NN$ y $1 <= n_1$')).toBe('n ∈ ℕ y 1 ≤ n_1');
   });
 
   it('collapses newlines so the result always fits one row', () => {
@@ -202,5 +238,17 @@ describe('parseTypst', () => {
   it('collapses to nothing for an empty statement', () => {
     expect(parseTypst('')).toEqual([]);
     expect(parseTypst('   ')).toEqual([{ kind: 'text', value: '   ' }]);
+  });
+
+  it('renders the names the collected-bank normaliser now writes', () => {
+    expect(typstMathToLatex('A supset.eq B')).toBe('A \\supseteq B');
+    expect(typstMathToLatex('S = nothing')).toBe('S = \\emptyset');
+    expect(typstMathToLatex('integral.cont f')).toBe('\\oint f');
+  });
+
+  it('renders those names as plain text too', () => {
+    expect(typstToPlainText('$A supset.eq B$')).toBe('A ⊇ B');
+    expect(typstToPlainText('$S = nothing$')).toBe('S = ∅');
+    expect(typstToPlainText('$integral.cont f$')).toBe('∮ f');
   });
 });

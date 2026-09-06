@@ -38,6 +38,7 @@ const SYMBOL_ATOMS: Readonly<Record<string, string>> = {
   degree: '^\\circ',
   infinity: '\\infty',
   emptyset: '\\emptyset',
+  nothing: '\\emptyset',
   diameter: '\\varnothing',
   angle: '\\angle',
   ell: '\\ell',
@@ -98,6 +99,7 @@ const SYMBOL_OPS: Readonly<Record<string, string>> = {
   subset: '\\subset',
   'subset.eq': '\\subseteq',
   supset: '\\supset',
+  'supset.eq': '\\supseteq',
   union: '\\cup',
   sect: '\\cap',
   inter: '\\cap',
@@ -157,6 +159,7 @@ const NAMED_OPERATORS: Readonly<Record<string, string>> = {
   sum: '\\sum',
   product: '\\prod',
   integral: '\\int',
+  'integral.cont': '\\oint',
 };
 
 /**
@@ -231,6 +234,74 @@ const VERBATIM_CHARS = new Set([
   '(',
   ')',
 ]);
+
+/**
+ * Operators and Greek letters typed as their own Unicode character rather
+ * than spelled out as a Typst identifier. The collected bank is full of them
+ * because its statements were promoted out of scraped prose, which carries
+ * whatever the source page typed: `4 × 17^4`, `6 · 2`, `2π/3`.
+ *
+ * Without this table `parseSymbol` falls through to its empty-string default
+ * and the glyph DISAPPEARS from the preview — `2 × 3` reading as `2 3`, a
+ * silently different expression rather than a visibly broken one.
+ *
+ * `atom: false` for the operators keeps `/` from mistaking one for a
+ * numerator, matching how the named `times`/`dot` identifiers already behave.
+ */
+const TYPED_SYMBOLS: Readonly<Record<string, string>> = {
+  '×': '\\times',
+  '÷': '\\div',
+  '·': '\\cdot',
+  '±': '\\pm',
+  '∓': '\\mp',
+  '≤': '\\le',
+  '≥': '\\ge',
+  '≠': '\\ne',
+  '≈': '\\approx',
+  '≡': '\\equiv',
+  '∞': '\\infty',
+  '−': '-',
+  '∈': '\\in',
+  '∅': '\\emptyset',
+  '°': '^\\circ',
+};
+
+/** Greek letters typed directly. Operands, so `/` can take one as a numerator. */
+const TYPED_GREEK: Readonly<Record<string, string>> = {
+  α: '\\alpha',
+  β: '\\beta',
+  γ: '\\gamma',
+  δ: '\\delta',
+  ε: '\\varepsilon',
+  ζ: '\\zeta',
+  η: '\\eta',
+  θ: '\\theta',
+  ι: '\\iota',
+  κ: '\\kappa',
+  λ: '\\lambda',
+  μ: '\\mu',
+  ν: '\\nu',
+  ξ: '\\xi',
+  π: '\\pi',
+  ρ: '\\rho',
+  σ: '\\sigma',
+  τ: '\\tau',
+  υ: '\\upsilon',
+  φ: '\\varphi',
+  χ: '\\chi',
+  ψ: '\\psi',
+  ω: '\\omega',
+  Γ: '\\Gamma',
+  Δ: '\\Delta',
+  Θ: '\\Theta',
+  Λ: '\\Lambda',
+  Ξ: '\\Xi',
+  Π: '\\Pi',
+  Σ: '\\Sigma',
+  Φ: '\\Phi',
+  Ψ: '\\Psi',
+  Ω: '\\Omega',
+};
 
 /** Single characters that need a LaTeX spelling of their own. */
 const ESCAPED_CHARS: Readonly<Record<string, string>> = {
@@ -503,6 +574,14 @@ class MathParser {
     if (multi) {
       return { tex: multi[1], atom: false, group: false };
     }
+    const greek = TYPED_GREEK[value];
+    if (greek) {
+      return { tex: greek, atom: true, group: false };
+    }
+    const typed = TYPED_SYMBOLS[value];
+    if (typed) {
+      return { tex: typed, atom: false, group: false };
+    }
     if (VERBATIM_CHARS.has(value)) {
       const isOperand = value === '[' || value === ']';
       return { tex: value, atom: isOperand, group: false };
@@ -587,6 +666,223 @@ export function typstMathToLatex(math: string): string {
 const MITEX_IMPORT_PATTERN = /^[ \t]*#import\s+"[^"]*"\s*:[^\n]*\n?/gm;
 
 /**
+ * What a symbol word looks like once it can no longer be typeset. Only the
+ * spellings a harvested statement actually uses — a name with no entry here is
+ * left as the word it already is, which reads worse than the glyph but never
+ * worse than `overline(a b c d)` did.
+ */
+const PLAIN_SYMBOLS: Readonly<Record<string, string>> = {
+  times: '×',
+  dot: '·',
+  plus: '+',
+  minus: '−',
+  'plus.minus': '±',
+  slash: '/',
+  in: '∈',
+  'in.not': '∉',
+  subset: '⊂',
+  'subset.not': '⊄',
+  union: '∪',
+  sect: '∩',
+  without: '∖',
+  forall: '∀',
+  exists: '∃',
+  and: '∧',
+  or: '∨',
+  not: '¬',
+  infinity: '∞',
+  emptyset: '∅',
+  nothing: '∅',
+  'supset.eq': '⊇',
+  'integral.cont': '∮',
+  degree: '°',
+  angle: '∠',
+  ell: 'ℓ',
+  'chevron.l': '⟨',
+  'chevron.r': '⟩',
+  'harpoons.rtlb': '⇌',
+  'arrow.r': '→',
+  RR: 'ℝ',
+  NN: 'ℕ',
+  ZZ: 'ℤ',
+  QQ: 'ℚ',
+  CC: 'ℂ',
+  alpha: 'α',
+  beta: 'β',
+  gamma: 'γ',
+  delta: 'δ',
+  theta: 'θ',
+  lambda: 'λ',
+  mu: 'μ',
+  pi: 'π',
+  rho: 'ρ',
+  sigma: 'σ',
+  phi: 'φ',
+  omega: 'ω',
+  Delta: 'Δ',
+  Omega: 'Ω',
+};
+
+/**
+ * Functions whose call syntax carries no meaning once the expression is prose:
+ * the reader of a clipped row gains nothing from `overline(a b c d)` that
+ * `abcd` does not already say.
+ */
+const TRANSPARENT_FUNCTIONS = new Set([
+  'overline',
+  'underline',
+  'upright',
+  'bold',
+  'italic',
+  'text',
+  'hat',
+  'bar',
+  'vec',
+  'arrow',
+  'tilde',
+  'macron',
+  'cancel',
+  'lr',
+  'display',
+  'inline',
+]);
+
+const PLAIN_OPERATORS: readonly (readonly [string, string])[] = [
+  ['<=>', '⇔'],
+  ['|->', '↦'],
+  ['<->', '↔'],
+  ['<=', '≤'],
+  ['>=', '≥'],
+  ['!=', '≠'],
+  ['->', '→'],
+  ['=>', '⇒'],
+  ['<-', '←'],
+];
+
+/**
+ * Splits `a, b` at the commas that belong to THIS call — a comma nested inside
+ * another call's parentheses is that call's, not ours.
+ */
+function splitArguments(inner: string): string[] {
+  const parts: string[] = [];
+  let depth = 0;
+  let start = 0;
+  for (let i = 0; i < inner.length; i += 1) {
+    const char = inner[i];
+    if (char === '(' || char === '[' || char === '{') depth += 1;
+    else if (char === ')' || char === ']' || char === '}') depth -= 1;
+    else if (char === ',' && depth === 0) {
+      parts.push(inner.slice(start, i));
+      start = i + 1;
+    }
+  }
+  parts.push(inner.slice(start));
+  return parts;
+}
+
+/**
+ * Rewrites ONE `$…$` run as prose. Deliberately not a second parser: it
+ * unwraps the call syntax and swaps the symbol words for their glyphs, so a
+ * row shows `[a_ij]_4×4` and `|A|` instead of the source that produced them.
+ * Anything it does not recognise survives as its own text.
+ */
+export function mathToPlainText(math: string): string {
+  let out = '';
+  let i = 0;
+
+  const readGroup = (): string => {
+    // Assumes `math[i]` is the opening delimiter.
+    const open = math[i];
+    const close = open === '(' ? ')' : open === '[' ? ']' : '}';
+    let depth = 0;
+    const start = i;
+    for (; i < math.length; i += 1) {
+      if (math[i] === open) depth += 1;
+      else if (math[i] === close) {
+        depth -= 1;
+        if (depth === 0) {
+          i += 1;
+          return math.slice(start + 1, i - 1);
+        }
+      }
+    }
+    return math.slice(start + 1);
+  };
+
+  while (i < math.length) {
+    const rest = math.slice(i);
+
+    const operator = PLAIN_OPERATORS.find(([token]) => rest.startsWith(token));
+    if (operator) {
+      out += operator[1];
+      i += operator[0].length;
+      continue;
+    }
+
+    // `"…"` is upright text in Typst math — a chemical formula, a unit. The
+    // quotes are the markup, the letters are the content.
+    if (math[i] === '"') {
+      const end = math.indexOf('"', i + 1);
+      out += end === -1 ? math.slice(i + 1) : math.slice(i + 1, end);
+      i = end === -1 ? math.length : end + 1;
+      continue;
+    }
+
+    const identifier = IDENT_PATTERN.exec(rest);
+    if (identifier) {
+      const name = identifier[0];
+      i += name.length;
+      if (math[i] === '(') {
+        const inner = readGroup();
+        if (name === 'frac') {
+          const [numerator, denominator] = splitArguments(inner);
+          out += `${mathToPlainText(numerator ?? '').trim()}/${mathToPlainText(denominator ?? '').trim()}`;
+          continue;
+        }
+        if (name === 'sqrt') {
+          out += `√(${mathToPlainText(inner)})`;
+          continue;
+        }
+        if (name === 'abs' || name === 'norm') {
+          out += `|${mathToPlainText(inner)}|`;
+          continue;
+        }
+        if (TRANSPARENT_FUNCTIONS.has(name)) {
+          out += mathToPlainText(inner);
+          continue;
+        }
+        out += `${PLAIN_SYMBOLS[name] ?? name}(${mathToPlainText(inner)})`;
+        continue;
+      }
+      out += PLAIN_SYMBOLS[name] ?? name;
+      continue;
+    }
+
+    // `x_(i j)` and `x^(2)`: the parentheses only group for the typesetter.
+    if ((math[i] === '_' || math[i] === '^') && math[i + 1] === '(') {
+      const marker = math[i];
+      i += 1;
+      out += marker + mathToPlainText(readGroup());
+      continue;
+    }
+
+    if (math[i] === '(' || math[i] === '[' || math[i] === '{') {
+      const open = math[i];
+      const close = open === '(' ? ')' : open === '[' ? ']' : '}';
+      out += open + mathToPlainText(readGroup()) + close;
+      continue;
+    }
+
+    out += math[i];
+    i += 1;
+  }
+
+  // Typst spaces the atoms of `a b c` apart for typesetting; as prose those
+  // are one token, and a row that says `abcd` is what the sheet printed.
+  return out.replace(/\b([A-Za-z0-9]) (?=[A-Za-z0-9]\b)/g, '$1');
+}
+
+/**
  * Flattens Typst markup to one line of plain prose, dropping the `$`
  * delimiters and the `"…"` quoting inside math.
  *
@@ -605,8 +901,15 @@ export function typstToPlainText(source: string): string {
       .replace(MITEX_IMPORT_PATTERN, '')
       .replace(/#mi(?:tex)?\(\s*[`"]([\s\S]*?)[`"]\s*\)/g, '$1')
       // One pass, so an escaped `\$` becomes a literal `$` WITHOUT the next
-      // rule then stripping it as if it were a delimiter.
-      .replace(/\\\$|\$/g, (match) => (match === '\\$' ? '$' : ''))
+      // rule then stripping it as if it were a delimiter: only a REAL
+      // delimiter opens a run, and what it encloses is flattened rather than
+      // handed through with its markup still in it.
+      .replace(/\\\$|\$([^$]*)\$|\$/g, (match, math: string | undefined) => {
+        if (match === '\\$') return '$';
+        // A lone `$` is an unclosed run — drop the delimiter, keep the text
+        // after it, rather than swallowing the rest of the statement.
+        return math === undefined ? '' : mathToPlainText(math);
+      })
       .replace(/"([^"]*)"/g, '$1')
       .replace(/\s+/g, ' ')
       .trim()
