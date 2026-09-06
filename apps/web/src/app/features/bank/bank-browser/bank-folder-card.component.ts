@@ -1,14 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, input, output, signal } from '@angular/core';
-import {
-  BookOpen,
-  FolderPlus,
-  HelpCircle,
-  LucideAngularModule,
-  MoreVertical,
-  Pencil,
-  Trash2,
-} from 'lucide-angular';
+import { FolderPlus, LucideAngularModule, MoreVertical, Pencil, Trash2 } from 'lucide-angular';
 import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
+import { GLYPH_ICONS, glyphFor } from '../folders/folder-glyph';
 
 /**
  * One of the school's folders, drawn as a card in the bank grid.
@@ -34,7 +27,7 @@ import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
   imports: [LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    LucideAngularModule.pick({ BookOpen, FolderPlus, HelpCircle, MoreVertical, Pencil, Trash2 })
+    LucideAngularModule.pick({ ...GLYPH_ICONS, FolderPlus, MoreVertical, Pencil, Trash2 })
       .providers ?? [],
   ],
   template: `
@@ -57,16 +50,15 @@ import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
       >
         <span
           aria-hidden="true"
+          data-testid="card-glyph"
+          [attr.data-glyph]="glyph()"
           class="flex h-10 w-10 items-center justify-center rounded-field"
           [class.bg-primary-50]="node().editable"
           [class.text-tint-text]="node().editable"
           [class.bg-n100]="!node().editable"
           [class.text-n600]="!node().editable"
         >
-          <lucide-angular
-            [name]="node().editable ? 'book-open' : 'help-circle'"
-            class="h-5 w-5"
-          ></lucide-angular>
+          <lucide-angular [name]="glyph()" class="h-5 w-5"></lucide-angular>
         </span>
 
         <span class="flex flex-col gap-0.5">
@@ -209,6 +201,15 @@ export class BankFolderCardComponent {
    * fail, and it carries no menu at all.
    */
   protected readonly variant = computed(() => (this.node().editable ? 'folder' : 'unfiled'));
+
+  /**
+   * The subject the folder is about, read off its name — never a folder icon,
+   * which is exactly the file-manager furniture the grid took out. The unfiled
+   * bucket is not a subject, so it keeps the mark that says it is a leftover.
+   */
+  protected readonly glyph = computed(() =>
+    this.node().editable ? glyphFor(this.node().name) : 'help-circle',
+  );
 
   protected readonly trailLabel = computed(() => this.trail().join(' › '));
 

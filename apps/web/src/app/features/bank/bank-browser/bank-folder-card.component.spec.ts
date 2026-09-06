@@ -232,3 +232,34 @@ describe('BankFolderCardComponent — the per-card menu', () => {
     expect(seen).toEqual([]);
   });
 });
+
+/**
+ * The redesign's rule: no folder icons. A teacher scanning the grid is looking
+ * for a subject, and the glyph is what she reads before the name.
+ */
+describe('BankFolderCardComponent — the subject glyph', () => {
+  it('gives a folder the glyph of its subject', () => {
+    const { compiled } = setup();
+
+    expect(compiled.querySelector('[data-testid="card-glyph"]')!.getAttribute('data-glyph')).toBe(
+      'sigma',
+    );
+  });
+
+  it('tells two subjects apart', () => {
+    const { compiled } = setup({ ...NODE, name: 'Historia' });
+
+    expect(compiled.querySelector('[data-testid="card-glyph"]')!.getAttribute('data-glyph')).toBe(
+      'landmark',
+    );
+  });
+
+  /** The bucket is not a subject — it keeps the mark that says it is a leftover. */
+  it('keeps its own mark on the unfiled bucket', () => {
+    const { compiled } = setup({ ...NODE, name: 'Sin carpeta', editable: false, children: [] });
+
+    expect(compiled.querySelector('[data-testid="card-glyph"]')!.getAttribute('data-glyph')).toBe(
+      'help-circle',
+    );
+  });
+});
