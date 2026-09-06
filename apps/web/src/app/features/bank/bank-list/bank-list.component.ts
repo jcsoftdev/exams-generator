@@ -20,7 +20,6 @@ import {
 } from 'lucide-angular';
 import { Difficulty, UNFILED_FOLDER_ID } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
-import { BannerComponent } from '../../../ui/banner/banner.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
@@ -199,7 +198,6 @@ const HIGHLIGHT_DURATION_MS = 4000;
   standalone: true,
   imports: [
     ButtonComponent,
-    BannerComponent,
     ModalComponent,
     InputComponent,
     SelectComponent,

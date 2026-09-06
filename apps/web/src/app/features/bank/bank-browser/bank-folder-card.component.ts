@@ -26,22 +26,27 @@ import { GLYPH_ICONS, glyphFor } from '../folders/folder-glyph';
   standalone: true,
   imports: [LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // The card is a grid item, and a grid item only fills its row if it says so
+  // all the way down: host, wrapper and button. Without this each tile is as
+  // tall as its own name, and a row of two-line names next to one-line names
+  // reads as ragged rather than as a grid.
+  host: { class: 'block h-full' },
   providers: [
     LucideAngularModule.pick({ ...GLYPH_ICONS, FolderPlus, MoreVertical, Pencil, Trash2 })
       .providers ?? [],
   ],
   template: `
-    <div class="relative">
+    <div class="relative h-full">
       <button
         type="button"
         data-testid="folder-card"
         [attr.data-variant]="variant()"
-        class="flex w-full flex-col gap-3 rounded-card p-4 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+        class="flex h-full w-full flex-col gap-3 rounded-card p-4 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
         [class.border]="true"
         [class.border-n200]="node().editable"
         [class.bg-surface]="node().editable"
         [class.hover:border-primary-300]="node().editable"
-        [class.hover:bg-primary-50]="node().editable"
+        [class.hover:bg-n100]="node().editable"
         [class.border-dashed]="!node().editable"
         [class.border-n300]="!node().editable"
         [class.bg-n50]="!node().editable"
@@ -61,7 +66,7 @@ import { GLYPH_ICONS, glyphFor } from '../folders/folder-glyph';
           <lucide-angular [name]="glyph()" class="h-5 w-5"></lucide-angular>
         </span>
 
-        <span class="flex flex-col gap-0.5">
+        <span data-testid="card-body" class="flex flex-1 flex-col gap-0.5">
           @if (trail().length > 0) {
             <span data-testid="card-trail" class="text-[12px] text-n500">{{ trailLabel() }}</span>
           }
@@ -75,7 +80,9 @@ import { GLYPH_ICONS, glyphFor } from '../folders/folder-glyph';
           }
         </span>
 
-        <span class="flex items-center gap-1.5 border-t border-n100 pt-2.5 text-xs text-n600">
+        <span
+          class="mt-auto flex items-center gap-1.5 border-t border-n100 pt-2.5 text-xs text-n600"
+        >
           <span data-testid="card-own">
             <span class="font-semibold text-n700">{{ node().ownCount }}</span> propias
           </span>

@@ -54,3 +54,22 @@ function toPascal(kebab: string): string {
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join('');
 }
+
+/** The real seeded catalog, where a word from two subjects meets one folder name. */
+describe('glyphFor — the names the seeded catalog actually produces', () => {
+  it('reads "Ciencias Sociales" as social studies, not as a laboratory', () => {
+    expect(glyphFor('Ciencias Sociales')).toBe('landmark');
+  });
+
+  it('still reads "Ciencia y Tecnología" as a laboratory', () => {
+    expect(glyphFor('Ciencia y Tecnología')).toBe('flask-conical');
+  });
+
+  it('reads "Educación Religiosa", not only the word "religión"', () => {
+    expect(glyphFor('Educación Religiosa')).toBe('church');
+  });
+
+  it('keeps "Educación Física" a dumbbell', () => {
+    expect(glyphFor('Educación Física')).toBe('dumbbell');
+  });
+});

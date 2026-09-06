@@ -197,7 +197,8 @@
       </div>
 
       <!-- Panel -->
-      <div>
+      <!-- Sticks to the top of the scroller (<main>) so the preview stays visible while the list scrolls. -->
+      <div class="lg:sticky lg:top-0 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-y-auto">
         @if (selected(); as q) {
           <div data-testid="bank-panel" class="rounded-card border border-n200 bg-surface p-4">
             @if (editing() && !isCentral(q)) {

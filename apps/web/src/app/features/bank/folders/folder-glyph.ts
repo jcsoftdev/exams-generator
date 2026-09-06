@@ -45,8 +45,9 @@ export const GLYPH_ICONS = {
  * survives a teacher renaming it.
  *
  * ORDER MATTERS. The first rule that matches wins, which is what keeps
- * "Educación Física" a dumbbell instead of a laboratory flask, and "Ciencia y
- * Tecnología" a flask instead of a laptop.
+ * "Educación Física" a dumbbell instead of a laboratory flask, "Ciencias
+ * Sociales" a landmark instead of a flask, and "Ciencia y Tecnología" a flask
+ * instead of a laptop.
  */
 const RULES: readonly { readonly icon: string; readonly words: readonly string[] }[] = [
   {
@@ -54,14 +55,14 @@ const RULES: readonly { readonly icon: string; readonly words: readonly string[]
     words: ['matemat', 'algebra', 'aritmet', 'geometr', 'trigonom', 'calculo', 'estadist'],
   },
   { icon: 'dumbbell', words: ['educacion fisica', 'deporte', 'psicomotr'] },
+  { icon: 'landmark', words: ['historia', 'civic', 'ciudadan', 'sociales'] },
   { icon: 'flask-conical', words: ['ciencia', 'quimic', 'biolog', 'naturales', 'fisica', 'anatom'] },
   { icon: 'laptop', words: ['computac', 'informat', 'tecnolog', 'robotic'] },
-  { icon: 'landmark', words: ['historia', 'civic', 'ciudadan', 'sociales'] },
   { icon: 'globe', words: ['geograf', 'ambiente', 'ecolog'] },
   { icon: 'languages', words: ['ingles', 'idioma', 'quechua', 'frances'] },
   { icon: 'palette', words: ['arte', 'dibujo', 'plastic'] },
   { icon: 'music', words: ['music'] },
-  { icon: 'church', words: ['religion', 'catequesis'] },
+  { icon: 'church', words: ['religio', 'catequesis'] },
 ];
 
 /** What an unrecognised folder wears — still a subject glyph, never a folder. */

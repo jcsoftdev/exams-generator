@@ -117,6 +117,39 @@ describe('BankFolderCardComponent', () => {
 
     expect(compiled.querySelector('[data-testid="folder-card"]')!.tagName).toBe('BUTTON');
   });
+
+  /**
+   * The grid stretches its items, but the card is drawn on the inner button —
+   * so without an explicit full height the border stops at the text and a row
+   * of cards ends up ragged, one short card beside a two-line title (audit
+   * 2026-09-06). Every box from the host down to the button has to inherit the
+   * row's height for the borders to line up.
+   */
+  it('carries the row height all the way down to the drawn card', () => {
+    const { fixture, compiled } = setup();
+
+    const host = fixture.nativeElement as HTMLElement;
+    const card = compiled.querySelector<HTMLElement>('[data-testid="folder-card"]')!;
+
+    expect(host.className).toContain('h-full');
+    expect(card.parentElement!.className).toContain('h-full');
+    expect(card.className).toContain('h-full');
+  });
+
+  /**
+   * With the card stretched, the two counts have to sit on the bottom edge of
+   * every card instead of floating right under a short title — otherwise the
+   * cards are the same height but the footers still read as a ragged line.
+   */
+  it('pins the counts to the bottom of the card', () => {
+    const { compiled } = setup();
+
+    const body = compiled.querySelector('[data-testid="card-body"]')!;
+    const footer = compiled.querySelector('[data-testid="card-own"]')!.parentElement!;
+
+    expect(body.className).toContain('flex-1');
+    expect(footer.className).toContain('mt-auto');
+  });
 });
 
 describe('BankFolderCardComponent — the per-card menu', () => {
