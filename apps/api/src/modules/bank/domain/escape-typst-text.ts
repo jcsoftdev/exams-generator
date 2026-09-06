@@ -4,8 +4,16 @@ import { splitTypstMathSpans } from "./split-typst-math-spans";
  * Characters Typst reads as markup anywhere in a line. `\` is deliberately
  * absent — it has to be escaped FIRST, on its own, or it would also escape
  * the backslashes this function itself introduces.
+ *
+ * `^` is here because a caret OUTSIDE math mode is not merely printed
+ * wrong, it is fatal: Typst answers a bare hat with "unexpected hat" and
+ * fails the whole document, taking every other question on the exam with
+ * it. `promoteProseMath` wraps the carets it can prove belong to a formula
+ * and leaves the rest — a base the scrape lost, an exponent stranded by a
+ * degree sign — so the ones that reach here are exactly the ones that must
+ * print as text.
  */
-const INLINE_MARKUP = /[#$*_`@<>~[\]]/g;
+const INLINE_MARKUP = /[#$*_`@<>~^[\]]/g;
 
 /**
  * Characters Typst only reads as markup at the START of a line: `=` heading,

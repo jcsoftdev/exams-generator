@@ -1,7 +1,7 @@
 import { splitTypstMathSpans } from "./split-typst-math-spans";
 
 /** Markup characters that are only inert once backslash-escaped. */
-const INLINE_MARKUP = new Set(["#", "$", "*", "_", "`", "@", "<", ">", "~", "[", "]"]);
+const INLINE_MARKUP = new Set(["#", "$", "*", "_", "`", "@", "<", ">", "~", "^", "[", "]"]);
 
 /** Markup characters that only bite in first-position-on-a-line. */
 const LINE_START_MARKUP = new Set(["=", "-", "+", "/"]);

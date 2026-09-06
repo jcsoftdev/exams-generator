@@ -70,6 +70,29 @@ describe("prepareCollectedContent", () => {
     expect(prepared.bodyHash).toBe(hashBodyTypst(raw));
   });
 
+  it("hands a promoted formula through the escaper with its dollars intact", () => {
+    // The whole chain in one assertion: a scraped caret becomes a Typst
+    // formula, and the escaper that runs after recognises it as one instead of
+    // escaping the new dollars into printed currency signs.
+    const prepared = prepareCollectedContent({
+      bodyTypst: "Factorizar: ax^2 - 5ax + 6a.",
+      alternatives: ["(x - 2)^2"],
+    });
+
+    expect(prepared.bodyTypst).toBe("Factorizar: $a x^2 - 5a x + 6a$.");
+    expect(prepared.alternatives).toEqual(["$(x - 2)^2$"]);
+  });
+
+  it("tightens an exponent the scrape stranded away from its base", () => {
+    const prepared = prepareCollectedContent({
+      bodyTypst: "acelera a razon de 2m/s ² constante",
+      alternatives: ["4 u ²"],
+    });
+
+    expect(prepared.bodyTypst).toBe("acelera a razon de 2m/s² constante");
+    expect(prepared.alternatives).toEqual(["4 u²"]);
+  });
+
   it("leaves content with no markup characters byte-identical", () => {
     const prepared = prepareCollectedContent({
       bodyTypst: "¿Cuántos aprobaron dos exámenes?",
@@ -78,5 +101,28 @@ describe("prepareCollectedContent", () => {
 
     expect(prepared.bodyTypst).toBe("¿Cuántos aprobaron dos exámenes?");
     expect(prepared.alternatives).toEqual(["24", "19"]);
+  });
+
+  it("turns a polynomial written with Unicode exponents into a real formula", () => {
+    const prepared = prepareCollectedContent({
+      bodyTypst: "Un motorista adquirio D(x) = 6x⁵+ 13x⁴+ 9x² litros de petroleo.",
+      alternatives: ["H(x) = 3x² + 5x + 7"],
+    });
+
+    expect(prepared.bodyTypst).toBe(
+      "Un motorista adquirio $D(x) = 6x^5+ 13x^4+ 9x^2$ litros de petroleo.",
+    );
+    expect(prepared.alternatives).toEqual(["$H(x) = 3x^2 + 5x + 7$"]);
+  });
+
+  it("promotes an equation the scrape left with no exponent at all", () => {
+    const prepared = prepareCollectedContent({
+      bodyTypst: "Al dividir un polinomio P(x) entre 3x+2, se obtuvo como resto 5.",
+      alternatives: [],
+    });
+
+    expect(prepared.bodyTypst).toBe(
+      "Al dividir un polinomio $P(x)$ entre $3x+2$, se obtuvo como resto 5.",
+    );
   });
 });

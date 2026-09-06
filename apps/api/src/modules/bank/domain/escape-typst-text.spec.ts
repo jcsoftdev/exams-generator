@@ -130,4 +130,10 @@ describe("escapeTypstText", () => {
   it("escapes a line-start marker on a line that begins after a math span", () => {
     expect(escapeTypstText("$x^2$\n= 5 exacto")).toBe("$x^2$\n\\= 5 exacto");
   });
+
+  it("escapes a caret the promoter could not place inside a formula", () => {
+    expect(escapeTypstText("Resuelve Sen^6x+Cos^6x=0,25")).toBe(
+      "Resuelve Sen\\^6x+Cos\\^6x=0,25",
+    );
+  });
 });

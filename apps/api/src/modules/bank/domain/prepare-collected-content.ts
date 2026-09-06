@@ -1,6 +1,10 @@
 import { escapeTypstText } from "./escape-typst-text";
 import { convertLatexMathRuns } from "./latex-math-to-typst";
 import { hashBodyTypst } from "./hash-body-typst";
+import { normalizeTypstMathSymbols } from "./normalize-typst-math-symbols";
+import { promoteProseMath } from "./promote-prose-math";
+import { tightenUnicodeScripts } from "./tighten-unicode-scripts";
+import { unicodeScriptsToCaret } from "./unicode-scripts-to-caret";
 import { stripSolutionTail } from "./strip-solution-tail";
 import { stripStatementPollution } from "./strip-statement-pollution";
 
@@ -13,6 +17,17 @@ export interface PreparedCollectedContent {
   readonly bodyTypst: string;
   readonly alternatives: readonly string[];
   readonly bodyHash: string;
+}
+
+/**
+ * The five repairs, in the one order they work in: LaTeX translation first,
+ * then the three that turn scraped prose into formulas, and last the one
+ * that can only run once those formulas have edges to sit inside.
+ */
+function repair(raw: string): string {
+  return normalizeTypstMathSymbols(
+    promoteProseMath(unicodeScriptsToCaret(tightenUnicodeScripts(convertLatexMathRuns(raw)))),
+  );
 }
 
 /**
@@ -39,6 +54,23 @@ export interface PreparedCollectedContent {
  * every command is one the translator positively knows, turns them into real
  * formulas without ever handing Typst something it would choke on.
  *
+ * `tightenUnicodeScripts`, `unicodeScriptsToCaret` and `promoteProseMath`
+ * then repair the formulas
+ * the scrape left as prose. The collected bank is almost entirely free of
+ * math mode — 63855 of its 64257 statements hold no `$` at all — so a caret
+ * reached the exam as a literal caret and an OCR-stranded exponent drifted
+ * away from its base. They run BEFORE the escaper so that the dollars
+ * `promoteProseMath` introduces are seen by `splitTypstMathSpans` as the
+ * formulas they are — and that module's own `isMathRun` is the gate every
+ * candidate passes before it is wrapped, so the escaper can never disagree
+ * and turn a promoted formula back into printed dollars.
+ *
+ * `normalizeTypstMathSymbols` runs last of the repairs, once the formulas have
+ * boundaries. Only then can the en dash a source page types for a minus be
+ * told from the dash punctuating the sentence around it — Typst sets `–`
+ * as the prose glyph it is, so `(x^4 – 9)` reaches the exam with a dash of
+ * prose width where the minus belongs.
+ *
  * Alternatives go through `stripSolutionTail` and the statement through
  * `stripStatementPollution`: the scrapes glued the source page's answer key
  * onto the last option (audit 2026-08-20, H2) and, in the statement, a whole
@@ -48,9 +80,9 @@ export interface PreparedCollectedContent {
  */
 export function prepareCollectedContent(raw: RawCollectedContent): PreparedCollectedContent {
   return {
-    bodyTypst: escapeTypstText(convertLatexMathRuns(stripStatementPollution(raw.bodyTypst))),
+    bodyTypst: escapeTypstText(repair(stripStatementPollution(raw.bodyTypst))),
     alternatives: raw.alternatives.map((alternative) =>
-      escapeTypstText(convertLatexMathRuns(stripSolutionTail(alternative))),
+      escapeTypstText(repair(stripSolutionTail(alternative))),
     ),
     bodyHash: hashBodyTypst(raw.bodyTypst),
   };

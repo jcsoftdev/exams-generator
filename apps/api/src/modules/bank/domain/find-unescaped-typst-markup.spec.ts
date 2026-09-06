@@ -53,4 +53,9 @@ describe("findUnescapedTypstMarkup", () => {
 
     expect(findUnescapedTypstMarkup(escapeTypstText(mixed))).toBeUndefined();
   });
+
+  it("catches a caret loose in prose, which fails the compile outright", () => {
+    expect(findUnescapedTypstMarkup("Resuelve Sen^6x")).toBe("^");
+    expect(findUnescapedTypstMarkup("Resuelve $x^6$")).toBeUndefined();
+  });
 });

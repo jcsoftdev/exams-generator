@@ -1,4 +1,4 @@
-import { splitTypstMathSpans } from "./split-typst-math-spans";
+import { isMathRun, splitTypstMathSpans } from "./split-typst-math-spans";
 
 const kinds = (raw: string): string[] => splitTypstMathSpans(raw).map((segment) => segment.kind);
 
@@ -93,5 +93,9 @@ describe("splitTypstMathSpans", () => {
 
   it("rejects LaTeX even when every command it names is also a Typst identifier", () => {
     expect(kinds("vale $\\sqrt{5} + \\pi$")).toEqual(["text"]);
+  });
+
+  it("refuses a run holding a comment marker, which swallows the closing dollar", () => {
+    expect(isMathRun("M g / M g^(2+), 1M // A g^+")).toBe(false);
   });
 });

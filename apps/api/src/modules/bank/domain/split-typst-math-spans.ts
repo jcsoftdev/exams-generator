@@ -10,7 +10,7 @@
  * rendered — the behaviour the bank already had before this module existed.
  * Only the second failure is survivable, so the default has to be "prose".
  */
-const MATH_IDENTIFIERS = new Set([
+export const MATH_IDENTIFIERS = new Set([
   // trigonometry, including the `sen`/`tg`/`ctg` spellings Peruvian material uses
   "sin",
   "sen",
@@ -43,12 +43,13 @@ const MATH_IDENTIFIERS = new Set([
   "inf",
   "sum",
   "prod",
+  "product",
   "int",
   "integral",
   "oint",
-  "diff",
   "dif",
   "partial",
+  "diff",
   // constructors
   "sqrt",
   "root",
@@ -106,6 +107,12 @@ const MATH_IDENTIFIERS = new Set([
   // sets and logic
   "in",
   "nin",
+  "eq",
+  "ZZ",
+  "RR",
+  "NN",
+  "QQ",
+  "CC",
   "subset",
   "supset",
   "subseteq",
@@ -120,8 +127,6 @@ const MATH_IDENTIFIERS = new Set([
   "and",
   "or",
   "not",
-  "if",
-  "otherwise",
   "infinity",
   "oo",
   // greek
@@ -173,18 +178,179 @@ const MATH_IDENTIFIERS = new Set([
 ]);
 
 /**
- * Runs of three or more letters are the ones that have to be recognised.
- * One- and two-letter runs are left free: they are variable names (`x`,
- * `AB`, `dy`) and blackboard sets (`RR`, `NN`), never Spanish words worth
- * ruling on.
+ * Runs of three or more letters are the ones ruled on here. One- and
+ * two-letter runs are left free: they are variable names and products of
+ * them (`x`, `AB`, `dy`), never Spanish words worth deciding about.
+ *
+ * Note what that does NOT mean. Typst compiles `$AB$` no more happily than
+ * `$hallar$` — a multi-letter run is an IDENTIFIER to it, and an unknown
+ * one is "unknown variable: AB", a hard error that fails the whole exam.
+ * This regex answers "is this run prose?", and a two-letter product is not;
+ * making it compile is `normalizeTypstMathSymbols`'s job, and it does it by
+ * splitting `ab` into `a b` before the run ever reaches the compiler.
  */
 const LETTER_RUN = /\p{L}{3,}/gu;
+
+/**
+ * The names Typst itself defines in math mode, checked against the real
+ * binary. `MATH_IDENTIFIERS` is deliberately WIDER than this: it also holds
+ * the spellings the corpus uses and this pipeline translates — `sen` for
+ * `sin`, `cdot` for `dot` — which have to pass `isMathRun` on their way to
+ * `normalizeTypstMathSymbols` even though the compiler would reject them.
+ */
+export const TYPST_MATH_NAMES: ReadonlySet<string> = new Set([
+  "sin",
+  "cos",
+  "tan",
+  "tg",
+  "ctg",
+  "sec",
+  "csc",
+  "cot",
+  "sinh",
+  "cosh",
+  "tanh",
+  "arcsin",
+  "arccos",
+  "arctan",
+  "log",
+  "ln",
+  "lg",
+  "exp",
+  "lim",
+  "limsup",
+  "liminf",
+  "sup",
+  "inf",
+  "sum",
+  "product",
+  "integral",
+  "dif",
+  "partial",
+  "sqrt",
+  "root",
+  "frac",
+  "binom",
+  "vec",
+  "mat",
+  "cases",
+  "abs",
+  "norm",
+  "floor",
+  "ceil",
+  "overline",
+  "underline",
+  "hat",
+  "bar",
+  "tilde",
+  "arrow",
+  "arrows",
+  "harpoon",
+  "text",
+  "upright",
+  "italic",
+  "bold",
+  "display",
+  "inline",
+  "mod",
+  "det",
+  "dim",
+  "ker",
+  "deg",
+  "gcd",
+  "lcm",
+  "max",
+  "min",
+  "dot",
+  "dots",
+  "times",
+  "div",
+  "plus",
+  "minus",
+  "circle",
+  "star",
+  "approx",
+  "equiv",
+  "prop",
+  "perp",
+  "parallel",
+  "angle",
+  "degree",
+  "triangle",
+  "square",
+  "in",
+  "eq",
+  "not",
+  "subset",
+  "supset",
+  "union",
+  "inter",
+  "sect",
+  "emptyset",
+  "nothing",
+  "forall",
+  "exists",
+  "and",
+  "or",
+  "infinity",
+  "oo",
+  "op",
+  "ZZ",
+  "RR",
+  "NN",
+  "QQ",
+  "CC",
+  "alpha",
+  "beta",
+  "gamma",
+  "delta",
+  "epsilon",
+  "zeta",
+  "eta",
+  "theta",
+  "iota",
+  "kappa",
+  "lambda",
+  "mu",
+  "nu",
+  "xi",
+  "omicron",
+  "pi",
+  "rho",
+  "sigma",
+  "tau",
+  "upsilon",
+  "phi",
+  "chi",
+  "psi",
+  "omega",
+  "Alpha",
+  "Beta",
+  "Gamma",
+  "Delta",
+  "Epsilon",
+  "Theta",
+  "Lambda",
+  "Xi",
+  "Pi",
+  "Sigma",
+  "Upsilon",
+  "Phi",
+  "Psi",
+  "Omega",
+  "space",
+  "quad",
+  "thick",
+  "thin",
+  "med",
+  "wide",
+]);
 
 /**
  * Characters that only appear in Spanish prose. `¿`/`¡` are unambiguous, and
  * an accent inside a formula means the run swallowed a word.
  */
-const PROSE_ONLY = /[¿¡?áéíóúüñÁÉÍÓÚÜÑ]/u;
+export const PROSE_ONLY = /[¿¡?áéíóúüñÁÉÍÓÚÜÑ]/u;
 
 /**
  * Longest `$...$` run this will consider. Authored formulas in the bank top
@@ -204,7 +370,7 @@ export interface TypstSegment {
 }
 
 /** Whether the characters between two dollars are a formula rather than prose. */
-function isMathRun(run: string): boolean {
+export function isMathRun(run: string): boolean {
   if (run.length === 0 || run.length > MAX_MATH_LENGTH) {
     return false;
   }
@@ -218,6 +384,14 @@ function isMathRun(run: string): boolean {
   // question. Typst's own `\{` loses its escape here and prints literally;
   // that is the cheaper of the two failures.
   if (run.includes("\\")) {
+    return false;
+  }
+  // `//` opens a comment even inside math mode, so Typst reads the closing
+  // dollar and the rest of the line as comment text and then reports an
+  // unclosed delimiter. The corpus writes it for real — an electrochemical
+  // cell is `Mg / Mg^(2+) // Ag^+ / Ag` — so this is a shape to decline,
+  // not a typo to repair.
+  if (run.includes("//") || run.includes("/*")) {
     return false;
   }
 
