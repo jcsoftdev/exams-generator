@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { Observable, Subject, map, of, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, map, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router, convertToParamMap } from '@angular/router';
 import {
   LucideAngularModule,
   Lock,
@@ -63,11 +63,6 @@ const FOLDERS: BankFolderNode[] = [
   },
 ];
 
-/** Which ancestors have to be expanded before a given folder's row exists — see `expandTo`. */
-const FOLDER_ANCESTORS: Readonly<Record<string, readonly string[]>> = {
-  colegio: [],
-  trigo: ['colegio'],
-};
 
 /** Mirrors `apps/api/src/modules/bank/folders/bank-folders.errors.ts` — the server sends `{ statusCode, code, message }`. */
 const FOLDER_ERROR_MESSAGES: Readonly<Record<string, string>> = {
@@ -133,6 +128,9 @@ const QUESTIONS: BankQuestion[] = [
   }),
   makeQuestion({ id: 'q4', courseId: 'c2', topicId: 't3', folderId: null }),
 ];
+
+/** The `:folderId` this screen is currently mounted on — reassigned by every `setup()`. */
+let routeParams: BehaviorSubject<ParamMap>;
 
 function setup(
   over: {
@@ -290,6 +288,10 @@ function setup(
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-${n++}`);
   vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
 
+  routeParams = new BehaviorSubject<ParamMap>(
+    convertToParamMap({ folderId: over.routeFolderId ?? null }),
+  );
+
   TestBed.configureTestingModule({
     imports: [BankListComponent],
     providers: [
@@ -332,7 +334,7 @@ function setup(
       { provide: Router, useValue: { navigate, getCurrentNavigation } },
       {
         provide: ActivatedRoute,
-        useValue: { paramMap: of(convertToParamMap({ folderId: over.routeFolderId ?? null })) },
+        useValue: { paramMap: routeParams.asObservable() },
       },
     ],
   });
@@ -369,88 +371,36 @@ function setup(
 
 /** The component's protected surface, reachable from a spec without loosening the class itself. */
 type Internals = {
-  filterQuery: { (): string; set(value: string): void };
   difficulty: { set(value: Difficulty): void };
   editCorrectAnswer: { (): string };
   selected: { (): BankQuestion | null };
   courseOptions(): { value: string; label: string }[];
   search(): void;
   onEditCourseChange(value: string | null): void;
-  onFolderCreate(event: { parentId: string | null; name: string }): void;
-  onFolderRename(event: { id: string; name: string }): void;
 };
 
 function internals(fixture: { componentInstance: unknown }): Internals {
   return fixture.componentInstance as Internals;
 }
 
-function folderRow(compiled: HTMLElement, folderId: string): HTMLElement {
-  return compiled.querySelector(
-    `[data-testid="folder-row"][data-folder-id="${folderId}"]`,
-  ) as HTMLElement;
-}
-
 /**
- * The `<cdk-tree-node>` host — the REAL keyboard focus target (see
- * `folder-tree.component.ts`'s "CRITICAL fix" doc: `TreeKeyManager`'s roving
- * tabindex focuses the node, not the inner `folder-row` div, so `(keydown)`
- * lives there now). Any Delete/F2 dispatch that used to target `folderRow`
- * must target this instead.
+ * Opening a folder is a NAVIGATION now: the grid at /app/bank owns the folders
+ * and hands this screen a `:folderId`. The route stub is a subject rather than
+ * a fixed `of(...)` precisely so a test can move between folders the way the
+ * router does — Angular REUSES the component on a param change, which is the
+ * bug this screen already paid for once.
  */
-function folderTreeNode(compiled: HTMLElement, folderId: string): HTMLElement {
-  return folderRow(compiled, folderId).closest('[role="treeitem"]') as HTMLElement;
-}
-
-/** Clicks every ancestor's chevron so `folderId`'s own row is rendered by the CDK tree. */
-function expandTo(
-  compiled: HTMLElement,
-  fixture: { detectChanges(): void },
-  folderId: string,
-): void {
-  for (const ancestorId of FOLDER_ANCESTORS[folderId] ?? []) {
-    (
-      compiled.querySelector(
-        `[data-testid="folder-toggle"][data-folder-id="${ancestorId}"]`,
-      ) as HTMLButtonElement
-    ).click();
-    fixture.detectChanges();
-  }
-}
-
-/** Expands down to the folder and selects it — the new "show me these questions" gesture. */
 function openFolder(
-  compiled: HTMLElement,
+  _compiled: HTMLElement,
   fixture: { detectChanges(): void },
   folderId: string,
 ): void {
-  expandTo(compiled, fixture, folderId);
-  folderRow(compiled, folderId).click();
-  fixture.detectChanges();
-}
-
-/** Opens the removal modal the way the tree does: Delete on the row. */
-function requestFolderRemoval(
-  compiled: HTMLElement,
-  fixture: { detectChanges(): void },
-  folderId: string,
-): void {
-  expandTo(compiled, fixture, folderId);
-  folderTreeNode(compiled, folderId).dispatchEvent(
-    new KeyboardEvent('keydown', { key: 'Delete', bubbles: true }),
-  );
+  routeParams.next(convertToParamMap({ folderId }));
   fixture.detectChanges();
 }
 
 describe('BankListComponent', () => {
   describe('folder tree', () => {
-    it('renders the tenant folder tree instead of the course/topic tree', () => {
-      const { compiled } = setup();
-
-      expect(compiled.querySelector('ui-folder-tree')).not.toBeNull();
-      expect(compiled.querySelector('[data-testid="course-header"]')).toBeNull();
-      expect(compiled.querySelector('[data-testid="topic-header"]')).toBeNull();
-      expect(folderRow(compiled, 'colegio')).not.toBeNull();
-    });
 
     it('loads the tree from GET /bank/folders alone — not a single question row is fetched on entry', () => {
       const { getFolders, listQuestionsPaged } = setup();
@@ -459,347 +409,27 @@ describe('BankListComponent', () => {
       expect(listQuestionsPaged).not.toHaveBeenCalled();
     });
 
-    it('shows folder names and rolled-up counts, never raw ids', () => {
-      const { compiled, fixture } = setup();
-
-      expect(folderRow(compiled, 'colegio').textContent).toMatch(/Colegio/);
-      // 0 + 0 own/central on the root, plus 7 + 30 from its child.
-      expect(folderRow(compiled, 'colegio').textContent).toMatch(/37/);
-      expect(compiled.textContent).not.toMatch(/\btrigo\b/);
-
-      expandTo(compiled, fixture, 'trigo');
-      expect(folderRow(compiled, 'trigo').textContent).toMatch(/Trigonometría/);
-    });
-
-    it("lists a folder's questions when the folder is selected", () => {
+    it("lists the questions of the folder the route names", () => {
       const { compiled, fixture, listQuestionsPaged } = setup();
-      folderRow(compiled, 'colegio').click();
-      fixture.detectChanges();
+      openFolder(compiled, fixture, 'colegio');
 
       expect(listQuestionsPaged.mock.calls.at(-1)?.[0]).toMatchObject({ folderId: 'colegio' });
     });
 
-    it('shows the exact confirmation copy before removing a folder', () => {
-      const { compiled, fixture } = setup();
-      requestFolderRemoval(compiled, fixture, 'trigo');
-
-      const text = compiled
-        .querySelector<HTMLElement>('[data-testid="folder-delete-confirm"]')!
-        .textContent!.replace(/\s+/g, ' ')
-        .trim();
-
-      expect(text).toBe(
-        'Se quitará la carpeta «Trigonometría» y sus 37 preguntas dejarán de verse aquí. Las preguntas no se borran del banco.',
-      );
-      expect(
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"]')!.textContent,
-      ).toContain('Quitar carpeta');
-      expect(compiled.querySelector('[data-testid="modal-actions"]')!.textContent).toContain(
-        'Cancelar',
-      );
-    });
-
-    it('does not call the API until the teacher confirms', () => {
-      const { compiled, fixture, deletedFolderIds } = setup();
-      requestFolderRemoval(compiled, fixture, 'trigo');
-
-      expect(deletedFolderIds).toEqual([]);
-    });
-
-    it('shows the post-delete banner with the unfiled count', () => {
-      const { compiled, fixture, deletedFolderIds } = setup();
-      requestFolderRemoval(compiled, fixture, 'trigo');
-
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      expect(deletedFolderIds).toEqual(['trigo']);
-      expect(
-        compiled.querySelector('[data-testid="folder-removed-banner"]')!.textContent,
-      ).toContain('Carpeta quitada. 12 preguntas quedaron en Sin carpeta.');
-    });
-
-    it('offers a jump to "Sin carpeta" from the post-delete banner', () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      requestFolderRemoval(compiled, fixture, 'trigo');
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      (compiled.querySelector('[data-testid="folder-removed-goto"] button') as HTMLElement).click();
-      fixture.detectChanges();
-
-      expect(listQuestionsPaged.mock.calls.at(-1)?.[0]).toMatchObject({
-        folderId: UNFILED_FOLDER_ID,
-      });
-      expect(compiled.querySelector('[data-testid="folder-removed-banner"]')).toBeNull();
-    });
-
-    it('stays silent when the removal left nothing unfiled — the banner answers a question nobody asked', () => {
-      const { compiled, fixture, deleteFolder } = setup();
-      deleteFolder.mockReturnValueOnce(of({ deletedFolders: 1, unfiledQuestions: 0 }));
-      requestFolderRemoval(compiled, fixture, 'trigo');
-
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      expect(compiled.querySelector('[data-testid="folder-removed-banner"]')).toBeNull();
-    });
-
-    it('creates a ROOT folder through the "+ Nueva carpeta" button', () => {
-      const { compiled, fixture, createdFolders } = setup();
-
-      (compiled.querySelector('[data-testid="folder-create-root"] button') as HTMLElement).click();
-      fixture.detectChanges();
-
-      const input = compiled.querySelector<HTMLInputElement>(
-        '[data-testid="folder-new-input-root"] input',
-      )!;
-      input.value = 'Otros';
-      input.dispatchEvent(new Event('input'));
-      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
-      fixture.detectChanges();
-
-      expect(createdFolders).toEqual([{ parentId: null, name: 'Otros' }]);
-    });
-
     /**
-     * The spec doesn't re-seed a tenant that deletes every folder — a
-     * zero-folder tenant is a REAL, reachable state, not just a fresh
-     * signup. "+ Nueva carpeta" has to work there too, or that tenant is
-     * stuck with no way to ever create a first folder. `ui-folder-tree` is
-     * now mounted even with an empty tree (it renders no rows on its own,
-     * see 'renders an empty tree without throwing'), so the same
-     * `#folderTree` viewChild the non-empty case uses is never `undefined`.
+     * The trail is built from the folder tree, so a failed load costs the
+     * breadcrumb — not the questions, which come from the route. Saying so is
+     * a line, never the whole-screen error state.
      */
-    it('creates a ROOT folder from a completely empty tree (zero folders, nothing unfiled)', () => {
-      const { compiled, fixture, createdFolders } = setup({
-        getFoldersImpl: () => of({ folders: [], unfiledCount: 0 }),
-      });
-      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
-        /Todavía no tienes carpetas/i,
-      );
-
-      (compiled.querySelector('[data-testid="folder-create-root"] button') as HTMLElement).click();
-      fixture.detectChanges();
-
-      const input = compiled.querySelector<HTMLInputElement>(
-        '[data-testid="folder-new-input-root"] input',
-      )!;
-      input.value = 'Otros';
-      input.dispatchEvent(new Event('input'));
-      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
-      fixture.detectChanges();
-
-      expect(createdFolders).toEqual([{ parentId: null, name: 'Otros' }]);
-    });
-
-    it("creates a subfolder through the tree's create output", () => {
-      const { fixture, createdFolders } = setup();
-      internals(fixture).onFolderCreate({ parentId: 'colegio', name: 'Nueva' });
-      fixture.detectChanges();
-
-      expect(createdFolders).toEqual([{ parentId: 'colegio', name: 'Nueva' }]);
-    });
-
-    it("renames a folder through the tree's rename output", () => {
-      const { fixture, renamedFolders } = setup();
-      internals(fixture).onFolderRename({ id: 'trigo', name: 'Trigo II' });
-      fixture.detectChanges();
-
-      expect(renamedFolders).toEqual([{ id: 'trigo', name: 'Trigo II' }]);
-    });
-
-    /**
-     * The spec asks for the INPUT to be marked, not a paragraph somewhere on
-     * the screen: with six folders on screen, "ya existe una carpeta con ese
-     * nombre" floating above the tree does not say WHICH name, and closing
-     * the editor throws away the text the teacher now has to fix.
-     */
-    it('marks the rejected name on its own input when the server answers 409 folder_name_taken', () => {
-      const { compiled, fixture, failNextFolderWrite } = setup();
-      failNextFolderWrite({ status: 409, code: 'folder_name_taken' });
-
-      // A NESTED node on purpose: the rejection makes the store roll back AND
-      // reload, which re-emits the whole tree as brand-new objects. A root row
-      // survives that no matter what the tree does with expansion, and would
-      // prove nothing about the folder six levels down this feature is for.
-      expandTo(compiled, fixture, 'trigo');
-      folderTreeNode(compiled, 'trigo').dispatchEvent(
-        new KeyboardEvent('keydown', { key: 'F2', bubbles: true }),
-      );
-      fixture.detectChanges();
-      const input = compiled.querySelector(
-        '[data-testid="folder-name-input"] input',
-      ) as HTMLInputElement;
-      input.value = 'Colegio';
-      input.dispatchEvent(new Event('input'));
-      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
-      fixture.detectChanges();
-
-      const wrapper = compiled.querySelector('[data-testid="folder-name-input"]')!;
-      expect(wrapper.querySelector('input')!.getAttribute('aria-invalid')).toBe('true');
-      expect(wrapper.querySelector('[data-testid="input-error"]')!.textContent).toContain(
-        'Ya existe una carpeta con ese nombre',
-      );
-      // …and NOT also as a paragraph above the tree, saying the same thing twice.
-      expect(compiled.querySelector('[data-testid="folder-error"]')).toBeNull();
-    });
-
-    it('keeps the paragraph above the tree for a write error that names no input', () => {
-      const { compiled, fixture, failNextFolderWrite } = setup();
-      failNextFolderWrite({ status: 422, code: 'folder_depth_exceeded' });
-      internals(fixture).onFolderCreate({ parentId: 'colegio', name: 'Demasiado hondo' });
-      fixture.detectChanges();
-
-      expect(compiled.querySelector('[data-testid="folder-error"]')!.textContent).toContain(
-        'Las carpetas admiten como máximo 6 niveles',
-      );
-      expect(compiled.querySelector('[data-testid="input-error"]')).toBeNull();
-    });
-
-    /**
-     * `BankFoldersStore.remove` drops the whole SUBTREE, so the open folder can
-     * vanish without being the one the teacher addressed. Comparing ids against
-     * the deleted one misses exactly that case and leaves the list showing rows
-     * of a folder that no longer exists, with no way back.
-     */
-    it('drops the selection when an ANCESTOR of the open folder is removed', () => {
-      const { compiled, fixture } = setup();
-      openFolder(compiled, fixture, 'trigo');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
-
-      requestFolderRemoval(compiled, fixture, 'colegio');
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeTruthy();
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
-    });
-
-    /**
-     * UX fix: deleting a folder can move questions into "Sin carpeta" (the
-     * virtual unfiled bucket) — but the list stayed STALE unless the open
-     * folder happened to be an ancestor of the one just removed. With "Sin
-     * carpeta" open and some OTHER, unrelated folder deleted, the newly
-     * unfiled questions never showed up until the teacher re-clicked the
-     * folder herself.
-     */
-    it("refreshes the open folder's questions after ANY folder delete, not only when the open one was an ancestor of it", () => {
-      const { compiled, fixture, listQuestionsPaged } = setup();
-      openFolder(compiled, fixture, UNFILED_FOLDER_ID);
-      listQuestionsPaged.mockClear();
-
-      requestFolderRemoval(compiled, fixture, 'trigo');
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      expect(listQuestionsPaged).toHaveBeenCalledWith(
-        expect.objectContaining({ folderId: UNFILED_FOLDER_ID }),
-        1,
-        expect.any(Number),
-      );
-    });
-
-    /**
-     * `BankFoldersStore.rollback` ALREADY restores the snapshot and re-loads
-     * on every failed write (it has to: a concurrent confirmed write would
-     * otherwise be erased by the restore). So the component must NOT reload a
-     * second time on 404 — one reload, plus the one message that explains why
-     * the tree just changed under the teacher.
-     */
-    it('reloads the tree exactly once when a write comes back 404 — another tab deleted the folder', () => {
-      const { compiled, fixture, failNextFolderWrite, getFolders } = setup();
-      failNextFolderWrite({ status: 404, code: 'folder_not_found' });
-      const loadsBefore = getFolders.mock.calls.length;
-
-      internals(fixture).onFolderRename({ id: 'trigo', name: 'Otra' });
-      fixture.detectChanges();
-
-      expect(getFolders.mock.calls.length).toBe(loadsBefore + 1);
-      expect(compiled.querySelector('[data-testid="folder-error"]')!.textContent).toContain(
-        'Esa carpeta ya no existe',
-      );
-    });
-
-    it('shows the tree-level error when GET /bank/folders fails, without blanking the screen', () => {
+    it('says the folders failed to load without blanking the screen', () => {
       const { compiled } = setup({
         getFoldersImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });
 
-      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
+      expect(compiled.querySelector('[data-testid="folders-error"]')!.textContent).toMatch(
         /No se pudieron cargar las carpetas/i,
       );
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeNull();
-    });
-  });
-
-  describe('search filter', () => {
-    function typeSearch(
-      compiled: HTMLElement,
-      fixture: { detectChanges(): void },
-      value: string,
-    ): void {
-      const input = compiled.querySelector('[data-testid="tree-search"] input') as HTMLInputElement;
-      input.value = value;
-      input.dispatchEvent(new Event('input'));
-      fixture.detectChanges();
-    }
-
-    it('filters the tree by folder name', () => {
-      const { compiled, fixture } = setup();
-      internals(fixture).filterQuery.set('trigo');
-      fixture.detectChanges();
-
-      const ids = Array.from(compiled.querySelectorAll('[data-testid="folder-row"]')).map((row) =>
-        row.getAttribute('data-folder-id'),
-      );
-
-      // The ancestor survives so the match is reachable; "Sin carpeta" does not.
-      expect(ids).toContain('colegio');
-      expect(ids).not.toContain(UNFILED_FOLDER_ID);
-    });
-
-    it('matches accent- and case-insensitively from the search box', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'TRIGONOMETRIA');
-
-      const ids = Array.from(compiled.querySelectorAll('[data-testid="folder-row"]')).map((row) =>
-        row.getAttribute('data-folder-id'),
-      );
-      expect(ids).toContain('colegio');
-      expect(ids).not.toContain(UNFILED_FOLDER_ID);
-    });
-
-    it('shows the search empty state when no folder name matches', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'zzz-nada');
-
-      expect(compiled.querySelectorAll('[data-testid="folder-row"]').length).toBe(0);
-      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
-        /No se encontraron carpetas para tu búsqueda/i,
-      );
-    });
-
-    it('restores the full tree when the search box is cleared', () => {
-      const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'zzz-nada');
-      expect(compiled.querySelectorAll('[data-testid="folder-row"]').length).toBe(0);
-
-      typeSearch(compiled, fixture, '');
-      const ids = Array.from(compiled.querySelectorAll('[data-testid="folder-row"]')).map((row) =>
-        row.getAttribute('data-folder-id'),
-      );
-      expect(ids).toEqual(['colegio', UNFILED_FOLDER_ID]);
     });
   });
 
@@ -975,7 +605,7 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-testid="folder-load-more"]')).toBeFalsy();
     });
 
-    it('a failed page shows an inline retry under the tree, leaving the tree itself intact', () => {
+    it('a failed page shows an inline retry, leaving the rest of the screen intact', () => {
       const { compiled, fixture, listQuestionsPaged } = setup();
       listQuestionsPaged.mockReturnValueOnce(
         throwError(() => new HttpErrorResponse({ status: 500 })),
@@ -984,9 +614,9 @@ describe('BankListComponent', () => {
       openFolder(compiled, fixture, 'trigo');
 
       expect(compiled.querySelector('[data-testid="folder-questions-error"]')).toBeTruthy();
-      // The whole-screen error state is NOT used — the tree still renders.
+      // The whole-screen error state is NOT used — the trail still renders.
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeFalsy();
-      expect(folderRow(compiled, 'colegio')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="breadcrumb-crumb"]')).toBeTruthy();
 
       (
         compiled.querySelector('[data-testid="folder-questions-retry"]') as HTMLButtonElement
@@ -1801,31 +1431,22 @@ describe('BankListComponent', () => {
   });
 
   describe('loading', () => {
-    it('shows a loading indicator while the initial taxonomy fetch is pending and no stale tree', () => {
+    it('shows a loading indicator while the initial taxonomy fetch is pending, and no stale list', () => {
       const courses = new Subject<Course[]>();
       const { compiled, fixture } = setup({ getCoursesImpl: () => courses.asObservable() });
       expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeTruthy();
-      expect(compiled.querySelector('[data-testid="bank-tree"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="folder-questions"]')).toBeFalsy();
 
       courses.next(COURSES);
       courses.complete();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeFalsy();
-      expect(folderRow(compiled, 'colegio')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="folder-questions"]')).toBeTruthy();
     });
   });
 
   describe('empty states', () => {
-    it('says the tenant has no folders yet instead of rendering an empty box', () => {
-      const { compiled } = setup({
-        getFoldersImpl: () => of({ folders: [], unfiledCount: 0 }),
-      });
-      expect(compiled.querySelector('[data-testid="bank-tree"]')!.textContent).toMatch(
-        /Todavía no tienes carpetas/i,
-      );
-      expect(compiled.querySelectorAll('[data-testid="folder-row"]').length).toBe(0);
-    });
 
     it('says a folder is empty rather than leaving the list silently blank', () => {
       const { compiled, fixture } = setup({ listImpl: () => of([]) });
@@ -1852,7 +1473,7 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeFalsy();
-      expect(folderRow(compiled, 'colegio')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="folder-questions"]')).toBeTruthy();
     });
   });
 
@@ -2065,36 +1686,6 @@ describe('BankListComponent', () => {
       const announcer = TestBed.inject(LiveAnnouncerService);
       expect(announcer.message()).toBe('Pregunta guardada.');
       expect(announcer.politeness()).toBe('polite');
-    });
-
-    /**
-     * The announcement carries the WHOLE notice, not just "Carpeta quitada.":
-     * the banner's second sentence — where the questions went — is the half a
-     * screen-reader user cannot get any other way.
-     */
-    it('announces the folder removal with the same words the banner shows', () => {
-      const { compiled, fixture } = setup();
-      requestFolderRemoval(compiled, fixture, 'trigo');
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      expect(TestBed.inject(LiveAnnouncerService).message()).toBe(
-        'Carpeta quitada. 12 preguntas quedaron en Sin carpeta.',
-      );
-    });
-
-    it('announces the bare "Carpeta quitada." when nothing was left unfiled', () => {
-      const { compiled, fixture, deleteFolder } = setup();
-      deleteFolder.mockReturnValueOnce(of({ deletedFolders: 1, unfiledQuestions: 0 }));
-      requestFolderRemoval(compiled, fixture, 'trigo');
-      (
-        compiled.querySelector('[data-testid="folder-delete-confirm-yes"] button') as HTMLElement
-      ).click();
-      fixture.detectChanges();
-
-      expect(TestBed.inject(LiveAnnouncerService).message()).toBe('Carpeta quitada.');
     });
   });
 

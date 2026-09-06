@@ -1,4 +1,4 @@
-import { Component, DestroyRef, computed, inject, signal, viewChild } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -27,17 +27,10 @@ import { SelectComponent, SelectOption } from '../../../ui/select/select.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
-import { FolderTreeComponent } from '../../../ui/folder-tree/folder-tree.component';
 import {
   BreadcrumbComponent,
   BreadcrumbCrumb,
 } from '../../../ui/breadcrumb/breadcrumb.component';
-import {
-  FolderCreateEvent,
-  FolderInlineError,
-  FolderRenameEvent,
-  FolderTreeNode,
-} from '../../../ui/folder-tree/folder-tree.types';
 import { findFolderPath } from '../folders/folder-path';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
@@ -58,7 +51,6 @@ import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { extractErrorMessage } from '../../ai/extract-error-message';
 import { BankFoldersStore } from '../folders/bank-folders.store';
-import { filterFolderTree } from '../folders/folder-tree.model';
 import { QuestionTaxonomyFieldsComponent } from '../question-edit/question-taxonomy-fields.component';
 import { QuestionContentFieldsComponent } from '../question-edit/question-content-fields.component';
 import { AiReviseBoxComponent } from '../question-edit/ai-revise-box.component';
@@ -112,16 +104,22 @@ const IMAGE_FETCH_CONCURRENCY = 6;
 
 /**
  * D1 (audit M1): how long a just-created question's row stays flagged
- * `data-highlight="true"` after the tree reveals it. Long enough to find on
+ * `data-highlight="true"` after the list reveals it. Long enough to find on
  * screen, short enough that it reads as "this one" rather than a permanent
  * marker.
  */
 const HIGHLIGHT_DURATION_MS = 4000;
 
 /**
- * Question-bank screen: a two-column split where the left column is the
- * tenant's own FOLDER tree plus the selected folder's questions, and the
- * right column is the unchanged `bank-panel` detail view.
+ * ONE FOLDER'S questions, plus the unchanged `bank-panel` detail view.
+ *
+ * WHICH folder is not this screen's decision any more. The grid at
+ * `/app/bank` owns the folders — browsing, creating, renaming, removing —
+ * and hands this route a `:folderId`; here the tree is a breadcrumb, and
+ * navigation is a link back up. The folder column that used to live here is
+ * gone, along with its search box, its create/rename/delete handlers and
+ * their error plumbing: two screens offering the same writes is two places
+ * for the same bug.
  *
  * FOLDERS REPLACED CURSO -> TEMA. The old left column was a Curso -> Tema
  * tree built from `GET /bank/questions/summary`: a taxonomy the school never
@@ -131,11 +129,10 @@ const HIGHLIGHT_DURATION_MS = 4000;
  * moves a question between cursos/temas — it just stopped being how a
  * teacher navigates her own bank.
  *
- * The tree comes from `BankFoldersStore` (`GET /bank/folders`): one cheap
- * request that carries every folder with its direct own/central counts, and
- * no question payload at all. `toFolderTreeNodes` rolls those into the
- * cumulative `totalCount` each row shows and appends the virtual "Sin
- * carpeta" node when there is anything in it.
+ * `BankFoldersStore` (`GET /bank/folders`) is still read here, for the
+ * breadcrumb and for the detail panel's folder picker. A failed load costs
+ * the trail, not the questions, which come from the route — so it says so in
+ * a line instead of blanking the screen.
  *
  * LAZY BY FOLDER (the load-bearing decision — see the P0 in
  * `docs/audit-2026-08-14.md`). Nothing lists questions until a folder is
@@ -151,20 +148,6 @@ const HIGHLIGHT_DURATION_MS = 4000;
  * every filter change; with a single selection there is nothing to
  * invalidate.
  *
- * WRITES GO THROUGH THE STORE, which applies them optimistically and rolls
- * back (plus reloads) on failure. This component only decides what the
- * teacher SEES on a rejection: `folder_name_taken` and friends surface the
- * server's own Spanish message inline (`folderError`); a 404 means another
- * tab already deleted the folder, so the message says the tree was refreshed
- * — the store's rollback already did the refreshing, this must not reload a
- * second time.
- *
- * REMOVAL IS ALWAYS CONFIRMED. `ui-folder-tree` only ASKS (it emits
- * `remove`); this opens a modal naming the folder and counting its questions,
- * and only the modal's "Quitar carpeta" calls the API. Afterwards a banner
- * says how many questions landed in "Sin carpeta" — and only when that number
- * is > 0, because with nothing unfiled there is no "where did my questions
- * go?" to answer.
  *
  * Thumbnails are fetched as authenticated blobs (see `loadImages` —
  * `/assets/:id` is Bearer-JWT protected, a raw `<img src>` never sends that
@@ -172,12 +155,6 @@ const HIGHLIGHT_DURATION_MS = 4000;
  * (`FOLDER_PAGE_SIZE`) of thumbnails per opened folder. Structured questions
  * (no `imageAssetId`) and image questions with no asset yet get a neutral
  * lucide placeholder icon instead of a blank box.
- *
- * The free-text search box (`filterQuery`) filters the tree live via the pure
- * `filterFolderTree` transform. Its scope is FOLDER NAMES ONLY — the
- * questions of an unopened folder are not in the browser, so matching them
- * here would silently mean "the part you already opened". See
- * `filterFolderTree`'s doc.
  *
  * Action gating (`canArchive`/`canDelete`/`isCentral`) mirrors the backend's
  * own rules (Lane D4: S4 archives only `approved`, S5 deletes only own
@@ -228,7 +205,6 @@ const HIGHLIGHT_DURATION_MS = 4000;
     SelectComponent,
     TagComponent,
     MathTextComponent,
-    FolderTreeComponent,
     BreadcrumbComponent,
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
@@ -296,30 +272,7 @@ export class BankListComponent {
   protected readonly folderTree = this.foldersStore.tree;
   protected readonly foldersLoading = this.foldersStore.loading;
   protected readonly foldersError = this.foldersStore.error;
-  /**
-   * The `#folderTree` template-ref (item 3: "+ Nueva carpeta") — a
-   * TEMPLATE-REF query rather than `viewChild(FolderTreeComponent)` by TYPE
-   * on purpose: the detail panel's `app-question-folder-picker` mounts its
-   * OWN `ui-folder-tree` inside its `pick`-mode popover, and a type query
-   * would descend into that child component's view too, ambiguously
-   * matching whichever instance the CDK query resolves first. A name only
-   * this one element in this template carries has no such ambiguity.
-   */
-  private readonly folderTreeRef = viewChild<FolderTreeComponent>('folderTree');
-
   protected readonly selectedFolderId = signal<string | null>(null);
-  /** The folder awaiting confirmation in the removal modal — the node, so the copy can name it and count it. */
-  protected readonly pendingFolderDelete = signal<FolderTreeNode | null>(null);
-  /** Post-delete banner text, cleared by its own dismiss button. */
-  protected readonly folderRemovedNotice = signal<string | null>(null);
-  /** Screen-level message for a rejected write that names no input (404, 422 depth, network). */
-  protected readonly folderError = signal<string | null>(null);
-  /**
-   * A rejected write that IS about the name the teacher typed — handed back to
-   * `ui-folder-tree` so it re-opens that editor and marks the input, instead of
-   * a paragraph above six folders that never says which one.
-   */
-  protected readonly folderInlineError = signal<FolderInlineError | null>(null);
 
   // --- the selected folder's questions -------------------------------------
   /** The pages loaded so far for the CURRENT selection, flat. A folder is one list; there is no cache per branch to invalidate. */
@@ -443,9 +396,6 @@ export class BankListComponent {
   /** Asset ids already upgraded from thumbnail to original — see `loadFullImage`. */
   private readonly fullImagesLoaded = new Set<string>();
 
-  /** Free-text search box value — filters the folder tree live by NAME (see `filterFolderTree`). */
-  protected readonly filterQuery = signal('');
-
   // --- D1: highlight the question just created (bank-new -> here) --------------
   /** `router.getCurrentNavigation()?.extras.state['createdQuestionId']`, falling back to `history.state` — captured once, in the constructor, before Angular clears the current navigation. */
   private readonly pendingCreatedQuestionId: string | null;
@@ -453,11 +403,6 @@ export class BankListComponent {
   protected readonly createdBanner = signal(false);
   /** The just-created question's id while its row should render `data-highlight="true"`; cleared after `HIGHLIGHT_DURATION_MS`. */
   protected readonly highlightedQuestionId = signal<string | null>(null);
-
-  /** Client-side name filter over the folder tree — see `filterFolderTree` for the honest scope. */
-  protected readonly filteredFolderTree = computed(() =>
-    filterFolderTree(this.folderTree(), this.filterQuery()),
-  );
 
   /** How many more questions the folder holds beyond the pages already fetched — "Ver más" renders only while this is > 0. */
   protected readonly remainingInFolder = computed(() =>
@@ -673,7 +618,6 @@ export class BankListComponent {
    */
   protected onFolderSelect(folderId: string): void {
     this.selectedFolderId.set(folderId);
-    this.clearFolderErrors();
     this.loadQuestionsForFolder(folderId, 1);
   }
 
@@ -695,126 +639,6 @@ export class BankListComponent {
     void this.router.navigate(['/app/bank'], {
       queryParams: { carpeta: id === ROOT_CRUMB_ID ? null : id },
     });
-  }
-
-  protected onFolderCreate(event: FolderCreateEvent): void {
-    this.clearFolderErrors();
-    this.foldersStore.create(event.parentId, event.name).subscribe({
-      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, event.parentId),
-    });
-  }
-
-  /**
-   * "+ Nueva carpeta" (item 3): the tree only ever offered "Nueva subcarpeta"
-   * UNDER an existing node, with no way to create a TOP-LEVEL one. Delegates
-   * to the tree's own `startCreatingRoot()` so the same inline `ui-input` +
-   * `folder-new-input-root` UX is reused rather than duplicated here.
-   * `folderTreeRef()` can be `undefined` only if the tree column is showing
-   * its loading/error state instead of `ui-folder-tree` — the button is a
-   * no-op then rather than throwing.
-   */
-  protected startRootFolderCreate(): void {
-    this.folderTreeRef()?.startCreatingRoot();
-  }
-
-  protected onFolderRename(event: FolderRenameEvent): void {
-    this.clearFolderErrors();
-    this.foldersStore.rename(event.id, event.name).subscribe({
-      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, event.id),
-    });
-  }
-
-  /** Every write starts from a clean slate — that is also what "the teacher edited again" means here. */
-  private clearFolderErrors(): void {
-    this.folderError.set(null);
-    this.folderInlineError.set(null);
-  }
-
-  /** Removal is ALWAYS confirmed — the tree only asks; this opens the modal. */
-  protected onFolderRemoveRequested(folderId: string): void {
-    this.pendingFolderDelete.set(findTreeNode(this.folderTree(), folderId));
-  }
-
-  protected cancelFolderDelete(): void {
-    this.pendingFolderDelete.set(null);
-  }
-
-  protected confirmFolderDelete(): void {
-    const folder = this.pendingFolderDelete();
-    if (!folder) {
-      return;
-    }
-    this.pendingFolderDelete.set(null);
-    this.foldersStore.remove(folder.id).subscribe({
-      next: (result) => {
-        // A removal takes the whole SUBTREE with it, so the open folder can
-        // disappear WITHOUT being the one addressed — comparing ids against
-        // `folder.id` misses every descendant and leaves the list showing rows
-        // of a folder that no longer exists. Ask the tree instead.
-        const selected = this.selectedFolderId();
-        if (selected !== null && findTreeNode(this.folderTree(), selected) === null) {
-          this.selectedFolderId.set(null);
-          this.clearFolderQuestions();
-        } else if (selected !== null) {
-          // UX fix: the open folder SURVIVED this removal, but its contents
-          // can still be stale — deleting ANY folder can move questions into
-          // "Sin carpeta", and the open folder might be exactly that virtual
-          // bucket (or any other folder whose count the tree just rolled up
-          // differently). Re-running the current selection's own query is
-          // what `search()` already does for "Buscar" under new filters;
-          // reusing it here means the list is never left showing a stale
-          // page after a delete that didn't touch its own selection.
-          this.search();
-        }
-        // The banner exists to answer "where did my questions go?". With
-        // nothing unfiled there is no question to answer, so no banner.
-        const notice =
-          result.unfiledQuestions > 0
-            ? `Carpeta quitada. ${result.unfiledQuestions} preguntas quedaron en Sin carpeta.`
-            : null;
-        this.folderRemovedNotice.set(notice);
-        // The SAME words, not a shorter summary: the second sentence is where
-        // the questions went, and a screen-reader user has no banner to read it
-        // off later.
-        this.liveAnnouncer.announce(notice ?? 'Carpeta quitada.');
-      },
-      error: (error: HttpErrorResponse) => this.handleFolderWriteError(error, folder.id),
-    });
-  }
-
-  /** Jumps to the virtual "Sin carpeta" node from the post-delete banner. */
-  protected goToUnfiled(): void {
-    this.folderRemovedNotice.set(null);
-    this.onFolderSelect(UNFILED_FOLDER_ID);
-  }
-
-  /**
-   * Where a rejected write is SHOWN depends on what it is about.
-   *
-   * `folder_name_taken` is about the name the teacher just typed, so it goes
-   * back down to that input (`folderInlineError`) — the tree re-opens the
-   * editor with her text intact and marks it invalid. Anything else names no
-   * input: a 404 means another tab already deleted the folder (no message
-   * about the name would be actionable — say the tree was refreshed, and do
-   * NOT reload, because `BankFoldersStore.rollback` already restores the
-   * snapshot AND re-loads on every failed write); everything else gets the
-   * server's own Spanish message as a paragraph above the tree.
-   */
-  private handleFolderWriteError(error: HttpErrorResponse, nodeId: string | null): void {
-    if (folderErrorCode(error) === 'folder_name_taken' && nodeId !== null) {
-      this.folderInlineError.set({
-        id: nodeId,
-        message: extractErrorMessage(error, 'Ya existe una carpeta con ese nombre.'),
-      });
-      return;
-    }
-    if (error.status === 404) {
-      this.folderError.set('Esa carpeta ya no existe. Actualizamos el árbol.');
-      return;
-    }
-    this.folderError.set(
-      extractErrorMessage(error, 'No se pudo actualizar la carpeta. Inténtalo de nuevo.'),
-    );
   }
 
   private clearFolderQuestions(): void {
@@ -1420,30 +1244,4 @@ function normalizeCorrectAnswer(value: string): string {
   return /^[a-e]$/i.test(value) ? String(value.toLowerCase().charCodeAt(0) - 97) : value;
 }
 
-/**
- * The STABLE `code` of a folder error body (`{ statusCode, code, message }` —
- * see `bank-folder.dto.ts`). Discriminating on the code rather than on the
- * status is what lets 409-the-name-is-taken behave differently from any other
- * rejection without string-matching a Spanish message.
- */
-function folderErrorCode(error: HttpErrorResponse): string | null {
-  const body = error.error as unknown;
-  if (body && typeof body === 'object' && typeof (body as { code?: unknown }).code === 'string') {
-    return (body as { code: string }).code;
-  }
-  return null;
-}
 
-/** Depth-first lookup over the RENDER tree — the modal needs the node's name and cumulative count. */
-function findTreeNode(nodes: readonly FolderTreeNode[], id: string): FolderTreeNode | null {
-  for (const node of nodes) {
-    if (node.id === id) {
-      return node;
-    }
-    const found = findTreeNode(node.children, id);
-    if (found) {
-      return found;
-    }
-  }
-  return null;
-}

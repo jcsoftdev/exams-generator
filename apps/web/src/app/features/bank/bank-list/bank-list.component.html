@@ -1,5 +1,14 @@
 <div class="flex flex-col gap-4 p-6" data-testid="bank-list">
   <ui-breadcrumb [items]="crumbs()" (navigate)="backToGrid($event)"></ui-breadcrumb>
+
+  <!--
+    The trail is built from the folder tree, so a failed GET /bank/folders
+    leaves it saying nothing. The questions still load from the route, which
+    is why this is a line rather than a blocking error state.
+  -->
+  @if (foldersError(); as message) {
+    <p data-testid="folders-error" role="alert" class="text-sm text-hard-text">{{ message }}</p>
+  }
   <h1 class="text-xl font-semibold text-n900">Banco de preguntas</h1>
 
   @if (createdBanner()) {
@@ -77,105 +86,15 @@
     </div>
   } @else {
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-[55%_45%]">
-      <!-- Árbol de carpetas del colegio + preguntas de la carpeta abierta -->
+      <!-- Preguntas de la carpeta abierta -->
       <div class="flex flex-col gap-2">
-        @if (folderRemovedNotice(); as notice) {
-          <div data-testid="folder-removed-banner" class="flex items-center gap-2">
-            <ui-banner
-              variant="info"
-              [message]="notice"
-              [dismissible]="true"
-              (dismissed)="folderRemovedNotice.set(null)"
-            ></ui-banner>
-            <div data-testid="folder-removed-goto">
-              <ui-button variant="ghost" (clicked)="goToUnfiled()">Ver Sin carpeta</ui-button>
-            </div>
-          </div>
-        }
-
-        @if (folderError(); as message) {
-          <p data-testid="folder-error" role="alert" class="text-sm text-hard-text">
-            {{ message }}
-          </p>
-        }
-
-        <!--
-          `flex-wrap`: at 390px the search input plus its neighbours need more
-          than the viewport has, so without wrapping the input got squeezed to
-          26px wide — still focusable, just unusable with a thumb (P0 1, audit
-          2026-08-18). `min-w-[9rem]` keeps it from being squeezed again once
-          it is on its own row.
-
-          Placeholder states the search scope on purpose: the questions of an
-          unopened folder aren't in the browser, so the filter can only
-          honestly match folder names. See `filterFolderTree`.
-        -->
-        <div class="flex flex-wrap items-end gap-2">
-          <div data-testid="tree-search" class="min-w-[9rem] flex-1">
-            <ui-input
-              placeholder="Buscar carpeta…"
-              [value]="filterQuery()"
-              (valueChange)="filterQuery.set($event)"
-            ></ui-input>
-          </div>
-          <div data-testid="folder-create-root">
-            <ui-button variant="ghost" (clicked)="startRootFolderCreate()"
-              >+ Nueva carpeta</ui-button
-            >
-          </div>
-        </div>
-
-        <div data-testid="bank-tree" class="flex max-h-[70vh] flex-col gap-1 overflow-y-auto">
-          @if (foldersLoading()) {
-            <p class="p-4 text-sm text-n500">Cargando carpetas…</p>
-          } @else if (foldersError(); as message) {
-            <p role="alert" class="p-4 text-sm text-hard-text">{{ message }}</p>
-          } @else {
-            <!--
-              `ui-folder-tree` is mounted here EVEN WITH ZERO nodes (fix
-              round 4) — the spec does not re-seed a tenant that deletes
-              every folder, so a zero-folder tree is a real, reachable
-              state, not just a fresh signup. "+ Nueva carpeta" (above) needs
-              the `#folderTree` viewChild to resolve to SOMETHING in that
-              state too, or that tenant has no way to ever create a first
-              folder. The primitive renders no rows for an empty `nodes()`
-              (see its own 'renders an empty tree without throwing' spec),
-              so this placeholder still reads as an empty tree — it just
-              also hosts the root create editor when asked to.
-            -->
-            @if (filteredFolderTree().length === 0) {
-              <div
-                class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500"
-              >
-                @if (filterQuery().trim()) {
-                  No se encontraron carpetas para tu búsqueda.
-                } @else {
-                  Todavía no tienes carpetas.
-                }
-              </div>
-            }
-            <ui-folder-tree
-              #folderTree
-              [nodes]="filteredFolderTree()"
-              [selectedId]="selectedFolderId()"
-              mode="browse"
-              [inlineError]="folderInlineError()"
-              (folderSelected)="onFolderSelect($event)"
-              (create)="onFolderCreate($event)"
-              (rename)="onFolderRename($event)"
-              (remove)="onFolderRemoveRequested($event)"
-            ></ui-folder-tree>
-          }
-        </div>
-
-        <!-- Preguntas de la carpeta abierta -->
         <div data-testid="folder-questions" class="flex flex-col gap-1">
           @if (selectedFolderId() === null) {
             <p
               data-testid="no-folder-selected"
               class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500"
             >
-              Elige una carpeta para ver sus preguntas.
+              Elige una carpeta en el banco para ver sus preguntas.
             </p>
           } @else {
             @for (q of folderQuestions(); track q.id) {
@@ -562,25 +481,6 @@
       </div>
     </div>
   }
-
-  <ui-modal
-    [open]="pendingFolderDelete() !== null"
-    title="Quitar carpeta"
-    (openChange)="cancelFolderDelete()"
-  >
-    @if (pendingFolderDelete(); as folder) {
-      <p data-testid="folder-delete-confirm" class="text-sm text-n700">
-        Se quitará la carpeta «{{ folder.name }}» y sus {{ folder.totalCount }} preguntas dejarán de
-        verse aquí. Las preguntas no se borran del banco.
-      </p>
-    }
-    <div actions class="flex justify-end gap-2">
-      <ui-button variant="ghost" (clicked)="cancelFolderDelete()">Cancelar</ui-button>
-      <div data-testid="folder-delete-confirm-yes">
-        <ui-button variant="danger" (clicked)="confirmFolderDelete()">Quitar carpeta</ui-button>
-      </div>
-    </div>
-  </ui-modal>
 
   <ui-modal [open]="pendingDelete() !== null" title="Borrar pregunta" (openChange)="cancelDelete()">
     <p data-testid="delete-confirm" class="text-sm text-n700">
