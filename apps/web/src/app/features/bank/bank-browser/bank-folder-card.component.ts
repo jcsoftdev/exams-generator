@@ -70,6 +70,9 @@ import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
         </span>
 
         <span class="flex flex-col gap-0.5">
+          @if (trail().length > 0) {
+            <span data-testid="card-trail" class="text-[12px] text-n500">{{ trailLabel() }}</span>
+          }
           <span class="text-[15px] font-semibold text-n900">{{ node().name }}</span>
           @if (node().editable) {
             <span data-testid="card-children" class="text-[13px] text-n600">{{
@@ -173,6 +176,14 @@ export class BankFolderCardComponent {
 
   readonly node = input.required<FolderTreeNode>();
 
+  /**
+   * Where this folder lives, relative to the level being browsed. Empty in the
+   * grid itself, where every card is a direct child and the breadcrumb already
+   * says where they are; filled in for a search result, which may come from
+   * anywhere below and would otherwise be a name with no address.
+   */
+  readonly trail = input<readonly string[]>([]);
+
   /** The id of the folder the teacher asked to open. */
   readonly open = output<string>();
 
@@ -198,6 +209,8 @@ export class BankFolderCardComponent {
    * fail, and it carries no menu at all.
    */
   protected readonly variant = computed(() => (this.node().editable ? 'folder' : 'unfiled'));
+
+  protected readonly trailLabel = computed(() => this.trail().join(' › '));
 
   protected readonly childrenLabel = computed(() => {
     const count = this.node().children.length;

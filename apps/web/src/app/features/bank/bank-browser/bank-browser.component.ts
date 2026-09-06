@@ -6,7 +6,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
 import { BreadcrumbComponent, BreadcrumbCrumb } from '../../../ui/breadcrumb/breadcrumb.component';
 import { BankFoldersStore } from '../folders/bank-folders.store';
-import { childrenOf, findFolderPath, isLeafFolder } from '../folders/folder-path';
+import {
+  FolderMatch,
+  childrenOf,
+  findFolderPath,
+  isLeafFolder,
+  searchFolders,
+} from '../folders/folder-path';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
@@ -50,11 +56,22 @@ const ROOT_CRUMB_ID = '__root__';
 
       <div class="flex flex-wrap items-center justify-between gap-3">
         <h2 class="text-xl font-bold text-n900">{{ heading() }}</h2>
-        <div data-testid="new-folder">
+        <div class="flex flex-wrap items-center gap-2">
+          <div data-testid="folder-search" class="w-56">
+            <ui-input
+              type="text"
+              ariaLabel="Buscar una carpeta"
+              [placeholder]="searchPlaceholder()"
+              [value]="query()"
+              (valueChange)="query.set($event)"
+            ></ui-input>
+          </div>
+          <div data-testid="new-folder">
           <ui-button variant="ghost" size="sm" (clicked)="startCreating()">
             <lucide-angular name="folder-plus" class="h-4 w-4"></lucide-angular>
             Nueva carpeta
           </ui-button>
+          </div>
         </div>
       </div>
 
@@ -86,17 +103,22 @@ const ROOT_CRUMB_ID = '__root__';
         <p data-testid="browser-error" role="alert" class="text-sm text-hard-text">
           {{ store.error() }}
         </p>
-      } @else if (children().length === 0) {
+      } @else if (searching() && visible().length === 0) {
+        <p data-testid="browser-no-results" class="text-sm text-n600">
+          Ninguna carpeta de aquí para abajo se llama así.
+        </p>
+      } @else if (!searching() && children().length === 0) {
         <p data-testid="browser-empty" class="text-sm text-n600">
           Esta carpeta todavía no tiene subcarpetas.
         </p>
       } @else {
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          @for (node of children(); track node.id) {
+          @for (match of visible(); track match.node.id) {
             <bank-folder-card
-              [node]="node"
+              [node]="match.node"
+              [trail]="match.trail"
               (open)="openFolder($event)"
-              (renamed)="renameFolder(node.id, $event)"
+              (renamed)="renameFolder(match.node.id, $event)"
               (subfolderRequested)="startCreatingUnder($event)"
               (removeRequested)="askToRemove($event)"
             ></bank-folder-card>
@@ -152,6 +174,31 @@ export class BankBrowserComponent {
   private readonly path = computed(() => findFolderPath(this.store.tree(), this.folderId()));
 
   protected readonly children = computed(() => childrenOf(this.store.tree(), this.folderId()));
+
+  /**
+   * The name filter, kept in the component rather than the URL: it is a way of
+   * looking, not a place — and a half-typed word in a shared link would open
+   * the bank on a filtered screen the reader never asked for.
+   */
+  protected readonly query = signal('');
+
+  protected readonly searching = computed(() => this.query().trim() !== '');
+
+  protected readonly searchPlaceholder = computed(() => {
+    const path = this.path();
+    return path.length === 0 ? 'Buscar en mi banco' : `Buscar en ${path[path.length - 1].name}`;
+  });
+
+  /**
+   * What the grid paints: the children of the open folder, or — while a query
+   * is on — every match below it, each carrying the trail that says where it
+   * lives. Both shapes are `FolderMatch` so the template has one loop.
+   */
+  protected readonly visible = computed<readonly FolderMatch[]>(() =>
+    this.searching()
+      ? searchFolders(this.store.tree(), this.folderId(), this.query())
+      : this.children().map((node) => ({ node, trail: [] as readonly string[] })),
+  );
 
   protected readonly crumbs = computed<readonly BreadcrumbCrumb[]>(() => [
     { id: ROOT_CRUMB_ID, label: 'Mi banco' },
@@ -301,6 +348,9 @@ export class BankBrowserComponent {
   }
 
   protected openFolder(id: string): void {
+    // A query that survived the jump would filter the level she just opened by
+    // a word she typed about the previous one.
+    this.query.set('');
     if (isLeafFolder(this.store.tree(), id)) {
       void this.router.navigate(['/app/bank/carpeta', id]);
       return;
@@ -312,6 +362,7 @@ export class BankBrowserComponent {
   }
 
   protected openCrumb(id: string): void {
+    this.query.set('');
     void this.router.navigate([], {
       relativeTo: this.route,
       // `null` removes the param rather than writing "carpeta=null" into the

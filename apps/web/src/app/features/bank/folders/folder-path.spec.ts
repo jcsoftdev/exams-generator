@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { FolderTreeNode } from '../../../ui/folder-tree/folder-tree.types';
-import { childrenOf, findFolderPath, isLeafFolder } from './folder-path';
+import { childrenOf, findFolderPath, isLeafFolder, searchFolders } from './folder-path';
 
 function node(id: string, name: string, children: FolderTreeNode[] = []): FolderTreeNode {
   return {
@@ -79,5 +79,40 @@ describe('isLeafFolder', () => {
   it('is false at the root and for an unknown id', () => {
     expect(isLeafFolder(TREE, null)).toBe(false);
     expect(isLeafFolder(TREE, 'no-existe')).toBe(false);
+  });
+});
+
+describe('searchFolders', () => {
+  it('finds folders at any depth below the level being browsed', () => {
+    const matches = searchFolders(TREE, null, 'cuad');
+
+    expect(matches.map((match) => match.node.id)).toEqual(['cuad']);
+  });
+
+  /** The trail is what tells two folders with the same name apart. */
+  it('carries the trail from the browsed level down to the match', () => {
+    const matches = searchFolders(TREE, null, 'cuad');
+
+    expect(matches[0].trail).toEqual(['Colegio', 'Matemática']);
+  });
+
+  it('searches only inside the open folder', () => {
+    expect(searchFolders(TREE, 'preuni', 'cuad')).toEqual([]);
+    expect(searchFolders(TREE, 'colegio', 'cuad').map((m) => m.node.id)).toEqual(['cuad']);
+  });
+
+  /** A teacher types "matematica"; the folder is called "Matemática". */
+  it('ignores case and accents', () => {
+    expect(searchFolders(TREE, null, 'MATEMATICA').map((m) => m.node.id)).toEqual(['mate']);
+  });
+
+  it('returns nothing for a blank query rather than the whole tree', () => {
+    expect(searchFolders(TREE, null, '   ')).toEqual([]);
+  });
+
+  /** A match keeps its own subtree searchable — the parent hit does not swallow the child. */
+  it('lists a matching parent and a matching descendant separately', () => {
+    expect(searchFolders(TREE, null, 'a').map((m) => m.node.id)).toContain('mate');
+    expect(searchFolders(TREE, null, 'a').map((m) => m.node.id)).toContain('cuad');
   });
 });

@@ -63,3 +63,53 @@ export function isLeafFolder(
   const node = findNode(tree, folderId);
   return node !== null && node.children.length === 0;
 }
+
+/** A folder the search matched, plus the names it sits under, relative to the level being browsed. */
+export interface FolderMatch {
+  readonly node: FolderTreeNode;
+  readonly trail: readonly string[];
+}
+
+/**
+ * Every folder BELOW `folderId` whose name matches, flattened, each carrying
+ * the trail that says where it lives — two folders may well be called
+ * "Repaso", and the trail is the only thing that tells them apart.
+ *
+ * Scope, kept honest: this searches FOLDER NAMES, never questions. The
+ * questions of an unopened folder are not in the browser, so matching them
+ * here would quietly mean "the part you already opened" — the same decision
+ * `filterFolderTree` documents.
+ *
+ * A matching folder does NOT swallow its subtree: a hit keeps being searched,
+ * so "Álgebra" inside a matching "Matemática" is still its own result.
+ */
+export function searchFolders(
+  tree: readonly FolderTreeNode[],
+  folderId: string | null,
+  query: string,
+): readonly FolderMatch[] {
+  const needle = normalizeName(query);
+  if (needle === '') return [];
+
+  const matches: FolderMatch[] = [];
+  const walk = (nodes: readonly FolderTreeNode[], trail: readonly string[]): void => {
+    for (const node of nodes) {
+      if (normalizeName(node.name).includes(needle)) {
+        matches.push({ node, trail });
+      }
+      walk(node.children, [...trail, node.name]);
+    }
+  };
+
+  walk(childrenOf(tree, folderId), []);
+  return matches;
+}
+
+/** Accent- and case-insensitive, because a teacher types "matematica" for "Matemática". */
+function normalizeName(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}

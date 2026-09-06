@@ -478,3 +478,77 @@ describe('BankBrowserComponent — maintaining a folder from its card', () => {
     ).toBeFalsy();
   });
 });
+
+/**
+ * A school ends up with more folders than fit on one screen, and the teacher
+ * knows the name of the one she wants. Search looks DOWNWARD from the level
+ * she is standing in, so the results are folders, never questions — the
+ * questions of an unopened folder are not in the browser, and pretending
+ * otherwise would silently mean "the part you already opened".
+ */
+describe('BankBrowserComponent — searching for a folder', () => {
+  function search(harness: RouterTestingHarness, el: () => HTMLElement, query: string): void {
+    const input = el().querySelector<HTMLInputElement>('[data-testid="folder-search"] input')!;
+    input.value = query;
+    input.dispatchEvent(new Event('input'));
+    harness.detectChanges();
+  }
+
+  it('finds a folder that lives several levels down', async () => {
+    const { harness, el } = await setup();
+
+    search(harness, el, 'cuadr');
+
+    const cards = el().querySelectorAll('[data-testid="folder-card"]');
+    expect(cards.length).toBe(1);
+    expect(cards[0].textContent).toContain('Ecuaciones cuadráticas');
+  });
+
+  /** Two folders can share a name; the trail is what tells them apart. */
+  it('shows where each result lives', async () => {
+    const { harness, el } = await setup();
+
+    search(harness, el, 'cuadr');
+
+    expect(el().querySelector('[data-testid="card-trail"]')!.textContent).toContain('Matemática');
+  });
+
+  it('searches only below the folder that is open', async () => {
+    const { harness, el } = await setup('/app/bank?carpeta=preuni');
+
+    search(harness, el, 'cuadr');
+
+    expect(el().querySelectorAll('[data-testid="folder-card"]').length).toBe(0);
+    expect(el().querySelector('[data-testid="browser-no-results"]')).toBeTruthy();
+  });
+
+  it('opens a result the same way as a card in the grid', async () => {
+    const { harness, el, router } = await setup();
+
+    search(harness, el, 'cuadr');
+    await clickCard(harness, el, 'Ecuaciones cuadráticas');
+
+    expect(router.url).toBe('/app/bank/carpeta/cuad');
+  });
+
+  it('goes back to the level being browsed once the query is cleared', async () => {
+    const { harness, el } = await setup();
+
+    search(harness, el, 'cuadr');
+    search(harness, el, '');
+
+    expect(el().querySelectorAll('[data-testid="folder-card"]').length).toBe(2);
+  });
+
+  /** Drilling with a query still on screen would show results that ignore it. */
+  it('drops the query when the teacher navigates', async () => {
+    const { harness, el } = await setup();
+
+    search(harness, el, 'mate');
+    await clickCard(harness, el, 'Matemática');
+
+    expect(el().querySelector<HTMLInputElement>('[data-testid="folder-search"] input')!.value).toBe(
+      '',
+    );
+  });
+});
