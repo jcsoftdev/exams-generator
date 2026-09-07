@@ -1,4 +1,5 @@
-import { buildTopicGradeInserts } from "./seed-lot-questions";
+import { LotEntry } from "./plan-lot-seed";
+import { buildTopicGradeInserts, registerAlternativeImageDirs } from "./seed-lot-questions";
 
 /**
  * Unit coverage for the pure helper only — `seedLotQuestions` itself talks to
@@ -38,5 +39,61 @@ describe("buildTopicGradeInserts", () => {
 
   it("returns an empty array for an empty set", () => {
     expect(buildTopicGradeInserts(new Set())).toEqual([]);
+  });
+});
+
+/**
+ * A sequence question offers five drawings and no words, so its PNGs are listed
+ * in `alternativeImagePaths` rather than in `imagePath`. `uploadAsset` looks
+ * every path up in the same directory map, which only the figure pass filled —
+ * so those four questions failed to seed with "image not readable" while the
+ * files sat on disk.
+ */
+describe("registerAlternativeImageDirs", () => {
+  const base = {
+    courseName: "Razonamiento Matemático",
+    topicName: "Psicotécnico",
+    gradeLevel: "pre",
+    difficulty: "hard",
+    correctAnswer: "0",
+    sourceName: "lote, pregunta 40",
+  } as unknown as LotEntry;
+
+  it("registers every alternative drawing against its own lot directory", () => {
+    const located = [
+      {
+        entry: { ...base, alternativeImagePaths: ["alts/q40-a.png", "alts/q40-b.png"] },
+        dir: "/data/lots",
+      },
+    ];
+
+    const map = registerAlternativeImageDirs(located, new Map());
+
+    expect(map.get("alts/q40-a.png")).toBe("/data/lots");
+    expect(map.get("alts/q40-b.png")).toBe("/data/lots");
+  });
+
+  it("skips the text-only slots a mixed question leaves null", () => {
+    const located = [
+      { entry: { ...base, alternativeImagePaths: [null, "alts/q40-b.png", null] }, dir: "/data" },
+    ];
+
+    const map = registerAlternativeImageDirs(located, new Map());
+
+    expect([...map.keys()]).toEqual(["alts/q40-b.png"]);
+  });
+
+  it("leaves a path the figure pass already claimed on its own directory", () => {
+    const located = [{ entry: { ...base, alternativeImagePaths: ["shared.png"] }, dir: "/second" }];
+
+    const map = registerAlternativeImageDirs(located, new Map([["shared.png", "/first"]]));
+
+    expect(map.get("shared.png")).toBe("/first");
+  });
+
+  it("does nothing for an entry with no alternative drawings", () => {
+    const located = [{ entry: base, dir: "/data" }];
+
+    expect(registerAlternativeImageDirs(located, new Map()).size).toBe(0);
   });
 });

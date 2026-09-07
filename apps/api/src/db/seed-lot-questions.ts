@@ -48,6 +48,33 @@ interface LocatedEntry {
   readonly dir: string;
 }
 
+/**
+ * Teaches the path-to-directory map about a sequence question's per-alternative
+ * drawings.
+ *
+ * They live in `alternativeImagePaths`, never in `imagePath`, but `uploadAsset`
+ * resolves EVERY path through this one map. Registering only the figure made
+ * each such question fail to seed with "image not readable" while its PNGs sat
+ * right there on disk — four questions across three lots, silently missing from
+ * the bank since the crop pass first wrote them.
+ *
+ * Only fills gaps: a path a figure already claimed keeps that directory, which
+ * is what makes it safe to run after the fingerprint pass rather than inside it.
+ */
+export function registerAlternativeImageDirs(
+  located: readonly LocatedEntry[],
+  dirByImagePath: Map<string, string>,
+): Map<string, string> {
+  for (const { entry, dir } of located) {
+    for (const alternativeImagePath of entry.alternativeImagePaths ?? []) {
+      if (alternativeImagePath && !dirByImagePath.has(alternativeImagePath)) {
+        dirByImagePath.set(alternativeImagePath, dir);
+      }
+    }
+  }
+  return dirByImagePath;
+}
+
 function readLots(): LocatedEntry[] {
   let names: string[];
   try {
@@ -133,6 +160,7 @@ export async function seedLotQuestions(createdBy: string): Promise<void> {
       // rather than aborting a whole deploy's seeding for one missing PNG.
     }
   }
+  registerAlternativeImageDirs(located, dirByImagePath);
 
   const plan = planLotSeed({
     entries: located.map((item) => item.entry),
