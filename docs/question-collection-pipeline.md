@@ -352,8 +352,17 @@ Dos lotes las trataron al revés el mismo día, así que la regla queda escrita:
   propio, una unidad, la redacción del enunciado. Si al arreglarlo cambia lo que
   se pregunta o lo que se responde, no se toca: eso es resolver, no transcribir.
 
-La duda se resuelve por consecuencia. Si al lector le cambia la respuesta, va
-literal aunque parezca un error.
+La duda se resuelve por consecuencia, no por cuántas letras cambian. Si al que
+rinde el examen le cambia la respuesta, va literal aunque parezca un error.
+
+Dos casos reales del borde, los dos correctos:
+
+- "Si el **reporte** se hiciera proporcionalmente" en un problema de reparto
+  proporcional. Con "reporte" la frase no significa nada y solo hay una lectura
+  posible, así que se arregla — pero se avisa, porque ya no es una letra.
+- "ZnS → Sulfato de zinc", que debería decir sulfuro, se queda literal: la
+  pregunta puede estar pidiendo justamente detectar el nombre incorrecto, y
+  arreglarlo la destruye.
 
 ### Llegar a producción
 

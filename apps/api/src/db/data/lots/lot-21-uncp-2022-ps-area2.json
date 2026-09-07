@@ -1,3 +1,869 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos fracciones a $frac(2,5)$ y $frac(7,9)$ tienen como suma de sus numeradores 31 y la suma de sus denominadores 52. Calcula el producto de dichas fracciones.",
+      "alternatives": [
+        "$frac(120,576)$",
+        "$frac(129,692)$",
+        "$frac(170,470)$",
+        "$frac(390,679)$",
+        "$frac(210,675)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 01 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una serie de tres razones geométricas equivalentes continuas de constante; se sabe que el producto de los dos primeros antecedentes excede al triple del último consecuente en 279. Calcula la suma de los términos de la segunda razón.",
+      "alternatives": [
+        "18",
+        "24",
+        "12",
+        "36",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 02 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se desea repartir una cantidad en forma proporcional a tres enteros consecutivos. Si el reparto se hiciera proporcionalmente a los tres siguientes consecutivos, halla en qué porcentaje varía la segunda parte.",
+      "alternatives": [
+        "19%",
+        "20%",
+        "No varía",
+        "10%",
+        "30%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 03 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "José impone un capital y por equivocación la tasa la consideran trimestral en lugar de mensual dejando de percibir en un año 240 soles. Halla la ganancia (en soles) en 5 años, que recibiría si le consideran la tasa correcta.",
+      "alternatives": [
+        "1 200",
+        "500",
+        "2 000",
+        "7 200",
+        "1 800"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 04 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los descuentos comercial y racional están en la relación de 11 a 7, la letra vence dentro de 9 meses. Si el valor nominal, el descuento comercial y el descuento racional suman 4 470 soles. Halla el valor actual comercial si se cancelara faltando 3 meses para el vencimiento.",
+      "alternatives": [
+        "1 870 soles",
+        "1 860 soles",
+        "1 800 soles",
+        "1 320 soles",
+        "1 200 soles"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 05 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La raíz cuadrada de $9 + 3 sqrt(5)$ tiene como solución la forma: $frac(1, sqrt(a))(sqrt(b) + sqrt(c))$, determina: $a + b + c$",
+      "alternatives": [
+        "12",
+        "20",
+        "14",
+        "18",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 06 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dados los siguientes polinomios: $P(x)$ de grado 2 y término independiente 3, y $Q(x) = x P(x) + 5x + 3$. Si $Q(2) = 47$ y $P(1) = 8$. Determina la suma de raíces de $Q(x)$.",
+      "alternatives": [
+        "$-frac(3,2)$",
+        "$-frac(2,3)$",
+        "$frac(2,3)$",
+        "$frac(3,2)$",
+        "$frac(3,5)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 07 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las funciones: $f(x) = sqrt(x^2 - 16)$; $g(x) = frac(3, sqrt(x - 4))$\n\nDetermina el dominio de $f(x) dot g(x)$",
+      "alternatives": [
+        "$chevron.l -4, 4 chevron.r$",
+        "$chevron.l 4, +infinity chevron.r$",
+        "$[4, +infinity chevron.r$",
+        "$chevron.l -infinity, -4] union chevron.l 4, +infinity chevron.r$",
+        "$chevron.l -infinity, 4 chevron.r$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 08 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las matrices:\n\n$A = mat(3, 4; 5, 6)$ y $B = mat(-1, -2; -4, -5)$\n\nSabiendo que: $M = A^2 + B^2 + A B + B A$, determina la traza de \"M\"",
+      "alternatives": [
+        "12",
+        "10",
+        "13",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 09 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $P[frac(x,3) - 2] = x + 2$, además:\n\n$P[Q(frac(3x,4) + 1)] = 9x + 5$\n\nDetermina: $Q(4)$",
+      "alternatives": [
+        "13",
+        "14",
+        "12",
+        "11",
+        "15"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 10 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, determina el valor de \"x\" si $A B = C D$.",
+      "alternatives": [
+        "80°",
+        "40°",
+        "45°",
+        "20°",
+        "60°"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/geo-lot-21-uncp-2022-ps-area2-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, determina $M N$; si $overline(M N) parallel overline(A C)$; el perímetro del triángulo $M B N$ es igual al perímetro del trapecio $A M N C$; $A B = 15$; $A C = B C = 25$.",
+      "alternatives": [
+        "$frac(325,16)$",
+        "$frac(325,11)$",
+        "$frac(325,7)$",
+        "$frac(325,17)$",
+        "$frac(325,13)$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/geo-lot-21-uncp-2022-ps-area2-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El cuadrado de la medida del ángulo exterior de un polígono regular es igual a los $frac(5,2)$ de la medida del ángulo interior. Determina su número de lados.",
+      "alternatives": [
+        "19",
+        "18",
+        "15",
+        "17",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos $A$, $B$ y $C$; así mismo, se ubica el punto medio \"O\" de $overline(B C)$. Además se cumple que:\n\n$frac(1,O C) - frac(1,A C) = frac(A O, O B^2 + 2 A O)$\n\nDetermina el valor de $E = frac(B C,4)$",
+      "alternatives": [
+        "3",
+        "4",
+        "2",
+        "1",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 14 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo $A B C$ ($B = 90°$) se sabe que: $tan A dot cot C = 25$. Determina el valor de $P = 26(\"sen\" C + cos A)$",
+      "alternatives": [
+        "$sqrt(26)$",
+        "$5 sqrt(26)$",
+        "$2 sqrt(26)$",
+        "$4 sqrt(26)$",
+        "$3 sqrt(26)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $x + y + z = 180°$\n\nDetermina: $P = csc(x+y) \"sen\" z + cot 2x [tan(2y + 2z)]$",
+      "alternatives": [
+        "-1",
+        "1",
+        "2",
+        "-2",
+        "0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se cumple que $\"sen\" B = 2 \"sen\" C$; determina la suma de las longitudes de los catetos.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/trig-lot-21-uncp-2022-ps-area2-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la siguiente tabla de distribución de frecuencias con ancho de clase constante e igual a 20.\n\nDetermina la media de los datos.",
+      "alternatives": [
+        "140,30",
+        "158,57",
+        "142,52",
+        "160,40",
+        "156,00"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/est-lot-21-uncp-2022-ps-area2-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad de los siguientes enunciados respecto a las variables estadísticas.\n\nI. Una variable es una característica común que se puede encontrar solo en una muestra.\nII. Las variables estadísticas son: cualitativas y cuantitativas.\nIII. Las variables cuantitativas continuas son aquellas donde sus valores se presentan en valores enteros.",
+      "alternatives": [
+        "FFF",
+        "VVF",
+        "FVF",
+        "VFF",
+        "FVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente histograma:\n\nCalcula: Media + Mediana.",
+      "alternatives": [
+        "34,07",
+        "34,75",
+        "34,17",
+        "34,57",
+        "34,21"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/est-lot-21-uncp-2022-ps-area2-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la obra literaria que corresponde:",
+      "alternatives": [
+        "Otelo",
+        "La divina comedia",
+        "El rey Lear",
+        "Macbeth",
+        "Hamlet"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/lit-lot-21-uncp-2022-ps-area2-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el ismo que se hace alusión:\n\n#box(stroke: 0.5pt, inset: 8pt)[Movimiento inspirado en Sigmund Freud. Se caracterizó por pretender crear un individuo nuevo, recurrir a la crueldad y el humor negro con el fin de destruir todo matiz sentimental.]",
+      "alternatives": [
+        "Futurismo",
+        "Cubismo",
+        "Expresionismo",
+        "Surrealismo",
+        "Ultraísmo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los grados de adjetivo calificativo con sus respectivos ejemplos:\n\nI. Comparativo ( ) Río caudaloso\nII. Superlativo relativo ( ) Sumamente caudaloso\nIII. Positivo ( ) Más caudaloso que nunca\nIV. Superlativo absoluto ( ) Ese río es el más caudaloso de la costa",
+      "alternatives": [
+        "II – IV – I – III",
+        "III – IV – II – I",
+        "IV – III – I – II",
+        "III – IV – I – II",
+        "IV – II – I – III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 23 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el gráfico mostrado, determina la intensidad eléctrica en el punto B.\n\n$Q_1 = 40$ nC\n$Q_2 = 30$ nC",
+      "alternatives": [
+        "40 N/C",
+        "70 N/C",
+        "50 N/C",
+        "30 N/C",
+        "20 N/C"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/fis-lot-21-uncp-2022-ps-area2-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un móvil se mueve en línea recta (eje X) de acuerdo al gráfico de distancia – tiempo mostrado:\n\nIndica la verdad (V) o falsedad (F) de las proposiciones:\nI. El móvil se mueve en el sentido positivo del eje X.\nII. El desplazamiento del móvil entre $t = 0$ s y $t = 10$ s es igual a 100 m.\nIII. La rapidez media entre $t = 0$ s y $t = 5$ s es 2 m/s.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVF",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/fis-lot-21-uncp-2022-ps-area2-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula realiza un MCU con radio de $sqrt(2)$ metros, demorándose 8 segundos en dar una vuelta. Determina la magnitud de su desplazamiento (m) en un intervalo de 2 segundos.",
+      "alternatives": [
+        "$sqrt(2) pi$",
+        "2",
+        "$2 pi$",
+        "$pi$",
+        "$sqrt(2)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se suelta un objeto de masa $m = 10$ Kg desde la posición mostrada en la figura. Calcula la máxima deformación del resorte con constante $K = 4000$ N/m ($g = 10 \"m/s\"^2$)",
+      "alternatives": [
+        "1,0 m",
+        "0,2 m",
+        "0,3 m",
+        "0,5 m",
+        "0,1 m"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/fis-lot-21-uncp-2022-ps-area2-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La desintegración de una porción de masa de la materia da lugar a la liberación de $45 times 10^(19)$ ergios de energía. Determina el porcentaje que pasó a ser energía, si la masa inicial fue de 5 gramos.",
+      "alternatives": [
+        "20 %",
+        "25%",
+        "35 %",
+        "10 %",
+        "5 %"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El último electrón de la configuración de un átomo tiene los siguientes números cuánticos:\n\n$n = 4$; $l = 2$; $m = 0$ y $s = -1/2$\n\nDetermina cuántas partículas tiene dicho átomo.",
+      "alternatives": [
+        "46",
+        "64",
+        "45",
+        "36",
+        "40"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la alternativa que corresponde a la fórmula global del compuesto:\n\n2 – cloro – 1 – penten – 3 – ino",
+      "alternatives": [
+        "$\"CH\"_2 = \"CCl\" - \"C\" equiv \"C\" - \"CH\"_3$",
+        "$\"CH\"_3 \"CH\"_2 - \"CHCl\" - \"CH\"_2 - \"CH\"_3$",
+        "$\"CH\"_2 = \"CH\" - \"C\" equiv \"C\" - \"CH\"_3$",
+        "$\"CH\"_3 - \"CH\" = \"CCl\" - \"C\" = \"CH\"$",
+        "$\"CHCl\" = \"CH\" - \"C\" equiv \"C\" - \"CH\"_3$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos:\n\nRespecto a la distribución mundial de especies de acuerdo a la gradiente latitudinal, identifica la alternativa correcta.",
+      "alternatives": [
+        "En \"x\" hay mayor biodiversidad que en \"y\".",
+        "En \"y\" la biodiversidad disminuye.",
+        "En \"y\" la biodiversidad se incrementa.",
+        "En \"x\" la biodiversidad se incrementa.",
+        "En \"x\" e \"y\" la biodiversidad es semejante."
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/eco-lot-21-uncp-2022-ps-area2-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Clima y desastres naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos\n\nColumna A: Helada\nColumna B: Huayco\n\nDetermina la verdad (V) o falsedad (F) de los siguientes enunciados:\n- B es generado por procesos dinámicos en la superficie de la Tierra.\n- A es generado por fenómenos hidrológicos.\n- B es generado por procesos dinámicos en el interior de la Tierra.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FVV",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Panchito el panadero, ha repartido los $frac(2,5)$ de los panes que había en una canasta, luego la mitad del resto y por el último los $frac(2,3)$ del nuevo resto, quedándole 20 panes. ¿Cuántos panes repartió la segunda vez?",
+      "alternatives": [
+        "45",
+        "65",
+        "50",
+        "60",
+        "40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el esquema molecular:\n\n$[(\\~q -> \\~p) and \\~(\\~p -> \\~q)] or (p -> \\~q)$\n\nequivale a:",
+      "alternatives": [
+        "$\\~q$",
+        "$\\~p or \\~q$",
+        "$\\~p$",
+        "$p and q$",
+        "$\\~p and \\~q$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué parte del área total representa el área de la región sombreada? (P, Q y R son puntos medios)",
+      "alternatives": [
+        "$frac(5,6)$",
+        "$frac(5,8)$",
+        "$frac(1,3)$",
+        "$frac(3,7)$",
+        "$frac(1,2)$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/geo-lot-21-uncp-2022-ps-area2-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un niño manifiesta: \"Si 2 días después de 1 día antes de 3 días después de 4 días antes de ayer es el pasado mañana del ayer del lunes\". Luego pregunta, ¿qué día será pasado mañana de 4 días antes de 2 días después de mañana?",
+      "alternatives": [
+        "Viernes",
+        "Martes",
+        "Sábado",
+        "Miércoles",
+        "Jueves"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define en $RR$: $a * b = a + b = frac(5,4)$\n\nSiendo $a^(-1)$ = elemento inverso de \"a\"\n\nDetermina $2^(-1)$",
+      "alternatives": [
+        "$frac(4,5)$",
+        "$frac(5,4)$",
+        "$frac(1,3)$",
+        "$frac(5,2)$",
+        "$frac(1,2)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de los cerillos indicados en el gráfico se debe cambiar de posición para que se verifique la igualdad?",
+      "alternatives": [
+        "N",
+        "U",
+        "C",
+        "P",
+        "T"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/rm-lot-21-uncp-2022-ps-area2-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juanito al observar su reloj, se confundió el minutero con el horario y el horario con el minutero, por lo que observó 57 minutos de más que la hora real. Si en realidad el horario estaba entre las 6 y las 7 y el minutero entre las 7 y las 8 ¿Qué hora era en realidad?",
+      "alternatives": [
+        "6 h 39 min",
+        "6 h 36 min",
+        "6 h 35 min",
+        "6 h 38 min",
+        "6 h 37 min"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Patty le dice a su primo Amir, \"en el almuerzo de ayer, al contar entre nosotros, estábamos presentes una abuela, dos padres, tres madres, dos esposos, dos esposas, dos hijos, dos hijas, un hermano, una hermana, dos tíos, dos tías, un sobrino, una sobrina, un nieto y una nieta\". Luego le pregunta, ¿cuántas personas como mínimo estábamos en dicho almuerzo?",
+      "alternatives": [
+        "12",
+        "7",
+        "9",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las edades de los padres de Dulio son entre sí como 8 es a 7. Cuando su madre tenga la edad que tiene su padre, este tendrá el doble de la edad que tenía su madre hace 20 años. ¿Cuál es la suma de las edades de sus padres, si el padre de Dulio es mayor que su madre?",
+      "alternatives": [
+        "90 años",
+        "126 años",
+        "108 años",
+        "120 años",
+        "86 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define que: #box(stroke: 0.7pt, inset: (x: 3pt, y: 1pt))[$n$] $= frac(n (n + 1), 2)$\n\nHallar el valor de \"x\" en:\n\n#box(stroke: 0.7pt, inset: (x: 4pt, y: 2pt))[#box(stroke: 0.7pt, inset: (x: 4pt, y: 2pt))[$2x + 1$]] $= 21$",
+      "alternatives": [
+        "3",
+        "1",
+        "$frac(1,2)$",
+        "$frac(2,3)$",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los vicios de dicción con su respectivo ejemplo:\n\nI. Solecismo\nII. Anfibología\nIII. Barbarismo\nIV. Cacofonía\nV. Monotonía\n\na. Hacer la tarea es una obligación.\nb. Me voy de vacaciones a Lima y Ica.\nc. Vendo casitas para perros de madera.\nd. La alberja le da sabor al estofado.\ne. El médico me recetó una cápsula para las hemorroides.",
+      "alternatives": [
+        "Id – IIe – IIIa – IVb – Vc",
+        "Ic – IId – IIIe – IVa – Vb",
+        "Ib – IIc – IIId – IVe – Va",
+        "Ia – IIb – IIIc – IVd – Ve",
+        "Ie – IIc – IIId – IVb – Va"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 43 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEl pueblo kukama kukamiria o cocama habita en la zona central de la Amazonía peruana. Su lengua y, al menos, otras 15 más están desapareciendo poco a poco, según el Ministerio de Educación de Perú. Sin embargo, un grupo de niños decidieron poner voces y corazón para que esto no suceda. De forma creativa y conmovedora, lanzaron un video en el que cantan y llaman a hablar y recuperar su lengua.\n\nProducido en el distrito de Nauta por los niños con la ayuda de maestros y líderes de la comunidad, el video de la canción suma miles de clics en Internet. En él se puede ver a un grupo de niños cantando y recorriendo su pueblo. Interpretada en castellano y en kukama, la pegadiza canción dice: \"Yo soy del norte y me gusta rapear, pero cantar en kukama me gusta más\".\n\nEl mensaje es muy claro: evitar la desaparición y olvido de la lengua kukama que se habla en esta zona de la Amazonía peruana, pero también en Colombia y Brasil.\n\nDanna Gaviota es una niña kukama que tiene muy claro el objetivo de esta peculiar campaña: ¿Y cuál es el mensaje?. Revalorar nuestra kukama\", dice orgullosa.\n\nDel texto se deduce que:",
+      "alternatives": [
+        "Los niños buscan revalorar la lengua kukama.",
+        "El Ministerio de Educación se preocupa por las lenguas amazónicas.",
+        "El distrito de Nauta apuesta por el desarrollo comunal.",
+        "La Amazonía peruana representa la identidad lingüística.",
+        "La lengua kukama se extiende hasta Brasil, Colombia y Chile."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEl pueblo kukama kukamiria o cocama habita en la zona central de la Amazonía peruana. Su lengua y, al menos, otras 15 más están desapareciendo poco a poco, según el Ministerio de Educación de Perú. Sin embargo, un grupo de niños decidieron poner voces y corazón para que esto no suceda. De forma creativa y conmovedora, lanzaron un video en el que cantan y llaman a hablar y recuperar su lengua.\n\nProducido en el distrito de Nauta por los niños con la ayuda de maestros y líderes de la comunidad, el video de la canción suma miles de clics en Internet. En él se puede ver a un grupo de niños cantando y recorriendo su pueblo. Interpretada en castellano y en kukama, la pegadiza canción dice: \"Yo soy del norte y me gusta rapear, pero cantar en kukama me gusta más\".\n\nEl mensaje es muy claro: evitar la desaparición y olvido de la lengua kukama que se habla en esta zona de la Amazonía peruana, pero también en Colombia y Brasil.\n\nDanna Gaviota es una niña kukama que tiene muy claro el objetivo de esta peculiar campaña: ¿Y cuál es el mensaje?. Revalorar nuestra kukama\", dice orgullosa.\n\nSi se plantea que Internet es un medio que facilita la comunicación a escala mundial, entonces se concluye que:",
+      "alternatives": [
+        "La Amazonía peruana tendría mayor visita turística.",
+        "La niña Gaviota reproducirá digitalmente con facilidad la cultura kukama.",
+        "El pueblo kukama se internacionaliza.",
+        "La producción audiovisual de los niños se difunde con más amplitud.",
+        "La canción sería la herramienta básica para educar a los niños."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona el tipo de relación léxico semántica con su respectivo ejemplo:\n\nI. Homografía   a. Mi hijo varón se llama José, se ha convertido en el barón de las inmobiliarias.\nII. Paronimia   b. Me gustan los deportes: fútbol, vóley, atletismo y básquet.\nIII. Hiperonimia   c. Juan volvió de su exilio y fue premiado por ser un eximio literato.\nIV. Homofonía   d. Walberto lanzó la jabalina y sin querer mató una jabalina.",
+      "alternatives": [
+        "Id – IIc – IIIb – IVa",
+        "Ic – IId – IIIa – Ivb",
+        "Ia – IIb – IIIc – Ivd",
+        "Ib – IIc – IIId – Iva",
+        "Id – IIb – IIIc – Iva"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 46 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos argumentativos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO:\n\nJuan: Es conveniente prohibir a los niños ver programas de contenido violento en la televisión, pues adquieren conductas agresivas.\nJuana: Mis hijos miran diversos programas en la televisión, pero no son agresivos.\n\n¿Cuál es el punto de controversia entre Juan y Juana?",
+      "alternatives": [
+        "La conducta de los niños en edad escolar",
+        "El contenido de los programas televisivos",
+        "Los programas televisivos de señal abierta",
+        "El rol educativo de los padres",
+        "La violencia de los niños en medios de comunicación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple present tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto:\n\nPamela … sing very well. She works as a singer. She … has a sore throat, so she … has a throat check – up.",
+      "alternatives": [
+        "can / ever / never",
+        "can / sometimes / usually",
+        "is / sometimes / usually",
+        "does / never / always",
+        "can / never / always"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/ing-lot-21-uncp-2022-ps-area2-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo:\n\nA: Look!... is the Eiffel tower.\nB: Where …?\nA: It's in France. It's … country.",
+      "alternatives": [
+        "Those / it is / my",
+        "This / it is / its",
+        "These / is it / its",
+        "That / it is / my",
+        "That / is it / my"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/ing-lot-21-uncp-2022-ps-area2-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo:\n\nA: What has happened to Manuel?\nB: He has … mountain biking, has … and has … his finger.",
+      "alternatives": [
+        "gone / fallen down / broken",
+        "went / fallen / broke",
+        "goes / falls down / breaks",
+        "gone / fell / broken",
+        "went / fell down / broke"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-21-uncp-2022-ps-area2-figures/ing-lot-21-uncp-2022-ps-area2-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=34",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2022 Primera Selección (Área II), pregunta 50 (clave A)"
+    }
+  ]
 }

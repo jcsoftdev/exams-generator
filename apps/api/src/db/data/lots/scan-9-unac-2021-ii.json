@@ -1,0 +1,690 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se tienen los cuadrados de áreas E, F, G. Si MN = 10, halle E+F",
+      "alternatives": [
+        "$68\"u\"^2$",
+        "$70\"u\"^2$",
+        "$60\"u\"^2$",
+        "$50\"u\"^2$",
+        "$25\"u\"^2$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-9-unac-2021-ii-figures/q01.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un país reciclan todos sus materiales y pueden hacer un vaso nuevo con nueve vasos utilizados. ¿Cuántos vasos reciclados pueden fabricar con 505 vasos que hay inicialmente?",
+      "alternatives": [
+        "61",
+        "60",
+        "64",
+        "63",
+        "62"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Luciana nació el lunes 14 de marzo del 2005. ¿Qué día de la semana celebrará sus 15 años?",
+      "alternatives": [
+        "Jueves",
+        "Miércoles",
+        "Sábado",
+        "Viernes",
+        "Lunes"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se arrancan las últimas $overline(a b)$ páginas de un libro siendo algunas de 2 cifras y otras de 3 cifras. En ellas se empleó 90 cifras. Halle la mayor cantidad de páginas arrancadas.",
+      "alternatives": [
+        "44",
+        "33",
+        "55",
+        "64",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la suma de todos los números que aparecen en el siguiente arreglo de 30 filas.\n\n$F_1$: 4\n$F_2$: 44\n$F_3$: 474\n$F_4$: 4774\n$F_5$: 47774\n$dots.v$\n$F_(30)$: 4777...74",
+      "alternatives": [
+        "3077",
+        "3078",
+        "3072",
+        "3076",
+        "3079"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una caja grande hay dos cajas medianas y tres bolas, en cada caja mediana hay dos cajas pequeñas y tres bolas. Si en cada caja pequeña hay dos cajitas más pequeñas aún y tres bolas. ¿Cuántas bolas habrán, si el proceso se repite ocho veces?",
+      "alternatives": [
+        "755",
+        "754",
+        "765",
+        "750",
+        "756"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "José, Luis y Carlos son tres amigos que tienen 11, 21 y 24 años, no necesariamente en ese orden, se sabe que:\n\n- La suma de edades de Luis con un número impar siempre resulta impar.\n- La edad de Carlos hace 4 años coincidía con el número de días de la semana, entonces",
+      "alternatives": [
+        "Carlos tiene 24 años.",
+        "José tiene 11 años.",
+        "Luis tiene 21 años.",
+        "Luis tiene 11 años.",
+        "José tiene 21 años."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jesús debe realizar un viaje de 820 km en 7 horas. Si realiza parte del viaje en un tren a 200 km/h y el resto en un auto a 55 km/h, halle la distancia recorrida por el auto.",
+      "alternatives": [
+        "250 km",
+        "230 km",
+        "300 km",
+        "200 km",
+        "220 km"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rolando desea formar la palabra PERÚ, para ello dispone de una cartulina en la que ha escrito unas letras como se indica en la figura, si además posee una guillotina suficientemente larga, ¿cuántos cortes rectos como mínimo debe realizar con la guillotina para separar las letras P, E, R, U?",
+      "alternatives": [
+        "2",
+        "3",
+        "6",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-9-unac-2021-ii-figures/q09.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Joel afirma que es el único hijo del matrimonio entre sus padres. ¿Qué parentesco tiene Joel con el padre de la madre del nieto de su madre?",
+      "alternatives": [
+        "Nieto",
+        "Sobrino",
+        "Yerno",
+        "Hijo",
+        "Hermano"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El 20 de julio de un cierto año fue lunes, un año después, la misma fecha fue miércoles. ¿Qué día de la semana fue 28 de julio del año subsiguiente?",
+      "alternatives": [
+        "Jueves",
+        "Lunes",
+        "Domingo",
+        "Viernes",
+        "Miércoles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una urna contiene 30 esferas numeradas del 11 al 40, cada una con un número diferente. ¿Cuántas extracciones como mínimo de uno en uno se debe realizar, para obtener con certeza una esfera cuyo número sea primo?",
+      "alternatives": [
+        "19",
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dora, Flor y Lina conversan sobre sus edades (22, 23 y 25 años, pero no necesariamente en ese orden), y durante la charla cada una hace tres afirmaciones:\n\nI. DORA: Tengo 22 años. Soy dos años menor que Flor. Tengo un año más que Lina.\nII. FLOR: No soy la más joven. Entre Lina y yo hay tres años de diferencia. Lina tiene 25 años.\nIII. LINA: Soy más joven que Dora. Dora tiene 22 años. Flor tiene 2 años más que Dora.\n\nSi cada una mintió en una afirmación, ¿cuánta es la diferencia de la edad en años entre Dora y Flor, en ese orden?",
+      "alternatives": [
+        "$-3$",
+        "3",
+        "2",
+        "1",
+        "$-2$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Acaba el examen de admisión y, de seis amigos, solo uno no ingresó. Un profesor al encontrarlos, da origen a la siguiente conversación:\n\nI. Profesor: ¿Quién no ingresó?\nII. Lalo: Hernando no ingresó.\nIII. Diego: yo no ingresé.\nIV. Hernando: Raquel no ingresó.\nV. Raquel: yo ingresé.\nVI. Flor: yo ingresé\nVII. Maribel: Lalo no ingresó\n\nSi el profesor sabe que solo uno de los alumnos dice la verdad, ¿quién no ingresó y quien no miente, respectivamente?",
+      "alternatives": [
+        "Diego y Hernando",
+        "Flor y Maribel",
+        "Flor y Raquel",
+        "Diego y Raquel",
+        "Maribel y Lalo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura dada, ¿cuántas regiones simples hay?",
+      "alternatives": [
+        "8",
+        "12",
+        "13",
+        "11",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-9-unac-2021-ii-figures/q15.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el sistema de poleas mostrado, los radios de las poleas A, B, C y D miden 2 cm, 8 cm, 4 cm y 3 cm respectivamente. Si la polea D da 6 vueltas en un minuto, ¿cuántas vueltas dará la polea A en dos minutos?",
+      "alternatives": [
+        "24",
+        "36",
+        "30",
+        "18",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-9-unac-2021-ii-figures/q16.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el sistema mostrado, las ruedas A, B, C y E tienen 9, 12, 10, 6, y 12 centímetros de radio, respectivamente. Si la rueda A da 4 vueltas, ¿cuántas vueltas dará la rueda E?",
+      "alternatives": [
+        "$2\",\"5$",
+        "$1\",\"5$",
+        "$1\",\"8$",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-9-unac-2021-ii-figures/q17.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura ABCD es un rectángulo y CM = MD. Si las regiones sombreadas tienen la misma área de $20\"cm\"^2$, halle el área del rectángulo ABCD.",
+      "alternatives": [
+        "$200\"cm\"^2$",
+        "$195\"cm\"^2$",
+        "$240\"cm\"^2$",
+        "$135\"cm\"^2$",
+        "$180\"cm\"^2$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-9-unac-2021-ii-figures/q18.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Seis alumnos dan un examen de matemática y acerca de sus puntajes obtenidos, se conoce lo siguiente. El puntaje de Bruno excede al de Aníbal en dos puntos, Consuelo superó a Diana por 6 puntos, mientras que Feliciano obtuvo 4 puntos más que Bruno. Ernesto obtuvo un punto menos que Consuelo y dos puntos más que Bruno. Si Aníbal obtuvo 8 puntos, ¿cuál fue el puntaje obtenido por Diana?",
+      "alternatives": [
+        "4",
+        "8",
+        "3",
+        "7",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los señores Lorenzo, Roberto y Román, cuyas edades son 55, 62 y 70 años, respectivamente, tienen un hijo cada uno. Uno de los hijos es psicólogo, otro es veterinario y el tercero es actor. Si se sabe que:\n\n- Sebastián, de 25 años, solo puede ser hijo de Roberto o Román.\n- Andrés, de 31 años, puede ser hijo de Lorenzo, de Roberto o Román.\n- El nombre del tercer joven es Pedro, y tiene 28 años.\n- El hijo de Lorenzo es psicólogo.\n- El hijo de Roberto no es veterinario.\n- A Sebastián no le gusta la actuación.\n\n¿Cuál es la suma, en años, de las edades del psicólogo y de su padre?",
+      "alternatives": [
+        "93",
+        "95",
+        "101",
+        "80",
+        "86"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\nEl hombre ansía ser amado, o, lo que es igual, ansía ser compadecido. El hombre quiere que se sientan y se compartan sus penas y sus dolores. Hay algo más que una artimaña para obtener limosna en eso de los mendigos que a la vera del camino muestran al viandante su llaga o su gangrenoso muñón. La limosna, más bien que socorro para llevar los trabajos de la vida, es compasión. No agradece el pordiosero la limosna al que se la da volviéndole la cara por no verle y quitárselo de al lado, sino que agradece mejor que se le compadezca no socorriéndole, a no que socorriéndole no se le compadezca, aunque por otra parte prefiere esto. Ved, si no, con qué complacencia cuenta sus cuitas al que se conmueve oyéndolas. Quiere ser compadecido, amado.\n\nEl amor de la mujer, sobre todo, decía que es siempre en su fondo compasivo, es maternal. La mujer se rinde al amante porque le siente sufrir con el deseo. Julieta compadeció a Romeo. La mujer parece decir: \"¡Ven, pobrecito, y no sufras tanto por mi causa!\". Y por eso es un amor más amoroso y más puro que el del hombre y más valiente y más largo.\n\nDel texto se colige que, la mujer no puede amar a un hombre...",
+      "alternatives": [
+        "simplemente porque estos son tan orgullosos como recibir compasión.",
+        "si este le hace recordar las actitudes que mostraba su padre cuando era niña.",
+        "únicamente cuando deje de lado su arraigado sentimiento maternal.",
+        "cuando no es capaz de despertar en ella su sentimiento maternal.",
+        "en el caso en que él despierte en ella su arraigado sentimiento maternal."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\nEl hombre ansía ser amado, o, lo que es igual, ansía ser compadecido. El hombre quiere que se sientan y se compartan sus penas y sus dolores. Hay algo más que una artimaña para obtener limosna en eso de los mendigos que a la vera del camino muestran al viandante su llaga o su gangrenoso muñón. La limosna, más bien que socorro para llevar los trabajos de la vida, es compasión. No agradece el pordiosero la limosna al que se la da volviéndole la cara por no verle y quitárselo de al lado, sino que agradece mejor que se le compadezca no socorriéndole, a no que socorriéndole no se le compadezca, aunque por otra parte prefiere esto. Ved, si no, con qué complacencia cuenta sus cuitas al que se conmueve oyéndolas. Quiere ser compadecido, amado.\n\nEl amor de la mujer, sobre todo, decía que es siempre en su fondo compasivo, es maternal. La mujer se rinde al amante porque le siente sufrir con el deseo. Julieta compadeció a Romeo. La mujer parece decir: \"¡Ven, pobrecito, y no sufras tanto por mi causa!\". Y por eso es un amor más amoroso y más puro que el del hombre y más valiente y más largo.\n\nEl autor establece una equiparidad entre...",
+      "alternatives": [
+        "limosna y amor.",
+        "limosna y compasión.",
+        "trabajo y vida.",
+        "mendigo y mujer.",
+        "varón y mujer."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\nEl hombre ansía ser amado, o, lo que es igual, ansía ser compadecido. El hombre quiere que se sientan y se compartan sus penas y sus dolores. Hay algo más que una artimaña para obtener limosna en eso de los mendigos que a la vera del camino muestran al viandante su llaga o su gangrenoso muñón. La limosna, más bien que socorro para llevar los trabajos de la vida, es compasión. No agradece el pordiosero la limosna al que se la da volviéndole la cara por no verle y quitárselo de al lado, sino que agradece mejor que se le compadezca no socorriéndole, a no que socorriéndole no se le compadezca, aunque por otra parte prefiere esto. Ved, si no, con qué complacencia cuenta sus cuitas al que se conmueve oyéndolas. Quiere ser compadecido, amado.\n\nEl amor de la mujer, sobre todo, decía que es siempre en su fondo compasivo, es maternal. La mujer se rinde al amante porque le siente sufrir con el deseo. Julieta compadeció a Romeo. La mujer parece decir: \"¡Ven, pobrecito, y no sufras tanto por mi causa!\". Y por eso es un amor más amoroso y más puro que el del hombre y más valiente y más largo.\n\nSegún la lectura, los verdaderos amantes...",
+      "alternatives": [
+        "Serían quienes se caracterizan porque mutuamente suelen pedirse limosna.",
+        "Son personas cuyo romance es la mutua necesidad de ser compadecidos.",
+        "Resultan complementos entre la necesidad de compasión y anhelo de compadecer.",
+        "Establecen la relación más absurda entre dos sentimientos compasivos.",
+        "Se caracterizan porque imitaron las actitudes de Romeo y Julieta."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\nEl hombre ansía ser amado, o, lo que es igual, ansía ser compadecido. El hombre quiere que se sientan y se compartan sus penas y sus dolores. Hay algo más que una artimaña para obtener limosna en eso de los mendigos que a la vera del camino muestran al viandante su llaga o su gangrenoso muñón. La limosna, más bien que socorro para llevar los trabajos de la vida, es compasión. No agradece el pordiosero la limosna al que se la da volviéndole la cara por no verle y quitárselo de al lado, sino que agradece mejor que se le compadezca no socorriéndole, a no que socorriéndole no se le compadezca, aunque por otra parte prefiere esto. Ved, si no, con qué complacencia cuenta sus cuitas al que se conmueve oyéndolas. Quiere ser compadecido, amado.\n\nEl amor de la mujer, sobre todo, decía que es siempre en su fondo compasivo, es maternal. La mujer se rinde al amante porque le siente sufrir con el deseo. Julieta compadeció a Romeo. La mujer parece decir: \"¡Ven, pobrecito, y no sufras tanto por mi causa!\". Y por eso es un amor más amoroso y más puro que el del hombre y más valiente y más largo.\n\n¿Qué rasgos corresponden a la psicología del mendigo?",
+      "alternatives": [
+        "Es un mediocre para quien la limosna es lo que más valora.",
+        "No tiene ninguna preferencia entre ser socorrido.",
+        "Tiene mayor propensión a ser socorrido que a ser compadecido.",
+        "Está gobernando por la necesidad fundamental de ser compadecido",
+        "Entre sus cualidades está la necesidad de compadecer a quien se compadece."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "INNOVACIÓN\n\nI. Innovar se define como mudar o alterar algo, introduciendo novedades.\nII. Los cambios en la organización industrial de manera continua, orientados al cliente, constituyen innovación también.\nIII. La competitividad de una nación depende de la capacidad para innovar.\nIV. Además, consiste en el empleo de nuevos procesos.\nV. En realidad, la innovación es la introducción de nuevos productos y servicios.",
+      "alternatives": [
+        "III - IV - II - V - I",
+        "II - V - IV - I - III",
+        "III - I - IV - V - II",
+        "I - V - IV - II - III",
+        "V - III - IV - I - II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TRIVIAL : CRUCIAL",
+      "alternatives": [
+        "fútil : significado",
+        "vital : capital",
+        "importante : cardinal",
+        "baladí : substancial",
+        "efímero : superfluo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "I. El turismo vivencial consiste en realizar atractivas e interesantes acciones en contacto con los pobladores locales.\nII. Aunque por la idiosincrasia y creencias de algunos pobladores, no comparten con otros los recuerdos y remembranzas.\nIII. El viajero aprende las costumbres, disfruta de las comidas y duerme en las viviendas de los pobladores.\nIV. También es invitado a experimentar los quehaceres cotidianos e intervenir en las prácticas productivas del lugar.\nV. En definitiva, esta alternativa fomenta un encuentro entre personas de disímiles culturas.",
+      "alternatives": [
+        "II",
+        "I",
+        "V",
+        "III",
+        "IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Después del deseo del padre, todos descubrieron que por sus \\_\\_\\_\\_\\_\\_\\_\\_ económicas, la herencia que ellos \\_\\_\\_\\_\\_\\_ recibir, había disminuido notablemente.",
+      "alternatives": [
+        "dádivas - otorgaban",
+        "deudas - calculaban",
+        "ganancias - debían",
+        "pérdidas - conocían",
+        "finanzas - anhelaban"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Series verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Catalejo, largavista; binocular, prismático...",
+      "alternatives": [
+        "telescopio, periscopio",
+        "vidrio, luna",
+        "monóculo, binóculo",
+        "gafas, lente",
+        "lupa, cristal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Continuar con estudios de posgrado en el extranjero es muy importante, no solo \\_\\_\\_\\_\\_\\_\\_\\_ se puede lograr la especialización en el área profesional, \\_\\_\\_\\_\\_\\_\\_\\_ por la riqueza que otorga el contacto con otra cultura.",
+      "alternatives": [
+        "puesto que - que",
+        "porque - sino también",
+        "en ese caso - además",
+        "entonces - por consiguiente",
+        "que - asimismo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 30 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Todas las personas tienen diferentes emociones, aunque todas son reales no siempre las entendemos, lo que nos dificulta llevarnos bien con los demás. ¿Cuál sería la mejor forma de llevarnos bien con las personas?",
+      "alternatives": [
+        "Ordenar la intensidad de las emociones para regularlas.",
+        "Descansar más para llevarnos bien con las personas.",
+        "Ir a una terapia con un psiquiatra.",
+        "Comunicar asertivamente las emociones.",
+        "Organizar las emociones para jerarquizarlas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Existe un lugar en Madrid donde africanas y mujeres de varios países tienen encuentro. A él acuden con un objetivo común: \"empoderarse y saltar las barreras\", ¿cuál es la causa?",
+      "alternatives": [
+        "Construir un espacio intercultural de convivencia y bienestar para migrantes.",
+        "La escasez de vías legales para emigrar hace que africanas arriesguen sus vidas para llegar a España.",
+        "Algunas huyen de matrimonios forzosos o de todo tipo de violencias y persecuciones.",
+        "Existen en una sociedad que todavía las mira \"con extrañeza\".",
+        "Desde que dejaron sus países quieren sentir que forman parte de esta sociedad."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la UNAC para amenguar los conflictos sociales en la región, convoca a los estudiantes de diversas especialidades para orientar como administrar sus recursos, capacitar en las áreas que sea útil a los pobladores de los barrios pobres del Callao. Significa que nuestras autoridades han pensado en:",
+      "alternatives": [
+        "Asumir los conflictos acumulados durante los últimos diez años.",
+        "Colaborar con la problemática social eficazmente.",
+        "En la ética universitaria.",
+        "Los pobladores suicidas.",
+        "Ser candidatos a la región Callao."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La originalidad: entendido como la capacidad de producir o crear para solucionar problemas; y el pensamiento divergente: la de crear punto de vista diferentes al del otro. Señale la respuesta adecuada:",
+      "alternatives": [
+        "Relajación",
+        "Bipolaridad",
+        "Responsabilidad",
+        "Creatividad",
+        "Meditación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La capacidad de alumbrar nuevas relaciones, desarrollar la actitud participativa, la capacidad de debate y el trabajo en equipo, la de transformar las normas dadas de tal manera que sirva para la solución general de problemas dados en una realidad social.\nEs una forma de entender:",
+      "alternatives": [
+        "La creatividad.",
+        "El amor.",
+        "La nostalgia.",
+        "La realidad política.",
+        "El racionalismo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se reúnen los del 1er ciclo académico en la UNAC, para elegir el líder del aula, cuyo requisito debe ser decente. Significa que debe:",
+      "alternatives": [
+        "Ayudar a todos y ser denodado.",
+        "Presentar los mejores notas y cualidades de brabucón.",
+        "Ser gracioso y remilgado.",
+        "Ser locuaz y afable.",
+        "Tratar a sus compañeros con dignidad y respeto."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Filosofía política",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la flexión casual del brazo se convierte en un saludo fascista, es el símbolo en la lucha por el poder. El significado que le corresponde es:",
+      "alternatives": [
+        "Filosófico.",
+        "Ideológico.",
+        "De resistencia cultural.",
+        "Religioso.",
+        "Apología."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Usar la bicicleta en lugar del auto en la ciudad, define la actitud de:",
+      "alternatives": [
+        "Cuidar la economía de sus parientes.",
+        "Cuidar el medio ambiente.",
+        "Ser un actor.",
+        "Valorar el deporte moderno.",
+        "Mostrar su capacidad de maratonista."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Los derechos humanos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El derecho a una alimentación adecuada, como cualquier otro derecho humano, impone tres tipos o niveles de obligaciones a los estados miembros: la obligación de respetar, proteger y cumplir, y si no controlan el nivel de insecticidas y pesticidas químicos aplicado a las verduras. Significa que:",
+      "alternatives": [
+        "Las autoridades competentes tienen miedo.",
+        "SENASA, no supervisa la inocuidad de los alimentos.",
+        "Los alcaldes se aletargaron.",
+        "Se viola la defensa el medio ambiente.",
+        "No es competencia del Estado."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es el valor humano que mejor refleja la dignidad humana. Abarca los cinco sentidos: vista, oído, gusto, olfato y tacto e incluye la imaginación y el propio cuerpo, pues trata de evitar exponerlo a la morbosidad y al uso indebido de la sexualidad humana y todo lo que de ella deriva. Señale a que características corresponde dicha idea:",
+      "alternatives": [
+        "Angurrio",
+        "Decencia",
+        "Modernidad.",
+        "Psicopatía",
+        "Autonomía"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 40 (clave B)"
+    }
+  ]
+}

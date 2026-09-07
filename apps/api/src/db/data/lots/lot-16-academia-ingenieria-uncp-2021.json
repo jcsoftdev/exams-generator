@@ -1,3 +1,858 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos ceros se debe colocar a la derecha de 9 para que el resultado tenga 239 divisores compuestos?",
+      "alternatives": [
+        "7",
+        "6",
+        "5",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres números están en la misma relación que 5; 9; y 13. Si la suma de ellos es 432. Calcula el menor de ellos.",
+      "alternatives": [
+        "72",
+        "134",
+        "208",
+        "80",
+        "40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una mezcla de 1375 litros de agua y vino en un recipiente. Se extrae la tercera parte de su contenido y se reemplaza con vino; luego se repite esta operación hasta obtener como volumen final de agua media más que el volumen inicial de vino.\n\nHalla la diferencia inicial de volúmenes de vino y agua, si además la cantidad de extracciones es mayor que uno y los volúmenes iniciales son enteros.",
+      "alternatives": [
+        "1240",
+        "1230",
+        "1055",
+        "1150",
+        "1215"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $\"MCM\"(2A ; 58) = overline(a (2a) (3a) 0) + overline((2a) 0 0)$\n\n$\"MCD\"(A/15 ; B/6) = overline(b b 0)_(6) / 110_(6)$\n\nCalcula: (a + b)",
+      "alternatives": [
+        "1",
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Después de factorizar la siguiente expresión:\n\n$F(x) = 6x^3 + 13x^3 + 6x$\n\nDetermina la suma de los coeficientes de uno de los factores.",
+      "alternatives": [
+        "5",
+        "2",
+        "3",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación. $x^2 - 5a x + 24 = 0$\n\nDetermina la suma de todos los valores de \"a\", sabiendo que una de las raíces excede en dos unidades a la otra raíz.",
+      "alternatives": [
+        "4",
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Después de resolver la siguiente ecuación matricial:\n\n$2x - 3 mat(2, -1; 0, 2) + 3x = 2 mat(1, 3; -1, 2) + 4x$\n\nDetermina el valor de $abs(x)$",
+      "alternatives": [
+        "90",
+        "78",
+        "74",
+        "86",
+        "82"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el menor valor entero positivo, que verifica la siguiente inecuación: $sqrt(x^2 + 5x - 14) > -2 ; x in RR$",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo ABC, \"G\" es el baricentro donde $overline(P Q) parallel overline(A C)$; $overline(P B)$ y $overline(Q C)$ miden 12 y 5 cm respectivamente.\n\nCalcula la longitud de (AP + BQ) en cm.",
+      "alternatives": [
+        "12",
+        "16",
+        "14",
+        "18",
+        "22"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/geo-uncp-2021-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Geometría, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un terreno de forma cuadrada cuyo lado mide 400 metros, además $m angle E B A = 53 degree = 2 (M angle D C F)$ se divide en tres lotes.\n\nCalcula las áreas de las regiones: trapezoidal ABCD y triangular DCF en metros cuadrados.",
+      "alternatives": [
+        "50 000; 40 000",
+        "60 000; 40 000",
+        "65 000; 35 000",
+        "70 000; 40 000",
+        "60 000; 30 000"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/geo-uncp-2021-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Geometría, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura \"T\" es punto de tangencia, el arco AM es congruente al arco MT y el ángulo ABT es igual a $60 degree$.\n\nCalcula la medida del arco MT.",
+      "alternatives": [
+        "80°",
+        "60°",
+        "90°",
+        "100°",
+        "70°"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/geo-uncp-2021-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Geometría, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado la circunferencia trigonométrica, determina el valor de (V) o falsedad (F) de las siguientes proposiciones:\n\nI. El seno es creciente en el I cuadrante.\n\nII. $\"Cos\"(2 pi/3) = 1/2$\n\nIII. $-29 pi/6 in \"IIIC\"$",
+      "alternatives": [
+        "VFV",
+        "VFF",
+        "FVV",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Trigonometría, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad (V) o falsedad (F) de las siguientes proposiciones:\n\nI. $\"Sen\" 750 degree = -1/2$\n\nII. $\"Cos\"(-50 degree) = \"Cos\" 50 degree$\n\nIII. $\"Sen\"(pi - theta) = -\"Sen\" theta$",
+      "alternatives": [
+        "VVV",
+        "FFF",
+        "FFV",
+        "FVV",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Trigonometría, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la expresión:\n\n$E = frac(5\"Sen\"(pi/2) - 3\"Cos\"(pi), \"Cot\"(3pi/2) + \"Sec\"(2pi))$\n\nCalcula el valor de \"E\"",
+      "alternatives": [
+        "7",
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Trigonometría, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente tabla de frecuencias se cumple que: $f_3 + f_4 = 55$ y $f_5 - f_4 = 1$\n\n#table(\n  columns: 2,\n  [*INTERVALOS*], [$f_i$],\n  [$[20, 40)$], [10],\n  [$[40, 60)$], [25],\n  [$[60, 80)$], [],\n  [$[80, 100)$], [],\n  [$[100, 120)$], [],\n)\n\nTOTAL: 100\n\nCompleta la tabla y calcula el promedio.",
+      "alternatives": [
+        "76,80",
+        "72,80",
+        "66,80",
+        "62,80",
+        "56,80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Estadística y Probabilidades, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los datos del gráfico registran las estaturas en centímetros de cuarenta alumnos:\n\nHalla la moda",
+      "alternatives": [
+        "$146\",\"overline(6)$",
+        "$156\",\"overline(6)$",
+        "$158\",\"overline(6)$",
+        "$162\",\"overline(6)$",
+        "$164\",\"overline(6)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/estad-uncp-2021-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Estadística y Probabilidades, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La variabilidad de las edades de un grupo de personas es 10%. Si se sabe que la varianza de dichas edades es 9, halla el promedio de edad del grupo.",
+      "alternatives": [
+        "30 años",
+        "15 años",
+        "20 años",
+        "35 años",
+        "25 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Estadística y Probabilidades, pregunta 17 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el significante del significado del signo lingüístico:\n\nSignificado: \"Uso individual que se hace de la lengua.\"",
+      "alternatives": [
+        "Lenguaje",
+        "Lengua",
+        "Jerga",
+        "Dialecto",
+        "Habla"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/leng-uncp-2021-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Lenguaje, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la función que cumple los enunciados: «Señoritas, ayuden a sus compañeras» - «¡Vamos muchachos isabelinos!»",
+      "alternatives": [
+        "Apelativa – Apelativa",
+        "Apelativa – Expresiva",
+        "Expresiva – Expresiva",
+        "Representativa – Estética",
+        "Apelativa – Fática"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Lenguaje, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad (V) o falsedad (F) de los enunciados relativos a LA METAMORFOSIS.\n\nI. El autor es Franz Kafka.\n\nII. El protagonista es Gregorio Samsa.\n\nIII. Gregorio se convirtió en un monstruoso escarabajo.\n\nIV. En un accidente se le incrustó una manzana en el caparazón causándole una herida que le desprende la coraza y provoca su muerte.",
+      "alternatives": [
+        "FFVV",
+        "VVVV",
+        "VFVF",
+        "VVFF",
+        "FVFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Literatura, pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El dialecto español se presenta de diversas maneras. Identifica en qué aspecto del dialecto se presenta la siguiente expresión:\n\nDel Francisco, su hijo terco había sido.",
+      "alternatives": [
+        "Sintáctico",
+        "Lexical",
+        "Fonético",
+        "Semántico",
+        "Morfológico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Lenguaje, pregunta 21 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el sistema mostrado:\n\nM = 20kg, m = 5kg, h = 3m y la polea es ideal.\n\nSi el sistema parte del reposo, determina la velocidad del cuerpo M cuando llega al piso. (g = 10 m/s²)",
+      "alternatives": [
+        "$6 sqrt(2)$",
+        "14",
+        "12",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/fis-uncp-2021-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra un cuerpo pequeño de masa \"m\" se encuentra sobre una superficie hemisférica de hielo. El cuerpo resbala a partir del reposo en \"A\".\n\nDetermina la(s) afirmación(es) correcta(s).\n\nI. La fuerza centrípeta en \"B\" es nula.\n\nII. La masa se desprende en el punto \"B\" tal que $\"sen\" theta = 2/3$\n\nIII. La velocidad en \"B\" es mínima.",
+      "alternatives": [
+        "I y III",
+        "I y II",
+        "Solo III",
+        "Solo II",
+        "Solo I"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/fis-uncp-2021-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 23 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un niño está sentado sobre un plato giratorio a 4m del centro. Si el coeficiente de rozamiento estático entre el niño y el plato es 0,1 y la velocidad angular aumenta uniformemente, calcula la rapidez (en m/s) para que el niño empiece a deslizarse hacia el borde (g = 10 m/s²)",
+      "alternatives": [
+        "1",
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre la estructura atómica moderna indica el valor de verdad (V) o falsedad (F) de las proposiciones:\n\nI. Por lo general, los isótopos más livianos de un elemento son más abundantes que los isótopos más pesados.\n\nII. Los mesones poseen masas intermedias entre un protón y un electrón.\n\nIII. Los isótopos del uranio se separan mediante el proceso de difusión.\n\nIV. Los mesones se desintegran al cabo de $10^(-6)$ segundos.",
+      "alternatives": [
+        "FFVV",
+        "VVVV",
+        "FVVF",
+        "VFVF",
+        "FFFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Química, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con las condiciones dadas en la figura, halla el valor de la normal N en función de W considerando que el sistema está en equilibrio.",
+      "alternatives": [
+        "$frac(W sqrt(3), 3)$",
+        "2W",
+        "3W",
+        "$frac(W sqrt(2), 3)$",
+        "W"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/fis-uncp-2021-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos:\n\nColumna A: POBLACIONES\n\nColumna B: Comunidades Bióticas\n\nDetermina la verdad (V) o falsedad (F) de los siguientes enunciados:\n\n- A se ubica dentro de B.\n\n- A se aplica al reino animal y B al reino vegetal.\n\n- A y B se desarrollan independientemente.",
+      "alternatives": [
+        "FVV",
+        "FVF",
+        "VFV",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Ecología, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los recursos naturales con el ejemplo representativo:\n\nI. Renovable – inagotable a) Energía geotérmica\n\nII. No renovable – inagotable b) suelo\n\nIII. Semi renovable c) Energía solar",
+      "alternatives": [
+        "Ic – IIb – IIIa",
+        "Ia – IIc – IIIb",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ib – IIa – IIIc"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Ecología, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad (V) o falsedad (F) de las siguientes expresiones sobre los tipos de rendición de cuentas:\n\nI. Vertical\n\nII. Control social\n\nIII. Horizontal\n\nIV. Transversal\n\nV. Cruzado",
+      "alternatives": [
+        "VVFFV",
+        "FFVVF",
+        "VVVFF",
+        "FVVFF",
+        "VFVFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Educación Cívica, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Bases biológicas de la conducta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona las bases fisiológicas del temperamento con su característica correspondiente:\n\nI. Fuerza\n\nII. Equilibrio\n\nIII. Movimiento\n\na. Se refiere al cambio de excitación a inhibición y viceversa.\n\nb. Expresa la capacidad de trabajo, sensibilidad para reaccionar.\n\nc. Interacción entre excitación – inhibición",
+      "alternatives": [
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ib – IIc – IIIa",
+        "Ic – IIb – IIIa",
+        "Ib – IIa – IIIc"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Psicología, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ORACIÓN ELIMINADA\n\n(I) El proceso de rendir este examen es una experiencia significativa e inolvidable. (II) Pensar en lograr aprobar y ocupar una vacante es una meta que quisiera alcanzar. (III) Por ratos, deseo viajar y olvidarme por completo de toda esta situación sanitaria que me estresa. (IV) Una vez que ingrese a la UNCP debo estudiar incansablemente para cumplir con mis objetivos personales y profesionales. (V) Conocedor del prestigio de la UNCP, elegí como primera opción esta institución para formarme como profesional competente.",
+      "alternatives": [
+        "IV",
+        "III",
+        "V",
+        "I",
+        "II"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nVer que su celular repentinamente ya no contaba con línea, no le hizo sospechar que se convertiría en una víctima de un hurto virtual. Una joven madre quedó sin los ahorros de la pensión de su pequeño luego que los delincuentes cibernéticos se transfirieran 6 mil soles de su cuenta, solo con acceder a su número de celular.\n\nEste hecho se registró el pasado 6 de septiembre en Huancayo. La agraviada señaló que solo en unas cuantas horas los delincuentes aprovecharon e hicieron dos transferencias, de 3 mil soles cada una, a través del aplicativo banca móvil.\n\n«Cerca a las 11 de la mañana me di cuenta que no tenía señal en mi celular. Luego de 5 horas la empresa Movistar, me dio nuevamente mi número y me percaté que habían hecho dos transferencias a las 12.24 y 12:25 de la tarde de ese mismo día. Pedí información a la empresa de la telefonía, pero me la negaron. Ellos son los responsable por no cuidar mi número», mencionó.\n\n(Diario Correo)\n\nSegún lo leído, se puede afirmar que:",
+      "alternatives": [
+        "Le usurpan número de celular y roban 6 mil soles de sus ahorros.",
+        "Todos estamos expuestos a ser víctimas de robos de celulares.",
+        "Las cuentas bancarias tienen \"candados\" virtuales en las líneas telefónicas.",
+        "El periodo de sustracción de dinero siempre es de 12 a 13 horas en el día.",
+        "Toda víctima de robo virtual debe realiza el reclamo en la Defensoría del Pueblo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la función que cumple la imagen anterior.",
+      "alternatives": [
+        "Epistémica",
+        "Icónica",
+        "Simbólica",
+        "Estética",
+        "Abstracta"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/com-uncp-2021-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Comunicación, pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN\n\nLa mejor hinchada del mundo\n\nI. Esta alegría movilizó a hinchas nacionales y extranjeros en los partidos que jugó la selección peruana.\n\nII. Concluido el campeonato mundial, los hinchas regresaron al país con sentimientos encontrados.\n\nIII. La participación de la afición peruana fue tan masiva que el equipo se sintió casi siempre en casa.\n\nIV. Pero, a pesar del apoyo de los hinchas, no pasamos la primera fase del campeonato mundial.\n\nV. La selección peruana de futbol clasificó al mundial de Rusia 2018 para alegría de los hinchas.",
+      "alternatives": [
+        "II – III – I – V – IV",
+        "V – I – III – IV – II",
+        "V – IV – I – III – II",
+        "III – IV – I – II – V",
+        "IV – II – I – V – III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Marcadores textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Reconoce el tipo de marcador textual subrayado en el siguiente texto:\n\nEl ministro Aníbal Torres declaró que el Ministerio Público decidirá sobre el cuerpo de Abimael Guzmán; #underline[es decir] este organismo tiene la última palabra, pues tiene autonomía para tal decisión.",
+      "alternatives": [
+        "Reformulador recapitulativo",
+        "Operador de concreción",
+        "Regulador explicativo",
+        "Ordenador de continuidad",
+        "Ordenador de cierre"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo a la imagen completa las expresiones:\n\n- My father … in front of the stove.\n\n- My notebooks … on the table.\n\n- Our pet … under the table.\n\n- We … in the kitchen.",
+      "alternatives": [
+        "are – are – are – is",
+        "am – are – is – are",
+        "is – is – are – are",
+        "is – are – is – are",
+        "are – are – is – are"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Inglés, pregunta 36 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple present tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa los textos usando adecuadamente los verbos cepillar, relajar e ir:\n\nTed … his teeth after eating something.\n\nHe … when he gets home.\n\nHe … to bed at 10:30 p.m.",
+      "alternatives": [
+        "brushs – relaxs – gos",
+        "brushes – relaxs – goes",
+        "brushes – relaxes – goes",
+        "brush – relax – go",
+        "brush – relaxes – goes"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Inglés, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo a la imagen completa el texto:\n\nSophie and Michael have … children than Iris and Bill.\n\nIris and Bill have … children than Sophie and Michael.\n\nIris and Bill don't have as many children … Sophie and Michael.",
+      "alternatives": [
+        "more – less – as",
+        "less – more – that",
+        "more – more – that",
+        "less – more – as",
+        "more – less – than"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/ing-uncp-2021-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Inglés, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En los gráficos, calcula el valor \"x\":",
+      "alternatives": [
+        "–20",
+        "–30",
+        "30",
+        "–25",
+        "20"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/rm-uncp-2021-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de los siguientes gráficos admite un recorrido euleriano?",
+      "alternatives": [
+        "Todos",
+        "I y II",
+        "I y III",
+        "Solo I",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/rm-uncp-2021-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, calcula la cantidad total de segmentos:",
+      "alternatives": [
+        "110",
+        "111",
+        "113",
+        "114",
+        "112"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/rm-uncp-2021-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente escalera numérica, determina la suma de los elementos de la fila 20.\n\n$F_1 : 2+3$\n\n$F_2 : 7+3+4$\n\n$F_3 : 8+9+10$\n\n$dots.v$",
+      "alternatives": [
+        "820",
+        "830",
+        "840",
+        "850",
+        "860"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una reunión familiar, Sergio, Jaime, Daniel, Ada, Liz y Ely se sientan alrededor de una mesa circular distribuidos de manera simétrica. Se sabe que son 3 parejas y que cada esposo se sienta al lado de su esposa, además:\n\n- Sergio se sienta junto y a la derecha de Ely\n\n- Jaime se sienta frente a Ada\n\n- Daniel está junto y a la izquierda de Liz\n\n¿Quién se sienta frente a Liz?",
+      "alternatives": [
+        "Ely",
+        "Sergio",
+        "Jaime",
+        "Daniel",
+        "Ada"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 44 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pedrito le pregunta a su hijo y le dice: Si después de 1 día, antes de 2 días, después de 3 días, antes de 4 días de ayer es el pasado mañana de ayer del domingo, ¿Qué día será después de 6 días, antes de 4 días y después de 2 días de mañana?",
+      "alternatives": [
+        "Lunes",
+        "Jueves",
+        "Martes",
+        "Sábado",
+        "Miércoles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 45 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la figura que completa el siguiente cuadro:",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "alternativeImagePaths": [
+        "lot-16-academia-ingenieria-uncp-2021-alternatives/rm-uncp-2021-46-a.png",
+        "lot-16-academia-ingenieria-uncp-2021-alternatives/rm-uncp-2021-46-b.png",
+        "lot-16-academia-ingenieria-uncp-2021-alternatives/rm-uncp-2021-46-c.png",
+        "lot-16-academia-ingenieria-uncp-2021-alternatives/rm-uncp-2021-46-d.png",
+        "lot-16-academia-ingenieria-uncp-2021-alternatives/rm-uncp-2021-46-e.png"
+      ],
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-figures/rm-uncp-2021-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el valor de F:\n\n$F = frac(overbrace(1+3+5+7+dots, \"100 términos\"), underbrace(2+4+6+8+dots, \"100 términos\"))$",
+      "alternatives": [
+        "100/101",
+        "1",
+        "50/51",
+        "2",
+        "1/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 47 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rafael le dice a su amigo, tengo más de 50 años, pero todavía no llega a 100. Si los años que tengo se cuentan de 8 en 8 ó de 10 en 10 siempre sobran 7 años. ¿Cuál fue la edad de Rafael hace 11 años?",
+      "alternatives": [
+        "60 años",
+        "76 años",
+        "66 años",
+        "80 años",
+        "70 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En cierto juego de azar, Alex pierde 2/5 de su dinero, vuelve a apostar y gana 1/7 de lo que le quedaban; luego pierde 1/6 de lo que tiene y por último gana 7140 soles. Si la pérdida de Alex fue 1/8 de su dinero original.\n\n¿Con cuánto dinero empezó a jugar Alex?",
+      "alternatives": [
+        "22 500 soles",
+        "23 250 soles",
+        "23 520 soles",
+        "32 520 soles",
+        "23 000 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula la suma de los 40 términos de la siguiente serie:\n\n$S = 7+10+15+22+dots$",
+      "alternatives": [
+        "23 380",
+        "20 380",
+        "24 380",
+        "21 380",
+        "22 380"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 50 (clave E)"
+    }
+  ]
 }

@@ -1,3 +1,869 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una fábrica de jabones requiere empaquetar barras de jabón, cuyas dimensiones son: 8 cm, 15 cm y 20 cm, en cajas cúbicas del menor tamaño posible, para luego ser transportadas en un camión cuya tolva es de 10,80 m x 6 m x 3,6 m. ¿Cuántos jabones será posible transportar en dicho camión?",
+      "alternatives": [
+        "720",
+        "97 200",
+        "97 620",
+        "97 720",
+        "9 720"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A un teatro asisten muchas personas, se sabe que de cada cinco varones que entran, tres entran con un niño y de cada siete mujeres, cuatro entran con un niño. Además, por cada seis varones entran cinco mujeres, si entraron 678 niños en total, ¿cuántos adultos entraron al teatro?",
+      "alternatives": [
+        "1 105",
+        "1 135",
+        "1 065",
+        "1 050",
+        "1 155"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un colegio, el 60% aprobó Aritmética, el 32% aprobó Álgebra y los que aprobaron Aritmética y Álgebra representan el 60% de los que no aprobaron ninguno de los dos cursos. Si 42 aprobaron Aritmética y Álgebra. Calcula el número de alumnos de dicho colegio.",
+      "alternatives": [
+        "330",
+        "340",
+        "350",
+        "345",
+        "335"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si:\n\n$log x = 1/c [log(log(log a^(b^(2^(2c))))) - log(log a) - (log b)]$\n\nHalla el valor de \"x\".",
+      "alternatives": [
+        "c",
+        "a",
+        "b",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Álgebra, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se desea confeccionar una cantidad de pulseras, con una serie de cordones azules y amarillos, con una serie de características. Deben tener al menos más de 20 y menos de 25 cordones. Los cordones amarillos deben ser menos de 10 y más de la mitad de los cordones azules. Determina cuántas pulseras diferentes se pueden confeccionar.",
+      "alternatives": [
+        "9",
+        "5",
+        "8",
+        "7",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al resolver la inecuación:\n\n$abs(x^4 - 48) >= abs(x^2)^2 + 4 x^2$\n\nIdentifica el intervalo solución.",
+      "alternatives": [
+        "$[-1; 3]$",
+        "$emptyset$",
+        "$chevron.l -2; 2]$",
+        "$[-2; 2]$",
+        "$chevron.l -1; 3]$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Álgebra, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los pesos de los toros de lidia de una ganadería se distribuyen con una media $overline(x) = 500$ kg y una desviación típica $sigma = 40$ kg.\n\nLos pesos de los perros de una exposición canina tienen una media $overline(x) = 20$ kg y una desviación típica $sigma = 10$ kg.\n\nLos pesos de los gatos de un criadero tienen una media $overline(x) = 5$ kg y una desviación típica $sigma = 0\",\"15$ kg.\n\nOrdena de acuerdo a la variabilidad de cada grupo de menor a mayor.",
+      "alternatives": [
+        "toros, perros, gatos",
+        "perros, gatos, toros",
+        "gatos, perros, toros",
+        "gatos, toros, perros",
+        "toros, gatos, perros"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Estadística y Probabilidades, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un conjunto de datos está formado por números enteros del 1 al 10. El siguiente gráfico muestra la distribución de los números:\n\n(ver gráfico)\n\nHalla la suma de los cuartiles de la distribución anterior.",
+      "alternatives": [
+        "30",
+        "20",
+        "90",
+        "60",
+        "150"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-22-acing-uncp-2022-figures/est-lot-22-acing-uncp-2022-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Estadística y Probabilidades, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Uso de grafías",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la letra que corresponde en los espacios en blanco del siguiente enunciado.\n\nLa actri\\_ empe\\_ó a re\\_itar una ora\\_ión",
+      "alternatives": [
+        "z - z - c - c",
+        "z - s - s - c",
+        "z - s - c - c",
+        "z - z - s - s",
+        "z - s - s - s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Lenguaje, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala la idea que explica con precisión los versos de Federico García Lorca.\n\n\"Y que yo me la llevé al río \\\ncreyendo que era mozuela, \\\npero tenía marido. \\\nFue la noche de Santiago \\\ny casi por compromiso. \\\nSe apagaron los faroles \\\ny se encendieron los grillos\"",
+      "alternatives": [
+        "El poeta no quiere problemas con mujeres casadas.",
+        "El poeta está con la mujer casi por obligación para demostrar su hombría.",
+        "El vate busca una mujer joven y soltera.",
+        "La oscuridad y el canto de los grillos arruinaron su cita amorosa.",
+        "El poeta está confundido con sus sentimientos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Literatura, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la alternativa que no pertenece a la corriente del Vanguardismo.",
+      "alternatives": [
+        "Futurismo",
+        "Expresionismo",
+        "Surrealismo",
+        "Simbolismo",
+        "Cubismo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Literatura, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente ejemplo:\n\nLa agua del río se secó.\n\nIdentifica el tipo de agramaticalidad lingüística presente.",
+      "alternatives": [
+        "Fonético - fonológico",
+        "Semántico",
+        "Sintáctico",
+        "De número",
+        "Semántico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Lenguaje, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Composición química de los seres vivos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (v) o falsedad (F) de las siguientes proposiciones:\n\n- El calcio mantiene la presión osmótica de las células.\n- El magnesio es un importante cofactor enzimático.\n- El sodio participa en la contracción muscular y la coagulación sanguínea.",
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "FVV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, determina la verdad (V) o falsedad (F) de las siguientes proposiciones, con respecto a la ETAPA DEL DESARROLLO EMBRIONARIO.\n\n(ver figura)\n\nI. Representa a la etapa de la segmentación.\nII. El arquenterón se comunica se comunica por medio de blastóporo.\nIII. La gastrulación se representa por cuatro etapas\nIV. La gástrula comprende de ectodermo y endodermo.",
+      "alternatives": [
+        "FFFV",
+        "FFVV",
+        "FVFV",
+        "VFVF",
+        "VFFV"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-22-acing-uncp-2022-figures/bio-lot-22-acing-uncp-2022-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica los mecanismos representativos del transporte activo a través de la membrana celular.\n\n1. Pinocitosis\n2. Difusión\n3. Fagocitosis\n4. Ósmosis\n5. Exocitosis",
+      "alternatives": [
+        "1, 3, 5",
+        "2, 3, 4",
+        "1, 2, 3",
+        "3, 4, 5",
+        "1, 3, 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente esquema, determina la letra «A» y «B» respecto al órgano que representa al Efector y Receptor, respectivamente:\n\n(ver esquema)",
+      "alternatives": [
+        "A = Músculo y B = Glándula",
+        "A = Piel y B = Músculo",
+        "A = Olfato y B = Músculo",
+        "A = Músculo y B = Piel",
+        "A = Vista y B = Glándula"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-22-acing-uncp-2022-figures/bio-lot-22-acing-uncp-2022-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el hombre, la catarata congénita es dominante sobre los ojos normales. ¿Cuál será la probabilidad de que una mujer con catarata congénita heterocigoto tenga hijos sanos con un varón sano?",
+      "alternatives": [
+        "100%",
+        "75%",
+        "25%",
+        "10%",
+        "50%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relacione el organismo con su respectivo tipo de respiración externa que lo representa:\n\n(ver figura)\n\na. Respiración directa\nb. Respiración pulmonar\nc. Respiración cutánea",
+      "alternatives": [
+        "Ic – IIb – IIIa",
+        "Ib – IIa – IIIc",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-22-acing-uncp-2022-figures/bio-lot-22-acing-uncp-2022-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 18 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Compara las siguientes glándulas anexas:\n\nH: Hígado\nP: Páncreas\n\nCon respecto a la función en la digestión, se afirma que:",
+      "alternatives": [
+        "H almacena vitaminas y P hierro.",
+        "H participa en la digestión de proteínas y P de glúcidos.",
+        "La secreción de H neutraliza el quilo y P emulsiona las grasas.",
+        "Las secreciones de H y P tienen función detoxificante.",
+        "La secreción de H emulsiona grasas y P neutraliza al quimo, respectivamente."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene un pistón vertical, que encierra aire, cerrado en su parte superior por una tapa cuando se encuentra a una altura de 12 cm. Calcula el desplazamiento de la tapa si la presión disminuye en 20% manteniendo constante su temperatura.",
+      "alternatives": [
+        "Baja 4 cm",
+        "Sube 4 cm",
+        "Sube 3 cm",
+        "Baja 2 cm",
+        "Baja 3 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las soluciones de nitrato de calcio $\"Ca\"(\"NO\"_3)_2$, ácido sulfúrico $\"H\"_2\"SO\"_4$ e hidróxido de calcio $\"Ca\"(\"OH\")_2$ tienen muchos usos industriales. Determina el peso equivalente de cada compuesto en cada solución, respectivamente.\n\nDato de Masa molar: $\"Ca\"(\"NO\"_3)_2=164$; $\"H\"_2\"SO\"_4=98$; $\"Ca\"(\"OH\")_2=74$",
+      "alternatives": [
+        "64 – 98 – 74",
+        "82 – 49 – 25",
+        "82 – 49 – 37",
+        "49 – 25 – 37",
+        "30 – 49 – 82"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Química, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la familia al cual pertenece el elemento cuyo átomo posee como último electrón la notación cuántica probable:\n\n$n, 1, 0, -1/2$",
+      "alternatives": [
+        "Anfígenos",
+        "Halógenos",
+        "Carbonoideos",
+        "Alcalinos térreos",
+        "Nitrogenoideos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Química, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El alcohol yodado mancha la ropa en el $I_2(\"s\")$ cuando está disuelto en KI alcohólico, esta se puede limpiar sin usar detergente con una solución de sulfitos $(\"SO\"_3)^(-2)$ que lo reduce a ion $I^-$ en medio básico, según la ecuación:\n\n$I_2 + [\"SO\"_3]^(2-) -> [\"SO\"_4]^(2-) + I^-$\n\nCalcula el número de electrones por cada 10 moles de $I_2$ reducido.",
+      "alternatives": [
+        "5",
+        "10",
+        "20",
+        "12",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Química, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una barra de peso \"W\" y longitud \"t\" se encuentra en equilibrio apoyándose sobre una pared vertical lisa y un piso horizontal rugoso. Determina la reacción del piso sobre la barra.\n\n(ver figura)",
+      "alternatives": [
+        "$W/2 (1+\"Sec\"^2 theta)^(1/2)$",
+        "$W/2 (1+\"Cot\"^2 theta)^(1/2)$",
+        "$W/2 (4+\"tan\"^2 theta)^(1/2)$",
+        "$W/2 (4+\"cot\"^2 theta)^(1/2)$",
+        "$W/2 (4+\"sen\"^2 theta)^(1/2)$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-22-acing-uncp-2022-figures/fis-lot-22-acing-uncp-2022-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el circuito mostrado en la figura (1) se anula la resistencia de 25 Ω y a continuación se conecta una resistencia R [figura (2)]. Determina la magnitud de la resistencia R en la figura (2), para que la intensidad de la corriente que fluye por la resistencia de 100 Ω no varíe.\n\n(ver figuras)",
+      "alternatives": [
+        "10 Ω",
+        "4 Ω",
+        "20 Ω",
+        "12 Ω",
+        "8 Ω"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-22-acing-uncp-2022-figures/fis-lot-22-acing-uncp-2022-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un avión bombardero que vuela a 2000 m de altura, deja caer una bomba de manera que esta se dirige sobre un carro portatropas en tierra. Si la velocidad del avión fue 360 km/h y la bomba impactó sobre el carro. Determina la velocidad del carro (g = 10 m/s²).\n\n(ver figura)",
+      "alternatives": [
+        "25 m/s",
+        "50 m/s",
+        "10 m/s",
+        "100 m/s",
+        "20 m/s"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-22-acing-uncp-2022-figures/fis-lot-22-acing-uncp-2022-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la enfermedad a la que están expuestos los pobladores que consumen agua contaminada con mercurio, generalmente en áreas con lavaderos artesanales de oro.",
+      "alternatives": [
+        "Tuberculosis",
+        "Clorosis",
+        "Saturnismo",
+        "Neumonía",
+        "Enfermedad de Minamata"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Ecología, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el tipo de compromiso que adopta la humanidad, al asumir el desarrollo sostenible a través del aprovechamiento integral de los recursos naturales, de tal manera que se asegure la continua satisfacción de las necesidades humanas para las generaciones presentes y futuras.",
+      "alternatives": [
+        "Compromiso ambiental",
+        "Compromiso tecnológico",
+        "Compromiso ético",
+        "Compromiso económico",
+        "Compromiso social"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Ecología, pregunta 28 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los tipos de conflicto con sus manifestaciones:\n\nI. Interpersonales\nII. Intrapersonales\nIII. Socioorganizacionales\n\na. Surgen ideas contrarias dentro de nosotros mismos.\nb. Conflicto entre dos o más grupos por liderar la organización.\nc. Nuestros objetivos \"chocan\" con los de la otra persona.",
+      "alternatives": [
+        "Ia – IIc – IIIb",
+        "Ic – IIb – IIIa",
+        "Ib – IIc – IIIa",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones en relación a las ramas de la psicología:\n\nI. La psicología social estudia los prejuicios sociales, formación de creencias y actitudes.\nII. Los psicólogos clínicos realizan prevención, diagnóstico y tratamiento de alteraciones de la personalidad.\nIII. Los psicólogos forenses participan en los protocolos de autopsia.",
+      "alternatives": [
+        "VVF",
+        "FFV",
+        "VVV",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión en relación a la definición conceptual de sexo:\n\nSexo es el conjunto de características físicas, …, anatómicas y … de los seres humanos, que los definen como hombre o mujer.",
+      "alternatives": [
+        "culturales – sociales",
+        "naturales – ambientales",
+        "psicológicas – vitales",
+        "biológicas – fisiológicas",
+        "orgánicas – espirituales"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los objetivos de la psicología con sus características:\n\nI. Describir\nII. Explicar\nIII. Predecir\n\na. Averiguar causas de determinadas conductas.\nb. Pronosticar un comportamiento.\nc. Recoger datos de los procesos cognitivos y los comportamientos.",
+      "alternatives": [
+        "Ib – IIc – IIIa",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ia – IIc – IIIb",
+        "Ic – IIb – IIIa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el número total de cuadriláteros en la siguiente figura:\n\n(ver figura)",
+      "alternatives": [
+        "648",
+        "600",
+        "638",
+        "420",
+        "548"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-22-acing-uncp-2022-figures/rm-lot-22-acing-uncp-2022-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuadrado se divide en cuatro cuadraditos. Uno de los cuadraditos se divide en otros cuatro cuadraditos y así sucesivamente. Después de 69 particiones. ¿Cuántos cuadrados se contabilizan en total?",
+      "alternatives": [
+        "226",
+        "317",
+        "327",
+        "387",
+        "277"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar el valor de \"x\" en la expresión:\n\n#circle(stroke: 0.7pt, inset: 6pt)[$2x$] $= 40$\n\nSi se define la operación matemática:\n\n#circle(stroke: 0.7pt, inset: 6pt)[$2x-1$] $= 6x - 2$",
+      "alternatives": [
+        "2",
+        "4",
+        "7",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la tabla, completa los casilleros con números enteros, de modo que la suma de las filas, columnas y diagonales sea la misma.\n\n(ver tabla)\n\nSi la suma de los dígitos de los casilleros sombreados es $overline(a b)$. Hallar \"a+b\".",
+      "alternatives": [
+        "11",
+        "9",
+        "8",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-22-acing-uncp-2022-figures/rm-lot-22-acing-uncp-2022-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 36 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántas pirámides de base cuadrangular hay en el sólido mostrado?\n\n(ver figura)",
+      "alternatives": [
+        "108",
+        "216",
+        "98",
+        "252",
+        "180"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-22-acing-uncp-2022-figures/rm-lot-22-acing-uncp-2022-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Don Otto, su esposa y su hija están reunidos en el cumpleaños de la mamá, la hija pregunta por la edad a su mamá y Don Otto dice \"nuestras tres edades suman 60 años, como yo tengo siete veces la edad que tú tienes, puede decirse que cuando sea el doble de viejo que tú, nuestras tres edades sumarán el doble de lo que suman ahora\". ¿Qué edad tiene la cumpleañera?",
+      "alternatives": [
+        "28 años",
+        "26 años",
+        "30 años",
+        "32 años",
+        "29 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Milagros sale del trabajo a las 12 h 30 min y llega a su casa a la hora que indica el reloj. ¿Cuánto demoró Milagros en llegar del trabajo a su casa?\n\n(ver figura)",
+      "alternatives": [
+        "1 h 07 min",
+        "1 h 05 min",
+        "1 h 06 min",
+        "1 h 09 min",
+        "1 h 08 min"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-22-acing-uncp-2022-figures/rm-lot-22-acing-uncp-2022-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres comerciantes: José, David y Toribio; venden diferentes productos alimenticios: arroz, leche y azúcar; además, viven en diferentes lugares: Arequipa, Lima y Piura. Se sabe que:\n\n- José no vive en Piura.\n- David no vive en Lima.\n- El que vive en Piura, no vende arroz.\n- El que vive en Lima, vende leche.\n- David no vende azúcar.\n\n¿Qué vende José y dónde vive?",
+      "alternatives": [
+        "Arroz – Arequipa",
+        "Azúcar – Piura",
+        "Arroz – Lima",
+        "Leche – Piura",
+        "Leche – Lima"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente triángulo numérico, determina la suma del primer y último término de la fila 25.\n\n(ver figura)",
+      "alternatives": [
+        "625",
+        "325",
+        "3 000",
+        "1 250",
+        "650"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-22-acing-uncp-2022-figures/rm-lot-22-acing-uncp-2022-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la función que cumple la imagen.\n\n(ver imagen)",
+      "alternatives": [
+        "Redundante",
+        "Estética",
+        "Simbólica",
+        "Compleja",
+        "Epistémica"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-22-acing-uncp-2022-figures/com-lot-22-acing-uncp-2022-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Comunicación, pregunta 42 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las etapas de redacción de textos con sus respectivos procesos de composición:\n\nI. Revisión\nII. Planificación\nIII. Textualización\n\n( ) Representar la situación, generar y organizar ideas.\n( ) Mejorar el estilo, autorevisar y colaborar con revisores externos.\n( ) Organizar el texto y ayudar al lector a leer.",
+      "alternatives": [
+        "III – I – II",
+        "I – III – II",
+        "II – I – III",
+        "II – III – I",
+        "III – II – I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Comunicación, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la oración:\n\nDecía que quería ser profesional, …, no estudiaba…pasaba muchas horas en los juegos virtuales.",
+      "alternatives": [
+        "aunque – casi siempre",
+        "no obstante – peor",
+        "aun así – a veces",
+        "pero – aunque",
+        "sin embargo – porque"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Verbal, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Marcadores textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los marcadores de ideas con sus ejemplos:\n\na. Fuente/autoridad\nb. Ejemplificación\nc. Adición\n\nI. Debemos ser precavidos antes de resolver el examen, incluso leer minuciosamente cada pregunta.\nII. De acuerdo con las estadísticas médicas, han disminuido los casos mortales del Covid – 19.\nIII. La sociedad está en cuidados intensivos en aspectos sanitarios, concretamente cada día mueren muchos ciudadanos.",
+      "alternatives": [
+        "AIII – BI – CII",
+        "AIII – BII – CI",
+        "AII – BI – CIII",
+        "AII – BIII – CI",
+        "AI – BIII – CII"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Verbal, pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN\n\nOrdena de manera coherente los siguientes enunciados:\n\nCAÍDA QUE DUELE\n\nI. Si el rival Brasil -una de las mejores selecciones del mundo, sino la mejor-, no generaba eso, nada lo iba a hacer.\nII. Necesitaba estar ordenado, concentrado y certero frente al arco. No lo estuvo. Brasil fue más. Prepararse para la próxima.\nIII. La ilusión de conseguir un resultado positivo era gigante como un triunfo en la arena romana.\nIV. Por eso lo dijimos en su momento y lo ratificamos con el resultado puesto: Perú necesitaba jugar un partido perfecto.\nV. Los grandes retos despiertan eso, ilusiones: emociones infinitas, motivaciones que no aparecen así nomás.",
+      "alternatives": [
+        "IV – V – I – III – II",
+        "I – V – III – IV – II",
+        "III – V – I – IV – II",
+        "V – III – I – IV – II",
+        "III – V – IV – II – I"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Verbal, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la finalidad del afiche expuesto.\n\n(ver afiche)",
+      "alternatives": [
+        "Sanitario",
+        "Comercial",
+        "Propagandístico",
+        "Persuasivo",
+        "Institucional"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-22-acing-uncp-2022-figures/com-lot-22-acing-uncp-2022-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Comunicación, pregunta 47 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Conditionals (zero, first, second, third)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lea el texto y completa la condicional:\n\nMr. Perez and Mr. Garcia used to drive very fast. They crashed their cars yesterday and they called their wives immediately. If I … a car accident, I … a lawyer.",
+      "alternatives": [
+        "had / would call",
+        "had / called",
+        "have / would have called",
+        "have / would call",
+        "had had / will call"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Inglés, pregunta 48 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto usando los verbos adecuados:\n\nCristina is an athlete. She has … a lot of athletic competitions. She runs faster than anybody else at her university, so she always … care of her food and she eats meat, salad and fruit. Look! She … an apple now.",
+      "alternatives": [
+        "wins / takes / eats",
+        "won / taking / eats",
+        "won / is taking / is eating",
+        "wins / takes / is eating",
+        "won / takes / is eating"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Inglés, pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Observa la imagen y elija la oración incorrecta:\n\n(ver imagen)",
+      "alternatives": [
+        "The goal keeper couldn't block the goal when Jorge kicked it.",
+        "Jose and Juan were playing while Jorge was scoring goal.",
+        "Juan and Jose were jumping because they were celebrating a goal.",
+        "There were six players inside the soccer field and two players outside it.",
+        "Jose was kicking a ball while Jorge was scoring a goal."
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-22-acing-uncp-2022-figures/ing-lot-22-acing-uncp-2022-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Inglés, pregunta 50 (clave C)"
+    }
+  ]
 }
