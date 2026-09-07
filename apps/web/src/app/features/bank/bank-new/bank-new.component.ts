@@ -11,9 +11,10 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Difficulty, NormalizedBoxDto, UNFILED_FOLDER_ID } from '@exams-generator/shared';
 import { LucideAngularModule, Check, ChevronDown, Sparkles } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
@@ -97,6 +98,7 @@ export class BankNewComponent {
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly foldersStore = inject(BankFoldersStore);
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
   private readonly injector = inject(Injector);
   private readonly liveAnnouncer = inject(LiveAnnouncerService);
   private readonly destroyRef = inject(DestroyRef);
@@ -298,17 +300,17 @@ export class BankNewComponent {
     });
 
     /**
-     * Restores the remembered folder the first time BOTH the tree has content
-     * and the topic catalog has settled — both load asynchronously, so this
-     * cannot run inline in the constructor, and restoring before the catalog
-     * arrived would drop the Curso/Tema prefill on the floor. Guarded so it
-     * fires once and never fights a folder the teacher just picked.
+     * Opens on a folder the first time BOTH the tree has content and the
+     * topic catalog has settled — both load asynchronously, so this cannot
+     * run inline in the constructor, and choosing before the catalog arrived
+     * would drop the Curso/Tema prefill on the floor. Guarded so it fires
+     * once and never fights a folder the teacher just picked.
      */
-    let restored = false;
+    let opened = false;
     effect(() => {
-      if (!restored && this.folderTree().length > 0 && this.taxonomyReady()) {
-        restored = true;
-        this.restoreRememberedFolder();
+      if (!opened && this.folderTree().length > 0 && this.taxonomyReady()) {
+        opened = true;
+        this.openInitialFolder();
       }
     });
 
@@ -407,6 +409,46 @@ export class BankNewComponent {
   /** `app-bank-new-folder-field` already turned the virtual "Sin carpeta" node into `null`. */
   protected onFolderPicked(folderId: string | null): void {
     this.applyFolderSelection(folderId);
+  }
+
+  protected readonly folderCreating = signal(false);
+  protected readonly folderCreateError = signal<string | null>(null);
+
+  /**
+   * Creates the folder the field asked for and files the question into it.
+   *
+   * Filing into it is the whole point of creating it HERE. A teacher only
+   * opens this editor because the folder she needs does not exist yet, so
+   * making her create it and then pick it would be asking her to answer the
+   * same question twice — and it is the same reason the folder must not be
+   * created from the grid, three screens away, with an unsaved question
+   * behind her.
+   *
+   * A refusal leaves the selection exactly as it was and hands the server's
+   * own words to the field, which keeps the editor open with the name still
+   * in it. The commonest refusal is a duplicate name, and that is a message
+   * only the server can write.
+   */
+  protected onFolderCreateRequested(request: { parentId: string | null; name: string }): void {
+    this.folderCreating.set(true);
+    this.folderCreateError.set(null);
+    this.foldersStore
+      .create(request.parentId, request.name)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe({
+        next: (created) => {
+          this.folderCreating.set(false);
+          this.applyFolderSelection(created.id);
+        },
+        error: (error: HttpErrorResponse) => {
+          this.folderCreateError.set(
+            typeof error.error?.message === 'string'
+              ? error.error.message
+              : 'No se pudo crear la carpeta.',
+          );
+          this.folderCreating.set(false);
+        },
+      });
   }
 
   /**
@@ -556,6 +598,36 @@ export class BankNewComponent {
       // Private mode / storage disabled: remembering the folder is a
       // convenience, never a requirement. Losing it must not break the upload.
     }
+  }
+
+  /**
+   * Picks the folder this visit should open on: the one the teacher came
+   * FROM, and only failing that the one she used last.
+   *
+   * The route wins because it is the stronger evidence. A teacher who
+   * pressed "+ Nueva pregunta" inside a folder has already said where the
+   * question goes — she is standing in the answer — while the remembered
+   * folder is a guess from an upload that may be hours and three folders
+   * old. `bank-list` puts that folder in `carpeta`; arriving from a menu
+   * leaves the param off, and the guess is still better than nothing.
+   *
+   * The unfiled bucket's id means "file it nowhere", which is `null` on the
+   * wire. Coming from there is a real answer too, so it must not fall
+   * through to the remembered folder — which is exactly what returning
+   * early here does, since `applyFolderSelection(null)` also clears the
+   * memory.
+   */
+  private openInitialFolder(): void {
+    const fromRoute = this.route.snapshot.queryParamMap.get('carpeta');
+    if (fromRoute === UNFILED_FOLDER_ID) {
+      this.applyFolderSelection(null);
+      return;
+    }
+    if (fromRoute !== null && this.foldersStore.folderName(fromRoute)) {
+      this.applyFolderSelection(fromRoute);
+      return;
+    }
+    this.restoreRememberedFolder();
   }
 
   /**

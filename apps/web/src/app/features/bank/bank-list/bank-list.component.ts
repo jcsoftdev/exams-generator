@@ -1219,8 +1219,18 @@ export class BankListComponent {
     return DIFFICULTY_LABELS[difficulty];
   }
 
+  /**
+   * The creator opens on the folder being browsed, carried in `carpeta`.
+   *
+   * Without it `/app/bank/new` falls back to the folder it remembered from
+   * the last upload, which is right when a teacher arrives from a menu and
+   * wrong the moment she arrives from a folder — she is standing IN the
+   * answer, and the form would still offer her yesterday's. `null` is passed
+   * explicitly rather than omitted, so arriving from the unfiled bucket
+   * clears a stale memory instead of silently inheriting it.
+   */
   protected goToNew(): void {
-    this.router.navigate(['/app/bank/new']);
+    this.router.navigate(['/app/bank/new'], { queryParams: { carpeta: this.selectedFolderId() } });
   }
 }
 

@@ -1,10 +1,15 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import { Observable, Subject, TimeoutError, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { BankFolderNode, NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
+import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
+import {
+  BankFolderNode,
+  NormalizedBoxDto,
+  AiExtractedQuestion,
+  UNFILED_FOLDER_ID,
+} from '@exams-generator/shared';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
@@ -43,6 +48,13 @@ const ALL_TOPICS: Topic[] = [
   // No grades at all: the folder leaves Grado to the teacher.
   { id: 't2', name: 'Otro', courseId: 'c1', gradeLevels: [] },
 ];
+
+/**
+ * The route `BankNewComponent` reads `carpeta` off. Mutable rather than
+ * re-provided per test: the component injects it in its constructor, so a
+ * `TestBed.overrideProvider` after the first mount would come too late.
+ */
+const activatedRoute = { snapshot: { queryParamMap: convertToParamMap({}) } };
 
 /** `trigo` carries a `topicId` (prefills Curso/Tema); `colegio` does not (Curso/Tema stay as today). */
 const FOLDERS: BankFolderNode[] = [
@@ -107,6 +119,18 @@ function setup(
     over.getTopics ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
   );
   const getAllTopics = vi.fn(over.getAllTopics ?? (() => of(ALL_TOPICS)));
+  const createFolder = vi.fn((body: { name: string; parentId: string | null }) =>
+    of({
+      id: 'nueva',
+      name: body.name,
+      parentId: body.parentId,
+      topicId: null,
+      position: 9,
+      ownCount: 0,
+      centralCount: 0,
+      children: [],
+    } satisfies BankFolderNode),
+  );
   const getFolders = vi.fn(
     over.getFolders ??
       // `unfiledCount > 0` is what makes the tree render its virtual
@@ -141,11 +165,13 @@ function setup(
           replaceQuestionImage,
           setAlternativeImages,
           getFolders,
+          createFolder,
         },
       },
       { provide: TaxonomyService, useValue: { getCourses, getTopics, getAllTopics } },
       { provide: AiService, useValue: { extractQuestionFromImage, recropExtraction } },
       { provide: Router, useValue: { navigate } },
+      { provide: ActivatedRoute, useValue: activatedRoute },
       { provide: LiveAnnouncerService, useValue: { announce } },
     ],
   });
@@ -154,6 +180,7 @@ function setup(
   return {
     fixture,
     compiled: fixture.nativeElement as HTMLElement,
+    createFolder,
     uploadImageQuestion,
     createStructuredQuestion,
     replaceQuestionImage,
@@ -3198,6 +3225,7 @@ describe('BankNewComponent', () => {
 
     afterEach(() => {
       sessionStorage.clear();
+      activatedRoute.snapshot.queryParamMap = convertToParamMap({});
       submitStructuredSpy.mockRestore();
     });
 
@@ -3385,6 +3413,121 @@ describe('BankNewComponent', () => {
       fixture.detectChanges();
 
       expect(lastSubmitStructuredParams()).toMatchObject({ folderId: 'trigo' });
+    });
+
+    describe('the folder the teacher came from', () => {
+      /** Mounts a second component with `?carpeta=<id>` on the route. */
+      async function visitFrom(
+        folderId: string | null,
+      ): Promise<ComponentFixture<BankNewComponent>> {
+        activatedRoute.snapshot.queryParamMap = convertToParamMap(
+          folderId === null ? {} : { carpeta: folderId },
+        );
+        const visit = TestBed.createComponent(BankNewComponent);
+        visit.detectChanges();
+        await settleEffects(visit);
+        return visit;
+      }
+
+      it('opens on the folder named in the route', async () => {
+        const visit = await visitFrom('colegio');
+
+        expect(internals(visit).folderId()).toBe('colegio');
+      });
+
+      it('prefers the route over the folder it remembers from the last upload', async () => {
+        sessionStorage.setItem('bank-new:last-folder-id', 'trigo');
+
+        const visit = await visitFrom('colegio');
+
+        expect(internals(visit).folderId()).toBe('colegio');
+      });
+
+      it("reads the unfiled bucket's id as no folder at all", async () => {
+        sessionStorage.setItem('bank-new:last-folder-id', 'trigo');
+
+        const visit = await visitFrom(UNFILED_FOLDER_ID);
+
+        expect(internals(visit).folderId()).toBeNull();
+      });
+
+      it('falls back to the remembered folder when the route names none', async () => {
+        sessionStorage.setItem('bank-new:last-folder-id', 'trigo');
+
+        const visit = await visitFrom(null);
+
+        expect(internals(visit).folderId()).toBe('trigo');
+      });
+
+      it('ignores a route folder that is not in the tree', async () => {
+        const visit = await visitFrom('borrada');
+
+        expect(internals(visit).folderId()).toBeNull();
+      });
+    });
+
+    describe('creating a folder without leaving the form', () => {
+      /** Opens the tab's picker, its inline creator, types `name` and submits. */
+      function createFolderNamed(tab: 'photo' | 'structured', name: string): void {
+        (
+          compiled.querySelector(`[data-testid="folder-field-${tab}"] button`) as HTMLButtonElement
+        ).click();
+        fixture.detectChanges();
+        (compiled.querySelector(`[data-testid="folder-create-${tab}"]`) as HTMLElement).click();
+        fixture.detectChanges();
+        const input = compiled.querySelector(
+          `[data-testid="folder-create-name-${tab}"] input`,
+        ) as HTMLInputElement;
+        input.value = name;
+        input.dispatchEvent(new Event('input'));
+        fixture.detectChanges();
+        compiled
+          .querySelector(`[data-testid="folder-create-name-${tab}"]`)!
+          .dispatchEvent(new Event('submit'));
+        fixture.detectChanges();
+      }
+
+      it('saves the folder and files the question into it', async () => {
+        createFolderNamed('photo', 'Repaso');
+        await settleEffects(fixture);
+
+        expect(harness.createFolder).toHaveBeenCalledWith({ name: 'Repaso', parentId: null });
+        expect(component.folderId()).toBe('nueva');
+      });
+
+      it('creates it under the folder already picked', async () => {
+        pickFolder('photo', 'trigo');
+        await settleEffects(fixture);
+
+        createFolderNamed('photo', 'Identidades');
+        await settleEffects(fixture);
+
+        expect(harness.createFolder).toHaveBeenCalledWith({
+          name: 'Identidades',
+          parentId: 'trigo',
+        });
+        expect(component.folderId()).toBe('nueva');
+      });
+
+      it('says why the server refused, and leaves the folder as it was', async () => {
+        harness.createFolder.mockReturnValueOnce(
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 409,
+                error: { message: 'Ya existe una carpeta con ese nombre.' },
+              }),
+          ),
+        );
+
+        createFolderNamed('photo', 'Trigonometría');
+        await settleEffects(fixture);
+
+        expect(
+          compiled.querySelector('[data-testid="folder-create-error-photo"]')?.textContent?.trim(),
+        ).toBe('Ya existe una carpeta con ese nombre.');
+        expect(component.folderId()).toBeNull();
+      });
     });
 
     it('remembers the last folder in sessionStorage', async () => {

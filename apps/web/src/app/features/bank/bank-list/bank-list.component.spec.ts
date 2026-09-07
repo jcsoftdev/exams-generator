@@ -1826,4 +1826,24 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-testid="no-folder-selected"]')).toBeTruthy();
     });
   });
+
+  describe('handing the open folder to the question creator', () => {
+    it('carries the folder being browsed into /app/bank/new', () => {
+      const { compiled, navigate } = setup({ routeFolderId: 'trigo' });
+
+      (compiled.querySelector('[data-testid="new-question"] button') as HTMLElement).click();
+
+      expect(navigate).toHaveBeenCalledWith(['/app/bank/new'], {
+        queryParams: { carpeta: 'trigo' },
+      });
+    });
+
+    it('asks for no folder at all when the route names none', () => {
+      const { compiled, navigate } = setup();
+
+      (compiled.querySelector('[data-testid="new-question"] button') as HTMLElement).click();
+
+      expect(navigate).toHaveBeenCalledWith(['/app/bank/new'], { queryParams: { carpeta: null } });
+    });
+  });
 });

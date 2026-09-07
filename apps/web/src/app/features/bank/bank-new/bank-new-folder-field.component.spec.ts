@@ -38,7 +38,10 @@ const NODES: FolderTreeNode[] = [
       [nodes]="nodes()"
       [loading]="loading()"
       [mismatch]="mismatch()"
+      [creating]="creating()"
+      [createError]="createError()"
       (valueChange)="onValueChange($event)"
+      (createRequested)="onCreateRequested($event)"
     ></app-bank-new-folder-field>
   `,
 })
@@ -47,7 +50,11 @@ class HostComponent {
   readonly nodes = signal<readonly FolderTreeNode[]>(NODES);
   readonly loading = signal(false);
   readonly mismatch = signal(false);
+  readonly creating = signal(false);
+  readonly createError = signal<string | null>(null);
   readonly onValueChange = vi.fn<(value: string | null) => void>();
+  readonly onCreateRequested =
+    vi.fn<(request: { parentId: string | null; name: string }) => void>();
 }
 
 function setup() {
@@ -167,5 +174,108 @@ describe('BankNewFolderFieldComponent', () => {
     expect(
       root().querySelector('[data-testid="folder-field-photo-loading"]')?.textContent,
     ).toContain('Cargando carpetas…');
+  });
+
+  describe('creating a folder without leaving the form', () => {
+    /** Opens the picker, then its inline "Nueva carpeta" editor. */
+    function openCreator(t: ReturnType<typeof setup>): HTMLInputElement {
+      t.openPicker();
+      (t.root().querySelector('[data-testid="folder-create-photo"]') as HTMLElement).click();
+      t.fixture.detectChanges();
+      return t
+        .root()
+        .querySelector('[data-testid="folder-create-name-photo"] input') as HTMLInputElement;
+    }
+
+    function submit(t: ReturnType<typeof setup>, name: string): void {
+      const input = openCreator(t);
+      input.value = name;
+      input.dispatchEvent(new Event('input'));
+      t.fixture.detectChanges();
+      t.root()
+        .querySelector('[data-testid="folder-create-name-photo"]')!
+        .dispatchEvent(new Event('submit'));
+      t.fixture.detectChanges();
+    }
+
+    it('asks the owner to create the folder at the root when nothing is picked', () => {
+      const t = setup();
+
+      submit(t, 'Repaso');
+
+      expect(t.host.onCreateRequested).toHaveBeenCalledWith({ parentId: null, name: 'Repaso' });
+    });
+
+    it('creates UNDER the folder currently picked, which is the one she is filing into', () => {
+      const t = setup();
+      t.host.value.set('trigo');
+      t.fixture.detectChanges();
+
+      submit(t, 'Identidades');
+
+      expect(t.host.onCreateRequested).toHaveBeenCalledWith({
+        parentId: 'trigo',
+        name: 'Identidades',
+      });
+    });
+
+    it('treats the unfiled bucket as the root, never as a parent', () => {
+      const t = setup();
+      t.host.value.set(UNFILED_FOLDER_ID);
+      t.fixture.detectChanges();
+
+      submit(t, 'Repaso');
+
+      expect(t.host.onCreateRequested).toHaveBeenCalledWith({ parentId: null, name: 'Repaso' });
+    });
+
+    it('refuses a blank name rather than asking for an untitled folder', () => {
+      const t = setup();
+
+      submit(t, '   ');
+
+      expect(t.host.onCreateRequested).not.toHaveBeenCalled();
+    });
+
+    it('keeps the name on screen while the owner is saving it', () => {
+      const t = setup();
+      submit(t, 'Repaso');
+
+      t.host.creating.set(true);
+      t.fixture.detectChanges();
+
+      expect(t.root().querySelector('[data-testid="folder-create-name-photo"]')).not.toBeNull();
+    });
+
+    it('closes the editor once the owner reports the folder saved', () => {
+      const t = setup();
+      submit(t, 'Repaso');
+      t.host.creating.set(true);
+      t.fixture.detectChanges();
+
+      t.host.creating.set(false);
+      t.fixture.detectChanges();
+
+      expect(t.root().querySelector('[data-testid="folder-create-name-photo"]')).toBeNull();
+    });
+
+    it('keeps the editor open with the name intact when the save is refused', () => {
+      const t = setup();
+      submit(t, 'Repaso');
+      t.host.creating.set(true);
+      t.fixture.detectChanges();
+
+      t.host.createError.set('Ya existe una carpeta con ese nombre.');
+      t.host.creating.set(false);
+      t.fixture.detectChanges();
+
+      const input = t
+        .root()
+        .querySelector('[data-testid="folder-create-name-photo"] input') as HTMLInputElement;
+      expect(input.value).toBe('Repaso');
+      expect(
+        t.root().querySelector('[data-testid="folder-create-error-photo"]')?.textContent?.trim(),
+      ).toBe('Ya existe una carpeta con ese nombre.');
+    });
   });
 });

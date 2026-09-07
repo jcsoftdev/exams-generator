@@ -82,7 +82,10 @@
         [nodes]="folderTree()"
         [loading]="foldersLoading()"
         [mismatch]="folderTopicMismatch('photo')"
+        [creating]="folderCreating()"
+        [createError]="folderCreateError()"
         (valueChange)="onFolderPicked($event)"
+        (createRequested)="onFolderCreateRequested($event)"
       ></app-bank-new-folder-field>
 
       <div data-testid="photo-course-select">
@@ -173,7 +176,10 @@
         [nodes]="folderTree()"
         [loading]="foldersLoading()"
         [mismatch]="folderTopicMismatch('structured')"
+        [creating]="folderCreating()"
+        [createError]="folderCreateError()"
         (valueChange)="onFolderPicked($event)"
+        (createRequested)="onFolderCreateRequested($event)"
       ></app-bank-new-folder-field>
 
       <div data-testid="structured-course-select">
