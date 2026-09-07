@@ -105,6 +105,37 @@ export function verifyAll(
   });
 }
 
+/**
+ * Pulls the batch out of a transcriptions file, refusing every shape that used
+ * to pass as an empty one.
+ *
+ * `--verify` and `--apply` both defaulted a missing `transcriptions` key to
+ * `[]`, so a file written as a bare array verified as "0 compile, 0 fail" and
+ * applied nothing while reporting success at every step. Two agent runs were
+ * lost to that on 2026-09-07 — both read those numbers and called the job done.
+ * An empty batch is refused for the same reason: nobody assembles one on
+ * purpose, and reporting zero is indistinguishable from having worked.
+ */
+export function readTranscriptionsFile(contents: string, path: string): LotTranscription[] {
+  const parsed = JSON.parse(contents) as unknown;
+  const transcriptions =
+    typeof parsed === "object" && parsed !== null
+      ? (parsed as { transcriptions?: unknown }).transcriptions
+      : undefined;
+
+  if (!Array.isArray(transcriptions)) {
+    throw new Error(
+      `${path} no tiene una lista "transcriptions". El archivo es ` +
+        '{ "transcriptions": [ ... ] }, no un arreglo suelto.',
+    );
+  }
+  if (transcriptions.length === 0) {
+    throw new Error(`${path} trae un lote vacío: no hay nada que verificar ni aplicar.`);
+  }
+
+  return transcriptions as LotTranscription[];
+}
+
 export function exportWorklist(lot: string, limit?: number): WorklistItem[] {
   const imageLot = readLot(`${lot}-image`);
 
@@ -272,13 +303,11 @@ if (require.main === module) {
   const verifyFile = valueOf(argv, "--verify");
 
   if (verifyFile) {
-    const parsed = JSON.parse(readFileSync(verifyFile, "utf8")) as {
-      transcriptions?: readonly LotTranscription[];
-    };
-    const broken = verifyAll(parsed.transcriptions ?? []);
+    const transcriptions = readTranscriptionsFile(readFileSync(verifyFile, "utf8"), verifyFile);
+    const broken = verifyAll(transcriptions);
     broken.forEach(({ imagePath, error }) => console.error(`FAIL ${imagePath}\n  ${error}`));
     console.log(
-      `[restructure-image-lot] ${(parsed.transcriptions ?? []).length - broken.length} compile, ${broken.length} fail.`,
+      `[restructure-image-lot] ${transcriptions.length - broken.length} compile, ${broken.length} fail.`,
     );
     process.exitCode = broken.length > 0 ? 1 : 0;
   } else if (argv.includes("--status")) {
@@ -293,12 +322,9 @@ if (require.main === module) {
       console.error(USAGE);
       process.exitCode = 1;
     } else if (applyFile) {
-      const parsed = JSON.parse(readFileSync(applyFile, "utf8")) as {
-        transcriptions?: readonly LotTranscription[];
-      };
       const { promoted, pending, reasons, unmatched, figuresCut, orphans } = applyTranscriptionFile(
         lot,
-        parsed.transcriptions ?? [],
+        readTranscriptionsFile(readFileSync(applyFile, "utf8"), applyFile),
         { prune: argv.includes("--prune") },
       );
       console.log(

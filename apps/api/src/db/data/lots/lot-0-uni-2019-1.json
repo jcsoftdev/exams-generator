@@ -649,6 +649,601 @@
       "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-35.png",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
       "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Definiciones: género próximo y diferencia específica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa adecuada a la definición presentada:\n\n\\_\\_\\_\\_\\_ : Mitigar, suavizar, atenuar una pena, disgusto, entre otros.",
+      "alternatives": [
+        "Disminuir",
+        "Disimular",
+        "Tranquilizar",
+        "Disculpar",
+        "Paliar"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que mantiene una relación análoga con el par base escrito en mayúscula:\n\nHETERÓCLITO : IRREGULAR : :",
+      "alternatives": [
+        "disidente : conformista",
+        "enervado : violento",
+        "dispar : desigual",
+        "diverso : homogéneo",
+        "acelerado : frenético"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir la palabra subrayada, precise mejor el sentido del enunciado:\n\nA menudo, la política cultural se #underline[achica] a los aspectos económicos del fomento del arte.",
+      "alternatives": [
+        "reduce",
+        "encoge",
+        "contrae",
+        "acorta",
+        "estrecha"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir la palabra subrayada, precise mejor el sentido del enunciado:\n\nEn el Taller de Aeronáutica, los alumnos #underline[ven] con atención la secuencia de parche del ala de un avión.",
+      "alternatives": [
+        "vigilan",
+        "ojean",
+        "atisban",
+        "observan",
+        "atienden"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir la palabra subrayada, precise mejor el sentido del enunciado:\n\nPierre de Fermat #underline[dio] su tiempo a las matemáticas.",
+      "alternatives": [
+        "santificó",
+        "consagró",
+        "estableció",
+        "cedió",
+        "otorgó"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir la palabra subrayada, precise mejor el sentido del enunciado:\n\nEn la ceremonia de inauguración del semestre, se #underline[dijo] a los estudiantes que la asistencia a las sesiones de tutoría es obligatoria.",
+      "alternatives": [
+        "recomendó",
+        "pronunció",
+        "comentó",
+        "informó",
+        "alegó"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa cuya palabra expresa lo contrario del término subrayado:\n\nEn mi último viaje, tuve que soportar el clima #underline[gélido].",
+      "alternatives": [
+        "variable",
+        "lluvioso",
+        "seco",
+        "templado",
+        "tórrido"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa cuya palabra expresa lo contrario del término subrayado:\n\nLa #underline[castidad] se hace cada vez más frecuente entre los jóvenes.",
+      "alternatives": [
+        "independencia",
+        "amabilidad",
+        "apatía",
+        "lujuria",
+        "rebeldía"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa cuya palabra expresa lo contrario del término subrayado:\n\nLos #underline[proficuos] avances científicos de hogaño son discutibles.",
+      "alternatives": [
+        "improductivos",
+        "fructíferos",
+        "favorables",
+        "aciagos",
+        "providenciales"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa cuya palabra expresa lo contrario del término subrayado:\n\nLuis donó ropa #underline[roñosamente] para la casa hogar.",
+      "alternatives": [
+        "sañudamente",
+        "pérfidamente",
+        "dadivosamente",
+        "sutilmente",
+        "sinceramente"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa cuya palabra expresa lo contrario del término subrayado:\n\nLos viajeros, al pasar por aquel campo, observaron el terreno #underline[yermo].",
+      "alternatives": [
+        "árido",
+        "favorable",
+        "ubérrimo",
+        "inclemente",
+        "armónico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir en los espacios en blanco, dé sentido coherente y preciso al texto:\n\n\\_\\_\\_\\_\\_ no cambias esa actitud, no te irá bien en ese empleo; \\_\\_\\_\\_\\_ el trabajo en esa área implica asumirlo en equipo.",
+      "alternatives": [
+        "Aunque - pues",
+        "Puesto que - así",
+        "Si - puesto que",
+        "Dado que - y",
+        "Si bien - entonces"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 47 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir en los espacios en blanco, dé sentido coherente y preciso al texto:\n\nLa música sonaba tenuemente, \\_\\_\\_\\_\\_ se oía el chillar de la corneta \\_\\_\\_\\_\\_ el eco del bombo desaparecía como pisadas lentas; \\_\\_\\_\\_\\_ los cohetones explosionaban cada vez más cerca.",
+      "alternatives": [
+        "sin embargo - o - más bien",
+        "pues - y - mientras que",
+        "aunque - además - porque",
+        "ya que - mas - así que",
+        "vale decir - puesto que - y"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir en los espacios en blanco, dé sentido coherente y preciso al texto:\n\nLos rayos X pueden lesionar células y tejidos, \\_\\_\\_\\_\\_ el daño suele ser mínimo en comparación con sus beneficios. \\_\\_\\_\\_\\_, \\_\\_\\_\\_\\_ una mujer cree estar embarazada, es mejor que consulte con su médico antes de hacerse una radiografía.",
+      "alternatives": [
+        "pero - Por eso - si",
+        "aunque - Dado que - luego",
+        "empero - Además - cuando",
+        "mas - En conclusión - luego",
+        "ya que - Por lo tanto - si"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 49 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al sustituir en los espacios en blanco, dé sentido coherente y preciso al texto:\n\nLos docentes, en su práctica profesional, no solo deben dominar los contenidos que imparten; \\_\\_\\_\\_\\_ es necesario \\_\\_\\_\\_\\_ faciliten el aprendizaje y la participación de todos los estudiantes; \\_\\_\\_\\_\\_ de esta manera se propicia oportunidades de mayor desarrollo e inclusión educativa. \\_\\_\\_\\_\\_, es importante la actitud del profesor ante los estudiantes con distintas necesidades educativas.",
+      "alternatives": [
+        "si no que - de que - pues - Entonces",
+        "por lo tanto - y - porque - Asimismo",
+        "sino que - que - ya que - Por eso",
+        "pues - que - pero - Con que",
+        "porque - de que - pues - Puesto que"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la opción en la que el enunciado carece de relación con el tema desarrollado:\n\nI. La contaminación atmosférica provoca un aumento de los gases de efecto invernadero. II. La contaminación del suelo es provocada principalmente por residuos urbanos. III. La contaminación puede ser el resultado de causas naturales (emanaciones volcánicas, por ejemplo). IV. La contaminación del agua afecta la biodiversidad ictiológica. V. La contaminación radioactiva puede producirse en todas las fases del combustible nuclear.",
+      "alternatives": [
+        "III",
+        "IV",
+        "V",
+        "I",
+        "II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 51 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la opción en la que el enunciado carece de relación con el tema desarrollado:\n\nI. El corazón está situado en el mediastino de la cavidad toráxica. II. El corazón se compone de una túnica muscular gruesa llamada miocardio. III. El corazón está dividido en cuatro cavidades. IV. El corazón posee arterias y venas coronarias. V. El corazón está constituido de un sistema nervioso intrínseco que adapta su trabajo a las necesidades del individuo.",
+      "alternatives": [
+        "III",
+        "I",
+        "V",
+        "IV",
+        "II"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 52 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la opción en la que el enunciado carece de relación con el tema desarrollado:\n\nI. Desde los tiempos remotos, el hombre ha deforestado las superficies boscosas. II. Los bosques constituyen los ecosistemas terrestres más ricos, tanto desde el punto de vista de la flora como de la fauna. III. La deforestación ha ocurrido con el objeto de ganar tierras para la práctica de la agricultura y del pastoreo. IV. A partir de la mitad del siglo XX, el ritmo de deforestación se ha acelerado de modo alarmante, sobre todo en las regiones de bosque tropical. V. Debido a esta actividad, se estima que el manto arbóreo del planeta ha disminuido en una tercera parte de la superficie que ocupaba antes del desarrollo de la agricultura.",
+      "alternatives": [
+        "II",
+        "V",
+        "IV",
+        "III",
+        "I"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 53 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la opción en la que el enunciado carece de relación con el tema desarrollado:\n\nI. Las pecanas son una variedad de frutos secos que brinda muchos beneficios para nuestra salud. II. Este fruto seco es muy consumido en diversos platos gastronómicos, desde postres hasta en platos de fondo. III. Reducen el riesgo de enfermedades relacionadas al corazón. IV. También disminuyen el colesterol en nuestro organismo y ayudan a mantener un equilibrio en los niveles de azúcar en la sangre para evitar la diabetes. V. Además, por las fibras y proteínas, sentimos saciedad y, por ello, consumimos menos alimentos que contienen muchas calorías.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 54 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que presenta la secuencia correcta que deben seguir los enunciados para que el sentido global del texto sea coherente:\n\nWIKIS\n\nI. Si ese título aparece en el texto de otra página de las wikis, se crea automáticamente un vínculo. II. Las wikis permiten colaborar a varios usuarios en la generación de los contenidos de cada capítulo. III. Las wikis organizan la información a modo de libro o enciclopedia, en donde los capítulos incluyen referencias a otros capítulos. IV. Las páginas de una wikiweb, por lo tanto, están hiperenlazadas entre ellas. V. Cada página de un capítulo tiene un título único que la identifica.",
+      "alternatives": [
+        "IV - I - V - III - II",
+        "III - II - V - I - IV",
+        "II - III - IV - I - V",
+        "IV - II - I - V - III",
+        "III - V - I - II - IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 55 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que presenta la secuencia correcta que deben seguir los enunciados para que el sentido global del texto sea coherente:\n\nLAVADO DE CEREBRO AL DORMIR\n\nI. Un equipo de investigadores ha realizado un estudio con ratones. II. Este mayor flujo arrastra sustancias relacionadas con la enfermedad de Alzhéimer. III. ¿Por qué dormimos?: esta es una de las grandes preguntas de la biología. IV. Los canales entre neuronas permiten que circule más líquido cefalorraquídeo. V. Los cerebros de los ratones mientras duermen se limpian durante el sueño.",
+      "alternatives": [
+        "III - II - V - IV - I",
+        "V - I - IV - III - II",
+        "II - I - III - IV - V",
+        "III - I - V - IV - II",
+        "I - IV - III - V - II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 56 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que presenta la secuencia correcta que deben seguir los enunciados para que el sentido global del texto sea coherente:\n\nLAS ESTRELLAS DE MAR\n\nI. Las espinas de una estrella de mar son muy afiladas; si se comen, pueden provocar al depredador muchos dolores. II. Además, estas se caracterizan por su autorregeneración. III. Las estrellas de mar son equinodermos estrechamente relacionados con los erizos de mar. IV. La mayoría de ellas demuestran la notable capacidad de consumir presas fuera de sus cuerpos. V. Estos equinodermos son simétricos y pentarradiales.",
+      "alternatives": [
+        "III - V - II - IV - I",
+        "I - II - III - IV - V",
+        "V - IV - III - II - I",
+        "II - V - III - I - IV",
+        "IV - II - I - III - V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 57 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que presenta la secuencia correcta que deben seguir los enunciados para que el sentido global del texto sea coherente:\n\nLA NUEVA CULTURA DEL AGUA DEL SIGLO XXI\n\nI. En esta situación, emergen múltiples focos de conflicto ligados a la gestión del agua, con frecuencia entre regiones o países. II. En suma, nos encontramos ante la necesidad de un nuevo enfoque ético, basado en principios de sostenibilidad, equidad y no violencia. III. El modelo de globalización en curso, alejado de los más elementales principios éticos, está acelerando la depredación de los recursos hídricos y la quiebra del ciclo hídrico en los continentes. IV. Por ello, existe un mercado de recursos y valores ambientales como espacio de negocio. V. De esta manera, se genera tres grandes fallas: crisis de sostenibilidad, que suscita movimientos de defensa del medio ambiente; crisis de gobernanza, que fomenta la defensa de los derechos humanos; crisis de convivencia, la cual motiva a la colaboración entre pueblos.",
+      "alternatives": [
+        "III - IV - II - V - I",
+        "I - III - IV - V - II",
+        "III - IV - I - V - II",
+        "III - IV - V - I - II",
+        "II - I - III - V - IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 58 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el enunciado que, al insertarse en el espacio dejado, se cohesione adecuadamente con el sentido global del texto:\n\nI. Ruth Shady Solis nació un 29 de diciembre de 1946. II. \\_\\_\\_\\_\\_. III. De 1975 a 1984, se desempeñó como jefa de investigaciones en el Museo Nacional de Arqueología y Antropología. IV. Además de la investigación y la docencia universitaria, ha estado dedicada a dirigir el Museo de Arqueología y Antropología de la Universidad Nacional Mayor de San Marcos, entre los años 1997-2002, donde impulsó programas de difusión científica mediante exposiciones, conferencias y publicaciones. V. Actualmente, es reconocida por su labor de revalorización y datación de Caral, pues afirma que es la cuna de la civilización peruana y la sede del primer gobierno estatal.",
+      "alternatives": [
+        "En 1994, inició una prospección en el valle de Supe, con excavaciones en 1996, cuyos resultados publicó en 1997.",
+        "Es coordinadora de la Maestría en Arqueología Andina de la Universidad Nacional Mayor de San Marcos desde 2010.",
+        "Ingresó a la Universidad Nacional Mayor de San Marcos en 1964 y realizó estudios en los programas de Antropología y Arqueología.",
+        "La antigüedad, originalidad y naturaleza acerámica de la civilización Caral fue demostrada por las pruebas de radio carbono 14.",
+        "Fue elegida decana del Colegio Profesional de Arqueólogos del Perú, y desempeñó el cargo durante el período 2006-2007."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 59 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el enunciado que, al insertarse en el espacio dejado, se cohesione adecuadamente con el sentido global del texto:\n\nI. La osteoporosis es la enfermedad esquelética más común en seres humanos. II. Se caracteriza por un deterioro de la microarquitectura del tejido óseo. III. \\_\\_\\_\\_\\_. IV. Se trata de una enfermedad metabólica y asintomática (silenciosa), ya que carece de signos significativos antes de que se produzca la fractura del hueso. V. Varios estudios han revelado que podría haber un componente genético, pues se ha visto que la disminución de la densidad ósea se podría asociar a polimorfismos presentes en varios genes.",
+      "alternatives": [
+        "Esta dolencia provoca una mayor predisposición a sufrir fracturas por fragilidad.",
+        "La osteoporosis es común en jóvenes y ancianos que consumen mucha gaseosa.",
+        "La osteoporosis presenta el significado literal de \"huesos porosos\".",
+        "Esta enfermedad puede afectar a todos los grupos de edad, pero es más común en mujeres.",
+        "Si la densidad ósea está ligeramente debajo de la media, recibe el nombre de osteopenia."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 60 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el enunciado que, al insertarse en el espacio dejado, se cohesione adecuadamente con el sentido global del texto:\n\nI. \\_\\_\\_\\_\\_. II. Está compuesto por agua, fibras de colágeno y minerales cristalizados. III. Este tejido sufre cambios a lo largo de toda la vida. IV. Ya que, a medida que el ser humano se desarrolla (infancia y adolescencia), se produce un crecimiento radial y longitudinal. V. En la edad adulta, se producen la modelación y la remodelación, dos procesos claves para el mantenimiento de una estructura fuerte.",
+      "alternatives": [
+        "El tejido epitelial está formado por células dispuestas de manera continua en una superficie.",
+        "El tejido conectivo establece conexión con los otros tejidos y sirve de soporte al cuerpo.",
+        "El tejido óseo es una abundante matriz extracelular que rodea las células de la médula.",
+        "El tejido muscular está formado por células alargadas que pueden contraerse o relajarse.",
+        "El tejido vegetal es la agrupación de células que ocurre en los vegetales más desarrollados."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el enunciado que, al insertarse en el espacio dejado, se cohesione adecuadamente con el sentido global del texto:\n\nI. \\_\\_\\_\\_\\_. II. Cuando los huevos eclosionan, las tortugas recién nacidas se encaminan hacia el océano. III. Inician, entonces, una asombrosa travesía que, en total, puede cubrir una distancia de 12 900 km. IV. Años después, ya adultas, las hembras vuelven a la misma playa donde nacieron para poner sus propios huevos. V. Esto se debe a su sistema de navegación, que les permite determinar su posición detectando el ángulo y la intensidad del campo magnético de la Tierra.",
+      "alternatives": [
+        "Las tortugas migran desde su zona de alimentación hasta las costas donde anidan.",
+        "La tortuga marina es un reptil que nace con un diente especial llamado curúncula.",
+        "Las tortugas marinas pasan el 90% de su vida en el océano y el 10% en la arena.",
+        "Las tortugas marinas ponen sus huevos en una playa distinta de donde nacieron.",
+        "Tras poner sus huevos y enterrarlos, la tortuga marina hembra abandona el nido."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 62 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el enunciado que, al insertarse en el espacio dejado, se cohesione adecuadamente con el sentido global del texto:\n\nI. El cáncer se origina cuando un conjunto de células comienza a proliferar de manera descontrolada y forma un tumor. II. Existen dos teorías acerca de cómo se produciría la formación de los tumores. III. La primera propone que los tumores proceden de una única célula anormal. IV. Con el tiempo, la célula anormal adquirirá ciertas ventajas con la misma capacidad de regenerar el tumor. V. \\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "Finalmente, estas células son muy parecidas a las células madre sanas.",
+        "Por otro lado, estas células tienen la propiedad de poder autorrenovarse.",
+        "El otro modelo plantea que son varias las células madre que propagan el cáncer.",
+        "El segundo sostiene que existen células madre cancerosas.",
+        "Estas células tienen una amplia capacidad de proliferación."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 63 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enunciados para que el texto resulte coherente y cohesivo:\n\nI. En 1592, el papa Gregorio XIII ajustó el calendario eliminando los años bisiestos de cada fin de siglo si este no era divisible por 400. II. Este fue reformado por Julio César en 46 a. C. III. Con esto, la duración media del año civil era 365,25 días. IV. Julio César introdujo un año bisiesto cada cuatro años con el fin de adecuar el calendario al año astronómico. V. El calendario actual procede del calendario romano.",
+      "alternatives": [
+        "V - II - IV - III - I",
+        "I - III - IV - V - II",
+        "IV - II - V - III - I",
+        "V - IV - III - II - I",
+        "IV - III - I - V - II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 64 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enunciados para que el texto resulte coherente y cohesivo:\n\nI. Las observaciones espectroscópicas han permitido descubrir cómo fluye el material dentro y fuera de las primeras galaxias. II. Como resultado, obtuvo las observaciones espectroscópicas más profundas jamás llevadas a cabo. III. Este ha medido distancias y propiedades de 1600 galaxias muy débiles y distantes. IV. Un equipo internacional de astrónomos ha logrado exploraciones inéditas del universo. V. En este sentido, el grupo de investigación las ha observado tal como eran hace 13000 millones de años, incluyendo 72 galaxias que nunca habían sido detectadas.",
+      "alternatives": [
+        "I - V - IV - III - II",
+        "V - I - III - II - IV",
+        "III - IV - I - II - V",
+        "IV - III - V - II - I",
+        "II - V - I - IV - III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 65 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enunciados para que el texto resulte coherente y cohesivo:\n\nI. Esta industria producirá hasta el 5% de las emisiones mundiales de carbono en el 2025, y se convertirá así en un serio obstáculo para cumplir con los objetivos del cambio climático. II. La industria de las telecomunicaciones podría consumir el 20% de toda la electricidad que se produce en el mundo. III. Además, podría llegar al 14% de las emisiones globales en el 2040, según otro estudio que se publicará a finales de diciembre, cuyos resultados adelanta _Climate Home_. IV. La razón de este problema es que los miles de millones de aparatos que usamos cada día para comunicarnos podrían producir el 3,5% de las emisiones mundiales. V. En suma, la demanda global de energía informática de dispositivos conectados a internet, transmisión de video de alta resolución, correos electrónicos, y otros, está aumentando un 20% al año.",
+      "alternatives": [
+        "II - I - IV - III - V",
+        "III - I - V - II - IV",
+        "IV - V - I - II - III",
+        "I - V - III - IV - II",
+        "V - II - III - IV - I"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 66 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enunciados para que el texto resulte coherente y cohesivo:\n\nI. Algunas bacterias se han vuelto resistentes a los antibióticos que se usan para tratarlos. II. Los MDRO afectan, principalmente, a las personas que están en hospitales y centros de atención de largo plazo. III. Las bacterias son especies que actúan en conjunto para propagar una infección. IV. A las bacterias que resisten el tratamiento con más de un antibiótico, se las llama organismos resistentes a múltiples medicamentos (MDRO). V. Los hospitales se convierten así, para estos microrganismos, en el espacio natural en el que evolucionan para convertirse en resistentes a los antibióticos y sobrevivir en un paciente huésped.",
+      "alternatives": [
+        "I - IV - III - V - II",
+        "III - I - IV - II - V",
+        "V - IV - I - II - III",
+        "III - IV - I - V - II",
+        "I - III - II - V - IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 67 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enunciados para que el texto resulte coherente y cohesivo:\n\nI. Mientras que en las zonas templadas dominan tres tipos de clima: el oceánico, el continental y el polar. II. Clima es el conjunto de fenómenos meteorológicos que caracterizan el estado de la atmósfera en un lugar determinado. III. La banda intertropical, por un lado, se caracteriza por un clima cálido. IV. Las grandes zonas climatológicas corresponden a bandas de latitud simétricas respecto del Ecuador. V. Por otro lado, los trópicos presentan un clima árido.",
+      "alternatives": [
+        "IV - II - V - III - I",
+        "II - IV - I - III - V",
+        "IV - I - V - II - III",
+        "II - IV - III - V - I",
+        "II - III - IV - V - I"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique en qué alternativa hay una oración compuesta subordinada adverbial:\n\nI. Desarrolló el plano, tal y como exigió el municipio. II. Con su enorme talento, ganó el concurso. III. El público entusiasmado exclamó: ¡Iremos por donde tú digas! IV. Los jugadores de fútbol se alistaron para la competencia.",
+      "alternatives": [
+        "I y III",
+        "II y IV",
+        "I y II",
+        "III y IV",
+        "I y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 76 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes afirmaciones:\n\nI. El Sr. Baca no pudo atrapar a la vaca descarriada. II. Aunque puso empeño, no pudo recuperar su reloj que había dejado en la casa de empeño. III. Por no echar la carne a la sopa, voy a echar chispas.\n\nIndique la alternativa que es un ejemplo de homografía:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 77 (clave D)"
     }
   ]
 }
