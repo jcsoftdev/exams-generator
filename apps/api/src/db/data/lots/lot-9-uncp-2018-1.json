@@ -705,7 +705,7 @@
     },
     {
       "courseName": "Aritmética",
-      "topicName": "Teoría de Conjuntos",
+      "topicName": "Combinatoria y Probabilidad",
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un colegio hay 30 docentes de letras y 50 docentes de ciencias. Además se sabe que 50 docentes recibieron una laptop para sus clases, de los cuales 10 son docentes de letras.\n\nSe elige un docente al azar. Si se sabe que no recibió una laptop, ¿cuál es la probabilidad que sea de ciencias?",

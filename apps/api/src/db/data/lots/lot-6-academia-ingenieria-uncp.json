@@ -90,7 +90,7 @@
     },
     {
       "courseName": "Química",
-      "topicName": "Nomenclatura inorgánica",
+      "topicName": "Estequiometría y reacciones químicas",
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcula los volúmenes en litros (L) de aire y dióxido de carbono ($\"CO\"_2$) que se necesita para la combustión completa de 6 litros de acetileno ($\"C\"_2\"H\"_2$).\n\nDato: Aire ($\"O\"_2$: 20%; $\"N\"_2$: 80%) en volumen.",
@@ -230,7 +230,7 @@
     },
     {
       "courseName": "Física",
-      "topicName": "Cinemática",
+      "topicName": "Estática",
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El sistema mostrado se encuentra en reposo; determina la masa del bloque (en kg), sabiendo que el resorte ideal se encuentra estirado 5 cm y la barra homogénea es de 2 kg (g = 10 m/s²)\n\n(Ver la figura adjunta.)",
@@ -266,7 +266,7 @@
     },
     {
       "courseName": "Química",
-      "topicName": "Química del carbono",
+      "topicName": "Unidades químicas de masa",
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En la segunda guerra mundial los alemanes arrojaron 44 kg de gas fosgeno ($\"COCl\"_2$) venenoso.\n\n¿Cuántos átomos de carbono estarán contenidos en dicho gas?\n\nDato: P.A. (C=12; O=16; Cl=35,5)",
@@ -385,7 +385,7 @@
     },
     {
       "courseName": "Aritmética",
-      "topicName": "Operaciones Fundamentales",
+      "topicName": "Estadística Descriptiva",
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Los datos del gráfico representan las estaturas (en centímetros) de un grupo de estudiantes.\n\nDetermina el percentil 60.\n\n(Ver la figura adjunta.)",
