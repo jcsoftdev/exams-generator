@@ -713,6 +713,458 @@
       "correctAnswer": "4",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
       "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 79 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un profesor le plantea a un estudiante tres proposiciones:\n\nI. $frac(4, x)$ es una fracción impropia, $forall x eq.not 0$\n\nII. $frac(x^2 + 1, x)$ es una fracción propia, $forall x eq.not 0$\n\nIII. $frac(5, (x - 1)(x + 1))$ se puede descomponer en fracciones parciales.\n\n¿Cuál es el valor de verdad de cada proposición que debe determinar dicho estudiante?",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "FFV",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la granja de Aldo, el número de gallos está dado por la expresión $(a - b)^2$; y el número de gallinas, por la expresión $(a + b)^2$. ¿Cuál de las expresiones indica la suma del número de gallos con el número de gallinas?",
+      "alternatives": [
+        "$2(a^2 + b^2)$",
+        "$4 a b$",
+        "$4 a b^2$",
+        "$4 a^2 b^2$",
+        "$4 a^2 b$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 8 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $(x - 1)$ es un factor de: $x^2 + c x - 5$ y $(3x - 1)$ es un factor de $d x^2 + 5x - 10$. Determine el valor de $c + d$.",
+      "alternatives": [
+        "79",
+        "78",
+        "76",
+        "77",
+        "80"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea: $A = mat(2, 1; 1, 2)$, determina la traza de B si $A B$ es la matriz identidad.",
+      "alternatives": [
+        "$frac(4, 3)$",
+        "$-frac(4, 3)$",
+        "$-frac(5, 3)$",
+        "$frac(5, 3)$",
+        "$4$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un comerciante de bienes y raíces compra dos terrenos; la forma se indica en el gráfico y sus medidas están dadas en metros. Si el terreno $S_2$ es región paralelográmica, ¿cuánto es el área total (en m²) comprada?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "700",
+        "740",
+        "800",
+        "640",
+        "820"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-10-uncp-2018-ii-figures/geo-lot-10-uncp-2018-ii-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un albañil recomienda a Hélar que, para evitar problemas de agua, instale un tanque cilíndrico de $2 pi$ m³ de volumen en su domicilio. Calcula la altura que debe tener dicho tanque si su radio será de un metro.",
+      "alternatives": [
+        "1,5",
+        "2,0",
+        "0,5",
+        "1,0",
+        "3,0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para un campeonato se pinta cada pelota de dos colores, verde 50% y amarillo 50% de la superficie, respectivamente. Si las pelotas son del mismo tamaño y el radio mide 12 cm, ¿cuántos centímetros cuadrados de color verde estarán pintados entre las 10 pelotas que se necesitarán?",
+      "alternatives": [
+        "$2880 pi$",
+        "$2220 pi$",
+        "$2440 pi$",
+        "$2550 pi$",
+        "$2660 pi$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una persona debe caminar de A hacia B y de B hacia D. En el gráfico AE = DC y EB = BC. Si AB mide 60 m, ¿cuánto es la distancia total (en metros) que caminó desde A hasta D, pasando por B?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "140",
+        "102",
+        "110",
+        "124",
+        "120"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-10-uncp-2018-ii-figures/geo-lot-10-uncp-2018-ii-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una piscina tiene las siguientes dimensiones. Si el área total de dicha piscina es 198 m², calcula el volumen de dicha piscina.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "156 m³",
+        "144 m³",
+        "136 m³",
+        "162 m³",
+        "172 m³"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-10-uncp-2018-ii-figures/geo-lot-10-uncp-2018-ii-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los linderos de un terreno $overline(A B)$ y $overline(B C)$ miden 60 y 80 m, respectivamente. En el gráfico, ¿cuál será el valor de $op(\"sen\") alpha$ que el propietario desea conocer?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2/7",
+        "1/3",
+        "2/5",
+        "1/5",
+        "2/3"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-10-uncp-2018-ii-figures/trig-lot-10-uncp-2018-ii-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resuelva la ecuación trigonométrica:\n\n$frac(op(\"cos\") x, op(\"cos\") 2x thin op(\"sen\") x) = 8 op(\"cos\")^2 x$\n\ne indica el conjunto solución.",
+      "alternatives": [
+        "$frac(k pi, 2) + (-1)^k frac(pi, 2)$",
+        "$frac(k pi, 2) + (-1)^k frac(pi, 6)$",
+        "$frac(k pi, 2) + (-1)^k frac(pi, 4)$",
+        "$n pi + (-1)^k frac(pi, 24)$",
+        "$frac(k pi, 4) + (-1)^k frac(pi, 24)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las rectas:\n\n$L_1: A x + 3y + 1 = 0$\n\n$L_2: 2A x - y + 5 = 0$\n\nDetermine el valor de $A^2$ si $L_1 perp L_2$",
+      "alternatives": [
+        "1/6",
+        "3/2",
+        "2/3",
+        "1/3",
+        "-1/2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica la expresión trigonométrica: $E = frac(op(\"sen\") 2 theta + op(\"cos\") theta, 1 - op(\"cos\") 2 theta + op(\"sen\") theta)$",
+      "alternatives": [
+        "$op(\"cot\") theta$",
+        "$op(\"tan\") theta$",
+        "$op(\"sen\") theta$",
+        "$op(\"cos\") theta$",
+        "$op(\"sec\") theta$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Reconoce la estructura del documento administrativo, membrete, nombre del año, lugar y fecha, código, destinatario, asunto, texto, antefirma, firma, posfirma, con copia y pie de página.",
+      "alternatives": [
+        "Informe",
+        "Oficio",
+        "Solicitud",
+        "Memorando",
+        "Hoja de vida"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 27 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se muestra dos péndulos simples. Determina en qué relación se encuentran los periodos de oscilación $frac(T_A, T_B)$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1/6",
+        "1/3",
+        "1/2",
+        "2/3",
+        "4/9"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-10-uncp-2018-ii-figures/fis-lot-10-uncp-2018-ii-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un tubo en \"U\" se vierten tres líquidos A, B y C, como se ve en la figura. Halla la altura \"h\" sabiendo que: $\"Pe\"_A = 2$ gf/cm³; $\"Pe\"_B = 3$ gf/cm³; $\"Pe\"_C = 4$ gf/cm³\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "5 cm",
+        "6 cm",
+        "4 cm",
+        "2 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-10-uncp-2018-ii-figures/fis-lot-10-uncp-2018-ii-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura representa algunas líneas equipotenciales de un campo electrostático; si se realiza un trabajo de $-4 times 10^(-4)$ J para trasladar una carga de A hacia B, halla el valor de dicha carga (en µC).\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2",
+        "6",
+        "3",
+        "8",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-10-uncp-2018-ii-figures/fis-lot-10-uncp-2018-ii-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la reacción: $\"KClO\"_3 -> 2\"KCl\" + 3\"O\"_2$ (en presencia de calor y $\"MnO\"_2$ como catalizador), ¿qué papel cumple el $\"MnO\"_2$?",
+      "alternatives": [
+        "Reactivo limitante",
+        "Catalizador",
+        "Reactivo",
+        "Precipitado",
+        "Producto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Balancea la ecuación química y halla la suma de los coeficientes de los productos.\n\n$\"As\"_2\"O\"_3 + \"HNO\"_3 + \"H\"_2\"O\" -> \"H\"_3\"AsO\"_4 + \"NO\"_2$",
+      "alternatives": [
+        "2",
+        "8",
+        "4",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un recipiente de 4 L se introduce 4 mol de $\"NO\"_2$ a 250 K. Cuando alcanza el equilibrio la concentración molar del $\"N\"_2\"O\"_4$ es 0,25 mol/L. Calcula el porcentaje (%) de disociación del $\"NO\"_2$ en la reacción.\n\n$\"NO\"_(2(g)) harpoons.rtlb \"N\"_2\"O\"_(4(g))$",
+      "alternatives": [
+        "75",
+        "25",
+        "50",
+        "100",
+        "60"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 40 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Agua y aire",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente esquema, indica qué representan \"X\" e \"Y\", respectivamente.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Oceánicas – Potables",
+        "Potables – Oceánicas",
+        "Oceánicas – Superficiales",
+        "Superficiales – Oceánicas",
+        "Potables – Superficiales"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-10-uncp-2018-ii-figures/eco-lot-10-uncp-2018-ii-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Clarisa realizó la siguiente suma correctamente: $overline(1 a) + overline(2 a) + overline(3 a) = overline(b 9)$\n\n¿Cuál será la suma de a y b?",
+      "alternatives": [
+        "6",
+        "15",
+        "3",
+        "9",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 63 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Edson ha diseñado la siguiente figura y está pintando, como se muestra. ¿Qué fracción representa la región pintada respecto al total en el diseño de Edson?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1/8",
+        "1/2",
+        "1/5",
+        "1/4",
+        "1/3"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-10-uncp-2018-ii-figures/rm-lot-10-uncp-2018-ii-65.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 65 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jorgito observa atentamente la definición de la operación $integral$, donde $integral_a^b = cases(frac(b - a, 2) quad \"si \" b > a, frac(a - b, 2) quad \"si \" a > b)$ y desea calcular el valor de $E = integral_2^4 + integral_5^3$\n\nIdentifica la respuesta correcta de Jorgito.",
+      "alternatives": [
+        "4",
+        "-2",
+        "-1",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 67 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Antonio desea reconstruir la siguiente operación:\n\n$overline(1 a b c) times 2 = overline(d 1 c 4)$\n\nSi realiza la reconstrucción correctamente, halla el valor de \"a + b + c + d\"",
+      "alternatives": [
+        "32",
+        "20",
+        "23",
+        "35",
+        "28"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 73 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un albañil está armando una zapata, como se muestra en la figura. Si existe $overline(a b 0)$ (0 = cero) cuadriláteros en la zapata armada, halla \"a + b\".\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8",
+        "4",
+        "12",
+        "6",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-10-uncp-2018-ii-figures/rm-lot-10-uncp-2018-ii-77.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 77 (clave D)"
     }
   ]
 }

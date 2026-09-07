@@ -1,3 +1,607 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un padre distribuye una determinada cantidad de soles entre sus tres hijos. El primero recibe la mitad de dicha cantidad; el segundo, la tercera parte y el tercero los S/. 2 soles restantes. Determina la cantidad de soles que repartió el padre.",
+      "alternatives": [
+        "18",
+        "6",
+        "15",
+        "12",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Aritmética, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El siguiente cuadro muestra los valores de la distancia y el tiempo que recorre un móvil con velocidad constante. Determina el valor de x/y\n\n#table(\n  columns: 5,\n  align: center + horizon,\n  [*distancia (m)*], [10], [x], [18], [30],\n  [*tiempo (s)*], [5], [6], [y], [15],\n)",
+      "alternatives": [
+        "4/3",
+        "5/3",
+        "3/5",
+        "3/4",
+        "1/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Aritmética, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un padre deja de propina a su hijo la cantidad de $overline(2a)a$ soles. ¿Cuánto de propina recibe el hijo, si se sabe que dicha cantidad es el menor posible y es múltiplo de tres?",
+      "alternatives": [
+        "42",
+        "12",
+        "21",
+        "36",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rubén se propuso ahorrar los 2/5 de su asignación diaria, hasta ayer ahorraba S/. 15; hoy día después que le incrementaron su asignación ahorra S/. 19. Determina en cuánto le aumentaron tal asignación.",
+      "alternatives": [
+        "13",
+        "11",
+        "9",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Aritmética, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan le dice a Roberto: \"Los antecedentes y consecuentes de una proporción aritmética discreta son números naturales, si los valores de los antecedentes son 26 y 16, determina el valor de la diferencia de los consecuentes\". Identifica el valor hallado por Roberto.",
+      "alternatives": [
+        "11",
+        "9",
+        "13",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Aritmética, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Carlos y Enrique son dos obreros cuyas eficiencias en el trabajo son inversamente proporcionales. Si la eficiencia de Carlos disminuye en 2/5, ¿en cuánto aumenta o disminuye la eficiencia de Enrique?",
+      "alternatives": [
+        "Aumenta en 1/2",
+        "Aumenta en 5/3",
+        "Disminuye en 2/3",
+        "Disminuye en 5/3",
+        "Aumenta en 2/3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Aritmética, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un salón de clases, el profesor dicta una ecuación cuadrática en \"x\" a sus estudiantes. Uno de ellos se equivoca en el término independiente y obtiene como raíces: 7 y 3. Otro se equivoca en el coeficiente del término lineal y obtiene como raíces, −8 y −2. ¿Cuál es la ecuación dictada?",
+      "alternatives": [
+        "$x^2+10x+21=0$",
+        "$x^2-10x+16=0$",
+        "$x^2-10x-21=0$",
+        "$x^2+10x-16=0$",
+        "$x^2+10x+8=0$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Álgebra, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un terreno de forma cuadrada, su área está representada por $(4x^6-40x^3+100)$. Expresa algebraicamente su lado.",
+      "alternatives": [
+        "$4x^3-10$",
+        "$3x^3+10$",
+        "$2x^3+10$",
+        "$4x^3+10$",
+        "$2x^3-10$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Fiorella construye unos portarretratos cuadrados, pero para economizar material, reducirá 2 cm a la medida de cada lado del portarretrato original. Si el área disminuirá en 84 cm², ¿cuál es el área del nuevo portarretrato?",
+      "alternatives": [
+        "484 cm²",
+        "464 cm²",
+        "441 cm²",
+        "400 cm²",
+        "529 cm²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Álgebra, pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el conjunto solución al cual pertenece x, de modo que se verifique la inecuación:\n\n$3x - 8 < x + 2 < 4x - 10$",
+      "alternatives": [
+        "$chevron.l 1; 4 chevron.r$",
+        "$chevron.l 2; 5 chevron.r$",
+        "$chevron.l -4; 5 chevron.r$",
+        "$chevron.l 3; 5 chevron.r$",
+        "$chevron.l 4; 5 chevron.r$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Álgebra, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el coeficiente del cuarto término del desarrollo de $(x^2 + y)^n$ que contenga $x^6$.",
+      "alternatives": [
+        "20",
+        "24",
+        "26",
+        "22",
+        "28"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Álgebra, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean las matrices:\n\n$A = mat(2, 3; 4, 5)$; $B = mat(1, -1; -2, -4)$\n\ny el sistema $cases(x + 3y = A, x - y = B)$\n\nDetermina la traza de x",
+      "alternatives": [
+        "$-frac(5, 4)$",
+        "$-frac(1, 2)$",
+        "$-frac(7, 4)$",
+        "$frac(1, 2)$",
+        "$frac(1, 4)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Álgebra, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El herrero Rudecindo tiene en su taller una herramienta, tal como se incida en la figura.\n\nDetermina el valor de verdad de las proposiciones siguientes:\n\nI. $A = 20$\n\nII. $V + C = 22$\n\nIII. Es un poliedro no convexo\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "VFF",
+        "VVV",
+        "VFV",
+        "VVF",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-7-uncp-2019-1-figures/geo-lot-7-uncp-2019-1-geo-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Geometría, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se desea construir una tienda de campaña cuya forma sea de una pirámide cuadrangular regular, la longitud de la altura y la arista básica son iguales, además la apotema mide $sqrt(5)$ metros.\n\n¿Cuántos metros de listones de madera se necesitará para todas las aristas básicas?",
+      "alternatives": [
+        "12",
+        "8",
+        "10",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Geometría, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un manantial debe suministrar agua para llenar un tanque, el cual tiene la forma de un prisma recto de base hexagonal regular; la arista básica y la altura miden 1 y 2 metros, respectivamente.\n\n¿Cuántos metros cúbicos de agua debe suministrar el manantial para llenar totalmente el tanque?",
+      "alternatives": [
+        "$3sqrt(3)$",
+        "$4sqrt(3)$",
+        "$2sqrt(3)$",
+        "$5sqrt(3)$",
+        "$6sqrt(3)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Geometría, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El patio de un centro educativo fue pintado de dos colores, la región S1 y la región S2, en la figura \"r\" toma el valor de 4 metros.\n\n¿Cuál es la razón S1/S2?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1/3",
+        "2/5",
+        "2/3",
+        "3/8",
+        "3/5"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-7-uncp-2019-1-figures/geo-lot-7-uncp-2019-1-geo-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Geometría, pregunta 16 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan tiene un terreno como se muestra.\n\nPara que realice una partición a sus hijos, debe calcular $tan(2 theta)$. ¿Cuál es el valor encontrado por él?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "10/3",
+        "13/5",
+        "12/7",
+        "5/12",
+        "12/5"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/trig-lot-7-uncp-2019-1-tri-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Trigonometría, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos escaleras AC y AD se apoyan sobre la pared de una casa formando los ángulos que se observan. El dueño desea calcular $tan(2 theta)$.\n\nIdentifica el valor hallado por él.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1/4",
+        "1/3",
+        "1/5",
+        "1/2",
+        "1/6"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-7-uncp-2019-1-figures/trig-lot-7-uncp-2019-1-tri-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Trigonometría, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos estudiantes de Ingeniería Civil discuten sobre la solución principal de la ecuación trigonométrica: $op(\"sen\")(2x) = 2cos^2 x$, que representa el ángulo en un fenómeno de movimiento estructural. La solución correcta hallada por ellos es:",
+      "alternatives": [
+        "$pi/4$",
+        "$3pi/4$",
+        "$pi$",
+        "$pi/6$",
+        "$-pi/4$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Trigonometría, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea la función $y = frac(op(\"sen\") x, 1 - cos x)$, determina los puntos de discontinuidad en forma genérica (considera que $k in ZZ$).",
+      "alternatives": [
+        "$(4k-1)pi$",
+        "$frac(k pi, 4)$",
+        "$k pi$",
+        "$2 k pi$",
+        "$frac(3 k pi, 4)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Trigonometría, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala verdadero (V) o falso (F) en las siguientes proposiciones:\n\nI. El periodo de $y = 3 op(\"sen\")(2x - pi/4)$, es $pi$.\n\nII. El rango de $y = 2 op(\"sen\")(2x) + 1$, es $[-1,3]$.\n\nIII. Un intervalo de crecimiento para $y = abs(cos x)$, es: $pi/2 < x < pi$",
+      "alternatives": [
+        "FFF",
+        "FVV",
+        "VVV",
+        "VFF",
+        "VVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Trigonometría, pregunta 22 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las siguientes afirmaciones:\n\nI. El coeficiente de variación es igual a la desviación media.\n\nII. El coeficiente de variación es el cociente de la desviación estándar con la media, multiplicado por 100%.\n\nIII. El coeficiente de variación es el promedio de desviaciones respecto a la media.",
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "FVF",
+        "FFF",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Estadística y Probabilidades, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El profesor de la asignatura de Matemática le dió a Carlos la siguiente tabla de frecuencias:\n\n#table(\n  columns: 3,\n  align: center + horizon,\n  [*Edad (años)*], [$f_i$], [$F_i$],\n  [11], [3], [],\n  [12], [], [18],\n  [13], [], [27],\n  [14], [], [],\n  [*Total*], [], [],\n)\n\nSabiendo que n = 30, ¿Cuántos alumnos tienen entre 11 y 14 años?",
+      "alternatives": [
+        "22",
+        "24",
+        "20",
+        "21",
+        "27"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Estadística y Probabilidades, pregunta 24 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El siguiente gráfico representa los datos estadísticos de 50 personas acerca del número de mascotas que tiene en la casa.\n\nHalla el porcentaje de personas que tienen 3 mascotas.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "10",
+        "15",
+        "5",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-7-uncp-2019-1-figures/est-lot-7-uncp-2019-1-est-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Estadística y Probabilidades, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jorge dispone de un grupo conformado por 6 elementos, se quiere trabajar con muestras de tres elementos.\n\n¿Con cuántas muestras de tres elementos trabajará Jorge?",
+      "alternatives": [
+        "30",
+        "10",
+        "25",
+        "15",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Estadística y Probabilidades, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los ejemplos con la respectiva función del lenguaje.\n\nI. La Luna es satélite de la Tierra\n\nII. ¿Qué significa abominable?\n\nIII. ¡Cuánto te extraño!\n\nIV. Atención... ¿Me oyen?\n\nV. Prohibida la venta de licor a menores de edad.\n\n( ) Fática\n\n( ) Referencial\n\n( ) Metalingüística\n\n( ) Apelativa\n\n( ) Expresiva",
+      "alternatives": [
+        "IV-I-II-V-III",
+        "II-I-IV-V-III",
+        "V-IV-II-III-I",
+        "III-IV-II-V-I",
+        "IV-V-I-II-III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Comunicación, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el lexema de las palabras: casa, casita, casona, caserío, casucha.\n\nI. Ca\n\nII. Cas\n\nIII. Casi\n\nIV. Casit\n\nV. Caso",
+      "alternatives": [
+        "IV",
+        "III",
+        "I",
+        "II",
+        "V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Lenguaje, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la raíz de la palabra: COMUNICADOR.",
+      "alternatives": [
+        "COM",
+        "COMUNI",
+        "COMUNIC",
+        "COMU",
+        "ICADOR"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Lenguaje, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las ideas centrales de \"La metamorfosis\" de Kafka con sus explicaciones respectivas:\n\nI. La perdida de la personalidad individual\n\nII. La angustia del ser humano\n\nA. La violencia entre el ser humano y la naturaleza impredecible.\n\nB. Absorción del mecanismo social que se convierte en una forma de dominación.\n\nC. Someterse a una vida sin sentido que no comprende la esencia de vivir.",
+      "alternatives": [
+        "IA – IIC",
+        "IB – IIA",
+        "IC – IIB",
+        "IB – IIC",
+        "IIB – IA"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Literatura, pregunta 30 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de los enunciados en torno a La Divina Comedia de Dante Alighieri.\n\nI. La estructura de La Divina Comedia presenta tres cántigas: infierno, purgatorio, paraíso.\n\nII. Virgilio acompaña a Dante por el infierno y el purgatorio.\n\nIII. En el infierno, en lo que corresponde al segundo círculo, la lujuria, está Cleopatra y Helena.\n\nIV. Beatríz deja de conducirlo por el paraíso, por eso Dante va solo al encuentro celestial.\n\nV. En el paraíso, en el cuarto circulo, el sol, están Alberto Magno, Salomón.",
+      "alternatives": [
+        "FFVFV",
+        "VVVFF",
+        "VVVFV",
+        "FFVFF",
+        "VFVFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Literatura, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación dimensional, determina el símbolo de la unidad correspondiente en el Sistema Internacional.\n\n$L M T^(-2)$",
+      "alternatives": [
+        "W",
+        "C",
+        "J",
+        "Pa",
+        "N"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Física, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de la fuerza \"F\" (en N) en el sistema mostrado; si la tensión de la cuerda que los une es igual a 4 N.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8",
+        "4",
+        "12",
+        "6",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-7-uncp-2019-1-figures/fis-lot-7-uncp-2019-1-fis-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Física, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el periodo natural de oscilación del sistema que se muestra en la figura.\n\nM = 12,5 kg; K₁ = 25 = K₂ (no hay rozamiento)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$2pi$ S",
+        "$pi$ S",
+        "$sqrt(2)pi$ S",
+        "$pi/2$ S",
+        "$pi/sqrt(2)$ S"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-7-uncp-2019-1-figures/fis-lot-7-uncp-2019-1-fis-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Física, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para el sistema termodinámico de la figura se da las siguientes proposiciones; señale su verdad (V) o falsedad (F).\n\nI. Dos muestras diferentes de un mismo material tiene la misma capacidad calorífica.\n\nII. En el diagrama se tiene un gas ideal, la energía interna en \"1\" es mayor que en \"2\".\n\nIII. En el diagrama, el trabajo total en el ciclo es positivo.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "FFF",
+        "VFV",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/fis-lot-7-uncp-2019-1-fis-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Física, pregunta 35 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las siguientes proposiciones respecto a la termodinámica; determina la afirmación falsa.",
+      "alternatives": [
+        "Si el calor absorbido por un gas fuera igual al trabajo realizado por él, su energía interna no varía.",
+        "Dos cuerpos de materiales diferentes, pueden tener la misma capacidad térmica.",
+        "En una expansión adiabática la temperatura de un gas disminuye en virtud del calor que el libera para su vecindad.",
+        "Cuando mayor sea la capacidad térmica de un cuerpo, mayor será la cantidad de calor para elevar 1°C la temperatura de este cuerpo.",
+        "Si un cuerpo absorbe 100 J de calor y realiza un trabajo de 50 J; su energía interna varía 50 J."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Física, pregunta 36 (clave C)"
+    }
+  ]
 }

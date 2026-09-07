@@ -305,6 +305,610 @@
       "correctAnswer": "1",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
       "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 62 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos números de 3 cifras son múltiplos de 17?",
+      "alternatives": [
+        "59",
+        "58",
+        "52",
+        "53",
+        "56"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una mezcla de 12 L de alcohol puro y 3 L de agua. Determina el porcentaje de alcohol en la mezcla.",
+      "alternatives": [
+        "40%",
+        "30%",
+        "75%",
+        "60%",
+        "80%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un capital inicial impuesto durante 2 años produce un interés de 8% de S/. 1 000. ¿Cuál es el interés generado en 5 años?",
+      "alternatives": [
+        "S/. 200",
+        "S/. 150",
+        "S/. 250",
+        "S/. 300",
+        "S/. 175"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $overline(a b c d)$ es un número cuadrado perfecto y $overline(a b) = overline(c d) + 1$.\n\nDetermina el producto de las cifras a, b, c y d",
+      "alternatives": [
+        "112",
+        "128",
+        "81",
+        "118",
+        "139"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla cuántos de los siguientes números son primos absolutos en base 7.\n\n$13_7$; $23_7$; $25_7$; $31_7$; $41_7$;",
+      "alternatives": [
+        "1",
+        "4",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 5 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El mes que nació Pancho Fierro está determinado por la fórmula, \"a + b\" a partir de $overline(1 0 a b)_6 = overline(a b 7)_8$\n\nIdentifica el mes que nació Pancho Fierro.",
+      "alternatives": [
+        "Junio",
+        "Setiembre",
+        "Julio",
+        "Octubre",
+        "Agosto"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el producto de dos polinomios es: $(x^6 + 1)^2 - 4x^6$ y el cociente del MCD entre el MCM de ambos es $(x^2 + 1)^2 - 4x^2$.\n\nDetermine el MCM",
+      "alternatives": [
+        "$(x^2 + 3x + 1)(x^2 + 1)$",
+        "$x^4 - x^2 + 1$",
+        "$x^4 + 4x^2 + 1$",
+        "$(x^2 + x + 1)(x^2 - x + 1)$",
+        "$x^4 - 4x^2 + 1$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la función lineal que pasa por los puntos $(-1; -3)$ y $(3; 5)$",
+      "alternatives": [
+        "$f(x) = 2x + 1$",
+        "$f(x) = 2x - 1$",
+        "$f(x) = -2x + 1$",
+        "$f(x) = 2x + 3$",
+        "$f(x) = 2x - 3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $log_5 4 = a$ y $log_6 4 = b$\n\nHalla el valor de $M = log_(30) 16$",
+      "alternatives": [
+        "$frac(2a b, a - b)$",
+        "$frac(a b, (a - b))$",
+        "$frac(2a + b, a - b)$",
+        "$frac(4a b, a + b)$",
+        "$frac(2a b, a + b)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la siguiente desigualdad: $x/(x+1) < 9/13 < (x+1)/(x+2)$\n\ntiene como conjunto solución $chevron.l a; b chevron.r$, determine el valor de \"b − a\"",
+      "alternatives": [
+        "$1/2$",
+        "$1$",
+        "$2$",
+        "$3/5$",
+        "$2/3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que: $a = (2 + sqrt(3))^(-1)$ y $b = (2 - sqrt(3))^(-1)$\n\nCalcula el valor de: $M = (a + 3)^(-1) + (b + 3)^(-1)$",
+      "alternatives": [
+        "$10/21$",
+        "$10/23$",
+        "$6/23$",
+        "$5/11$",
+        "$5/12$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $x^3 + y^3 = 17$; $x y = 3$, determina el valor de\n\n$M = (x + y)^3 - 9(x + y) - 4$",
+      "alternatives": [
+        "13",
+        "10",
+        "15",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un terreno de forma rectangular tienen como medida del lado menor 20 m y un área de 800 $m^2$. Al lado contiguo existe otro terreno de forma cuadrada, donde $S_1 = 2(S_2)$\n\n¿Cuánto mide el lado mayor de $S_1$ y el perímetro de $S_2$ en m?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "40; 80",
+        "50; 90",
+        "40; 60",
+        "45; 85",
+        "30; 60"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-9-uncp-2018-1-figures/geo-lot-9-uncp-2018-1-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un campamento de refugio tiene la forma de una pirámide cuadrangular regular, cuyo apotema y arista básica miden 4 y 6 m, respectivamente.\n\nDetermina el valor de verdad de las siguientes proposiciones:\n\nI. Longitud de todas las aristas básicas = 24 m\n\nII. Longitud de todas las aristas laterales = 30 m\n\nIII. Altura de la pirámide = $sqrt(7)$ m",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "VVV",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el observatorio de Huayao, se observa al planeta Venus y a la Luna en la posición indicada (T es punto de tangencia); el cual se imprime en un papel.\n\nDetermina el valor de verdad de las siguientes proposiciones:\n\nI. Los contornos señalan que son circunferencias interiores.\n\nII. Los contornos señalan que son circunferencias tangentes interiores.\n\nIII. La distancia (d) entre sus centros de las dos circunferencias es igual a la suma de los radios.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "FFF",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-9-uncp-2018-1-figures/geo-lot-9-uncp-2018-1-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un plano, un arquitecto realiza varios trazos para determinar el ancho de la calle; tal es así, que $overline(E A)$, $overline(A C)$ y $overline(C E)$ miden 2; 3 y 4 m, respectivamente.\n\n¿Cuánto mide el ancho de la calle en m?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$31/8$",
+        "$22/5$",
+        "$21/8$",
+        "$41/8$",
+        "$21/5$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-9-uncp-2018-1-figures/geo-lot-9-uncp-2018-1-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 16 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las calles del 1 al 3 son paralelas y son perpendiculares a la avenida 2. Un turista pide informe sobre la distancia de la calle 1 al 3, siguiendo la ruta de la avenida 1.\n\n¿Cuánto es la longitud en m?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "360",
+        "300",
+        "320",
+        "280",
+        "270"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-9-uncp-2018-1-figures/geo-lot-9-uncp-2018-1-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica la siguiente igualdad trigonométrica:\n\n$E = sqrt(2) \"Cos\"(45 degree + x) - \"Cos\" x$",
+      "alternatives": [
+        "$\"Sen\" x$",
+        "$\"Cos\" x$",
+        "$-\"Cos\" x$",
+        "$-\"Sen\" x$",
+        "$\"Sen\" x \"Cos\" x$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 18 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente identidad trigonométrica:\n\n$\"Cos\" 5x . \"Cos\" 3x = 1/7 + 1/2 \"Cos\" 8x$\n\nDetermina el valor de $\"Tan\"^2 x$.",
+      "alternatives": [
+        "7/9",
+        "5/9",
+        "1/9",
+        "11/9",
+        "13/9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura:\n\nDetermina la expresión: $E = frac(1 - \"Sen\"^2 (alpha + beta), \"Sen\"^2 alpha thin \"Sen\"^2 beta)$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "25",
+        "24",
+        "22",
+        "23",
+        "26"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-9-uncp-2018-1-figures/trig-lot-9-uncp-2018-1-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 21 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura mostrada, determina el área de la región triangular.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$\"Cos\"^2 theta$",
+        "$\"Sen\"^2 theta$",
+        "$1/2 \"Cos\"^2 theta$",
+        "$1/2 \"Sen\"^2 theta$",
+        "$\"Sen\" theta thin \"Cos\" theta$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-9-uncp-2018-1-figures/trig-lot-9-uncp-2018-1-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Teobaldo, Alberto y Braulio ingresan a una cabina de internet y encuentran 10 computadoras disponibles de las 16 que hay. ¿De cuántas formas diferentes podrán ubicarse en una computadora disponible cada uno de ellos?",
+      "alternatives": [
+        "720",
+        "360",
+        "1440",
+        "3360",
+        "504"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Estadística y Probabilidades, pregunta 23 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Carlos y Pedro se ponen a jugar lanzando una moneda y un dado simultáneamente, anotando los resultados obtenidos. Calcula la probabilidad de que en un lanzamiento salga cara y un número par.",
+      "alternatives": [
+        "2/3",
+        "1/3",
+        "1/2",
+        "3/4",
+        "1/4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Estadística y Probabilidades, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un colegio hay 30 docentes de letras y 50 docentes de ciencias. Además se sabe que 50 docentes recibieron una laptop para sus clases, de los cuales 10 son docentes de letras.\n\nSe elige un docente al azar. Si se sabe que no recibió una laptop, ¿cuál es la probabilidad que sea de ciencias?",
+      "alternatives": [
+        "1/2",
+        "2/3",
+        "1/3",
+        "1/4",
+        "3/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 25 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La edad de una cierta cantidad de estudiantes que asistieron a una reunión se presenta en el siguiente histograma:\n\nHalla el promedio de edad de los estudiantes asistentes a la reunión.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-9-uncp-2018-1-figures/estad-lot-9-uncp-2018-1-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Estadística y Probabilidades, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "[...] ¡Zumbayllu! En el mes de mayo trajo Ántero el primer zumbayllu al Colegio. Los alumnos pequeños lo rodearon.\n\n— ¡Vamos al patio, Ántero!\n\n— ¡Al patio, hermanos! ¡Hermanitos!\n\nPalacios corrió entre los primeros. Saltaron el terraplén y subieron al campo de polvo. Iban gritando:\n\n— ¡Zumbayllu, zumbayllu!\n\nYo los seguí ansiosamente. [...]\n\nCompleta el texto:\n\nEn el mencionado fragmento de Arguedas, se percibe pasajes de la realidad ... del Perú.",
+      "alternatives": [
+        "pedagógica",
+        "comunitaria",
+        "infantil",
+        "educativa",
+        "campesina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Literatura, pregunta 30 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La unidad \"Weber\" (Wb) sirve para representar a la siguiente magnitud.",
+      "alternatives": [
+        "Flujo magnético",
+        "Fuerza magnética",
+        "Campo magnético",
+        "Fuerza electromotriz inducida",
+        "Inducción magnética"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones respecto al trabajo y calor:\n\nI. $W = Q + U/2$; primera ley de la termodinámica.\n\nII. Si $C_p / C_v = gamma$ $=>$ $gamma = 5/3$; corresponde para los gases poliatómicos.\n\nIII. El trabajo es nulo (W = 0) cuando el volumen disminuye.",
+      "alternatives": [
+        "FVV",
+        "VVV",
+        "VVF",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Referente a la luz, indica la veracidad (V) o falsedad (F) de las siguientes proposiciones:\n\nI. La luz se propaga de manera similar a las ondas electromagnéticas.\n\nII. La interferencia se produce usando luz monocromática.\n\nIII. Si la luz no tuviera un carácter ondulatorio, sería imposible mostrar un patrón de interferencia.",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "FFV",
+        "VFV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se tiene un calentador eléctrico. Determina el tiempo que tarda en hacer hervir medio litro de agua de $4 degree$C hasta $100 degree$C; sabiendo que el amperímetro da una lectura de 2A.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "700 s",
+        "500 s",
+        "400 s",
+        "600 s",
+        "300 s"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-9-uncp-2018-1-figures/fis-lot-9-uncp-2018-1-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 35 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se muestra en la figura la trayectoria de un rayo de luz al pasar del medio \"1\" al medio \"2\", indica la verdad (V) o falsedad (F) de las siguientes proposiciones. $(angle beta > angle alpha)$\n\nI. $n_1 < n_2$\n\nII. $n_1 = n_2$\n\nIII. $n_1 \"Cos\" alpha = n_2 \"Cos\" beta$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "VFV",
+        "FFF",
+        "VFF",
+        "VVV",
+        "FVF"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-9-uncp-2018-1-figures/fis-lot-9-uncp-2018-1-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un tipo de óxido de nitrógeno se produce durante las tormentas eléctricas. ¿Cuántas moles de nitrógeno se necesita para obtener 18 moles de $\"NO\"_2$?\n\n$\"N\"_2 + \"O\"_2 arrow.r \"NO\"_2$",
+      "alternatives": [
+        "9",
+        "5",
+        "24",
+        "36",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El alcohol etílico ($\"C\"_2\"H\"_5\"OH\"$) es un componente de las bebidas alcohólicas, luego de balancear la siguiente reacción de combustión completa:\n\n$\"C\"_2\"H\"_5\"OH\" + \"O\"_2 arrow.r \"CO\"_2 + \"H\"_2\"O\"$\n\nDetermina la suma de coeficientes.",
+      "alternatives": [
+        "8",
+        "7",
+        "10",
+        "11",
+        "9"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a las soluciones, indica verdadero (V) o falso (F) según corresponda:\n\nI. Son insolubles en agua los compuestos iónicos y los covalentes polares.\n\nII. La molaridad es unidad física de concentración.\n\nIII. El agua es conocida como el disolvente universal.",
+      "alternatives": [
+        "FFV",
+        "VVF",
+        "FFF",
+        "FVF",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los alcanos a escala industrial se obtienen por destilación fraccionada del petróleo. Indica el número de carbonos primarios y secundarios en: 4,6 – dietil – 2,4,9 – trimetildecano.",
+      "alternatives": [
+        "6 – 5",
+        "5 – 4",
+        "7 – 5",
+        "6 – 4",
+        "7 – 6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 40 (clave E)"
     }
   ]
 }

@@ -301,3 +301,50 @@ DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/registe
 6. Escribir JSON + PNGs en `apps/api/src/db/data/`.
 7. Correr el script de seed correspondiente; iterar sobre los `FAIL`.
 8. Commit con `feat(api): seed ...` describiendo lote y fuentes.
+
+## Receta de restructuración de un lote-imagen
+
+Cómo se transcribe un lote entero de `<lote>-image.json` a texto. El agente que
+lee los PNG es la sesión de este repositorio: puede abrir la imagen, así que
+pagarle a un endpoint de visión sería gastar en una capacidad que ya está aquí.
+
+1. `restructure-image-lot --lot <slug> --export --out <archivo>` lista lo pendiente.
+2. Abrir CADA PNG con `Read`. Nada de deducir un enunciado por su nombre de archivo.
+3. Escribir un script de Python que arme `{ "transcriptions": [...] }`. Genera el
+   JSON con `json.dump`, nunca a mano: el escapado de `\n` y de las comillas
+   dentro de `$...$` es donde se rompe todo.
+4. `restructure-image-lot --verify <archivo>` compila las 21/25/70 con el binario
+   Typst pineado. `--apply` se niega a aplicar un lote que no compile.
+5. **Revisar los recortes ANTES de aplicar.** Armar una hoja de contactos con PIL
+   (una miniatura por caja, en una sola imagen) y abrirla con `Read`. Una caja un
+   pelo angosta amputa un rótulo; una un pelo ancha se traga la letra `c)` del
+   vecino. Las dos compilan y solo salen en el examen impreso.
+6. `restructure-image-lot --lot <slug> --apply <archivo>`, luego `validate_lots.py`.
+
+### Lo que muerde
+
+- **El recorte del vecino.** Varias capturas traen la cola de la pregunta
+  siguiente. En `uni-2019-2`, el recorte de Física 8 contiene la constante y las
+  cinco alternativas de Física 13, cuyo propio recorte no trae ninguna. Antes de
+  marcar una pregunta como incompleta, mirar el recorte de al lado.
+- **Alternativas que son dibujos.** Van en `alternativeCrops` (una caja por ranura,
+  `null` donde la opción es texto) y el texto de esas ranuras queda en `""`.
+  `validateStructuredContent` lo acepta gracias a `alternativeHasImage`.
+- **Nombres de símbolo en Typst 0.15.1.** La intersección es `inter`, NO `sect`.
+  Los corchetes angulares son `chevron.l` / `chevron.r`, NO `angle.l`. No existe
+  el ⊙ punteado; para notación de operador inventado, recortar la figura.
+- **Química.** La convención real del repo es texto vertical entrecomillado dentro
+  de matemática: `$"Ca"_3("PO"_4)_2$`. Pegar los tramos (`"CH"_3"COOH"`) o la
+  fórmula imprime con un hueco. Vale aunque `TYPST_MATH_RULES` se lo prohíba al
+  modelo: esa regla existe por el escapado del JSON, no porque a Typst le moleste.
+- **Comas decimales dentro de matemática.** `$0","81$`, si no Typst las espacia
+  como separador.
+- **Una barra literal** es `slash` o `\/`; `/` a secas arma una fracción.
+
+### Llegar a producción
+
+No hay paso manual. `seed()` corre `seedLotQuestions` y enseguida
+`retireSupersededImageQuestions`, que borra la fila-imagen que el texto reemplazó
+y le pasa sus referencias de examen a la fila de texto. Es idempotente, así que
+en régimen son dos selects y ninguna escritura. Un lote restructurado llega a
+producción con un deploy común.

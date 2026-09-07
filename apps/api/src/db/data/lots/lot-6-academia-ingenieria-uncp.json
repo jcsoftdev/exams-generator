@@ -1,3 +1,597 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la suma de cifras de $overline(f o r d)$ si es mínimo, sabiendo que:\n\n$overline(f o r d) + 2(overline(f o r d)) + 3(overline(f o r d)) + ... + 20(overline(f o r d)) = accent(119, circle)$",
+      "alternatives": [
+        "4",
+        "14",
+        "6",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Aritmética, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico representa las preferencias de 200 personas con respecto a cuatro productos \"A\", \"B\", \"C\", y \"D\".\n\nDetermina la diferencia entre el número de personas que prefieren los productos \"B\" y \"D\"\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "65",
+        "40",
+        "30",
+        "50",
+        "60"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2023-2-a1-ari-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Aritmética, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un bloque pende de una polea de 30 N de peso y sin fricción, encontrándose en equilibrio gracias a la interacción entre las cargas 1 y 2. Si $q_1 = -30 mu C$ y $q_2 = +20 mu C$, determina el valor del peso del bloque P (en N)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "160",
+        "180",
+        "150",
+        "140",
+        "170"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2023-2-a1-fis-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Física, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene \"3m\" gramos de hielo a -20°C, y se mezcla con \"m\" gramos de vapor de agua a 150°C en un recipiente de capacidad calorífica despreciable.\n\nDetermina la temperatura final del sistema (en °C)",
+      "alternatives": [
+        "67,85",
+        "75,57",
+        "98,75",
+        "89,75",
+        "58,75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Física, pregunta 25 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para el sistema de vectores mostrado, determina el vector $arrow(x)$ en función de $arrow(a)$ y $arrow(b)$, sabiendo que:\n\nG: Baricentro del triángulo PQR y RN = 4NQ\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(1,5)(6 arrow(a) - arrow(b))$",
+        "$frac(1,7)(4 arrow(a) - arrow(b))$",
+        "$frac(1,10)(6 arrow(a) - arrow(b))$",
+        "$frac(1,8)(5 arrow(a) - 2 arrow(b))$",
+        "$frac(1,15)(7 arrow(a) - 2 arrow(b))$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2023-2-a1-fis-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Física, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula los volúmenes en litros (L) de aire y dióxido de carbono ($\"CO\"_2$) que se necesita para la combustión completa de 6 litros de acetileno ($\"C\"_2\"H\"_2$).\n\nDato: Aire ($\"O\"_2$: 20%; $\"N\"_2$: 80%) en volumen.",
+      "alternatives": [
+        "55 ; 12",
+        "75 ; 37,5",
+        "75 ; 12",
+        "30 ; 15",
+        "45 ; 37"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Química, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La relación entre las masas de dos isótopos es $frac(14,10)$ y la diferencia de sus neutrones es 8. Determina la suma de sus masas.",
+      "alternatives": [
+        "28",
+        "42",
+        "24",
+        "48",
+        "46"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Química, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea la función: $f(x) = -x^2 - 5x - frac(1,4)$, cuya gráfica es:\n\nDeterminar: a + b\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(5,4)$",
+        "$frac(7,3)$",
+        "$frac(4,3)$",
+        "$frac(7,2)$",
+        "$frac(9,2)$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/alg-2023-2-a1-alg-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=45:admisión-uncp-2023-ii-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área I, Álgebra, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea la serie de razones geométricas equivalentes:\n\n$frac(sqrt(a^2-27),3) = frac(sqrt(b^2-48),4) = frac(sqrt(c^2-75),5)$\n\nHalla el valor de \"c\"; si a + b = 70",
+      "alternatives": [
+        "55",
+        "60",
+        "70",
+        "75",
+        "50"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los cardinales de los conjuntos A, B y C son números enteros consecutivos y, además:\n\n$n[P(A)] + n[P(B)] + n[P(C)] = 448$\n\nDetermina el valor de $E = n(A) + n(B) - n(C)$",
+      "alternatives": [
+        "9",
+        "15",
+        "7",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Aritmética, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La tabla presenta los datos del consumo de pescado en la ciudad de Huancayo.\n\nDetermina la menor cantidad de consumo (en kilogramos) del 40 % de la población con mayor consumo.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3,80",
+        "3,01",
+        "3,52",
+        "4,50",
+        "4,10"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2023-2-a2-ari-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Aritmética, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, ¿qué porcentaje del área total representa el área sombreada?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "15,0 %",
+        "25,0 %",
+        "18,5 %",
+        "12,5 %",
+        "30,0 %"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2023-2-a2-ari-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Aritmética, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un demarcador de fronteras debe colocar hitos en línea recta cada cierta distancia; cada hito tiene una cantidad de piedras mayor en uno al hito anterior. Se sabe que posee 820 piedras y que los hitos están ubicados de acuerdo al gráfico; además, el primer hito tiene una piedra. Determina cuántos metros recorrerá en total hasta terminar con el último hito, si el demarcador carga una sola piedra a la vez, de como respuesta las tres últimas cifras.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8",
+        "6",
+        "9",
+        "5",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2023-2-a2-ari-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Aritmética, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El sistema mostrado se encuentra en reposo; determina la masa del bloque (en kg), sabiendo que el resorte ideal se encuentra estirado 5 cm y la barra homogénea es de 2 kg (g = 10 m/s²)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1,5",
+        "2,0",
+        "0,5",
+        "2,5",
+        "1,0"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2023-2-a2-fis-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Física, pregunta 29 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, calcula el área de la región sombreada, si AO=$5 sqrt(10)$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "60",
+        "50",
+        "40",
+        "45",
+        "30"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/geo-2023-2-a2-geo-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Geometría, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la segunda guerra mundial los alemanes arrojaron 44 kg de gas fosgeno ($\"COCl\"_2$) venenoso.\n\n¿Cuántos átomos de carbono estarán contenidos en dicho gas?\n\nDato: P.A. (C=12; O=16; Cl=35,5)",
+      "alternatives": [
+        "$3\",\"99 times 10^(25)$",
+        "$5\",\"88 times 10^(23)$",
+        "$2\",\"66 times 10^(26)$",
+        "$4\",\"56 times 10^(24)$",
+        "$1\",\"33 times 10^(23)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Química, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Realiza el balance de la reacción química y determina la suma de los coeficientes.\n\n$\"Cu\" + \"HNO\"_3 -> \"Cu\"(\"NO\"_3)_2 + \"NO\" + \"H\"_2\"O\"$",
+      "alternatives": [
+        "23",
+        "21",
+        "19",
+        "22",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Química, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que: $frac(\"sen\" 3x + \"sen\" x, cos 3x + cos x) = n$,\n\ndetermina el valor de: $E = frac(1 - cos 4x, 1 + cos 4x)$",
+      "alternatives": [
+        "1",
+        "n",
+        "$n^2$",
+        "2n",
+        "$n^2 \\/ 2$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Trigonometría, pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la ecuación: $x^2 - 2(m-2)x + 4m - 11 = 0$ tiene raíces reales, cuyo conjunto solución es de la forma $chevron.l -infinity; a] union [b; +infinity chevron.r$, determina el valor de \"a + b\".",
+      "alternatives": [
+        "12",
+        "10",
+        "8",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Álgebra, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el valor máximo de la función objetivo $z = 3x + 2y$, dada las restricciones:\n\n$x >= 0; y >= 0; x + y >= 7; x + 2y >= 11; x + 4y >= 15$",
+      "alternatives": [
+        "21",
+        "19",
+        "17",
+        "23",
+        "25"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el valor de la determinante de la siguiente matriz:\n\n$M = mat(a+1, 3a, b+2a, b+1; 2b, b+1, 2-b, 1; a+2, 0, 1, a+3; b-1, 1, a+2, a+b)$",
+      "alternatives": [
+        "b",
+        "a",
+        "0",
+        "1",
+        "a+b"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Álgebra, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el numeral $overline(a b)$, se sabe que:\n\n$overline(a b) = accent(12, circle) + 5$\n\n$overline(a b) = accent(12, circle) - 7$\n\nDetermina la suma de cifras de dicho numeral máximo.",
+      "alternatives": [
+        "16",
+        "14",
+        "17",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los datos del gráfico representan las estaturas (en centímetros) de un grupo de estudiantes.\n\nDetermina el percentil 60.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "160",
+        "162",
+        "161",
+        "159",
+        "158"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2024-ps-a1-ari-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Aritmética, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la fracción que representa la región sombreada del rectángulo ABCD\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(1,12)$",
+        "$frac(1,32)$",
+        "$frac(1,16)$",
+        "$frac(1,4)$",
+        "$frac(1,8)$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2024-ps-a1-ari-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Aritmética, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra tres espejos (1), (2), (3). En el punto P hay un puntero láser que envía un haz al espejo (1) reflejándose luego en (2) y (3). Determina el ángulo entre el haz incidente inicial y el haz reflejado en el espejo (3)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "20°",
+        "80°",
+        "60°",
+        "40°",
+        "10°"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-ps-a1-fis-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Física, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para el movimiento semiparabólico mostrado, determina \"$V_x$\" (en m/s)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "14",
+        "22",
+        "18",
+        "16",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-ps-a1-fis-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Física, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina mediante la Estructura de Lewis los enlaces $sigma$ y $pi$ respectivamente de las especies:\n\n($\"CO\"_2$; $\"HClO\"_4$; $\"N\"_2$)",
+      "alternatives": [
+        "1-2;2-2;3-2",
+        "4-1;2-1;1-2",
+        "1-1;2-1;0-5",
+        "2-3;1-1;0-5",
+        "2-2;5-0;1-2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Química, pregunta 21 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de los cuadrados de las soluciones de la ecuación logarítmica:\n\n$log_2 (x^2+x-2) = 2 log_2 2$",
+      "alternatives": [
+        "15",
+        "14",
+        "12",
+        "11",
+        "13"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=47:admisión-primera-seleccion-uncp-2024-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área I, Álgebra, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A una fiesta asisten 180 personas entre varones y mujeres. Por cada 5 mujeres hay 4 varones. Si se retiran 40 parejas. ¿Cuál es la razón entre el número de mujeres y el número de varones que se quedan en la fiesta?",
+      "alternatives": [
+        "$frac(5,2)$",
+        "$frac(2,5)$",
+        "$frac(7,2)$",
+        "$frac(1,2)$",
+        "$frac(3,2)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Aritmética, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un gas ideal monoatómico experimenta una expansión isobárica desde el estado 1 hasta el estado 2. Determina la cantidad de calor en (kJ) que se requiere proporcionar al gas durante dicho proceso.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6",
+        "12",
+        "4",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-ps-a2-fis-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Física, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si por cada resistencia de 2Ω mostrados en la figura, circula una intensidad de corriente de 4A, determina el valor de la fuerza electromotriz (en V) de la fuente ideal.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "34",
+        "36",
+        "38",
+        "32",
+        "40"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-ps-a2-fis-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Física, pregunta 28 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula oscila armónicamente con una amplitud A = 30 cm, de modo que inicia su movimiento en un extremo. Cuando ella se encuentra a 18 cm de la posición de equilibrio su rapidez es v = 72 cm/s. Determina la frecuencia angular (en rad/s).",
+      "alternatives": [
+        "6",
+        "1",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Física, pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un trozo de hielo de 30g de masa a -20°C, se encuentra dentro de un calorímetro de capacidad calorífica despreciable. Determina la cantidad de agua a 60°C que se requiere introducir en el sistema para lograr fundir exactamente todo el hielo.",
+      "alternatives": [
+        "15 g",
+        "30 g",
+        "45 g",
+        "50 g",
+        "60 g"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Física, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la base de un triángulo aumenta en un 30% y la altura relativa a dicha base disminuye en un 60% ¿En qué tanto por ciento varía su área?",
+      "alternatives": [
+        "Disminuye en 30%",
+        "Aumenta en 30%",
+        "Aumenta en 48%",
+        "Disminuye en 60%",
+        "Disminuye en 48%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Geometría, pregunta 34 (clave E)"
+    }
+  ]
 }

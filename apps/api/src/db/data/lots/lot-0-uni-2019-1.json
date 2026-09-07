@@ -1,3 +1,654 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se definen las proposiciones:\n\n$p ⇓ q ≡ ∼p ∧ q$\n\n$p ⇑ q ≡ p ∨ ∼q$\n\nAdemás la proposición:\n\n$∼[q ⇓ p arrow.r q ⇑ r] ≡ V$\n\nDetermine los valores de verdad de p, q y r respectivamente.",
+      "alternatives": [
+        "F F F",
+        "F V V",
+        "V F V",
+        "V V F",
+        "V V V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifique la proposición siguiente:\n\n$[∼p ∨ q ∧ ∼q ∨ r] arrow.r ∼r ∧ p$",
+      "alternatives": [
+        "$p$",
+        "$q$",
+        "$r$",
+        "$p ∨ ∼r$",
+        "$p ∨ q ∨ r$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si afirmamos:\n\n- Algunos relajados van a fiestas.\n- Todos los que van a fiestas pierden tiempo.\n\nDetermine la respuesta correcta:",
+      "alternatives": [
+        "Los que van a fiestas no son relajados.",
+        "Los que van a fiestas son relajados.",
+        "Algunos relajados pierden tiempo.",
+        "Todos los relajados aprovechan el tiempo.",
+        "No todos los que van a fiestas pierden el tiempo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el día que está antes del anterior al siguiente día que subsigue al posterior día que está inmediatamente después del día que precede al anterior día de hoy miércoles?",
+      "alternatives": [
+        "lunes",
+        "martes",
+        "miércoles",
+        "jueves",
+        "viernes"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indica el cuadrado que reemplace a X.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-05-a.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-05-b.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-05-c.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-05-d.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-05-e.png"
+      ],
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la figura discordante.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-06-a.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-06-b.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-06-c.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-06-d.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-06-e.png"
+      ],
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establezca el elemento que continúa a la sucesión.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-07-a.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-07-b.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-07-c.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-07-d.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-07-e.png"
+      ],
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule el número de cubos que construye el sólido mostrado.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de los sólidos forma la figura desplegada?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-09-a.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-09-b.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-09-c.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-09-d.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-09-e.png"
+      ],
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de las alternativas muestra el correcto despliegue?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "0",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-10-a.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-10-b.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-10-c.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-10-d.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-10-e.png"
+      ],
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente figura, indique el símbolo que reemplaza al signo de interrogación.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-11-a.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-11-b.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-11-c.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-11-d.png",
+        "lot-0-uni-2019-1-alternatives/rm-lot-0-uni-2019-1-raz-11-e.png"
+      ],
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente sucesión establezca el elemento que debe ir en la posición X.\n\n$2 ; 6 ; 12 ; X ; 30 ; 42 ; 56$",
+      "alternatives": [
+        "18",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establezca el elemento que continúa en la sucesión, considerando el alfabeto inglés.\n\nAFI ; EJM ; INQ ; ...",
+      "alternatives": [
+        "OQT",
+        "OTW",
+        "ORS",
+        "UZA",
+        "UYC"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, halle el valor de: $X + Y - Z$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "18",
+        "21",
+        "24",
+        "26",
+        "28"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establezca el valor de $X + Y$ en la distribución.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "73",
+        "77",
+        "83",
+        "87",
+        "91"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 15 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el número que sigue a la sucesión:\n\n$1, 1, 2, 3, 5, 8, 4, 3, 7, ...$",
+      "alternatives": [
+        "7",
+        "10",
+        "13",
+        "17",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la probabilidad que al tirar dos dados la suma resultante sea un cuadrado perfecto?",
+      "alternatives": [
+        "$frac(7,36)$",
+        "$frac(1,9)$",
+        "$frac(1,4)$",
+        "$frac(1,3)$",
+        "$frac(5,36)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 17 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Irma tiene una avícola, cada mañana recoge un cierto número de huevos. Si a esta cantidad la dividimos entre 1000, la elevamos a la cuarta y le restamos la cuarta parte de 36, obtenemos 247. Determine la cantidad de huevos diarios que recoge.",
+      "alternatives": [
+        "2000",
+        "2500",
+        "4000",
+        "4500",
+        "6000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una persona sube una escalera de tal manera que por cada 8 gradas que sube, baja 3. Si recorrió en total 173 gradas ¿cuántas gradas en total descendió?",
+      "alternatives": [
+        "34",
+        "38",
+        "45",
+        "48",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Mateo le dio a Xiomara tantas veces 25 céntimos como soles tenía en su billetera. Si aún le quedan S/ 225, ¿cuántos soles tenía Mateo en su billetera?",
+      "alternatives": [
+        "280",
+        "300",
+        "320",
+        "330",
+        "350"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $x(x-3) = -1$, halle el valor de\n\n$x^6 - 18x^3 + 5$",
+      "alternatives": [
+        "-1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los obreros A, B, C y D hacen una misma obra por sí solos en 20, 30, 40 y 25 días respectivamente. Empiezan el trabajo los obreros A y B, luego de 3 días se retira B y entra C que trabaja junto con A durante 2 días. Al término de los mismos se retira C e ingresa D y junto con A terminan la obra. ¿Cuántos días tienen que trabajar A y D para terminar la obra?",
+      "alternatives": [
+        "$6$",
+        "$frac(20,3)$",
+        "$frac(15,2)$",
+        "$frac(17,2)$",
+        "$9$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juana tiene 3 amigos: Marcos, Luis y Víctor; que viven en tres ciudades distintas: Lima, Cusco e Iquitos, y tienen 3 carácteres distintos: tímido, liberal y agresivo. Se desea saber dónde vive Víctor y su respectivo carácter.\n\nInformación brindada:\n\nI. Marcos no está en Lima ni Luis en el Cusco, y el que vive en Iquitos es agresivo.\nII. El que está en Lima no es tímido, en tanto que Luis no es liberal ni tímido.\n\nPara resolver el problema:",
+      "alternatives": [
+        "La información I es suficiente.",
+        "La información II es suficiente.",
+        "Es necesario utilizar ambas informaciones.",
+        "Cada información, por separado, es suficiente.",
+        "Falta información."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una fábrica la línea de producción A incrementa 5% del 2016 al 2017 y la producción en la línea B aumenta en 10%, en ese mismo período, ¿cuántas unidades se produjeron en 2016 por la línea A?\n\nInformación brindada:\n\nI. Las dos líneas combinadas produjeron 100 000 unidades en 2016.\nII. Las dos líneas combinadas produjeron 107 500 unidades en 2017.\n\nPara resolver el problema:",
+      "alternatives": [
+        "La información I es suficiente.",
+        "La información II es suficiente.",
+        "Es necesario utilizar ambas informaciones.",
+        "Cada información, por separado, es suficiente.",
+        "Falta información."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pedro observa en una tienda un aviso que dice: camisa + pantalón + corbata = S/ 120. Entra en la tienda y compra dos camisas, un pantalón y dos corbatas. Determine cuánto pagó Pedro.\n\nInformación brindada:\n\nI. Un pantalón cuesta 60 soles.\nII. Un pantalón cuesta tanto como la camisa y corbata juntos.\n\nPara resolver el problema:",
+      "alternatives": [
+        "La información I es suficiente.",
+        "La información II es suficiente.",
+        "Es necesario utilizar ambas informaciones.",
+        "Cada información, por separado, es suficiente.",
+        "Falta información."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $y z ≠ 0$, se pregunta si:\n\n$ frac(x - y + z, 2z) < frac(x,2z) - frac(y,2z) - frac(x,y) $\n\nInformación brindada:\n\nI. $ frac(x,y) < -frac(1,2) $\n\nII. $x y < 0$\n\nPara resolver el problema:",
+      "alternatives": [
+        "La información I es suficiente.",
+        "La información II es suficiente.",
+        "Es necesario utilizar ambas informaciones.",
+        "Cada información, por separado, es suficiente.",
+        "Falta información."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene la siguiente figura.\n\n(Ver la figura adjunta.)\n\nDetermine el área del triángulo ABC.\n\nInformación brindada:\n\nI. El segmento BM es una mediana de valor 10 cm.\nII. $m∠C = 53°$.\n\nPara resolver el problema:",
+      "alternatives": [
+        "La información I es suficiente.",
+        "La información II es suficiente.",
+        "Es necesario utilizar ambas informaciones.",
+        "Cada información, por separado, es suficiente.",
+        "Falta información."
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-27.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $u arrow.r t = 2u+t$ ; $u arrow.t t = 2t+u$\n\n$u arrow.l t = 4t-1$ ; $u arrow.b t = 1-4u$\n\nDetermine el valor de x en la ecuación:\n\n$(5 arrow.l x) - [(5 arrow.r x)+(5 arrow.t x)+(5 arrow.b x)] = 5$",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el operador definido mediante la tabla:\n\n#table(\n  columns: 6,\n  align: center,\n  [•], [0], [1], [2], [3], [4],\n  [0], [0], [1], [2], [3], [4],\n  [1], [1], [2], [3], [4], [0],\n  [2], [2], [3], [4], [0], [1],\n  [3], [3], [4], [0], [1], [2],\n  [4], [4], [0], [1], [2], [3],\n)\n\nHalle el valor de x en la ecuación:\n\n$(2 • x)(x • 3) = (x • 1) • 4$",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean las siguientes operaciones:\n\n$x * y = frac(1,2)(x+y)$      $x △ y = frac(1,2)(y-x)$\n\ncon las siguientes condiciones:\n\nI. $(x*U)+(x*N)+(x*I) = (U△x)+(N△x)+(I△x)$\nII. $U*N = N△I$ y $U△I = 2*N$\n\nHalle\n\n$E = (U△N)*I + (U*N)△I + U△(N*I) + U*(N△I)$",
+      "alternatives": [
+        "3",
+        "5",
+        "6",
+        "8",
+        "11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $f(x) = (frac(sqrt(5)+1,2))$\n\nDetermine la equivalencia de:\n\n$f(x-1) - f(x+1)$",
+      "alternatives": [
+        "$-f(x)$",
+        "$-frac(1,2)f(x)$",
+        "$0$",
+        "$f(x)$",
+        "$2f(x)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La afluencia de turistas en tres zonas A, B y C de cierta zona turística de Arequipa en el 2015 fue de 50 000 personas y en el 2016 aumentó en 20%, como se muestra en los diagramas. Se desea conocer en cuánto aumentó la afluencia de turistas en la zona B.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "300",
+        "3 500",
+        "4 000",
+        "4 200",
+        "4 500"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-32.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico adjunto muestra los resultados de una encuesta acerca de las preferencias del público respecto a los candidatos a la alcaldía de cierto distrito de Lima. Señale la alternativa correcta, después de determinar si la proposición es verdadera (V) o falsa (F).\n\nI. El candidato A tiene el 25% de preferencia.\nII. El 37,5% de preferencia la tiene B.\nIII. C, D y E suman igual porcentaje que B.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "V V V",
+        "V V F",
+        "V F V",
+        "V F F",
+        "F V V"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una encuesta entre alumnos de la UNI se obtuvieron los datos representados por el gráfico de qué país ganaría la copa del mundo. Señalar la alternativa que presente la secuencia correcta luego de determinar si la proposición es verdadera (V) o falsa (F).\n\nI. El porcentaje de personas encuestadas que piensa que Perú campeonará es el 10,7% aproximadamente.\nII. La mitad de los encuestados piensa que Alemania ganará la copa del mundo.\nIII. Aproximadamente el 61% de los encuestados piensa que Alemania no ganará la copa del mundo.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "F V V",
+        "F F V",
+        "V F V",
+        "V F F",
+        "V V F"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 34 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico muestra una figura que apareció en un diario de una ciudad. En él se indica la preferencia por el noticiero central de 5 canales de televisión según una muestra aleatoria en un año determinado. ¿Cuál(es) de las siguientes afirmaciones es(son) verdadera(s)?\n\nI. De acuerdo a la muestra, el noticiero central con menor probabilidad de ser visto es TV5.\nII. El gráfico muestra exactamente la realidad de la preferencia de los noticieros de esta ciudad.\nIII. Aproximadamente, un cuarto de la muestra no ve noticieros centrales de estos 5 canales.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo I y II",
+        "Solo I y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-0-uni-2019-1-figures/rm-lot-0-uni-2019-1-raz-35.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 35 (clave D)"
+    }
+  ]
 }

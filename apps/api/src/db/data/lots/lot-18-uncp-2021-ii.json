@@ -424,6 +424,427 @@
       "correctAnswer": "4",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
       "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $overline(m m m) = 2 space 160(overline(m))$\n\nHalla el valor de: $overline(m m) + overline(1 m) + overline(m 1)$",
+      "alternatives": [
+        "155",
+        "185",
+        "165",
+        "175",
+        "180"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de los grados absolutos de todos los términos del desarrollo de la siguiente expresión:\n\n$P(x; y) = (2x^3 + 3y^4)^10$",
+      "alternatives": [
+        "390",
+        "400",
+        "385",
+        "380",
+        "420"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la siguiente división:\n\n$frac((x + 2)^(6a) - y^(6a + 8), (x + 2)^(a - 1) - y^a)$\n\nRepresenta un cociente notable, determina su número de términos",
+      "alternatives": [
+        "8",
+        "12",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente tabla se registran los puntajes obtenidos por cien alumnos en una prueba de estadística.\n\n(Ver la figura adjunta.)\n\nCompleta la tabla y calcula el valor de la mediana.",
+      "alternatives": [
+        "$80\",\"overline(96)$",
+        "$76\",\"overline(96)$",
+        "$66\",\"overline(96)$",
+        "$78\",\"overline(96)$",
+        "$74\",\"overline(96)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-18-uncp-2021-ii-figures/estad-lot-18-uncp-2021-ii-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el organizador con su respectiva obra literaria.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Calixto Garmendia",
+        "Los perros hambrientos",
+        "Duelo de caballeros",
+        "La serpiente de oro",
+        "El mundo es ancho y ajeno"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-18-uncp-2021-ii-figures/lit-lot-18-uncp-2021-ii-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Comunicación, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se muestra el instante inicial de un M.A.S. que realiza un resorte horizontal de amplitud 10 cm y frecuencia angular $pi slash 6$ rad/s\n\n(Ver la figura adjunta.)\n\nHalla la distancia recorrida (en cm) por la partícula entre $t = 2$ s y $t = 10$ s.",
+      "alternatives": [
+        "50",
+        "40",
+        "30",
+        "15",
+        "35"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-18-uncp-2021-ii-figures/fis-lot-18-uncp-2021-ii-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una granada de 4 kg se desliza sobre una superficie horizontal lisa con una rapidez de 5 m/s y cuando se encuentra a 4 m de la pared explota en dos fragmentos de masa $m_A$ y el otro de masa $m_B$ llegando simultáneamente a la pared, como se muestra en la figura; determina: $frac(m_A, m_B)$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(2 sqrt(3), 3)$",
+        "$frac(4 sqrt(3), 3)$",
+        "$2 sqrt(3)$",
+        "$4 sqrt(3)$",
+        "$6 sqrt(3)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-18-uncp-2021-ii-figures/fis-lot-18-uncp-2021-ii-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al balancear la reacción en medio básico:\n\n$[\"ClO\"_3]^- + \"Cr\"^(+3) -> \"Cl\"^(-1) + [\"CrO\"_4]^(2-)$\n\nDetermina el coeficiente del $\"H\"_2\"O\"$ resultante.",
+      "alternatives": [
+        "7",
+        "5",
+        "3",
+        "1",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Nombra los siguientes oxoaniones, respectivamente:\n\n$[\"H\"_2\"PO\"_4]^- ; [\"HBO\"_3]^(2-) ; [\"S\"_2\"O\"_3]^(2-)$",
+      "alternatives": [
+        "Fosfato ácido, borato ácido, disulfato.",
+        "Fosfato diácido, borato ácido, tiosulfato.",
+        "Bifosfato, biborato, tiosulfato.",
+        "Fosfato diácido, borato, tiosulfato.",
+        "Fosfáto ácido, borato diácido, disulfato."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones con respecto al esquema de la vejiga durante el proceso de la micción.\n\n(Ver la figura adjunta.)\n\nI. En A se da la contracción de la pared vesical.\n\nII. En A y B ocurre la contracción del esfínter.\n\nIII. En B se concentra el residuo de la orina (prensa abdominal).",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "FVF",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-18-uncp-2021-ii-figures/bio-lot-18-uncp-2021-ii-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación química",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el gráfico, determina la verdad (V) o falsedad (F) de las proposiciones con respecto a la secreción del glucagón en un estado de glicemia.\n\n(Ver la figura adjunta.)\n\nI. Disminuye la glicemia - aumenta el glucagón\n\nII. Aumenta la glicemia - aumenta el glucagón\n\nIII. Aumenta la glicemia - disminuye el glucagón\n\nIV. Disminuye la glicemia - disminuye el glucagón",
+      "alternatives": [
+        "FFVV",
+        "VFVF",
+        "FVFV",
+        "VVFF",
+        "VFFV"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-18-uncp-2021-ii-figures/bio-lot-18-uncp-2021-ii-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura:\n\n(Ver la figura adjunta.)\n\nPara la ocurrencia de las lluvias acidas, identifica los compuestos representados por “x” e “y”, respectivamente.",
+      "alternatives": [
+        "$\"HNO\"_3 - \"NO\"_x$",
+        "$\"H\"_2\"O\" - \"NO\"_x$",
+        "$\"NO\"_x - \"H\"_2\"O\"$",
+        "$\"H\"_2\"O\" - \"HNO\"_3$",
+        "$\"NO\"_x - \"HNO\"_3$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-18-uncp-2021-ii-figures/eco-lot-18-uncp-2021-ii-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Clima y desastres naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos:\n\n(Ver la figura adjunta.)\n\nReferente a los ciclones o huracanes, determina la verdad (V) o falsedad (F) de los siguientes enunciados:\n\n- A se genera en los polos y B en el Ecuador.\n\n- A es ciclón y B es anticiclón.\n\n- A implica vientos fríos y secos y B, vientos cálidos y húmedos.",
+      "alternatives": [
+        "VFV",
+        "FVV",
+        "VFF",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-18-uncp-2021-ii-figures/eco-lot-18-uncp-2021-ii-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona las áreas del proyecto de vida con su característica:\n\nI. Vocacional\n\nII. Afectiva\n\nIII. Sociopolítica\n\na) Se refiere al tipo de relaciones personales y de convivencia que queremos establecer.\n\nb) Metas relacionadas con valores cívicos y el compromiso con la sociedad.\n\nc) Metas u objetivos que nos proponemos con respecto a un futuro desempeño laboral.",
+      "alternatives": [
+        "Ic - IIa - IIIb",
+        "Ia - IIb - IIIc",
+        "Ic - IIb - IIIa",
+        "Ib - IIc - IIIa",
+        "Ia - IIc - IIIb"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Persona, Familia y Relaciones Humanas, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los referentes textuales con su respectivo ejemplo.\n\nI. Anáfora ( ) Para él, el hombre es «una pasión inútil»; Jean-Paúl Sartre cree que la angustia existencial es un problema serio y urgente.\n\nII. Catáfora ( ) Friedrich Nietzche es un filósofo contemporáneo importante, él sostenía que la verdad es una ficción conceptual.\n\nIII. Elipsis ( ) Karl Popper representa el racionalismo crítico, mientras que, Thomas Kuhn, el relativismo epistemológico.",
+      "alternatives": [
+        "II - III - I",
+        "II - I - III",
+        "III - II - I",
+        "I - III - II",
+        "I - II - III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Macroestructura textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el título adecuado a la imagen presentada.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Actividades lúdicas en la historia.",
+        "Fuerzas de producción en la historia.",
+        "Evolución histórica de la rueda.",
+        "Importancia del hombre en la civilización.",
+        "Historia de la fuerza motriz."
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-18-uncp-2021-ii-figures/rv-lot-18-uncp-2021-ii-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos narrativos y descriptivos / expresión escrita",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Uno de los más famosos pueblos de tejedores es el de San Pedro de Cajas, ubicado en la provincia de Tarma, a 55 km al norte de La Oroya. La riqueza de sus tejidos y la maestría de sus tejedores es ya proverbial.\n\nEs difícil encontrar en San Pedro de Cajas una casa en la que falte un telar. Los artesanos producen tradicionalmente frazadas, ponchos, mantos, tapices, etc. Con característico diseño y alta calidad, utilizando algodón, lana y fibras sintéticas.\n\nLos colores los logran la mayoría de las veces con tintes obtenidos de plantas de la región, cuya preparación es recogida de generación en generación. Por ejemplo, el carmesí lo obtienen de una yerba que crece en la pampa de Junín, de color blancuzco, razón por la cual su nombre en quechua quiere decir “nevada”.\n\nEl valle del Mantaro tiene en el pueblo de Hualhuas tejidos de alpaca de bandas paralelas, y en Sapallanga y Huayucachi son famosos los bordados.\n\nIdentifica la tipología textual empleada.",
+      "alternatives": [
+        "Texto narrativo",
+        "Texto argumentativo",
+        "Texto publicitario",
+        "Texto expositivo",
+        "Texto descriptivo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa, pregunta 39 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo:\n\nA. How often do you go to the supermarket?\n\nB: Twice a week.\n\nA: How much bread do you get?\n\nB: I always buy two … of bread\n\nA: Do you buy … pasta?\n\nB: Yes, I do. I buy … pasta.",
+      "alternatives": [
+        "loaves – any – boxes",
+        "loafs – some – box of",
+        "loafs – any – a box of",
+        "loafes – many – two boxes of",
+        "loaves – any – a box of"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa - Inglés, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define la operación: $integral_a (x) = a^4 - 2a^2 x^2 + x^4 - b^2$\n\nHalla el término de lugar 40 en: $integral_9^40 (11); integral_12^13 (14); integral_15^16 (17); ...$",
+      "alternatives": [
+        "214 439",
+        "241 935",
+        "254 874",
+        "232 478",
+        "227 593"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define la operación: #box(stroke: 0.4pt, inset: 3pt)[$a^2 - a + 1$] $= (8a - 4)^3$\n\nCalcula: $frac(#box(stroke: 0.4pt, inset: 3pt)[$root(3, a^2 + 3\\/4)$], 64a)$",
+      "alternatives": [
+        "$sqrt(a)$",
+        "$8 root(3, a)$",
+        "$root(3, a)$",
+        "8",
+        "$4a$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 44 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál será la menor distancia que debe recorrer la punta de un lápiz para realizar la siguiente figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "346 cm",
+        "352 cm",
+        "320 cm",
+        "316 cm",
+        "336 cm"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-18-uncp-2021-ii-figures/rm-lot-18-uncp-2021-ii-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que la operación cumple lo mostrado en la figura, y además $3 dot.square 1 = 2$, $4 dot.square 4 = 81$, $9 dot.square 5 = 1024$, determina el valor de: $[(5 dot.square 2) + (7 dot.square 5)]$ operado con 64.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "64",
+        "36",
+        "48",
+        "81",
+        "100"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-18-uncp-2021-ii-figures/rm-lot-18-uncp-2021-ii-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 48 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define el operador mostrado en la figura como $a^2 - 2b - 2$, donde $a$ es el número de arriba y $b$ el de abajo.\n\nDetermina el valor de “E” en el producto de 63 operadores que empieza en 126 sobre 125 y desciende de dos en dos.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2",
+        "1",
+        "0",
+        "$-1$",
+        "$infinity$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-18-uncp-2021-ii-figures/rm-lot-18-uncp-2021-ii-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente figura, calcula el valor de “x”\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "29",
+        "39",
+        "59",
+        "49",
+        "19"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-18-uncp-2021-ii-figures/rm-lot-18-uncp-2021-ii-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 50 (clave B)"
     }
   ]
 }

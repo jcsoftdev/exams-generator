@@ -458,6 +458,387 @@
       "correctAnswer": "3",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
       "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Inglés, pregunta 48 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la alternativa cuya operación entre conjuntos representa el área de la región sombreada.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$(A union B) union C$",
+        "$(A inter B) - C$",
+        "$(A union B) inter C$",
+        "$(A Delta B) inter C$",
+        "$(A union C) inter B$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/arit-lot-23-acing-uncp-2022-1-ari-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Aritmética, pregunta 2 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica la expresión:\n\n$P(a,b) = frac(a b(a + b) - a^2(a + b), a^2(a^2 - b^2))$",
+      "alternatives": [
+        "$a$",
+        "$-a$",
+        "1",
+        "$-1 slash a$",
+        "$-1$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Álgebra, pregunta 5 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $a^2 + b^2 = 1$\n\nDetermina. $M = (a^4 + b^4) - (a^6 + b^6)$",
+      "alternatives": [
+        "$a^2 b^2$",
+        "$a^3 + b^3$",
+        "$a^3 b^3$",
+        "$a b$",
+        "$a^2 - b^2$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Álgebra, pregunta 7 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las matrices:\n\n$A = mat(3, 2; 1, 1)$ y $B = mat(1, 3; 2, 1)$\n\nDetermina la traza de $A + B$",
+      "alternatives": [
+        "4",
+        "10",
+        "8",
+        "6",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Álgebra, pregunta 8 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la siguiente inecuación:\n\n$1 < frac(3x + 10, x + 7) < 2$\n\nEl conjunto solución tiene la forma: $chevron.l a; b chevron.r$ determina el valor de: $a + b$",
+      "alternatives": [
+        "4",
+        "$5 slash 2$",
+        "2",
+        "$5 slash 3$",
+        "$3 slash 2$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Álgebra, pregunta 9 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El número de libros que tiene un grupo de niños está dado en la siguiente tabla:\n\n(Ver la figura adjunta.)\n\nDetermina el mayor número de libros que tiene el 25% de niños que menos libros tienen.",
+      "alternatives": [
+        "1",
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/esta-lot-23-acing-uncp-2022-1-est-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Estadística y Probabilidades, pregunta 10 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pedro invierte en la bolsa de valores S/ 650 000, como se muestra en el siguiente gráfico.\n\n(Ver la figura adjunta.)\n\n¿Cuánto invirtió en TELEFÓN?",
+      "alternatives": [
+        "S/ 260 000",
+        "S/ 230 000",
+        "S/ 265 000",
+        "S/ 240 000",
+        "S/ 270 000"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/esta-lot-23-acing-uncp-2022-1-est-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Estadística y Probabilidades, pregunta 12 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el histograma, la media es 60.\n\n(Ver la figura adjunta.)\n\nCalcula la mediana.",
+      "alternatives": [
+        "63,0",
+        "65,0",
+        "$64\",\"overline(4)$",
+        "66,6",
+        "68,5"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/esta-lot-23-acing-uncp-2022-1-est-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Estadística y Probabilidades, pregunta 13 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente esquema que representa el proceso de la fotosíntesis:\n\n(Ver la figura adjunta.)\n\nIdentifica los compuestos representados por “x” e “y” respectivamente",
+      "alternatives": [
+        "$\"O\"_2$ y $\"CO\"_2$",
+        "$\"CO\"_2$ y N",
+        "$\"CO\"_2$ y $\"O\"_2$",
+        "N y $\"CO\"_2$",
+        "N y $\"O\"_2$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/bio-lot-23-acing-uncp-2022-1-bio-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Biología, pregunta 18 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Ecosistemas y ecorregiones del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el gráfico:\n\n(Ver la figura adjunta.)\n\nIdentifica la ecorregión del Perú que se encuentra en A y B respectivamente.",
+      "alternatives": [
+        "Desierto del Pacífico – Páramo",
+        "Páramo – Desierto del Pacífico",
+        "Selva alta – Selva baja",
+        "Puna y Altos andes – Bosque tropical del Pacífico",
+        "Puna y Altos andes – Selva baja"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/geog-lot-23-acing-uncp-2022-1-geo-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Geografía, pregunta 19 (clave E) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía: fundamentos y objeto de estudio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el titulo apropiado para la figura.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "espacios",
+        "campos",
+        "territorios",
+        "lugares",
+        "ámbitos"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/geog-lot-23-acing-uncp-2022-1-geo-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Geografía, pregunta 22 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Los derechos humanos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica lo que “X” representa en el siguiente organizador:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Remediar",
+        "Honrar",
+        "Venerar",
+        "Acatar",
+        "Ponderar"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/civ-lot-23-acing-uncp-2022-1-edu-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Educación Cívica, pregunta 30 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué hora marcan las manecillas del reloj que muestra la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "9 h 36 min",
+        "9 h 38 min",
+        "9 h 39 min",
+        "9 h 37 min",
+        "9 h 35 min"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rm-lot-23-acing-uncp-2022-1-raz-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 33 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el total de esferas en la figura 10.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "25",
+        "19",
+        "21",
+        "23",
+        "27"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rm-lot-23-acing-uncp-2022-1-raz-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 35 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla “x” en:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4",
+        "1",
+        "5",
+        "2",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rm-lot-23-acing-uncp-2022-1-raz-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 36 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el número de puntos no visibles en:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "26",
+        "38",
+        "36",
+        "32",
+        "44"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rm-lot-23-acing-uncp-2022-1-raz-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 38 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la figura que falta.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "0",
+      "alternativeImagePaths": [
+        "lot-23-acing-uncp-2022-1-alternatives/rm-lot-23-acing-uncp-2022-1-raz-40-a.png",
+        "lot-23-acing-uncp-2022-1-alternatives/rm-lot-23-acing-uncp-2022-1-raz-40-b.png",
+        "lot-23-acing-uncp-2022-1-alternatives/rm-lot-23-acing-uncp-2022-1-raz-40-c.png",
+        "lot-23-acing-uncp-2022-1-alternatives/rm-lot-23-acing-uncp-2022-1-raz-40-d.png",
+        "lot-23-acing-uncp-2022-1-alternatives/rm-lot-23-acing-uncp-2022-1-raz-40-e.png"
+      ],
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rm-lot-23-acing-uncp-2022-1-raz-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 40 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Aptitud comunicativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la finalidad que presenta el afiche.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Informativo",
+        "Propagandístico",
+        "Comercial",
+        "Persuasivo",
+        "Institucional"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rv-lot-23-acing-uncp-2022-1-raz-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Verbal, pregunta 43 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Aptitud comunicativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la función de la imagen.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Epistémica",
+        "Estética",
+        "Artística",
+        "Representativa",
+        "Simbólica"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rv-lot-23-acing-uncp-2022-1-raz-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Verbal, pregunta 44 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Aptitud comunicativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el significado conativo de la imagen.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La distancia es importante en el proceso de vacunación.",
+        "Un grupo de personas con sus mascarillas.",
+        "Mujeres y varones deben usar mascarillas.",
+        "La población debe cumplir con los protocolos de bioseguridad.",
+        "Los danzantes también pueden contagiarse de Covid-19."
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/rv-lot-23-acing-uncp-2022-1-raz-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Verbal, pregunta 46 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Observa la imagen y elija la expresión #underline[Incorrecta]:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Ball B is bigger than ball A.",
+        "Ball B is bigger than ball C.",
+        "Ball A is bigger than ball C.",
+        "Ball A is bigger than ball B.",
+        "Ball A is the biggest."
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-23-acing-uncp-2022-1-figures/ing-lot-23-acing-uncp-2022-1-ing-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Inglés, pregunta 49 (clave A) — Academia Ingeniería"
     }
   ]
 }

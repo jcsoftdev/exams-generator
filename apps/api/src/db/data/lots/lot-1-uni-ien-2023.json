@@ -407,6 +407,606 @@
       "correctAnswer": "1",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
       "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A qué tasa anual se prestó un capital. Sabiendo que el monto producido en 5 meses es igual $16/17$ del monto producido en 11 meses.",
+      "alternatives": [
+        "13.1868...%",
+        "10.1234...%",
+        "15%",
+        "16%",
+        "17.1234...%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Aritmética, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al extraer la raíz cúbica del número $overline(a b c)$ se obtiene $p$ de raíz y 37 de residuo, pero al extraer la raíz cúbica del número $overline(c b a)$ se obtiene $p + 1$ de raíz y 45 de residuo. Entonces el valor de $S = abs(2a - b - c + p)$ es",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Aritmética, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se codifica las siguientes funciones\n\n$f(x) = x^2 + 4x - 1, quad -4 < x < -2$\n\n$g(x) = cases(1 + sqrt(1 - 2x + x^2) quad \",\" -2 < x < 0, 2 abs(x) - x^2 quad \",\" x > 0)$\n\nasignando a $f$ el valor de 3 si es invertible y 2 en otro caso, de manera similar se asigna a $g$ el valor de 2 si es invertible y 1 en otro caso. Hallar $f^g$.",
+      "alternatives": [
+        "3",
+        "9",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea el siguiente problema de programación lineal\n\n$U = x + y$\n\nsujeto a $cases(6x + 3y >= 1200, 2x + 3y >= 600, x >= 0, y >= 0)$\n\nCalcule el valor mínimo del problema dado.",
+      "alternatives": [
+        "150",
+        "200",
+        "250",
+        "300",
+        "350"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indicar el valor de verdad de las siguientes proposiciones\n\n$p: 3^2 > 2^3$\n\n$q: -2^2 > 3^0$\n\n$r: sqrt(3) > sqrt(2)$",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "FVF",
+        "VFF",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indicar el valor de verdad de las siguientes proposiciones\n\n$p: 2^(2^3) >= 2^(3^2)$\n\n$q: ((53821)^(50))^0 > 2$\n\n$r: root(3, 2) > sqrt(3)$",
+      "alternatives": [
+        "FFF",
+        "FFV",
+        "FVF",
+        "VFF",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el volumen (en $\"cm\"^3$) de un tronco de prisma recto cuya base inferior es un triángulo rectángulo isósceles ABC, mientras que su base superior es un triángulo equilátero FED. Se sabe que una cara lateral es un rectángulo de lados $6 sqrt(2)$ cm y $12$ cm, siendo el lado mayor del rectángulo una de las aristas laterales verticales. Para su respuesta, considere el caso de mayor volumen.",
+      "alternatives": [
+        "252",
+        "242",
+        "224",
+        "262",
+        "234"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Geometría, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado un triángulo ABC, sea $overline(P Q)$ la bisectriz interior del ángulo B, sea I el incentro, y sea $overline(B I)/overline(I P) = 2$. Halle la suma de los ángulos A y B",
+      "alternatives": [
+        "$120 degree$",
+        "$60 degree$",
+        "$30 degree$",
+        "$150 degree$",
+        "$90 degree$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Geometría, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC, el ángulo A es el doble del ángulo C. Si la bisectriz interior $overline(A D)$ del ángulo A divide al segmento $overline(B C)$ en la proporción de $overline(B D)/overline(D C) = a/b$, encontrar $overline(A B)/overline(B C)$",
+      "alternatives": [
+        "$sqrt(a/(a+b))$",
+        "$sqrt(b/(a+b))$",
+        "$sqrt(a/b)$",
+        "$sqrt(b/a)$",
+        "$sqrt((a-b)/(a+b))$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Geometría, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el rango de la siguiente función:\n\n$f(theta) = 4/(cos(2 theta) - 2 sin(theta) - 2)$",
+      "alternatives": [
+        "$[-8, -8/10]$",
+        "$[-4, -4/10]$",
+        "$[-8, -4/10]$",
+        "$[-4, -8/10]$",
+        "$[8, 8/10]$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Trigonometría, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea x un ángulo que define la posición de un punto P en el segundo cuadrante tal que: $sin(x) + 2 cos(x) = -2/5$\n\nCalcule el valor de $M = 3 tan(x) + 2$",
+      "alternatives": [
+        "$9/8$",
+        "2",
+        "-2",
+        "$5/8$",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Trigonometría, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $tan(x) = 3 cos^2(x)$\n\nCalcule el valor de: $tan^3(x) + tan^2(x) + tan(x) - 3 cot(x)$",
+      "alternatives": [
+        "2",
+        "3",
+        "1",
+        "0",
+        "-2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Trigonometría, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una persona de 70 kg de masa se encuentra en el extremo de una balsa de 8 m de largo, sobre un lago cuyas aguas se encuentran en reposo. La persona empieza a caminar hacia al otro extremo. Cuando la persona llega al otro extremo, la balsa se ha movido 5 m respecto del agua. Calcule, en m, la distancia que se mueve la balsa respecto del agua, si en vez de la persona, camina un niño de 42 kg de masa. Considere que el agua no presenta viscosidad.",
+      "alternatives": [
+        "2",
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el sistema mostrado en la figura, el bloque de masa $m_A = 1\",\"25$ kg se mueve con rapidez constante de $4\",\"0$ m/s sobre la superficie horizontal lisa. El bloque de masa $m_B = 1\",\"25$ kg se encuentra en reposo, atado a un resorte con constante K = 1000 N/m. Si la colisión es frontal y completamente inelástica, determine la amplitud, en m, del movimiento oscilatorio resultante.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$0\",\"10$",
+        "$0\",\"05$",
+        "$0\",\"75$",
+        "$0\",\"15$",
+        "$0\",\"20$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-1-uni-ien-2023-figures/fis-lot-1-uni-ien-2023-fis-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una muestra metálica a la temperatura inicial de -17 °C se calienta en una estufa con una potencia térmica de 191 J/s. La curva característica temperatura vs tiempo se muestra en la figura. Determine a partir de ella la masa, en g, de la muestra. ($c_X = 382$ J/kg·°C)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "250",
+        "50",
+        "75",
+        "100",
+        "150"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-1-uni-ien-2023-figures/fis-lot-1-uni-ien-2023-fis-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tienen cuatro resistencias, de 2 Ω, 8 Ω, 3 Ω y 6 Ω, conectadas en paralelo a una batería. Calcule, en V, la fuerza electromotriz de la batería, si en la resistencia de 6 Ω se establece una corriente de 2 A.",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula realiza un movimiento rectilíneo con rapidez constante igual a 5 m/s. En el instante $t=0$ su posición es $x=0$. Indique el gráfico rapidez vs tiempo para el movimiento de esta partícula.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "0",
+      "alternativeImagePaths": [
+        "lot-1-uni-ien-2023-alternatives/fis-lot-1-uni-ien-2023-fis-07-a.png",
+        "lot-1-uni-ien-2023-alternatives/fis-lot-1-uni-ien-2023-fis-07-b.png",
+        "lot-1-uni-ien-2023-alternatives/fis-lot-1-uni-ien-2023-fis-07-c.png",
+        "lot-1-uni-ien-2023-alternatives/fis-lot-1-uni-ien-2023-fis-07-d.png",
+        "lot-1-uni-ien-2023-alternatives/fis-lot-1-uni-ien-2023-fis-07-e.png"
+      ],
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El #underline[aluminio] (Aℓ) es un metal que, al entrar en contacto con el #underline[aire] reacciona con el #underline[oxígeno] ($\"O\"_2$) formando una capa muy delgada de #underline[óxido de aluminio] ($\"Aℓ\"_2\"O\"_3$) que protege al metal de la completa oxidación, a este proceso se le llama la pasivación.\n\nEntre los tipos de materia subrayados, algunos son sustancias. Indique cuántos son.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "1",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto al modelo atómico actual, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\n\nI. El físico Erwin Schrödinger propuso la mecánica ondulatoria.\n\nII. El principio de exclusión fue propuesto por Wolfgang Pauli.\n\nIII. Louis De Broglie consideró el comportamiento dual de la radiación.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a la Tabla Periódica actual, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\n\nI) Se conocen 118 elementos.\n\nII) El denominado bloque p incluye a los gases nobles.\n\nIII) En el bloque f hay 14 elementos.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "VFV",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El pigmento bermellón natural, utilizado en la elaboración de pinturas, es de color naranja rojizo opaco, y resulta de pulverizar el mineral cinabrio, y químicamente, es, al igual que el bermellón artificial, sulfuro de mercurio (II). ¿Cuál es su fórmula química?",
+      "alternatives": [
+        "$\"HgS\"$",
+        "$\"HgSO\"_4$",
+        "$\"Hg\"_2\"S\"$",
+        "$\"Hg\"_2\"S\"_2$",
+        "$\"Hg\"_2\"SO\"_4$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo con la teoría ácido-base de Brönsted y Lowry, indique la verdad o falsedad de las siguientes proposiciones:\n\nI. Un par conjugado ácido-base se diferencian en un protón.\n\nII. El ácido conjugado del $\"SO\"_4^(2-)$ es el ion $\"HSO\"_4^-$.\n\nIII. La base conjugada del $\"HCO\"_3^-$ es el ion $\"CO\"_3^(2-)$.",
+      "alternatives": [
+        "FVF",
+        "VFF",
+        "FVV",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué figura continúa?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "0",
+      "alternativeImagePaths": [
+        "lot-1-uni-ien-2023-alternatives/rm-lot-1-uni-ien-2023-raz-01-a.png",
+        "lot-1-uni-ien-2023-alternatives/rm-lot-1-uni-ien-2023-raz-01-b.png",
+        "lot-1-uni-ien-2023-alternatives/rm-lot-1-uni-ien-2023-raz-01-c.png",
+        "lot-1-uni-ien-2023-alternatives/rm-lot-1-uni-ien-2023-raz-01-d.png",
+        "lot-1-uni-ien-2023-alternatives/rm-lot-1-uni-ien-2023-raz-01-e.png"
+      ],
+      "imagePath": "lot-1-uni-ien-2023-figures/rm-lot-1-uni-ien-2023-raz-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos cuadriláteros pueden contarse en la siguiente figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-1-uni-ien-2023-figures/rm-lot-1-uni-ien-2023-raz-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos cuadriláteros pueden contarse en la siguiente figura que contengan al menos una estrella negra?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-1-uni-ien-2023-figures/rm-lot-1-uni-ien-2023-raz-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que:\n\n$(p and q) or (q -> t) equiv F$\n\n¿Cuál(es) de las siguientes proposiciones son verdaderas?\n\na) $(not p or t) or s$\n\nb) $not [p and (not q or not p)]$\n\nc) $[(not p) or (q and not t)] <-> [(p -> q) and not (q and t)]$",
+      "alternatives": [
+        "Sólo a",
+        "a y b",
+        "a y c",
+        "b y c",
+        "Todas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se dan las siguientes proposiciones:\n\nB: Bernardo ingresó a la FIEE\n\nC: Carlos ingresó a la FIEE\n\nD: David ingresó a la FIEE\n\nSe pide formalizar la siguiente proposición: \"Carlos ingresó a la FIEE si es que David no lo hizo, pero si David ingresa entonces Bernardo no ingresará\"",
+      "alternatives": [
+        "$(not D -> C) and (D -> not B)$",
+        "$(not D -> C) or (D -> not B)$",
+        "$(D -> not C) and (B -> not D)$",
+        "$(C -> not D) or (D -> not B)$",
+        "$(C -> not D) and (not B -> not D)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle Y - X en:\n\n$1/2 quad 3/3 quad 6/6 quad 11/10 quad X/Y$",
+      "alternatives": [
+        "-1",
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente figura, cada segmento tiene longitud x ó y. Asimismo cada par de lados adyacentes son perpendiculares. Si el área de la figura es 252 y $x = 2y$ entonces hallar el perímetro de la figura.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "96",
+        "90",
+        "86",
+        "84",
+        "78"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-1-uni-ien-2023-figures/rm-lot-1-uni-ien-2023-raz-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dados los operadores mostrados en la figura, halle el valor de $E$.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "26",
+        "28",
+        "30",
+        "32",
+        "36"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-1-uni-ien-2023-figures/rm-lot-1-uni-ien-2023-raz-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico muestra la temperatura promedio de dos ciudades en grados Fahrenheit a lo largo de un año. Señale la verdad (V) o falsedad (F) de las siguientes proposiciones:\n\n(Ver la figura adjunta.)\n\nI. El número de meses en que la temperatura en la ciudad A ha sido mayor que en la ciudad B es 4.\n\nII. El número de meses en que tanto la temperatura en la ciudad A como en la ciudad B es por lo menos 60° es 6.\n\nIII. La menor temperatura en la ciudad A se dio en el mes de Diciembre.",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "FVF",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-1-uni-ien-2023-figures/rm-lot-1-uni-ien-2023-raz-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el término que, al sustituir la palabra subrayada, precise mejor el sentido del texto.\n\nLas tradiciones culturales diversas que coexisten en el Perú #underline[tienen] una serie de posibilidades diversas con respecto a cómo puede ordenarse las relaciones entre mujeres y varones.",
+      "alternatives": [
+        "retratan",
+        "visualizan",
+        "miran",
+        "observan",
+        "contemplan"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la alternativa que, al sustituir las palabras subrayadas, precise el sentido del enunciado:\n\nAlgunas #underline[cosas] no son fáciles de #underline[decir] al cura.",
+      "alternatives": [
+        "Secretos - llorar",
+        "Mentiras - cantar",
+        "Crímenes - ufanar",
+        "Secretos - confesar",
+        "Porquerías - confesar"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ANTONIMIA CONTEXTUAL\n\nElija la alternativa que, al sustituir el término subrayado, exprese el sentido opuesto de la oración.\n\nEl Poder Judicial #underline[revocó] el fallo donde se ordena el impedimento de salida del país por ocho meses contra un excandidato presidencial de nuestro país.",
+      "alternatives": [
+        "apeló",
+        "confirmó",
+        "recusó",
+        "exhortó",
+        "emplazó"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 7 (clave B)"
     }
   ]
 }

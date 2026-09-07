@@ -373,6 +373,445 @@
       "correctAnswer": "1",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
       "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 50 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $(5x + 3) in chevron.l -2; 8 chevron.r$, halla el intervalo al cual pertenece: $frac(7, 3x + 4)$",
+      "alternatives": [
+        "$chevron.l -7; -1 chevron.r$",
+        "$chevron.l 1; 7 chevron.r$",
+        "$chevron.l -2; 7 chevron.r$",
+        "$chevron.l -1; 7 chevron.r$",
+        "$chevron.l -7; 1 chevron.r$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Álgebra, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $x = sqrt(frac(2m - sqrt(4m^2 - 4), m))$\n\n$y = frac(x, sqrt(4 - x^2)) + frac(sqrt(4 - x^2), x)$\n\nDetermina el valor de “Y” en términos de “m”",
+      "alternatives": [
+        "$2m$",
+        "$m^2$",
+        "$4m$",
+        "$m$",
+        "$3m$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Álgebra, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente histograma se muestra la distribución de frecuencias de un conjunto de personas y sus pesos.\n\n(Ver la figura adjunta.)\n\nCalcula la moda y la media.",
+      "alternatives": [
+        "62,5 y 59",
+        "62,5 y 60",
+        "63,5 y 60",
+        "63,5 y 59",
+        "62,5 y 58"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-12-uncp-2021-1-figures/esta-lot-12-uncp-2021-1-est-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Estadística y Probabilidades, pregunta 6 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se realizó una encuesta en una de las comunidades andinas referentes a la cantidad de ganado ovino por familia y se obtuvieron los resultados que se muestran:\n\n(Ver la figura adjunta.)\n\n¿Cuál es la mínima cantidad de ganado del 20% que tienen más ganado?",
+      "alternatives": [
+        "48,6",
+        "53,6",
+        "52,2",
+        "53,4",
+        "53,3"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-12-uncp-2021-1-figures/esta-lot-12-uncp-2021-1-est-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Estadística y Probabilidades, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se muestra la ojiva porcentual de las edades de cierto número de personas:\n\n(Ver la figura adjunta.)\n\n¿Qué porcentaje de personas tienen edades comprendidas entre 12 y 18 años?",
+      "alternatives": [
+        "23%",
+        "18%",
+        "15%",
+        "21%",
+        "20%"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-12-uncp-2021-1-figures/esta-lot-12-uncp-2021-1-est-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Estadística y Probabilidades, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la siguiente situación comunicativa:\n\nDos grandes amigas se encuentran después de unos meses.\n\n- Hola Nilda ¿cómo estás? La verdad me alegra verte, qué linda que estás\n\n- Hola amigocha, tenía las ganas de verte, ya que siempre estás en mi corazón, te cuento que voy a trabajar en el Instituto de Educación superior Torre Tagle, hoy tuve una entrevista y aprobé\n\n- Felicidades amiga, y ¿qué te evaluaron en la entrevista?.\n\n- Me preguntaron sobre el Currículo de Educación Básica, desempeños, enfoques transversales, retroalimentación, entre otros temas\n\nIdentifica la función metalingüística en el ejemplo",
+      "alternatives": [
+        "La verdad me alegra verte, que linda que estás.",
+        "Te cuento que voy a trabajar en el Instituto superior Torre Tagle, hoy tuve una entrevista y aprobé.",
+        "Hola Nilda ¿Cómo estás?.",
+        "Ya que siempre estás en mi corazón.",
+        "Me preguntaron sobre el Currículo de Educación Básica, desempeños, enfoques transversales, retroalimentación."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Lenguaje, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La ecuación de movimiento de una masa de 0,75 kg que oscila en un resorte es:\n\n$x = 0\",\"25 sin(8t)$\n\nDonde “x” está en metros y “t” en segundos\n\nCalcula los valores máximos de la velocidad y de la aceleración del MAS (expresada en el S.I.)",
+      "alternatives": [
+        "8 y 16",
+        "4 y 16",
+        "2 y 16",
+        "2 y 4",
+        "5 y 25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Física, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que los cuerpos mostrados chocan y quedan unidos\n\n(Ver la figura adjunta.)\n\nHalla la cantidad de movimientos total (en kg m/s) del sistema después del choque (vectorialmente)\n\n$m_1 = 7$ kg; $m_2 = 5$ kg; $V_1 = V_2 = 5$ m/s",
+      "alternatives": [
+        "$15 arrow(i) - 15 arrow(j)$",
+        "$25 arrow(i) - 25 arrow(j)$",
+        "$-15 arrow(i)$",
+        "$-15 arrow(i) - 15 arrow(j)$",
+        "$15 arrow(j)$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-12-uncp-2021-1-figures/fisi-lot-12-uncp-2021-1-fis-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Física, pregunta 14 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la suma de coeficientes de los productos después de balancear\n\n$\"Cl\"_2 + \"KOH\" -> \"KClO\"_3 + \"KCl\" + \"H\"_2\"O\"$",
+      "alternatives": [
+        "8",
+        "9",
+        "11",
+        "7",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Química, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Unidades químicas de masa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos mol de átomos de carbono existen en 220 g de propano ($\"C\"_3\"H\"_8$)?\n\n(H = 1 y C = 12)",
+      "alternatives": [
+        "2",
+        "5",
+        "15",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Química, pregunta 16 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para eliminar el $\"CO\"_2$ exhalado por los astronautas en vuelos cortos pueden utilizarse absorbentes químicos.\n\nEl $\"Li\"_2\"O\"$ es uno de los más eficaces. Si la reacción es:\n\n$\"Li\"_2\"O\" + \"CO\"_2 -> \"Li\"_2\"CO\"_3$\n\nCalcule el volumen aproximado en pies$\"\"^3$ de $\"CO\"_2$ en C.N. que se absorben por libra de $\"Li\"_2\"O\"$\n\nDato: Li = 7; O = 16; C = 12",
+      "alternatives": [
+        "13",
+        "14",
+        "11",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Química, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Cultura de prevención y vida saludable",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones en relación a las situaciones de riesgo en la adolescencia:\n\nI. El consumo de sustancias psicoactivas por presión de grupo provocará adicción.\n\nII. La actividad sexual precoz promovida por la influencia social, tendrá como consecuencia embarazos no deseados.\n\nIII. La influencia de modelos físicos promovidos por los medios de comunicación generará desórdenes alimentarios como la anorexia.",
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "VVF",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Psicología, pregunta 28 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los tipos de creencias con sus manifestaciones:\n\nI. Automático positivo\n\nII. Automático negativo\n\nIII. No lógico\n\na) Creer que uno es un fracasado por cometer un error.\n\nb) Hacer que un moreno cargue a un recién nacido para que sea fuerte y resistente.\n\nc) Pensar que los errores son aprendizajes.",
+      "alternatives": [
+        "Ia – IIb – IIIc",
+        "Ic – IIb – IIIa",
+        "Ic – IIa – IIIb",
+        "Ib – IIc – IIIa",
+        "Ia – IIc – IIIb"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Psicología, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones en relación a las principales características de la afectividad:\n\nI. Las emociones son de corta duración con carga afectiva y cambios orgánicos.\n\nII. Los sentimientos son estados afectivos más profundos y de menor intensidad.\n\nIII. Las pasiones son estados de gran carga afectiva que puede dominar la razón.",
+      "alternatives": [
+        "FFV",
+        "VFV",
+        "VVV",
+        "VVF",
+        "FVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Psicología, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona el desarrollo del “Yo” que permite lograr una adecuada autoafirmación con sus manifestaciones.\n\nI. Yo impulsivo\n\nII. Yo interpersonal\n\nIII. Yo transpersonal\n\na) Elabora su propio proyecto de vida que determinará su actuación social.\n\nb) Reaccionan y actúan solo en función de sus necesidades.\n\nc) Reconocimiento de las perspectivas de los demás y que son diferentes a los míos.",
+      "alternatives": [
+        "Ia – IIb – IIIc",
+        "Ia – IIc – IIIb",
+        "Ib – IIa – IIIc",
+        "Ib – IIc – IIIa",
+        "Ic – IIa – IIIb"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Psicología, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los niveles de razonamiento moral según Kohlberg con sus características:\n\nI. Pre moral (de 4 a 10 años)\n\nII. La moralidad de la conformidad con el rol convencional (de 10 a 13 años)\n\nIII. La moralidad de los principios morales autoaceptadas (de los 13 años a la juventud o nunca)\n\na) Reconoce la posibilidad de conflicto entre 2 normas socialmente aceptadas.\n\nb) Orientación hacia el castigo y la obediencia.\n\nc) Quieren ser considerados buenos y asumen roles de las figuras de autoridad.",
+      "alternatives": [
+        "Ib – IIa – IIIc",
+        "Ib – IIc – IIIa",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ic – IIb – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Psicología, pregunta 33 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Oración eliminada.\n\n(I) El intestino es el último tramo del aparato digestivo, localizado a continuación del estómago. (II) El intestino es un largo tubo y está formado por dos partes bien diferenciadas. (III) El colon ascendente, descendente, transverso y el ciego cumplen la función de expulsar a través del recto. (IV) El intestino delgado mide unos 6 m de longitud. (V) El intestino grueso mide 1,7 m de longitud y se sitúa rodeando al intestino delgado.",
+      "alternatives": [
+        "IV",
+        "I",
+        "V",
+        "II",
+        "III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Verbal, pregunta 35 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo a la siguiente lectura, señala si las oraciones son verdaderas (V) o falsas (F):\n\nAt 3:00 AM, while the Martínez family was sleeping, two burglars broke into the house, they wanted to eat something so they went into the kitchen. Mrs. Martínez heard a noise and went downstairs and saw them eating and went upstairs and called the police and they arrested them.\n\nI. Mrs. Martinez saw burglars\n\nII. The burglars felt hungry.\n\nIII. The police cought the burglars.",
+      "alternatives": [
+        "I (F), II (F), III (F)",
+        "I (F), II (V), III (V)",
+        "I (V), II (V), III (F)",
+        "I (V), II (V), III (V)",
+        "I (V), II (F), III (V)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Inglés, pregunta 40 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto:\n\nDavid and Luis … and David's family … now.",
+      "alternatives": [
+        "are running / is swimming",
+        "are runing / is swiming",
+        "is running / is swimming",
+        "are running / are swimming",
+        "are runing / is swiming"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Inglés, pregunta 41 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Future: will / going to",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elige la oración adecuada para cada imagen:\n\n(Ver la figura adjunta.)\n\nA. She is going to win.\n\nB. She will win.\n\nC. He is going to play the piano\n\nD. He will play the piano.\n\nE. He is going to drink milk.\n\nF. He will probably drink milk.",
+      "alternatives": [
+        "I A – II C – III F",
+        "I A – II C – III E",
+        "I B – II D – III F",
+        "I A – II D – III E",
+        "I B – II C – III E"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-12-uncp-2021-1-figures/ingl-lot-12-uncp-2021-1-ing-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Inglés, pregunta 42 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué figura falta?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "4",
+      "alternativeImagePaths": [
+        "lot-12-uncp-2021-1-alternatives/razo-lot-12-uncp-2021-1-raz-44-a.png",
+        "lot-12-uncp-2021-1-alternatives/razo-lot-12-uncp-2021-1-raz-44-b.png",
+        "lot-12-uncp-2021-1-alternatives/razo-lot-12-uncp-2021-1-raz-44-c.png",
+        "lot-12-uncp-2021-1-alternatives/razo-lot-12-uncp-2021-1-raz-44-d.png",
+        "lot-12-uncp-2021-1-alternatives/razo-lot-12-uncp-2021-1-raz-44-e.png"
+      ],
+      "imagePath": "lot-12-uncp-2021-1-figures/razo-lot-12-uncp-2021-1-raz-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué hora es en el reloj de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1 h 41 3/7 min",
+        "1 h 42 min",
+        "1 h 41 1/7 min",
+        "1 h 42 3/7 min",
+        "1 h 42 6/7 min"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-12-uncp-2021-1-figures/razo-lot-12-uncp-2021-1-raz-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la última cifra de la suma de los 15 primeros términos de la serie: $S = 5 + 7 + 17 + 31 + 65 + ...$",
+      "alternatives": [
+        "1",
+        "9",
+        "4",
+        "7",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el resultado de $F_(22)$\n\n$F_1 = 1 + 2 - 3 times 4$\n\n$F_2 = 2 - 3 times 4 + 5$\n\n$F_3 = 3 times 4 + 5 - 6$\n\n$F_4 = 4 + 5 - 6 times 7$\n\n$F_5 = 5 - 6 times 7 + 8$",
+      "alternatives": [
+        "$-555$",
+        "$-475$",
+        "$-575$",
+        "$-450$",
+        "$-500$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 48 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si se cumple que: $product_(k = 1)^n = 1 dot 2 dot 3 dot ... dot n$\n\nHalla el valor de: $product_(x = 1)^(30) = (1 + frac(1, x))$",
+      "alternatives": [
+        "29",
+        "41",
+        "31",
+        "30",
+        "39"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 49 (clave C)"
     }
   ]
 }

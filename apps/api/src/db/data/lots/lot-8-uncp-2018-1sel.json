@@ -305,6 +305,606 @@
       "correctAnswer": "0",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
       "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 79 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Leo encuentra que la cantidad de divisores del número $N = 9 times 10^m$ es 27. Indica el valor de verdad de las siguientes proposiciones:\n\nI. \"N\" es un número de 4 cifras\n\nII. \"m\" es un número par\n\nIII. La suma de cifras de \"N\" es $accent(3, circle)$.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FVF",
+        "FVV",
+        "VVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Aritmética, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Humberto encuentra que la suma y el producto de las raíces de una ecuación de segundo grado son -3/5 y -8/3 respectivamente. Halla la ecuación resuelta por él.",
+      "alternatives": [
+        "$5x^2 + 3x - 8 = 0$",
+        "$5x^2 + 3x - 40 = 0$",
+        "$5x^2 + 3x - 20 = 0$",
+        "$15x^2 + 9x - 40 = 0$",
+        "$15x^2 + 9x - 8 = 0$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Álgebra, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La edad de Judith está dado por el valor de E = 9x + y. Calcula dicha edad si se sabe que:\n\n$(1/6)^(2x-3) = 6^(x-1) and 27^(y^2) = 9^(3y)$; $y != 0$",
+      "alternatives": [
+        "15",
+        "18",
+        "12",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rosario tiene un terreno en el que las partes sombreadas de la figura la destinará para edificar una casa y cochera respectivamente. Calcula el área de las regiones sombreadas.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$24x^3 - 45x^2 + 12x$",
+        "$24x^3 + 45x^2 - 12x$",
+        "$24x^3 + 45x^2 + 12x$",
+        "$26x^3 + 40x^2 + 12x$",
+        "$20x^3 + 45x^2 + 12x$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/alg-lot-8-uncp-2018-1sel-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Álgebra, pregunta 9 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se tiene un terreno rectangular. ¿Cuál es la longitud L en su forma polinómica?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$3x - 4$",
+        "$9x + 2$",
+        "$9x - 2$",
+        "$3x + 4$",
+        "$9x - 4$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/alg-lot-8-uncp-2018-1sel-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Álgebra, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Aracelly le pregunta a Angie por su edad, ella le responde: \"Mi edad es la suma de los coeficientes del siguiente desarrollo\" $(x + y)^4$ ¿Cuál es la edad de Angie?",
+      "alternatives": [
+        "15",
+        "18",
+        "14",
+        "20",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Álgebra, pregunta 11 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el cuadrante AOC, cuyo radio mide 14 cm; la cuerda AB mide 12cm. ¿Cuánto mide la proyección de dicha cuerda (en cm) sobre AO?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(36,7)$",
+        "$frac(28,7)$",
+        "$frac(33,7)$",
+        "$frac(45,7)$",
+        "$frac(41,7)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/geo-lot-8-uncp-2018-1sel-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Geometría, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el punto M se localiza un monumento, un turista parte de A y el otro de B, la medida de los radios están dados en km. Calcula la razón: Longitud de la trayectoria de A hacia M / Longitud de la trayectoria de B hacia M.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(12,7)$",
+        "$frac(10,7)$",
+        "$frac(11,7)$",
+        "$frac(10,9)$",
+        "$frac(11,9)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/geo-lot-8-uncp-2018-1sel-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Geometría, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un croquis de una ciudad, muestra que las calles $L_7$, $L_1$, $L_2$ y $L_3$ son paralelas; de igual manera $L_4$ y $L_5$. Calcula el menor valor de los ángulos que forman las calles $L_6$ con $L_7$ y $L_5$ con $L_3$.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "30° y 50°",
+        "40° y 50°",
+        "30° y 40°",
+        "50° y 60°",
+        "40° y 60°"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/geo-lot-8-uncp-2018-1sel-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Geometría, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la casa de Milena, la cocina y la sala tienen la forma de polígonos regulares y el jardín tiene lados iguales. Identifica la forma del jardín y el valor de \"α\".\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "rectángulo; 130°",
+        "romboide; 132°",
+        "trapecio; 130°",
+        "rombo; 132°",
+        "cuadrado; 132°"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/geo-lot-8-uncp-2018-1sel-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Geometría, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una bicicleta tiene ruedas congruentes cuya plataforma $O P O_1$, es un triángulo equilátero. Calcula la razón: m(arco ABT) / m(arco MN)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(5,3)$",
+        "$frac(7,2)$",
+        "$frac(5,2)$",
+        "$frac(3,2)$",
+        "$frac(7,3)$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/geo-lot-8-uncp-2018-1sel-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Geometría, pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un examen, el estudiante Hugo no dispone de una calculadora para hallar el Sen75°, pero utiliza una estrategia para calcular dicho valor y lo hace satisfactoriamente. ¿Cuál es el valor encontrado por Hugo?",
+      "alternatives": [
+        "$frac(sqrt(2) - sqrt(6), 4)$",
+        "$frac(sqrt(6) + sqrt(2), 4)$",
+        "$frac(sqrt(6) - sqrt(2), 2)$",
+        "$frac(sqrt(6) - sqrt(2), 4)$",
+        "$frac(sqrt(6) + sqrt(2), 2)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Trigonometría, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Edy necesita transformar a producto la expresión: Sen5° − Sen7°, pero no recuerda la forma de hacerlo. Aquiles le indica que puede usar la relación:\n\n$\"Sen\"x - \"Sen\"y = 2 \"Cos\"(frac(x+y,2)) \"Sen\"(frac(x-y,2))$\n\nIndica el valor hallado por Edy",
+      "alternatives": [
+        "Cos6°.Sen1°",
+        "-2Cos6°Sen1°",
+        "2Cos6°Sen1°",
+        "Cos1°.Sen6°",
+        "-2Cos1°Sen6°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Trigonometría, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Shalin le dice a Basilio: \"la medida de un ángulo en radianes es $(n pi + frac(pi,3))$\". Basilio contesta: \"si, pero dicha medida en el sistema sexagesimal es 330°\". Halla el valor de \"n\"",
+      "alternatives": [
+        "$frac(3,2)$",
+        "$frac(2,3)$",
+        "3",
+        "2",
+        "$frac(2,5)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Trigonometría, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El terreno destinado para un parque en una urbanización del distrito de El Tambo tiene la forma:\n\n(Ver la figura adjunta.)\n\nCalcule el valor de: $E = (\"Sen\"B + \"Sen\"C)^2 + (\"Cos\"C - \"Cos\"B)^2$",
+      "alternatives": [
+        "4",
+        "3",
+        "1",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/trig-lot-8-uncp-2018-1sel-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Trigonometría, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los jardineros de la municipalidad de Concepción controlan el tamaño de los árboles para que no choquen con los cables de alta tensión y para ello lo podan periódicamente. Si la altura del árbol de la figura es la máxima posible y sabiendo que: $\"Cos\" alpha = frac(4,5)$, ¿hasta qué altura (en metros) puede permitirse que crezca?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6,6",
+        "7",
+        "7,7",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/trig-lot-8-uncp-2018-1sel-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Trigonometría, pregunta 22 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el gráfico se muestra la preferencia de un grupo de estudiantes por cuatro deportes: fútbol, voleibol, atletismo y natación.\n\n(Ver la figura adjunta.)\n\n¿Cuál es el ángulo que corresponde al sector de los que practican atletismo?",
+      "alternatives": [
+        "50°",
+        "60°",
+        "48°",
+        "75°",
+        "45°"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/est-lot-8-uncp-2018-1sel-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Estadística y Probabilidades, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el traslado de cajas de libros actúa una fuerza (F) de 120 N.\n\n(Ver la figura adjunta.)\n\nDetermina el valor de la aceleración (en m/s$\"\"^2$) del sistema. No hay ningún tipo de fricción.",
+      "alternatives": [
+        "20",
+        "10",
+        "30",
+        "15",
+        "40"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/fis-lot-8-uncp-2018-1sel-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Física, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Del sistema:\n\n(Ver la figura adjunta.)\n\nDetermina el trabajo neto (en J), si el bloque se desliza 10m. (Desprecie todo tipo de fricción)",
+      "alternatives": [
+        "150",
+        "50",
+        "100",
+        "250",
+        "350"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/fis-lot-8-uncp-2018-1sel-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Física, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Del gráfico:\n\n(Ver la figura adjunta.)\n\nDetermina: $abs(arrow(A) + arrow(B) + arrow(C) - arrow(D))$",
+      "alternatives": [
+        "3 cm",
+        "1",
+        "4",
+        "2",
+        "0,5"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/fis-lot-8-uncp-2018-1sel-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Física, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Desde qué altura \"H\" (en m) se ha soltado el coche de la montaña rusa? (Ver gráfico)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "15",
+        "5",
+        "20",
+        "25",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/fis-lot-8-uncp-2018-1sel-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Física, pregunta 35 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la reacción de combustión del metano:\n\n$\"CH\"_4 + \"O\"_2 -> \"CO\"_2 + \"H\"_2\"O\"$\n\n¿Cúal es la suma de los coeficientes de la reacción química balanceada?",
+      "alternatives": [
+        "4",
+        "5",
+        "7",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Química, pregunta 37 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a la materia que se encuentra en todo lugar, determina la verdad(V) o falsedad (F) de las siguientes proposiciones:\n\n- El Latón (Cu+Zn) es una mezcla homogénea.\n\n- El agua potable es una mezcla heterogénea.\n\n- El Silicio (Si) es un compuesto.\n\n- El $\"H\"_2\"SO\"_4$ es una sustancia simple.",
+      "alternatives": [
+        "FFVF",
+        "VFFF",
+        "VVVF",
+        "VVFF",
+        "FVFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Química, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una muestra de 10L de nitrógeno contenido en un sistema cilindro-émbolo se calienta a presión constante desde -13°C hasta 520 K. ¿Cuál es su volumen final?",
+      "alternatives": [
+        "25L",
+        "14L",
+        "18L",
+        "29L",
+        "20L"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Química, pregunta 39 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los no metales generalmente ganan electrones, tal como:\n\n$\"\"^35_17 X^(-1)$\n\n¿Qué proposiciones son correctas?\n\nI. Es un catión monovalente\n\nII. Posee 18 neutrones.\n\nIII. El núcleo atómico posee 17 protones.\n\nIV. Tiene 16 eletrones.",
+      "alternatives": [
+        "I - II",
+        "II - III",
+        "I - IV",
+        "III - IV",
+        "I - III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Química, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la tabla periódica, ¿a qué grupos pertenecen los elementos: C, D y E respectivamente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "VIIA - IA - VIIIA",
+        "IA - IIA - VIIIA",
+        "VIIA - IIA - VIIIA",
+        "IA - VIA - VIIIA",
+        "VIA - IIA - VIIIA"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/quim-lot-8-uncp-2018-1sel-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Química, pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Marco observa el reloj y dice son las 18h exactamente. Halla \"α\"\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "60°",
+        "270°",
+        "90°",
+        "180°",
+        "120°"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-63.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 63 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Julián acomoda fichas mumerada de la siguiente manera, formando una sucesión. Hallar \"a.b\"\n\n(4); (7); (10); (1a); (16); (1b)",
+      "alternatives": [
+        "20",
+        "27",
+        "42",
+        "18",
+        "56"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 64 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un profesor de primaria observa en el recreo que sus alumnos arman una pirámide con una característica especial, como se observa en la figura:\n\n(Ver la figura adjunta.)\n\nÉl decide sumar todos los números 4 de los cubos. ¿Cuál será el resultado de esa operación?",
+      "alternatives": [
+        "72",
+        "80",
+        "84",
+        "88",
+        "76"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-65.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 65 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, calcula la suma de los puntos de la base\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "12",
+        "18",
+        "15",
+        "19",
+        "20"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-69.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 69 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Charito ubica monedas de un sol como muestra la figura. ¿Cuántas monedas necesita Charito para ubicarlo tangencialmente a las que tiene?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "11",
+        "10",
+        "8",
+        "9",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-70.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 70 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Miguel, alumno de la UNCP, brinda su apoyo a su menor hermano Jesús para resolver la tarea del colegio, en un ejercicio se pide reconstruir la siguiente multiplicación:\n\n(Ver la figura adjunta.)\n\n¿Cúal es la suma de cifras del producto?",
+      "alternatives": [
+        "25",
+        "22",
+        "24",
+        "21",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-72.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 72 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Alejandra diseñó unos espejos con cuadrados de igual medida y semicircunferencias como se muestra:\n\n(Ver la figura adjunta.)\n\nElla observa que al bordear un cuadrado con las semicircunferencias se forma una sucesión conformada por las áreas de las superficies sombreadas. Determina el término general de la sucesión para \"n\" espejos.",
+      "alternatives": [
+        "$frac(2 pi L^2, 2n+1)$",
+        "$frac(2 pi L^2, n)$",
+        "$frac(pi L^2, 2^n)$",
+        "$frac(2 pi L^2, 2^(n+1))$",
+        "$frac(pi L^2, 2n)$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-75.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 75 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El sueldo mensual de un trabajador está definido por un triángulo cuyo vértice inferior izquierdo es $a$, el superior es $b$ y el inferior derecho es $c$, y cuyo valor es $a times b + c$.\n\nHalla el sueldo de Juan, si se sabe que su triángulo es el de la figura adjunta.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1265",
+        "1345",
+        "1260",
+        "1435",
+        "1534"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-8-uncp-2018-1sel-figures/rm-lot-8-uncp-2018-1sel-76.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 76 (clave B)"
     }
   ]
 }

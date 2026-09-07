@@ -1,3 +1,1013 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una urna se tienen fichas idénticas en cada una de las cuales está escrito un número de 3 cifras del sistema de base 3. La urna contiene a todos los números de 3 cifras del sistema ternario, sea $in$: el experimento aleatorio que consiste en extraer aleatoriamente una ficha de urna y X: la variable aleatoria discreta asociada, definida como la suma de cifras del número seleccionado. Halle la esperanza matemática de la variable aleatoria X.",
+      "alternatives": [
+        "3,2",
+        "3,3",
+        "3,4",
+        "3,5",
+        "3,6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene $overline(a b c)_((9)) = overline(c b a)_((7))$. Exprese el número en base 10. Dé como respuesta la suma de sus cifras de dicho número.",
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se sabe que $overline(a b c d)$ es igual al producto de tres números pares consecutivos y además $4(overline(a b)) = 5(overline(c d))$.\n\nCalcule el valor de $overline(a b c d)$ más 1936.",
+      "alternatives": [
+        "5962",
+        "5964",
+        "5966",
+        "5968",
+        "5970"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el conjunto de valores de $n$ ($n in NN$) de tal modo que la expresión\n\n$E(n) = (2n + 1)(3n + 2)$\n\nsea divisible por 6.",
+      "alternatives": [
+        "${6t - 1 slash t in NN}$",
+        "${6t - 2 slash t in NN}$",
+        "${6t - 3 slash t in NN}$",
+        "${6t - 4 slash t in NN}$",
+        "${6t - 5 slash t in NN}$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene que cercar, con alambre, un terreno rectangular cuyas dimensiones son 576 m y 848 m. Si los postes de soporte se colocarán equidistantes, la equidistancia debe ser un número entero de metros y el número de postes el menor posible. ¿Cuántos postes serán necesarios?",
+      "alternatives": [
+        "178",
+        "184",
+        "188",
+        "204",
+        "208"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones\n\nI. El producto de dos fracciones propias positivas, es una función propia.\n\nII. La suma de dos fracciones propias positivas, es también propia.\n\nIII. $forall n in NN, n > 1: frac(1, n - 1) + frac(1, n) + frac(1, n + 1)$ se convierte en un decimal periódico mixto.\n\nSeñale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F).",
+      "alternatives": [
+        "F F F",
+        "F V F",
+        "V F F",
+        "V F V",
+        "V V V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si los siguientes números son cuadrados perfectos: $overline(a a b b)$, $overline(1 c c c)$ y al multiplicar sus raíces cuadradas con $overline(x 0 y)$ se obtiene un cuadrado perfecto. Calcule $(x + y)$, sabiendo que $overline(a a b b)$ y $overline(1 c c c)$ son múltiplos de cuatro.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "14",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea la expresión $E(n) = n(n + 1)(n + 2)(n + 3) + 1$, con $n in NN$. Si $n_1, n_2, n_3, ...$ son todos los números naturales tales que $E(n_k)$ es divisible por 5 para todo $k$, ordenados de manera que $1 <= n_1 < n_2 < n_3 < ...$, entonces el valor de $n_1 + n_2 + n_3$ es",
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 8 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $[a_(i j)]_(4 times 4)$ con $a_(i j) = min{i, j}$. Determine $abs(A)$.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada una función lineal $f(x, y)$, donde $(x, y) in R$, siendo $R$ una región acotada y cerrada de $RR^2$, se pide maximizar $f(x, y)$ en $R$. Si adicionamos una inecuación más a las restricciones del problema, sea esta $a x + b y + c > 0$. Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F):\n\nI. La solución del problema no cambia si la nueva restricción (inecuación) genera un semiplano que contiene $R$.\n\nII. La solución del problema no existe si el semiplano que genera la nueva restricción no interseca a $R$.\n\nIII. La solución del problema existe si la recta $a x + b y + c = 0$ corta a $R$.",
+      "alternatives": [
+        "V V V",
+        "V F V",
+        "V F F",
+        "F V V",
+        "F F F"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una marca de producto de limpieza usada para obtener una solución es 25% ácida. Otra marca de producto de limpieza es 50% ácida. ¿Cuántos galones de cada producto de limpieza se deberán mezclar para producir 20 galones de una solución 40% ácida?",
+      "alternatives": [
+        "7 y 13",
+        "8 y 12",
+        "9 y 11",
+        "10 y 10",
+        "16 y 4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el sistema lineal\n\n$x + 2y - z = 4$\n\n$-3x + 5y + z = 5$\n\n$-4x + 3y + 2z = 1$\n\nSeñale la alternativa correcta, luego de determinar la verdad (V) o falsedad (F) de las siguientes proposiciones:\n\nI. El conjunto solución tiene infinitos puntos que constituyen una recta.\n\nII. El conjunto solución tiene infinitos puntos que constituyen un plano.\n\nIII. Existe solución que se puede expresar en la forma $(x, y, z) = (x_o + a t, y_o + b t, z_o + c t)$, $t in RR$. Donde $x_o, y_o, z_o, a, b, c$ son constantes.",
+      "alternatives": [
+        "V V V",
+        "V F F",
+        "F F V",
+        "V F V",
+        "F F F"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un granjero tiene un terreno donde siembra hortalizas. Cierto día decide cercar con tablones de madera una parte de su terreno para criar vacas. Las especificaciones que el granjero dio al carpintero fueron las siguientes: El corral debe ser rectangular con un perímetro de 1748 m y debe tener el área más grande posible, sea $A$ m$\"\"^2$ dicha área, hallar la suma de las cifras de $A$.",
+      "alternatives": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación:\n\n$2x^2 - n x = 2x + m$\n\nDetermine el valor de $4n + m - 5$, donde el conjunto solución es ${5}$.",
+      "alternatives": [
+        "15",
+        "17",
+        "19",
+        "21",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A un atleta que va a participar en una competencia, le informaron que cuando haya recorrido 12 km, le faltará recorrer menos de los $3 slash 5$ de la longitud total, y si recorre 16 km la distancia que le faltará recorrer es mayor que $1 slash 5$ de la longitud total.\n\nHalle la mayor longitud posible del recorrido de la competencia sabiendo que es un número entero. Dé como respuesta la suma de las cifras de esta longitud.",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F).\n\nI. Toda sucesión acotada, es convergente.\n\nII. Toda sucesión monótona, es convergente.\n\nIII. Toda sucesión convergente, es acotada.",
+      "alternatives": [
+        "V V V",
+        "V F F",
+        "F V V",
+        "F F V",
+        "F F F"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $[(p and q) or (not r)] and not p$ es verdadera. Indique la secuencia correcta después de determinar si la proposición compuesta es verdad (V) o falso (F).\n\nI. $[(not p or r) and q] or not p$\n\nII. $not p and (not r or q)$\n\nIII. $[p or (r and not q)] and r$",
+      "alternatives": [
+        "V F V",
+        "V V F",
+        "F F V",
+        "F V V",
+        "V V V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Considere la función $f: RR without {0} -> RR$ definida por $f(x) = abs(log_2 abs(x))$. Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F).\n\nI. Existen únicamente dos valores para $x$, que vuelven mínimo a la función $f(x)$.\n\nII. $f$ es creciente en los intervalos $chevron.l -1; 0 chevron.r$ y $chevron.l 1; +infinity chevron.r$.\n\nIII. $f$ es inyectiva en el intervalo $chevron.l 0; +infinity chevron.r$.",
+      "alternatives": [
+        "V V V",
+        "V V F",
+        "V F F",
+        "F F V",
+        "F F F"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la alternativa que presente la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F).\n\nI. Existen funciones sobreyectivas que son inyectivas.\n\nII. Existen funciones de $NN$ en $ZZ$ que son biyectivas.\n\nIII. La suma de dos funciones impares es impar.",
+      "alternatives": [
+        "V V V",
+        "V V F",
+        "F V F",
+        "F F V",
+        "F F F"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, P es punto medio de AB, Q es punto medio de BC y R es punto medio de AC, entonces $m angle A B C$ es:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "75°",
+        "80°",
+        "85°",
+        "90°",
+        "95°"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "uni-2019-2-figures/alg-uni-2019-2-mat-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo obtusángulo ABC, obtuso en B, se traza la bisectriz interior BM y las alturas AN y CQ, donde AN = $a$ y CQ = $b$. Calcule la medida de la altura trazada desde M en el triángulo BMC.",
+      "alternatives": [
+        "$a / (a + b)$",
+        "$b / (a + b)$",
+        "$(a b) / (a + b)$",
+        "$(2 a b) / (a + b)$",
+        "$a b$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación dimensionalmente correcta $E = x F v$, determine la dimensión de $x$ si E es energía, F es fuerza y v es velocidad.",
+      "alternatives": [
+        "M",
+        "L",
+        "T",
+        "ML",
+        "LT"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo se lanza hacia arriba desde una altura de 5 m. El tiempo que demora en llegar al suelo desde la altura máxima es de 3 s. Calcule aproximadamente el tiempo (en s) que demoró en alcanzar su altura máxima.\n\n$g = 9\",\"81$ m/s$\"\"^2$",
+      "alternatives": [
+        "2,5",
+        "2,6",
+        "2,7",
+        "2,8",
+        "2,9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula se mueve por una trayectoria circular de radio 8 m, con una rapidez que varía según $v = 2 + 2t$, donde t está en s y v en m/s. Determine el ángulo entre el vector de la aceleración total con su componente normal después de 1 s de iniciado el movimiento.",
+      "alternatives": [
+        "30°",
+        "60°",
+        "45°",
+        "53°",
+        "90°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un bloque de 4 kg de masa se encuentra apoyado sobre un plano inclinado que forma 37° con la horizontal, los coeficientes de rozamiento estático y cinético son 0,8 y 0,5 respectivamente. Una fuerza F que varía con el tiempo, de la forma $F = 4t + 10$ (F en N y t en s) actúa sobre el bloque tal como se indica en la figura. Determine aproximadamente la aceleración (en m/s$\"\"^2$) con la cual empezará a subir por el plano inclinado.\n\n$g = 9\",\"81$ m/s$\"\"^2$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1,23",
+        "2,35",
+        "3,64",
+        "4,82",
+        "5,17"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "uni-2019-2-figures/fis-uni-2019-2-fis-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El peso de un cuerpo, en la superficie de la tierra es de 625 N. Calcule aproximadamente a que altura (en km) su peso es de 576 N. Considere el radio de la tierra 6 370 km.\n\n$g = 9\",\"81$ m/s$\"\"^2$",
+      "alternatives": [
+        "65",
+        "165",
+        "265",
+        "365",
+        "465"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo se lanza hacia arriba con una rapidez de 3 m/s. Calcule la masa del cuerpo (en kg) si el trabajo que realiza la fuerza gravitatoria desde que se lanzó el cuerpo hasta que llega a su altura máxima es $-0\",\"9$ J.\n\n$g = 9\",\"81$ m/s$\"\"^2$",
+      "alternatives": [
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre una recta se colocan consecutivamente 10 partículas puntuales e idénticas, separadas una distancia de 1 m una de la otra. Sobre la recta se acerca otra partícula idéntica a las anteriores con una rapidez de 10 m/s. Calcule el tiempo (en s) que transcurre desde que se produce el primer choque hasta el último si todos los choques son completamente inelásticos.",
+      "alternatives": [
+        "5",
+        "5,1",
+        "5,2",
+        "5,3",
+        "5,4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un péndulo simple tiene un periodo T cuando oscila en la tierra. Cuando se pone a oscilar en un planeta B, el periodo resulta ser $T slash 2$. Calcule el cociente de la gravedad de la tierra entre la gravedad del planeta B, si la longitud del péndulo es $ell$.",
+      "alternatives": [
+        "$1 / 4$",
+        "$1 / 2$",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El nivel de sonido a 2 m de una fuente sonora que emite ondas acústicas homogéneamente en todas las direcciones es 100 dB. La potencia de la fuente (en W) es:",
+      "alternatives": [
+        "$1 / (16 pi) times 10^(-2)$",
+        "$(16 pi) / 3 times 10^(-2)$",
+        "$8 / 3 pi times 10^(-2)$",
+        "$8 pi times 10^(-2)$",
+        "$16 pi times 10^(-2)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un tubo en forma de “U” contiene mercurio. Calcule la altura (en cm) de agua que se debe verter en una rama del tubo para que el mercurio se eleve 15 mm de su nivel inicial.\n\nDensidad del mercurio: $13\",\"6$ g/cm$\"\"^3$",
+      "alternatives": [
+        "13,6",
+        "27,2",
+        "40,8",
+        "54,4",
+        "81,6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un matraz de vidrio que se llena completamente de mercurio a 20 °C, se calienta hasta 100 °C y se derrama 6 cm$\"\"^3$ de mercurio. Calcule aproximadamente la capacidad del matraz (en cm$\"\"^3$) que tenía al inicio. El coeficiente de dilatación lineal de vidrio del matraz es $0\",\"4 times 10^(-5)$ $degree C^(-1)$ y del mercurio es $6 times 10^(-5)$ $degree C^(-1)$",
+      "alternatives": [
+        "143",
+        "196",
+        "223",
+        "311",
+        "446"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una masa de hielo de 600 g a 0 °C se coloca sobre una estufa, que le suministra calor a razón de 200 J cada segundo, determine aproximadamente el tiempo (en minutos) que demora el hielo en derretirse completamente. Asuma que todo el calor suministrado es absorbido por el hielo.\n\nCalor latente de fusión del agua $L = 3\",\"33 times 10^5$ J/kg",
+      "alternatives": [
+        "15,2",
+        "16,6",
+        "17,8",
+        "20,2",
+        "21,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la diferencia de potencial (en V) entre los terminales a y d, del arreglo de condensadores mostrado en la figura, si la diferencia de potencial entre los puntos b y c es de 10 V.\n\n$C_1 = 6 mu F$, $C_2 = 7 mu F$, $C_3 = 5 mu F$ y $C_4 = 2 mu F$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "30",
+        "60",
+        "90",
+        "120",
+        "150"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "uni-2019-2-figures/fis-uni-2019-2-fis-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuando se conectan 2 resistencias $R_1$ y $R_2$ en serie a una fuente $V_0 = 24$ V, por las resistencias circula una corriente $I_1 = 0\",\"6$ A. Si las resistencias se conectan en paralelo con la misma fuente $V_0$, la corriente total es $I_2 = 3\",\"2$ A, determine el valor de cada resistencia (en $Omega$).",
+      "alternatives": [
+        "20 y 20",
+        "10 y 30",
+        "40 y 10",
+        "20 y 35",
+        "10 y 35"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una carga de $1 mu C$ y 0,1 mg de masa se mueve por una trayectoria circular en el plano XY, debido a la acción de un campo magnético de 1 T en la dirección del eje Z. Determine el radio de la órbita circular, en m, si la rapidez de la partícula es de 100 m/s.",
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un rayo de luz incide sobre la cara de un prisma, cuya sección transversal es un triángulo equilátero ABC, tal como se indica en la figura; su índice de refracción es $n = 1\",\"5$.\n\nSi se observa que la trayectoria del rayo de luz en el interior del prisma es paralela al segmento AC, entonces se cumple:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$sin alpha = 2 sin beta$",
+        "$sin alpha = 1\",\"5 sin beta$",
+        "$1\",\"5 sin alpha = sin beta$",
+        "$sin alpha = sin beta$",
+        "$sin alpha = cos beta$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "uni-2019-2-figures/fis-uni-2019-2-fis-17.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un alambre homogéneo de 50 g de masa y 1 m de longitud conduce una corriente de 2 A en la dirección positiva del eje X. Determine el campo magnético (en T) mínimo necesario para levantar verticalmente este alambre.\n\n$g = 9\",\"81$ m/s$\"\"^2$\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$-0\",\"122 k$",
+        "$-0\",\"245 k$",
+        "$0\",\"245 k$",
+        "$0\",\"490 hat(j)$",
+        "$-0\",\"490 hat(i)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "uni-2019-2-figures/fis-uni-2019-2-fis-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un objeto de 3 cm de alto está situado a 10 cm delante de un espejo convexo, cuyo radio de curvatura es 6 cm. Determine aproximadamente el tamaño (en cm) de la imagen formada.",
+      "alternatives": [
+        "0,25",
+        "0,69",
+        "1,28",
+        "2,61",
+        "3,15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule aproximadamente la frecuencia umbral (en $10^(15)$ Hz) del silicio, si su función de trabajo es 4,8 e V.\n\n$1 e V = 1\",\"602 times 10^(-19)$ J    $h = 6\",\"626 times 10^(-34)$ J s",
+      "alternatives": [
+        "1,16",
+        "2,16",
+        "3,16",
+        "4,16",
+        "5,16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuáles de los siguientes fenómenos presentados son físicos?\n\nI. Metabolismo de los alimentos.\n\nII. Volatilidad del éter metílico.\n\nIII. Oxidación del metano por acción del oxígeno molecular.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El cloruro de magnesio, $\"MgCl\"_2$, es un compuesto que se utiliza como desecante de solventes orgánicos. En el laboratorio, se obtiene a partir de la siguiente reacción química:\n\n$\"Mg\"_(\"(s)\") + 2 \"HCl\"_(\"(ac)\") -> \"MgCl\"_(2\"(ac)\") + \"H\"_(2\"(g)\")$\n\nRespecto a las siguientes proposiciones:\n\nI. El magnesio en el $\"MgCl\"_2$ es isoelectrónico al neón.\n\nII. El cloro en el $\"MgCl\"_2$ presenta una configuración electrónica $[\"Ne\"] 3s^2 3p^6$.\n\nIII. El magnesio atómico presenta una configuración electrónica $[\"Ne\"] 3s^2 3p^5$.\n\nSon correctas:\n\nNúmeros atómicos: Ne = 10; Mg = 12; Cl = 17",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene un elemento X, que al reaccionar con el oxígeno forma el compuesto XO y al reaccionar con el ácido clorhídrico forma el compuesto $\"XCl\"_2$. Asimismo, la configuración electrónica de X en ambos compuestos es igual a la del neón.\n\nAl respecto, indique la alternativa correcta, después de determinar sí las proposiciones son verdaderas (V) o falsas (F):\n\nI. El elemento X se encuentra en el tercer período de la Tabla Periódica Moderna.\n\nII. El átomo del elemento X presenta 8 electrones de valencia.\n\nIII. El elemento X es más electronegativo que el cloro.\n\nNúmeros atómicos: Ne = 10; Cl = 17",
+      "alternatives": [
+        "VFV",
+        "VFF",
+        "VVF",
+        "FVF",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si A representa a un átomo central con dos pares de electrones no compartidos y B representa a un átomo unido por un enlace simple al átomo A, ¿cuál es la geometría molecular de la especie $\"AB\"_2$?",
+      "alternatives": [
+        "Lineal",
+        "Angular",
+        "Plana trigonal",
+        "Pirámide trigonal",
+        "Tetraédrica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 24 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique el estado de oxidación de cada uno de los elementos subrayados en las siguientes especies químicas:\n\n$underline(\"Ba\")\"O\" ; \"K\"_2underline(\"Cr\")_2\"O\"_7 ; \"H\"_3underline(\"P\")\"O\"_4$\n\nNúmeros atómicos:\n\nH = 1; P = 15; O = 16; K = 19; Cr = 24; Ba = 56",
+      "alternatives": [
+        "+1, +6, +5",
+        "+2, +6, -5",
+        "+1, -6, +5",
+        "+2, +3, +5",
+        "+2, +6, +5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una pastilla de aspirina contiene 0,5 gramos de ácido acetilsalicílico ($\"C\"_9\"H\"_8\"O\"_4$). Teniendo en cuenta la siguiente reacción química balanceada:\n\n$\"C\"_6\"H\"_4\"OHCOOH\"_(\"(s)\") + \"CH\"_3\"COOH\"_(\"(l)\") -> \"C\"_9\"H\"_8\"O\"_(4\"(s)\") + \"H\"_2\"O\"_(\"(l)\")$\n\n¿Cuántas pastillas se obtendrán con 69 gramos de ácido salicílico ($\"C\"_6\"H\"_4\"OHCOOH\"$) y 69 gramos de ácido acético ($\"CH\"_3\"COOH\"$)?\n\nMasas atómicas: H = 1; C = 12; O = 16",
+      "alternatives": [
+        "138",
+        "180",
+        "317",
+        "414",
+        "497"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para analizar el poder calorífico de una mezcla formada por 60 moles de propano y 40 moles de butano, se llevan a cabo las siguientes reacciones de combustión (sin balancear), en un reactor de volumen constante:\n\n$\"C\"_3\"H\"_(8\"(g)\") + \"O\"_(2\"(g)\") -> \"CO\"_(2\"(g)\") + \"H\"_2\"O\"_(\"(g)\")$\n\n$\"C\"_4\"H\"_(10\"(g)\") + \"O\"_(2\"(g)\") -> \"CO\"_(2\"(g)\") + \"H\"_2\"O\"_(\"(g)\")$\n\nPara asegurar la combustión completa, el reactor contiene 20 % en exceso de oxígeno. Si al finalizar la reacción el número de moles en el reactor aumentó en 5 %, y considerando el mismo rendimiento para ambas reacciones, calcule el rendimiento (%) de las reacciones.\n\nMasas atómicas: H = 1; C = 12; O = 16",
+      "alternatives": [
+        "32,1",
+        "43,9",
+        "66,4",
+        "89,5",
+        "99,9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se muestra el diagrama de fases de una sustancia.\n\nRespecto a las siguientes proposiciones:\n\nI. En el punto A, las 3 fases se encuentran en equilibrio.\n\nII. En el punto X, la sustancia se encuentra en el estado sólido.\n\nIII. El cambio en el cual la sustancia pasa del estado X al estado Y se denomina congelación.\n\nSon correctas:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "uni-2019-2-figures/quim-uni-2019-2-qui-28.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a los sólidos, indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F)\n\nI. Considerando el ordenamiento de las partículas, los sólidos se clasifican en cristalinos y amorfos.\n\nII. En un sólido amorfo las partículas no presentan un ordenamiento geométrico.\n\nIII. En función a las fuerzas de enlace, los sólidos cristalinos pueden ser: iónicos, metálicos, covalentes atómicos y covalentes moleculares.",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "FVV",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un laboratorio se desarrolla el análisis químico para determinar la masa contenida de $\"KClO\"_3$ en cierto mineral. Para ello se calienta el mineral y se produce la siguiente reacción:\n\n$2 \"KClO\"_(3\"(s)\") -> 2 \"KCl\"_(\"(s)\") + 3 \"O\"_(2\"(g)\")$\n\nEl $\"O\"_(2\"(g)\")$ generado se mide y ocupa un volumen de 0,67 L a 20 °C y 756 mmHg. Calcule la masa (g) de $\"KClO\"_3$ contenidos en la muestra mineral.\n\nMasas molares (g/mol):\n\n$\"O\"_2 = 32$; $\"KClO\"_3 = 122\",\"5$\n\n$R = 62\",\"4$ mmHg$dot$L / mol$dot$K",
+      "alternatives": [
+        "1,23",
+        "1,85",
+        "2,26",
+        "2,77",
+        "2,92"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El ácido acético puro, $\"CH\"_3\"COOH\"$, es un líquido que tiene una densidad de 1,049 g/mL a 25 °C. Calcule la concentración molar de una solución que resulta al mezclar 10 mL de ácido acético con suficiente cantidad de agua para obtener 125 mL de solución.\n\nMasa molar de $\"CH\"_3\"COOH\" = 60$ g/mol",
+      "alternatives": [
+        "0,40",
+        "0,70",
+        "0,85",
+        "1,40",
+        "2,40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un recipiente de 5 L se introduce una mezcla de 2 moles de $\"N\"_(2\"(g)\")$ y 6 moles de $\"H\"_(2\"(g)\")$, llevándose a cabo la siguiente reacción química a una determinada temperatura:\n\n$\"N\"_(2\"(g)\") + 3 \"H\"_(2\"(g)\") harpoons.rtlb 2 \"NH\"_(3\"(g)\")$\n\nSi al llegar al equilibrio se determina que hay 0,46 moles de $\"NH\"_(3\"(g)\")$, determine el valor de Kc a la misma temperatura.",
+      "alternatives": [
+        "$1\",\"2 times 10^(-4)$",
+        "$1\",\"2 times 10^(-3)$",
+        "$2\",\"0 times 10^(-3)$",
+        "$2\",\"0 times 10^(-2)$",
+        "$2\",\"0 times 10^(-1)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un reactor químico de 5 L se tiene una mezcla en equilibrio formada por 3,22 g de NOBr; 3,08 g de NO y 4,19 de $\"Br\"_2$. Calcule el valor de Kp para el sistema en equilibrio a 100,4 °C:\n\n$2 \"NOBr\"_(\"(g)\") harpoons.rtlb 2 \"NO\"_(\"(g)\") + \"Br\"_(2\"(g)\")$\n\nMasas molares (g/mol):\n\nNOBr = 109,9; NO = 30; $\"Br\"_2$ = 159,8\n\n$R = 0\",\"082$ atm$dot$L/mol$dot$K",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A 100 mL de una solución de $\"HCl\"_(\"(ac)\")$ 1,0 M se le adicionan 100 mL de solución de NaOH 0,5 M. ¿Cuál es el pH de la mezcla resultante?",
+      "alternatives": [
+        "$log 2$",
+        "$log 3$",
+        "$log 4$",
+        "$log 5$",
+        "$log 6$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene las siguientes reacciones globales en las celdas galvánicas A y B, respectivamente:\n\n$\"Cl\"_(2\"(g)\") + 2 \"I\"^-_(\"(ac)\") -> 2 \"Cl\"^-_(\"(ac)\") + \"I\"_(2\"(s)\")$ (celda A)\n\n$\"Ni\"_(\"(s)\") + 2 \"Ce\"^(4+)_(\"(ac)\") -> \"Ni\"^(2+)_(\"(ac)\") + 2 \"Ce\"^(3+)_(\"(ac)\")$ (celda B)\n\nA continuación se presentan las siguientes proposiciones:\n\nI. El voltaje de la celda A es mayor que la de B.\n\nII. En la celda A la reacción de oxidación de los iones yoduro es espontánea.\n\nIII. El cátodo de la celda B es inerte.\n\nPotenciales estándar de reducción (en voltios)\n\n$E^degree (\"Cl\"_2\\/\"Cl\"^-) = +1\",\"359$\n\n$E^degree (\"I\"_2\\/\"I\"^-) = +0\",\"536$\n\n$E^degree (\"Ni\"^(2+)\\/\"Ni\") = -0\",\"280$\n\n$E^degree (\"Ce\"^(4+)\\/\"Ce\"^(3+)) = +1\",\"610$\n\nSon correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 36 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una de las semireacciones de la electrólisis del agua es:\n\n$2 \"H\"_2\"O\"_(\"(l)\") -> \"O\"_(2\"(g)\") + 4 \"H\"^+_(\"(ac)\") + 4 e^-$\n\nSi se recogen 0,076 L de $\"O\"_2$ a 25 °C y 755 mmHg, ¿qué carga eléctrica (Faraday) tuvo que pasar a través de la solución?\n\n$R = 0\",\"082$ atm$dot$L/mol$dot$K\n\n$F = 96 space 500$ Coulomb/mol $e^-$",
+      "alternatives": [
+        "0,0035",
+        "0,0062",
+        "0,0123",
+        "0,0242",
+        "0,0361"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los compuestos orgánicos presentan isomería. Al respecto, indique la secuencia correcta después de determinar si las proposiciones son verdaderas (V) o falsas (F):\n\nI. Los alcanos presentan isomería de cadena.\n\nII. El 1,2-dimetilciclobutano y el 1,3-dimetilciclobutano son isómeros geométricos.\n\nIII. El etanol y el éter metílico son isómeros de función.",
+      "alternatives": [
+        "FFV",
+        "VFF",
+        "FVF",
+        "VVV",
+        "VFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a la lluvia ácida, indique la secuencia correcta después de determinar si las proposiciones dadas son verdaderas (V) o falsas (F):\n\nI. Los óxidos de azufre y los de nitrógeno originan las lluvias ácidas.\n\nII. Todos los gases expulsados por las industrias al estar en contacto con el agua de lluvia se transforman en lluvia ácida.\n\nIII. La lluvia ácida es corrosiva tanto para metales como materiales de construcción calcáreos.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La corrosión es el deterioro electroquímico de un material debido a la interacción de éste con su entorno. Con respecto a este fenómeno, determine la secuencia correcta después de determinar si las proposiciones son verdaderas (V) o falsas (F):\n\nI. El zinc se corroe en presencia de una solución de Cu(II).\n\nII. La barra de plomo no se corroe cuando se coloca en una solución de Fe(II).\n\nIII. La barra de cobre se corroe cuando se coloca en una solución de Fe(II).\n\nPotenciales estándar de reducción (en voltios):\n\n$E^degree (\"Zn\"^(2+)\\/\"Zn\") = -0\",\"76$\n\n$E^degree (\"Cu\"^(2+)\\/\"Cu\") = +0\",\"34$\n\n$E^degree (\"Fe\"^(2+)\\/\"Fe\") = -0\",\"44$\n\n$E^degree (\"Pb\"^(2+)\\/\"Pb\") = -0\",\"13$",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 40 (clave C)"
+    }
+  ]
 }
