@@ -11,6 +11,7 @@ import { archiveUnprintableQuestions } from "../scripts/archive-unprintable-ques
 import { normalizeCollectedContent } from "../scripts/normalize-collected-content";
 import { stripSeededSolutionTails } from "../scripts/strip-seeded-solution-tails";
 import { seedCollectedQuestions } from "./seed-collected-questions";
+import { refileSeededLotQuestions } from "./refile-seeded-lot-questions";
 import { retireSupersededImageQuestions } from "./retire-superseded-image-questions";
 import { seedLotQuestions } from "./seed-lot-questions";
 import {
@@ -1793,6 +1794,17 @@ export async function seed(): Promise<void> {
     retirement.skipped.forEach(({ sourceName, reason }) => {
       console.log(`[seed] kept the image of "${sourceName}": ${reason}`);
     });
+    // Same shape, the other axis: a lot entry whose course and topic were
+    // corrected after the question was already seeded. The seeder cannot carry
+    // that either, so the lot file is the filing's source of truth and this
+    // reconciles the bank to it on every boot.
+    const refiled = await refileSeededLotQuestions();
+    if (refiled.moved > 0) {
+      console.log(`[seed] re-filed ${refiled.moved} questions onto the topic their lot now names.`);
+    }
+    refiled.unresolved.forEach((pair) =>
+      console.log(`[seed] a lot names "${pair}", which the taxonomy does not have — left alone.`),
+    );
     // Re-derives stored content from the JSON sources for rows seeded BEFORE
     // the ingest rules existed — Typst escaping, and the solution tails the
     // scrapes glued onto alternatives. Runs on every boot, like the seeder
