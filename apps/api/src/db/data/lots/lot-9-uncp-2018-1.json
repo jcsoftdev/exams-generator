@@ -909,6 +909,410 @@
       "correctAnswer": "4",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
       "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los óxidos de azufre son gases contaminantes del aire. Si se tiene 40 g de azufre y 48 g de oxígeno, ¿cuántos gramos de $\"SO\"_3$ se obtiene? (P.A. S = 32, O = 16)",
+      "alternatives": [
+        "90",
+        "96",
+        "60",
+        "80",
+        "56"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la figura con gases de efecto invernadero representados por x, y, z.",
+      "alternatives": [
+        "$\"N\"_2$, $\"O\"_3$, $\"SO\"_x$",
+        "CFC, $\"SO\"_x$, $\"NO\"_x$",
+        "$\"CH\"_4$, HF, He",
+        "DDT, CFC, $\"NO\"_x$",
+        "CFC, $\"N\"_2$, $\"SO\"_x$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-9-uncp-2018-1-figures/ecol-lot-9-uncp-2018-1-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Ecología, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la verdad (V) o falsedad (F) de las siguientes proposiciones relacionadas a los diferentes aspectos del autoconocimiento.\n\nI. La identidad personal se refiere a las características y cualidades individuales.\n\nII. La heterenomía significa estar regidos por las reglas que nos imponen otros.\n\nIII. Ser auténtico es ser y mostrarse tal como uno es.",
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "VVV",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Psicología, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos argumentativos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO Muchas empresas pequeñas quiebran durante el primer año de actividad o antes de los cincos años. Esto se debe a varias causas que comprometen su estabilidad. Una de ellas es la mala ubicación. Debe tomarse en cuenta la facilidad de estacionamiento para los clientes, las especialidades propias de la zona, los niveles de seguridad del lugar, la cantidad de personas que lo transitan o los niveles de accesibilidad. Un segundo factor se relaciona con los errores en política de personal. Las fallas de selección, capacitación, motivación, salarios, premios y castigos llevan a disminuir la productidad de los empleados y la lealtad de estos con la empresa. Finalmente, las falencias en materia de créditos y cobranzas son el tercer motivo de fracaso en la pequeña empresa. ¿Qué tipo de argumentos presenta el texto?",
+      "alternatives": [
+        "Argumento emocional",
+        "Argumento de autoridad",
+        "Argumentación lógica",
+        "Argumentación por analogía",
+        "Argumentación por ejemplo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO Muchas empresas pequeñas quiebran durante el primer año de actividad o antes de los cincos años. Esto se debe a varias causas que comprometen su estabilidad. Una de ellas es la mala ubicación. Debe tomarse en cuenta la facilidad de estacionamiento para los clientes, las especialidades propias de la zona, los niveles de seguridad del lugar, la cantidad de personas que lo transitan o los niveles de accesibilidad. Un segundo factor se relaciona con los errores en política de personal. Las fallas de selección, capacitación, motivación, salarios, premios y castigos llevan a disminuir la productidad de los empleados y la lealtad de estos con la empresa. Finalmente, las falencias en materia de créditos y cobranzas son el tercer motivo de fracaso en la pequeña empresa. Del texto se infiere:",
+      "alternatives": [
+        "No existe organización en las empresas pequeñas.",
+        "Las empresas pequeñas no son buenas.",
+        "Las empresas pequeñas no están bien gerenciadas.",
+        "Las empresas pequeñas ganan muy poco.",
+        "Las empresas pequeñas mueren rapidamente."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 52 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO CHAT Un chat es un sistema que permite la comunicación simultánea, en tiempo real, entre dos o más personas a través de internet. Esto supone que las personas conectadas a un chat ven las opiniones del resto de los participantes automáticamente y pueden responder de la misma manera. Para acceder a un chat sólo es necesario estar conectado a internet y conectarse a uno de los servidores que ofrecen este servicio. Dentro de un chat suelen existir diversos canales, que son zonas de charla dedicadas a un tema específico. Así podemos encontrar canales de medicina, de música, de aventura, etc. Hoy se ha extendido el uso de la palabra chat, que es inglesa y significa \"charlar\". La intención del texto es:",
+      "alternatives": [
+        "Resaltar la importancia de la comunicación simultánea.",
+        "Informar el papel de la internet en nuestros tiempos.",
+        "Informar el rol de la internet.",
+        "Informar el rol del chat en nuestros tiempos.",
+        "Informar el papel de la comunicación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 56 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple past tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: Last summer my family \\_\\_\\_ to Ayacucho, they \\_\\_\\_\\_ 3 days there.",
+      "alternatives": [
+        "go/were",
+        "go/was",
+        "went/was",
+        "was/were",
+        "went/were"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 58 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la gráfica que continúa en la siguiente secuencia?",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "alternativeImagePaths": [
+        "lot-9-uncp-2018-1-alternatives/rm-lot-9-uncp-2018-1-63-a.png",
+        "lot-9-uncp-2018-1-alternatives/rm-lot-9-uncp-2018-1-63-b.png",
+        "lot-9-uncp-2018-1-alternatives/rm-lot-9-uncp-2018-1-63-c.png",
+        "lot-9-uncp-2018-1-alternatives/rm-lot-9-uncp-2018-1-63-d.png",
+        "lot-9-uncp-2018-1-alternatives/rm-lot-9-uncp-2018-1-63-e.png"
+      ],
+      "imagePath": "lot-9-uncp-2018-1-figures/rm-lot-9-uncp-2018-1-63.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 63 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El incremento de áreas forestales durante los últimos 10 años en Uruguay resultaba un número natural elevado al cuadrado, cuya suma era siempre números impares consecutivos, tal como se muestra en el arreglo:\n\n$1^2 = 1$\n\n$2^2 = 1 + 3$\n\n$3^2 = 1 + 3 + 5$\n\n$4^2 = 1 + 3 + 5 + 7$\n\n$5^2 = 1 + 3 + 5 + 7 + 9$\n\n$dots.v$\n\n$10^2 = 1 + 3 + 5 + 7 + dots + n$\n\nCalcule el valor de \"n\"",
+      "alternatives": [
+        "27",
+        "23",
+        "19",
+        "21",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 64 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la definición del operador \"◇\" planteado por José:\n\n$(a diamond b) = (a x + b)/x$\n\nCalcule \"x\" en:\n\n$(a diamond b)/x + (b diamond a)/x = (2 (a diamond b))/1$\n\nutilizando la definición del operador \"◇\"",
+      "alternatives": [
+        "1",
+        "$-a$",
+        "$a$",
+        "$a + b$",
+        "$a - b$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 65 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un salón de clases, la profesora de matemática cuenta con 200 pelotas de colores azules y blancas. A uno de sus estudiantes le dice lo siguiente: \"de todas las pelotas menos el doble de las azules es tres veces las azules\". ¿Cuántas pelotas blancas hay?",
+      "alternatives": [
+        "180",
+        "170",
+        "150",
+        "140",
+        "160"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 66 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Roberto sale de su casa cuando el reloj marca las 21 h $overline(a b)$ min, sabiendo que $theta = 94 degree$, calcula \"a + b\"",
+      "alternatives": [
+        "6",
+        "4",
+        "7",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-9-uncp-2018-1-figures/rm-lot-9-uncp-2018-1-67.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 67 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una fábrica de gaseosas, se envasa primero la sexta parte del contenido de uno de los tanques de almacenamiento, luego 1/4 de lo que queda. ¿Qué fracción de lo que queda se debe envasar para que aún sobre los 3/8 del tanque?",
+      "alternatives": [
+        "$1/5$",
+        "$3/5$",
+        "$4/5$",
+        "$2/5$",
+        "$5/8$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Vilma dibuja la figura, donde existen $overline(a b)$ triángulos en total.\n\nCalcula \"a + b\".",
+      "alternatives": [
+        "4",
+        "10",
+        "5",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-9-uncp-2018-1-figures/rm-lot-9-uncp-2018-1-69.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 69 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Gabriel le pide hallar a sus estudiantes el valor de $a^2 + b^2$. Si se tiene la progresión aritmética:\n\n$sqrt(overline(a b))$; 14; $overline(b a) + 1$; 24; ...\n\n¿Cuál es la respuesta correcta de los estudiantes?",
+      "alternatives": [
+        "5",
+        "50",
+        "82",
+        "26",
+        "65"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 71 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Roberto está apostando en un casino, si pierde el 40% del dinero que tiene y gana el 30% de lo que le queda, en total pierde S/. 220. ¿Cuánto tiene Roberto?",
+      "alternatives": [
+        "S/. 1500",
+        "S/. 1000",
+        "S/. 900",
+        "S/. 1200",
+        "S/. 1800"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 72 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rigoberto reparte sacos de azúcar a los almacenes, en su primera descarga deja 2/3 de los sacos que lleva en su camión, después descarga 20 sacos en su segunda descarga y 20 sacos más en la última descarga, quedándole al final la cuarta parte de su carga original. ¿Cuántos sacos de azúcar llevaba antes de su primera descarga?",
+      "alternatives": [
+        "450",
+        "500",
+        "550",
+        "560",
+        "480"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 73 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una tarde las agujas de un reloj de la biblioteca de la ciudad marcan como se muestra en la figura.\n\n¿Qué hora es en ese instante?",
+      "alternatives": [
+        "13h 42 6/7 min",
+        "13h 42 min",
+        "13h 40 1/7 min",
+        "13h 42 4/7 min",
+        "13h 42 3/7 min"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-9-uncp-2018-1-figures/rm-lot-9-uncp-2018-1-74.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 74 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuando Tania nació, Yolanda tenía la cuarta parte de la edad que tiene ahora. ¿Cuál será la edad de Tania cuando Yolanda tenga el doble de la edad que Tania tiene, si en ese entonces sus edades sumarán 55 años?",
+      "alternatives": [
+        "20",
+        "35",
+        "30",
+        "40",
+        "25"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 75 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un tren con 240 pasajeros recorre 150 km. Los pasajeros de primera clase pagan 8 céntimos por kilómetro y los de segunda clase 4 céntimos por kilómetro. ¿Cuántos pasajeros viajaban en segunda clase, si después del viaje se ha recaudado S/. 2 040?",
+      "alternatives": [
+        "180",
+        "100",
+        "140",
+        "240",
+        "60"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 76 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la operación matemática: $m \\# n = sqrt(m (n \\# m))$\n\n$m \\# n > 0$. Halla \"x\" en: $16 \\# x = 8$",
+      "alternatives": [
+        "5",
+        "6",
+        "3",
+        "2",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 77 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "José diseña el siguiente arreglo numérico:\n\n$F_1 : 2$\n\n$F_2 : 4 space 2 space 4$\n\n$F_3 : 6 space 2 space 2 space 2 space 6$\n\n$F_4 : 8 space 2 space 2 space 2 space 2 space 2 space 8$\n\n$dots.v$\n\nLa suma de los términos en $F_(20)$ es $overline(a b c)$\n\nCalcula: $a + b + c$",
+      "alternatives": [
+        "10",
+        "9",
+        "7",
+        "5",
+        "13"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 78 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Manuel, al jalar la cuerda, hace girar la rueda \"A\" en sentido horario.\n\n¿Cuántas ruedas en total giran en sentido horario?",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-9-uncp-2018-1-figures/rm-lot-9-uncp-2018-1-80.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 80 (clave C)"
     }
   ]
 }

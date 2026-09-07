@@ -592,6 +592,618 @@
       "correctAnswer": "4",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
       "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Geometría, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo mostrado, determina $x$.",
+      "alternatives": [
+        "$sqrt(3)$",
+        "$1 + sqrt(6)$",
+        "$2$",
+        "$3$",
+        "$sqrt(3) + 1$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/geo-2023-2-a2-geo-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=46:admisión-uncp-2023-ii-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2023-II, Área II, Geometría, pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En cierto átomo el número de protones es 4 unidades menor que el número de neutrones. Si el número de masa es 70, determina el número atómico.",
+      "alternatives": [
+        "30",
+        "66",
+        "33",
+        "70",
+        "36"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Química, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la solución principal de $x$ en la siguiente ecuación trigonométrica: $ \"sen\" 3x + sqrt(3) \"cos\" 3x - 2 = 0 $",
+      "alternatives": [
+        "10°",
+        "5°",
+        "20°",
+        "15°",
+        "30°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Trigonometría, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la circunferencia trigonométrica determina el área de la región sombreada: (T: punto de tangencia)",
+      "alternatives": [
+        "$1/2 \"sec\" theta . \"tan\" theta$",
+        "$1/2 \"tan\" theta . \"cot\" theta$",
+        "$\"sec\" theta . \"csc\" theta$",
+        "$2 \"ctg\" theta$",
+        "$1/2 \"sec\" theta . \"csc\" theta$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/trig-2024-ps-a2-tri-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Trigonometría, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De la figura, determina la ecuación de la recta $L_2$, si $arrow(L_1) parallel arrow(L_2)$",
+      "alternatives": [
+        "$3x - y - 1 = 0$",
+        "$2x + 3y - 11 = 0$",
+        "$4x - y - 3 = 0$",
+        "$2x - 3y - 11 = 0$",
+        "$3x - 2y - 11 = 0$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/trig-2024-ps-a2-tri-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Trigonometría, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea el polinomio: $ P(x; y) = 4x^(m+2) y^(n+1) + 5x^(m+3) y^(2n+2) + 7x^(m+1) y^(n+2) $ Calcula el valor de $m+n$, si el $\"GA\" = 12$ y $\"GR\"_x = 8$",
+      "alternatives": [
+        "9",
+        "7",
+        "6",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Álgebra, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De los polinomios: $ P(x) = x^2 + 3m x + 8 $ $ Q(x) = x^2 + 4m x + 12 $ Se sabe que tienen un factor en común, determina el valor de $m$.",
+      "alternatives": [
+        "-2",
+        "3",
+        "2",
+        "-1",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=48:admisión-primera-seleccion-uncp-2024-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Primera Selección UNCP 2024, Área II, Álgebra, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un hospital, se estudia la variable $x$ que indica el número de médicos mujeres que se pueden programar para una operación, los cuales se obtienen de una muestra aleatoria de dos médicos de un grupo conformado por dos médicos mujeres y cuatro médicos varones. Determina el valor esperado de $x$.",
+      "alternatives": [
+        "$2/5$",
+        "$2/3$",
+        "$1/4$",
+        "$1/6$",
+        "$1/3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Aritmética, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un panel de energía solar absorbe por 12 horas de funcionamiento 60 $\"Joule\"/m^2$. Calcula cuántos fotones de longitud de onda de 2000 Å se absorbe en 15 horas si el área total es 5 $m^2$. (1 Å $= 10^(-10)$ m)",
+      "alternatives": [
+        "$3\",\"31 times 10^(-19)$",
+        "$3\",\"78 times 10^(-20)$",
+        "$9\",\"93 times 10^(-19)$",
+        "$3\",\"78 times 10^20$",
+        "$9\",\"93 times 10^19$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Física, pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo tiene una masa inicial de 160 gramos y se lleva a una velocidad de $3/5 C$. Calcula la variación de su masa inercial en gramos. ($C$ = velocidad de la luz)",
+      "alternatives": [
+        "80",
+        "40",
+        "20",
+        "50",
+        "100"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Física, pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A partir de la estructura química mostrada, determina: $ x = (S + P^2 + 42)/L $ Donde: $S$ = N° enlaces sigma, $P$ = N° enlaces pi, $L$ = N° enlaces simples",
+      "alternatives": [
+        "6",
+        "4",
+        "10",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/quim-2024-1-a1-qui-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Química, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la gráfica que corresponde a la función: $ f(x) = abs(x+1) + floor(x) $, si $0 <= x < 3$",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "alternativeImagePaths": [
+        "lot-6-academia-ingenieria-uncp-alternatives/alg-2024-1-a1-alg-04-a.png",
+        "lot-6-academia-ingenieria-uncp-alternatives/alg-2024-1-a1-alg-04-b.png",
+        "lot-6-academia-ingenieria-uncp-alternatives/alg-2024-1-a1-alg-04-c.png",
+        "lot-6-academia-ingenieria-uncp-alternatives/alg-2024-1-a1-alg-04-d.png",
+        "lot-6-academia-ingenieria-uncp-alternatives/alg-2024-1-a1-alg-04-e.png"
+      ],
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Álgebra, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resolver la ecuación: $ x^(log_3 (x^3)) = 3^12 $ I. $x$ asume dos raíces. II. El producto de las raíces es 1. III. La suma de las raíces es cero.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVF",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Álgebra, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la proposición, $(~p and q) -> r$ es falsa. Determina el valor de verdad de las siguientes proposiciones: I. $p <-> r$ II. $~q or ~r$ III. $~t or q$",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "FFF",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Álgebra, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De la siguiente sucesión 6; 17; 34; 57; 86; ... Determina la suma del penúltimo término de 3 cifras y el primer término de 4 cifras.",
+      "alternatives": [
+        "1 840",
+        "1 830",
+        "1 820",
+        "1 850",
+        "1 810"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=49:admisión-uncp-2024-i-área-i",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área I, Álgebra, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un número se reparte en forma directamente proporcional a los números $overline(a b)$, $overline(b a)$, $overline(a a)$ y $overline(b b)$ ($a > b$), siendo el menor parte de los 2/3 de la mayor parte. Si ahora se reparte 1870 proporcionalmente a los mismos números en el orden indicado, determina la diferencia entre las dos primeras partes repartidas. ($a$ y $b$ son números primos).",
+      "alternatives": [
+        "182",
+        "162",
+        "153",
+        "171",
+        "143"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Aritmética, pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se funde $x$ kilogramos de cobre puro con 48 kg de oro de 21 kilates y se obtiene una aleación de $(21-y)$ kilates. Si se funden los 48 kg de oro de 21 kilates con $x$ kg de oro de 14 kilates, la ley resultante es mayor en 2 kilates que la ley de aleación que se obtuvo por primera vez. Determina $x+y$.",
+      "alternatives": [
+        "11",
+        "9",
+        "14",
+        "7",
+        "13"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Aritmética, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico muestra las preferencias de los postulantes por las distintas áreas académicas que ofrece la UNCP: Determina el número de postulantes que prefieren las áreas I y V, si se sabe que $b$ es entero y el menor número posible de dos cifras significativas.",
+      "alternatives": [
+        "112",
+        "122",
+        "142",
+        "106",
+        "224"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2024-1-a2-ari-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Aritmética, pregunta 18 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De los resultados del examen de primera selección se sabe que, las notas más altas obtenidas en cada una de las cinco áreas son valores enteros con mediana y moda de 17 y 16 respectivamente. Determina la varianza si el promedio es 17,2 y no se obtuvo puntaje perfecto.",
+      "alternatives": [
+        "2,40",
+        "1,36",
+        "2,46",
+        "1,80",
+        "1,56"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Aritmética, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un sastre, de un corte de tela utiliza cierta longitud y luego, requiriendo otra parte igual corta $2/3$ de lo que le quedaba. Al final, ¿qué fracción de lo utilizado, no empleó?",
+      "alternatives": [
+        "$1/2$",
+        "$3/10$",
+        "$1/5$",
+        "$2/3$",
+        "$1/4$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Aritmética, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A partir del siguiente esquema, calcula la energía (en joule) correspondiente a un fotón de una radiación electromagnética. ($h = 6\",\"62 times 10^(-34)$ J.s)",
+      "alternatives": [
+        "$3\",\"97 times 10^(-24)$",
+        "$39\",\"7 times 10^(-24)$",
+        "$3\",\"97 times 10^(-22)$",
+        "$34\",\"97 times 10^(-24)$",
+        "$4\",\"97 times 10^(-22)$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-1-a2-fis-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Física, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la reacción nuclear, el Plutonio es bombardeado por el neutrón: $ \"\"^241_94 \"Pu\" + n -> \"\"^202_82 \"Pb\" + a alpha + b beta $ Calcula: $2a - b$",
+      "alternatives": [
+        "22",
+        "18",
+        "14",
+        "16",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Física, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Desde lo alto de una torre de 100 m de altura, se lanza horizontalmente un proyectil con una rapidez de 30 m/s. Determina la verdad (V) o falsedad (F) de las siguientes proposiciones; cuando ha transcurrido 4 s. ($g = 10 m^2$) I. La distancia horizontal avanzada es 100 m. II. La altura a la que se encuentra respecto al piso es 20 m. III. La rapidez total del proyectil es 40 m/s.",
+      "alternatives": [
+        "FFV",
+        "FFF",
+        "FVF",
+        "FVV",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Física, pregunta 27 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el circuito mostrado circula una intensidad de corriente $I$. Determina la potencia eléctrica disipada por la resistencia de 8 $Omega$.",
+      "alternatives": [
+        "2 W",
+        "12 W",
+        "4 W",
+        "10 W",
+        "8 W"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-1-a2-fis-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Física, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la posición mostrada: $x = 0\",\"6$ m; $v = 4$ m/s. Determina el módulo de la máxima aceleración que alcanza la masa $M$.",
+      "alternatives": [
+        "$35 \"m/s\"^2$",
+        "$5 \"m/s\"^2$",
+        "$10 \"m/s\"^2$",
+        "$20 \"m/s\"^2$",
+        "$25 \"m/s\"^2$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2024-1-a2-fis-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Física, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula la altura de un cilindro de área lateral máxima que se puede inscribir en una esfera de radio $R$.",
+      "alternatives": [
+        "$sqrt(2) R$",
+        "$R/2$",
+        "$sqrt(5) R$",
+        "$2R/3$",
+        "$sqrt(3) R$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Geometría, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura mostrada, calcula $tan x$, sabiendo que $M$, $N$ y $R$ son puntos medios:",
+      "alternatives": [
+        "$2/3 sqrt(3)$",
+        "$2/3 sqrt(2)$",
+        "$3/4$",
+        "$2/5 sqrt(2)$",
+        "$1/2$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/trig-2024-1-a2-tri-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Trigonometría, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un nuevo reloj tiene su circunferencia dividida en 10 partes iguales, su horario da 3 vueltas a su circunferencia en un día y cada \"nueva hora\" equivale a 40 \"nuevos minutos\". Deduce la fórmula para determinar el ángulo $alpha$ formado por el minutero y el horario de este reloj, en grados sexagesimales cuando esté marcando las $H$ \"horas\" con $M$ \"minutos\".",
+      "alternatives": [
+        "$alpha = 81/9 M - 12H$",
+        "$alpha = 81/10 H - 36M$",
+        "$alpha = 18/5 H - 36M$",
+        "$alpha = 81/10 M - 36H$",
+        "$alpha = 9/10 M - 36H$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Trigonometría, pregunta 42 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las matrices: $ A = mat(U, N; C, P) $; $ B = mat(4, U+N; C+P, 3) $; $ C = mat(U, 6; -1, 2p) $; además $3A - C = B$; determina el valor de: $ E = U + N + C + P $",
+      "alternatives": [
+        "9",
+        "11",
+        "8",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Álgebra, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el dominio de la siguiente función: $ f(x) = sqrt(1-x^2)/sqrt(x - floor(x)) $",
+      "alternatives": [
+        "$chevron.l -1; 1 chevron.r - {0}$",
+        "$chevron.l -1; 1 chevron.r$",
+        "$[1; infinity chevron.r$",
+        "$[-1; 1]$",
+        "$x in.not bb(Z)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Álgebra, pregunta 8 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación logarítmica: $ log_5^2 (x/125) + log_5^2 (25 x) = log_5 (x^6) + 7 $ Determina la suma de sus raíces.",
+      "alternatives": [
+        "135",
+        "130",
+        "140",
+        "125",
+        "120"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Álgebra, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el conjunto de los números reales se define la operación mostrada en la figura. Calcula el término independiente del desarrollo de esa misma operación evaluada en $3-2x$.",
+      "alternatives": [
+        "$1/9$",
+        "$-3/2$",
+        "$1/6$",
+        "$3/2$",
+        "$-4/3$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/alg-2024-1-a2-alg-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=50:admisión-uncp-2024-i-área-ii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2024-I, Área II, Álgebra, pregunta 40 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con todos los alumnos de un salón se formó un cuadrado compacto con $n$ alumnos por lado, pero si quisiéramos formar 2 triángulos equiláteros compactos con $n$ alumnos por lado, harían falta 12 alumnos. ¿Cuántos alumnos hay en la tercera parte del salón?",
+      "alternatives": [
+        "144",
+        "11",
+        "72",
+        "9",
+        "48"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Aritmética, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al convertir el número 4658 al sistema de base $overline(b c)$ resulta $overline(2 a b 0)$ (0 = cero). ¿Cuál es el valor de $a - b + c$ en el sistema senario?",
+      "alternatives": [
+        "32",
+        "14",
+        "21",
+        "22",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Aritmética, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Existe una fracción equivalente a $407/703$ tal que la diferencia de sus términos es divisible por 20; además, su denominador está comprendido entre 360 y 400. Determina el numerador de dicha fracción.",
+      "alternatives": [
+        "260",
+        "220",
+        "280",
+        "240",
+        "300"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Aritmética, pregunta 20 (clave B)"
     }
   ]
 }
