@@ -63,12 +63,7 @@ describe('folderServesGrade', () => {
 
 describe('gradesInUse', () => {
   it('lists only the grades the tree actually reaches', () => {
-    expect(gradesInUse(TREE, GRADES)).toEqual([
-      'primaria_5',
-      'primaria_6',
-      'secundaria_4',
-      'pre',
-    ]);
+    expect(gradesInUse(TREE, GRADES)).toEqual(['primaria_5', 'primaria_6', 'secundaria_4', 'pre']);
   });
 
   /** Chips read as a school year, so they follow the catalog's order, not the tree's. */

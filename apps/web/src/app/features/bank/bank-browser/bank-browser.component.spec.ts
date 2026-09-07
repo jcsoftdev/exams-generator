@@ -61,8 +61,7 @@ async function setup(
   } = {},
 ) {
   const getFolders = vi.fn(
-    over.getFoldersImpl ??
-      (() => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 0 })),
+    over.getFoldersImpl ?? (() => of<BankFoldersResponse>({ folders: FOLDERS, unfiledCount: 0 })),
   );
 
   const createFolder = vi.fn(
@@ -131,9 +130,9 @@ async function clickCard(
   el: () => HTMLElement,
   label: string,
 ): Promise<void> {
-  const card = Array.from(el().querySelectorAll<HTMLButtonElement>('[data-testid="folder-card"]')).find(
-    (button) => button.textContent?.includes(label),
-  );
+  const card = Array.from(
+    el().querySelectorAll<HTMLButtonElement>('[data-testid="folder-card"]'),
+  ).find((button) => button.textContent?.includes(label));
   card!.click();
   await harness.fixture.whenStable();
   harness.detectChanges();
@@ -274,9 +273,9 @@ describe('BankBrowserComponent', () => {
       input.value = 'Simulacros';
       input.dispatchEvent(new Event('input'));
       harness.detectChanges();
-      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
-        new Event('submit'),
-      );
+      el()
+        .querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!
+        .dispatchEvent(new Event('submit'));
       harness.detectChanges();
 
       expect(createFolder).toHaveBeenCalledWith(
@@ -293,9 +292,9 @@ describe('BankBrowserComponent', () => {
       input.value = 'Colegio B';
       input.dispatchEvent(new Event('input'));
       harness.detectChanges();
-      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
-        new Event('submit'),
-      );
+      el()
+        .querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!
+        .dispatchEvent(new Event('submit'));
       harness.detectChanges();
 
       expect(createFolder).toHaveBeenCalledWith(
@@ -308,9 +307,9 @@ describe('BankBrowserComponent', () => {
 
       el().querySelector<HTMLButtonElement>('[data-testid="new-folder"] button')!.click();
       harness.detectChanges();
-      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
-        new Event('submit'),
-      );
+      el()
+        .querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!
+        .dispatchEvent(new Event('submit'));
       harness.detectChanges();
 
       expect(createFolder).not.toHaveBeenCalled();
@@ -342,9 +341,9 @@ describe('BankBrowserComponent', () => {
       input.value = 'Colegio';
       input.dispatchEvent(new Event('input'));
       harness.detectChanges();
-      el().querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!.dispatchEvent(
-        new Event('submit'),
-      );
+      el()
+        .querySelector<HTMLFormElement>('[data-testid="new-folder-form"]')!
+        .dispatchEvent(new Event('submit'));
       harness.detectChanges();
 
       expect(el().querySelector('[data-testid="new-folder-error"]')!.textContent).toContain(
@@ -576,7 +575,9 @@ describe('BankBrowserComponent — searching for a folder', () => {
  */
 describe('BankBrowserComponent — filtering by grade', () => {
   function chip(el: () => HTMLElement, grade: string): HTMLButtonElement {
-    return el().querySelector<HTMLButtonElement>(`[data-testid="grade-chip"][data-grade="${grade}"]`)!;
+    return el().querySelector<HTMLButtonElement>(
+      `[data-testid="grade-chip"][data-grade="${grade}"]`,
+    )!;
   }
 
   it('offers only the grades the bank actually reaches', async () => {

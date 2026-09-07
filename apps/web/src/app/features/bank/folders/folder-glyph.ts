@@ -56,7 +56,10 @@ const RULES: readonly { readonly icon: string; readonly words: readonly string[]
   },
   { icon: 'dumbbell', words: ['educacion fisica', 'deporte', 'psicomotr'] },
   { icon: 'landmark', words: ['historia', 'civic', 'ciudadan', 'sociales'] },
-  { icon: 'flask-conical', words: ['ciencia', 'quimic', 'biolog', 'naturales', 'fisica', 'anatom'] },
+  {
+    icon: 'flask-conical',
+    words: ['ciencia', 'quimic', 'biolog', 'naturales', 'fisica', 'anatom'],
+  },
   { icon: 'laptop', words: ['computac', 'informat', 'tecnolog', 'robotic'] },
   { icon: 'globe', words: ['geograf', 'ambiente', 'ecolog'] },
   { icon: 'languages', words: ['ingles', 'idioma', 'quechua', 'frances'] },

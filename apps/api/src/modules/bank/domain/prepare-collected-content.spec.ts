@@ -109,9 +109,7 @@ describe("prepareCollectedContent", () => {
       alternatives: ["H(x) = 3x² + 5x + 7"],
     });
 
-    expect(prepared.bodyTypst).toBe(
-      "Un motorista adquirio $D(x) = 6x^5+ 13x^4+ 9x^2$ litros de petroleo.",
-    );
+    expect(prepared.bodyTypst).toBe("Un motorista adquirio $D(x) = 6x^5+ 13x^4+ 9x^2$ litros de petroleo.");
     expect(prepared.alternatives).toEqual(["$H(x) = 3x^2 + 5x + 7$"]);
   });
 
@@ -121,8 +119,6 @@ describe("prepareCollectedContent", () => {
       alternatives: [],
     });
 
-    expect(prepared.bodyTypst).toBe(
-      "Al dividir un polinomio $P(x)$ entre $3x+2$, se obtuvo como resto 5.",
-    );
+    expect(prepared.bodyTypst).toBe("Al dividir un polinomio $P(x)$ entre $3x+2$, se obtuvo como resto 5.");
   });
 });

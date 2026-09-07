@@ -71,10 +71,10 @@ const ROOT_CRUMB_ID = '__root__';
             ></ui-input>
           </div>
           <div data-testid="new-folder">
-          <ui-button variant="ghost" size="sm" (clicked)="startCreating()">
-            <lucide-angular name="folder-plus" class="h-4 w-4"></lucide-angular>
-            Nueva carpeta
-          </ui-button>
+            <ui-button variant="ghost" size="sm" (clicked)="startCreating()">
+              <lucide-angular name="folder-plus" class="h-4 w-4"></lucide-angular>
+              Nueva carpeta
+            </ui-button>
           </div>
         </div>
       </div>

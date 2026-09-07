@@ -26,10 +26,7 @@ import { SelectComponent, SelectOption } from '../../../ui/select/select.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
-import {
-  BreadcrumbComponent,
-  BreadcrumbCrumb,
-} from '../../../ui/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent, BreadcrumbCrumb } from '../../../ui/breadcrumb/breadcrumb.component';
 import { findFolderPath } from '../folders/folder-path';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
@@ -1241,5 +1238,3 @@ export class BankListComponent {
 function normalizeCorrectAnswer(value: string): string {
   return /^[a-e]$/i.test(value) ? String(value.toLowerCase().charCodeAt(0) - 97) : value;
 }
-
-

@@ -40,7 +40,9 @@ describe('BankFolderCardComponent', () => {
     const { compiled } = setup();
 
     expect(compiled.textContent).toContain('Matemática');
-    expect(compiled.querySelector('[data-testid="card-children"]')!.textContent).toContain('1 tema');
+    expect(compiled.querySelector('[data-testid="card-children"]')!.textContent).toContain(
+      '1 tema',
+    );
     expect(compiled.querySelector('[data-testid="card-own"]')!.textContent).toContain('142');
     expect(compiled.querySelector('[data-testid="card-central"]')!.textContent).toContain('1208');
   });
@@ -91,17 +93,17 @@ describe('BankFolderCardComponent', () => {
   it('marks a non-editable node as the unfiled bucket rather than a folder', () => {
     const { compiled } = setup({ ...NODE, editable: false, children: [] });
 
-    expect(compiled.querySelector('[data-testid="folder-card"]')!.getAttribute('data-variant')).toBe(
-      'unfiled',
-    );
+    expect(
+      compiled.querySelector('[data-testid="folder-card"]')!.getAttribute('data-variant'),
+    ).toBe('unfiled');
   });
 
   it('marks a real folder as one', () => {
     const { compiled } = setup();
 
-    expect(compiled.querySelector('[data-testid="folder-card"]')!.getAttribute('data-variant')).toBe(
-      'folder',
-    );
+    expect(
+      compiled.querySelector('[data-testid="folder-card"]')!.getAttribute('data-variant'),
+    ).toBe('folder');
   });
 
   /** The bucket holds loose questions, never subfolders — the line would be a lie. */

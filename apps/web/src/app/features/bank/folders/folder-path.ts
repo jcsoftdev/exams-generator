@@ -55,10 +55,7 @@ export function childrenOf(
  * navigation and starts being a list of questions. The root is not a folder,
  * so it is never a leaf.
  */
-export function isLeafFolder(
-  tree: readonly FolderTreeNode[],
-  folderId: string | null,
-): boolean {
+export function isLeafFolder(tree: readonly FolderTreeNode[], folderId: string | null): boolean {
   if (folderId === null) return false;
   const node = findNode(tree, folderId);
   return node !== null && node.children.length === 0;

@@ -83,7 +83,6 @@ describe("AssetsService.getAssetContent", () => {
   });
 });
 
-
 describe("AssetsService.getThumbnailContent", () => {
   const THUMB_KEY = thumbnailStorageKey(CENTRAL_ASSET.storageKey);
 

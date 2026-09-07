@@ -63,7 +63,6 @@ const FOLDERS: BankFolderNode[] = [
   },
 ];
 
-
 /** Mirrors `apps/api/src/modules/bank/folders/bank-folders.errors.ts` — the server sends `{ statusCode, code, message }`. */
 const FOLDER_ERROR_MESSAGES: Readonly<Record<string, string>> = {
   folder_name_invalid: 'El nombre de la carpeta debe tener entre 1 y 80 caracteres.',
@@ -401,7 +400,6 @@ function openFolder(
 
 describe('BankListComponent', () => {
   describe('folder tree', () => {
-
     it('loads the tree from GET /bank/folders alone — not a single question row is fetched on entry', () => {
       const { getFolders, listQuestionsPaged } = setup();
 
@@ -409,7 +407,7 @@ describe('BankListComponent', () => {
       expect(listQuestionsPaged).not.toHaveBeenCalled();
     });
 
-    it("lists the questions of the folder the route names", () => {
+    it('lists the questions of the folder the route names', () => {
       const { compiled, fixture, listQuestionsPaged } = setup();
       openFolder(compiled, fixture, 'colegio');
 
@@ -1447,7 +1445,6 @@ describe('BankListComponent', () => {
   });
 
   describe('empty states', () => {
-
     it('says a folder is empty rather than leaving the list silently blank', () => {
       const { compiled, fixture } = setup({ listImpl: () => of([]) });
       openFolder(compiled, fixture, 'trigo');

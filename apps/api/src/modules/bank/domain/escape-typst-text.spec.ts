@@ -132,8 +132,6 @@ describe("escapeTypstText", () => {
   });
 
   it("escapes a caret the promoter could not place inside a formula", () => {
-    expect(escapeTypstText("Resuelve Sen^6x+Cos^6x=0,25")).toBe(
-      "Resuelve Sen\\^6x+Cos\\^6x=0,25",
-    );
+    expect(escapeTypstText("Resuelve Sen^6x+Cos^6x=0,25")).toBe("Resuelve Sen\\^6x+Cos\\^6x=0,25");
   });
 });

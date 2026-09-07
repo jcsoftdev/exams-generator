@@ -2,7 +2,9 @@ import type { Request, Response } from "express";
 import { shouldCompress } from "./compression.filter";
 
 function fakeRes(contentType: string | undefined): Response {
-  return { getHeader: (name: string) => (name.toLowerCase() === "content-type" ? contentType : undefined) } as Response;
+  return {
+    getHeader: (name: string) => (name.toLowerCase() === "content-type" ? contentType : undefined),
+  } as Response;
 }
 
 const anyRequest = { headers: { "accept-encoding": "gzip" }, method: "GET" } as unknown as Request;

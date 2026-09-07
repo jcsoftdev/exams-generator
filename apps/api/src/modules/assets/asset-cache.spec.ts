@@ -1,4 +1,9 @@
-import { assetCacheControl, assetETag, IMMUTABLE_CACHE_CONTROL, REVALIDATE_CACHE_CONTROL } from "./asset-cache";
+import {
+  assetCacheControl,
+  assetETag,
+  IMMUTABLE_CACHE_CONTROL,
+  REVALIDATE_CACHE_CONTROL,
+} from "./asset-cache";
 
 describe("assetETag", () => {
   it("is stable for the same bytes", () => {

@@ -155,11 +155,7 @@ export function unicodeScriptsToCaret(raw: string): string {
 
   while (index < raw.length) {
     const character = raw[index]!;
-    const table = SUPERSCRIPT.has(character)
-      ? SUPERSCRIPT
-      : SUBSCRIPT.has(character)
-        ? SUBSCRIPT
-        : undefined;
+    const table = SUPERSCRIPT.has(character) ? SUPERSCRIPT : SUBSCRIPT.has(character) ? SUBSCRIPT : undefined;
 
     if (table === undefined) {
       out += character;

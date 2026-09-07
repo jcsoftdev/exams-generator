@@ -143,7 +143,9 @@ describe('typstMathToLatex', () => {
 
 describe('typstToPlainText', () => {
   it('drops the math delimiters and the in-math quoting', () => {
-    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe('El área es 36 π cm^2 exacto');
+    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe(
+      'El área es 36 π cm^2 exacto',
+    );
     expect(typstToPlainText('$"MCD"(a, b) = 36$')).toBe('MCD(a, b) = 36');
   });
 

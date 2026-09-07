@@ -28,9 +28,7 @@ describe("unicodeScriptsToCaret", () => {
   });
 
   it("parenthesises a multi-digit subscript the same way", () => {
-    expect(unicodeScriptsToCaret("el termino a₁₂ de la sucesion")).toBe(
-      "el termino a_(12) de la sucesion",
-    );
+    expect(unicodeScriptsToCaret("el termino a₁₂ de la sucesion")).toBe("el termino a_(12) de la sucesion");
   });
 
   it("rewrites every script in a polynomial", () => {
@@ -57,9 +55,7 @@ describe("unicodeScriptsToCaret", () => {
   });
 
   it("still rewrites a variable whose coefficient sits against it", () => {
-    expect(unicodeScriptsToCaret("el termino 16m² del polinomio")).toBe(
-      "el termino 16m^2 del polinomio",
-    );
+    expect(unicodeScriptsToCaret("el termino 16m² del polinomio")).toBe("el termino 16m^2 del polinomio");
   });
 
   it("declines a segment carrying LaTeX backslashes", () => {

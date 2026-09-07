@@ -2,9 +2,7 @@ import { promoteProseMath } from "./promote-prose-math";
 
 describe("promoteProseMath", () => {
   it("leaves prose holding no formula untouched", () => {
-    expect(promoteProseMath("Halla la suma de los coeficientes.")).toBe(
-      "Halla la suma de los coeficientes.",
-    );
+    expect(promoteProseMath("Halla la suma de los coeficientes.")).toBe("Halla la suma de los coeficientes.");
   });
 
   it("stops the run at the Spanish verb before it", () => {
@@ -40,9 +38,7 @@ describe("promoteProseMath", () => {
   });
 
   it("keeps a trailing lone variable that is not a conjunction", () => {
-    expect(promoteProseMath("solucion: 1 + sen^2 x = 7 cos^2 x")).toBe(
-      "solucion: $1 + sen^2 x = 7 cos^2 x$",
-    );
+    expect(promoteProseMath("solucion: 1 + sen^2 x = 7 cos^2 x")).toBe("solucion: $1 + sen^2 x = 7 cos^2 x$");
   });
 
   it("keeps absolute-value bars inside the run", () => {
@@ -154,9 +150,7 @@ describe("promoteProseMath", () => {
     });
 
     it("leaves a physical unit alone, since a slash never anchors a run", () => {
-      expect(promoteProseMath("acelera a razon de 2m/s constante")).toBe(
-        "acelera a razon de 2m/s constante",
-      );
+      expect(promoteProseMath("acelera a razon de 2m/s constante")).toBe("acelera a razon de 2m/s constante");
     });
 
     it("still declines a segment carrying a stray currency sign", () => {
