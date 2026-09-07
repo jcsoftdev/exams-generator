@@ -1,3 +1,821 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el CA de $overline(a b c d)$ es un número de 3 cifras iguales y además: $a+b+c+d=19$. Calcula $overline(a b) - overline(c d)$",
+      "alternatives": [
+        "42",
+        "39",
+        "49",
+        "72",
+        "59"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se hace una mezcla con vino de 75 y 60 soles el litro, con agua; la mezcla tiene un precio de 50 soles el litro. Si la cantidad de agua es los 2/5 de la cantidad de vino de 60 soles el litro, ¿en qué relación se han mezclado los dos tipos de vino?",
+      "alternatives": [
+        "2/7",
+        "5/8",
+        "3/5",
+        "5/7",
+        "2/5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La suma de las cifras de un numeral de dos cifras es 5. Si se invierte el orden de dichas cifras y luego se le suma 9, entonces se obtiene el numeral original. Determina el numeral original aumentando en 8.",
+      "alternatives": [
+        "50",
+        "31",
+        "30",
+        "42",
+        "40"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una ventana cuadrada es limpiada en dos horas con 40 min. Si la persona limpia otra ventana, con el mismo rendimiento, cuyo lado es 25% menor que la ventana anterior, ¿en cuánto tiempo lo hará?",
+      "alternatives": [
+        "100 min",
+        "110 min",
+        "75 min",
+        "120 min",
+        "90 min"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 33 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el distrito de la Victoria de la ciudad de Lima, en el año 1920 apareció la pandemia de la gripe negra, donde fallecieron el 12% de la población, quedando tan solo 24 200 habitantes; es decir, la población del distrito de la Victoria, antes de la pandemia era:",
+      "alternatives": [
+        "26 500",
+        "29 500",
+        "27 500",
+        "30 500",
+        "28 500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El área de la base de una pirámide cuadrangular regular es $(6x+1)^2 - 6x$. Si la altura mide $6x - 1$. ¿Cuál es el volumen?",
+      "alternatives": [
+        "$72x^3-1$",
+        "$216x^3-frac(1,3)$",
+        "$216x^3-1$",
+        "$36x^3-1$",
+        "$72x^3-frac(1,3)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Álgebra, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Para qué valores de \"x\" el área del cuadrado es mayor que el área del rectángulo?",
+      "alternatives": [
+        "$chevron.l 8; +infinity chevron.r$",
+        "$chevron.l 5; +infinity chevron.r$",
+        "$chevron.l 7; +infinity chevron.r$",
+        "$chevron.l 2; +infinity chevron.r$",
+        "$chevron.l 6; +infinity chevron.r$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/alg-lot-20-uncp-2022-ps-area1-alg-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Álgebra, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se realizó una encuesta de las preferencias de un grupo de personas sobre cinco diarios A, B, C, D y E, obteniéndose el siguiente diagrama: Calcula el porcentaje de personas que prefieren leer el diario \"B\" que \"x\" y \"y\" son enteros; \"x\" es el máximo, \"y\" es el mínimo, además es par.",
+      "alternatives": [
+        "36%",
+        "40%",
+        "42%",
+        "21%",
+        "16%"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/est-lot-20-uncp-2022-ps-area1-est-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Estadística y Probabilidades, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el cuadro sinóptico: — Es el conjunto de elementos paraverbales que se dan junto con la emisión. — Estas son la intensidad o volumen de la voz, las vocalizaciones, la velocidad o el ritmo. — Sirven para marcar el avance o progresión de lo expresado, llamar la atención a una parte del discurso. ¿....?",
+      "alternatives": [
+        "Cinestésica",
+        "Paralingüística",
+        "Cinésica",
+        "Proxémica",
+        "Patógrafo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Infiere el significado connotativo de la imagen.",
+      "alternatives": [
+        "La alegría de la abuela por los nietos",
+        "La alegría de los niños y las niñas",
+        "El valor educativo de la tradición oral",
+        "La alegría del hogar de los niños",
+        "La falta de confianza a los menores de edad"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/com-lot-20-uncp-2022-ps-area1-com-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el significado connotativo en la imagen.",
+      "alternatives": [
+        "Preocupación por los niños y ancianos",
+        "Sensibilidad y cariños por los niños",
+        "Rodeándose de niños pobres en un mercado",
+        "Abrazo y beso a los niños de la comunidad",
+        "Alegría y satisfacción por los mayores de edad"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/com-lot-20-uncp-2022-ps-area1-com-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la característica y función de la imagen presentada.",
+      "alternatives": [
+        "Redundante - Epistémica",
+        "Polisémica - Simbólica",
+        "Compleja - Simbólica",
+        "Monosémica - Estética",
+        "Abstracta - Estética"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/com-lot-20-uncp-2022-ps-area1-com-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 47 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las especies literarias de la lírica de la literatura prehispánica, con su significado respectivo: I. Haylli II. Cacharpari III. Urpi IV. Aranway V. Aymoray ( ) Canto burlesco ( ) Canto agrícola ( ) Canto de amor a la mujer ( ) Canto triunfal, religioso o militar ( ) Canto de despedida",
+      "alternatives": [
+        "V - IV - III - I - II",
+        "IV - V - I - III - II",
+        "II - IV - V - III - I",
+        "III - V - IV - I - II",
+        "IV - V - III - I - II"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Literatura, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona la producción literaria de los poetas malditos, con su producción literaria: I. Stephane Mallarmé II. Paul Verlaine III. Arthur Rimbaud IV. Charles Baudelaire ( ) Fiestas galantes, poemas saturnianos ( ) La siesta del fauno, Herodías ( ) Las flores del mal, Los Paraísos artificiales ( ) Una temporada en el infierno, Iluminaciones",
+      "alternatives": [
+        "III - I - IV - II",
+        "II - I - IV - III",
+        "I - II - IV - III",
+        "II - I - III - IV",
+        "II - III - IV - I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Literatura, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica las características del habla: I. Potencial II. Efímera III. Asistemática IV. Social V. Psicofísica VI. Sistemática",
+      "alternatives": [
+        "II - IV - VI",
+        "II - V - VI",
+        "I - III - V",
+        "II - III - V",
+        "III - IV - VI"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Lenguaje, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO: \"Yo no soy un aculturado; yo soy un peruano que orgullosamente, como un demonio feliz, habla en cristiano y en indio, en español y en quechua. Deseaba convertir esta realidad en lenguaje artístico y tal parece, según cierto consenso más o menos general, que lo he conseguido. Por eso recibo el premio Inca Garcilaso de la Vega con regocijo.\" (José María Arguedas) Determina el número de elipsis verbal en el texto anterior.",
+      "alternatives": [
+        "2",
+        "5",
+        "3",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Lenguaje, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos cilindros de radios $R_1=4$ m y $R_2=1$ m con masas $m_1=10$ Kg y $m_2=2$ Kg, respectivamente se encuentran en equilibrio. Halla la constante \"K\" en N/m del resorte si este se deforma 8 cm.",
+      "alternatives": [
+        "150",
+        "450",
+        "600",
+        "900",
+        "300"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/fis-lot-20-uncp-2022-ps-area1-fis-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Física, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la máxima corriente I (en amperios) tal que $R_0$ no disipe más de 1000 W y no se queme el fusible de 10 A",
+      "alternatives": [
+        "40",
+        "50",
+        "20",
+        "10",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/fis-lot-20-uncp-2022-ps-area1-fis-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina, cuál de las siguientes proposiciones es incorrecta.",
+      "alternatives": [
+        "El plomo ataca la piel",
+        "$\"NO\"_2$ es uno de los componentes del smog.",
+        "El anhídrido carbónico es un gas con efecto invernadero.",
+        "El monóxido de carbono es venenoso en la respiración.",
+        "El ácido sulfúrico es parte de la lluvia ácida."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 16 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indica la(s) proposición(es) verdadera(s) referidas a las sustancias químicas: I. Los gases nobles se ubican en el grupo VII-A de la tabla periódica. II. Tanto el azufre y el teluro, como el selenio y oxígeno son los elementos calcoides. III. Los metales alcalinos son más activos químicamente que los metales alcalino-térreos por lo que están ubicados más a la izquierda de la tabla periódica. IV. Las familias de elementos químicos representativos se ubican en los grupos tipo \"B\" de la tabla periódica.",
+      "alternatives": [
+        "II y III",
+        "I y IV",
+        "Solo II",
+        "Solo I",
+        "Solo III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el tipo de enlace que existe en un cristal de cloruro de sodio (NaCl) y en una molécula de propano ($\"C\"_3\"H\"_8$) respectivamente.",
+      "alternatives": [
+        "Covalente y metálico",
+        "Covalente e iónico",
+        "Iónico y covalente",
+        "Iónico y metálico",
+        "Metálico e iónico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica las moléculas que intervienen en la lluvia ácida y el efecto invernadero, respectivamente:",
+      "alternatives": [
+        "Anhídrido sulfuroso, monóxido de carbono",
+        "Anhídrido cloroso, anhídrido fosfórico",
+        "Anhídrido carbónico, anhídrido sulfuroso",
+        "Anhídrido sulfúrico, anhídrido carbónico",
+        "Anhídrido sulfúrico, monóxido de carbono"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos: En el contexto de la formación y caída de las lluvias ácidas, identifica los compuestos representados por \"x\" e \"y\", respectivamente.",
+      "alternatives": [
+        "$\"HNO\"_3 - \"H\"_2\"SO\"_4$",
+        "$\"NO\"_x - \"HNO\"_3$",
+        "$\"NO\"_x - \"H\"_2\"SO\"_4$",
+        "$\"SO\"_x - \"HNO\"_3$",
+        "$\"H\"_2\"SO\"_4 - \"HNO\"_4$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/quim-lot-20-uncp-2022-ps-area1-qui-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 27 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Compara las células A y B, y selecciona la alternativa correcta, respecto a sus características.",
+      "alternatives": [
+        "A y B son pluricelulares.",
+        "A representa a un paramecio y B a una célula vegetal.",
+        "A y B forman colonias.",
+        "A presenta meiosis y en B ocurre mitosis",
+        "A y B son unicelulares."
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/bio-lot-20-uncp-2022-ps-area1-bio-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el esquema del ciclo de Krebs, determina la proposición correcta, respecto a las características que representan las letras \"X\" y \"Z\", respectivamente.",
+      "alternatives": [
+        "X es acetil coenzima A y Z posee 6 carbonos.",
+        "X y Z son ácidos pirúvicos.",
+        "X y Z representan el acetil coenzima A.",
+        "X posee 6 carbonos y Z posee 4 carbonos.",
+        "X posee ácido pirúvico y Z posee 3 carbonos."
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/bio-lot-20-uncp-2022-ps-area1-bio-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, determina qué representan A y B, respecto al intercambio de gases entre el alveolo y el tejido.",
+      "alternatives": [
+        "$\"A\"$ transporta sangre rica en $\"CO\"_2$ y B lleva $\"O\"_2$.",
+        "$\"A\"$ lleva sangre rica en $\"O\"_2$ y B transporta $\"CO\"_2$.",
+        "A y B realizan la difusión facilitada de gases",
+        "$\"A\"$ y B transportan sangre rica en $\"CO\"_2$.",
+        "A y B transportan sangre rica en oxígeno."
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/bio-lot-20-uncp-2022-ps-area1-bio-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A partir de la fórmula del aminoácido, determina la verdad (V) o falsedad (F) de las proposiciones, respecto a los componentes representados por 2 y 4 en conjunto. I. Configuran el grupo funcional carboxílico. II. El carbono central interactúa con dos grupos de átomos. III. El 4 es el grupo R variable para cada tipo de aminoácido. IV. El 2 corresponde al átomo de hidrógeno.",
+      "alternatives": [
+        "FVFV",
+        "FFVV",
+        "FFVF",
+        "FVVF",
+        "FFFV"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/bio-lot-20-uncp-2022-ps-area1-bio-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A partir de la figura, determina la proposición correcta referido a las características de las fases del metabolismo representados por A y B, respectivamente.",
+      "alternatives": [
+        "A y B son fases del anabolismo únicamente.",
+        "A y B son fases del catabolismo únicamente.",
+        "A puede prescindir de B.",
+        "A y B son fases antagónicas y complementarias del metabolismo",
+        "A representa el anabolismo y B el catabolismo."
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/bio-lot-20-uncp-2022-ps-area1-bio-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A partir de la figura, determina la proposición incorrecta, respecto a las características del sistema reproductor. Considere: 1. Testículo 2. Epidídimo 3. Vesícula seminal 4. Próstata 5. Ovario 6. Útero",
+      "alternatives": [
+        "En 2 se da la maduración de espermatozoides.",
+        "1 y 5 constituyen las gónadas.",
+        "En 3 se produce semen.",
+        "En 6 se implanta el embrión.",
+        "En 4 se da la fertilización."
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/bio-lot-20-uncp-2022-ps-area1-bio-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona las figuras de los receptores sensoriales con sus respectivas terminaciones nerviosas sensitivas. I. Receptor del calor II. Receptor del dolor III. Receptor de frío ( ) A) Corpúsculo de Krause ( ) B) Terminación nerviosa sensitiva ( ) C) Corpúsculo de Ruffini",
+      "alternatives": [
+        "Ic - IIa - IIIb",
+        "Ib - IIa - IIIc",
+        "Ib - IIc - IIIa",
+        "Ic - IIb - IIIa",
+        "Ia - IIb - IIIc"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía astronómica y coordenadas geográficas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos: Columna A: Rotación oeste-este Columna B: Rotación este-oeste Con respecto a la dirección de rotación de la Tierra, determina la verdad (V) o falsedad (F) de los siguientes enunciados: I. En A la naciente del Sol es por el este y la poniente es por el oeste. II. En B la naciente del Sol es por el este y la poniente es por el oeste. III. En A y B la naciente del Sol es por el este y la poniente es por el oeste.",
+      "alternatives": [
+        "FVF",
+        "VFV",
+        "VFF",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Geografía, pregunta 28 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica los factores protectores del embarazo al que corresponden las siguientes preguntas: ¿Sabes decir no?, ¿puedes reconocer situaciones de riesgo?, ¿sabes qué hacer frente a ellas?",
+      "alternatives": [
+        "Informándote debidamente.",
+        "Hablando abiertamente sobre el tema con personas de confianza.",
+        "Reconociendo tu etapa de madurez biológica y emocional.",
+        "Fortaleciendo tu capacidad de análisis para tomar decisiones sin presiones.",
+        "Acudiendo a los profesionales de psicología en los centros de salud."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones sobre los mitos del amor. I. La forma de vestir de una chica nos indica si es una mujer \"fácil\" II. Si tu enamorado/a te cela y controla, es porque no te ama III. Encontré mi príncipe azul IV. Las mujeres deben tomar la iniciativa en las relaciones sexuales",
+      "alternatives": [
+        "FVVF",
+        "VFVF",
+        "VFFV",
+        "VVFF",
+        "FFVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones relacionadas a las emociones. I. Dos o más personas pueden sentir distintas emociones sobre un mismo hecho. II. Dos personas que sienten alegría pueden demostrarlo de diferente modo. III. La demostración de ira de una persona no depende de su manejo emocional.",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "VFF",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la dimensión de la sexualidad humana a la que corresponde \"Z\": Dimensión \"Z\": Permite desarrollar nuestra conciencia individual, voluntaria, libre y respetuosa sobre cómo vivir la sexualidad respetando los derechos de las personas.",
+      "alternatives": [
+        "Afectiva",
+        "Preventiva",
+        "Biológica",
+        "Emotiva",
+        "Ética"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos cubitos se deben adicionar como mínimo para obtener un cubo compacto?",
+      "alternatives": [
+        "16",
+        "18",
+        "19",
+        "20",
+        "17"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/rm-lot-20-uncp-2022-ps-area1-raz-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el operador mostrado en la figura, aplicado a $x$, es igual a $(x-1)^2 + 7$. Determina el valor de la expresión mostrada en la figura.",
+      "alternatives": [
+        "-4",
+        "-2",
+        "3",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/rm-lot-20-uncp-2022-ps-area1-raz-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para su fiesta de \"Promo\", Carlos debe comprar un terno y un par de zapatos, al averiguar precios, observa que un terno cuesta cinco veces lo que cuesta los zapatos, si compró ambos artículos, le rebajaron 3/10 del precio del terno y 1/5 de los zapatos, quedando beneficiado con un descuento de 357 soles. Determina el precio de los zapatos.",
+      "alternatives": [
+        "250 soles",
+        "180 soles",
+        "120 soles",
+        "230 soles",
+        "210 soles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "María, al salir de su casa observa en el reloj de pared, que marca las 6 h 25 min y al llegar a su trabajo, ve en su reloj, que son las 8 h 15 min. Luego se entera que el reloj de su casa estaba atrasado 12 min y su reloj estaba adelantado 10 min. Determine el tiempo que demoró María, en ir de su casa al trabajo.",
+      "alternatives": [
+        "1 h 18 min",
+        "2 h 18 min",
+        "1 h 28 min",
+        "2 h 28 min",
+        "1 h 50 min"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un albañil después de construir una pared, como muestra la figura, decide pintar algunos ladrillos. Determina la cantidad de ladrillos sin pintar, sabiendo que la pared tiene 15 hileras.",
+      "alternatives": [
+        "84",
+        "110",
+        "76",
+        "120",
+        "90"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/rm-lot-20-uncp-2022-ps-area1-raz-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lo que cobra y gasta el profesor Pedro Cortijo suman 5 600 soles, y están en relación de 5 a 3, respectivamente. ¿Cuánto gasta el profesor Pedro Cortijo?",
+      "alternatives": [
+        "3 000 soles",
+        "2 600 soles",
+        "1 800 soles",
+        "2 100 soles",
+        "3 500 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 40 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo numérico mostrado, determina la suma del primer y último elemento de la fila doce. Fila 1: 1. Fila 2: 3, 5. Fila 3: 7, 9, 11. Fila 4: 13, 15, 17, 19. Fila 5: 21, 23, 25, 27, 29.",
+      "alternatives": [
+        "264",
+        "280",
+        "296",
+        "288",
+        "272"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la(s) proposición(es) que expresa(n) una relación paronímica. I. Debes aspirar y espirar el aire continuamente para sentirte mejor. II. El tigre es un animal felino y carnívoro, primo del león. III. Primero coma, luego desarrolle los ejercicios de la coma que le dejaron. IV. Aquel hombre ya está vetusto y chocho; los años lo han maltratado.",
+      "alternatives": [
+        "I - III",
+        "III - IV",
+        "Solo I",
+        "Solo III",
+        "IV - II"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Verbal, pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN: La revolución industrial I. Sin embargo, esta revolución trajo efectos sociales negativos como la migración del campo a la ciudad (proceso de urbanización). II. A mitad del siglo VXII comenzó en Europa el proceso de cambio que ocasionó un enorme crecimiento de la producción de bienes: La revolución industrial. III. Para que este se produjera, tuvieron que darse ciertas condiciones, una fue el aumento demográfico, pues más personas consumían un mayor número de productos. IV. También la mentalidad liberal contribuyó a esta revolución, ya que los burgueses buscaban el beneficio económico, lo que impulsó la iniciativa privada. V. Adicionalmente, la proliferación de la tecnología y el avance científico incrementó los niveles de contaminación.",
+      "alternatives": [
+        "III - II - I - V - IV",
+        "IV - III - II - I - V",
+        "I - II - IV - V - III",
+        "II - III - IV - I - V",
+        "II - IV - III - I - V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Verbal, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto usando los verbos en el tiempo adecuado: Since Aníbal fell in love, he has… his house keys everywhere, has…his wallet and has…miserable, so he decided to break up his sentimental relationship.",
+      "alternatives": [
+        "forgotten/losed/been",
+        "forgetting/losing/being",
+        "forgot/lost/been",
+        "forgot/lose/be",
+        "forgotten/lost/been"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Inglés, pregunta 48 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo: A: Chicken sándwich and glasses of orange juice…, for breakfast in your house,… B: No, they aren't. My mother makes delicious cau cau every morning.",
+      "alternatives": [
+        "are made / they are?",
+        "is made / is it?",
+        "is made / isn't it?",
+        "are made / aren't they?",
+        "are made / are they?"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Inglés, pregunta 49 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Observa la imagen y completa el texto.",
+      "alternatives": [
+        "gets / knows / hates",
+        "am getting / know / hate",
+        "g Get / know / hating",
+        "am getting / are knowing / am hating",
+        "get / know / hate"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-20-uncp-2022-ps-area1-figures/ing-lot-20-uncp-2022-ps-area1-ing-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Inglés, pregunta 50 (clave B)"
+    }
+  ]
 }

@@ -2063,6 +2063,262 @@
       "imagePath": "lot-6-academia-ingenieria-uncp-figures/geo-2026-2-a2-geo-19.png",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
       "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Geometría, pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una superficie esférica contiene al vértice \"O\" de un triedro trirrectángulo e interseca a las aristas en A; B y C respectivamente. Si OA = 5; OB = 8 y OC = $sqrt(11)$; determina el radio de la esfera.",
+      "alternatives": [
+        "10",
+        "4",
+        "6",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Geometría, pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un plano es secante a un cubo y determina un hexágono regular en su superficie. Si la arista del cubo mide $6 sqrt(2)$, determina el área del hexágono mencionado.",
+      "alternatives": [
+        "$27 sqrt(3)$",
+        "$54 sqrt(3)$",
+        "$48 sqrt(3)$",
+        "$24 sqrt(3)$",
+        "$12 sqrt(3)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Geometría, pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la energía de enlace total (en kJ/mol) para una molécula de cloroformo. Considera que las energías de enlace para el C–H es 412 kJ/mol y para el C–Cl es 327 kJ/mol.",
+      "alternatives": [
+        "1933",
+        "2063",
+        "1383",
+        "1393",
+        "2023"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Química, pregunta 37 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un átomo tiene como número atómico 35. Si n, l, m y s son números cuánticos, determina el valor de la expresión: $frac(n^2 + 2 l + 3 m, -2 s)$",
+      "alternatives": [
+        "18",
+        "30",
+        "20",
+        "25",
+        "42"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Química, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La suma de los números atómicos de dos isóbaros es 82 y la suma de los números de neutrones es 100. Determina el número de masa para un isóbaro.",
+      "alternatives": [
+        "93",
+        "94",
+        "92",
+        "91",
+        "90"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Química, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si los ángulos internos de un triángulo ABC están en progresión aritmética (A < B < C), calcula el valor de: $E = frac(cos(A + 2 C + 3 B), cos(B - C)) - frac(\"sen\"(B + 2 A + 3 C), \"sen\"(B - C))$",
+      "alternatives": [
+        "1",
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Trigonometría, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el rango de la función definida por: $F(x) = tan^8 x + cot^8 x$",
+      "alternatives": [
+        "$[2; infinity chevron.r$",
+        "$[216; infinity chevron.r$",
+        "$[16; infinity chevron.r$",
+        "$[0; infinity chevron.r$",
+        "$[4; infinity chevron.r$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Trigonometría, pregunta 23 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $0 < x < pi/4$; además $8 \"sen\" 2 x = 1$; calcula: $F = \"sen\"(45° + x) + sqrt(7) cot(45° - x)$",
+      "alternatives": [
+        "15/4",
+        "15",
+        "7/3",
+        "4/15",
+        "3/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Trigonometría, pregunta 24 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el valor de la expresión: $K = (\"sen\" 20° + \"sen\" 40° + \"sen\" 80°)(cos 20° + cos 40° + cos 80° - 1)$",
+      "alternatives": [
+        "$frac(sqrt(3), 3)$",
+        "$frac(sqrt(3), 5)$",
+        "$sqrt(3)$",
+        "$frac(sqrt(3), 4)$",
+        "$frac(sqrt(3), 6)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Trigonometría, pregunta 25 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La ecuación de la parábola $y^2 - 4 y - 8 x + 44 = 0$ en su forma ordinaria es $(y - k)^2 = 4 p (x - h)$ donde el vértice es $V(h; k)$ y el foco $F(h + p; k)$, determina: $h + k + p$",
+      "alternatives": [
+        "7",
+        "3",
+        "9",
+        "1",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Trigonometría, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Según el gráfico determina la hora marcada sabiendo que $alpha = 11/15 pi$ radianes.",
+      "alternatives": [
+        "10:35",
+        "10:37",
+        "10:36",
+        "10:39",
+        "10:38"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/trig-2026-2-a2-tri-62.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Trigonometría, pregunta 62 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las raíces de la ecuación $6 x^3 + 3 x^2 + 6 = 0$ son ${a; b; c}$, determina el valor de \"E + 2\" sabiendo que: $E = frac(a^3 b^3 + a^3 c^3 + b^3 c^3 - (a b + a c + b c) + 6 a^3 + 3 a^2, a b c)$",
+      "alternatives": [
+        "5",
+        "2",
+        "3",
+        "7",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Álgebra, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos las matrices: $x + y = mat(3, 2; 1, 6)$; $x - y = mat(1, 2; 5, 6)$, determina la suma de elementos de $(x^T y)$",
+      "alternatives": [
+        "-15",
+        "-16",
+        "-14",
+        "-12",
+        "-13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Álgebra, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El rango de la función: $f(x) = frac(x^2, x^2 + 1)$ a $[u; n chevron.r$, halla \"u + 2n\".",
+      "alternatives": [
+        "-2",
+        "1",
+        "-1",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Álgebra, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una ama de casa va al mercado y observa que el costo de 4kg de pollo junto con 3kg de huevo es menor que 100 soles, y que el costo de 3kg de pollo excede al costo de 2kg de huevo en más de 20 soles. Los costos de cada kilogramo de pollo y huevo son números enteros en soles. Si el costo de cada kilogramo de huevos es el máximo posible, determina dicho costo.",
+      "alternatives": [
+        "12",
+        "11",
+        "16",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Álgebra, pregunta 66 (clave A)"
     }
   ]
 }

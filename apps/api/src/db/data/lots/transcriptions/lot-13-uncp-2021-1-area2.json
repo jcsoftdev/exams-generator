@@ -1,0 +1,617 @@
+{
+  "transcriptions": [
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-01.png",
+      "bodyTypst": "Sabiendo que: $A = 12B$\n$\"MCM\"(A; B) + \"MCD\"(A; B) = 780$\nCalcula el valor de $A - B$",
+      "alternatives": [
+        "60",
+        "660",
+        "600",
+        "620",
+        "630"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-02.png",
+      "bodyTypst": "Al extraer la raíz cuadrada de un número, se obtuvo 50 de residuo y una raíz \"k\"; pero si se le suma 300 unidades a dicho número, su raíz aumenta en 2 y su residuo se hace igual a $2(k + 2)$; calcula la raíz.",
+      "alternatives": [
+        "42",
+        "14",
+        "21",
+        "7",
+        "57"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-03.png",
+      "bodyTypst": "Una señora lleva en su cesta 90 frutas, entre naranjas y manzanas. Si la razón del número de naranjas y manzanas es igual a $4/6$, calcula el número de naranjas.",
+      "alternatives": [
+        "50",
+        "30",
+        "36",
+        "48",
+        "54"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-04.png",
+      "bodyTypst": "La longitud de un resorte es 8 cm. Si soporta un peso de 50 g su longitud es de 10 cm. Determina su longitud en cm, si soporta un peso que es el doble del anterior, sabiendo que la elongación es directamente proporcional al peso que soporta.",
+      "alternatives": [
+        "16",
+        "8",
+        "14",
+        "10",
+        "12"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-05.png",
+      "bodyTypst": "Determina la suma de los factores primos del siguiente polinomio:\n$P(x) = (x-1)^2 (x^2 - 2x - 4) + 4$",
+      "alternatives": [
+        "4x + 4",
+        "4x - 4",
+        "4x + 5",
+        "4x + 6",
+        "4x - 3"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-06.png",
+      "bodyTypst": "Determina el valor de \"m + n\", si la división $m x^3 + n x^2 + 8x + 3$ entre $x^2 - 1$ admite como residuo a $R(x) = 9x + 6$",
+      "alternatives": [
+        "4",
+        "6",
+        "5",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-07.png",
+      "bodyTypst": "Calcula la traza de \"x\" en la ecuación: $A x = A - B - B x$\nDonde: $A = mat(1, 2; 3, 4)$; $B = mat(0, -2; -3, -3)$",
+      "alternatives": [
+        "9",
+        "6",
+        "8",
+        "10",
+        "7"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-08.png",
+      "bodyTypst": "Si a y b son raíces de la ecuación: $5x^2 - 2(m+1)x + m - 3 = 0$\nAdemás: $6a^2 b + 2a^3 + 2b^2 + 6a b^2 = 128$\nDetermina el valor de \"m\"",
+      "alternatives": [
+        "7",
+        "8",
+        "6",
+        "10",
+        "9"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/geo-lot-13-uncp-2021-1-area2-09.png",
+      "bodyTypst": "A un poste $(overline(\"BH\"))$ lo sostiene dos cables $overline(\"AB\")$ y $overline(\"BC\")$, los cuales miden 10 y 6 metros respectivamente: $\"AC\" = 12$ metros.\n\nCalcula la longitud (en metros) de la proyección del cable $overline(\"AB\")$ sobre $overline(\"AH\")$",
+      "alternatives": [
+        "$frac(28, 5)$",
+        "$frac(26, 5)$",
+        "$frac(26, 3)$",
+        "$frac(25, 3)$",
+        "$frac(27, 4)$"
+      ],
+      "figureCrop": {
+        "left": 0.3,
+        "top": 0.2,
+        "right": 0.78,
+        "bottom": 0.72
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/geo-lot-13-uncp-2021-1-area2-10.png",
+      "bodyTypst": "En una circunferencia de 25 cm de radio, $\"DE\" = 30$ cm\n\n¿Cuántos centímetros mide la cuerda $overline(\"AB\")$?",
+      "alternatives": [
+        "$20 sqrt(3)$",
+        "$15 sqrt(3)$",
+        "$20 sqrt(6)$",
+        "$25 sqrt(6)$",
+        "$10 sqrt(6)$"
+      ],
+      "figureCrop": {
+        "left": 0.3,
+        "top": 0.13,
+        "right": 0.61,
+        "bottom": 0.66
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/geo-lot-13-uncp-2021-1-area2-11.png",
+      "bodyTypst": "El perímetro de un terreno que tiene la forma de rombo mide 400 metros y uno de sus ángulos iguales mide $53°$; el precio unitario es 1 000 soles por cada metro cuadrado.\nCalcula el precio total en soles del área del terreno",
+      "alternatives": [
+        "4 millones",
+        "10 millones",
+        "6 millones",
+        "8 millones",
+        "12 millones"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/trig-lot-13-uncp-2021-1-area2-12.png",
+      "bodyTypst": "Se tiene el triángulo APQ inscrito en una circunferencia trigonométrica, el arco $\"AP\"$ mide $150°$\n\nCalcula el área de la región triangular APO en unidades cuadradas.",
+      "alternatives": [
+        "$frac(1, 3)$",
+        "$frac(1, 5)$",
+        "$frac(1, 6)$",
+        "$frac(1, 2)$",
+        "$frac(1, 4)$"
+      ],
+      "figureCrop": {
+        "left": 0.35,
+        "top": 0.2,
+        "right": 0.63,
+        "bottom": 0.71
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/trig-lot-13-uncp-2021-1-area2-13.png",
+      "bodyTypst": "Calcule el valor de la expresión: $T = \"Sen\" 150° + \"Sec\" 300°$",
+      "alternatives": [
+        "$frac(5, 2)$",
+        "$frac(7, 2)$",
+        "$frac(3, 2)$",
+        "$frac(1, 2)$",
+        "$frac(9, 2)$"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/trig-lot-13-uncp-2021-1-area2-14.png",
+      "bodyTypst": "Determina el valor de las siguientes proposiciones referente a la circunferencia trigonométrica:\nI. En el IIC la línea seno es decreciente.\nII. En la circunferencia trigonométrica el radio de la circunferencia es igual a 2.\nIII. $\"Sec\" 180° = -1$\nIV. El coseno de un arco está dada por la ordenada de su extremo.",
+      "alternatives": [
+        "FFVF",
+        "FVFV",
+        "VFVF",
+        "VVVF",
+        "VFFF"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/estad-lot-13-uncp-2021-1-area2-15.png",
+      "bodyTypst": "Se tiene las notas de tres personas: A, B y C.\nA: 13; 11; 11; 13\nB: 14; 12; 14; 12\nC: 13; 13; 15; 15\nIndica el ordenamiento correcto de los conjuntos de datos de acuerdo a la variabilidad de mayor a menor.",
+      "alternatives": [
+        "$\"CV\"_B > \"CV\"_A > \"CV\"_C$",
+        "$\"CV\"_C > \"CV\"_A > \"CV\"_B$",
+        "$\"CV\"_A > \"CV\"_C > \"CV\"_C$",
+        "$\"CV\"_B > \"CV\"_C > \"CV\"_A$",
+        "$\"CV\"_A > \"CV\"_B > \"CV\"_C$"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/estad-lot-13-uncp-2021-1-area2-16.png",
+      "bodyTypst": "Al encuestar a 80 familias sobre el ingreso familiar semanal, se obtuvo la siguiente tabla de distribución de frecuencias incompleta\n\nDetermina el número de familias que ganan menos de 200 soles",
+      "alternatives": [
+        "68",
+        "76",
+        "78",
+        "62",
+        "70"
+      ],
+      "figureCrop": {
+        "left": 0.25,
+        "top": 0.17,
+        "right": 0.73,
+        "bottom": 0.66
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/estad-lot-13-uncp-2021-1-area2-17.png",
+      "bodyTypst": "El siguiente diagrama circular muestra el porcentaje de estudiantes de $1°$, $2°$, $3°$, $4°$ y $5°$ grados de secundaria que están matriculados para el año 2021\n\nDetermine el promedio de estudiantes por grado, si el total de estudiantes matriculados es 200.",
+      "alternatives": [
+        "45",
+        "30",
+        "40",
+        "35",
+        "38"
+      ],
+      "figureCrop": {
+        "left": 0.27,
+        "top": 0.2,
+        "right": 0.65,
+        "bottom": 0.69
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/lit-lot-13-uncp-2021-1-area2-18.png",
+      "bodyTypst": "Completa el organizador",
+      "alternatives": [
+        "Moby Dick",
+        "La madre",
+        "La sentencia",
+        "La metamorfosis",
+        "Un médico rural"
+      ],
+      "figureCrop": {
+        "left": 0.29,
+        "top": 0.12,
+        "right": 0.78,
+        "bottom": 0.66
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/lit-lot-13-uncp-2021-1-area2-19.png",
+      "bodyTypst": "Identifica la respuesta correcta respecto a la novela Pedro Páramo de Juan Rulfo.\nJuan Preciado - el personaje principal - al final descubre que:\nI. Todo era un sueño.\nII. Era su propio padre.\nIII. Estaba muerto.\nIV. Su madre lo había engañado.\nV. Ese mundo era el paraíso.",
+      "alternatives": [
+        "IV",
+        "V",
+        "I",
+        "III",
+        "II"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/leng-lot-13-uncp-2021-1-area2-20.png",
+      "bodyTypst": "Dado el siguiente texto:\nLas insignias nacieron como una fórmula de publicidad. Ahora son objetos de colección. Primero se denominaron insignias, luego chapitas y ahora parece preferirse el nombre de pins.\nIdentifica el tipo de oraciones.",
+      "alternatives": [
+        "Simple, simple, simple",
+        "Simple, compuesto, simple",
+        "Simple, simple, compuesto",
+        "Simple, compuesto, compuesto",
+        "Compuesto, compuesto, compuesto"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/lit-lot-13-uncp-2021-1-area2-21.png",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) en torno al Realismo:\nI. Describe el mundo exterior de manera objetiva.\nII. El método utilizado por los escritores es la observación y la descripción.\nIII. Persisten en la presencia de caballeros y héroes\nIV. La lengua es adaptada a situaciones y condiciones de vida de los personajes.\nV. La intención del realista es moralizante y critica",
+      "alternatives": [
+        "FFFVV",
+        "VVVFF",
+        "FVFFV",
+        "VVFVV",
+        "FVFVF"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/fis-lot-13-uncp-2021-1-area2-22.png",
+      "bodyTypst": "Una masa de 100 kg inicialmente en reposo, alcanza al cabo de 5 segundos en movimiento por un plano horizontal sin fricción una energía cinética de 20 kJ.\nDetermina el valor de la fuerza constante que provoca dicho movimiento.",
+      "alternatives": [
+        "350 N",
+        "250 N",
+        "440 N",
+        "300 N",
+        "400 N"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/fis-lot-13-uncp-2021-1-area2-23.png",
+      "bodyTypst": "Un cuerpo cuelga del extremo de un resorte y oscila verticalmente con el periodo de 2 segundos. Si al aumentar la masa del cuerpo en 1 kg, el nuevo periodo es de 4 segundos.\nDetermine el valor de la masa inicial en kilogramos.",
+      "alternatives": [
+        "1",
+        "$frac(1, 3)$",
+        "$frac(1, 2)$",
+        "3",
+        "2"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/fis-lot-13-uncp-2021-1-area2-24.png",
+      "bodyTypst": "Una bola de billar de 0,4 kg impacta contra una baranda de manera frontal con una velocidad de 10 m/s. Sabiendo que rebota en dirección contraria a razón de 6 m/s.\n¿Qué fuerza (en N) experimentó durante el choque, si este duró 0,2 segundos?",
+      "alternatives": [
+        "16 N",
+        "18 N",
+        "24 N",
+        "8 N",
+        "32 N"
+      ],
+      "figureCrop": {
+        "left": 0.27,
+        "top": 0.4,
+        "right": 0.99,
+        "bottom": 0.99
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/quim-lot-13-uncp-2021-1-area2-25.png",
+      "bodyTypst": "La masa atómica de un átomo es el triple de su número atómico, si posee 48 neutrones. Determina el número de electrones de dicho átomo.",
+      "alternatives": [
+        "24",
+        "48",
+        "12",
+        "18",
+        "6"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/quim-lot-13-uncp-2021-1-area2-26.png",
+      "bodyTypst": "Determina el valor de verdad (V) o falsedad (F) respecto a la nomenclatura de los siguientes compuestos químicos:\nI. $\"Fe\"_2\"O\"_3 arrow.r$ Óxido férrico\nII. $\"BaSO\"_4 arrow.r$ Sulfato de bario\nIII. $\"ZnS\" arrow.r$ Sulfato de zinc",
+      "alternatives": [
+        "FFF",
+        "VVV",
+        "FVV",
+        "VFV",
+        "VFF"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/eco-lot-13-uncp-2021-1-area2-27.png",
+      "bodyTypst": "Identifica la ecorregión del Perú que se encuentra en las regiones de Tumbes, Piura y Lambayeque, cuya vegetación está conformada por especies adaptadas a la sequía, con especies representativas como el algarrobo, guayacán, ceibo, huarango, entre otros.",
+      "alternatives": [
+        "Serranía Esteparia",
+        "Desierto del Pacífico",
+        "Bosque seco Ecuatorial",
+        "Páramo",
+        "Bosque Tropical del Pacífico"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/eco-lot-13-uncp-2021-1-area2-28.png",
+      "bodyTypst": "Ordena de mayor a menor nivel, las siguientes unidades ecológicas:\nA. Bioma  B. Población\nC. Biósfera  D. Comunidad",
+      "alternatives": [
+        "ADCB",
+        "BCAD",
+        "ACBD",
+        "CADB",
+        "DBAC"
+      ],
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas"
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/psi-lot-13-uncp-2021-1-area2-29.png",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones relacionadas con la vida saludable:\nI. La reflexión sobre uno mismo no contribuye al desarrollo físico ni mental.\nII. Una actitud positiva es fundamental para conseguir buena salud.\nIII. Una alimentación sana y balanceada contribuye al desarrollo físico y mental.",
+      "alternatives": [
+        "VVF",
+        "FVV",
+        "FVF",
+        "VFF",
+        "FFV"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/psi-lot-13-uncp-2021-1-area2-30.png",
+      "bodyTypst": "Correlaciona las áreas de un proyecto de vida personal con sus características:\n\nI. Vocacional  II. Afectiva  III. Sociopolítica\n\na. Analizar y descubrir el tipo de trabajo que nos gustaría tener.\nb. Participación en movimientos sociales.\nc. Pensar en el tipo de persona que nos gustaría como esposa(o).",
+      "alternatives": [
+        "Ia - IIb - IIIc",
+        "Ib - IIc - IIIa",
+        "Ia - IIc - IIIb",
+        "Ic - IIa - IIIb",
+        "Ib - IIa - IIIc"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/com-lot-13-uncp-2021-1-area2-31.png",
+      "bodyTypst": "Identifica el tipo de texto publicitario.",
+      "alternatives": [
+        "Aviso",
+        "Afiche",
+        "Anuncio",
+        "Cartel",
+        "Comunicado"
+      ],
+      "figureCrop": {
+        "left": 0.23,
+        "top": 0.06,
+        "right": 0.79,
+        "bottom": 0.9
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/com-lot-13-uncp-2021-1-area2-32.png",
+      "bodyTypst": "Identifica la relación de cohipónimos, considerando su campo semántico.",
+      "alternatives": [
+        "Palta - lechuga",
+        "Retama - planta",
+        "Yuca - camote",
+        "Árbol - molle",
+        "Fruta - verdura"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rv-lot-13-uncp-2021-1-area2-33.png",
+      "bodyTypst": "Identifica el (los) enunciado(s) que ejemplifica(n) la sustitución léxica:\nI. Cortázar y Vargas Llosa formaron parte del Boom Latinoamericano, ambos internacionalizaron la literatura de América Latina.\nII. Cortázar apoyó los regímenes de tendencia izquierdista, el autor de \"Rayuela\" simpatizó con los gobiernos de Cuba y Nicaragua.\nIII. Vargas Llosa simpatizó inicialmente con la izquierda, pero luego, el Nobel peruano se convirtió en un frecuente crítico de ella.",
+      "alternatives": [
+        "I - II",
+        "I - III",
+        "III",
+        "I - II - III",
+        "II - III"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rv-lot-13-uncp-2021-1-area2-34.png",
+      "bodyTypst": "TEXTO\nEn la agricultura peruana, el cultivo de papas nativas promete convertirse en el boom de la gastronomía. Estas se producen por toneladas en Huancavelica y Apurímac. Allí hay más de 5000 familias que se dedican al cultivo de tubérculo. Al cosechar algunas de estas variedades se puede apreciar diferentes tamaños y formas.\n\nEn el texto, identifica el número de palabras anafóricas.",
+      "alternatives": [
+        "2",
+        "3",
+        "5",
+        "6",
+        "4"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rv-lot-13-uncp-2021-1-area2-35.png",
+      "bodyTypst": "TEXTO\nLa democracia es real cuando garantiza que en un proceso electoral, el mensaje de los candidatos llegue a todos los ciudadanos. Cuando Ciro Gálvez exponía sus propuestas, no había un traductor en simultáneo, esto perjudica acerca de tres millones y medio de compatriotas que son relegados y marginados. No se trata de castellanizarlos, si no de involucrarlos realmente en la política nacional respetando las lenguas originarias.\n\n¿Qué pasa si en lugar de incorporar las lenguas originarias en los mensajes políticos, castellanizáramos a los candidatos quechua hablantes?",
+      "alternatives": [
+        "La sociedad se consolida a través de un lenguaje único.",
+        "La democracia se consolida con unidad nacional.",
+        "La democracia se estabiliza por la homogeneidad del idioma.",
+        "La democracia se vuelve elitista y excluyente.",
+        "La población es incorporada a la vida política de verdad."
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/ing-lot-13-uncp-2021-1-area2-37.png",
+      "bodyTypst": "Completa la conversación:\nA: I'm very worried. The math exam was the …\nB: It was the … difficult, but I solved it.\nThe English exam was the …, I got 20.\nThis is the … day of my life!",
+      "alternatives": [
+        "most / worst / easiest / best",
+        "best / most / worst / easiest",
+        "worst / best / easiest / most",
+        "easiest / most / worst / best",
+        "worst / most / easiest / best"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/ing-lot-13-uncp-2021-1-area2-38.png",
+      "bodyTypst": "Completa las respuestas correctas con la forma correcta del verbo:\nWhat did they do yesterday morning?\n\nI. María … hats.\nII. Gerardo … to school.\nIII. Elena … volleyball.\n\nA. played\nB. plaied\nC. sold\nD. selled\nE. went\nF. goed",
+      "alternatives": [
+        "I E, II C, III B",
+        "I B, II F, III D",
+        "I A, II F, III B",
+        "I C, II E, III A",
+        "I D, II E, III A"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-39.png",
+      "bodyTypst": "¿Cuántos puntos de intersección tendrá la figura 10?",
+      "alternatives": [
+        "116",
+        "120",
+        "112",
+        "125",
+        "118"
+      ],
+      "figureCrop": {
+        "left": 0.25,
+        "top": 0.23,
+        "right": 0.73,
+        "bottom": 0.78
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-40.png",
+      "bodyTypst": "Rubén lee un libro de la siguiente manera: El primer día lee 5 páginas, el segundo día lee 10 páginas, el tercer día lee 15 páginas, el cuarto día lee 20 páginas y así sucesivamente ¿Cuántas páginas habrá leído el décimo día?",
+      "alternatives": [
+        "30",
+        "80",
+        "60",
+        "40",
+        "50"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-41.png",
+      "bodyTypst": "¿Cuántos cuadriláteros tienen un solo asterisco en la siguiente figura?",
+      "alternatives": [
+        "10",
+        "9",
+        "11",
+        "8",
+        "7"
+      ],
+      "figureCrop": {
+        "left": 0.27,
+        "top": 0.15,
+        "right": 0.46,
+        "bottom": 0.97
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-42.png",
+      "bodyTypst": "Determine qué figuras admiten un recorrido euleriano.",
+      "alternatives": [
+        "Figuras II y III",
+        "Solo figura I",
+        "Solo figura II",
+        "Solo figura III",
+        "Figuras I y II"
+      ],
+      "figureCrop": {
+        "left": 0.24,
+        "top": 0.15,
+        "right": 0.77,
+        "bottom": 0.7
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-43.png",
+      "bodyTypst": "La edad de Martín es el triple de la edad de Ken y dentro de 10 años será el doble. Luego la edad de Martín es.",
+      "alternatives": [
+        "27 años",
+        "39 años",
+        "42 años",
+        "36 años",
+        "30 años"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-44.png",
+      "bodyTypst": "Henry tiene 30 años y su edad es el quíntuplo de la edad que tenía Nilda cuando Henry tenía la tercera parte de la edad actual de ésta ¿Cuál será la edad de Nilda dentro de 5 años?",
+      "alternatives": [
+        "3 años",
+        "27 años",
+        "6 años",
+        "32 años",
+        "30 años"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-45.png",
+      "bodyTypst": "Determina la cantidad total de corazones en el siguiente arreglo triangular:",
+      "alternatives": [
+        "1320",
+        "1640",
+        "1460",
+        "1450",
+        "1560"
+      ],
+      "figureCrop": {
+        "left": 0.09,
+        "top": 0.2,
+        "right": 0.88,
+        "bottom": 0.81
+      }
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-46.png",
+      "bodyTypst": "Jhony camina $3 frac(1, 2)$ km el lunes, $4 frac(1, 2)$ km el martes y 5 kilómetros el miércoles. ¿Cuántos kilómetros ha caminado en los 3 días?",
+      "alternatives": [
+        "13",
+        "12",
+        "14",
+        "15",
+        "11"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-47.png",
+      "bodyTypst": "La familia Flores dispone de \\$56 para ir al cine con sus hijos, si compra las entradas de \\$10, le faltaría dinero y si adquiere las de \\$8 le sobraría dinero.\n¿Cuántos hijos tiene la mencionada familia?",
+      "alternatives": [
+        "9",
+        "5",
+        "7",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-48.png",
+      "bodyTypst": "A una cena asistieron seis amigos (3 varones y 3 damas): Juan, Pedro, Mario, Lérida, Maribel y Roxana. Terminada la cena, cada uno de ellos salió acompañado por una dama. Pedro salió con la amiga de Maribel. Lérida, que no simpatiza con Maribel, salió antes que Juan.\nHalla la relación correcta",
+      "alternatives": [
+        "Juan - Lérida",
+        "Mario - Roxana",
+        "Mario - Maribel",
+        "Pedro - Maribel",
+        "Pedro - Roxana"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-49.png",
+      "bodyTypst": "Si:\n$F_1 = 4(1)+1$\n$F_2 = 8(4)+4$\n$F_3 = 12(9)+27$\n$dots.v$\nHalla \"x\", si $F_x = 5(10^3)$",
+      "alternatives": [
+        "18",
+        "10",
+        "20",
+        "16",
+        "8"
+      ]
+    },
+    {
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-50.png",
+      "bodyTypst": "Se define $(x+1) = x^2 - 6x + 9$\nHallar el valor de \"z\" en $((2z+1)) = 441$",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "5",
+        "3"
+      ]
+    }
+  ]
+}

@@ -2097,6 +2097,921 @@
       "correctAnswer": "2",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
       "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una sucesión geométrica $(a_n)_(n in NN)$ con razón r. Siendo $a_4 = 4$ y $a_7 = 12$. Calcule $r^3 + a_(10)$",
+      "alternatives": [
+        "39",
+        "40",
+        "42",
+        "45",
+        "48"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 18 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Grafique la región $R = {(x, y) in RR^2 slash y <= 2^x, y >= (1/2)^x, x + y <= 3}$",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "alternativeImagePaths": [
+        "lot-0-uni-2019-1-alternatives/alg-lot-0-uni-2019-1-alg-20-a.png",
+        "lot-0-uni-2019-1-alternatives/alg-lot-0-uni-2019-1-alg-20-b.png",
+        "lot-0-uni-2019-1-alternatives/alg-lot-0-uni-2019-1-alg-20-c.png",
+        "lot-0-uni-2019-1-alternatives/alg-lot-0-uni-2019-1-alg-20-d.png",
+        "lot-0-uni-2019-1-alternatives/alg-lot-0-uni-2019-1-alg-20-e.png"
+      ],
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un cuadrilátero ABCD, las diagonales miden $A C = 17$ cm y $B D = 15$ cm; sea \"M\" punto medio de $overline(A C)$ y \"F\" punto medio de $overline(B D)$; los ángulos interiores de B y D miden $90°$. Calcule MF en cm.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El punto A está a 8 m encima de un plano horizontal P, y el punto B se halla a 4 m encima del mismo plano. Si C es un punto del plano P tal que $A C + B C$ es mínimo y el ángulo que forman la recta \"CB\" con el plano P es $53°$, entonces (en m) AC es:",
+      "alternatives": [
+        "8",
+        "8,5",
+        "9",
+        "9,5",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea el tetraedro regular de arista $a$, con $a$ un entero positivo diferente de múltiplo de 3. Se unen los baricentros de las caras del tetraedro regular formando un tetraedro nuevo y así se repite el proceso n veces. Si $frac(S_n, V_n) = frac(243 sqrt(6), 4)$, donde $S_n$ y $V_n$ son el área total y el volumen del tetraedro respectivamente en el proceso n-ésimo. Halle $81 sqrt(6) h_n$, siendo $h_n$ la altura del tetraedro en el proceso n-ésimo.",
+      "alternatives": [
+        "$8 sqrt(3)$",
+        "16",
+        "$8 sqrt(6)$",
+        "$16 sqrt(2)$",
+        "32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 30 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $alpha$ un ángulo en el II cuadrante con $tan(alpha) = -frac(7, 24)$ y $beta$ un ángulo en el III cuadrante con $cot(beta) = frac(3, 4)$. Determine el valor de $\"sen\"(alpha + beta)$.",
+      "alternatives": [
+        "$-frac(107, 125)$",
+        "$-frac(3, 5)$",
+        "$frac(17, 125)$",
+        "$frac(3, 5)$",
+        "$frac(107, 125)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Obtenga el conjunto solución del siguiente sistema de ecuaciones: $y = 1 - cos(x)$; $1 = 4 y cos(x)$",
+      "alternatives": [
+        "${(2 k pi plus.minus pi/3; 1/2) slash k in ZZ}$",
+        "${(2 k pi plus.minus pi/3; 1) slash k in ZZ}$",
+        "${(k pi plus.minus pi/3; 1/2) slash k in ZZ}$",
+        "${(k pi plus.minus pi/3; 1) slash k in ZZ}$",
+        "${(k pi plus.minus pi/6; 1/3) slash k in ZZ}$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el menor periodo positivo de la función definida por: $f(x) = sqrt(1 + cos(2 x)) + sqrt(1 - cos(2 x))$",
+      "alternatives": [
+        "$pi/2$",
+        "$pi$",
+        "$3 pi/2$",
+        "$2 pi$",
+        "$4 pi$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un marino que observa el horizonte desde un faro de altura h, lo hace con un ángulo de depresión $theta$. Calcule el radio R de la Tierra en función de h y $theta$.",
+      "alternatives": [
+        "$frac(h \"sen\"(theta), 1 - \"sen\"(theta))$",
+        "$frac(h cos(theta), 1 - cos(theta))$",
+        "$frac(1 + cos(theta), h cos(theta))$",
+        "$frac(1 + \"sen\"(theta), h \"sen\"(theta))$",
+        "$frac(h cos(theta), 1 - \"sen\"(theta))$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La ecuación de una cónica en coordenadas polares es: $r = frac(15, 4 - 4 cos(theta))$. Determine una ecuación cuadrática para sus puntos en coordenadas rectangulares.",
+      "alternatives": [
+        "$x^2 = frac(15, 2) y + (frac(15, 4))^2$",
+        "$y^2 = frac(15, 2) x + (frac(15, 4))^2$",
+        "$x^2 = -frac(15, 2) y + (frac(15, 4))^2$",
+        "$y^2 = -frac(15, 2) x + (frac(15, 4))^2$",
+        "$x^2 = -frac(15, 4) y + (frac(15, 2))^2$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el conjunto $S = {x in RR slash 0 < log|x - 1| < 1}$. Determine $S inter ([0; 2] union [12; 20])$",
+      "alternatives": [
+        "$emptyset$",
+        "$chevron.l 1; 2 chevron.r$",
+        "$[15; 20]$",
+        "$[12; 15]$",
+        "$[12; 20]$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Aritmética, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la gráfica de $y = A \"arc cos\"(B x + C) + D$ es (ver figura adjunta). Determine el valor de: $E = A + B + C$.",
+      "alternatives": [
+        "3",
+        "$2/3$",
+        "$4/3$",
+        "4",
+        "$14/3$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-0-uni-2019-1-figures/trig-lot-0-uni-2019-1-tri-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Trigonometría, pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el círculo trigonométrico de la figura, $theta$ es un ángulo negativo en posición normal. Si $overline(P Q)$ es perpendicular a $overline(M N)$, halle las coordenadas de $Q(x_0, y_0)$ y dé como respuesta $x_0 - y_0$.",
+      "alternatives": [
+        "$2 cos(theta) - \"sen\"(theta)$",
+        "$cos(theta) - \"sen\"(theta)$",
+        "$2 \"sen\"(theta) - cos(theta)$",
+        "$\"sen\"(theta) + cos(theta)$",
+        "$\"sen\"(theta) - cos(theta)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-0-uni-2019-1-figures/trig-lot-0-uni-2019-1-tri-35.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Trigonometría, pregunta 35 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra un cuadrado ABCD de lado 1 u. Si las curvas son arcos de circunferencia con centros en B y D, exprese el vector $arrow(c)$ en términos de $arrow(a)$ y $arrow(b)$.",
+      "alternatives": [
+        "$1/2 (arrow(a) - arrow(b))$",
+        "$1/4 (arrow(a) - arrow(b))$",
+        "$frac(sqrt(2), 4) (arrow(a) - arrow(b))$",
+        "$(sqrt(2) - 1) (arrow(a) - arrow(b))$",
+        "$frac(sqrt(2), 2) (arrow(a) - arrow(b))$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-0-uni-2019-1-figures/fis-lot-0-uni-2019-1-fis-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo se lanza hacia arriba desde una altura de 20 m y alcanza una altura máxima (desde el suelo) de 30 m en un tiempo t. Si t' es el tiempo que demora el cuerpo en caer al suelo desde la altura máxima, calcule $t'\\/t$. $g = 9,81$ m/s²",
+      "alternatives": [
+        "1",
+        "$sqrt(2)$",
+        "$sqrt(3)$",
+        "2",
+        "$sqrt(5)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La hélice de un ventilador gira a 960 rpm. Después de desconectarlo, desacelera uniformemente demorando 16 s hasta detenerse. Calcule el número de vueltas que realiza la hélice en la desaceleración.",
+      "alternatives": [
+        "32",
+        "64",
+        "128",
+        "256",
+        "512"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el dibujo, el sistema sube con una aceleración de 0,19 m/s². Calcule la tensión (en N) en la cuerda que une los bloques A y B. $m_A = 400$ g; $m_B = 300$ g; $m_C = 200$ g. $g = 9,81$ m/s²",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-0-uni-2019-1-figures/fis-lot-0-uni-2019-1-fis-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos satélites idénticos $S_1$ y $S_2$ orbitan circularmente alrededor de un mismo planeta. El primero tiene un período de 512 horas y el segundo de 343 horas. Calcule la relación de los radios de sus órbitas: $R_1 slash R_2$.",
+      "alternatives": [
+        "16/15",
+        "8/7",
+        "41/35",
+        "56/42",
+        "64/49"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, el bloque pesa 90 N y es sometido a la acción de las fuerzas de módulos $F_1 = 50$ N y $F_2 = 40$ N. Calcule el trabajo (en J) que realiza $F_2$ para un recorrido \"d\", si se sabe que $F_1$ realiza un trabajo de 400 J. $g = 9,81$ m/s²",
+      "alternatives": [
+        "-300",
+        "-200",
+        "-100",
+        "100",
+        "200"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-0-uni-2019-1-figures/fis-lot-0-uni-2019-1-fis-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene un sistema formado por tres esferas pequeñas de igual masa ($m = 10$ g). En el instante $t = 0$, se encuentran sobre una superficie horizontal lisa en las posiciones que se muestran en la figura. Si los choques son frontales y completamente inelásticos, determine la cantidad de movimiento del sistema (en g·cm/s) en el instante $t = 3$ s.",
+      "alternatives": [
+        "9",
+        "10",
+        "20",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-0-uni-2019-1-figures/fis-lot-0-uni-2019-1-fis-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El extremo de un resorte está sujeto a una pared y el otro está unido a un bloque de masa de 2 kg que oscila sobre una superficie lisa. Halle la amplitud (en m) de oscilación del bloque, si su rapidez en la posición de equilibrio es 10 m/s. La constante de elasticidad del resorte es 300 N/m. $g = 9,81$ m/s²",
+      "alternatives": [
+        "$sqrt(2/3)$",
+        "2/3",
+        "1",
+        "$sqrt(3/2)$",
+        "3/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 8 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una cuerda se fija por ambos extremos haciéndola vibrar bajo una tensión de 180 N generándose ondas estacionarias. Dos armónicos consecutivos tienen frecuencias de 45 Hz y de 37,5 Hz. Si la densidad lineal de masa de la cuerda es igual a 0,2 kg/m, calcule la longitud de la cuerda (en m).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un bloque de masa \"m\" realiza un M.A.S. Calcule qué porcentaje de la rapidez máxima tiene el bloque cuando su elongación es el 28 % de su amplitud máxima.",
+      "alternatives": [
+        "28",
+        "42",
+        "50",
+        "75",
+        "96"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una esfera de 200 cm³ de volumen que tiene una densidad igual a 0,8 g/cm³, está sumergida en un tanque lleno de agua. Si la esfera se suelta del fondo del tanque, calcule aproximadamente el tiempo (en s) que demora en elevarse 5 m dentro del agua. No considere las fuerzas de fricción. $g = 9,81$ m/s²",
+      "alternatives": [
+        "2,02",
+        "3,02",
+        "4,02",
+        "5,02",
+        "6,02"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se calienta agua usando una cocina eléctrica de potencia P. En 10 minutos la temperatura del agua aumenta de 10°C a 100°C. Si la cocina sigue suministrando la misma potencia P, calcule aproximadamente el tiempo (en minutos) que se necesita para evaporar toda el agua. El proceso se realiza a presión normal. Capacidad calorífica del agua: 4,18×10³ J·kg⁻¹·°C⁻¹. Calor latente de evaporación del agua: 2257×10³ J·kg⁻¹",
+      "alternatives": [
+        "10",
+        "30",
+        "50",
+        "60",
+        "70"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un ciclo de Carnot de un gas ideal ($gamma = 5/3$), se tiene que durante la expansión isotérmica el volumen se duplica y en la expansión adiabática el volumen aumenta en un 25 %. Calcule la relación entre la máxima y mínima temperatura en este ciclo.",
+      "alternatives": [
+        "$(1/4)^(2/3)$",
+        "$(3/4)^(2/3)$",
+        "$(5/4)^(2/3)$",
+        "$(7/4)^(2/3)$",
+        "$(9/4)^(2/3)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un condensador plano se carga en una batería de 6 V, luego se le desconecta. Después se disminuye la distancia de las placas de dicho condensador a la mitad. Calcule la diferencia de potencial (en V) entre las placas en este caso.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el circuito mostrado la potencia total disipada es de 75 W, calcule la resistencia R (en $Omega$).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-0-uni-2019-1-figures/fis-lot-0-uni-2019-1-fis-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula de carga $Q > 0$ y velocidad $arrow(v) = v_0 arrow(i)$ ($v_0 > 0$) ingresa a una región donde existe un campo magnético $arrow(B) = B_0 (arrow(j) + arrow(k))$ ($B_0 > 0$). Encuentre el módulo de la fuerza magnética que actúa sobre la partícula.",
+      "alternatives": [
+        "$1/2 Q v_0 B_0$",
+        "$Q v_0 B_0$",
+        "$frac(sqrt(2), 2) Q v_0 B_0$",
+        "$sqrt(2) Q v_0 B_0$",
+        "$2 Q v_0 B_0$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El campo eléctrico máximo de una onda electromagnética es de 1,8 V/m. Calcule el campo magnético máximo (en nT). $c = 3 times 10^8$ m/s; nT $= 10^(-9)$ T",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una porción de un cascarón esférico delgado que puede usarse como un espejo cóncavo o convexo. Se coloca un objeto a 100 cm de la parte cóncava formándose una imagen real a 75 cm del espejo. Sin mover al objeto se da vuelta al espejo de tal manera que la parte convexa mire al objeto y se mueve el espejo acercándolo o alejándolo del objeto hasta que se forme una imagen a 35 cm detrás del espejo. Calcule aproximadamente la distancia (en cm) que se desplazó el cascarón esférico.",
+      "alternatives": [
+        "37,5",
+        "70,3",
+        "90,9",
+        "123,4",
+        "135,1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre una superficie metálica con función de trabajo igual a $3 times 10^(-19)$ J, incide una onda electromagnética. Calcule aproximadamente la máxima longitud de onda (en nm), que debe de tener la onda electromagnética para que se observe el efecto fotoeléctrico. $h = 6,626 times 10^(-34)$ J·s; $c = 3 times 10^8$ m/s; nm $= 10^(-9)$ m",
+      "alternatives": [
+        "321,2",
+        "432,6",
+        "662,6",
+        "721,6",
+        "932,8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo se suelta sobre una rampa inclinada desde una altura de 20 cm. La rapidez con que llega al suelo es de 1 m/s. Calcule aproximadamente el coeficiente de fricción cinético entre el cuerpo y la rampa. El ángulo de inclinación de la rampa es de $37°$. $g = 9,81$ m/s²",
+      "alternatives": [
+        "0,56",
+        "0,61",
+        "0,65",
+        "0,75",
+        "0,98"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones con respecto a la electrólisis de una solución de ioduro de potasio (KI), ¿cuáles son correctas? I. Se produce iodo ($I_2$) en el cátodo. II. La reacción se lleva a cabo de manera espontánea. III. La solución que rodea al cátodo cambia a fucsia con la adición de fenolftaleína. Potencial estándar de reducción (V): $E°(K^+ slash K) = -2,93$; $E°(O_2 slash H_2 O) = +1,23$; $E°(I_2 slash I^-) = +0,54$; $E°(H_2 O slash H_2) = -0,83$",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La fuerza electromotriz de una celda galvánica es independiente de:",
+      "alternatives": [
+        "Naturaleza de los electrodos.",
+        "Concentración de los cationes.",
+        "Concentración de los aniones.",
+        "Temperatura del sistema.",
+        "Volumen de los electrolitos."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene un pequeño volumen de cierta muestra líquida y se determina su densidad mediante un método sencillo. Para esto se midió la masa de un vaso de precipitado vacío y seco obteniéndose 12,074 gramos. Luego se vertió en el vaso 5,6 mL de la muestra líquida y la masa medida del vaso y el líquido contenido fue de 17,632 gramos. ¿Cuál es la densidad de la muestra líquida (kg/m³)?",
+      "alternatives": [
+        "8,83×10²",
+        "9,93×10²",
+        "1,04×10³",
+        "2,09×10³",
+        "3,06×10³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el horno eléctrico de una siderúrgica se coloca chatarra de acero y después de unos minutos se observa la formación de gases pardo-rojizos los cuales, en corto tiempo, se difunden en el área de trabajo y la zona aledaña. Por otro lado, el acero fundido obtenido en el horno, se vierte en moldes de madera. Pasado un tiempo, a partir del acero fundido se obtienen bolas de acero utilizadas en los molinos. ¿Cuántas de las observaciones subrayadas involucran cambios físicos y químicos, respectivamente?",
+      "alternatives": [
+        "0 , 4",
+        "1 , 3",
+        "2 , 2",
+        "3 , 1",
+        "4 , 0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F): I. El número máximo de orbitales atómicos correspondientes al tercer nivel de energía es nueve. II. Un orbital atómico tipo p, presenta forma tetralobular. III. El orbital atómico $7 p_z$ presenta mayor tamaño que el orbital atómico $6 p_z$.",
+      "alternatives": [
+        "V F V",
+        "V F F",
+        "F V V",
+        "V V V",
+        "F F F"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El fósforo blanco ($P_4$) es obtenido de acuerdo a las siguientes reacciones: $2 \"Ca\"_3 (\"PO\"_4)_(2(s)) + 6 \"SiO\"_(2(s)) -> 6 \"CaSiO\"_(3(s)) + \"P\"_4 \"O\"_(10(s))$; $\"P\"_4 \"O\"_(10(s)) + 10 \"C\"_((s)) -> \"P\"_(4(s)) + 10 \"CO\"_((g))$. ¿Cuántos kilogramos de un mineral, que contiene $\"Ca\"_3(\"PO\"_4)_2$ al 70 % en masa, se necesitan para obtener 2,5 moles de $\"P\"_4$? Masa molar $\"Ca\"_3(\"PO\"_4)_2 = 310$ g/mol",
+      "alternatives": [
+        "1,1",
+        "2,2",
+        "2,6",
+        "3,1",
+        "3,3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique el grupo y período de la Tabla Periódica, respectivamente, correspondiente a un elemento químico cuya configuración electrónica termina en $4 s^1 3 d^(10)$.",
+      "alternatives": [
+        "IA ; 4",
+        "IIIA ; 3",
+        "VA ; 4",
+        "VIIIB ; 3",
+        "IB ; 4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una muestra de 100 g de clorato de potasio ($\"KClO\"_3$) al 90 % de pureza, la cual se somete a calentamiento obteniéndose oxígeno molecular ($O_2$) y cloruro de potasio ($\"KCl\"$). Si la reacción tiene una eficiencia de solo 70 %, ¿cuál sería el volumen (en L) de $O_(2(g))$ obtenido, medido a condiciones normales? $R = 0,082$ atm·L/(mol·K). Masas atómicas: K = 39, Cl = 35,5, O = 16",
+      "alternatives": [
+        "9,19",
+        "14,13",
+        "17,28",
+        "29,32",
+        "39,18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un recipiente rígido contiene 1000 litros de gas metano ($\"CH\"_4$) a 0°C y una atmósfera. Si se libera el gas hasta que su presión disminuye a la mitad de su valor inicial, manteniendo la misma temperatura, ¿cuántos gramos de metano quedarán en el balón? $R = 0,082$ atm·L/(mol·K). Masas atómicas: H = 1, C = 12",
+      "alternatives": [
+        "22,3",
+        "44,6",
+        "357,2",
+        "714,5",
+        "1429,4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una sustancia diamagnética, sin electrones desapareados, es ligeramente repelida por un campo magnético, mientras que una sustancia paramagnética, con electrones desapareados, es atraída débilmente por un campo magnético. ¿Cuántas de las siguientes sustancias son paramagnéticas? $\"CO\"_2$, \"CO\", $\"Cl\"_2$, \"NO\", $\"N\"_2$. Números atómicos: C = 6, N = 7, O = 8, Cl = 17",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuáles de las siguientes moléculas presentan momento dipolar nulo? I) $\"CCl\"_4$ II) $\"H\"_2 \"S\"$ III) $\"H\"_2 \"O\"$. Números atómicos: C = 6, Cl = 17, H = 1, S = 16, O = 8",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la siguiente reacción en medio acuoso: $\"HSO\"_(4(a c))^- + \"CN\"_((a c))^- harpoons.rtlb \"HCN\"_((a c)) + \"SO\"_(4(a c))^(2-)$. Señale la alternativa que corresponda a un par conjugado ácido-base según Bronsted-Lowry.",
+      "alternatives": [
+        "$\"HSO\"_4^-$ y $\"HCN\"$",
+        "$\"CN\"^-$ y $\"SO\"_4^(2-)$",
+        "$\"HSO\"_4^-$ y $\"CN\"^-$",
+        "$\"HSO\"_4^-$ y $\"SO\"_4^(2-)$",
+        "$\"HCN\"$ y $\"SO\"_4^(2-)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La ionización del $\"H\"_2 \"S\"$ en medio acuoso se produce mediante las siguientes reacciones: $\"H\"_2 \"S\"_((a c)) harpoons.rtlb \"H\"^+_((a c)) + \"HS\"^-_((a c))$, $K_(a 1) = 1,0 times 10^(-7)$; $\"HS\"^-_((a c)) harpoons.rtlb \"H\"^+_((a c)) + \"S\"^(2-)_((a c))$, $K_(a 2) = 1,0 times 10^(-15)$. ¿Cuál es la concentración molar (mol/L) de los iones $\"H\"^+$ en una solución acuosa de $\"H\"_2 \"S\"$ 0,1 M?",
+      "alternatives": [
+        "1,0×10⁻³",
+        "1,0×10⁻⁴",
+        "1,0×10⁻⁵",
+        "1,0×10⁻⁶",
+        "1,0×10⁻⁷"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones referidas a las siguientes reacciones que ocurren a igual temperatura: $\"P\"_((g)) + \"Q\"_((g)) harpoons.rtlb \"R\"_((g))$, $K_(\"eq1\") = 1,9 times 10^(-4)$; $\"R\"_((g)) + \"M\"_((g)) harpoons.rtlb \"N\"_((g)) + \"Q\"_((g))$, $K_(\"eq2\") = 8,5 times 10^2$. ¿Cuáles de las siguientes proposiciones son correctas? I. Para la reacción: $2 \"P\"_((g)) + 2 \"Q\"_((g)) harpoons.rtlb 2 \"R\"_((g))$, la constante de equilibrio es $K_(\"eq3\") = 3,61 times 10^(-8)$, a la misma temperatura. II. Para la reacción: $\"P\"_((g)) + \"M\"_((g)) harpoons.rtlb \"N\"_((g))$, la constante de equilibrio es $K_(\"eq1\") times K_(\"eq2\")$, a la misma temperatura. III. El valor de la constante de equilibrio $K_(\"eq3\")$ varía si cambia la temperatura.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En los siguientes oxianiones, indique el que está correctamente nombrado.",
+      "alternatives": [
+        "$\"SeO\"_3^(2-)$: seleniato",
+        "$\"Cr\"_2 \"O\"_7^(2-)$: cromato",
+        "$\"PO\"_4^(3-)$: fosfito",
+        "$\"BrO\"^-$: hipobromito",
+        "$\"ClO\"_2^-$: clorato"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Durante el fenómeno de la disolución pueden desarrollarse una serie de interacciones intermoleculares. ¿Cuáles de las siguientes son posibles? I. Puente de hidrógeno. II. Ion-dipolo. III. Dipolo-dipolo inducido.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La lejía es una solución utilizada en la desinfección y como sacamanchas. Una lejía tiene una concentración al 5 % en masa de hipoclorito de sodio ($\"NaClO\"$). Determine la molaridad (mol/L) de un galón de dicha lejía si tiene una densidad de 1,11 g/mL. Masa molar $\"NaClO\" = 74,5$ g/mol",
+      "alternatives": [
+        "0,74",
+        "1,11",
+        "1,48",
+        "2,22",
+        "2,96"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de los siguientes compuestos representa a un aldehído? A) CH₃-CH₂-CH₂-C(=O)-OH  B) CH₃-CH(CH₃)-CH₂-C(=O)-CH₃  C) CH₃-CH₂-CH₂-C(=O)-CH₃  D) CH₃-C₆H₄-C(=O)-H (posición para)  E) C₆H₅-C(=O)-CH₃",
+      "alternatives": [
+        "CH₃-CH₂-CH₂-C(=O)-OH",
+        "CH₃-CH(CH₃)-CH₂-C(=O)-CH₃",
+        "CH₃-CH₂-CH₂-C(=O)-CH₃",
+        "CH₃-C₆H₄-C(=O)-H (posición para)",
+        "C₆H₅-C(=O)-CH₃"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 38 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un estudiante analiza los potenciales de reducción del aluminio y hierro: $\"Al\"^(3+) + 3 e^- -> \"Al\"$, $E° = -1,66$ V; $\"Fe\"^(2+) + 2 e^- -> \"Fe\"$, $E° = -0,44$ V. De su análisis deduce que el aluminio debería corroerse más fácilmente que el hierro y, siendo así, una lata hecha de aluminio con gaseosa debería corroerse más rápidamente. Por lo tanto, las latas de gaseosa deberían hacerse de hierro. Sin embargo, esto no ocurre así. ¿Cuál es la razón por la cual ese proceso de corrosión no se observa en las latas de aluminio?",
+      "alternatives": [
+        "Debido a la capa de óxido de aluminio ($\"Al\"_2 \"O\"_3$) que se forma en la superficie del metal y lo protege.",
+        "El potencial de oxidación del aluminio es muy bajo.",
+        "El aluminio es pintado con alguna capa de barniz.",
+        "Se forma carbonato de aluminio insoluble, $\"Al\"_2 (\"CO\"_3)_3$, sobre el metal y lo protege.",
+        "El líquido de una gaseosa no es un medio corrosivo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los polímeros son grandes moléculas constituidas por una unidad fundamental (monómero) que se repite. Respecto a los tipos de polímeros, y siendo A y B dos monómeros, indique la relación correcta entre las columnas izquierda y derecha. I. Homopolímero II. Copolímero III. En bloque. a. ~A-B-A-B-A-B~ b. ~A-A-A-A-A-A~ c. ~A-A-A-B-B-B~",
+      "alternatives": [
+        "I-a, II-b, III-c",
+        "I-c, II-b, III-a",
+        "I-a, II-c, III-b",
+        "I-b, II-c, III-a",
+        "I-b, II-a, III-c"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 40 (clave E)"
     }
   ]
 }

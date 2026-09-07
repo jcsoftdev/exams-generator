@@ -1,3 +1,851 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Durante cuánto tiempo estuvo depositado un capital al 5 % de interés simple anual, si los intereses producidos alcanzan al 60% del valor del capital.",
+      "alternatives": [
+        "10 años",
+        "20 años",
+        "15 años",
+        "18 años",
+        "12 años"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las edades de Ana y Beatriz están en la relación de 5 a 3. Las edades de Beatriz y Carmen están en la relación de 4 a 7. Si la suma de las tres edades es 159 años, halla la diferencia de las edades (en años) de Carmen y Ana.",
+      "alternatives": [
+        "5",
+        "3",
+        "8",
+        "27",
+        "24"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se han fundido 3 lingotes de plata de 200 g; 500 g y 300 g cuyas leyes son respectivamente 0,3, 0,4 y 0,5.\nDetermina la ley de la aleación.",
+      "alternatives": [
+        "0,45",
+        "0,39",
+        "0,50",
+        "0,41",
+        "0,43"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el sistema de ecuaciones en \"x\" e \"y\"\n$ cases(3x + m y = -m, x - y = 1) $\nDetermina qué valor debe tomar \"m\" para que el sistema tenga infinitas soluciones.",
+      "alternatives": [
+        "-1",
+        "-2",
+        "3",
+        "-3",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $P(x) = x$; además\n$P[F(x) + G(x)] = 7x + 6$\n$P[F(x) - G(x)] = 3x + 2$\n\nCalcula: $g(f(1/5))$",
+      "alternatives": [
+        "12",
+        "16",
+        "19",
+        "14",
+        "15"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 6 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene el trinomio cuadrado perfecto:\n$ m x^2 + 4 sqrt(3m + 9) x y + 16 y^2 $\nDetermina el valor de: m - 2",
+      "alternatives": [
+        "7",
+        "6",
+        "10",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de los coeficientes del residuo de la siguiente división:\n$ frac(3x^6 + 2x^5 + x^4 + 2x + 3, x^3 - x + 1) $",
+      "alternatives": [
+        "4",
+        "3",
+        "6",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado la ecuación exponencial: $3^(2x+4) + 1 = 2(3^(x+2))$\nDetermina el valor de: $x^2 - 1$",
+      "alternatives": [
+        "5",
+        "0",
+        "2",
+        "3",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente histograma de frecuencias absolutas tomados de una muestra tamaño 40.\nHalla: $f_1 + f_4 + f_5$",
+      "alternatives": [
+        "19",
+        "3",
+        "18",
+        "1",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/estad-lot-19-uncp-2022-i-a3-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los salarios de una empresa (en dólares) son: 252; 396; 328; 920; 375; 430. Determina la mediana",
+      "alternatives": [
+        "375,2",
+        "385,5",
+        "385,1",
+        "380,1",
+        "383,4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En los siguientes enunciados identifica y clasifica las siguientes variables estadísticas cuantitativas:\nI. Peso de un grupo de niños recién nacidos.\nII. Número de hijos de los asistentes a una conferencia.\nIII. Toneladas de desmonte que transporta un volquete.",
+      "alternatives": [
+        "Continua – Continua – Continua",
+        "Continua – Discreta – Continua",
+        "Discreta – Discreta – Discreta",
+        "Continua – Discreta – Discreta",
+        "Discreta – Discreta – Continua"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un concurso participan 8 alumnos y 9 alumnas; si debe haber 2 ganadores. ¿Cuál es la probabilidad de que los ganadores sean una pareja mixta?",
+      "alternatives": [
+        "81/136",
+        "36/136",
+        "80/136",
+        "93/136",
+        "72/136"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala la corriente literaria que presenta las siguientes características:\n• Predominio del sentimiento sobre la razón\n• Libertad para crear sus obras\n• Revaloración de la naturaleza\n• Oposición al Neoclasicismo\n• Adopción de temas subjetivos",
+      "alternatives": [
+        "Romanticismo",
+        "Modernismo",
+        "Renacimiento",
+        "Vanguardismo",
+        "Realismo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 14 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Figuras literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la siguiente figura literaria\n\"Tanto dolor se agrupa en mi costado\nque por doler me duele hasta el aliento\"\n(Miguel Hernández)",
+      "alternatives": [
+        "Hipérbole",
+        "Sinécdoque",
+        "Antítesis",
+        "Metonimia",
+        "Hipérbaton"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala la cualidad de la voz en el siguiente caso:\nMabel llega a la casa de su hermana Paola y toca la puerta:\n• ¿Quién es? - Interroga la niña María.\n• Yo, abre - responde Mabel.\n• ¡Mamá, llegó mi tía! - exclama la niña.",
+      "alternatives": [
+        "Tono",
+        "Timbre",
+        "Ritmo",
+        "Intensidad",
+        "Silencios"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de los enunciados respecto a los programas de televisión en el Perú:\nI. \"Esto es guerra\" y \"Combate\" son educativos.\nII. No hay programas culturales, educativos y familiares en el canal del Estado.\nIII. Los niños invierten más horas sentados frente al televisor o videojuegos.\nIV. Los padres de familia no ayudan a sus hijos a seleccionar programas televisivos.\nV. En nuestro país se han realizado marcha contra los programas de televisión llamados \"basura\".",
+      "alternatives": [
+        "FVFVF",
+        "FFFVV",
+        "FFVVV",
+        "VVVFF",
+        "VFVFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el compuesto químico que precipita con las lluvias ácidas, causando daño a los ecosistemas.",
+      "alternatives": [
+        "Ácido clorhídrico",
+        "Ácido carbónico",
+        "Ácido cítrico",
+        "Ácido acético",
+        "Ácido nítrico"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geomorfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Referente a las placas tectónicas de la Tierra, identifica el movimiento por el que Norteamérica y Europa se alejan unos 3 milímetros por año.",
+      "alternatives": [
+        "Deriva continental",
+        "Deformación rocosa",
+        "Isostasia",
+        "Magmatismo",
+        "Orogénesis"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geopolítica y geografía mundial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Del mundo contemporáneo, identifica a las potencias emergentes del África y América Latina respectivamente.",
+      "alternatives": [
+        "Nigeria y Argentina",
+        "Sudáfrica y Brasil",
+        "Ghana y Chile",
+        "Kenia y Uruguay",
+        "Marruecos y Colombia"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Poblamiento americano y culturas preincaicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la cultura que se desarrolló en el Altiplano peruano - boliviano en el periodo del Horizonte Medio?",
+      "alternatives": [
+        "Chavín",
+        "Moche",
+        "Tiahuanaco",
+        "Huari",
+        "Chimú"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Cartografía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué tipo de mapa muestra la estructura y los tipos de rocas que hay sobre la superficie terrestre?",
+      "alternatives": [
+        "Climático",
+        "Político",
+        "Demográfico",
+        "Geológico",
+        "Administrativo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geopolítica y geografía mundial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad (V) o falsedad (F) respecto al espacio europeo:\nI. Se podría considerar como una \"bahía\" de Asia.\nII. En la actualidad, Europa se organiza en 49 Estados; el más extenso es Rusia.\nIII. Está limitada por dos océanos: Océano Glaciar Ártico y Océano Atlántico.\nIV. El Rin es el principal río navegable.",
+      "alternatives": [
+        "VVFF",
+        "FVVV",
+        "VVVF",
+        "FFVV",
+        "VVFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Considerando la jerarquización de necesidades de la pirámide Maslow, ¿qué tipos de necesidad representa M y N?",
+      "alternatives": [
+        "M: De seguridad\nN: De aceptación social",
+        "M: De autoestima\nN: De aceptación social",
+        "M: De autorrealización\nN: De autoestima",
+        "M: De autoestima\nN: De autorrealización",
+        "M: De seguridad\nN: De autoestima"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/psi-lot-19-uncp-2022-i-a3-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sistema financiero I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿A qué clase de intermediación financiera pertenece la empresa de la figura?",
+      "alternatives": [
+        "Secundaria",
+        "Indirecta",
+        "Primaria",
+        "Directa",
+        "Deficitaria"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/eco-lot-19-uncp-2022-i-a3-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la institución que protege a los consumidores en el Perú.",
+      "alternatives": [
+        "Sunass",
+        "Sunat",
+        "Osiptel",
+        "Indecopi",
+        "Osinergmin"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Proceso económico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión:\nEl ahorro es aquella parte del ingreso que los agentes económicos no han destinado al… en un determinado periodo.",
+      "alternatives": [
+        "crédito",
+        "banco",
+        "servicio",
+        "consumo",
+        "mercado"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica \"x\" en el siguiente organizador:",
+      "alternatives": [
+        "Grupos terciarios",
+        "Grupos de pertenencia",
+        "Grupos de no pertenencia",
+        "Grupos secundarios",
+        "Grupos primarios"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/psi-lot-19-uncp-2022-i-a3-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la oración relacionada al embarazo adolescente.\nLos programas de educación en sexualidad que solo promueven …… no preparan a las y los adolescentes para vivir una vida sexual y reproductiva de manera sana",
+      "alternatives": [
+        "La castidad",
+        "El temor",
+        "La sanción",
+        "El castigo",
+        "La abstinencia"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/psi-lot-19-uncp-2022-i-a3-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Reconociendo el ordenamiento jurídico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿A qué clase de norma representa la figura?",
+      "alternatives": [
+        "Jurídica",
+        "Legal",
+        "Moral",
+        "Procesal",
+        "Peligrosa"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/civ-lot-19-uncp-2022-i-a3-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión:\nCuando encontramos creencias, ideas o valores que se imponen con facilidad a otras, nos estamos refiriendo a una situación de… cultural.",
+      "alternatives": [
+        "hegemonía",
+        "descenso",
+        "inferioridad",
+        "retroceso",
+        "decadencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Considerando al orden jerárquico de las normas jurídicas, ¿qué norma nos indica \"x\"?",
+      "alternatives": [
+        "Resoluciones",
+        "Decretos",
+        "Convenios",
+        "Constitucional",
+        "Leyes"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/civ-lot-19-uncp-2022-i-a3-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jorge tiene 15 años más que Pedro. Hace seis años la edad de Jorge era seis veces la edad de Pedro. Halla la suma de las edades de Jorge y Pedro.",
+      "alternatives": [
+        "31",
+        "33",
+        "24",
+        "35",
+        "28"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el 40% del 80% del precio de una camisa es igual al 20% del 75% de 160 soles, determina el precio de dicha camisa.",
+      "alternatives": [
+        "50 soles",
+        "60 soles",
+        "40 soles",
+        "75 soles",
+        "80 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Después de sacar de un tanque 160 litros de agua, el nivel de la misma descendió de 2/5 a 1/3. ¿Cuántos litros habrá que añadir para llenar el tanque?",
+      "alternatives": [
+        "1 800",
+        "1 500",
+        "1 200",
+        "1 600",
+        "1 400"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos cerillos serán necesarios para construir lo mostrado en la figura?",
+      "alternatives": [
+        "10 011",
+        "10 111",
+        "10 100",
+        "12 100",
+        "10 110"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/rm-lot-19-uncp-2022-i-a3-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 36 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $x * y = (x+y)(x-y)$ y $attach(z, tl: theta) = z^2 - 1$\nCalcula: $attach((6 * 4), tl: theta)$",
+      "alternatives": [
+        "224",
+        "229",
+        "400",
+        "199",
+        "399"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Seis amigos se sientan alrededor de una mesa circular; Marco, que está sentado a la derecha de Paúl, se encuentra frente a Noel. Paúl está frente al que está junto y a la derecha de Sario, que está frente a Raúl. ¿Quién está junto y a la derecha de Carlos?",
+      "alternatives": [
+        "Raúl",
+        "Paúl",
+        "Sario",
+        "Marco",
+        "Noel"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al simplificar el esquema molecular: $tilde.op [(p and tilde.op q) -> p] or q$; resulta",
+      "alternatives": [
+        "$q$",
+        "$p and q$",
+        "$tilde.op q$",
+        "$tilde.op p$",
+        "$p$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué hora es, según el reloj del gráfico mostrado?",
+      "alternatives": [
+        "5h 42 7/11 min",
+        "5h 42 min",
+        "5h 43 min",
+        "5h 41 4/11 min",
+        "5h 42 4/11 min"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/rm-lot-19-uncp-2022-i-a3-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO:\nLa actitud característica del intelectual es la libre discusión crítica en busca del sentido de todo cuanto nos rodea: el símbolo de la vida intelectual es, por tanto, la interrogación. El intelectual, muchas veces considerado inhábil para la vida práctica, es, sin embargo, un renovador infatigable, puesto que nada establecido escapa a su revisión, de modo que su inquietante presencia suele ser temida por el poder injusto, por el fanático por el mediocre.\n\nEs cierto que la tarea intelectual concreta muestra un aspecto práctico en el momento de proceder a la aplicación técnica de los conocimientos, esto que constituye lo que llamamos profesión. Y, en las ciencias, en las artes y hasta en la docencia, una progresiva profesionalización del sujeto va adormeciendo su curiosidad intelectual en la práctica concreta; contra este proceso hay que luchar sin tregua ya que solo la inteligencia lúcida conserva su dignidad y cumple su destino\n\nIdentifica el tema que aborda el texto",
+      "alternatives": [
+        "El estudio y la cultura",
+        "La revisión profesional y la vocación",
+        "El pensamiento crítico",
+        "La cultura y el intelectualismo",
+        "El intelectual y la profesionalización"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 41 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el tipo de relación léxico semántica entre las palabras subrayadas.\nEn las alturas cuido mis ganados: carnero, #underline[llama] y alpaca, sin embargo, es insoportable el frío, por ello me acerco a la #underline[llama] de la hoguera para calentarme.",
+      "alternatives": [
+        "Homografía",
+        "Hiperonimia",
+        "Homofonía",
+        "Sinonimia",
+        "Paronimia"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 42 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\nJuanito desea redactar un texto sobre la violencia contra las mujeres. Para ello elabora un listado de ideas, diagramas y esquemas básicos a fin de establecer los conceptos claves para iniciar su proyecto.\n\n¿A qué proceso de la redacción corresponde lo actuado por Juanito?",
+      "alternatives": [
+        "Generación de ideas",
+        "Revisión de esquemas escritos",
+        "Enunciación de ideas en el texto",
+        "Determinación de propósitos",
+        "Proceso de textualización"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el significado conativo que corresponde.",
+      "alternatives": [
+        "Las personas no deben dejarse manipular.",
+        "La bandera es símbolo de la peruanidad",
+        "Los transportistas se benefician con las marchas políticas.",
+        "Los choferes ganan bien en las manifestaciones políticas.",
+        "Las personas actúan de manera espontánea."
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/com-lot-19-uncp-2022-i-a3-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos periodísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los géneros periodísticos con sus respectivo concepto:\nI. Interpretativo\nII. Opinión\nIII. Informativo\na) Analiza y valora cuestiones de actualidad.\nb) Transmite información de manera objetiva.\nc) Mezcla la información con la opinión para interpretar el hecho.",
+      "alternatives": [
+        "Ic – IIb – IIIa",
+        "Ib – IIc – IIIa",
+        "Ia – IIc – IIIb",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el significado connotativo de la imagen\n\nCarné de vacunación con 2 dosis",
+      "alternatives": [
+        "Presentación del carné con 2 dosis de vacuna por una persona.",
+        "Seguridad y cuidado de las señoritas en pandemia",
+        "Nuevas medidas del protocolo sanitario",
+        "Necesidad de presentar un documento",
+        "Obligatoriedad del uso de mascarilla y gorro"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/com-lot-19-uncp-2022-i-a3-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina cuántos conectores lógicos presenta el siguiente texto:\nLa aparición de la variante Ómicron se dio en África, pero en muchos países no le daban importancia, puesto que, ya estaban vacunados la mayoría de sus pobladores. Debemos tomar en serio esta situación.",
+      "alternatives": [
+        "3",
+        "2",
+        "5",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Future: will / going to",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la expresión incorrecta que completa a la respuesta del diálogo:\n\nA: What is your family doing for Christmas eve this year?\nB: We're going to…",
+      "alternatives": [
+        "Enjoy the moment.",
+        "Make the roasted pork.",
+        "Decorate the Christmas tree.",
+        "Putting the present under the Christmas tree",
+        "Watch Disney films.."
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/ing-lot-19-uncp-2022-i-a3-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 48 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo:\n\nA: Where… people with the Omicron variant?\nB: …in the hospital.",
+      "alternatives": [
+        "is/They are",
+        "is/Is",
+        "is/It is",
+        "are/It is",
+        "are/They are"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/ing-lot-19-uncp-2022-i-a3-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto:\nTeddy's mother was angry because he hasn't …a good grade at school.",
+      "alternatives": [
+        "getting",
+        "got",
+        "gets",
+        "get",
+        "gotten"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-19-uncp-2022-i-a3-figures/ing-lot-19-uncp-2022-i-a3-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 50 (clave E)"
+    }
+  ]
 }
