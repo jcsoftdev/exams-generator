@@ -1,7 +1,105 @@
+import { createHash } from "node:crypto";
+import { readFileSync, readdirSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
 import { and, eq, inArray, isNotNull, isNull } from "drizzle-orm";
+import { hashBodyTypst } from "../modules/bank/domain/hash-body-typst";
 import { db } from "./client";
 import { planImageQuestionRetirement } from "./plan-image-question-retirement";
+import type { RetirementCandidate } from "./plan-image-question-retirement";
+import { planImageTwinLookup } from "./plan-image-twin-lookup";
+import { LotEntry } from "./plan-lot-seed";
 import { examQuestions, questions } from "./schema";
+
+const LOTS_DIR = join(__dirname, "data", "lots");
+
+/**
+ * `source_name` -> `bodyHash` for every lot entry that now carries a statement,
+ * hashed exactly the way `seedLotQuestions` hashes it — figure bytes included,
+ * so one wording over two drawings stays two questions.
+ *
+ * Read off the lots rather than the bank because the lot is what says a question
+ * is text now; the bank is the thing being reconciled to it.
+ */
+function readPromotedHashes(): Map<string, string> {
+  let names: string[];
+  try {
+    names = readdirSync(LOTS_DIR).filter((name) => name.endsWith(".json"));
+  } catch {
+    return new Map(); // no lots shipped in this build
+  }
+
+  const hashBySourceName = new Map<string, string>();
+  const fingerprints = new Map<string, string>();
+  for (const name of names.sort()) {
+    const path = join(LOTS_DIR, name);
+    const dir = dirname(path);
+    const data = JSON.parse(readFileSync(path, "utf8")) as { entries?: LotEntry[] };
+    for (const entry of data.entries ?? []) {
+      const body = entry.bodyTypst;
+      if (!entry.sourceName || typeof body !== "string" || body.trim().length === 0) continue;
+      let fingerprint: string | undefined;
+      if (entry.imagePath) {
+        fingerprint = fingerprints.get(entry.imagePath);
+        if (fingerprint === undefined) {
+          try {
+            fingerprint = createHash("sha256").update(readFileSync(resolve(dir, entry.imagePath))).digest("hex");
+            fingerprints.set(entry.imagePath, fingerprint);
+          } catch {
+            // A figure that cannot be read makes the hash unreproducible, so
+            // this entry simply offers no twin rather than a wrong one.
+            continue;
+          }
+        }
+      }
+      hashBySourceName.set(entry.sourceName, hashBodyTypst(body, fingerprint));
+    }
+  }
+  return hashBySourceName;
+}
+
+/**
+ * Resolves the twin of every screenshot whose lot promoted it but whose text row
+ * the seeder deduped away, as one `IN` query over the statements involved.
+ *
+ * Returns an empty map without touching the database when there is nothing to
+ * look up, which is the steady state after the first deploy that clears them.
+ */
+async function resolveTwins(
+  imageRows: readonly RetirementCandidate[],
+  textRows: readonly RetirementCandidate[],
+): Promise<Map<string, string>> {
+  const lookups = planImageTwinLookup({
+    promotedHashBySourceName: readPromotedHashes(),
+    imageRows,
+    textRows,
+  });
+  if (lookups.length === 0) return new Map();
+
+  const idsByHash = new Map<string, string[]>();
+  const hashes = [...new Set(lookups.map((lookup) => lookup.bodyHash))];
+  for (let i = 0; i < hashes.length; i += 200) {
+    const rows = await db
+      .select({ id: questions.id, bodyHash: questions.bodyHash })
+      .from(questions)
+      .where(and(isNull(questions.tenantId), inArray(questions.bodyHash, hashes.slice(i, i + 200))));
+    for (const row of rows) {
+      if (!row.bodyHash) continue;
+      const ids = idsByHash.get(row.bodyHash);
+      if (ids) ids.push(row.id);
+      else idsByHash.set(row.bodyHash, [row.id]);
+    }
+  }
+
+  const twins = new Map<string, string>();
+  for (const { sourceName, bodyHash } of lookups) {
+    const ids = idsByHash.get(bodyHash);
+    // Exactly one row, or nothing: two rows sharing a statement hash means the
+    // bank holds a duplicate this pass did not create, and handing the exam
+    // references to either would bake a coin flip into somebody's exam.
+    if (ids?.length === 1) twins.set(sourceName, ids[0]!);
+  }
+  return twins;
+}
 
 /**
  * Drops the whole-question screenshots that a restructured lot has replaced
@@ -37,7 +135,11 @@ export async function retireSupersededImageQuestions(): Promise<{
       .where(and(central, isNotNull(questions.bodyTypst))),
   ]);
 
-  const plan = planImageQuestionRetirement({ imageRows, textRows });
+  const plan = planImageQuestionRetirement({
+    imageRows,
+    textRows,
+    twinTextIdBySourceName: await resolveTwins(imageRows, textRows),
+  });
   if (plan.retire.length === 0) {
     return { retired: 0, repointed: 0, deduped: 0, skipped: plan.skipped };
   }

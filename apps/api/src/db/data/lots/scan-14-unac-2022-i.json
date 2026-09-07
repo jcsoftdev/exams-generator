@@ -1,0 +1,1206 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un capital de S/30000 estuvo impuesto durante cierto tiempo al 8% anual, al cabo del cual se retira la totalidad del monto y se impone el 10% durante un tiempo que supera en 5 meses al anterior, produciendo un interés de S/11590. Halle el tiempo de esta última imposición.",
+      "alternatives": [
+        "3 años 2 meses",
+        "3 años 1 mes",
+        "2 años 9 meses",
+        "2 años 11 meses",
+        "3 años 11 meses"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el numeral $10012000031_((n))$ se expresa en base $n^4$, la suma de cifras aumenta en 117. Calcule la cantidad de números de tres cifras en base n.",
+      "alternatives": [
+        "54",
+        "62",
+        "48",
+        "50",
+        "52"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una proporción geométrica cuya razón es un número entero y positivo, el primer consecuente es igual al doble del segundo antecedente. Si la razón aritmética de los extremos es 119. Halle la suma de los antecedentes.",
+      "alternatives": [
+        "148",
+        "147",
+        "146",
+        "155",
+        "151"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se lanzan un par de dados, si los números son diferentes, ¿cuál es la probabilidad de que la suma sea impar?",
+      "alternatives": [
+        "9/13",
+        "3/5",
+        "2/3",
+        "7/8",
+        "3/10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La probabilidad que tiene Ricardo de ganarle a John en una partida de ajedrez es igual a 1/4. ¿Cuál es la probabilidad que tiene Ricardo de ganar, por lo menos, una de tres partidas?",
+      "alternatives": [
+        "41/64",
+        "39/94",
+        "37/64",
+        "1/64",
+        "11/64"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 5 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una encuesta a un grupo de estudiantes sobre las preferencias de los cursos de física y química, se obtuvo que el 65% prefieren física y el 50% gustan de química. Los que gustan de física o química pero no de ambos constituyen el 75% de los entrevistados, y hay 90 estudiantes que no les gusta ninguno de los cursos mencionados. ¿Cuántos estudiantes fueron entrevistados?",
+      "alternatives": [
+        "1600",
+        "1000",
+        "1900",
+        "1800",
+        "1500"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el mayor valor de \"n\" tal que $2021! / 37^n$ es un número entero?",
+      "alternatives": [
+        "45",
+        "55",
+        "56",
+        "40",
+        "53"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el estudio de cierto fenómeno se obtiene la siguiente tabla:\n\n#table(\n  columns: 8,\n  align: center,\n  [$x_i$], [6], [10], [14], [18], [22], [26], [30],\n  [$f_i$], [6], [7], [16], [16], [22], [18], [15],\n)\n\nCalcular el percentil 30.",
+      "alternatives": [
+        "16.2",
+        "16.25",
+        "16.4",
+        "16",
+        "16.5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las notas de un examen de Estadística están distribuidas en el siguiente histograma de frecuencias:\n\n¿Cuál es la nota promedio del examen?",
+      "alternatives": [
+        "12",
+        "14",
+        "12.7",
+        "12.75",
+        "12.5"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-14-unac-2022-i-figures/q09.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la función definida por: $f(x) = (x+5)/sqrt(x-3)$, $x > 3$.\n\nHalle el rango de la función.",
+      "alternatives": [
+        "$[4sqrt(2); +infinity)$",
+        "$[3sqrt(2); +infinity)$",
+        "$[5sqrt(2); +infinity)$",
+        "$[sqrt(2); +infinity)$",
+        "$[2sqrt(2); +infinity)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si se cumple: $(A x + B)/(x^2+1) - C/(2x+1) = (7x-4)/((x^2+1)(2x+1))$\n\nCalcule el valor numérico de: $T = (root(B, A B C) + root(A, B+C))/root(6, 60+2B)$",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $a = 3-b-c$, $a = sqrt(77-b^2-c^2)$, $a = root(3, 477-b^3-c^3)$\n\nHalle el valor numérico de: $T = (17 a b c)/(a b + a c + b c)$",
+      "alternatives": [
+        "-32",
+        "-24",
+        "-64",
+        "-6",
+        "-12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $x_1$ y $x_2$ son las soluciones de la ecuación cuadrática: $x^2 - n x + n = 0$, que satisfacen la condición:\n\n$(x_1/x_2 + 5x_2/x_1)(x_2/x_1 + 5x_1/x_2) = 36$\n\nHalle la suma de los valores de \"n\"",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el desarrollo del cociente notable, determine el lugar del término que tiene grado absoluto igual a 24:\n\n$(x^80 - y^40)/(x^4-y^2)$",
+      "alternatives": [
+        "29",
+        "24",
+        "26",
+        "25",
+        "27"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 14 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $x^3-7x-6$ es el MCM de los polinomios: $A(x)=x^2+3x+a$, $B(x)=x^2-2x-b$\n\nAdemás: $C(x) = \"MCD\"(A,B)$\n\nDetermine el valor de la siguiente expresión: $E = C(a) + C(b)$",
+      "alternatives": [
+        "6",
+        "5",
+        "7",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine los valores de \"n\", para que el sistema\n\n$ cases((n-2)x - y = n - 1, (n-6)x + n y = 6) $\n\nSea compatible determinado.",
+      "alternatives": [
+        "$RR - {2; 4}$",
+        "$emptyset$",
+        "$RR - {2}$",
+        "$RR - {2; 3}$",
+        "$RR - {-2; 3}$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un taller de ropa deportiva confecciona pantalonetas y poleras, la ganancia que se tiene por pantaloneta es de S/ 8 y por polera es de S/ 10. Para la confección de una pantaloneta se necesita 1 m de tela de licra y 1,5 m para una polera, teniendo en cuenta que la producción diaria es de no más de 200 prendas y se debe usar no más de 270 m de tela de licra por día. Hallar el número de prendas que deberán producir diariamente para obtener la máxima ganancia, sabiendo que el taller puede vender todas las pantalonetas y poleras que producen.",
+      "alternatives": [
+        "1880",
+        "2080",
+        "3180",
+        "1800",
+        "1600"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 17 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El perímetro de un cuadrilátero circunscrito a una circunferencia es de 16 cm. Si sus lados miden valores enteros y su lado menor mide 2 cm, halle la longitud del lado mayor.",
+      "alternatives": [
+        "7 cm",
+        "10 cm",
+        "6 cm",
+        "5 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuadrilátero PQRS está inscrito en una circunferencia de diámetro $overline(P S)$. Si T es el punto de intersección de las prolongaciones de $overline(P Q)$ y $overline(R S)$, donde $P Q = 7mu$, $R S = 4 mu$ y $T R = 6 mu$.\n\nHalle el valor de QR.",
+      "alternatives": [
+        "$sqrt(33)mu$",
+        "$sqrt(31)mu$",
+        "$sqrt(37)mu$",
+        "$sqrt(35)mu$",
+        "$sqrt(29)mu$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC, $A B = 2,5 \"cm\"$, $B C = 8,5 \"cm\"$, halle el menor valor entero de la medida de la mediana relativa a $overline(A C)$.",
+      "alternatives": [
+        "6 cm",
+        "2 cm",
+        "4 cm",
+        "3 cm",
+        "5 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC se cumple que: $A B = B C = 10 \"cm\"$ y $A C = 12 \"cm\"$. Encuentre la longitud de la circunferencia que pasa por los puntos A y C, sabiendo que los lados $overline(A B)$ y $overline(B C)$ son tangentes a dicha circunferencia.",
+      "alternatives": [
+        "$20 pi$ cm",
+        "$25 pi$ cm",
+        "$10 pi$ cm",
+        "$15 pi$ cm",
+        "$5 pi$ cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $ell$, la recta en la cual se toman los puntos consecutivos A, B, C y D tal que $A C + B C = 56 \"cm\"$. Halle la longitud del segmento $overline(M C)$, donde M es el punto medio de $overline(A B)$.",
+      "alternatives": [
+        "24 cm",
+        "34 cm",
+        "28 cm",
+        "26 cm",
+        "30 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 22 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, ABCD es un romboide, las áreas de las regiones BTC y DTE son $2 \"cm\"^2$ y $8 \"cm\"^2$, respectivamente. Halle el área de la región ABCE en $\"cm\"^2$.",
+      "alternatives": [
+        "22",
+        "24",
+        "20",
+        "28",
+        "26"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-14-unac-2022-i-figures/q23.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, $ell_1 \\/\\/ ell_2 \\/\\/ ell_3$, calcule \"x\" si: $A B = 3$, $B C = 4$, $D E = x-1$, $E F = x+1$",
+      "alternatives": [
+        "4",
+        "7",
+        "3",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-14-unac-2022-i-figures/q24.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 24 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifique la expresión: $sec 60 degree (\"sen\" 20 degree + 2 \"sen\" 50 degree \"sen\" 20 degree)$",
+      "alternatives": [
+        "$sqrt(3)$",
+        "3/8",
+        "$2sqrt(3)$",
+        "3/2",
+        "3/4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifique la expresión: $((\"tg\" 40 degree + \"tg\" 20 degree)(\"tg\" 70 degree - \"tg\" 50 degree))/((\"tg\" 70 degree + \"tg\" 50 degree)(\"tg\" 40 degree - \"tg\" 20 degree))$",
+      "alternatives": [
+        "1",
+        "0",
+        "-2",
+        "-1",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, se tienen las rectas: $ell_1: x - y + 3 = 0$, $ell_2: 6x + y - 24 = 0$\n\nCalcule el área de la región sombreada.",
+      "alternatives": [
+        "$15 u^2$",
+        "$12,5 u^2$",
+        "$10 u^2$",
+        "$10,5 u^2$",
+        "$12 u^2$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-14-unac-2022-i-figures/q27.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura mostrada, ABCD es un cuadrado cuyo lado mide 6u, calcule el área de la región sombreada.",
+      "alternatives": [
+        "$9/4 (pi/2 - 1) u^2$",
+        "$9/2 (pi/2 - 1) u^2$",
+        "$9/2 (pi-1) u^2$",
+        "$9/4 (pi+1) u^2$",
+        "$9/2 (pi/2+1) u^2$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-14-unac-2022-i-figures/q28.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De la figura, calcule el valor de la expresión: $M = 36 cos 2B - 2 cos 2A$",
+      "alternatives": [
+        "30",
+        "28",
+        "26",
+        "32",
+        "34"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-14-unac-2022-i-figures/q29.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el rango de la función: $f(x) = arccos x + 5 arcsin x - 2pi$",
+      "alternatives": [
+        "$[5pi/2; 2pi]$",
+        "$[-pi/2; 3pi/2]$",
+        "$[-5pi/2; pi/2]$",
+        "$[-pi/2; pi/2]$",
+        "$[-3pi/2; pi]$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A un camión que se mueve con una rapidez de 30 m/s se le aplican los frenos, causándole una desaceleración de $3 \"m/s\"^2$. ¿Qué distancia recorrerá desde el instante en que se le aplican los frenos hasta que se detiene?",
+      "alternatives": [
+        "180 m",
+        "150 m",
+        "160 m",
+        "120 m",
+        "80 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un padre mide la temperatura de su menor hijo y observa que es 40 °C. Su valor en °F, es:",
+      "alternatives": [
+        "100 °F",
+        "102 °F",
+        "103 °F",
+        "101 °F",
+        "104 °F"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la superficie terrestre el módulo de la aceleración de la gravedad es g. A una altura H dicho módulo es (1/16)g. Si R es el radio de la Tierra, entonces se debe cumplir que:",
+      "alternatives": [
+        "H=2R",
+        "H=2,5R",
+        "H=3R",
+        "H=3,5R",
+        "H=4R"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra el antes y el después del choque elástico de dos cuerpos. ¿Cuáles de las siguientes relaciones son verdaderas?\n\nI. $m_1 (v_1^2 - v_1'^2) = m_2 (v_2'^2 - v_2^2)$\n\nII. $arrow(v_1) - arrow(v_2) = arrow(v_2)' - arrow(v_1)'$\n\nIII. $arrow(v_1) + arrow(v_2) = arrow(v_2)' + arrow(v_1)'$",
+      "alternatives": [
+        "Solo I",
+        "Solo III",
+        "Solo II",
+        "I y III",
+        "I y II"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-14-unac-2022-i-figures/q34.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, la duración del recorrido del cuerpo A es el doble de la duración del recorrido del cuerpo B. La razón del módulo de la velocidad media de B al módulo de la velocidad media de A, es:",
+      "alternatives": [
+        "1",
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-14-unac-2022-i-figures/q35.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra las secciones transversales de tres canales I, II y III por los que fluye agua, con rapidez de $1 \"m/s\"$, $pi \"m/s\"$, $2pi \"m/s\"$, respectivamente.\n\nLa relación de los caudales $Phi_I$, $Phi_(I I)$, $Phi_(I I I)$ de los tres canales es:",
+      "alternatives": [
+        "$Phi_I < Phi_(I I) < Phi_(I I I)$",
+        "$Phi_I = Phi_(I I) = Phi_(I I I)$",
+        "$Phi_(I I I) < Phi_(I I) < Phi_I$",
+        "$Phi_(I I I) < Phi_I < Phi_(I I)$",
+        "$Phi_I < Phi_(I I I) < Phi_(I I)$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-14-unac-2022-i-figures/q36.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, el sistema realiza un movimiento armónico simple con una frecuencia de 1 Hz. Si $g = 10 \"m/s\"^2$, ¿qué amplitud de oscilación máxima tendrá el sistema si el bloque $m_1$, que descansa sobre $M_2$, no desliza?",
+      "alternatives": [
+        "$5/(16 pi^2)$ m",
+        "$8/(5 pi^2)$ m",
+        "$5/(8 pi^2)$ m",
+        "$5/pi^2$ m",
+        "$2/(5 pi^2)$ m"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-14-unac-2022-i-figures/q37.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a los hidrocarburos, determine las proposiciones correctas:\n\nI. El benceno es un alifático.\n\nII. El gas acetileno es un aromático.\n\nIII. Los combustibles convencionales contienen hidrocarburos.",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "Solo III",
+        "Solo I",
+        "Solo II"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una muestra de 100 mg de un gas en un recipiente cerrado, entonces podrás estar seguro que el gas \\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "llena por completo el recipiente",
+        "al mezclarse con oxígeno es muy probable que explote",
+        "es inodoro e incoloro",
+        "es menos denso que el aire",
+        "huele mal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La energía que libera la fisión nuclear de 200mg de plutonio, en kJ, es:\n\n$(C = 3 times 10^8 \"m/s\")$",
+      "alternatives": [
+        "$1,8 times 10^10$",
+        "$1,8 times 10^9$",
+        "$1,8 times 10^11$",
+        "$1,8 times 10^13$",
+        "$1,8 times 10^12$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 40 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la frecuencia con que vibra las ondas de luz, si su longitud de onda es de 6000 Å?\n\nDato: $C = 3 times 10^8 \"m/s\"$ y $1 Å = 10^(-10) m$",
+      "alternatives": [
+        "$2,5 times 10^15 \"Hz\"$",
+        "$1,8 times 10^14 \"Hz\"$",
+        "$2 times 10^15 \"Hz\"$",
+        "$5 times 10^14 \"Hz\"$",
+        "$5 times 10^15 \"Hz\"$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una batería tiene como electrolito una solución de ácido sulfúrico $\"H\"_2 \"SO\"_(4(a c))$ al 49% en peso y densidad $0,8 \"g/ml\"$. Determine la normalidad de esta solución:\n\n$(P M_(\"H\"_2\"SO\"_4) = 98)$",
+      "alternatives": [
+        "3 N",
+        "8 N",
+        "2 N",
+        "4 N",
+        "6 N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 42 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de las siguientes soluciones no conduce corriente eléctrica?",
+      "alternatives": [
+        "Ácido muriático",
+        "Alcohol medicinal",
+        "Vinagre",
+        "Suero comercial",
+        "Agua potable"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fundamentos de la biología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La teoría quimiosintética explica que con la ayuda de las descargas eléctricas y de las radiaciones ultravioleta, las moléculas orgánicas se convirtieron en gotitas envueltas en una membrana que los separaba del medio ambiente conocidos como:",
+      "alternatives": [
+        "Procariotas heterótrofas",
+        "Hongos unicelulares",
+        "Protobiontes",
+        "Cianobacterias",
+        "Algas unicelulares"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Composición química de los seres vivos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El polisacárido de reserva energética que almacenan los hepatócitos, es \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "glucógeno",
+        "quitina",
+        "celulosa",
+        "almidón",
+        "celobiosa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 45 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La función más importante realizada por los cloroplastos es la fotosíntesis, proceso en la que la materia inorgánica es transformada en materia orgánica (fase oscura) empleando la energía bioquímica (ATP) obtenida por medio de la energía solar, reacciones que se produce en ...",
+      "alternatives": [
+        "La lamela",
+        "El tilacoide",
+        "El citoplasma",
+        "La grana",
+        "El estroma"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 46 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es considerado como la etapa intermedia entre la meiosis I y la meiosis II donde ocurre la duplicación de los centriolos.",
+      "alternatives": [
+        "Telofase I",
+        "Profase II",
+        "Periodo S",
+        "Interfase",
+        "Intercinesis"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 47 (clave E)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al sonar el timbre de recreo, Juan, el profesor de Matemáticas, le pregunta a uno de sus alumnos si estudió para el examen, este le respondió con un sí. ¿Qué tipos de comunicación se da en dicha situación?",
+      "alternatives": [
+        "De masa y directa",
+        "Indirecta e interpersonal",
+        "Unilateral e interpersonal",
+        "Interpersonal y bidireccional",
+        "Directa y unilateral"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 48 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Uso de grafías",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto al uso de la _ll_ e _y_, marque la alternativa correcta.",
+      "alternatives": [
+        "Ensayista, llunta, llanura",
+        "Acallar, paeya, pellizcar",
+        "Batalla, convoy, engullir",
+        "Plebeyo, yovizna, intulles",
+        "Yerno, llermo, callo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es un tipo de texto no literario:",
+      "alternatives": [
+        "Novela",
+        "Leyenda",
+        "Invitación de cumpleaños",
+        "Poema",
+        "Cuento"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Poema de Abraham Valdelomar que trata sobre la infancia del autor junto a su familia.",
+      "alternatives": [
+        "\"Masa\"",
+        "\"Yerba Santa\"",
+        "\"Tristitia\"",
+        "\"Blasón\"",
+        "\"El hermano ausente en la cena pascual\""
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El principal elemento contaminante en la minería desarrollada en el departamento de Madre de Dios es:",
+      "alternatives": [
+        "Arsénico",
+        "Zinc",
+        "Mercurio",
+        "Cadmio",
+        "Plomo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 52 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Áreas naturales protegidas del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El Servicio Nacional de Áreas Naturales Protegidas por el Estado - SERNANP es un organismo técnico - científico que dirige y establece los criterios para gestionar las áreas naturales; dicho organismo está adscrito al:",
+      "alternatives": [
+        "Ministerio de Comercio Exterior y Turismo - MINCETUR",
+        "Presidencia del Consejo de Ministros - PCM",
+        "Ministerio del Ambiente - MINAM",
+        "Ministerio de la Producción - PRODUCE",
+        "Ministerio de Agricultura y Riego - MINAGRI"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 53 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Nociones generales de economía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con el constante avance de la ciencia y la técnica se producen nuevos bienes, lo que motiva a considerar que el hombre es un inventor de necesidades \\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "suntuarias",
+        "complementarias",
+        "concurrentes",
+        "limitadas",
+        "ilimitadas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 54 (clave E)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Doctrinas y sistemas económicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La famosa \"Ley de los Mercados\" de Juan Bautista Say plantea que:",
+      "alternatives": [
+        "Los precios varían en razón de la demanda.",
+        "Las precios varían en forma inversa a la oferta.",
+        "Toda demanda crea su propia oferta.",
+        "Toda demanda crea su oferta.",
+        "Todo lo que se produce se vende."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 55 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A una convención provincial asistieron 20 congresistas. Se sabe que:\n\n- Cada congresista es veraz o mentiroso (no hay otra posibilidad)\n\n- Al menos dos de los congresistas son veraces.\n\n- Dada cualquier terna de congresistas, al menos uno de los tres es mentiroso.\n\n¿Cuántos congresistas son mentirosos y cuántos veraces, en ese orden?",
+      "alternatives": [
+        "10 y 10",
+        "2 y 18",
+        "3 y 17",
+        "18 y 2",
+        "17 y 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 56 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Crisóstomo está aprendiendo a digitar en el tablero de su PC, por lo que solo usa su índice derecho. Si para digitar su nombre demora 18 seg, ¿qué tiempo emplea para digitar ¡tres tristes tigres tragaban trigo!?",
+      "alternatives": [
+        "59 seg",
+        "1 min, 16 seg",
+        "2 min, 12 seg",
+        "1 min, 32 seg",
+        "2 min, 5 seg"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 57 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre una mesa se dibujan 12 cuadrados y se coloca un dado convencional en uno de estos, como se muestra en la figura. Si el dado rueda a lo largo de los 12 cuadrados siempre apoyado en una de sus aristas y sin deslizarse, ¿cuál es la suma de las caras visibles del dado luego de haber dado una vuelta? (es decir cuando vuelva a su posición inicial).",
+      "alternatives": [
+        "18",
+        "16",
+        "19",
+        "20",
+        "17"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-14-unac-2022-i-figures/q58.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 58 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un albañil tarda en hacer un cubo compacto de concreto de 40 cm de arista en 64 minutos. ¿Qué tiempo tardará en hacer 7 cubos, cada uno de 60 cm de arista?",
+      "alternatives": [
+        "3 600 min",
+        "7 29 min",
+        "1 331 min",
+        "1 372 min",
+        "1 512 min"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 59 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se muestra una malla alámbrica, ¿cuántas rutas diferentes existen que lleven del punto A al punto B, siguiendo la dirección de las flechas?",
+      "alternatives": [
+        "32",
+        "24",
+        "72",
+        "36",
+        "48"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-14-unac-2022-i-figures/q60.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 60 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEl arte es largo; la vida, corta; el juicio, dificultoso; la ocasión, fugaz. Obrar es fácil; pensar, difícil; obrar conforme al pensamiento es molesto. Todo comienzo es agradable; el umbral es el sitio de espera. El niño se asombra; la impresión le determina. Aprende jugando; lo serio le sorprende. La imitación es innata en nosotros; no se reconoce fácilmente lo que se ha de imitar. Se encuentra raramente lo perfecto; más raramente aún se aprecia. Las alturas nos atraen; no así sus escalones; con la cima a la vista, caminamos por la llanura. Solo una parte del arte se puede enseñar; el artista lo necesita por entero. Quien lo conoce a medias anda siempre extraviado y habla mucho; quien lo posee por hacer únicamente y habla raramente. Aquellos no tienen ningún secreto ni fuerza alguna; su doctrina es como el pan cocido, sabroso y satisface en el día; pero no se debe sembrar la harina ni se debe moler la semilla. Las palabras son buenas, pero no es lo mejor. Lo mejor no se aclara con las palabras. La acción es comprendida y representada únicamente por el espíritu.\n\nReconoce una idea compatible en el texto.",
+      "alternatives": [
+        "La imitación es naturalmente humana",
+        "El arte requiere constancia y laboriosidad",
+        "El arte encierra una espiritualidad",
+        "La actividad artística es de carácter lúdico",
+        "El artista conoce la esencia real del arte"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 61 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEl arte es largo; la vida, corta; el juicio, dificultoso; la ocasión, fugaz. Obrar es fácil; pensar, difícil; obrar conforme al pensamiento es molesto. Todo comienzo es agradable; el umbral es el sitio de espera. El niño se asombra; la impresión le determina. Aprende jugando; lo serio le sorprende. La imitación es innata en nosotros; no se reconoce fácilmente lo que se ha de imitar. Se encuentra raramente lo perfecto; más raramente aún se aprecia. Las alturas nos atraen; no así sus escalones; con la cima a la vista, caminamos por la llanura. Solo una parte del arte se puede enseñar; el artista lo necesita por entero. Quien lo conoce a medias anda siempre extraviado y habla mucho; quien lo posee por hacer únicamente y habla raramente. Aquellos no tienen ningún secreto ni fuerza alguna; su doctrina es como el pan cocido, sabroso y satisface en el día; pero no se debe sembrar la harina ni se debe moler la semilla. Las palabras son buenas, pero no es lo mejor. Lo mejor no se aclara con las palabras. La acción es comprendida y representada únicamente por el espíritu.\n\n\"Lo mejor no se aclara con las palabras\" es una frase que intenta aclarar que...",
+      "alternatives": [
+        "La esencia del arte es inexpresable",
+        "El trasfondo artístico es vano",
+        "El sentido artístico es transferible",
+        "El arte es una actividad superflua",
+        "El producto artístico es imperfecto"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 62 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEl arte es largo; la vida, corta; el juicio, dificultoso; la ocasión, fugaz. Obrar es fácil; pensar, difícil; obrar conforme al pensamiento es molesto. Todo comienzo es agradable; el umbral es el sitio de espera. El niño se asombra; la impresión le determina. Aprende jugando; lo serio le sorprende. La imitación es innata en nosotros; no se reconoce fácilmente lo que se ha de imitar. Se encuentra raramente lo perfecto; más raramente aún se aprecia. Las alturas nos atraen; no así sus escalones; con la cima a la vista, caminamos por la llanura. Solo una parte del arte se puede enseñar; el artista lo necesita por entero. Quien lo conoce a medias anda siempre extraviado y habla mucho; quien lo posee por hacer únicamente y habla raramente. Aquellos no tienen ningún secreto ni fuerza alguna; su doctrina es como el pan cocido, sabroso y satisface en el día; pero no se debe sembrar la harina ni se debe moler la semilla. Las palabras son buenas, pero no es lo mejor. Lo mejor no se aclara con las palabras. La acción es comprendida y representada únicamente por el espíritu.\n\nSi el arte se comprende únicamente por el espíritu, entonces se puede afirmar que...",
+      "alternatives": [
+        "Su producción viene de la inspiración",
+        "Su entendimiento proporciona saber",
+        "Su difusión exige mucha inversión",
+        "Su trabajo da satisfacción",
+        "Su comprensión requiere sensibilidad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 63 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEl arte es largo; la vida, corta; el juicio, dificultoso; la ocasión, fugaz. Obrar es fácil; pensar, difícil; obrar conforme al pensamiento es molesto. Todo comienzo es agradable; el umbral es el sitio de espera. El niño se asombra; la impresión le determina. Aprende jugando; lo serio le sorprende. La imitación es innata en nosotros; no se reconoce fácilmente lo que se ha de imitar. Se encuentra raramente lo perfecto; más raramente aún se aprecia. Las alturas nos atraen; no así sus escalones; con la cima a la vista, caminamos por la llanura. Solo una parte del arte se puede enseñar; el artista lo necesita por entero. Quien lo conoce a medias anda siempre extraviado y habla mucho; quien lo posee por hacer únicamente y habla raramente. Aquellos no tienen ningún secreto ni fuerza alguna; su doctrina es como el pan cocido, sabroso y satisface en el día; pero no se debe sembrar la harina ni se debe moler la semilla. Las palabras son buenas, pero no es lo mejor. Lo mejor no se aclara con las palabras. La acción es comprendida y representada únicamente por el espíritu.\n\nSe puede afirmar que el artista...",
+      "alternatives": [
+        "Requiere de los demás artistas para surgir",
+        "No se debe interesar por la obra de los demás",
+        "Necesita de un financista para ser reconocido",
+        "Se inspira para realizar su producción",
+        "Debe conocer el arte en su profundidad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 64 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "DEFENSA : EQUIPO ::",
+      "alternatives": [
+        "detergente : limpieza",
+        "medicina : enfermedad",
+        "libro : pasta",
+        "retaguardia : batallón",
+        "mástil : vela"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 65 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ser justo es dar a cada quien lo que se merece. Por ejemplo, tomar turnos rotativos para realizar la tarea de limpieza en el aula que a todos les desagrada; pero a todos los va mantener en armonía. Dicho acto se puede calificar como:",
+      "alternatives": [
+        "Un valor económico y no un valor moral",
+        "Un acto de pudor y de igualdad",
+        "Ofensivo porque son estudiantes",
+        "Un valor religioso y un derecho",
+        "Un valor moral y un derecho"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 66 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El ingeniero electrónico Jeremy, a diferencia de sus colegas no se adapta a los patrones convencionales de la empresa donde trabaja, para construir módulos electrónicos utiliza procedimientos creativos y novedosos. Esta situación hace deducir que Jeremy utiliza de preferencia el pensamiento \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "Divergente",
+        "Intuitivo",
+        "Inductivo",
+        "Convergente",
+        "Deductivo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 67 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Silvia es una dirigente estudiantil que se le reconoce como una persona que utiliza una forma de comunicación asertiva con sus compañeros y demás miembros de la Comunidad Universitaria. ¿Qué característica le corresponde?",
+      "alternatives": [
+        "Soluciona problemas de sus compañeros",
+        "Utiliza un lenguaje pasivo al comunicarse",
+        "Piensa que los demás son más importantes",
+        "Piensa que todos somos valiosos y merecemos un respeto mutuo",
+        "Reconoce pensamientos, sentimientos y objetivos ajenos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Frente a la sociedad globalizada y la diversidad cultural en el mundo, Ana María sostiene que está de acuerdo con la posición del interculturalismo. ¿Cuál es la posición que defiende Ana María?\n\nI. Comprende el mundo de acuerdo con los parámetros de su propia cultura.\n\nII. Propugna el encuentro entre diferentes culturas en condiciones de igualdad.\n\nIII. Propone que no debe juzgarse a otras culturas desde parámetros externos y tampoco debe modificarse lo que es tradicional.",
+      "alternatives": [
+        "I y II",
+        "I y III",
+        "Solo II",
+        "Solo I",
+        "Solo III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 69 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un sujeto manifiesta que siente ira cada vez que ve actos de corrupción, ¿cómo se denomina a esta reacción?",
+      "alternatives": [
+        "Una emoción",
+        "Una depresión",
+        "Un valor",
+        "Patriotismo puro",
+        "Una pasión"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE2022-1-bloque-I.pdf",
+      "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 70 (clave A)"
+    }
+  ]
+}

@@ -340,6 +340,14 @@ pagarle a un endpoint de visión sería gastar en una capacidad que ya está aqu
 - **Comas decimales dentro de matemática.** `$0","81$`, si no Typst las espacia
   como separador.
 - **Una barra literal** es `slash` o `\/`; `/` a secas arma una fracción.
+- **Las abreviaturas españolas de trigonometría no son operadores.** `sen` y `tg`
+  hay que entrecomillarlos (`$"sen" x$`), a diferencia de `sec`, `arccos` o
+  `arcsin`, que Typst sí reconoce y compone derechos solos.
+- **El conjunto vacío es `emptyset`**, no `diameter`.
+- **Un lote por nombre de archivo.** Cuando corren varios agentes a la vez sobre
+  lotes distintos comparten el directorio de scratchpad, y un `build_batch.py`
+  genérico se pisa entre sesiones. El nombre del lote va en cada archivo
+  temporal.
 
 ### Erratas del examen original
 

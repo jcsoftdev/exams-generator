@@ -76,6 +76,50 @@ describe("planImageQuestionRetirement", () => {
     ]);
   });
 
+  /**
+   * UNAC reuses items between its own exams, so the restructure of a second lot
+   * writes a statement the bank already holds from the first. The seeder dedupes
+   * those on `bodyHash` and inserts nothing, which leaves the second lot's
+   * screenshot with no text row of its own `source_name` — and, before this,
+   * unretirable forever. 44 questions were stuck exactly there.
+   *
+   * The twin is the row that statement already has under the other lot's name.
+   */
+  it("retires a screenshot whose statement was already seeded under another lot's source name", () => {
+    const plan = planImageQuestionRetirement({
+      imageRows: [{ id: "img-15", sourceName: source(15) }],
+      textRows: [{ id: "txt-otro-lote", sourceName: "UNAC — Cuarto Examen 2022-I, pregunta 2" }],
+      twinTextIdBySourceName: new Map([[source(15), "txt-otro-lote"]]),
+    });
+
+    expect(plan.retire).toEqual([{ imageId: "img-15", textId: "txt-otro-lote" }]);
+    expect(plan.skipped).toEqual([]);
+  });
+
+  it("prefers the row that carries the screenshot's own source name over the twin", () => {
+    const plan = planImageQuestionRetirement({
+      imageRows: [{ id: "img-1", sourceName: source(1) }],
+      textRows: [{ id: "txt-1", sourceName: source(1) }],
+      twinTextIdBySourceName: new Map([[source(1), "txt-otro-lote"]]),
+    });
+
+    expect(plan.retire).toEqual([{ imageId: "img-1", textId: "txt-1" }]);
+  });
+
+  /**
+   * The twin is a fallback, not a licence to guess: a `source_name` its own lot
+   * still lists as an image has nothing to hand over to, twin map or not.
+   */
+  it("ignores a twin for a question no lot has promoted", () => {
+    const plan = planImageQuestionRetirement({
+      imageRows: [{ id: "img-20", sourceName: source(20) }],
+      textRows: [{ id: "txt-1", sourceName: source(1) }],
+      twinTextIdBySourceName: new Map([[source(1), "txt-1"]]),
+    });
+
+    expect(plan.retire).toEqual([]);
+  });
+
   it("ignores a row with no source name, which nothing could pair on", () => {
     const plan = planImageQuestionRetirement({
       imageRows: [{ id: "img-1", sourceName: null }],

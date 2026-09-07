@@ -1,0 +1,1189 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si A, B y C son conjuntos contenidos en un mismo universo, la siguiente expresión:\n\n$ {{[(A inter B) inter (A union B)] union (A inter B^c)} union (C - A)} union {(A union C) - (A triangle.stroked.small C)} $\n\nes equivalente a:",
+      "alternatives": [
+        "C",
+        "$A union C$",
+        "B",
+        "$A inter C$",
+        "A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique el valor de verdad de las siguientes proposiciones:\n\nI. El número de hijos de una familia es una variable cuantitativa continua.\n\nII. En un diagrama de sectores 58% equivale a $205 degree$ de ángulo central.\n\nIII. Una muestra es un subconjunto de la población.",
+      "alternatives": [
+        "FFF",
+        "VVV",
+        "FVF",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A un matrimonio asistieron 150 personas: 50 mujeres y 100 varones. De los hombres, 23 no usan reloj pero si tienen terno y 42 tienen reloj. De las mujeres, las que no usan minifalda son tantas como los hombres que no usan terno ni reloj y 8 tienen minifalda y reloj. ¿Cuántas mujeres usan minifalda pero no reloj?",
+      "alternatives": [
+        "9",
+        "7",
+        "6",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la cantidad de numerales en base 15 de la forma:\n\n$ overline((a-2)(5-b)((a+1)/3)(b+6)(2c-5))_((15)) $",
+      "alternatives": [
+        "900",
+        "540",
+        "168",
+        "810",
+        "336"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule el resto de dividir:\n\n$ P = (2648)(7937)^2 + (9445)(1805)^3 $\n\nentre 7.",
+      "alternatives": [
+        "2",
+        "0",
+        "4",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $A = 63^a times 35^a times 7$ y tiene 20 divisores múltiplos de 21, pero no de 5, calcule la cantidad de divisores cubos perfectos de:\n\n$ (a+3)^(a+3) times (a+4)^(a+4) times (a+5)^(a+5) $",
+      "alternatives": [
+        "53",
+        "51",
+        "54",
+        "55",
+        "52"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Transforme la expresión:\n\n$ 1/6 + 2/9 + 1/108 $; en una de base 6.",
+      "alternatives": [
+        "$0\",\"221_(6)$",
+        "$0\",\"222_(6)$",
+        "$0\",\"101_(6)$",
+        "$22\",\"1_(6)$",
+        "$0\",\"203_(6)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el número de términos de la siguiente progresión:\n\n$ 4; 6; 11; 19; 30; ...; 555 $",
+      "alternatives": [
+        "18",
+        "20",
+        "26",
+        "30",
+        "25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si en este instante se deposita S/ 3000 al régimen de interés simple a una tasa de 5% anual y dentro de 4 meses se depositarán otros S/ 3000 a la misma tasa. Determine el monto a obtener dentro de 8 meses.",
+      "alternatives": [
+        "S/ 7 150",
+        "S/ 7 450",
+        "S/ 6 520",
+        "S/ 6 550",
+        "S/ 6 150"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el valor mínimo de la expresión:\n\n$ E = ((n-1)^2 + (n x + 3n)^2 + (2n-1))/(n^2 x + 3n^2) $\n\npara todos los valores de $x > -3$",
+      "alternatives": [
+        "3,5",
+        "1,5",
+        "3,0",
+        "1,0",
+        "2,0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La raíz positiva de la ecuación $x^2 = 14x + 3200$, es el ancho de un rectángulo cuya área es $6400 m^2$. Determine el perímetro del rectángulo",
+      "alternatives": [
+        "176 m",
+        "400 m",
+        "328 m",
+        "348 m",
+        "268 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La suma de los tres menores elementos enteros positivos del conjunto\n\n$ M = {x in RR \\/ x >= 88/(x-3) and x > 3} $\n\nes el triple de la edad del hermano de Juan. ¿Dentro de cuántos años el hermano de Juan cumplirá 30 años?",
+      "alternatives": [
+        "15",
+        "18",
+        "25",
+        "20",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule el siguiente límite\n\n$ lim_(x -> infinity) (x^4 - x^2 + 1)/(x^8 - x^6 + 2) $",
+      "alternatives": [
+        "3",
+        "0",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las utilidades de una empresa (en miles de dólares) en función del tiempo t (en años) está modelado por:\n\n$ u(t) = 36t - 3t^2 - 18, quad 1 <= t <= 8 $\n\n¿Cuál es la utilidad máxima y a partir de qué tiempo las utilidades empiezan a disminuir?",
+      "alternatives": [
+        "75; 8 años",
+        "90; 8 años",
+        "90; 6 años",
+        "80; 7 años",
+        "100; 5 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $a; b; c > 0$ y $a; b; c != 1$, simplifique la expresión:\n\n$ 1/(1+log_a (b c)) + 1/(1+log_b (a c)) + 1/(1+log_c (a b)) $",
+      "alternatives": [
+        "1",
+        "-2",
+        "2",
+        "-1",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule el valor de N\n\n$ N = sqrt(17 - 2 sqrt(72))/sqrt(3 - sqrt(8)) - sqrt(11 + 6 sqrt(2)) $",
+      "alternatives": [
+        "-4",
+        "2",
+        "4",
+        "-3",
+        "-5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 16 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la expresión equivalente?\n\n$ x^120 - x^115 + x^110 - x^105 + ... + 1 - 2/(x^5+1) $",
+      "alternatives": [
+        "$(x^125+1)/(x^5+1)$",
+        "$(x^125-1)/(x^5-1)$",
+        "$(x^125-1)/(x^5+1)$",
+        "$(x^125+1)/(x-1)$",
+        "$(x^120+1)/(x^5+1)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El círculo inscrito en un triángulo equilátero, tiene área igual a $4 pi m^2$, ¿cuál es el área de dicho triángulo?",
+      "alternatives": [
+        "$14 sqrt(3) \"cm\"^2$",
+        "$10 sqrt(3) \"cm\"^2$",
+        "$12 sqrt(3) \"cm\"^2$",
+        "$15 sqrt(3) \"cm\"^2$",
+        "$16 sqrt(3) \"cm\"^2$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, se tiene una semicircunferencia con diámetro BF, donde D es punto de tangencia. Si $A D = 3 \"cm\"$, $E C = 2 \"cm\"$, calcule DE.",
+      "alternatives": [
+        "0,7 cm",
+        "0,6 cm",
+        "0,9 cm",
+        "1,0 cm",
+        "0,8 cm"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-17-unac-2022-ii-figures/q19.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, se tiene que\n\n$ (B C)/(B N dot Q C) = 1/3 $\n\nHalle QN, en cm.",
+      "alternatives": [
+        "1 cm",
+        "3 cm",
+        "5 cm",
+        "2 cm",
+        "4 cm"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-17-unac-2022-ii-figures/q20.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, ABC es un triángulo rectángulo y $R B = (20 sqrt(3))/3 m$, hallar el área de la región sombreada, en $m^2$.",
+      "alternatives": [
+        "$(220 sqrt(3))/3$",
+        "$(100 sqrt(3))/3$",
+        "$(140 sqrt(3))/3$",
+        "$(200 sqrt(3))/3$",
+        "$(230 sqrt(3))/3$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-17-unac-2022-ii-figures/q21.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los rectángulos ABCD y ABEF están en planos perpendiculares, $A F = 4 \"cm\"$ y $A D = 3 \"cm\"$, determine la distancia entre $overline(E C)$ y $overline(A B)$.",
+      "alternatives": [
+        "2,0 cm",
+        "3,0 cm",
+        "3,5 cm",
+        "2,4 cm",
+        "2,5 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El área de un huso esférico de radio igual a 6 cm y ángulo $alpha$ es $12 pi \"cm\"^2$, calcule el volumen de una cuña esférica del mismo radio y ángulo $alpha$.",
+      "alternatives": [
+        "$36 pi \"cm\"^3$",
+        "$32 pi \"cm\"^3$",
+        "$24 pi \"cm\"^3$",
+        "$28 pi \"cm\"^3$",
+        "$30 pi \"cm\"^3$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un cubo ABCD-EFGH, la base superior es ABCD, halle el volumen de la pirámide D-EBG. Si $E B = 6 \"cm\"$.",
+      "alternatives": [
+        "$18 sqrt(2) \"cm\"^3$",
+        "$18 sqrt(3) \"cm\"^3$",
+        "$15 sqrt(3) \"cm\"^3$",
+        "$16 sqrt(3) \"cm\"^3$",
+        "$16 sqrt(2) \"cm\"^3$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 24 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo rectángulo la hipotenusa es la mitad de la media geométrica de la medida de sus catetos.\nDetermine la suma de las cotangentes trigonométricas de los ángulos agudos.",
+      "alternatives": [
+        "1/4",
+        "1",
+        "2",
+        "1/2",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación:\n\n$ \"arc cos\"(x) - \"arc sen\"(x) = \"arc sen\"(1-x) $\n\nhalle el producto de las raíces de la ecuación.",
+      "alternatives": [
+        "1/3",
+        "1/4",
+        "0",
+        "1/2",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la función:\n\n$ f(x) = op(\"tan\")(x/4) + 2 op(\"sen\")^2 (x/4) op(\"cot\")(x/2) $\n\npara; $0 < x <= pi$. Halle el rango de la función $f$.",
+      "alternatives": [
+        "$RR$",
+        "$[0; sqrt(2)]$",
+        "$]0;1]$",
+        "$[-1;1]$",
+        "$[-1;0]$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 27 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, $O A = 2 A C$. Si el área del sector circular AOB es $10 u^2$, determine el área del trapecio circular ABDC.",
+      "alternatives": [
+        "$10,5 u^2$",
+        "$13,0 u^2$",
+        "$11,0 u^2$",
+        "$10,0 u^2$",
+        "$12,5 u^2$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-17-unac-2022-ii-figures/q28.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifique la expresión:\n\n$ ((op(\"cos\") alpha - op(\"sen\") alpha)(op(\"sec\") alpha + op(\"csc\") alpha))/(op(\"tg\") alpha - op(\"ctg\") alpha) $",
+      "alternatives": [
+        "1/2",
+        "1",
+        "-1",
+        "2",
+        "-2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule un valor de \"m\" tal que el punto $P(1, m)$ sea equidistante a las rectas\n\n$ ell_1 : 3x - 4y - 12 = 0 $\n$ ell_2 : 4x + 3y + 1 = 0 $",
+      "alternatives": [
+        "0",
+        "-2",
+        "4",
+        "1",
+        "-1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 30 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determinar el vector resultante:",
+      "alternatives": [
+        "$arrow(O)$",
+        "$3 arrow(P)$",
+        "$4 arrow(P)$",
+        "$arrow(P)$",
+        "$2 arrow(P)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-17-unac-2022-ii-figures/q31.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se suelta una piedra desde una altura de 320 m. Si $g = 10 m/s^2$, la distancia que recorre en el último segundo, es:",
+      "alternatives": [
+        "77 m",
+        "79 m",
+        "71 m",
+        "73 m",
+        "75 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, la fuerza del hombre se aplica perpendicularmente al mango del martillo. Si el clavo dista 4 cm del punto de apoyo, ¿cuál es la fuerza que se ejerce sobre él?",
+      "alternatives": [
+        "8 N",
+        "39 N",
+        "26 N",
+        "52 N",
+        "13 N"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-17-unac-2022-ii-figures/q33.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, el bloque de 5 kg, inicialmente en reposo, se traslada desde A hasta B. Si $g = 10 m/s^2$ y el coeficiente de fricción es 0,5 el trabajo neto realizado es:",
+      "alternatives": [
+        "265 J",
+        "225 J",
+        "365 J",
+        "300 J",
+        "125 J"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-17-unac-2022-ii-figures/q34.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Entre los cuerpos de la figura se produce un choque completamente inelástico sobre una superficie lisa. La rapidez final de las masas, es:",
+      "alternatives": [
+        "10/3 m/s",
+        "16/3 m/s",
+        "7/3 m/s",
+        "20/3 m/s",
+        "10 m/s"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "scan-17-unac-2022-ii-figures/q35.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un recipiente aislado, se agregan 250 g de hielo $(0,5 \"cal\"\\/g degree C)$ a $0 degree C$ y 600 g de agua $(1,0 \"cal\"\\/g degree C)$ a $18 degree C$. La temperatura final de la mezcla, es:",
+      "alternatives": [
+        "-3 °C",
+        "-2 °C",
+        "5 °C",
+        "0 °C",
+        "7 °C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 36 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, las cargas eléctricas son puntuales. Si $k = 9 times 10^9 N m^2\\/C^2$, la intensidad del campo eléctrico en el punto medio de la hipotenusa, es:",
+      "alternatives": [
+        "4 000 N/C",
+        "3 000 N/C",
+        "2 000 N/C",
+        "5 000 N/C",
+        "1 000 N/C"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-17-unac-2022-ii-figures/q37.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 37 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifique la relación donde todas son sustancias puras.",
+      "alternatives": [
+        "Papel - agua regia - bronce",
+        "Acero - bronce - oxígeno",
+        "Agua - tinta - hielo",
+        "Hielo - cobre - estaño",
+        "Azúcar - agua - latón"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 38 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el mínimo y máximo número de electrones que puede tener un elemento cuya configuración electrónica llega hasta el nivel 4.",
+      "alternatives": [
+        "36, 36",
+        "19, 36",
+        "30, 19",
+        "36, 19",
+        "19, 30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un átomo que posee la configuración electrónica $1S^2 2S^2 2p^6 3S^2 3p^6 3d^5 4s^1$ le corresponde a un elemento:",
+      "alternatives": [
+        "Alcalino térreo",
+        "Gas noble",
+        "Halógeno",
+        "Anfígeno",
+        "De transición"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Después de balancear la reacción\n\n$ \"Al\"_2 \"O\"_(3(s)) + \"HCl\"_((Delta C)) -> \"AlCl\"_(3(Delta C)) + \"H\"_2 \"O\"_((l)) $\n\nIndique verdadero (V) o falso (F) respecto a los enunciados siguientes:\n\nI. El coeficiente del óxido básico es 1\n\nII. La suma de los coeficientes de la reacción es: 14\n\nIII. El coeficiente de la sal haloidea es 2",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "FFV",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 41 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tienen 20 L de solución que contienen 2 moles de $\"NaCl\"$, 2 moles de $\"Na\"_2\"SO\"_4$ y 1 mol de $\"BaCl\"_2$. Las respectivas concentraciones molares de los iones sodio, cloruro y bario son:",
+      "alternatives": [
+        "0,15; 0,2; 0,05",
+        "0,2; 0,2; 0,05",
+        "0,2; 0,2; 0,1",
+        "0,3; 0,2; 0,05",
+        "0,2; 0,15; 0,05"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 42 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifique la molécula que carece del enlace pi ($pi$)",
+      "alternatives": [
+        "$\"C\"_2\"H\"_4$",
+        "$\"C\"_4\"H\"_6$",
+        "$\"C\"_2\"H\"_6$",
+        "$\"C\"_3\"H\"_6$",
+        "$\"C\"_2\"H\"_2$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El incremento del volumen de excreción urinaria normal se conoce como\n\n\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "anuria",
+        "insuficiencia renal",
+        "hidropesía",
+        "poliuria",
+        "diuresis"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 44 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El estómago se encuentra libre de microorganismos gracias a la acción del\n\n\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "tripsinógeno",
+        "ácido clorhídrico",
+        "jugo biliar",
+        "mucus",
+        "pepsinógeno"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Composición química de los seres vivos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El monosacárido más abundante en el ser humano y la principal fuente de energía es la:",
+      "alternatives": [
+        "Fructosa",
+        "Ribosa",
+        "Glucosa",
+        "Manosa",
+        "Galactosa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al incorporar el gen de la insulina a una bacteria, esta producirá insulina debido a que el código genético es:",
+      "alternatives": [
+        "Direccional",
+        "Universal",
+        "Replicativo",
+        "Semiconservativo",
+        "Conservativo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Acentuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente enunciado: \"Ignoro #underline[cuándo] ha regresado de Arequipa; sin embargo, iremos #underline[cuando] quieras a visitarla\". ¿A qué usos de la tilde diacrítica hace referencia las palabras subrayadas?",
+      "alternatives": [
+        "Exclamativo - interrogativo",
+        "Imperativo - relativo",
+        "Interrogativo - relativo",
+        "Relativo - exclamativo",
+        "Demostrativo - exclamativo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 48 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la alternativa que presenta un adjetivo superlativo irregular?",
+      "alternatives": [
+        "Grandísimo",
+        "Facilísimo",
+        "Nigérrimo",
+        "Bellísimo",
+        "Buenísimo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura hispanoamericana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El boom latinoamericano emplea técnicas vanguardistas y se enmarca en un periodo de éxito editorial, ¿quiénes fueron sus representantes?",
+      "alternatives": [
+        "Vargas Llosa, Eguren, Rubén Darío y Márquez",
+        "García Márquez, Rubén Darío, Unamuno y Vargas Llosa",
+        "César Vallejo, García Márquez, Carlos Fuentes y Vargas Llosa",
+        "García Márquez, Carlos Fuentes, Julio Cortázar y Vargas Llosa",
+        "Vargas Llosa, García Márquez y Pablo Neruda"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 50 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es el precursor del Romanticismo peruano por la temática intensamente amorosa, por su actitud, su vida y su muerte, y tradujo el Arte de amar de Ovidio, ¿a qué autor se hace referencia?",
+      "alternatives": [
+        "Gustavo Bécquer",
+        "Augusto Salaverry",
+        "Mariano Melgar",
+        "Ricardo Palma",
+        "Manuel González Prada"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geopolítica y geografía mundial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el continente con mayor población en el mundo?",
+      "alternatives": [
+        "América",
+        "Europa",
+        "Asia",
+        "Oceanía",
+        "África"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 52 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Hidrografía del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una de las principales fuentes del desarrollo agrícola de las regiones son los reservorios, el reservorio de Poechos se ubica en\n\n\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "La Libertad",
+        "Cajamarca",
+        "Moquegua",
+        "Piura",
+        "Lambayeque"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 53 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cómo se le denomina al conjunto de acciones encaminadas a lograr la máxima racionalidad en el proceso de decisión relativo a la conservación, defensa, protección y mejora del medio ambiente?",
+      "alternatives": [
+        "Normas de calidad ambiental",
+        "Externalidad",
+        "Gestión ambiental",
+        "Calidad ambiental",
+        "Política medio ambiente"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 54 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sector externo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La\n\n\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\n\nes un registro sistemático de todas las transacciones económicas realizadas por el Perú con el resto del mundo.",
+      "alternatives": [
+        "Balanza Comercial",
+        "Ley del Presupuesto",
+        "Cuenta Financiera",
+        "Cuenta Nacional",
+        "Balanza de Pagos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 55 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una urna se tiene 10 bolitas azules, 15 blancas y 12 negras. Daniel extrae una bolita e informa que no es azul, luego Mónica extrae otra bolita e informa que no es blanca. Si Tomás escuchó los dos informes, ¿cuántas bolitas como mínimo debe extraer, para tener la certeza de haber obtenido entre estas, al menos una bolita negra?",
+      "alternatives": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 56 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hace 5 años las edades de Lorena y Nancy estaban en la relación de 5 a 3 y dentro de 25 años, la edad de Nancy será a la edad de Lorena como 5 a 7. ¿Cuántos años tiene Lorena?",
+      "alternatives": [
+        "80",
+        "79",
+        "85",
+        "75",
+        "81"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 57 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos triángulos hay en total?",
+      "alternatives": [
+        "75",
+        "69",
+        "96",
+        "71",
+        "83"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-17-unac-2022-ii-figures/q58.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 58 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Razonamiento Matemático Aplicado (Geometría)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el gráfico, $A B = 15 \"km\"$, $A Q = 6 \"km\"$ y $B P = 2 \"km\"$. Juan está en P y debe llegar a Q tocando un punto de $overline(A B)$. ¿Cuál es la longitud del menor recorrido de Juan?",
+      "alternatives": [
+        "17 km",
+        "8 km",
+        "21 km",
+        "16 km",
+        "22 km"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "scan-17-unac-2022-ii-figures/q59.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 59 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Razonamiento Matemático Aplicado (Geometría)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se tiene nueve cuadraditos congruentes. Si el lado del cuadrado grande mide 3 cm. Halle la relación entre el área de la región sombreada y el área de la región no sombreada:",
+      "alternatives": [
+        "4/13",
+        "6/13",
+        "2/13",
+        "5/13",
+        "3/13"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-17-unac-2022-ii-figures/q60.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 60 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEsta situación no puede seguir así; uno ya no puede salir tranquilo a la calle, pues corre el riesgo de que en algún momento sea asaltado o en el peor de los casos asesinado. Creo que vivir en una sociedad violenta como esta requiere de un compromiso de las Fuerzas Armadas para salvaguardar la integridad física y emocional de las personas.\n\n¿Cuál es el argumento utilizado en el texto?",
+      "alternatives": [
+        "Es importante la integridad física y emocional de las personas.",
+        "Ya no se puede vivir tranquilo en esta ciudad.",
+        "Los policías deben resguardarnos.",
+        "Uno ya no puede salir a la calle tranquilo, ya que corre el riesgo de ser asaltado o asesinado.",
+        "Las Fuerzas Armadas deben de comprometerse con la población."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 61 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "I. El ejercicio es un entrenamiento del cuerpo que mejora la salud y la aptitud física.\n\nII. Hay que tener en cuenta que los variados tipos de ejercicios tienen diversos propósitos.\n\nIII. Los aeróbicos están concebidos para fortalecer las funciones cardíacas y respiratorias así como para adelgazar.\n\nIV. Los ejercicios con pesas sirven para reforzar los huesos y los músculos, y los de estiramiento, para lograr más flexibilidad.\n\nV. También es de gran utilidad para las personas obesas.",
+      "alternatives": [
+        "III",
+        "V",
+        "I",
+        "II",
+        "IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 63 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La deforestación es la caída de todos los\n\n\\_\\_\\_\\_\\_ ocasionada por causas \\_\\_\\_\\_\\_\\_\\_\\_\\_ o\n\nconsecuencia de la actividad \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "árboles – deliberadas – técnicas",
+        "árboles – naturales – humana",
+        "árboles – ficticias – humana",
+        "helechos – fortuitas – industrial",
+        "arbustos – premeditadas – agropecuaria"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 64 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Series verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Inclemencia, rigor, severidad,\n\n\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "reticencia",
+        "endeble",
+        "recato",
+        "recelo",
+        "reciura"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 65 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es un grupo humano cuando los participantes comparten las metas de la organización, social, cultural, religioso u otro, y los resultados son altamente satisfactorios. Considera que:",
+      "alternatives": [
+        "Los valores individuales definen la eficiencia de los resultados.",
+        "Los resultados se deben al liderazgo asumido por un técnico.",
+        "Los resultados se deben únicamente a las habilidades de los profesionales.",
+        "El producto logrado es por el trabajo en equipo.",
+        "El gerente es un buen estratega."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 66 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al escuchar a Pablito, que intenta balbucear y pronunciar palabras (holofrases), ¿en qué etapa del desarrollo humano se encuentra?",
+      "alternatives": [
+        "Juventud",
+        "Infancia",
+        "Adultez",
+        "Senectud",
+        "Adolescencia"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 67 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el partido de Perú frente a Dinamarca cuando Cueva perdió el tiro de penal, los comentaristas dijeron que Cueva quedó lesionado psicológicamente y por ende debe salir del campo de juego. Si usted fuera el Director Técnico, ¿cuál sería la mejor decisión para el rendimiento del equipo?",
+      "alternatives": [
+        "Todo el equipo se desanima ante un fracaso de gol de penal y se retiran del juego.",
+        "Cueva está triste al no concretar el gol, sale del juego y luego vuelve a entrar.",
+        "Cueva se queda jugando de todos modos porque no hay con quien reemplazarlo.",
+        "El fracaso de gol de penal en el Mundial desanima y sale del juego.",
+        "La experiencia de Cueva le permitiría reponerse anímicamente y se queda jugando."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 68 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de la siguiente premisa, se puede tipificar como valoración del medio ambiente?",
+      "alternatives": [
+        "Un profesor no deja lectura a sus estudiantes para cuidar el medio ambiente.",
+        "Un campesino rico no ayuda a drenar el lago.",
+        "Por temor al contagio al COVID-19, los ciudadanos usan autos individualmente.",
+        "En plena pandemia el alcalde convoca para la siembra de árboles frutales en las calles, en defensa de la vida.",
+        "Un comandante ordena a sus soldados que destruyan una represa."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 69 (clave D)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuando Marco señala que en su casa su esposa y él tienen la capacidad de decidir en mutuo acuerdo, ¿a qué valor ético se refiere Marco?",
+      "alternatives": [
+        "Libertad",
+        "Dignidad humana",
+        "Justicia",
+        "Deber",
+        "Igualdad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-1.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-II, Bloque I: Ciencias e Ingenierías, pregunta 70 (clave E)"
+    }
+  ]
+}
