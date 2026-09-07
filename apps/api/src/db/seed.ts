@@ -11,6 +11,7 @@ import { archiveUnprintableQuestions } from "../scripts/archive-unprintable-ques
 import { normalizeCollectedContent } from "../scripts/normalize-collected-content";
 import { stripSeededSolutionTails } from "../scripts/strip-seeded-solution-tails";
 import { seedCollectedQuestions } from "./seed-collected-questions";
+import { retireSupersededImageQuestions } from "./retire-superseded-image-questions";
 import { seedLotQuestions } from "./seed-lot-questions";
 import {
   courses,
@@ -1777,6 +1778,21 @@ export async function seed(): Promise<void> {
     // PNG), so seeding them means uploading to the object store, not just
     // inserting rows — see `seed-lot-questions.ts`.
     await seedLotQuestions(bankSampleAdmin.id);
+    // The seeder above only INSERTS, so a lot that went from screenshots to
+    // text lands BESIDE the PNGs it replaced. This clears them and hands their
+    // exam references to the text row, which is what lets a restructured lot
+    // reach production as a plain deploy instead of a manual pass on the
+    // server. Idempotent like the backfills below it.
+    const retirement = await retireSupersededImageQuestions();
+    if (retirement.retired > 0) {
+      console.log(
+        `[seed] retired ${retirement.retired} whole-question images their lot now carries as text` +
+          ` (${retirement.repointed} exam references repointed, ${retirement.deduped} duplicate slots dropped).`,
+      );
+    }
+    retirement.skipped.forEach(({ sourceName, reason }) => {
+      console.log(`[seed] kept the image of "${sourceName}": ${reason}`);
+    });
     // Re-derives stored content from the JSON sources for rows seeded BEFORE
     // the ingest rules existed — Typst escaping, and the solution tails the
     // scrapes glued onto alternatives. Runs on every boot, like the seeder
