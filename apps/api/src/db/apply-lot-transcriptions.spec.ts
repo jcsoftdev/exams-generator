@@ -172,6 +172,45 @@ describe("applyLotTranscriptions", () => {
     ).toThrow(/lot-x-image\/alg-1\.png/);
   });
 
+  /**
+   * A crop that covers the page IS the whole-question screenshot this pass
+   * exists to remove: it reprints the statement, the source's numbering and
+   * its `a)`-`e)` lettering underneath the text the promotion just produced.
+   * A reader asked for one on all 35 questions of a batch (lot-0, 2026-09-06)
+   * and every box compiled and applied without complaint.
+   */
+  it("refuses a crop that is really the whole question", () => {
+    expect(() =>
+      applyLotTranscriptions({
+        imageEntries: [imageEntry(1)],
+        structuredEntries: [],
+        transcriptions: [
+          {
+            imagePath: "lot-x-image/alg-1.png",
+            ...READ,
+            figureCrop: { left: 0.02, top: 0.02, right: 0.98, bottom: 0.98 },
+          },
+        ],
+      }),
+    ).toThrow(/pregunta entera/);
+  });
+
+  it("still allows a tall figure that leaves the statement out", () => {
+    const result = applyLotTranscriptions({
+      imageEntries: [imageEntry(1)],
+      structuredEntries: [],
+      transcriptions: [
+        {
+          imagePath: "lot-x-image/alg-1.png",
+          ...READ,
+          figureCrop: { left: 0.175, top: 0.21, right: 1, bottom: 1 },
+        },
+      ],
+    });
+
+    expect(result.figureCrops).toHaveLength(1);
+  });
+
   it("asks for no crop when the transcription itself was rejected", () => {
     const result = applyLotTranscriptions({
       imageEntries: [imageEntry(1)],

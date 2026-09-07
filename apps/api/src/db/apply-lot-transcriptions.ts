@@ -98,7 +98,31 @@ function assertBoxInsideImage(box: FigureCropBox, imagePath: string): void {
       `figureCrop for ${imagePath} is not a rectangle inside the image: ${JSON.stringify(box)}`,
     );
   }
+  // A box that covers the page IS the whole-question screenshot this whole
+  // pass exists to remove — it would reprint the statement, the source's
+  // numbering and its `a)`-`e)` lettering right under the text the promotion
+  // just produced. Everything downstream accepted it silently: it compiles,
+  // it applies, and it only shows up in the printed exam.
+  //
+  // The threshold is area, not per-edge, because a legitimately tall figure
+  // does run edge to edge on one axis — the physics ramp in
+  // `lot-8-uncp-2018-1sel` is 0.83 wide by 0.79 high, an area of 0.65, and
+  // must keep working.
+  if ((box.right - box.left) * (box.bottom - box.top) > WHOLE_QUESTION_AREA) {
+    throw new Error(
+      `figureCrop for ${imagePath} cubre la pregunta entera (${JSON.stringify(box)}). ` +
+        "El complemento es la figura sola: deja fuera la numeración, el enunciado y las alternativas.",
+    );
+  }
 }
+
+/**
+ * Above this fraction of the page, a crop is the question itself rather than
+ * something inside it. Set well clear of the largest real figure in the corpus
+ * (0.65) so the guard catches the full-page case without second-guessing a
+ * reader who measured honestly.
+ */
+const WHOLE_QUESTION_AREA = 0.8;
 
 /**
  * Folds a batch of hand-read crops back into one harvested lot.
