@@ -1244,6 +1244,859 @@
       "correctAnswer": "3",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
       "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 77 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿En qué alternativa el verbo necesita corregirse?",
+      "alternatives": [
+        "Concibió con facilidad la respuesta correcta.",
+        "El toro embistió al diestro torero en la corrida.",
+        "Hiciste lo indicado en el manual de manejo.",
+        "Ese pleito no te concierne, Juan Francisco.",
+        "Si produciéramos en serie, ganaríamos más."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 78 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique qué movimiento literario español surgió como reacción opuesta a la pérdida de las colonias en ultramar.",
+      "alternatives": [
+        "Generación del 14",
+        "Generación del 27",
+        "Generación del 68",
+        "Generación del 81",
+        "Generación del 98"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Literatura, pregunta 79 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones sobre _Las Tradiciones Peruanas_ de Ricardo Palma.\n\nI. Son reflexiones sustentadas científicamente.\nII. Usan un lenguaje popular repleto de refranes, proverbios entre otros.\nIII. Critican a las instituciones políticas y religiosas de la época.\n\nElija la alternativa correcta.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Literatura, pregunta 80 (clave E)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Edad Moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las siguientes características de la expansión europea en América, indique la alternativa correcta.\n\nI. El bloqueo de rutas comerciales entre oriente y occidente influyó para que Europa, se expanda hacia América.\nII. Aumentó la población nativa y disminuyeron las enfermedades.\nIII. Aumentó el comercio con los países de la Cuenca del Pacífico.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 81 (clave A)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La Confederación peruano-boliviana liderada por Santa Cruz fue resultado de:",
+      "alternatives": [
+        "las ambiciones políticas de Santa Cruz.",
+        "la anarquía reinante en el Perú, por las rebeliones militares.",
+        "un acuerdo de federar ambos países firmado por Gamarra y Santa Cruz.",
+        "la desconfianza frente a los afanes expansionistas de Chile.",
+        "la posibilidad de reunir dos países con profundos lazos económicos e históricos."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 82 (clave E)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú: 1930-1980",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La junta militar de gobierno de 1948-1956, presidida por Manuel A. Odría, concedió beneficios sociales a los trabajadores.\n\nIndique cuáles son las mejoras sociales que se implementaron en este período.\n\nI. El seguro social pasó a ser obligatorio para empleados públicos y particulares.\nII. Se consolidó el régimen de las indemnizaciones por tiempo de servicios y se establecieron las gratificaciones por fiestas patrias y por navidad.\nIII. Se establece la jornada laboral de las 8 horas para los trabajadores.\n\nSon correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "Solo I y II",
+        "Solo II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 83 (clave D)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Revoluciones burguesas y Revolución Francesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las siguientes proposiciones en relación a la independencia de los Estados Unidos:\n\nI. Los ingleses fueron los principales colonizadores de Norteamérica.\nII. Las restricciones comerciales a la burguesía colonial impulsó la lucha por la independencia.\nIII. George Washington fue el primer presidente de los Estados Unidos.\n\nIndique la alternativa correcta:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 84 (clave E)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la alternativa correcta que indica la actividad que desarrolló la población migrante china como mano de obra en el Perú del siglo XIX.",
+      "alternatives": [
+        "Extracción de caucho en la Amazonía",
+        "Actividad agrícola del algodón en haciendas de la costa.",
+        "Actividad petrolera en la selva.",
+        "Actividad pesquera.",
+        "Actividad minera."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 85 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Ecosistemas y ecorregiones del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale qué ecosistema forestal se caracteriza por su densidad biológica y mayor precipitación.",
+      "alternatives": [
+        "Selva",
+        "Bosque Seco",
+        "Páramo",
+        "Tundra",
+        "Desierto"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geografía, pregunta 86 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En relación al relieve costero, relacione ambas columnas:\n\nI) Valles      a) Sechura\nII) Desiertos   b) Atocongo\nIII) Lomas     c) Chicama\n\nIndique la alternativa correcta:",
+      "alternatives": [
+        "I-a, II-b, III-c",
+        "I-b, II-a, III-c",
+        "I-c, II-a, III-b",
+        "I-a, II-c, III-b",
+        "I-c, II-b, III-a"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geografía, pregunta 87 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La demanda de camote, en un mercado de barrio de la capital se ha estimado en $Q_x = 40 + 2P_x$.\n\nLa elasticidad de la demanda correspondiente a la situación es:",
+      "alternatives": [
+        "0,43",
+        "-4,66",
+        "2",
+        "-0.43",
+        "-2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Economía, pregunta 88 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En relación a un bien Giffen, señale la alternativa correcta:",
+      "alternatives": [
+        "La cantidad demandada aumenta cuando aumenta el precio",
+        "La demanda aumenta cuando aumenta el precio.",
+        "La cantidad demandada aumenta cuando baja el precio.",
+        "La demanda baja cuando baja el precio.",
+        "La cantidad ofertada aumenta cuando baja el precio."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Economía, pregunta 89 (clave A)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sector externo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el contexto de la controversia comercial entre China y EE.UU, denominada \"guerra comercial\", se ha dejado de lado:",
+      "alternatives": [
+        "el mercado chino de Internet",
+        "el mercado chino de materias primas",
+        "el mercado financiero de la China",
+        "el mercado de artículos electrodomésticos",
+        "el mercado de insumos industriales"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Economía, pregunta 100 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la alternativa que debe insertarse en el espacio vacío, para dar sentido a la oración.\n\n\\_\\_\\_\\_\\_\\_\\_\\_a long time for the bus.",
+      "alternatives": [
+        "Always have to wait we",
+        "Always we have to wait",
+        "We always have to wait",
+        "Have to we always wait",
+        "We have always to wait"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 90 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa correcta que se debe incluir en el siguiente espacio para que la oración tenga sentido completo según el contexto.\nCan your nephew speak any\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_?",
+      "alternatives": [
+        "foreign languages",
+        "languages foreigns",
+        "foreigns languages",
+        "foreing languages",
+        "languages foreigh"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 91 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Marque la alternativa correcta que debe insertarse en el siguiente espacio para dar sentido adecuado de la oración:\n\nThe weather in London is very bad. I think it's the \\_\\_\\_\\_\\_\\_\\_\\_city. I've ever been.",
+      "alternatives": [
+        "worse",
+        "baddest",
+        "most bad",
+        "worst",
+        "more worse"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 92 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Modal verbs",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Según el contexto, ¿cuál de las siguientes opciones contiene el verbo modal expresado correctamente?\n\nI: I have a terrible sore throat.\nII: You \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_some medicine.",
+      "alternatives": [
+        "shouldn't take",
+        "should take",
+        "may take",
+        "might take",
+        "may not take"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 93 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La tendencia del hombre a vivir en grupo, estableciendo relaciones interpersonales, se denomina:",
+      "alternatives": [
+        "conglomerado",
+        "gregarismo",
+        "aprendizaje",
+        "motivación",
+        "sectarismo conglomerado"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Psicología, pregunta 94 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si un estudio analiza los cambios en el comportamiento y la psicología de un alumno de la UNI, desde que ingresa hasta que egresa; señale el tipo de método empleado.",
+      "alternatives": [
+        "experimental",
+        "clínico",
+        "transversal",
+        "correlacional",
+        "longitudinal"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Psicología, pregunta 97 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La diferencia entre moral y ética radica en que la moral está constituida por las costumbres y la ética estudia.",
+      "alternatives": [
+        "los valores",
+        "lo sobrenatural",
+        "la moral",
+        "las costumbres",
+        "lo sistemático"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Filosofía, pregunta 95 (clave C)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la siguiente proposición: \"Si haces ejercicios, entonces mejorarás\", indique el tipo a la que pertenece.",
+      "alternatives": [
+        "predicativas",
+        "relacionales",
+        "atómicas",
+        "moleculares",
+        "simples"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Filosofía, pregunta 96 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la alternativa correcta respecto a la reforma del sistema de justicia en el Perú en el marco de la lucha contra la corrupción.",
+      "alternatives": [
+        "La reforma del Consejo Nacional de la Magistratura (CNM).",
+        "La Junta Nacional de Justicia (JNJ) reemplaza al CNM.",
+        "La reestructuración de la Corte Suprema.",
+        "La reforma de la Fiscalía de la Nación.",
+        "La reestructuración de la Contraloría General de la República."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Educación Cívica, pregunta 98 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El organismo encargado de sentenciar a los funcionarios públicos implicados en caso de corrupción en el Perú es:",
+      "alternatives": [
+        "El Ministerio Público",
+        "El Congreso de la República",
+        "El Poder Judicial",
+        "La Defensoría del Pueblo",
+        "El Tribunal Constitucional"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Educación Cívica, pregunta 99 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El perímetro de un triángulo es 50 m y sobre cada lado del triángulo se forma un cuadrado cuyo lado coincida con el lado del triángulo. Como resultado, la suma de las áreas de los cuadrados formados es 900 $m^2$ y el lado del primer cuadrado es al del segundo como, el lado del tercero es a la mitad del primero.\nLa relación del mayor y el menor de los lados del triángulo es de: (_Considere que los lados del triángulo son números naturales_)",
+      "alternatives": [
+        "2 a 1",
+        "5 a 2",
+        "3 a 1",
+        "5 a 1",
+        "11 a 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que $arrow(L_1) parallel arrow(L_2)$ y $theta$ es la medida de un ángulo agudo. Calcule el mínimo valor entero de \"x\".",
+      "alternatives": [
+        "41°",
+        "42°",
+        "44°",
+        "45°",
+        "46°"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-0-uni-2019-1-figures/geo-lot-0-uni-2019-1-geo-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 21 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo $A B C$, $m angle B A C = 2(m angle A C B) = 30°$, si se traza la mediana $overline(B M)$, calcule $m angle A B M$.",
+      "alternatives": [
+        "75°",
+        "80°",
+        "90°",
+        "100°",
+        "105°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El cateto $overline(A B)$ del triángulo rectángulo $A B C$ se divide en 8 partes congruentes. Por los puntos de división se trazan 7 segmentos paralelos al cateto $overline(A C)$ tal como se muestra en la figura. Si $A C = 10$ m, halle la suma (en m) de las longitudes de los 7 segmentos.",
+      "alternatives": [
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-0-uni-2019-1-figures/geo-lot-0-uni-2019-1-geo-23.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al cortarse dos cuerdas de una misma circunferencia perpendicularmente, una de ellas queda dividida en segmentos de 3 y 4 unidades y la otra en segmentos de 6 y 2 unidades. Determine el diámetro de la circunferencia.",
+      "alternatives": [
+        "$sqrt(87)$",
+        "$sqrt(73)$",
+        "$sqrt(68)$",
+        "$sqrt(65)$",
+        "$sqrt(63)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra tres semicircunferencias y la longitud de la circunferencia mayor es $10 pi$ u. Si $A B = sqrt(24)$ u, siendo $overline(A B)$ tangente a las semicircunferencias interiores, calcule la longitud (en u) de la circunferencia menor.",
+      "alternatives": [
+        "$2pi$",
+        "$3pi$",
+        "$4pi$",
+        "$5pi$",
+        "$6pi$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-0-uni-2019-1-figures/geo-lot-0-uni-2019-1-geo-26.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para tres circunferencias tangentes (exteriormente) dos a dos, la suma de sus radios es 10 cm y el producto de los mismos es 40 $\"cm\"^3$. Halle el área (en $\"cm\"^2$) de la región triangular cuyos vértices son los centros de la circunferencia.",
+      "alternatives": [
+        "18",
+        "18,5",
+        "19",
+        "19,5",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las caras de un triedro equilátero de vértice $V$ miden 60°. En una de sus aristas se considera un punto $R$ de tal manera que $V R = 2$ cm. Por $R$ pasa un plano perpendicular a $overline(V R)$, que interseca a las otras aristas en $S$ y $T$. Halle el área del triángulo $R S T$ (en $\"cm\"^2$).",
+      "alternatives": [
+        "$3sqrt(2)$",
+        "$2sqrt(6)$",
+        "$sqrt(26)$",
+        "$3sqrt(3)$",
+        "$4sqrt(2)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un tronco de pirámide $A B C - A_1 B_1 C_1$, los volúmenes de las pirámides $B_1 - A B C$ y $A - A_1 B_1 C_1$, miden $V_1$ y $V_2$ respectivamente. Determine el volumen de la pirámide $A - C B_1 C_1$.",
+      "alternatives": [
+        "$sqrt(V_1 V_2)$",
+        "$frac(V_1 V_2, V_1+V_2)$",
+        "$frac(2 V_1 V_2, V_1+V_2)$",
+        "$2sqrt(V_1 V_2)$",
+        "$3sqrt(V_1 V_2)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El volumen de un cono de revolución es $36 pi \"cm\"^3$. Se inscribe un triángulo equilátero $A B C$ en la base del cono. El triángulo $A B C$ está circunscrito a una circunferencia cuyo círculo es base de un cilindro recto inscrito en el cono. Calcule el volumen del cilindro (en $\"cm\"^3$).",
+      "alternatives": [
+        "$frac(27pi, 10)$",
+        "$frac(27pi, 8)$",
+        "$frac(27pi, 5)$",
+        "$frac(27pi, 2)$",
+        "$27pi$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El menor ángulo de un paralelogramo mide $alpha$ y sus diagonales son $2m$ y $2n$. Calcule su área ($m > n$).",
+      "alternatives": [
+        "$(m^2-n^2) op(\"tg\")(alpha)$",
+        "$(m^2-n^2) op(\"ctg\")(alpha)$",
+        "$(m^2-n^2) op(\"sec\")(alpha)$",
+        "$(m^2-n^2) op(\"csc\")(alpha)$",
+        "$(m^2-n^2) op(\"sen\")(alpha)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las magnitudes $X$ e $Y$ son tales que $(Y-2)$ y $(X^2+1)$ son inversamente proporcionales. Se sabe que cuando $X=2$, se tiene que $Y=3$.\nDetermine la ecuación que relaciona $X$ e $Y$",
+      "alternatives": [
+        "$Y = frac(3, X^2-1) + 2$",
+        "$Y = -frac(5, X^2+1) + 4$",
+        "$Y = frac(20, X^2+1) - 1$",
+        "$Y = frac(11+X^2, X^2+1)$",
+        "$Y = frac(7+2X^2, X^2+1)$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cualquier tipo de café crudo pierde el 20% de su peso al tostarlo. Se ha comprado dos tipos de café crudo cuyos precios por kilogramo son 10 y 15 soles respectivamente.\nSi todo el café tostado se vendiera a 15 soles el kilogramo no se ganaría ni se perdería, pero se vendió todo el café tostado en S/ 3240 ganando el 20% del costo. Halle la suma de los pesos iniciales y dé como respuesta la diferencia de la mayor cifra con la menor cifra del resultado.",
+      "alternatives": [
+        "6",
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El número de hijos por familia en una determinada ciudad es una variable aleatoria $H$, cuya función de probabilidad es:\n\n$f(x) = P[H=x] = frac(K x, 5)$\n\n$x = 1; 2; 3; 4; 5$\n\n¿Cuál es la probabilidad de que una familia tenga 3 hijos dado que tiene al menos dos hijos?",
+      "alternatives": [
+        "0,200",
+        "0,333",
+        "0,214",
+        "0,267",
+        "0,357"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Matemática, pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tienen 496 números naturales consecutivos. Al dividir el número anterior al mayor entre el número menor de la lista de números, se obtiene como residuo 49 y como cociente un número natural diferente a 6.\nIndique la cifra de las centenas del número que se obtiene al multiplicar el trigésimo segundo número y el centésimo tercer número.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle un número de la forma $overline(a b 1 b a)$ que sea múltiplo de 44. Dar como respuesta el residuo que se obtiene al dividir dicho número entre 5.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule $root(3, 20+14sqrt(2)) + root(3, 20-14sqrt(2)) + 2\",\"2$\nDar como respuesta la primera cifra decimal.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o Falsa (F).\n\nI. El producto de un número irracional por otro irracional es siempre irracional.\nII. La suma de dos números irracionales siempre es un número irracional.\nIII. Entre dos números racionales diferentes siempre existe otro número racional.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean $A, B$ y $D$ subconjuntos de los números reales y definimos el operador $*$ mediante:\n$A * B = (A inter B)^c$\nIndique el valor de verdad de las siguientes proposiciones:\n\nI. $(A*B)*D = A*(B*D)$\nII. $(A*B)*A = A*(B*A)$\nIII. $A * emptyset = emptyset$\n\nDonde $A^c$ indica el complemento de $A$.",
+      "alternatives": [
+        "VFF",
+        "FVV",
+        "VVV",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Definimos el conjunto:\n$A = {x in RR slash sqrt(x+1) - root(3, x-2) = 1}$\nConsidere las siguientes proposiciones:\n\nI. La suma de los elementos del conjunto $A$ es 7\nII. $\"Card\"(A) = 2$\nIII. $2sqrt(2) - 2 in A$\n\nDetermine de las proposiciones dadas, cuáles son verdaderas.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $f : chevron.l frac(1,2); +infinity chevron.r -> RR$ una función definida por\n$f(x) = frac(2x-1, 2x^2 - x + frac(1,2))$\nEntonces el rango de $f$ es el conjunto",
+      "alternatives": [
+        "$[frac(2,3); +infinity chevron.r$",
+        "$chevron.l 0; frac(3,2)]$",
+        "$chevron.l frac(3,2); +infinity chevron.r$",
+        "$chevron.l 0; frac(2,3)]$",
+        "$chevron.l -infinity; frac(2,3)]$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el polinomio $rho(x)$ de coeficientes racionales de menor grado con raíces 1 y $1+sqrt(2)$, y que además cumpla $rho(0) = 1$.\nDé como respuesta la suma de los coeficientes del polinomio.",
+      "alternatives": [
+        "-2",
+        "-1",
+        "0",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 12 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $f: RR -> RR$ una función definida por:\n$f(x) = 2^x - frac(1, 2^x)$\nEntonces podemos decir que la función inversa $f^*$ de $f$, está dada por (en caso exista)",
+      "alternatives": [
+        "$frac(1,2) op(\"Ln\")(frac(x+sqrt(x^2+4), 2))$",
+        "$frac(1,2) op(\"Ln\")(frac(x-sqrt(x^2+4), 2))$",
+        "No existe $f^*$",
+        "$log_2 (frac(x+sqrt(x^2+4), 2))$",
+        "$log_2 (frac(x-sqrt(x^2+4), 2))$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la matriz $A = mat(1,0,0;6,4,0;6,5,9)$. Considere una matriz $S$ de orden $3 times 3$ triangular inferior de términos positivos, tal que:\n$S^2=A$, $op(\"diag\")(S) = (1,2,3)$\nCalcule:\n$K = frac(op(\"Traza\")(S S^T) + 16, abs(A))$",
+      "alternatives": [
+        "$frac(1,2)$",
+        "$1$",
+        "$frac(3,2)$",
+        "$2$",
+        "$frac(5,2)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean $A, B, X$ e $Y$ matrices de orden $2 times 2$ tales que:\n$A X + B Y = mat(1,2;3,1)$ y $2 A X - B Y = mat(2,4;0,2)$;\nsi $A = mat(2,1;4,3)$, entonces la suma de los elementos de la matriz $X$ es:",
+      "alternatives": [
+        "-0,4",
+        "-0,5",
+        "-0,6",
+        "-0,7",
+        "-0,8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el problema:\n$min_((x,y) in D) {a x + b y}$\ncon $(x_0, y_0) in D$ solución única, establecer cuál de las siguientes proposiciones son correctas.\n\nI. Siempre existe una recta $L$ tal que $L inter D = {(x_0, y_0)}$.\nII. El punto $(x_0, y_0)$ pertenece al interior del conjunto $D$.\nIII. $forall (x,y) in D, a x_0 + b y_0 >= a x + b y$",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I,II y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 16 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones:\n\nI. Si la sucesión ${(-1)^n a_n}$ es monótona, entonces dicha sucesión es constante\nII. Si la sucesión ${abs(a_n)}$ es convergente, entonces ${a_n}$ es también convergente\nIII. Si la serie $sum_(n=1)^infinity abs(a_n)$ es convergente, entonces $sum_(n=1)^infinity a_n$ es convergente\n\nSon correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 17 (clave C)"
     }
   ]
 }

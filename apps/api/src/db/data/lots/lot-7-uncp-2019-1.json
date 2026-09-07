@@ -602,6 +602,699 @@
       "correctAnswer": "2",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
       "sourceName": "Examen de Admisión UNCP 2019-I, Física, pregunta 36 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Del grupo de moléculas: $\"O\"_2$, $\"N\"_2$, $\"H\"_2$, $\"H\"_2\"O\"$, $\"O\"_3$. ¿Cuál posee enlace covalente polar?",
+      "alternatives": [
+        "Oxígeno",
+        "Nitrógeno",
+        "Agua",
+        "Hidrógeno",
+        "Ozono"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la reacción: $\"H\"_2 + \"N\"_2 arrow.r \"NH\"_3$\n\nLuego de balancear, indica el coeficiente (mínimo) del $\"NH\"_3$.",
+      "alternatives": [
+        "4",
+        "2",
+        "1",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué proposiciones son correctas respecto a las reacciones nucleares?\n\nI. La descomposición del $\"\"^235_92 \"U\"$, es una reacción de fusión.\nII. Un ejemplo de reacción termonuclear se da en el Sol.\nIII. La fusión libera mayor energía que la fisión.\nIV. Los insumos para la fisión son abundantes y baratas.",
+      "alternatives": [
+        "I – III",
+        "I – IV",
+        "II – III",
+        "I – II",
+        "III – IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La tabla de elementos químicos mostrada en la figura, presenta varias propiedades periódicas.\n\n¿Qué elemento tiene mayor radio atómico y menor electronegatividad?",
+      "alternatives": [
+        "Escandio",
+        "Zinc",
+        "Berilio",
+        "Neón",
+        "Cloro"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-7-uncp-2019-1-figures/quim-lot-7-uncp-2019-1-qui-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 40 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el laboratorio de Análisis Químico se requiere una solución 1,2 Molar de $\"KMnO\"_4$; calcula los volúmenes de permanganato de potasio 1 M y 2 M que se deben mezclar para obtener dicha solución.",
+      "alternatives": [
+        "0,6 L de 1 M – 0,4 L de 2 M",
+        "0,9 L de 1 M – 0,1 L de 2 M",
+        "0,4 L de 1 M – 0,6 L de 2 M",
+        "0,7 L de 1 M – 0,3 L de 2 M",
+        "0,8 L de 1 M – 0,2 L de 2 M"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 41 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La hidrósfera está constituida por los océanos, mares, ríos, lagos, etc. Selecciona los cuerpos de agua que pertenecen a las aguas dulces.\n\nI. Océano Atlántico\nII. Río Amazonas\nIII. Mar tropical peruano\nIV. Lago Titicaca",
+      "alternatives": [
+        "II – IV",
+        "I – II",
+        "I – IV",
+        "II – III",
+        "I – III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 42 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con respecto a las lluvias ácidas, determina la verdad (V) o falsedad (F) de los siguientes enunciados:\n\n• Es un problema exclusivo de los países industrializados del mundo.\n• Da lugar a precipitaciones pluviales con diversas concentraciones de ácido acético y ácido clorhídrico.\n• Resulta de la combinación de la humedad atmósferica con óxidos de nitrógeno y azufre emitidos al aire por los procesos industriales.",
+      "alternatives": [
+        "VFV",
+        "FVV",
+        "VFF",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 43 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si tenemos:\n\nIdentifica a los elementos nutritivos principales o esenciales, imprescindibles para los seres vivos.",
+      "alternatives": [
+        "1; 2 y 4",
+        "2; 3 y 5",
+        "1, 4 y 5",
+        "3; 4 y 5",
+        "2; 4 y 6"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-7-uncp-2019-1-figures/quim-lot-7-uncp-2019-1-qui-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente esquema:\n\nReconoce el proceso y el producto representados por \"x e y\", respectivamente.",
+      "alternatives": [
+        "Licuefacción – Metanol.",
+        "Licuefacción – Biogás.",
+        "Licuefacción – Etanol.",
+        "Pirolisis – Metanol.",
+        "Pirolisis – Etanol."
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/quim-lot-7-uncp-2019-1-qui-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Química, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la autoridad que está obligada a la rendición de cuentas cuando la población lo solicita:",
+      "alternatives": [
+        "Alcalde",
+        "Ministros del Estado",
+        "Fiscal de la Nación",
+        "Jefes militares",
+        "Presidente de la Corte Suprema"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Educación Cívica, pregunta 46 (clave A)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De los valores que se indican, analiza y señala a los que construyen la paz:\n\nI. Honestidad   II. Igualdad\nIII. Justicia   IV. Solidaridad",
+      "alternatives": [
+        "II – IV",
+        "I – IV",
+        "I – III",
+        "II – III",
+        "III – IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Educación Cívica, pregunta 47 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Selecciona la dimensión de la persona humana en el siguiente caso:\n\nMaribel tiene la capacidad de sentir y expresar adecuadamente sus afectos y emociones.",
+      "alternatives": [
+        "Moral",
+        "Biológica",
+        "Social",
+        "Psicológica",
+        "Ético"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Psicología, pregunta 48 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Manuel piensa que, como no juega bien al fútbol, es un fracasado.\n\n¿Qué tipo de creencia manifiesta Manuel?",
+      "alternatives": [
+        "Mágico",
+        "Positivo",
+        "Fortalecedor",
+        "Religioso",
+        "Negativo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Psicología, pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los elementos de la identidad con su manifestación respectiva:\n\nI. Sexo biológico\nII. Identidad de género\nIII. Orientación sexual\n\na. Conjunto de características anatómicas y fisiológicas que diferencian al hombre de la mujer.\nb. Sentir afecto y deseo sexual hacia otra persona.\nc. Forma de internalizar lo que significa ser varón o ser mujer.",
+      "alternatives": [
+        "Ib – IIc – IIIa",
+        "Ic – IIa – IIIb",
+        "Ia – IIc – IIIb",
+        "Ia – IIb – IIIc",
+        "Ib – IIa – IIIc"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Psicología, pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la clase de referencia textual teniendo en cuenta las palabras resaltadas.\n\nLos factores que influyen para que una región llueva poco o mucho, o acaso haga frío o calor, son *los siguientes:* la latitud, la altitud, la orientación del relieve y la distancia al mar.",
+      "alternatives": [
+        "Elipsis",
+        "Anáfora",
+        "Sustitución léxica",
+        "Catáfora",
+        "Deixis"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Verbal, pregunta 51 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Revista cultural Whynot *XL*\n\nI. El último número desarrolla como eje temático el cine.\nII. El director actual es el docente universitario Jorge Jaime Valdez.\nIII. Hasta el momento se han editado 29 números en 5 años.\nIV. Whynot XL es una revista cultural editada en la ciudad de Huancayo.\nV. El próximo número abordará el tema de la peruanidad.",
+      "alternatives": [
+        "IV–III–V–II–I",
+        "I–V–II–III–IV",
+        "IV–II–III–I–V",
+        "II–IV–III–I–V",
+        "II–IV–V–III–I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Verbal, pregunta 54 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ORACIÓN ELIMINADA\n\n(I) La transculturización es un concepto planteado por el antropólogo cubano Hernando Ortiz. (II) La transculturización se manifiesta en la escritura de José María Arguedas. (III) Ángel Rama ha empleado el concepto de transculturización. (IV) Las crónicas coloniales son un vivo ejemplo de transculturización. (V) Hernando Ortiz nació en Cuba y escribió muchos libros.",
+      "alternatives": [
+        "III",
+        "II",
+        "V",
+        "I",
+        "IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Verbal, pregunta 57 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa las oraciones:\n\nLuis a lawyer and \\_\\_\\_\\_\\_ father is a doctor.\nFredy and David are brothers \\_\\_\\_\\_\\_ father is a teacher.",
+      "alternatives": [
+        "his / our",
+        "her / their",
+        "your / his",
+        "his / his",
+        "his / their"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Inglés, pregunta 58 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple present tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elige la oración incorrecta\n\nI. Marcos and his father eat in a restaurant.\nII. Huancayo doesn't have an airport.\nIII. It rains in Huancayo today.\nIV. Sara's friend sends a lot of e-mails.\nV. Your teachers plays football.",
+      "alternatives": [
+        "IV",
+        "V",
+        "III",
+        "I",
+        "II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Inglés, pregunta 59 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo:\n\nA. What can you see on the table?\nB. There are \\_\\_\\_\\_\\_ apples and \\_\\_\\_\\_\\_ cheese.",
+      "alternatives": [
+        "Much . little",
+        "a lot of - a little",
+        "any - a few",
+        "a little - few",
+        "any - few"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Inglés, pregunta 60 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la oración\n\n\"San Marcos\" university is \\_\\_\\_\\_\\_ in South America.",
+      "alternatives": [
+        "more older",
+        "oldest",
+        "the older",
+        "the more oldest",
+        "the oldest"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Inglés, pregunta 61 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo\n\nA. Who do you think will win? Real Madrid or Barcelona\nB. Well, Barcelona is \\_\\_\\_\\_\\_ team.",
+      "alternatives": [
+        "a much better",
+        "a gooder",
+        "much gooder",
+        "more better",
+        "most better"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Inglés, pregunta 62 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el examen de admisión de la UNCP, de las 80 preguntas, contesté el 80% correcto. ¿Cuántas preguntas incorrectas respondí?",
+      "alternatives": [
+        "10",
+        "8",
+        "16",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 63 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Mi abuelo deja una herencia de un tercero cuadrado como muestra la figura:\n\nSi el área sombreada me corresponde. ¿Qué parte del terreno me toca?",
+      "alternatives": [
+        "1/8",
+        "1/4",
+        "1/12",
+        "1/6",
+        "1/16"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-64.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 64 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dentro de 40 años, el niño Arturito tendrá el quíntuple de su edad actual. ¿Cuál fue la edad de Arturito hace 5 años?",
+      "alternatives": [
+        "8 años",
+        "5 años",
+        "9 años",
+        "7 años",
+        "10 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 65 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al reconstruir la operación, donde símbolos iguales significan números iguales, ¿cuál es el valor de $diamond + square + circle$?",
+      "alternatives": [
+        "19",
+        "15",
+        "18",
+        "17",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-66.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 66 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cinco jóvenes están escalando una montaña (como se muestra en la imagen); Juan está más arriba que Raúl, y Raúl más arriba que Pedro, pero Pedro está más arriba que Fernando y Carlos. Si Fernando está más arriba que Carlos. ¿Quién está en el tercer lugar de ascenso?",
+      "alternatives": [
+        "Carlos",
+        "Juan",
+        "Raúl",
+        "Fernando",
+        "Pedro"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-67.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 67 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura:\n\n¿Cuántos cuadriláteros no contiene cruz (+)?",
+      "alternatives": [
+        "13",
+        "15",
+        "11",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-68.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "María Liz arranca una hoja de su cuaderno, ¿cuántas de las siguientes figuras que se muestran aparecerá al ser doblada solo una vez?",
+      "alternatives": [
+        "0",
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-69.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 69 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El nuevo logo de \"NEFLIX\" es:\n\nHalla el total de triángulos del logo.",
+      "alternatives": [
+        "22",
+        "27",
+        "26",
+        "25",
+        "24"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-70.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 70 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La glorieta de la plaza de mi pueblo tiene un techo hexagonal que presenta la siguiente vista:\n\n¿Cuántos triángulos hay en esta estructura?",
+      "alternatives": [
+        "12",
+        "16",
+        "14",
+        "13",
+        "15"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-71.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 71 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el examen de admisión 2019–I Paúl obtuvo menos puntos que Fredy, Juan menos puntos que Paúl y Wily más puntos que Luis; Luis obtuvo más puntaje que Fredy, ¿quién obtuvo el mayor puntaje en el examen?",
+      "alternatives": [
+        "Juan",
+        "Fredy",
+        "Luis",
+        "Paúl",
+        "Wily"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 72 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al agregar su cuadrado a una fracción resulta la misma fracción multiplicada por 110/19. ¿Cuál es la fracción?",
+      "alternatives": [
+        "91/19",
+        "51/19",
+        "61/19",
+        "81/19",
+        "71/19"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 73 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un albañil colocó cerámica sobre el piso de un local, tal como se muestra:\n\n¿Cuántas piezas de cerámica negra utilizó, si empleó 40 cerámicas blancas?",
+      "alternatives": [
+        "88",
+        "84",
+        "82",
+        "80",
+        "86"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-74.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 74 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un aula de una institución educativa tiene \"N\" estudiantes, si se duplicara dicho número se tendrían menos de 40, pero si se selecciona la sexta parte, serían más de 2. ¿Cuál es el número de estudiantes?",
+      "alternatives": [
+        "13",
+        "16",
+        "19",
+        "14",
+        "18"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 75 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una clase de matemática de cierto colegio el profesor dice que la edad de Carlos representa \"b\" veces la edad que tuvo hace \"a\" años.\n\n¿Cuál es la edad de Carlos en términos de \"a\" y \"b\"?",
+      "alternatives": [
+        "$frac(a b, b - 1)$",
+        "$a b + 1$",
+        "$a b$",
+        "$frac(a b - 1, b - 1)$",
+        "$a b - 1$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 76 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En cierto salón de clases del Programa de Estudios Generales se evalúa a 70 estudiantes entre varones y mujeres, de las mujeres aprobaron al 80 % y únicamente el 10 % de los varones, si el número de aprobados es el 70 % del total. ¿Cuántos varones rindieron la evaluación?",
+      "alternatives": [
+        "70",
+        "10",
+        "60",
+        "50",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 77 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con la propina de mi padre dispuestos de la forma siguiente:\n\n¿Cuántas monedas se deben mover, como mínimo para formar un cuadrado de 5 monedas por lado?",
+      "alternatives": [
+        "5",
+        "6",
+        "4",
+        "7",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-78.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 78 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Wilfredo vende un televisor, ganando el 20 % y con ese dinero compra una lavadora y lo vende en 1 080 soles perdiendo el 10 %. ¿Cuánto costó el televisor?",
+      "alternatives": [
+        "6 000 soles",
+        "980 soles",
+        "1 080 soles",
+        "1 000 soles",
+        "1 100 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 79 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los tijerales del techo de un coliseo tienen la siguiente forma:\n\n¿Cuántos triángulos se puede contar en esta estructura?",
+      "alternatives": [
+        "20",
+        "23",
+        "21",
+        "24",
+        "22"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-7-uncp-2019-1-figures/rm-lot-7-uncp-2019-1-raz-80.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=17",
+      "sourceName": "Examen de Admisión UNCP 2019-I, Razonamiento Matemático, pregunta 80 (clave E)"
     }
   ]
 }

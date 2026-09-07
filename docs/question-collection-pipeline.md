@@ -341,6 +341,20 @@ pagarle a un endpoint de visión sería gastar en una capacidad que ya está aqu
   como separador.
 - **Una barra literal** es `slash` o `\/`; `/` a secas arma una fracción.
 
+### Erratas del examen original
+
+Dos lotes las trataron al revés el mismo día, así que la regla queda escrita:
+
+- **Una falta de ortografía se corrige.** "ORACIÓN ELIMINDA", "¿Cuántros
+  triángulos", "los cincos años", "mueren rapidamente". No cambian nada de la
+  pregunta y, impresas, parecen un defecto NUESTRO, no de la UNCP.
+- **Todo lo demás va literal.** Un número, un símbolo, una fórmula, un nombre
+  propio, una unidad, la redacción del enunciado. Si al arreglarlo cambia lo que
+  se pregunta o lo que se responde, no se toca: eso es resolver, no transcribir.
+
+La duda se resuelve por consecuencia. Si al lector le cambia la respuesta, va
+literal aunque parezca un error.
+
 ### Llegar a producción
 
 No hay paso manual. `seed()` corre `seedLotQuestions` y enseguida

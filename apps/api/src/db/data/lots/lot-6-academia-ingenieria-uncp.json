@@ -1204,6 +1204,865 @@
       "correctAnswer": "1",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
       "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Aritmética, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Según la onda electromagnética que se mueve en un medio material, calcula su periodo, frecuencia y energía (J), considere $h = 6\",\"62 times 10^(-34)$ J·s:",
+      "alternatives": [
+        "$8 - 0\",\"75 - 6\",\"620 times 10^(-34)$",
+        "$4 - 0\",\"25 - 1\",\"655 times 10^(-34)$",
+        "$10 - 0\",\"25 - 3\",\"311 times 10^(-34)$",
+        "$2 - 0\",\"5 - 3\",\"315 times 10^(-34)$",
+        "$1 - 0\",\"5 - 6\",\"620 times 10^(-34)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-1-a1-fis-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Física, pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la potencia (en W) disipada por la resistencia de $2 Omega$ cuando la barra conductora de 50 cm se desliza pegada a los rieles con una rapidez de 10 m/s en el interior de un campo magnético uniforme de $B = 400$ mT. Despreciar las resistencias de la barra y los rieles.",
+      "alternatives": [
+        "2",
+        "5",
+        "1",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-1-a1-fis-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Física, pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el conjunto de los números racionales se define la operación denotada por @ mediante: $2^(-m) @ 3^n = (m - n)^(m+n)$. Determina: $(1/8 @ 9) @ 243$",
+      "alternatives": [
+        "3125",
+        "4215",
+        "-81",
+        "$1/125$",
+        "-3125"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Álgebra, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el conjunto solución de la inecuación: $sqrt((sqrt(x+9)+3)/(3-sqrt(x+9))) >= x - 3$ tiene la forma del intervalo $[a; b chevron.r$, determina el valor de \"a^2 + b^2\".",
+      "alternatives": [
+        "49",
+        "16",
+        "25",
+        "81",
+        "64"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=62:solucionario-admision-unoc2026i-areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área I, Álgebra, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un reloj por la tarde, cuando son las 3:20 marca 2:56 y señala 3:14 cuando son las 3:47. Determina qué fracción del día faltaba transcurrir en el instante que empezó a atrasarse.",
+      "alternatives": [
+        "$9/40$",
+        "$3/8$",
+        "$37/90$",
+        "$41/90$",
+        "$5/12$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 5 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de E y dé como respuesta la suma de sus cifras. $E = (underbrace(333...333, \"15 cifras\"))^2$",
+      "alternatives": [
+        "135",
+        "162",
+        "175",
+        "125",
+        "108"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 6 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de cifras del número que falta:",
+      "alternatives": [
+        "25",
+        "23",
+        "24",
+        "27",
+        "26"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/arit-2026-1-a2-ari-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Astrid lleva 3 000 naranjas al mercado de las cuales el 3% estaban malogradas, por lo que tuvo que desecharlas y solo pudo vender el 30% de las buenas. ¿Cuántas naranjas se quedaron sin vender?",
+      "alternatives": [
+        "2 037",
+        "2 091",
+        "2 073",
+        "2 030",
+        "2 910"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 8 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al repartir $N = n^3 - n$ en forma directamente proporcional a $2; 4; 6; 8; ...; 2n$; la menor de las partes obtenidas fue $(n + 7)$. Determina la suma de cifras de \"N\"",
+      "alternatives": [
+        "8",
+        "10",
+        "9",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una empresa química tiene almacenado 800 L de alcohol de 80°. Para su comercialización, saca el 10% y la reemplaza con agua. ¿Cuál es el grado alcohólico de la mezcla resultante?",
+      "alternatives": [
+        "78°",
+        "64°",
+        "72°",
+        "70°",
+        "76°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un conjunto \"A\" tiene \"x\" elementos y un conjunto \"B\" que tiene \"2x\" elementos, origina 4 032 subconjuntos propios más que \"A\". Si: $n(A inter B) = 3$, halla: $n(A union B)$",
+      "alternatives": [
+        "14",
+        "13",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 22 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "EL INEI desea estudiar a todo un conjunto de habitantes del área urbana de Huancayo, teniendo como unidad muestral a cada domicilio. Para dicho estudio el entrevistador selecciona los 100 primeros domicilios que encuentra en su camino. ¿Qué tipo de muestreo estaría aplicando el entrevistador?",
+      "alternatives": [
+        "Muestreo por conglomerado",
+        "Muestreo aleatorio",
+        "Muestreo por conveniencia",
+        "Muestreo estratificado",
+        "Muestreo sistemático"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Aritmética, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un oscilador masa – resorte (de amplitud A) tiene una energía cinética en una posición \"x\" que es la tercera parte de su energía total. Determinar un valor posible de \"x\" en función de \"A\". Despreciar la fricción.",
+      "alternatives": [
+        "$sqrt(3/5) A$",
+        "$sqrt(3/2) A$",
+        "$sqrt(3)/2 A$",
+        "$sqrt(5/3) A$",
+        "$sqrt(2/3) A$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Física, pregunta 48 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el área lateral (en $m^2$) de un cono de revolución de altura 6 m, en el cual se encuentra inscrito un cubo de arista 2 m.",
+      "alternatives": [
+        "$32 pi$",
+        "$54 pi$",
+        "$64 pi$",
+        "$27 pi$",
+        "$27/2 pi$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Geometría, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina cuál(es) de las siguientes configuraciones electrónicas es(son) incorrecta(s):\n\nI. $attach(\"Zn\", bl: 30, tr: \"2+\")$: [Ar]$3d^10$\n\nII. $attach(\"Cu\", bl: 29, tr: \"2+\")$: [Ar]$4s^2 3d^7$\n\nIII. $attach(\"P\", bl: 15)$: [Ne]$3s^2 3p^3$\n\nIV. $attach(\"Fe\", bl: 26, tr: \"2+\")$: [Ar]$4s^2 3d^6$",
+      "alternatives": [
+        "I – II – III",
+        "II – IV",
+        "I – II",
+        "I – III",
+        "IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Química, pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de soluciones en el intervalo $[0; 2 pi chevron.r$, de la siguiente ecuación trigonométrica: $cos theta/(1+cos 2 theta) - \"sen\" theta/(1 - cos 2 theta) = 0$; $k in ZZ$",
+      "alternatives": [
+        "$9pi/2$",
+        "$5pi/2$",
+        "$11pi/2$",
+        "$7pi/2$",
+        "$3pi/2$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Trigonometría, pregunta 33 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las raíces de la ecuación $x^3 + x^2 - 1 = 0$ son ${U; N; C}$; siendo $U != 0$; $N != 0$; $C != 0$, determina el valor de \"E\" en la expresión: $E = (U sqrt(-U))/sqrt(U^2 - N C) + (N sqrt(-N))/sqrt(N^2 - U C) + (C sqrt(-C))/sqrt(C^2 - U N)$",
+      "alternatives": [
+        "-2",
+        "5",
+        "4",
+        "-1",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Álgebra, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al simplificar la fracción: $M = 2/(x^2 - x y) - 1/(x^2+x y) - (2y)/(x^3-x y^2)$\n\nSe obtiene $M = a/(x^2-b x y)$, determina el valor de \"a + b\".",
+      "alternatives": [
+        "0",
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=63:solucionario-admision-uncp2026i-areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-I, Área II, Álgebra, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El mayor número de 3 cifras de la base \"k\" se escribe en base 10 como $overline(\"2ab\")$. Calcula \"b + k\"",
+      "alternatives": [
+        "10",
+        "11",
+        "9",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Aritmética, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos tipos de alcohol de 58° y 74°, están contenidas en dos recipientes con grifos que vierten cada una a razón de 8 L/min y 6 L/min, respectivamente con la finalidad de preparar 480 L de alcohol de 62°. ¿Al cabo de cuánto tiempo se deberá cerrar cada grifo para obtener dicha mezcla, considerando que ambos grifos se abrieron simultáneamente?",
+      "alternatives": [
+        "35 min y 20 min",
+        "40 min y 15 min",
+        "40 min y 25 min",
+        "45 min y 15 min",
+        "45 min y 20 min"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Aritmética, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un dado está cargado de tal manera que la probabilidad de que aparezca un número cuando se lanza es proporcional al mismo número dado. ¿Cuál es la probabilidad de obtener el número 3?",
+      "alternatives": [
+        "$1/2$",
+        "$1/7$",
+        "$2/3$",
+        "$1/3$",
+        "$1/4$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Aritmética, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para la desinfección de un reservorio de agua, se tiene tres soluciones de cloro disuelto de: 1; 0,5 y 0,25 mg/L, donde el volumen de 0,25 y 1 mg/L están en relación de 1 a 5. Determina qué porcentaje representará la solución de 0,5 mg/L del volumen total de 81 litros para que la mezcla resultante sea de 0,75 mg/L.",
+      "alternatives": [
+        "25%",
+        "33,3%",
+        "27,5%",
+        "26,6%",
+        "30%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Aritmética, pregunta 58 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el triple de las horas trascurridas en un día es igual al quíntuple de las que faltan para terminar el día, determina el ángulo que formarán las manecillas de un reloj dentro de 2 h 12 minutos.",
+      "alternatives": [
+        "84°",
+        "90°",
+        "86°",
+        "68°",
+        "80°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Aritmética, pregunta 59 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la fracción que resulta tres veces más que la fracción inicial cuando a sus dos términos se le agrega el denominador? Dé como resultado la suma del numerador más el denominador.",
+      "alternatives": [
+        "3",
+        "8",
+        "7",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Aritmética, pregunta 63 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la energía (en J) de las radiaciones del espectro violeta y rojo, si sus longitudes de onda son 4000 Å y 7000 Å, respectivamente. Dato: $h = 6\",\"63 times 10^(-34)$ J·s",
+      "alternatives": [
+        "$4\",\"973 times 10^(-19) - 2\",\"841 times 10^(-19)$",
+        "$3\",\"312 times 10^(-34) - 1\",\"731 times 10^(-34)$",
+        "$6\",\"631 times 10^(-19) - 4\",\"456 times 10^(-21)$",
+        "$4\",\"973 times 10^(-21) - 2\",\"841 times 10^(-19)$",
+        "$8\",\"275 times 10^(-20) - 6\",\"532 times 10^(-20)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Física, pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se lanza una pequeña piedra con una rapidez $V_0 = 10$ m/s en la forma mostrada en la figura. Si la piedra se introduce en el tubo que se orienta a 45° respecto a la vertical, de modo que el movimiento de la piedra coincida con el eje del tubo, se pide determinar el valor de \"y\" (en m) en el instante que la piedra penetra en el tubo. ($g = 10$ m/s²)",
+      "alternatives": [
+        "1,2",
+        "2,6",
+        "3,5",
+        "3",
+        "1,4"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-2-a1-fis-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Física, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la magnitud de la resistencia equivalente (en $Omega$) entre los puntos a y b del arreglo mostrado, si $R_1 = 15 Omega$ y $R_2 = 30 Omega$.",
+      "alternatives": [
+        "10",
+        "20",
+        "25",
+        "5",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-2-a1-fis-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Física, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La figura muestra dos porciones de vidrio con índices de refracción n y $n_1$. Si un rayo de luz incide con un ángulo de 45°, siguiendo la trayectoria mostrada, emergiendo sobre la cara vertical, determina el valor del índice de refracción \"n\".",
+      "alternatives": [
+        "$sqrt(3/2)$",
+        "$sqrt(3)$",
+        "$sqrt(2)$",
+        "1",
+        "$sqrt(5/2)$"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-2-a1-fis-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Física, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre un bloque de 1,5 kg, inicialmente moviéndose con $80 arrow(i)$ m/s, actúa una fuerza $arrow(F) = (12 arrow(i) + 15 arrow(j))$ N durante 20 s. Si el bloque solo puede moverse a lo largo del eje x despreciando el rozamiento, determina la potencia (en kW) entregada al bloque.",
+      "alternatives": [
+        "4,84",
+        "2,29",
+        "1,92",
+        "0,86",
+        "5,20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Física, pregunta 40 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula efectúa un MAS a la frecuencia de 5 Hz. Determina la ecuación de posición (X) en función del tiempo (t) para la siguiente condición inicial: $t = 0$, $X = A$, $v = 0$.",
+      "alternatives": [
+        "$x = A \"sen\"(10 pi t + pi/3)$",
+        "$x = A \"sen\"(10 pi t + pi/6)$",
+        "$x = A cos(10 pi t + pi/3)$",
+        "$x = A cos(10 pi t)$",
+        "$x = A \"sen\"(10 pi t)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Física, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a los números cuánticos y sus características, determina la verdad (V) o falsedad (F) de las siguientes proposiciones:\n\nI. El subnivel (p) tiene la forma esférica de los orbitales.\n\nII. El nivel principal (n) define para el orbital el tamaño o volumen efectivo.\n\nIII. El número cuántico azimutal (l) define para el orbital la forma geométrica espacial.\n\nIV. El subnivel (d) tiene la denominación espectroscópica difuso.",
+      "alternatives": [
+        "FVFV",
+        "FVVV",
+        "VFFF",
+        "FFVV",
+        "VVFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Química, pregunta 32 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el tipo de enlace que corresponde a cada compuesto químico (utiliza el cuadro de electronegatividad \"EN\"). Considere enlace iónico (I) y enlace covalente (C):\n\nI. $\"LiBr\"$\n\nII. $\"NaCl\"$\n\nIII. $\"BeCl\"_2$\n\nIV. $\"SrCl\"_2$\n\nV. $\"Li\"_2\"O\"$\n\n#align(center, table(columns: 10, align: center + horizon, inset: 5pt, stroke: 0.6pt,\n  [*Elemento*], [Li], [F], [Na], [Br], [Be], [Cl], [Sr], [S], [O],\n  [*EN*], [1,0], [4,0], [0,9], [2,8], [1,7], [3,0], [1,0], [2,5], [3,5],\n))",
+      "alternatives": [
+        "I I C I I",
+        "I I I C I",
+        "I C I C C",
+        "I I C C I",
+        "I I C I C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Química, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la suma de las fracciones: $E = 1/(x^2+x) + 1/(x^2+3x+2) + 1/(x^2+5x+6) + dots.h + 1/(x^2+19x+90)$\n\nDonde $E = a/(x(x+a))$, determina el valor de \"a^2\"",
+      "alternatives": [
+        "121",
+        "144",
+        "100",
+        "81",
+        "64"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Álgebra, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la función $f(x) = sqrt(27x^2+57x-14) - (2x+1)/sqrt(88-17x-6x^2)$ donde el dominio tiene la forma: $x in (u; n] union [c; p)$, halla \"u + n + c + p\"",
+      "alternatives": [
+        "$-89/18$",
+        "89",
+        "$-18/89$",
+        "$18/89$",
+        "$89/18$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Álgebra, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el conjunto de los números reales positivos, sabiendo que: $a^3 * sqrt(b) = (a+b)/(b-a)$, determina \"x\" en la siguiente ecuación: $(8*2+24)*sqrt(x) = 4$",
+      "alternatives": [
+        "4",
+        "6",
+        "7",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=64:solucionariouncp2026ii_areai",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área I, Álgebra, pregunta 60 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla un número de la forma $overline(\"abcd\")$ que multiplicado por 79 dé como producto un número que termina en $overline(\"bcd3\")$. Dar como respuesta \"b + d\".",
+      "alternatives": [
+        "9",
+        "14",
+        "7",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El número de la forma $overline(\"2a51b5\")$ es divisible entre 33. Si a y b > 6, determina $overline(\"ab\")$",
+      "alternatives": [
+        "78",
+        "89",
+        "87",
+        "98",
+        "86"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los 4/9 de un capital se imponen al 12%, la cuarta parte del resto al 18% y lo que queda al 20% de interés simple, obteniéndose así una renta anual de S/ 68 676. ¿Cuánto fue el capital?",
+      "alternatives": [
+        "S/ 413 000",
+        "S/ 401 200",
+        "S/ 389 400",
+        "S/ 377 600",
+        "S/ 424 800"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se contrató 15 obreros para hacer una obra en 40 días trabajando 8 h/d, pero al término de 5 días se retiraron 5 obreros y los restantes continúan trabajando 15 días a razón de 7 h/d. ¿Qué fracción de la obra falta terminar?",
+      "alternatives": [
+        "$19/32$",
+        "$23/32$",
+        "$25/32$",
+        "$21/32$",
+        "$17/32$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si se reparte el número 2 970 proporcionalmente a los \"n\" primeros números enteros positivos, se observa que la diferencia entre el mayor y la menor de las partes es 450. Determina el valor de $(n-1)^2$",
+      "alternatives": [
+        "64",
+        "81",
+        "121",
+        "144",
+        "100"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una rifa la probabilidad de ganar el premio \"A\" es 0,05 y la probabilidad de ganar el premio \"B\" es 0,25. Si la probabilidad de ganar al menos uno de los dos premios es 0,26; ¿cuál es la probabilidad de ganar solo uno de los dos premios?",
+      "alternatives": [
+        "0,22",
+        "0,21",
+        "0,24",
+        "0,20",
+        "0,23"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se sabe que: $M times overline(\"PAPA\") = 2626$; $A times overline(\"PAPA\") = 3939$. Calcula la suma de cifras al efectuar: $overline(\"PAPA\") times overline(\"MAMA\")$",
+      "alternatives": [
+        "27",
+        "29",
+        "30",
+        "26",
+        "28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 52 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un recipiente se tiene una mezcla de $3m$ litros de agua, tres litros de alcohol y $(m^2+m)$ litros de vino. Si se extrae $(m+3)$ litros de mezcla, ¿cuántos litros de agua y alcohol quedan en el recipiente?",
+      "alternatives": [
+        "$3m$",
+        "$m^2+1$",
+        "$m+1$",
+        "$m^2$",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Aritmética, pregunta 55 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una cuerda sometida a tensión se propaga una onda con una rapidez de 300 m/s. Determina en cuántas partes oscilarán 3 m de esta cuerda sujeta en sus extremos y sometida a la misma tensión, si presenta una frecuencia de 150 Hz.",
+      "alternatives": [
+        "2",
+        "4",
+        "1",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Física, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que para la posición mostrada el sistema está en reposo, y el resorte se encuentra sin deformar. ¿Cuál será la máxima deformación $X_m$ (en m) que experimenta el resorte cuando dicho sistema se deja en libertad? $m = 1$ kg; $g = 10$ m/s² y $k = 400$ N/m. Despreciar la masa de la polea móvil.",
+      "alternatives": [
+        "0,4",
+        "0,2",
+        "0,3",
+        "0,1",
+        "0,5"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-2-a2-fis-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Física, pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para el circuito de la figura, calcula la intensidad de corriente $i_0$ (en A):",
+      "alternatives": [
+        "2",
+        "5",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/fis-2026-2-a2-fis-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Física, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un haz de luz incide sobre un dieléctrico haciendo un ángulo de 53° con la normal. Si el ángulo de refracción es de 37°, determina la rapidez (en $10^8$ m/s) con la que el haz se propaga en el dieléctrico.",
+      "alternatives": [
+        "1,56",
+        "2,25",
+        "2,52",
+        "0,75",
+        "1,68"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Física, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos móviles parten de un mismo punto siguiendo trayectorias rectilíneas perpendiculares, velocidades de 6 m/s y 8 m/s respectivamente. ¿Después de qué tiempo (en s) ambos móviles estarán separados 200 m?",
+      "alternatives": [
+        "25",
+        "10",
+        "20",
+        "15",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Física, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una aspiradora consume 35 kJ de energía durante 4 minutos. Determina la energía (en kJ) que consume otra aspiradora que trabajando con el mismo voltaje consume una corriente mayor en 40%, durante el mismo tiempo.",
+      "alternatives": [
+        "50",
+        "48",
+        "49",
+        "46",
+        "45"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Física, pregunta 47 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el cuadrado ABCD; calcula \"x\", si los triángulos BRC y ADQ son congruentes:",
+      "alternatives": [
+        "126°",
+        "102°",
+        "116°",
+        "120°",
+        "108°"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-6-academia-ingenieria-uncp-figures/geo-2026-2-a2-geo-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=65:solucionariouncp2026ii_areaii",
+      "sourceName": "Academia Ingeniería — Solucionario UNCP, Examen de Admisión UNCP 2026-II, Área II, Geometría, pregunta 19 (clave E)"
     }
   ]
 }

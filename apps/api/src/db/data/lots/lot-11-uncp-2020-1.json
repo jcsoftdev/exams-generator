@@ -1,3 +1,819 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un docente de Matemática descompone canónicamente un número y encuentra que: $N = 2^3 3^2$. Identifica el valor de verdad de las siguientes proposiciones:\n\nI. La cantidad de divisores es 12\n\nII. El número $N = 72$\n\nIII. $N = dot(8)$ ó $dot(3)$",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "FVV",
+        "VV",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que: $frac(overline(\"ab\"), \"CA\"(overline(\"ab\"))) = 2/3$\n\nDetermina: $a + b$",
+      "alternatives": [
+        "3",
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que $f(x)$ es una función de proporcionalidad directa y $f(12) = 18$\n\nCalcula: $f(16) + f(12)$",
+      "alternatives": [
+        "41",
+        "44",
+        "43",
+        "45",
+        "42"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una clase de Psicología se observó que la treceava parte de las mujeres usaban faldas y la onceava parte de los varones usaban camisas. Si en total asistieron 98 alumnos, determina la diferencia entre el número de mujeres y varones.",
+      "alternatives": [
+        "29",
+        "31",
+        "30",
+        "32",
+        "33"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un terreno de cultivo tiene la forma rectangular y su largo mide 16 m más que el triple de su ancho. Si se sabe que el perímetro de cultivo no mide más de 432 m, determina cuántos metros cuadrados se puede cultivar para el mayor valor que pueda tener el ancho de la zona de cultivo.",
+      "alternatives": [
+        "8 300 $\"m\"^2$",
+        "8 301 $\"m\"^2$",
+        "8 299 $\"m\"^2$",
+        "8 302 $\"m\"^2$",
+        "8 298 $\"m\"^2$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El volumen de un cilindro está representado por la expresión $4 pi p^3 + 24 pi p^2 + 36 pi p$. Si la fórmula del volumen del cilindro es $V = pi r^2 h$. ¿Cuánto suman el radio y la altura del cilindro?",
+      "alternatives": [
+        "$6p + 2$",
+        "$2p + 1$",
+        "$4p + 5$",
+        "$3p + 5$",
+        "$5p + 3$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el dominio de la siguiente función:\n\n$f(x) = sqrt(frac(x - 1, x - 2))$",
+      "alternatives": [
+        "$chevron.l -1 \";\" 1] union chevron.l 2 \";\" +infinity chevron.r$",
+        "$chevron.l -infinity \";\" 1] union chevron.l 1 \";\" +infinity chevron.r$",
+        "$chevron.l -infinity \";\" 1] union [1 \";\" infinity)$",
+        "$chevron.l -infinity \";\" 1] union chevron.l 2 \";\" +infinity chevron.r$",
+        "$chevron.l +infinity \";\" 1] union chevron.l 1 \";\" +infinity chevron.r$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el número independiente del resto que se obtiene al dividir el polinomio:\n\n$P(x) = 10(x + 3)^25 + 9(x + 3)^26 - 8(x + 3)^7 + 2$\n\nEntre $d(x) = x^2 + 6x + 8$",
+      "alternatives": [
+        "15",
+        "16",
+        "18",
+        "17",
+        "19"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 8 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un carpintero construye una ventana, tal como muestra la figura, donde $overline(\"BC\") parallel overline(\"MN\") parallel overline(\"PQ\")$; las medidas están dadas en centímetros.\n\n¿Cuántos centímetros miden las divisiones, $overline(\"MN\")$ y $overline(\"PQ\")$ de la ventana respectivamente?",
+      "alternatives": [
+        "45 ; 12",
+        "45 ; 15",
+        "45 ; 13",
+        "45 ; 16",
+        "45 ; 14"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-11-uncp-2020-1-figures/geo-lot-11-uncp-2020-1-geo-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el campo de la Universidad Nacional del Centro del Perú, Amador se encuentra en el punto P y Luis en C; además se cumple que $(\"PD\")(\"BC\") + (\"PB\")(\"DC\") = 500 \"m\"^2$ y $overline(\"DB\")$ mide 25 metros.\n\n¿Qué distancia, en metros, existe entre Amador y Luis?",
+      "alternatives": [
+        "22",
+        "21",
+        "18",
+        "20",
+        "19"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-11-uncp-2020-1-figures/geo-lot-11-uncp-2020-1-geo-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $frac(1 - \"Sen\"^2 x + 1 - \"Cos\"^2 x, (1 - \"Cos\" x)(1 - \"Sen\" x)) = n^2$\n\nCalcula: $M = 1 - \"Sen\" x - \"Cos\" x$",
+      "alternatives": [
+        "$frac(sqrt(2), M)$",
+        "$frac(sqrt(2), n^2)$",
+        "$frac(sqrt(2), M + n)$",
+        "$frac(sqrt(2), n)$",
+        "$sqrt(2)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resuelva la ecuación trigonométrica:\n\n$6 \"Cos\"^2 x - 4 \"Sen\"^2 x . \"Cos\"^2 x = \"Sen\"^2 x$\n\nY determina la suma de las soluciones comprendidas en el intervalo $chevron.l 0 \";\" pi chevron.r$.",
+      "alternatives": [
+        "$6pi$",
+        "$5pi$",
+        "$4pi$",
+        "$pi$",
+        "$pi/2$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resuelva la ecuación trigonométrica:\n\n$3(\"Cos\"3x . \"Cos\"x + \"Sen\"3x . \"Sen\"3x) + \"Cos\"^2 3x - \"Sen\"^2 3x = 4\"Cos\"2x$\n\ny determine el número de soluciones comprendidos en $[0 \";\" pi/2]$",
+      "alternatives": [
+        "4",
+        "7",
+        "3",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el 4° grado del colegio \"Santa Isabel\" el promedio de notas de las 3 aulas son:\n\nHalla el promedio de notas del 4° grado del colegio \"Santa Isabel\".",
+      "alternatives": [
+        "11",
+        "13",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-11-uncp-2020-1-figures/est-lot-11-uncp-2020-1-est-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar el porcentaje de personas que tienen 3 mascotas.",
+      "alternatives": [
+        "17",
+        "19",
+        "18",
+        "21",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-11-uncp-2020-1-figures/est-lot-11-uncp-2020-1-est-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Gaudencio lanza una moneda y un dado normales. ¿Cuál es la probabilidad que el dado resulte un número mayor que cuatro y en la moneda salga un sello?",
+      "alternatives": [
+        "1/5",
+        "1/4",
+        "1/7",
+        "1/6",
+        "1/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Acentuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la cantidad de hiatos y diptongos en el enunciado: Paúl vende zanahorias con cuidado en la ciudad de Huachipa.",
+      "alternatives": [
+        "1 hiato - 3 diptongos",
+        "2 hiatos - 4 diptongos",
+        "1 hiato - 4 diptongos",
+        "3 hiatos - 3 diptongos",
+        "2 hiatos - 3 diptongos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la función del lenguaje en el siguiente caso:\n\nEl profesor explica sobre la delincuencia en Lima:\n\n– Los narcotrificantes, los falsificadores, los cleptómanos son delincunetes peligrosos.\n\nEl alumno pregunta:\n\n– Profesor, ¿qué signfica cleptómano?",
+      "alternatives": [
+        "Fática",
+        "Referencial",
+        "Emotiva",
+        "Metalingüística",
+        "Apelativa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A qué clases de verbos pertenecen las palabras subrayadas en el enunciado.\n\nJuana se tiñó con mucho cuidado, ella se protegió el cabelllo.",
+      "alternatives": [
+        "Defectiva – Terciopersonal",
+        "Reflexivo – Cuasirreflejo",
+        "Copulativo – Irregular",
+        "Defectivo – Intransitivo",
+        "Terciopersonal – No copulativo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica en la oración \"A\" e \"B\".\n\nAlberto escribió un poema para su enamorada.",
+      "alternatives": [
+        "Objeto directo + Objeto indirecto",
+        "Objeto directo + Núcleo del predicado",
+        "Objeto indirecto + Objeto directo",
+        "Núcleo del sujeto + Objeto directo",
+        "Modificador directo + Aposición"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la presión hidrostática en el fondo del recipiente. $(g = 10 \"m/s\"^2)$\n\n$rho_\"Aceite\" = 800 \"kg/m\"^3 \";\" rho_(\"H\"_2\"O\") = 10^3 \"kg/m\"^3$",
+      "alternatives": [
+        "44 kPa",
+        "43 kPa",
+        "45 kPa",
+        "42 kPa",
+        "46 kPa"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-11-uncp-2020-1-figures/fis-lot-11-uncp-2020-1-fis-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para el sistema de bloques mostrados, calcula la aceleración del sistema $(g = 10 \"m/s\"^2)$",
+      "alternatives": [
+        "3 $\"m/s\"^2$",
+        "2 $\"m/s\"^2$",
+        "1 $\"m/s\"^2$",
+        "4 $\"m/s\"^2$",
+        "5 $\"m/s\"^2$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-11-uncp-2020-1-figures/fis-lot-11-uncp-2020-1-fis-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 23 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor del bloque \"W\", para que el sistema se mantenga en equilibrio.\n\n$d = 1\"m\" \";\" q = 3Q \";\" K = 9 times 10^9 frac(\"N\" \"m\"^2, \"C\"^2)$",
+      "alternatives": [
+        "$9 times 10^12 Q^2$",
+        "$9 times 10^8 Q^2$",
+        "$9 times 10^16 Q^2$",
+        "$9 times 10^10 Q^2$",
+        "$9 times 10^11 Q^2$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-11-uncp-2020-1-figures/fis-lot-11-uncp-2020-1-fis-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al reaccionar hidrógeno con bromo en un reactor continuo, bajo ciertas condiciones de presión y temperatura se obtiene el ácido bromhídrico; la electronegatividad del H es 2,1 y del Br es 2,8. Este compuesto presenta:\n\nI. Enlace covalente no polar\n\nII. Enlace covalente polar\n\nIII. Enlace iónico",
+      "alternatives": [
+        "III",
+        "II",
+        "I",
+        "II y III",
+        "I y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De los siguientes enunciados, determina cuántos son falsos:\n\nI. El radio atómico del Na > Cs\n\nII. La electronegatividad del O > N\n\nIII. La afinidad electrónica del Cl < Mg\n\nIV. El radio atómico del S < Al\n\nV. La energía de ionización del K > Br",
+      "alternatives": [
+        "7",
+        "1",
+        "9",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona la especie vegetal en la ecorregión donde habita:\n\nI. Algarrobo\n\nII. Tarwi o choclo\n\nIII. Puya Raimondi\n\nIV. Tornillo\n\na. Puna y altos andes\n\nb. Bosque tropical amazónico\n\nc. Bosque seco ecuatorial\n\nd. Serranía esteparia",
+      "alternatives": [
+        "Ic – IIa – IIIb – IVd",
+        "Ic – IIa – IIId – IVb",
+        "Id – IIc – IIIa – IVb",
+        "Ic – IId – IIIa – IVb",
+        "Ib – IId – IIIa – IVc"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuáles son las actividades humanas que permiten la conservación de la biodiversidad?\n\nI. Tala indiscriminada\n\nII. Uso de bioinsecticidas\n\nIII. Introducción de nuevas especies\n\nIV. Uso racional y sostenible de la flora y fauna",
+      "alternatives": [
+        "I – II",
+        "III – IV",
+        "I – II",
+        "II – III",
+        "II – IV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona las lenguas originarias que se hablan con las zonas donde hablan:\n\nI. Wanka\n\nII. Chanca\n\nIII. Cauqui\n\na. Yauyos\n\nb. Huancayo\n\nc. Ayacucho",
+      "alternatives": [
+        "Ib – IIa – IIIc",
+        "Ia – IIb – IIIc",
+        "Ib – IIc – IIIa",
+        "Ia – IIc – IIIb",
+        "Ic – IIa – IIIb"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Cultura de prevención y vida saludable",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto:\n\nLa relación lejana y de poca confianza con los padres es ... que puede predisponer a la adicción.",
+      "alternatives": [
+        "una conducta de oportunidad",
+        "una conducta de riesgo",
+        "una situación de riesgo",
+        "un factor de oportunidad",
+        "un factor de riesgo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 30 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la clase de referencia textual teniendo en cuenta las palabras resaltadas.\n\nLos factores que influyen para que una región llueva poco o mucho, o acaso haga frío o calor, son *los siguientes:* la latitud, la altitud, la orientación del relieve y la distancia al mar.",
+      "alternatives": [
+        "Elipsis",
+        "Anáfora",
+        "Catáfora",
+        "Sustitución léxica",
+        "Deixis"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "LA INMUNODEFICIENCIA\n\nI. El mejor ejemplo es el síndrome de inmunodeficiencia adquirida, producido por el virus VIH.\n\nII. La inmunodeficiencia es la incapacidad del sistema inmunitario de atacar las infecciones microbianas.\n\nIII. La inmunodeficiencia provoca que las personas enfermen de los denominados sindrome de inmunodeficiencias.\n\nIV. Sus causas pueden ser diversas: trastornos genéticos, fallas en el normal desarrollo de los órganos linfoides o infecciones víricas.\n\nV. Estos síndromes o enfermedades pueden ser congénitos (si ya se nace con ellos) o adquiridos (se desarrollan a lo largo de la vida de la persona)",
+      "alternatives": [
+        "II – III – IV – V – I",
+        "I – II – IV – V – III",
+        "III – IV – II – V – I",
+        "II – IV – V – I – III",
+        "II – IV – III – V – I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica qué característica expresa la imagen presentada.",
+      "alternatives": [
+        "Monosemia",
+        "Iconocidad",
+        "Abstracción",
+        "Polisemia",
+        "Originalidad"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-11-uncp-2020-1-figures/com-lot-11-uncp-2020-1-com-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Según el texto identifica la intención del autor y el tipo de falacia:\n\nPor favor, señor policia, no me ponga papeleta. Es verdad que me pasé la luz roja, pero mi mamá está muy enferma y la estoy yendo a visitar al hospital. La pobre está grave y soy su único hijo. No sea malo, piense en su madre, usted también es hijo.",
+      "alternatives": [
+        "Informativa – Ad baculum",
+        "Informativa – Ad misericordiam",
+        "Estética – Ad misericordiam",
+        "Reflexiva – Ad hominem",
+        "Expresiva – Ad baculum"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la (s) imagen (es) que cumple (n) la función simbólica.",
+      "alternatives": [
+        "I – III",
+        "Solo II",
+        "II – III",
+        "I – II – III",
+        "Solo I"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-11-uncp-2020-1-figures/com-lot-11-uncp-2020-1-com-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la oración con la respuesta correcta:\n\nThe driver ........... when he had accident.",
+      "alternatives": [
+        "were texting",
+        "was texting",
+        "texts",
+        "is texting",
+        "exted"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 36 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Choose the sentence to describe the picture.",
+      "alternatives": [
+        "She had looked at the skirt while her mother bought it.",
+        "She had looked at the skirt before her mother bought it.",
+        "She looked at the skirt then her mother had bought it.",
+        "She looked at the skirt while her mother bought it.",
+        "She had looked at the skirt after her mother bought it."
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-11-uncp-2020-1-figures/ing-lot-11-uncp-2020-1-ing-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete the questions:\n\n........... water do you drink?\n\n........... bottles of water do you buy?\n\n............. bottled water do you drink?",
+      "alternatives": [
+        "How much – How many – How much",
+        "How much – How much – How much",
+        "How much – How many – How many",
+        "How many – How many – How many",
+        "How many – How much – How much"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres amigas Marlene, Abigail e Susana, donde una es soltera, otra es casada y la tercera es viuda (no necesariamente en ese orden).\n\nSe sabe que:\n\n– Susana es soltera.\n\n– La viuda y Marlene tienen ocupaciones diferentes.\n\nEntonces:",
+      "alternatives": [
+        "Marlene es viuda.",
+        "Abigail es soltera.",
+        "Marlene es soltera.",
+        "Abigail es viuda.",
+        "Susana es viuda."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente secuencia, determina la cantidad de puntos de intersección en la figura $F_50$.",
+      "alternatives": [
+        "2 551",
+        "2 549",
+        "2 547",
+        "2 449",
+        "2 548"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-11-uncp-2020-1-figures/rm-lot-11-uncp-2020-1-raz-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Amador es dueño de una librería y ha comprado cierto número de lapiceros por 200 soles. Si el precio de cada lapicero hubiese sido un sol menos Amador hubiera comprado 10 lapiceros más por el mismo dinero. ¿Cuántos lapiceros se compró?",
+      "alternatives": [
+        "37",
+        "39",
+        "38",
+        "40",
+        "41"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define el operador: $chevron.l y chevron.r$, en $QQ$, que es igual a \"x\", además se conoce que \"y\" es igual al quíntuplo de \"x\", aumentando en uno.\n\nCalcula: $4 chevron.l x chevron.r - chevron.l 4x chevron.r$",
+      "alternatives": [
+        "–2/3",
+        "4",
+        "1/4",
+        "3/2",
+        "–3/5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El nuevo logo de \"NEFLIX\" es:\n\nHalla el total de triángulos del logo.",
+      "alternatives": [
+        "22",
+        "24",
+        "26",
+        "25",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "lot-11-uncp-2020-1-figures/rm-lot-11-uncp-2020-1-raz-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En cierto periodo congresal conformado por un total de 130 congresistas, se supo que la cantidad representativa de las mujeres eran 15. Se desea saber que fracción del total de congresistas eran las no mujeres.",
+      "alternatives": [
+        "15/26",
+        "24/26",
+        "21/26",
+        "25/26",
+        "23/26"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un terreno rectangular se desea lotizar con el plano siguiente:\n\nHallar el total de lotes posibles de forma rectangular.",
+      "alternatives": [
+        "3",
+        "4",
+        "2",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-11-uncp-2020-1-figures/rm-lot-11-uncp-2020-1-raz-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indica en que vértice señalado, se debe empezar para pasar por todas las líneas una sola vez.",
+      "alternatives": [
+        "Vértice D",
+        "Vértice C",
+        "Vértice A",
+        "Vértice E",
+        "Vértice B"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-11-uncp-2020-1-figures/rm-lot-11-uncp-2020-1-raz-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular \"x\" en:",
+      "alternatives": [
+        "20",
+        "19",
+        "17",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-11-uncp-2020-1-figures/rm-lot-11-uncp-2020-1-raz-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 47 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de cifras del número de falta:",
+      "alternatives": [
+        "9",
+        "10",
+        "13",
+        "12",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-11-uncp-2020-1-figures/rm-lot-11-uncp-2020-1-raz-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 49 (clave C)"
+    }
+  ]
 }
