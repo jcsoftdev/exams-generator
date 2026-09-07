@@ -174,3 +174,65 @@ describe("planImageLotRestructure", () => {
     expect(result.kind === "structured" && result.entry.alternativeImagePaths).toBeUndefined();
   });
 });
+
+/**
+ * The harvest never read these questions: for a baked image it knew only the
+ * exam's section heading ("Álgebra"), so the topic under it was a guess. That
+ * is why Álgebra > Polinomios ended up holding a market word problem, an
+ * expected-value question and an inscribed circle.
+ *
+ * The reader IS looking at the statement, so the same pass that writes the text
+ * can correct the filing. The lot's own labels stay the default: a transcription
+ * that says nothing about the topic changes nothing.
+ */
+describe("planImageLotRestructure: re-filing", () => {
+  const entry = {
+    courseName: "Álgebra",
+    topicName: "Polinomios",
+    gradeLevel: "pre",
+    difficulty: "hard",
+    correctAnswer: "a",
+    sourceName: "lote, pregunta 66",
+  } as unknown as Parameters<typeof planImageLotRestructure>[0]["entry"];
+
+  const extracted = {
+    bodyTypst: "Una ama de casa va al mercado y observa que...",
+    alternatives: ["12", "11", "16", "10", "14"],
+  };
+
+  it("files the question where the reader says it belongs", () => {
+    const outcome = planImageLotRestructure({
+      entry,
+      extracted: {
+        ...extracted,
+        courseName: "Razonamiento Matemático",
+        topicName: "Planteo de Ecuaciones",
+      },
+    });
+
+    expect(outcome.kind).toBe("structured");
+    if (outcome.kind !== "structured") return;
+    expect(outcome.entry.courseName).toBe("Razonamiento Matemático");
+    expect(outcome.entry.topicName).toBe("Planteo de Ecuaciones");
+  });
+
+  it("keeps the lot's own filing when the reader proposes none", () => {
+    const outcome = planImageLotRestructure({ entry, extracted });
+
+    expect(outcome.kind).toBe("structured");
+    if (outcome.kind !== "structured") return;
+    expect(outcome.entry.courseName).toBe("Álgebra");
+    expect(outcome.entry.topicName).toBe("Polinomios");
+  });
+
+  // Half a move is worse than none: a course with the other's topic under it is
+  // a pair the seeder cannot resolve, and it would fail the whole entry.
+  it("refuses a half-move that names only one of the two", () => {
+    expect(() =>
+      planImageLotRestructure({
+        entry,
+        extracted: { ...extracted, topicName: "Planteo de Ecuaciones" },
+      }),
+    ).toThrow(/courseName y topicName/);
+  });
+});

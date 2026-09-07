@@ -24,6 +24,22 @@ export interface ExtractedQuestion {
   /** One narrowed image per alternative slot, `null` where the option is text. */
   readonly alternativeImagePaths?: readonly (string | null)[];
   readonly correctAnswer?: string;
+  /**
+   * Where the reader says this question actually belongs, when the lot's own
+   * label is wrong.
+   *
+   * The harvest never read these questions: for a baked image it knew only the
+   * exam's section heading, so the topic under it was a guess. Álgebra >
+   * Polinomios ended up holding a market word problem, an expected-value
+   * question and an inscribed circle. The reader IS looking at the statement,
+   * so the pass that writes the text is the cheapest place to correct the
+   * filing — and the only one where somebody has the question in front of them.
+   *
+   * Both or neither: a course carrying the other's topic is a pair the seeder
+   * cannot resolve.
+   */
+  readonly courseName?: string;
+  readonly topicName?: string;
 }
 
 export interface PlanImageLotRestructureInput {
@@ -75,6 +91,15 @@ export function planImageLotRestructure(input: PlanImageLotRestructureInput): Im
     return { kind: "keep-image", reason: "extraction failed" };
   }
 
+  // Half a move is worse than none: it would file the question under a
+  // (course, topic) pair that exists in neither taxonomy, and the seeder
+  // resolves that pair as a unit.
+  if (Boolean(extracted.courseName) !== Boolean(extracted.topicName)) {
+    throw new Error(
+      `${entry.sourceName}: para re-archivar hacen falta courseName y topicName juntos, no uno solo.`,
+    );
+  }
+
   let correctAnswer: string;
   try {
     correctAnswer = correctAnswerLetterToIndex(entry.correctAnswer);
@@ -118,8 +143,8 @@ export function planImageLotRestructure(input: PlanImageLotRestructureInput): Im
   return {
     kind: "structured",
     entry: {
-      courseName: entry.courseName,
-      topicName: entry.topicName,
+      courseName: extracted.courseName ?? entry.courseName,
+      topicName: extracted.topicName ?? entry.topicName,
       gradeLevel: entry.gradeLevel,
       difficulty: entry.difficulty,
       bodyTypst,

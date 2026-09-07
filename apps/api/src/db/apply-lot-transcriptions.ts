@@ -49,6 +49,13 @@ export interface LotTranscription {
    * of the source's lowercase lettering.
    */
   readonly alternativeCrops?: readonly (FigureCropBox | null)[];
+  /**
+   * Where the reader says this question belongs, when the lot's own label is
+   * wrong. Both or neither — see `ExtractedQuestion`. Omitted, the lot's own
+   * course and topic stand.
+   */
+  readonly courseName?: string;
+  readonly topicName?: string;
   /** Why this crop cannot become text — set instead of the fields above. */
   readonly unreadable?: string;
 }
@@ -195,6 +202,8 @@ export function applyLotTranscriptions(input: ApplyLotTranscriptionsInput): Appl
         ...(transcription.figureCode ? { figureCode: transcription.figureCode } : {}),
         ...(target ? { figureImagePath: target } : {}),
         ...(alternativeImagePaths ? { alternativeImagePaths } : {}),
+        ...(transcription.courseName ? { courseName: transcription.courseName } : {}),
+        ...(transcription.topicName ? { topicName: transcription.topicName } : {}),
       },
     });
 

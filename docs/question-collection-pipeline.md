@@ -348,3 +348,34 @@ No hay paso manual. `seed()` corre `seedLotQuestions` y enseguida
 y le pasa sus referencias de examen a la fila de texto. Es idempotente, así que
 en régimen son dos selects y ninguna escritura. Un lote restructurado llega a
 producción con un deploy común.
+
+### Re-archivar mientras se transcribe
+
+La cosecha nunca leyó estas preguntas: de una imagen horneada solo conocía el
+encabezado de sección del examen ("Álgebra"), así que el tema debajo es una
+adivinanza. Por eso Álgebra > Polinomios terminó guardando un problema de
+mercado, una esperanza matemática y una circunferencia inscrita.
+
+El que transcribe SÍ tiene el enunciado delante, así que es el único momento
+barato para corregirlo. Una transcripción puede traer `courseName` y `topicName`
+propios y la entrada se archiva ahí:
+
+```json
+{
+  "imagePath": "lot-6-...-image/alg-2026-2-a2-alg-66.png",
+  "bodyTypst": "Una ama de casa va al mercado y observa que...",
+  "alternatives": ["12", "11", "16", "10", "14"],
+  "courseName": "Razonamiento Matemático",
+  "topicName": "Planteo de Ecuaciones"
+}
+```
+
+Reglas:
+
+- **Los dos o ninguno.** Un curso con el tema del otro es un par que el seeder
+  no puede resolver, y `planImageLotRestructure` lo rechaza.
+- **El par tiene que existir en `canonical-taxonomy.json`.** `validate_lots.py`
+  lo comprueba después de aplicar, pero llegar ahí con un par inventado obliga a
+  rehacer el lote.
+- **Omitirlos deja el archivado del lote como está.** Solo hay que moverla
+  cuando el tema es claramente otro, no para afinar entre dos temas defendibles.
