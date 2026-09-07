@@ -1,0 +1,1197 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Don José dejó 11400 millones de soles como herencia a sus cuatro hijos: Ricardo, Néstor, Orlando y Víctor, para repartirlos en forma inversamente proporcional a las raíces cuadradas de los números 63, 112, 175 y 252 respectivamente. ¿Cuánto será la herencia que recibirá Víctor?",
+      "alternatives": [
+        "2 500 millones",
+        "2 000 millones",
+        "2 400 millones",
+        "3 000 millones",
+        "1 800 millones"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De los 720 primeros números naturales, ¿cuántos múltiplos de 3 existen que no son múltiplos de 6 ni tampoco de 9?",
+      "alternatives": [
+        "90",
+        "80",
+        "160",
+        "70",
+        "120"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cueva, Carrillo y Lapadula ejecutan un penal, las probabilidades que tienen para hacer el gol son: 1/3 ; 1/2 ; y 1/4 respectivamente. ¿Cuál es la probabilidad de que al menos uno de ellos haga el gol?",
+      "alternatives": [
+        "1/4",
+        "1/2",
+        "2/3",
+        "3/4",
+        "1/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule la suma de los 20 primeros términos de la sucesión 3; 4; 7; 12; ... e indique la suma de sus cifras:",
+      "alternatives": [
+        "9",
+        "12",
+        "10",
+        "11",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un aula de 35 estudiantes, algunos desarrollaron los exámenes de aritmética o geometría. Se sabe que 7 hombres aprobaron aritmética, 6 hombres aprobaron geometría, 5 hombres y 8 mujeres no aprobaron los dos cursos, hay 16 hombres en total, 5 alumnos aprobaron ambos cursos y 11 alumnos aprobaron aritmética. ¿Cuántas mujeres aprobaron geometría?",
+      "alternatives": [
+        "4",
+        "5",
+        "2",
+        "3",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el término del lugar $overline(\"ba\")$, de la siguiente progresión aritmética: $overline(\"a8b\")$; $overline(\"a93\")$; $overline(\"b04\")$; $overline(\"ba5\")$, ...",
+      "alternatives": [
+        "292",
+        "402",
+        "432",
+        "420",
+        "392"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De la tabla de distribución de frecuencias, calcule la varianza:\n\n#align(center, table(columns: 2, align: center + horizon, inset: 6pt, stroke: 0.6pt,\n  [$x_i$], [$f_i$],\n  [17], [5],\n  [19], [7],\n  [21], [12],\n  [22], [20],\n  [24], [16],\n))",
+      "alternatives": [
+        "3,25",
+        "4,55",
+        "4,21",
+        "5,32",
+        "5,24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define $p * q equiv tilde (p arrow.r tilde q)$ si la proposición $[(r * p) * tilde q] arrow.r {[(r * p) * tilde q] arrow.r q}$ es falsa, calcule los valores de verdad de p, q y r en ese orden.",
+      "alternatives": [
+        "FFF",
+        "VFV",
+        "VVF",
+        "VVV",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si R es la región determinada por: $cases(x + y <= 8, x + 3y <= 12, x >= 0, y >= 0)$ Halle el área de R.",
+      "alternatives": [
+        "48 $\"u\"^2$",
+        "32 $\"u\"^2$",
+        "30 $\"u\"^2$",
+        "24 $\"u\"^2$",
+        "20 $\"u\"^2$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la inecuación $x/(x+1) < sqrt(x), quad x > 0$, halle el complemento del conjunto solución:",
+      "alternatives": [
+        "$chevron.l 2,0 chevron.r$",
+        "$RR$",
+        "$chevron.l 0, infinity chevron.r$",
+        "$chevron.l -infinity, 0]$",
+        "$[0, infinity chevron.r$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 10 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El número de factores primos racionales que tiene el polinomio $P(x,y) = x^32 - y^32$, es:",
+      "alternatives": [
+        "16",
+        "32",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la suma de las soluciones de la siguiente ecuación: $4^(x+1) + 2 = 2^x (9)$",
+      "alternatives": [
+        "-2",
+        "3",
+        "0",
+        "1",
+        "-1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, un hombre sostiene un peso con el brazo extendido, sin considerar el peso del brazo; la relación del momento alrededor de la articulación del codo al momento alrededor de la articulación del hombro es:",
+      "alternatives": [
+        "28/58",
+        "25/29",
+        "15/29",
+        "30/28",
+        "25/28"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-18-unac-2022-ii-figures/scan-18-unac-2022-ii-q13.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo cumple un M.A.S. de amplitud 13 cm. Si su aceleración máxima es 60 $\"cm\"\\/\"s\"^2$ y su velocidad máxima es 30 cm/s. ¿A qué distancia de la posición de equilibrio su velocidad es 24 cm/s?",
+      "alternatives": [
+        "5 \"cm\"",
+        "6 \"cm\"",
+        "7 \"cm\"",
+        "4 \"cm\"",
+        "8 \"cm\""
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 14 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes afirmaciones, respecto al movimiento de rotación uniforme que realiza un disco:\n\nI. La aceleración angular se mide en $\"m\"\\/\"s\"^2$.\n\nII. La aceleración angular es nula.\n\nIII. La velocidad angular es la misma para todos los puntos del disco.\n\n¿Cuáles son verdaderas?",
+      "alternatives": [
+        "Solo II",
+        "Solo III",
+        "II y III",
+        "I y III",
+        "Solo I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un sistema de cargas eléctricas está formada por dos esferas metálicas, cada una de ellas con carga neta cero. Una carga Q se extrae de una de ellas y se transfiere a la otra, entonces la carga neta en esta última será:",
+      "alternatives": [
+        "-2Q",
+        "0",
+        "2Q",
+        "-Q",
+        "Q"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la masa máxima de sulfato de bario $(\"BaSO\"_4)$, que se puede extraer, a partir de 5L de una solución acuosa, cuya concentración en iones $\"Ba\"^(+2)$ es 0,02M. P.A(uma): Ba=137; S=32; O=16",
+      "alternatives": [
+        "35g",
+        "35g",
+        "70g",
+        "46,6g",
+        "23,3g"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un elemento tiene una configuración electrónica $[\"Ne\"]3s^1$. Identifique las alternativas correctas:\n\n1) Es un elemento representativo.\n\n2) Pertenece al grupo de metales alcalinotérreos.\n\n3) Pertenece al grupo de metales alcalinos.\n\n4) Es un elemento de transición.",
+      "alternatives": [
+        "2 y 4",
+        "1 y 4",
+        "1 y 3",
+        "3 y 2",
+        "1 y 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En muchas áreas urbanas se observa una atmósfera gris; debido principalmente a la alta reactividad del Ozono; esto se denomina:",
+      "alternatives": [
+        "Calentamiento Global",
+        "Eutrofización",
+        "Disminución del Ozono",
+        "Lluvia ácida",
+        "Smog Fotoquímico"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el siguiente compuesto, indique el número de enlaces sigma y pi:",
+      "alternatives": [
+        "18$sigma$, 4$pi$",
+        "26$sigma$, 4$pi$",
+        "30$sigma$, 4$pi$",
+        "20$sigma$, 4$pi$",
+        "20$sigma$, 3$pi$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-18-unac-2022-ii-figures/scan-18-unac-2022-ii-q20.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Proceso mediante el cual una célula elabora una copia de ARN de una pieza de ADN, se denomina:",
+      "alternatives": [
+        "Traducción",
+        "Transducción",
+        "Transcripción",
+        "Transformación",
+        "Replicación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la cavidad bucal, la saliva se combina con los almidones, esta contiene una enzima que inicia la digestión, se refiere a:",
+      "alternatives": [
+        "lisozima",
+        "ptialina",
+        "proteasa",
+        "tripsina",
+        "pepsina"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué estructura interviene directamente en el mantenimiento de la postura y el equilibrio corporal?",
+      "alternatives": [
+        "el cerebelo",
+        "el hipotálamo",
+        "el bulbo raquídeo",
+        "el cerebro",
+        "la médula espinal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 23 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La relación interespecífica que existe entre las plantas gramíneas y las bacterias gram negativas del género Rhizobium se denomina \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "Amensalismo",
+        "Neutralismo",
+        "Mutualismo",
+        "Parasitismo",
+        "Cooperación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Acentuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "\"Raúl, sabía que tenía que tomar un vehículo lo más pronto posible, para ir a coordinar sobre su exposición de historia en aquel centro de adiestramiento militar\". ¿Cuántos hiatos acentuales existe?",
+      "alternatives": [
+        "Cinco",
+        "Seis",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "El dialecto se da exclusivamente en el plano léxico.",
+        "En el Perú, el ashaninka no es una lengua.",
+        "El castellano y el shipibo son las únicas lenguas oficiales del Perú.",
+        "El quechua y el aymara son lenguas romances.",
+        "El bora y el huitoto son lenguas amerindias amazónicas."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Ortografía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de las alternativas es correcta, respecto al uso de las mayúsculas?",
+      "alternatives": [
+        "¿Cuándo privatizaron Sedapal?",
+        "El dr. Gutierrez presidirá las actividades académicas.",
+        "Paco yunque es un cuento de tipo infantil.",
+        "Fiestas patrias se acerca, me iré de vacaciones.",
+        "En enero, visitaré el parque de las aguas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La comunicación humana se diferencia de la no humana, debido a que es un proceso de reflexión consciente, racional que emplea signos convencionales; sin embargo, existe similitudes entre ellas, ¿cuál sería la semejanza?",
+      "alternatives": [
+        "La comunicación se da a través del uso de las palabras.",
+        "Prima la descomposición del código en unidades mínimas.",
+        "Se realiza de manera instintiva y espontánea.",
+        "Comprende la producción y la recepción de señales asociadas al cerebro.",
+        "El uso de signos convencionales y lingüísticos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los elementos que forman parte de la estructura silábica son:",
+      "alternatives": [
+        "cima, cabeza y rima",
+        "coda, cima y rima",
+        "cima, cabeza y ritmo",
+        "cabeza, coda y ritmo",
+        "cabeza, cima y coda"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántas preposiciones encontramos en el siguiente fragmento? \"Desde lo lejos, en el campo, hay una cascada que emana agua entre dos arboledas. Desvío la mirada hacia otro lado, hasta ver el arcoíris que forman el Sol y la cascada, para quedarme observándolo por unos segundos\".",
+      "alternatives": [
+        "Seis",
+        "Cinco",
+        "Siete",
+        "Diez",
+        "Ocho"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Géneros y especies literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Está constituido por la narración oral o escrita de hechos grandiosos, donde los personajes realizan hazañas heroicas y presentan poderes sobrehumanos. ¿A qué género literario hace referencia?",
+      "alternatives": [
+        "Dramático",
+        "Narrativo",
+        "Épico",
+        "Teatro",
+        "Lírico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Figuras literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la figura literaria que se presenta en los siguientes versos, pertenecientes a Manuel Machado: \"Crece el fuego con el viento; con la noche, el padecer; con el recuerdo, la pena, con los celos, el querer\".",
+      "alternatives": [
+        "Elipsis",
+        "Hipérbaton",
+        "Símil",
+        "Hipérbole",
+        "Metáfora"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es considerado como el máximo exponente de la tragedia griega, quien incorporó el tercer actor (triagonista) en la escena:",
+      "alternatives": [
+        "Hesiodo",
+        "Homero",
+        "Sófocles",
+        "Virgilio",
+        "Esquilo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan Ramón Jiménez, quien ganó el premio Nobel en 1956, escribió \\_\\_\\_\\_\\_\\_, obra representativa en su carrera.",
+      "alternatives": [
+        "Los pueblos",
+        "La ruta de Don Quijote",
+        "Platero y yo",
+        "Proverbios y cantares",
+        "Diario de un poeta recién casado"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 34 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Félix Lope de Vega recibió el apelativo de \\_\\_\\_\\_\\_\\_\\_ por parte de Miguel de Cervantes Saavedra.",
+      "alternatives": [
+        "El manco de Lepanto",
+        "El Fénix de los ingenios",
+        "El americano",
+        "El monstruo de la naturaleza",
+        "El cisne de Avon"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los textos \\_\\_\\_\\_\\_\\_\\_ son aquellos que expresan la realidad y sus propósitos comunicativos son informar, persuadir, instruir, etc.",
+      "alternatives": [
+        "No literarios",
+        "Críticos",
+        "Persuasivos",
+        "Expositivos",
+        "Literarios"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Ecosistemas y ecorregiones del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Está ubicada entre 400 y 1000 msnm, su clima es cálido y muy húmedo con lluvias abundantes entre diciembre y marzo, muy caluroso por las mañanas y con noches frescas. En esta zona se ubican las ciudades de Moyobamba y Tingo María. ¿Cómo se denomina esta región?",
+      "alternatives": [
+        "Chala",
+        "Rupa Rupa",
+        "Omagua",
+        "Yunga",
+        "Janca"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gas natural constituido por metano y butano, actualmente se usa en las actividades industriales del parque automotor y uso doméstico, uno de los principales yacimientos ubicados en Sepahua, se encuentra en el departamento de:",
+      "alternatives": [
+        "Cuzco",
+        "Madre de Dios",
+        "Ayacucho",
+        "Ucayali",
+        "Huancavelica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Nuestro mar es uno de los más ricos del mundo, se debe a la corriente marina de aguas frías, conocida como corriente marina de Humboldt. Sin embargo, esta no es la única consecuencia que nos da esta corriente. Señale la causa de esta corriente marina:",
+      "alternatives": [
+        "Aparición del fenómeno de El Niño",
+        "Las fuertes lluvias estacionales en el Norte del País",
+        "La sequedad costera y escasas lluvias",
+        "La emigración de la anchoveta",
+        "La aparición cada cierto tiempo de aguas cálidas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geomorfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los tablazos son áreas costeñas inestables, debido a que se encuentran en proceso de elevación desde los fondos marinos. El tablazo ubicado en Piura es:",
+      "alternatives": [
+        "Chilca",
+        "Bayóvar",
+        "Lachay",
+        "Salinas",
+        "Restín"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dentro de la parte de la geografía humana, \"El estudio de las causas de la distribución de las actividades económicas, que los humanos llevan a cabo para satisfacer sus necesidades\". Corresponde a la:",
+      "alternatives": [
+        "Geografía política",
+        "Geomorfología",
+        "Geografía económica",
+        "Biogeografía",
+        "Geografía de la población"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Climas y biomas del mundo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete la siguiente frase: \"La corriente marina de El Niño es la aparición de corrientes oceánicas cálidas en las costas de América, el fenómeno se origina en el Océano Pacífico Tropical, cerca de \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ e \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ y con el se altera la presión atmosférica\".",
+      "alternatives": [
+        "Golfo de México - Guatemala",
+        "Japón - Trinidad y Tobago",
+        "Nueva Zelandia - Nueva Guinea",
+        "Sri Lanka - Singapur",
+        "Australia - Indonesia"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Nociones generales de economía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuando una economía utiliza al máximo sus recursos disponibles para producir los bienes necesarios, existe \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "recursos más utilizados",
+        "una disminución de la capacidad de producción",
+        "pleno empleo de recursos",
+        "escasez de factores productivos",
+        "trabajadores altamente capacitados"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Supongamos la existencia de una sola empresa que compra leche a todos los ganaderos de Cajamarca, esta comienza a ejercer un control de los precios en el mercado y en las cantidades demandadas. ¿A qué tipo de mercado corresponde?",
+      "alternatives": [
+        "Monopolio",
+        "Competencia monopolística",
+        "Monopsonio",
+        "Oligopsonio",
+        "Oligopolio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Integración económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El ascenso del Sur está cambiando radicalmente el mundo del siglo XXI, con naciones en desarrollo que impulsan el crecimiento económico, sacan a millones de personas de la pobreza y conducen a otros miles de millones hacia una nueva clase media mundial, consigna el Informe sobre Desarrollo Humano 2013 del Programa de las Naciones Unidas; entre ellos los denominados BRICS. ¿A cuál de los siguientes grupos de países se hace referencia?",
+      "alternatives": [
+        "Bulgaria, Ruanda, Indonesia, China y Suiza",
+        "Bélgica, Rumania, India, Canadá y Sudáfrica",
+        "Brasil, Rusia, India, China y Sudáfrica",
+        "Bolivia, Rumania, Indonesia, Colombia y Sri Lanka",
+        "Bélgica, Rumania, India, Canadá y Perú"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 45 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el indicador al que hace referencia, cuando las organizaciones internacionales como las Naciones Unidas, evalúa un país a través de sus oportunidades humanas, como esperanza de vida, nivel educativo y PBI percápita?",
+      "alternatives": [
+        "Ingreso nacional",
+        "Necesidades básicas satisfechas",
+        "Índice de desarrollo humano",
+        "Nivel de vida",
+        "Índice de pobreza"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es el conjunto de acciones encaminadas a lograr la máxima racionalidad en el proceso de decisión relativo a la conservación, defensa, protección y mejora del medioambiente, basándose en una información coordinada, multidisciplinaria y en la participación de los ciudadanos, siempre que sea posible. Señale el concepto adecuado:",
+      "alternatives": [
+        "Impacto ambiental",
+        "Gestión ambiental",
+        "Riesgo ambiental",
+        "Calidad ambiental",
+        "Calidad de vida"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el mercado de factores las empresas:",
+      "alternatives": [
+        "adquieren bienes y servicios",
+        "demandan factores productivos",
+        "ofertan factores productivos",
+        "ofertan bienes y servicios",
+        "pagan por los bienes y servicios"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Civilizaciones antiguas de Oriente",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La cultura Mesopotamia aprovechó las aguas de dos ríos, Tigris y Éufrates, de la misma manera lo hicieron los egipcios, ¿cómo se llama al río sagrado de Egipto?",
+      "alternatives": [
+        "Azul",
+        "Éufrates",
+        "Ganges",
+        "Nilo",
+        "Jordán"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 49 (clave D)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La Primera Constitución del Perú fue promulgada en 1823, con el primer golpe de Estado a cargo de Riva Agüero. ¿Cuál fue la medida importante que tomó este presidente?",
+      "alternatives": [
+        "Organizar la creación de un hospital militar",
+        "Culminar la Biblioteca Nacional",
+        "Culminar el préstamo con los ingleses",
+        "Organizo la campaña de puertos intermedios",
+        "Reclutar esclavos para liberarlos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Periodo de entreguerras y guerras mundiales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La Segunda Guerra Mundial tuvo variadas consecuencias y efectos, y culminó con un reordenamiento jurídico internacional de todos los países. Corresponde a ello la conformación de la \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "OTAN",
+        "UNESCO",
+        "ONU",
+        "OEA",
+        "CEPAL"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Edad Moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El Humanismo como movimiento intelectual revalorizó al ser humano, entre sus principales exponentes tenemos a \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ quien criticó al catolicismo medieval.",
+      "alternatives": [
+        "Tomás Moro",
+        "Erasmo de Rotterdam",
+        "Francisco Petrarca",
+        "Boccaccio",
+        "Maquiavelo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 52 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Poblamiento americano y culturas preincaicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las culturas más representativas de la costa del intermedio tardío, comercializaron principalmente:",
+      "alternatives": [
+        "piedras preciosas",
+        "spondylus",
+        "cerámica",
+        "lana",
+        "metales"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 53 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Revoluciones burguesas y Revolución Francesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Napoleón inicia su expansión con el combate de \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ y la culmina con la batalla de \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "Ulm - Vitoria",
+        "Waterloo - Bailén",
+        "Leipzig - Trafalgar",
+        "Austerlitz - Jena",
+        "Trafalgar - Waterloo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 54 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El área de la región sombreada es $(10\\/3) \"m\"^2$. Halle el área del cuadrado, en $\"m\"^2$.",
+      "alternatives": [
+        "$(11/3)$",
+        "$(10/3)^2$",
+        "$25/3$",
+        "$(11/3)^2$",
+        "$(8/3)^2$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-18-unac-2022-ii-figures/scan-18-unac-2022-ii-q55.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 55 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Doblamos una esquina de un cuadrado y hacemos que el vértice coincida con el centro del cuadrado, se forma un pentágono irregular. Si las áreas del pentágono y del cuadrado inicial son números enteros consecutivos, ¿cuánto mide el lado del cuadrado?",
+      "alternatives": [
+        "$3 sqrt(2)$ u",
+        "$2 sqrt(2)$ u",
+        "2 u",
+        "$sqrt(2)$ u",
+        "$(sqrt(2)/2)$ u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 56 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle b - a si: $(underbrace(1 times 3 times 5 times 7 times dots.h, 999^8 quad \"factores\"))^8 = overline(\"...ab\")$",
+      "alternatives": [
+        "4",
+        "5",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 57 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tenemos 4 cajas y 4 objetos; una llave, una moneda, un dado y una canica. Cada caja contiene un objeto. Se sabe que:\n\n1) La caja verde está a la izquierda de la caja azul.\n\n2) La moneda está a la izquierda de la canica.\n\n3) La caja roja está a la derecha del dado.\n\n4) La canica está a la derecha de la caja roja.\n\n5) La caja marrón está a la derecha de las otras tres cajas.\n\n6) La llave no está en la caja roja ni en la azul.\n\n¿En qué caja está la moneda?",
+      "alternatives": [
+        "En la caja roja",
+        "En la caja verde o en la caja marrón",
+        "En la caja marrón",
+        "En la caja verde",
+        "En la caja azul"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 58 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la puntuación final de una competencia atlética se pudo observar que Rosa tiene menor puntaje que María, Natalia menos puntaje que Carla, Nora el mismo puntaje que Susana, Rosa más que Sonia, Natalia el mismo puntaje que María y Nora más que Carla. ¿Quién ocupó el cuarto lugar?",
+      "alternatives": [
+        "Carla",
+        "Rosa",
+        "Natalia",
+        "Susana",
+        "Nora"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 59 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A una hoja cuadrada se le cuadrícula, utilizando \"n\" cuadraditos por cada lado, luego se traza una diagonal obteniéndose 4422 triángulos. Halle el número de cuadraditos utilizados en cada lado.",
+      "alternatives": [
+        "56",
+        "66",
+        "65",
+        "75",
+        "77"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 60 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEs muy molesto escuchar un teléfono celular en el cine o en el teatro, y la molestia es mayor si se está en un sepelio. Durante el entierro de una anciana de 92 años en el cementerio Yarkon de Tel Aviv, Israel, se escuchó el sonido característico de un celular; minutos después, se descubrió que tenía su origen cerca del ataúd de la difunta. El volumen era tan alto que los invitados lo seguían escuchando cuando la anciana ya estaba bajo la lápida. Después se supo que el aparato pertenecía a uno de los dolientes y que cayó a la fosa cuando este se inclinó para despedir a la anciana con un puñado de tierra.\n\nLa lectura podría considerarse como una:",
+      "alternatives": [
+        "semblanza",
+        "crónica",
+        "anécdota",
+        "historia",
+        "vivencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEs muy molesto escuchar un teléfono celular en el cine o en el teatro, y la molestia es mayor si se está en un sepelio. Durante el entierro de una anciana de 92 años en el cementerio Yarkon de Tel Aviv, Israel, se escuchó el sonido característico de un celular; minutos después, se descubrió que tenía su origen cerca del ataúd de la difunta. El volumen era tan alto que los invitados lo seguían escuchando cuando la anciana ya estaba bajo la lápida. Después se supo que el aparato pertenecía a uno de los dolientes y que cayó a la fosa cuando este se inclinó para despedir a la anciana con un puñado de tierra.\n\nLa palabra DOLIENTE, puede ser reemplazada por:",
+      "alternatives": [
+        "invitado",
+        "deudo",
+        "devota",
+        "difunto",
+        "damnificado"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 62 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO\n\nEs muy molesto escuchar un teléfono celular en el cine o en el teatro, y la molestia es mayor si se está en un sepelio. Durante el entierro de una anciana de 92 años en el cementerio Yarkon de Tel Aviv, Israel, se escuchó el sonido característico de un celular; minutos después, se descubrió que tenía su origen cerca del ataúd de la difunta. El volumen era tan alto que los invitados lo seguían escuchando cuando la anciana ya estaba bajo la lápida. Después se supo que el aparato pertenecía a uno de los dolientes y que cayó a la fosa cuando este se inclinó para despedir a la anciana con un puñado de tierra.\n\nSe infiere del texto, que el sonido del celular siempre causará molestia:",
+      "alternatives": [
+        "cuando se dé en un lugar o situación inusual.",
+        "en todo lugar público.",
+        "mientras uno se encuentra en un entierro.",
+        "en una sala de cine.",
+        "durante una función teatral."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 63 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El estrés, a corto plazo, no es \\_\\_\\_\\_\\_\\_\\_\\_\\_ porque en realidad nos permite \\_\\_\\_\\_\\_\\_\\_\\_\\_ del peligro; pero si esta situación \\_\\_\\_\\_\\_\\_\\_\\_\\_, la fatiga resultante será nociva para la salud general del individuo.",
+      "alternatives": [
+        "perjudicial - defendernos - desiste",
+        "dañino - protegernos - abandona",
+        "malo - salvaguardarnos - resiste",
+        "dañino - defendernos - persiste",
+        "dañino - auxiliarnos - cede"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 64 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TORBELLINO : VIENTO",
+      "alternatives": [
+        "Vorágine : agua",
+        "Marea : brisa",
+        "Tornado : huracán",
+        "Tromba : lluvia",
+        "Vaguada : temporada"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 65 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Bases biológicas de la conducta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si afirmamos que los lóbulos frontales representan un sistema de planeación, regulación y control de los procesos psicológicos (Luria, 1986). ¿Este punto de vista a que alternativa corresponde?",
+      "alternatives": [
+        "Antropológico",
+        "Patológico",
+        "Neurológico",
+        "Neuropsicológico",
+        "Médico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 66 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Identidad y patrimonio nacional",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La grandeza del Imperio Incaico, no solamente radicó en su poderío militar, su organización social y la buena administración política, radicó sobre todo en los principios morales que le dieron cohesión a una sociedad ordenada y orientada en valores, como el trabajo. Por ejemplo, las palabras quechuas AMA QUELLA significan no seas ...",
+      "alternatives": [
+        "mentiroso",
+        "malo",
+        "infiel",
+        "ocioso",
+        "ladrón"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 67 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si establecemos en una pirámide, la jerarquía de las normas jurídicas en el Perú. ¿Qué norma jurídica ocupa la cúspide?",
+      "alternatives": [
+        "La Ley",
+        "El Decreto Supremo",
+        "El Decreto Legislativo",
+        "Los Tratados Internacionales",
+        "La Constitución Política del Perú"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 68 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique el factor físico, que ha influido en la diversidad cultural del Perú.",
+      "alternatives": [
+        "Las tradiciones",
+        "La diversidad geográfica",
+        "Las costumbres",
+        "Las creencias",
+        "La historia"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 69 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Miguel, al igual que todos sus compañeros, usan muchos artefactos y materiales para terminar sus tareas escolares a tiempo, generando tantos desechos que no les alcanza espacio para almacenarlos y reciclarlos, por lo que deciden enterrarlos. Con esta acción, ¿qué tipo de espacio generan?",
+      "alternatives": [
+        "Devolución de minerales a la tierra",
+        "Restauración del orden en la basura",
+        "Relleno sanitario",
+        "Centro de acopio",
+        "Reciclaje forzado"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 70 (clave C)"
+    }
+  ]
+}

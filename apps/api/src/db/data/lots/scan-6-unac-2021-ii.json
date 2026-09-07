@@ -1,0 +1,1190 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De los residentes de un barrio chalaco, se sabe que:\n\n- 29 trabajan y 56 son mujeres\n\n- De las mujeres, 15 estudian, 5 estudian y trabajan.\n\n- De los varones, 30 trabajan o estudian y 21 no trabajan ni estudian.\n\nSi 36 varones no trabajan, halle el número de mujeres que no trabajan ni estudian.",
+      "alternatives": [
+        "30",
+        "29",
+        "33",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Once obreros labran un campo rectangular de 220 metros de largo y 48 metros de ancho en 6 días. ¿Cuántos obreros serán necesarios para labrar otro campo análogo de 300 metros de largo por 56 metros de ancho, en cinco días?",
+      "alternatives": [
+        "22",
+        "21",
+        "25",
+        "23",
+        "24"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la suma de cifras del menor número entero positivo, que al ser dividido entre 8, 25 y 49 se tiene como residuo 4, 15 y 42 respectivamente.",
+      "alternatives": [
+        "18",
+        "9",
+        "5",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine una fracción equivalente a $frac(187, 408)$ tal que la suma de sus términos sea divisible por 75 y además esté comprendido entre 1800 y 2500.",
+      "alternatives": [
+        "$frac(660, 1450)$",
+        "$frac(660, 1440)$",
+        "$frac(560, 1440)$",
+        "$frac(650, 1540)$",
+        "$frac(650, 1340)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pedro negocia con el banco un pagaré de \\$6300 logrando un descuento del 2% trimestral; en ese momento paga \\$6090 y cancela su deuda. ¿Dentro de cuántos meses se vencía el pagaré de Pedro?",
+      "alternatives": [
+        "8",
+        "6",
+        "7",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Anita asiste a la biblioteca todos los días de la semana, 4 días por la mañana y el resto por la tarde. ¿De cuántas maneras diferentes puede acudir semanalmente a la biblioteca?",
+      "alternatives": [
+        "20",
+        "21",
+        "35",
+        "84",
+        "112"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La permanencia del gerente en una empresa está condicionada a su producción en el semestre. Esa producción es evaluada por la media aritmética de la ganancia mensual del semestre. Si la media fuera, por lo menos, de 30 mil soles, el gerente continúa en el cargo, en caso contrario él será despedido. El cuadro muestra la ganancia mensual en miles de soles de esa empresa de enero a mayo.\n\n#align(center, table(columns: 5, align: center + horizon, inset: 6pt, stroke: 0.6pt,\n  [Enero], [Febrero], [Marzo], [Abril], [Mayo],\n  [21], [35], [21], [30], [38],\n))\n\n¿Cuál debe ser la ganancia mínima de la empresa en el mes de junio, en miles de soles, para que el gerente continúe en su cargo el próximo semestre?",
+      "alternatives": [
+        "35",
+        "36",
+        "29",
+        "31",
+        "30"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para 2 acciones comunes de empresas de la industria electrónica, el precio promedio de cierre en el mercado de valores durante un mes fue: Para la acción A, de \\$1200, con desviación estándar de \\$500. Para la acción B, el precio promedio fue de \\$5000, con desviación estándar de \\$300.\n\nDetermine la suma de los coeficientes de variación de ambas acciones.",
+      "alternatives": [
+        "0,48",
+        "0,44",
+        "0,49",
+        "0,45",
+        "0,46"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 8 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente gráfico de sectores referente al presupuesto mensual de un trabajador. Si gana mensualmente S/.2600. ¿Cuánto gastó en educación y en otras actividades?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "780 y 260",
+        "780 y 280",
+        "720 y 240",
+        "720 y 280",
+        "760 y 280"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q09.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $f(x) = 96x^2 - 196x - 45$ representa el área de un rectángulo y $g(x) = (2m+3)x^2 - 12x + m + 1$ representa el área de un cuadrado ($m in ZZ$) ¿En cuanto excede el largo del rectángulo al lado del cuadrado cuando $x = 3$?",
+      "alternatives": [
+        "24",
+        "70",
+        "18",
+        "40",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $P(x)$ es un polinomio mónico de quinto grado divisible por $(x^2 + 3x + 1)$, de término independiente 12 y tiene como dos de sus raíces: $-3$ y $4$\n\nHalle la suma de los coeficientes de $P(x)$",
+      "alternatives": [
+        "50",
+        "-72",
+        "64",
+        "-81",
+        "-60"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una madre de familia va al mercado con $[frac(x(x+1)^2, x^3-1)]^(-1) [x^(-1) + x^(-2)]$ soles y desea comprar papayas, si cada papaya cuesta $(x^(-2) + frac(x^(-3), x+1))$ soles\n\n¿Cuántas papayas lleva si le regalan una?",
+      "alternatives": [
+        "$x - 1$",
+        "$x$",
+        "$3x + 1$",
+        "$x^2$",
+        "$x^2 + 1$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la división:\n\n$frac((2x-3)^4 - 81, 2x)$\n\nel tercer término es igual a",
+      "alternatives": [
+        "$18 - 27x$",
+        "$27 - 18x$",
+        "$18x + 27$",
+        "$27x - 18$",
+        "$18x - 27$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el conjunto solución de la inecuación:\n\n$frac((x^2-1)(x^3+1), -x^2+2x-1) >= 0$",
+      "alternatives": [
+        "$chevron.l -1; infinity chevron.r$",
+        "$chevron.l -infinity; infinity chevron.r$",
+        "$chevron.l -infinity; -1 chevron.r$",
+        "$chevron.l -infinity; 1 chevron.r$",
+        "$chevron.l -1; 1 chevron.r$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 14 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si se sabe que el sistema de ecuaciones:\n\n$n(x+y) + x + 5y = 2$\n\n$3(x+1) = 4 - n y$\n\nes indeterminado para $n = p$; e incompatible para $n = q$. Entonces calcule el valor de:\n\n$T = frac(3p + 4q, 3)$",
+      "alternatives": [
+        "3",
+        "-1",
+        "1",
+        "-2",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A cada persona que asistió a un evento, le tocó el $lim_(x->0) [frac(8x^2 - x^3 - 7x, x^2 - x)]^(-1)$ de un pastel, ¿cuántas personas asistieron al evento?",
+      "alternatives": [
+        "6",
+        "11",
+        "9",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $A subset RR^-$ determine el conjunto A para que la función $f: A -> [5; +infinity)$ tal que $f(x) = frac(20, 9 - x^2)$ es biyectiva.",
+      "alternatives": [
+        "$chevron.l -1; 2]$",
+        "$chevron.l -3; -sqrt(5)]$",
+        "$chevron.l -4; -2]$",
+        "$chevron.l -2; -1]$",
+        "$[-3; sqrt(5)]$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La suma del complemento y del suplemento de las medidas de dos ángulos es igual a 230°. Si se sabe que la diferencia de las medidas de ambos ángulos es 15°. Calcule el complemento de la medida del mayor ángulo.",
+      "alternatives": [
+        "12,5°",
+        "112,5°",
+        "62,5°",
+        "75°",
+        "65°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC se traza el segmento $overline(P Q)$ paralelo la base $overline(A C)$ que divide al triángulo en dos regiones equivalentes. Si $overline(P Q) = 5 sqrt(2)$ m, halle la longitud de $overline(A C)$.",
+      "alternatives": [
+        "6 m",
+        "12 m",
+        "10 m",
+        "11 m",
+        "8 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, $M N = 5$ cm y $A N = 7$ cm. Si $A M = x$ cm. Halle el número de posibles valores enteros de x.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4",
+        "7",
+        "8",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q20.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, G es baricentro del triángulo ABC. Si $B D = 3 D G = 6$. Halle la suma de las distancias de A y C a la recta L.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "13 m",
+        "10 m",
+        "15 m",
+        "14 m",
+        "12 m"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q21.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 21 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, O es centro de la circunferencia de radio igual a 8 m. Si $C P = P B$, halle AP.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$3 sqrt(10)$ m",
+        "$8 sqrt(10)$ m",
+        "$4 sqrt(10)$ m",
+        "$6 sqrt(10)$ m",
+        "$5 sqrt(10)$ m"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q22.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 22 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, ABCD es un rectángulo, AM = MB, AD = 2AB = 12 cm. Halle el área de la región sombreada en cm$\"\"^2$.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "52",
+        "42",
+        "56",
+        "32",
+        "48"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q23.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, las circunferencias son concéntricas; M es punto de tangencia, AB = 10 cm. Halle el área de la corona circular en cm$\"\"^2$.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$28 pi$",
+        "$30 pi$",
+        "$25 pi$",
+        "$20 pi$",
+        "$24 pi$"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q24.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una caja cuya base tiene la forma de un sector circular, se desea diseñar una nueva caja cuya base y radio tienen la tercera parte de sus dimensiones respecto a la primera caja. Si $9 S u^2$ es el área de la base de la primera caja. Calcula la relación entre los ángulos centrales de los sectores circulares.",
+      "alternatives": [
+        "$frac(1, 4)$",
+        "$frac(1, 3)$",
+        "$frac(1, 5)$",
+        "$frac(1, 6)$",
+        "$frac(1, 2)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, si OA = OB, BC = CD y el punto D es $(-5; -4)$, calcule el valor de $H = 5 \"tg\" theta - 6 \"ctg\" theta$.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3",
+        "1",
+        "5",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q26.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $3 \"tg\" alpha = sec alpha$, $forall alpha in chevron.l 0; pi/2 chevron.r$, halle el valor de $(sec alpha + \"tg\" alpha)^2$",
+      "alternatives": [
+        "1/2",
+        "3",
+        "1",
+        "2",
+        "1/4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $alpha$ y $beta$ son las medidas de los ángulos coterminales tales que $\"ctg\" alpha + \"ctg\" beta = cos(alpha - beta)$, calcule el valor de:\n\n$\"tg\"(alpha - beta) + \"tg\"(-alpha) + \"ctg\"(-alpha) + \"ctg\"(-beta)$",
+      "alternatives": [
+        "2",
+        "3",
+        "-3",
+        "-2",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El valor de la expresión:\n\n$(\"tg\"(theta + 30°) - \"tg\"(theta - 30°))(2 cos 2theta + 1)$\n\nes igual a:",
+      "alternatives": [
+        "$3 sqrt(3)$",
+        "$sqrt(3)/2$",
+        "$2 sqrt(3)$",
+        "$sqrt(3)/4$",
+        "$sqrt(3)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la suma de las soluciones de la ecuación\n\n$|\"sen\" 2x| - 2|\"sen\" x| + 4|cos x| - 4 = 0$\n\n$x in [pi; 3pi]$",
+      "alternatives": [
+        "$3pi$",
+        "$2pi$",
+        "$6pi$",
+        "$7pi$",
+        "$4pi$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los vectores de la figura están aplicados a un mismo punto. La expresión para $arrow(R)$ es:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$frac(1, 2)(2 arrow(T_2) - arrow(T_1))$",
+        "$frac(1, 2)(4 arrow(T_2) - arrow(T_1))$",
+        "$frac(1, 2)(4 arrow(T_1) - arrow(T_2))$",
+        "$frac(1, 2)(3 arrow(T_1) - 2 arrow(T_2))$",
+        "$frac(1, 2)(3 arrow(T_1) - arrow(T_2))$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q31.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 31 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos bisagras sujetan un portón. Si las flechas indican los vectores de las fuerzas horizontal y vertical que genera la bisagra sobre el portón. Entonces, la figura correcta, es:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "IV",
+        "V",
+        "II",
+        "I",
+        "III"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q32.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuerpo de 2 kg cae desde una altura de 100 m. Si $g = 10$ m/s$\"\"^2$, la energía cinética del cuerpo cuando recorra los 4/5 de dicha altura, es:",
+      "alternatives": [
+        "1200 J",
+        "2000 J",
+        "2500 J",
+        "1600 J",
+        "1500 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura, las velocidades del agua en las secciones 1 y 2 del tubo horizontal son 2 m/s y 4 m/s, respectivamente. ¿Cuál es la presión que registra el manómetro B?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "$1\",\"34 times 10^2$ N/m$\"\"^2$",
+        "$1\",\"34 times 10^5$ N/m$\"\"^2$",
+        "$1\",\"34 times 10^6$ N/m$\"\"^2$",
+        "$1\",\"34 times 10^4$ N/m$\"\"^2$",
+        "$1\",\"34 times 10^3$ N/m$\"\"^2$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q34.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un experimentador inventa una escala de temperatura E en la que se registra que el agua se congela a $-80°$E y hierve a $320°$E. En esta nueva escala, ¿a cuántos grados °E, equivale una temperatura de $25°$C?",
+      "alternatives": [
+        "25°E",
+        "5°E",
+        "0°E",
+        "20°E",
+        "10°E"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico, muestra la distancia $x_1$ (es del objeto al foco) en función de la distancia $x_2$ (es de la imagen al foco) en un espejo esférico cóncavo. Encontrar la distancia focal.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6 cm",
+        "10 cm",
+        "2 cm",
+        "4 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q36.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 36 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con respecto al efecto fotoeléctrico, indique la secuencia de verdad (V) o falsedad (F) de las siguientes proposiciones:\n\nI. La energía cinética máxima de los fotoelectrones emitidos depende de la intensidad de la luz incidente.\n\nII. La función trabajo representa la energía mínima con la que un electrón está ligado en el metal.\n\nIII. Al producirse la emisión de fotoelectrones de la superficie metálica, esta ocurre de manera instantánea, incluso con intensidades de luz muy bajas.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FVV",
+        "FFV",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cierto átomo neutro es isótono con $attach(\"K\", tl: 40, bl: 19)$ e isótopo con el P (Z = 15), entonces será isobaro del",
+      "alternatives": [
+        "$attach(\"Ar\", tl: 40, bl: 18)$",
+        "$attach(\"Cl\", tl: 40, bl: 17)$",
+        "$attach(\"S\", tl: 36, bl: 16)$",
+        "$attach(\"Cl\", tl: 35, bl: 17)$",
+        "$attach(\"S\", tl: 35, bl: 16)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule la densidad del oxígeno en g/L a 47°C y 2,2 atm de presión.\n\nDatos\n\n$P V = n R T$; $R = 0\",\"082$ L$dot$atm/(mol$dot$k) $= 8\",\"314$ Joule/(mol$dot$k)",
+      "alternatives": [
+        "3,68",
+        "3,10",
+        "2,68",
+        "2,93",
+        "2,10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el óxido ácido para formar el producto del $\"H\"_2\"SO\"_3$?",
+      "alternatives": [
+        "$\"S\"_2\"O\"$",
+        "$\"SO\"_2$",
+        "$\"SO\"_4$",
+        "$\"H\"_2\"S\"$",
+        "$\"SO\"_3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Unidades químicas de masa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la cantidad de equivalentes gramo que hay en 260 g de ácido sulfúrico, $\"H\"_2\"SO\"_4$.\n\nDatos:\n\nH: 1 uma  S: 32 uma  O:16 uma",
+      "alternatives": [
+        "7,96",
+        "10,61",
+        "3,18",
+        "5,31",
+        "2,65"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se muestra soluciones acuosas y agua destilada.\nIndique verdadero (V) o falso (F) respecto a los siguientes enunciados:\n\n(Ver la figura adjunta.)\n\na) La concentración de (I) es de 0,2M\n\nb) Si se mezcla I y III la concentración resultante es de 0,1M\n\nc) Para neutralizar II se necesita 30mL de la Solución (I).\n\nDatos: Na: 23uma; O: 16uma; H: 1uma",
+      "alternatives": [
+        "FVV",
+        "FFF",
+        "VVV",
+        "VFV",
+        "VVF"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q42.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En las siguientes reacciones reversibles.\n\nI. $\"C\"_((s)) + \"O\"_(2(g)) harpoons.rtlb \"CO\"_(2(g))$\n\nII. $\"H\"_(2(g)) + \"Cl\"_(2(g)) harpoons.rtlb 2\"HCl\"_(g)$\n\nIII. $\"CO\"_(2(g)) + \"H\"_2\"O\"_((l)) harpoons.rtlb \"H\"_2\"CO\"_(3(l))$\n\nIndique, donde Kc y Kp son iguales.\n\nDato:\n\n$K p = K c (R T)^(Delta n)$",
+      "alternatives": [
+        "I, II y III",
+        "II y III",
+        "I y II.",
+        "Solo II",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al ingresar ATP al ciclo de Calvin se observará la activación a nivel de:",
+      "alternatives": [
+        "$\"CO\"_2$",
+        "1-5 Ribulosa bifosfato",
+        "Glucosa 6-P",
+        "Gliceraldehido 3-P",
+        "NADPH"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 44 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Fase de la división meiótica donde los cromosomas homólogos se alinean en la parte ecuatorial de la célula formando doble placa se denomina",
+      "alternatives": [
+        "Anafase",
+        "Anafase I",
+        "Metafase II",
+        "Metafase",
+        "Metafase I"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los productos de excreción del metabolismo corporal como sales y toxinas van a la sangre, por lo que se debe eliminar mediante \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "la vejiga",
+        "los cólices",
+        "la pelvis renal",
+        "los uréteres",
+        "los riñones"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cómo se denomina la enzima producida por las glándulas salivales?",
+      "alternatives": [
+        "pepsina",
+        "ptialina",
+        "gastrina",
+        "lipasa",
+        "tripsina"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Población del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El Perú es un país multilingüe y pluricultural ya que existe una amplia variedad de lenguas en nuestro territorio nacional, dentro de las familias andinas, ¿qué lenguas se encuentran?",
+      "alternatives": [
+        "Cashinahua y Aru",
+        "Castellano y Aimara",
+        "Quechua y Shipibo",
+        "Quechua y Aru",
+        "Shipibo y Aimara"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 48 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Signos de puntuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dentro de la clasificación de la coma, existe aquella que permite la movilidad del complemento circunstancial. ¿A qué tipo de coma hace referencia?",
+      "alternatives": [
+        "Coma explicativa",
+        "Coma hiperbática",
+        "Coma vocativa",
+        "Coma enumerativa",
+        "Coma elíptica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 49 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Figuras literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¡Oh más dura que mármol a mis quejas y al encendido fuego en que me quemo, más helada que la nieve, Galatea! ¿Qué figuras literarias presentan el verso anterior?",
+      "alternatives": [
+        "Prosopeya",
+        "Epíteto",
+        "Metáfora y aliteración",
+        "Hipérbole y epíteto",
+        "Anáfora y símil"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 50 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es considerado el máximo representante del Romanticismo peruano.",
+      "alternatives": [
+        "Manuel Ascencio Segura",
+        "Manuel Gonzales Prada",
+        "Felipe Pardo y Aliaga",
+        "Carlos Augusto Salaverry",
+        "Ricardo Palma"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 51 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Seleccione el pico más elevado de la cordillera de los Andes peruanos.",
+      "alternatives": [
+        "Huandoy",
+        "Salkantay",
+        "Ausangate",
+        "Huascarán",
+        "Yerupajá"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 52 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Ecosistemas y ecorregiones del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Según las ocho regiones naturales de Francisco Pulgar Vidal, el altiplano andino está ubicado en la región \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "alternatives": [
+        "Chala",
+        "Puna",
+        "Yunga",
+        "Janca",
+        "Omagua"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 53 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a la clase de mercados según su tiempo de funcionamiento, ¿a cuál correspondería el siguiente ejemplo: las ferias artesanales, escolares y agropecuarias?",
+      "alternatives": [
+        "Mercados cerrados",
+        "Mercados periódicos",
+        "Mercados de factores",
+        "Mercados permanentes",
+        "Mercados abiertos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 54 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Producción I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ se define como la concentración de esfuerzos en una determinada actividad de producción.",
+      "alternatives": [
+        "comercialización",
+        "empresa",
+        "división del trabajo",
+        "especialización",
+        "producción"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 55 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una reunión, Anita, Bertha y Micaela tienen la siguiente conversación:\n\nI. Anita: Nací 24 años antes que Micaela y no superó los 35 años de edad\n\nII. Bertha: Tengo 20 años de edad y Micaela 10 años\n\nIII. Micaela: Tengo 24 años de edad y soy menor que Bertha\n\nSi solo una de ellas está mintiendo, determine la suma de edades en años de Bertha y Micaela.",
+      "alternatives": [
+        "60",
+        "36",
+        "30",
+        "44",
+        "54"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 56 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las edades en años de Abel, Belinda, Claudio, Doris, Eleazar, son números consecutivos. Todos son mayores de 13 años, pero menores de 40 años, siendo las edades de las 2 mujeres números primos que corresponden a la mayor y menor edad de todos. Calcule la suma de edades en años, de Abel, Claudio y de Eleazar.",
+      "alternatives": [
+        "45",
+        "54",
+        "63",
+        "93",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 57 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la suma de cifras del resultado al operar:\n\n$27 times underbrace(10101 dots.h.c 10101, \"59 cifras\")$",
+      "alternatives": [
+        "274",
+        "268",
+        "266",
+        "272",
+        "270"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 58 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Paloma tiene en su tienda entre 336 y 342 mecheros que no puede guardar en cajas del mismo número, salvo que los guarde todos juntos o de uno en uno. ¿Cuántos mecheros tiene exactamente Paloma en su tienda?",
+      "alternatives": [
+        "337",
+        "338",
+        "341",
+        "340",
+        "339"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 59 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es la menor longitud que debe recorrer la punta de un lápiz para realizar el dibujo rectangular sin separar la punta del lápiz del papel?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "45 cm",
+        "40 cm",
+        "47 cm",
+        "43 cm",
+        "44 cm"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "scan-6-unac-2021-ii-figures/scan-6-unac-2021-ii-q60.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 60 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Texto\n\nAlgunas especies de peces tienen una forma muy peculiar de conseguir alimento. El pez arquero escupe un violento chorro de agua para hacer caer a sus presas. El pejesapo pesca con anzuelo: un hilito que sobresale de su cráneo le sirve de cebo. El gimnoto o anguila eléctrica emite descargas eléctricas que atontan a sus presas. ¿Cuál es la idea principal en el texto?",
+      "alternatives": [
+        "Existen diversos tipos de peces según su fisonomía.",
+        "Los peces aniquilan a sus presas.",
+        "Los peces tienen diferentes formas de conseguir sus alimentos.",
+        "Los peces presentan diversas formas de supervivencia.",
+        "Los peces capturan a sus presas de manera espontánea."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "I. Es el dominio de los Uros, gentiles guardianes de la entrada al lago.\n\nII. Navegando por estrechos pasajes que se abren paso entre tupidos totorales se llega a un mundo dorado.\n\nIII. La mitología da fe de ello, pues cuenta que los Uros estaban ahí antes que el Sol, iluminados tan solo por la Luna y las estrellas\n\nIV. Se trata de una ciudad de paja seca que flota en el lago Titicaca.\n\nV. Su modo de vida tradicional refleja una identidad ancestral, más antigua que el dios Sol.",
+      "alternatives": [
+        "I - IV - V - III - II",
+        "II - IV - I - V - III",
+        "II - I - IV - III - V",
+        "III - V - I - IV - II",
+        "I - III - II - IV - V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 62 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ENFERMEDAD : NOSO ::",
+      "alternatives": [
+        "boca : odonto",
+        "hueso : osteo",
+        "línea : trazo",
+        "lluvia : hidro",
+        "corazón : hepato"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 63 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Desde muy joven, el escritor \\_\\_\\_\\_\\_\\_\\_ su talento literario como periodista, \\_\\_\\_\\_\\_\\_\\_ en diarios y revistas que necesitaban hacerse conocidas con sus destacadas producciones.",
+      "alternatives": [
+        "demostró - comprando",
+        "reveló - cooperando",
+        "rebeló - colaborando",
+        "formó - difundiendo",
+        "mostró - adquiriendo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 65 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sensación y percepción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un examen de ascenso, un ingeniero percibe las preguntas correctamente pese a que las imágenes de la prueba escrita no están claras ni completas. Indique el principio perceptual que utilizó el ingeniero para solucionar el problema.",
+      "alternatives": [
+        "Cierre o complementación",
+        "Proximidad",
+        "Agrupación",
+        "Semejanza",
+        "Figura y fondo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 66 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Vilma tiene la habilidad para reflexionar cuidadosamente sobre lo que debe realizar ante una situación nueva, advirtiendo las ventajas y desventajas. ¿Cuál es la habilidad que refleja Vilma?",
+      "alternatives": [
+        "Empatía",
+        "Autoestima",
+        "Toma de decisiones",
+        "Autoconocimiento",
+        "Asertividad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 67 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Milagros no demuestra creatividad: se adecúa a cualquier tipo de trabajo académico buscando una sola alternativa para solucionar problemas; mientras que Priscilla siempre busca respuestas originales a los problemas académicos propuestos. ¿Qué tipo de pensamiento predomina en Milagros y Priscilla respectivamente?",
+      "alternatives": [
+        "Crítico - Analítico",
+        "Deductivo - Inductivo",
+        "Inductivo - Deductivo",
+        "Divergente - Convergente",
+        "Convergente - Divergente"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 68 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética social y problemas contemporáneos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique a qué concepto corresponde la siguiente expresión: “La Universidad peruana asume la dimensión ética de la enseñanza de: las ciencias, la ciudadanía democrática y el desarrollo social equitativo y sostenible”.",
+      "alternatives": [
+        "Proyección cultural universitaria",
+        "Contribución universitaria",
+        "Normativa universitaria",
+        "Responsabilidad social universitaria",
+        "Autonomía universitaria"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 69 (clave D)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la protección de las áreas naturales, el Estado peruano establece una jerarquía de valores. Las áreas de uso indirecto denominados Parques Nacionales son intangibles (Manú y Huascarán); mientras que las áreas de uso directo denominados Reservas Nacionales son tangibles (Paracas, Pampa Galeras, Titicaca y otras). ¿Cuál es la disciplina filosófica que establece la denominada jerarquía de valores?",
+      "alternatives": [
+        "Metafísica",
+        "Antropología filosófica",
+        "Moral",
+        "Ontología",
+        "Axiología"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 70 (clave E)"
+    }
+  ]
+}
