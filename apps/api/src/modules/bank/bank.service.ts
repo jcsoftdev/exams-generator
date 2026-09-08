@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { Difficulty } from "@exams-generator/shared";
+import { Difficulty, FeatureFlag } from "@exams-generator/shared";
 import {
   BadRequestException,
   ConflictException,
@@ -15,6 +15,8 @@ import { StoragePort } from "../exams/domain/ports/storage.port";
 import { QuestionStatus } from "../../db/schema/enums";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
 import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank.repository";
+import { QuestionScope } from "./domain/ports/bank-repository.port";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { assertStructuredQuestion } from "./domain/assert-structured-question";
 import { BankFoldersService } from "./folders/bank-folders.service";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
@@ -146,7 +148,24 @@ export class BankService {
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
     private readonly folders: BankFoldersService,
+    private readonly features: FeatureFlagsService,
   ) {}
+
+  /**
+   * Who this caller is, and whether the central bank counts as theirs.
+   *
+   * Resolved HERE, once per request, and handed to the repository as one
+   * value. That is the whole reason the port stopped taking a bare
+   * `currentTenantId`: the `global_bank` answer has to reach eleven queries,
+   * and a boolean threaded through eleven call sites is a boolean that gets
+   * forgotten in one of them.
+   */
+  private async scopeFor(user: AuthTokenPayload): Promise<QuestionScope> {
+    return {
+      tenantId: user.tenantId,
+      includeGlobal: await this.features.isEnabled(FeatureFlag.GlobalBank, user.tenantId),
+    };
+  }
 
   async createImageQuestion(user: AuthTokenPayload, dto: CreateImageQuestionDto): Promise<{ id: string }> {
     assertCanManageTenant(user.role, user.tenantId);
@@ -301,7 +320,7 @@ export class BankService {
   ): Promise<QuestionListItem[] | { items: QuestionListItem[]; total: number }> {
     const folderFilter = await this.resolveFolderFilter(user, query.folderId);
     const filters = {
-      currentTenantId: user.tenantId,
+      scope: await this.scopeFor(user),
       courseId: query.courseId,
       topicId: query.topicId,
       difficulty: query.difficulty,
@@ -324,7 +343,7 @@ export class BankService {
    * can't be used to probe for another tenant's private questions.
    */
   async getQuestionById(user: AuthTokenPayload, id: string): Promise<QuestionListItem> {
-    const question = await this.repository.findQuestionById(id, user.tenantId);
+    const question = await this.repository.findQuestionById(id, await this.scopeFor(user));
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -339,7 +358,7 @@ export class BankService {
    * precondition for approve/reject, both of which only ever act on drafts.
    */
   private async requireVisibleDraft(user: AuthTokenPayload, id: string): Promise<QuestionListItem> {
-    const question = await this.repository.findQuestionById(id, user.tenantId);
+    const question = await this.repository.findQuestionById(id, await this.scopeFor(user));
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -356,7 +375,7 @@ export class BankService {
    * (never `archived`; never central-bank, which is read-only for tenants).
    */
   private async requireManageableQuestion(user: AuthTokenPayload, id: string): Promise<QuestionListItem> {
-    const question = await this.repository.findQuestionById(id, user.tenantId);
+    const question = await this.repository.findQuestionById(id, await this.scopeFor(user));
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -375,7 +394,7 @@ export class BankService {
   async approveQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string }> {
     await this.requireVisibleDraft(user, id);
 
-    const result = await this.repository.approveQuestion(id, user.tenantId);
+    const result = await this.repository.approveQuestion(id, await this.scopeFor(user));
     if (!result) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -389,7 +408,7 @@ export class BankService {
   async rejectQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string }> {
     await this.requireVisibleDraft(user, id);
 
-    const deleted = await this.repository.rejectQuestion(id, user.tenantId);
+    const deleted = await this.repository.rejectQuestion(id, await this.scopeFor(user));
     if (!deleted) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -406,7 +425,7 @@ export class BankService {
    * that's a 400 here — the front end renders the image directly instead.
    */
   async previewQuestion(user: AuthTokenPayload, id: string): Promise<Buffer> {
-    const question = await this.repository.findQuestionById(id, user.tenantId);
+    const question = await this.repository.findQuestionById(id, await this.scopeFor(user));
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -479,7 +498,7 @@ export class BankService {
     if (changingFolder) {
       const folderId = dto.folderId ?? null;
       await this.folders.assertAssignableFolder(user, question.tenantId, folderId);
-      const filed = await this.repository.setQuestionFolder(id, user.tenantId, folderId);
+      const filed = await this.repository.setQuestionFolder(id, await this.scopeFor(user), folderId);
       if (!filed) {
         throw new NotFoundException(`Question not found: ${id}`);
       }
@@ -558,11 +577,16 @@ export class BankService {
       throw error;
     }
 
-    const updated = await this.repository.updateStructuredQuestionAndTaxonomy(id, user.tenantId, merged, {
-      topicId: dto.topicId,
-      difficulty: dto.difficulty,
-      gradeLevel: dto.gradeLevel,
-    });
+    const updated = await this.repository.updateStructuredQuestionAndTaxonomy(
+      id,
+      await this.scopeFor(user),
+      merged,
+      {
+        topicId: dto.topicId,
+        difficulty: dto.difficulty,
+        gradeLevel: dto.gradeLevel,
+      },
+    );
     if (!updated) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -610,12 +634,16 @@ export class BankService {
       }
     }
 
-    const updated = await this.repository.updateImageQuestionTaxonomyAndCorrectAnswer(id, user.tenantId, {
-      correctAnswer: dto.correctAnswer,
-      topicId: dto.topicId,
-      difficulty: dto.difficulty,
-      gradeLevel: dto.gradeLevel,
-    });
+    const updated = await this.repository.updateImageQuestionTaxonomyAndCorrectAnswer(
+      id,
+      await this.scopeFor(user),
+      {
+        correctAnswer: dto.correctAnswer,
+        topicId: dto.topicId,
+        difficulty: dto.difficulty,
+        gradeLevel: dto.gradeLevel,
+      },
+    );
     if (!updated) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -644,7 +672,7 @@ export class BankService {
     const storageKey = `bank/questions/${randomUUID()}`;
     await this.storage.put(storageKey, file.buffer, mime);
 
-    const updatedId = await this.repository.replaceImageAsset(id, user.tenantId, {
+    const updatedId = await this.repository.replaceImageAsset(id, await this.scopeFor(user), {
       storageKey,
       mime,
     });
@@ -692,7 +720,7 @@ export class BankService {
       images.push({ storageKey, mime, alternativeIndex: slots[position]! });
     }
 
-    const updatedId = await this.repository.setAlternativeImages(id, user.tenantId, images);
+    const updatedId = await this.repository.setAlternativeImages(id, await this.scopeFor(user), images);
     if (!updatedId) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
@@ -746,7 +774,7 @@ export class BankService {
    * sense (reject/delete is the discard path for drafts).
    */
   async archiveQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string; status: "archived" }> {
-    const question = await this.repository.findQuestionById(id, user.tenantId);
+    const question = await this.repository.findQuestionById(id, await this.scopeFor(user));
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }

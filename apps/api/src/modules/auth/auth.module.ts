@@ -1,6 +1,7 @@
 import { Global, Module } from "@nestjs/common";
 import Redis from "ioredis";
 import { resolveRedisConnection } from "../../common/queue.env";
+import { FeatureFlagsModule } from "../feature-flags/feature-flags.module";
 import { AccountStatusService } from "./account-status.service";
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
@@ -26,6 +27,12 @@ import { TokenService } from "./token.service";
  */
 @Global()
 @Module({
+  // Imported explicitly even though `FeatureFlagsModule` is itself `@Global`:
+  // global only means "no import needed once it is in the graph", and specs
+  // that build a testing module out of `AuthModule` alone do not have it
+  // there. `AuthService.me()` resolves the caller's flags, so without this
+  // the auth e2e suite cannot construct `AuthService` at all.
+  imports: [FeatureFlagsModule],
   controllers: [AuthController],
   providers: [
     TokenService,

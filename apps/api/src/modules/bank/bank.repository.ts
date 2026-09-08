@@ -21,25 +21,50 @@ import {
   QuestionListFilter,
   QuestionListItem,
   QuestionListPagination,
+  QuestionScope,
   UpdateStructuredQuestionRecord,
 } from "./domain/ports/bank-repository.port";
 
 /**
+ * THE visibility rule for `questions`, in one place.
+ *
+ * It used to be copied by hand into eleven methods of this file. That is how
+ * the `global_bank` flag would have gone wrong: eleven places to thread it
+ * through, and any one left behind keeps serving central questions to a
+ * school that is no longer entitled to them. `exams.repository.ts` had
+ * already factored its copy into `questionVisibility()` with a comment
+ * saying not to duplicate it; this is that same helper, on this side.
+ *
+ * MUST NOT be duplicated. Add a caller, not a copy.
+ */
+function questionVisibility(scope: QuestionScope): SQL {
+  if (scope.tenantId === null) {
+    // Platform staff have no tenant of their own: the central bank IS their
+    // bank. With `global_bank` cut they see nothing here, which is the
+    // honest answer rather than quietly widening them to every tenant.
+    return (scope.includeGlobal ? isNull(questions.tenantId) : sql`false`) as SQL;
+  }
+
+  return (
+    scope.includeGlobal
+      ? or(isNull(questions.tenantId), eq(questions.tenantId, scope.tenantId))
+      : eq(questions.tenantId, scope.tenantId)
+  ) as SQL;
+}
+
+/**
  * The WHERE clause `listQuestions` builds.
  *
- * Visibility rule (design doc §3, MUST release gate): every query filters
- * `tenant_id IS NULL OR tenant_id = :current` — a tenant NEVER sees another
- * tenant's private questions. `currentTenantId: null` (platform staff)
- * resolves to `tenant_id IS NULL` only, since there is no "current tenant"
- * whose private rows staff should see by default.
+ * Visibility comes from `questionVisibility(scope)` — see that helper. A
+ * tenant NEVER sees another tenant's private questions, and whether the
+ * central bank counts as theirs is the `global_bank` flag's answer, resolved
+ * once by `BankService` and carried in `filter.scope`.
  *
  * Assumes the caller joins `topics` (the `courseId` filter reads
  * `topics.course_id` — `questions` has no course column).
  */
 function buildQuestionListConditions(filter: QuestionListFilter): SQL[] {
-  const visibility: SQL = filter.currentTenantId
-    ? (or(isNull(questions.tenantId), eq(questions.tenantId, filter.currentTenantId)) as SQL)
-    : (isNull(questions.tenantId) as SQL);
+  const visibility = questionVisibility(filter.scope);
 
   const conditions: SQL[] = [visibility];
   if (filter.courseId) {
@@ -67,8 +92,12 @@ function buildQuestionListConditions(filter: QuestionListFilter): SQL[] {
   if (filter.unfiled) {
     conditions.push(
       and(
-        filter.currentTenantId
-          ? eq(questions.tenantId, filter.currentTenantId)
+        // Exact ownership, NOT the visibility rule: "sin carpeta" is the
+        // school's own unfiled questions. Central rows all have
+        // `folder_id IS NULL` and always will, so widening this to the
+        // visibility OR would tip the entire central bank into the bucket.
+        filter.scope.tenantId
+          ? eq(questions.tenantId, filter.scope.tenantId)
           : (isNull(questions.tenantId) as SQL),
         isNull(questions.folderId),
       ) as SQL,
@@ -80,9 +109,14 @@ function buildQuestionListConditions(filter: QuestionListFilter): SQL[] {
      * an OR, not a second query, so paging and counting stay one statement.
      */
     conditions.push(
-      (filter.folderTopicId
+      (filter.folderTopicId && filter.scope.includeGlobal
         ? or(
             eq(questions.folderId, filter.folderId),
+            // Dead weight once `global_bank` is off — the outer visibility
+            // condition already excludes every `tenant_id IS NULL` row, so
+            // this half could only ever contribute an empty set. Dropped
+            // rather than left to be ANDed away, so the generated SQL says
+            // what the school is actually entitled to.
             and(isNull(questions.tenantId), eq(questions.topicId, filter.folderTopicId)),
           )
         : eq(questions.folderId, filter.folderId)) as SQL,
@@ -337,10 +371,8 @@ export class BankRepository implements BankRepositoryPort {
    * tenant resolves to `undefined` exactly like a non-existent id. Callers
    * (the service) turn that into a 404, never leaking whether the id exists.
    */
-  async findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined> {
-    const visibility: SQL = currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+  async findQuestionById(id: string, scope: QuestionScope): Promise<QuestionListItem | undefined> {
+    const visibility = questionVisibility(scope);
 
     const [row] = await this.db
       .select({
@@ -377,12 +409,10 @@ export class BankRepository implements BankRepositoryPort {
    */
   async setQuestionFolder(
     id: string,
-    tenantId: string | null,
+    scope: QuestionScope,
     folderId: string | null,
   ): Promise<QuestionListItem | undefined> {
-    const visibility = tenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+    const visibility = questionVisibility(scope);
 
     const [row] = await this.db
       .update(questions)
@@ -393,7 +423,7 @@ export class BankRepository implements BankRepositoryPort {
     if (!row) {
       return undefined;
     }
-    return this.findQuestionById(id, tenantId);
+    return this.findQuestionById(id, scope);
   }
 
   /**
@@ -428,11 +458,9 @@ export class BankRepository implements BankRepositoryPort {
    */
   async approveQuestion(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
   ): Promise<{ id: string; status: QuestionStatus } | undefined> {
-    const visibility: SQL = currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+    const visibility = questionVisibility(scope);
 
     const [row] = await this.db
       .update(questions)
@@ -449,10 +477,8 @@ export class BankRepository implements BankRepositoryPort {
    * `status = 'draft'` scoping as `approveQuestion`. Returns `true` only
    * when a row was actually deleted.
    */
-  async rejectQuestion(id: string, currentTenantId: string | null): Promise<boolean> {
-    const visibility: SQL = currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+  async rejectQuestion(id: string, scope: QuestionScope): Promise<boolean> {
+    const visibility = questionVisibility(scope);
 
     const deleted = await this.db
       .delete(questions)
@@ -473,12 +499,10 @@ export class BankRepository implements BankRepositoryPort {
    */
   async updateStructuredQuestion(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     patch: UpdateStructuredQuestionRecord,
   ): Promise<QuestionListItem | undefined> {
-    const visibility: SQL = currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+    const visibility = questionVisibility(scope);
 
     const [row] = await this.db
       .update(questions)
@@ -567,14 +591,12 @@ export class BankRepository implements BankRepositoryPort {
    */
   async updateStructuredQuestionAndTaxonomy(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     contentPatch: UpdateStructuredQuestionRecord,
     taxonomyPatch: { topicId?: string; difficulty?: string; gradeLevel?: string },
   ): Promise<QuestionListItem | undefined> {
     return this.db.transaction(async (tx) => {
-      const visibility: SQL = currentTenantId
-        ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-        : (isNull(questions.tenantId) as SQL);
+      const visibility = questionVisibility(scope);
 
       const returning = {
         id: questions.id,
@@ -650,12 +672,10 @@ export class BankRepository implements BankRepositoryPort {
    */
   async updateImageQuestionTaxonomyAndCorrectAnswer(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     patch: { correctAnswer?: string; topicId?: string; difficulty?: string; gradeLevel?: string },
   ): Promise<QuestionListItem | undefined> {
-    const visibility: SQL = currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+    const visibility = questionVisibility(scope);
 
     const set: Partial<{
       correctAnswer: string;
@@ -725,18 +745,18 @@ export class BankRepository implements BankRepositoryPort {
    * (no cleanup here — out of scope for this task, mirrors how no other
    * write path in this class deletes orphaned assets either). Returns the
    * question id, or `undefined` if no row matched (not found / not visible
-   * to `currentTenantId`) — the caller (service) turns that into a 404.
+   * to `scope`) — the caller (service) turns that into a 404.
    */
   async replaceImageAsset(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     image: { readonly storageKey: string; readonly mime: string },
   ): Promise<string | undefined> {
     return this.db.transaction(async (tx) => {
       const [asset] = await tx
         .insert(assets)
         .values({
-          tenantId: currentTenantId,
+          tenantId: scope.tenantId,
           storageKey: image.storageKey,
           mime: image.mime,
         })
@@ -746,9 +766,7 @@ export class BankRepository implements BankRepositoryPort {
         throw new Error("Insert invariant violated: asset row missing after insert");
       }
 
-      const visibility: SQL = currentTenantId
-        ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-        : (isNull(questions.tenantId) as SQL);
+      const visibility = questionVisibility(scope);
 
       const [row] = await tx
         .update(questions)
@@ -775,7 +793,7 @@ export class BankRepository implements BankRepositoryPort {
    */
   async setAlternativeImages(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     images: readonly {
       readonly storageKey: string;
       readonly mime: string;
@@ -783,9 +801,7 @@ export class BankRepository implements BankRepositoryPort {
     }[],
   ): Promise<string | undefined> {
     return this.db.transaction(async (tx) => {
-      const visibility: SQL = currentTenantId
-        ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-        : (isNull(questions.tenantId) as SQL);
+      const visibility = questionVisibility(scope);
 
       const [question] = await tx
         .select({ id: questions.id })
@@ -801,7 +817,7 @@ export class BankRepository implements BankRepositoryPort {
       for (const image of images) {
         const [asset] = await tx
           .insert(assets)
-          .values({ tenantId: currentTenantId, storageKey: image.storageKey, mime: image.mime })
+          .values({ tenantId: scope.tenantId, storageKey: image.storageKey, mime: image.mime })
           .returning({ id: assets.id });
 
         if (!asset) {
@@ -844,10 +860,8 @@ export class BankRepository implements BankRepositoryPort {
    * tenant_id = :current`, or `IS NULL` only for platform staff). Mirrors
    * `ExamsRepository.countStock()`'s `groupBy` + `count()` shape.
    */
-  async countByDifficultyAndStatus(tenantId: string | null): Promise<BankStatusDifficultyCount[]> {
-    const visibility: SQL = tenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+  async countByDifficultyAndStatus(scope: QuestionScope): Promise<BankStatusDifficultyCount[]> {
+    const visibility = questionVisibility(scope);
 
     const rows = await this.db
       .select({ difficulty: questions.difficulty, status: questions.status, total: count() })

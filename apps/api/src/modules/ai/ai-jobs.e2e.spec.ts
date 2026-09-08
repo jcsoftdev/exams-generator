@@ -8,6 +8,7 @@ import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { courses, generationJobs, questions, tenants, topics, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { isTypstAvailableSync } from "../exams/adapters/pdf/test-utils/typst-availability";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
@@ -82,6 +83,7 @@ describeIfTypst("AI generation jobs (e2e)", () => {
       .values({ name: `Jobs E2E Tenant A ${suffix}`, slug: `jobs-e2e-tenant-a-${suffix}` })
       .returning({ id: tenants.id });
     tenantAId = tenantA!.id;
+    await grantFeaturesFixture(tenantAId);
     const [teacherA] = await db
       .insert(users)
       .values({
@@ -98,6 +100,7 @@ describeIfTypst("AI generation jobs (e2e)", () => {
       .values({ name: `Jobs E2E Tenant B ${suffix}`, slug: `jobs-e2e-tenant-b-${suffix}` })
       .returning({ id: tenants.id });
     tenantBId = tenantB!.id;
+    await grantFeaturesFixture(tenantBId);
     const [teacherB] = await db
       .insert(users)
       .values({

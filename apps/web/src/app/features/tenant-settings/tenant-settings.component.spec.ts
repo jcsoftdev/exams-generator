@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { FeatureFlagsStore } from '../../core/features/feature-flags.store';
 import { describe, it, expect, vi } from 'vitest';
 import { Observable, Subject, map, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -31,6 +32,7 @@ function user(o: Partial<TenantUser> & { id: string }): TenantUser {
 
 function setup(
   overrides: {
+    brandingEnabled?: boolean;
     getSettingsImpl?: (...args: unknown[]) => unknown;
     updateSettingsImpl?: (...args: unknown[]) => unknown;
     fetchLogoImpl?: (...args: unknown[]) => unknown;
@@ -86,6 +88,14 @@ function setup(
     imports: [TenantSettingsComponent],
     providers: [
       importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus, School, Check, ChevronDown })),
+      // These specs predate feature flags, when every feature was on for
+      // everyone. Stubbing the store to "on" keeps each assertion meaning
+      // what it was written to mean; the flag's own behaviour is covered by
+      // its dedicated spec.
+      {
+        provide: FeatureFlagsStore,
+        useValue: { isEnabled: () => overrides.brandingEnabled ?? true },
+      },
       { provide: TenantSettingsService, useValue: { getSettings, updateSettings, fetchLogo } },
       { provide: UsersService, useValue: { list, create, setActive, resetPassword } },
     ],
@@ -409,5 +419,23 @@ describe('TenantSettingsComponent — tabs', () => {
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="empty-teachers"]')).toBeTruthy();
+  });
+
+  describe('permisos del colegio', () => {
+    it('esconde el logo cuando el plan no incluye personalización', () => {
+      const { compiled } = setup({ brandingEnabled: false });
+
+      expect(compiled.querySelector('[data-testid="logo-placeholder"]')).toBeNull();
+      expect(compiled.querySelector('[data-testid="logo-preview"]')).toBeNull();
+      expect(compiled.querySelector('input[type="file"]')).toBeNull();
+    });
+
+    it('deja el resto de los datos del colegio editables', () => {
+      const { compiled } = setup({ brandingEnabled: false });
+
+      // El logo es lo único que cuelga de `tenant_branding`: nombre y ciudad
+      // son datos del colegio, no una función que se venda.
+      expect(compiled.textContent).toMatch(/ciudad/i);
+    });
   });
 });

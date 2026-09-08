@@ -1,7 +1,8 @@
 import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { LucideAngularModule } from 'lucide-angular';
-import { Role } from '@exams-generator/shared';
+import { Role, FeatureFlag } from '@exams-generator/shared';
+import { FeatureFlagsStore } from '../../core/features/feature-flags.store';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { InputComponent } from '../../ui/input/input.component';
 import { SelectComponent } from '../../ui/select/select.component';
@@ -44,6 +45,13 @@ type Tab = 'data' | 'teachers';
   templateUrl: './tenant-settings.component.html',
 })
 export class TenantSettingsComponent {
+  private readonly features = inject(FeatureFlagsStore);
+
+  /** Hides the logo control when the school's plan has no branding. */
+  protected readonly canUseBranding = computed(() =>
+    this.features.isEnabled(FeatureFlag.TenantBranding),
+  );
+
   private readonly tenantSettingsService = inject(TenantSettingsService);
   private readonly usersService = inject(UsersService);
   private readonly destroyRef = inject(DestroyRef);

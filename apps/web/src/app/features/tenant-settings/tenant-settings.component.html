@@ -34,28 +34,37 @@
             ></ui-input>
           </div>
 
-          <div class="flex items-center gap-3">
-            @if (logoPreviewUrl(); as url) {
-              <img
-                [src]="url"
-                alt="Vista previa del logo"
-                data-testid="logo-preview"
-                class="h-16 w-16 rounded-field border border-n200 object-cover"
-              />
-            } @else {
-              <div
-                data-testid="logo-placeholder"
-                class="flex h-16 w-16 items-center justify-center rounded-field border border-n200 bg-primary-50 text-n400"
-              >
-                <lucide-angular name="school" class="h-6 w-6"></lucide-angular>
-              </div>
-            }
-            <label class="flex flex-col gap-2 text-sm font-medium text-tint-text">
-              Cambiar logo
-              <input type="file" accept="image/*" (change)="onLogoSelected($event)" />
-            </label>
-          </div>
-          <p class="text-xs text-n500">Sale en el encabezado de cada examen PDF.</p>
+          <!--
+            `tenant_branding` off means the logo never reaches the PDF, so
+            offering the upload would collect a file the exam ignores. The
+            real enforcement is server-side, inside PDF generation: a logo
+            uploaded while the flag was on keeps being stored, it simply
+            stops being printed.
+          -->
+          @if (canUseBranding()) {
+            <div class="flex items-center gap-3">
+              @if (logoPreviewUrl(); as url) {
+                <img
+                  [src]="url"
+                  alt="Vista previa del logo"
+                  data-testid="logo-preview"
+                  class="h-16 w-16 rounded-field border border-n200 object-cover"
+                />
+              } @else {
+                <div
+                  data-testid="logo-placeholder"
+                  class="flex h-16 w-16 items-center justify-center rounded-field border border-n200 bg-primary-50 text-n400"
+                >
+                  <lucide-angular name="school" class="h-6 w-6"></lucide-angular>
+                </div>
+              }
+              <label class="flex flex-col gap-2 text-sm font-medium text-tint-text">
+                Cambiar logo
+                <input type="file" accept="image/*" (change)="onLogoSelected($event)" />
+              </label>
+            </div>
+            <p class="text-xs text-n500">Sale en el encabezado de cada examen PDF.</p>
+          }
 
           @if (saveError()) {
             <p

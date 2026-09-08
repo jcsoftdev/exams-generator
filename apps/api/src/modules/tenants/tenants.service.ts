@@ -17,6 +17,7 @@ import {
   questionAlternativeImages,
   questions,
   syllabusWeekMaps,
+  tenantFeatureFlags,
   tenants,
   users,
 } from "../../db/schema";
@@ -139,6 +140,12 @@ export class TenantsService {
       await tx.delete(questions).where(eq(questions.tenantId, id));
 
       await tx.delete(cycles).where(eq(cycles.tenantId, id));
+
+      // Deleted explicitly even though the FK cascades, for the same reason
+      // `question_alternative_images` is: nothing else in this method leans
+      // on a cascade, and a table quietly left out of the list is how a
+      // tenant delete starts failing months after the table was added.
+      await tx.delete(tenantFeatureFlags).where(eq(tenantFeatureFlags.tenantId, id));
 
       // assets now unreferenced; users after everything that FKs created_by.
       await tx.delete(assets).where(eq(assets.tenantId, id));

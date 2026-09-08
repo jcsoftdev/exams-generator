@@ -3,6 +3,7 @@ import { eq } from "drizzle-orm";
 import { JwtPayload, LoginResponseDto, MeResponseDto } from "@exams-generator/shared";
 import { db } from "../../db/client";
 import { tenants, users } from "../../db/schema";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { comparePassword } from "./password.util";
 import { TokenService } from "./token.service";
 
@@ -19,7 +20,10 @@ import { TokenService } from "./token.service";
  */
 @Injectable()
 export class AuthService {
-  constructor(private readonly tokenService: TokenService) {}
+  constructor(
+    private readonly tokenService: TokenService,
+    private readonly features: FeatureFlagsService,
+  ) {}
 
   async login(email: string, password: string): Promise<LoginResponseDto> {
     const [user] = await db.select().from(users).where(eq(users.email, email));
@@ -73,7 +77,12 @@ export class AuthService {
       throw new UnauthorizedException("User not found");
     }
 
-    return user;
+    // Resolved on every `me()` rather than signed into the token: a JWT
+    // lives 8h and does not refresh, so a flag switched off this morning
+    // would keep reading as on for the rest of the school day. The service
+    // caches per tenant, so this is roughly one extra read per tenant per
+    // minute, not one per call.
+    return { ...user, features: await this.features.getEffective(user.tenantId) };
   }
 
   // `null` for platform staff (`platform_admin`/`content_editor` — global

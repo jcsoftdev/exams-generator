@@ -3,6 +3,7 @@ import { BadRequestException, NotFoundException, UnprocessableEntityException } 
 import { AuthTokenPayload } from "../auth/token.service";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { BankRepository, QuestionListItem } from "../bank/bank.repository";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { MAX_INSTRUCTION_CHARS, ReviseQuestionService } from "./revise-question.service";
 
@@ -59,8 +60,12 @@ function buildDeps() {
     compileAnswerKey: jest.fn().mockResolvedValue(Buffer.from("fake-pdf-bytes")),
   };
 
-  const service = new ReviseQuestionService(generator, pdfCompiler, bankRepository);
-  return { service, bankRepository, generator, pdfCompiler };
+  const features = {
+    isEnabled: jest.fn().mockResolvedValue(true),
+  } as unknown as jest.Mocked<FeatureFlagsService>;
+
+  const service = new ReviseQuestionService(generator, pdfCompiler, bankRepository, features);
+  return { service, bankRepository, generator, pdfCompiler, features };
 }
 
 describe("ReviseQuestionService.revise", () => {

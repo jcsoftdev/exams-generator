@@ -3,12 +3,14 @@ import {
   BankFoldersResponse,
   CreateBankFolderDto,
   DeleteBankFolderResponse,
+  FeatureFlag,
   UNFILED_FOLDER_ID,
   UpdateBankFolderDto,
 } from "@exams-generator/shared";
 import { Injectable } from "@nestjs/common";
 import { isUUID } from "class-validator";
 import { AuthTokenPayload } from "../../auth/token.service";
+import { FeatureFlagsService } from "../../feature-flags/feature-flags.service";
 import { BankFoldersRepository, isUniqueViolation } from "./bank-folders.repository";
 import { bankFolderError } from "./bank-folders.errors";
 import { FlatFolderRow, assembleFolderTree } from "./domain/assemble-folder-tree";
@@ -34,7 +36,10 @@ export type FolderScope =
 
 @Injectable()
 export class BankFoldersService {
-  constructor(private readonly repository: BankFoldersRepository) {}
+  constructor(
+    private readonly repository: BankFoldersRepository,
+    private readonly features: FeatureFlagsService,
+  ) {}
 
   /**
    * Every folder route needs a tenant: folders ARE the tenant's own structure,
@@ -77,9 +82,18 @@ export class BankFoldersService {
     const rows = await this.repository.listFolders(tenantId);
     const topicIds = rows.map((row) => row.topicId).filter((id): id is string => id !== null);
 
+    // The third consumer of the central-bank visibility rule, and the one
+    // that does NOT go through `BankRepository` — which is exactly why it is
+    // the easy one to forget when the `global_bank` flag moves. With the
+    // flag off the badge must read the school's own filed questions only,
+    // or the tree keeps advertising a bank the listing no longer serves.
+    const includeGlobal = await this.features.isEnabled(FeatureFlag.GlobalBank, tenantId);
+
     const [ownCounts, centralCounts, unfiledCount] = await Promise.all([
       this.repository.countOwnByFolder(tenantId),
-      this.repository.countCentralByTopic(topicIds),
+      includeGlobal
+        ? this.repository.countCentralByTopic(topicIds)
+        : Promise.resolve(new Map<string, number>()),
       this.repository.countUnfiled(tenantId),
     ]);
 

@@ -1,0 +1,72 @@
+<section class="mb-4 rounded-card border border-n200 bg-surface" data-testid="platform-flags">
+  <div class="flex items-center justify-between p-3">
+    <div>
+      <h2 class="text-sm font-bold text-n900">Corte de plataforma</h2>
+      <p class="text-xs text-n500">
+        Aplica a TODOS los colegios a la vez y manda sobre el permiso de cada uno.
+      </p>
+    </div>
+    <div data-testid="platform-flags-toggle">
+      <ui-button variant="ghost" (clicked)="toggleOpen()">{{
+        open() ? 'Ocultar' : 'Ver'
+      }}</ui-button>
+    </div>
+  </div>
+
+  @if (open()) {
+    <div class="border-t border-n200 p-3">
+      @if (errorMessage()) {
+        <p
+          data-testid="platform-flags-error"
+          class="mb-3 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+          role="alert"
+        >
+          {{ errorMessage() }}
+        </p>
+      }
+
+      @if (loading()) {
+        <div data-testid="platform-flags-loading" class="flex flex-col gap-2">
+          @for (i of [1, 2, 3]; track i) {
+            <div class="h-10 animate-pulse rounded-field bg-n100"></div>
+          }
+        </div>
+      } @else {
+        <div class="flex flex-col gap-2">
+          @for (row of rows(); track row.key) {
+            <div
+              data-testid="platform-flag-row"
+              class="flex flex-wrap items-center gap-3 rounded-field border border-n200 px-3 py-2"
+            >
+              <p class="min-w-0 flex-1 truncate text-sm font-medium text-n900">
+                {{ label(row.key) }}
+              </p>
+              <ui-tag [variant]="row.enabled ? 'easy' : 'hard'">{{
+                row.enabled ? 'Permitido' : 'Cortado'
+              }}</ui-tag>
+              @if (row.enabled) {
+                <div data-testid="platform-flag-cut">
+                  <ui-button
+                    variant="ghost"
+                    [disabled]="saving() === row.key"
+                    (clicked)="set(row, false)"
+                    ><span class="text-hard-text">Cortar para todos</span></ui-button
+                  >
+                </div>
+              } @else {
+                <div data-testid="platform-flag-restore">
+                  <ui-button
+                    variant="ghost"
+                    [disabled]="saving() === row.key"
+                    (clicked)="set(row, true)"
+                    >Restaurar</ui-button
+                  >
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
+</section>

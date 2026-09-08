@@ -1,4 +1,4 @@
-import { Role } from "@exams-generator/shared";
+import { FeatureFlag, Role } from "@exams-generator/shared";
 import {
   BadRequestException,
   Body,
@@ -24,6 +24,8 @@ import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
 import { RolesGuard } from "../auth/roles.guard";
+import { FeatureFlagGuard } from "../feature-flags/feature-flag.guard";
+import { RequiresFeature } from "../feature-flags/requires-feature.decorator";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ExamVersionGenerationService } from "./exam-generation.service";
 import { ExamVersionJobEventsService } from "./exam-version-job-events.service";
@@ -116,7 +118,7 @@ const TERMINAL_JOB_STATUSES: readonly GenerationJobStatus[] = ["completed", "fai
  * too).
  */
 @Controller("exams")
-@UseGuards(JwtAuthGuard, RolesGuard)
+@UseGuards(JwtAuthGuard, RolesGuard, FeatureFlagGuard)
 @Roles(Role.Teacher, Role.SchoolAdmin)
 export class ExamsController {
   constructor(
@@ -331,6 +333,10 @@ export class ExamsController {
    * the success path changed shape, from `GeneratedVersionResult[]` to a job
    * the caller follows via `jobs/:jobId/stream`.
    */
+  // Only the route that STARTS generation. `GET :examId/versions` and
+  // `GET :examId/versions/zip` stay open: PDFs already generated are
+  // the school's own data, not a feature to withdraw.
+  @RequiresFeature(FeatureFlag.ExamVersions)
   @Post(":examId/versions")
   @HttpCode(HttpStatus.ACCEPTED)
   async generateVersions(

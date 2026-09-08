@@ -22,6 +22,7 @@ import {
   topics,
   users,
 } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { STORAGE_PORT } from "../bank/bank.constants";
 import { isTypstAvailableSync } from "./adapters/pdf/test-utils/typst-availability";
@@ -114,6 +115,7 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
       .values({ name: `AI-Exam E2E Tenant ${suffix}`, slug: `ai-exam-e2e-tenant-${suffix}` })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

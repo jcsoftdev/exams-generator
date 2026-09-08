@@ -31,11 +31,15 @@ const TERMINAL_STATUSES: readonly string[] = ["completed", "failed", "cancelled"
  * done. Same guard as `AiController` (any authenticated tenant user, no
  * role restriction).
  */
+import { FeatureFlag } from "@exams-generator/shared";
+import { FeatureFlagGuard } from "../feature-flags/feature-flag.guard";
+import { RequiresFeature } from "../feature-flags/requires-feature.decorator";
+
 @Controller("ai/questions/jobs")
 // Same account-keyed limit as `AiController` — enqueuing a job is the most
 // expensive thing an account can do here. Guard order matters; see
 // `account-throttler.guard.ts`.
-@UseGuards(JwtAuthGuard, AccountThrottlerGuard)
+@UseGuards(JwtAuthGuard, AccountThrottlerGuard, FeatureFlagGuard)
 @Throttle(AI_PER_ACCOUNT_THROTTLE)
 export class AiJobsController {
   constructor(
@@ -43,6 +47,11 @@ export class AiJobsController {
     private readonly events: GenerationJobEventsService,
   ) {}
 
+  // Gated ALONE, never at class level: `GET :id/stream` and
+  // `POST :id/cancel` must keep working after the flag goes off, or a
+  // school loses the ability to watch or stop a job that is still
+  // spending its budget.
+  @RequiresFeature(FeatureFlag.AiGeneration)
   @Post()
   @HttpCode(HttpStatus.ACCEPTED)
   async create(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateGenerationJobDto) {

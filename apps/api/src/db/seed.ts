@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { Role } from "@exams-generator/shared";
+import { Role, FEATURE_FLAG_KEYS } from "@exams-generator/shared";
 import { and, eq, inArray, isNull, sql } from "drizzle-orm";
 import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level";
 import type { GradeLevel, Stage } from "../modules/exams/domain/value-objects/grade-level";
@@ -26,6 +26,7 @@ import {
   questions,
   subtopics,
   syllabusWeekMaps,
+  tenantFeatureFlags,
   tenants,
   topicGrades,
   topics,
@@ -2171,6 +2172,16 @@ async function seedDemoTenant(): Promise<string> {
   if (!tenant) {
     throw new Error(`Seed invariant violated: tenant '${DEMO_TENANT.slug}' missing after insert`);
   }
+
+  // The demo tenant gets every feature. Three of them (`ai_generation`,
+  // `ai_extraction`, `exam_versions`) start OFF in the catalog, which is the
+  // right default for a real school being onboarded onto a plan and the
+  // wrong one for a developer who just ran the seed and finds half the app
+  // answering 403. Idempotent like the rest of this function.
+  await db
+    .insert(tenantFeatureFlags)
+    .values(FEATURE_FLAG_KEYS.map((key) => ({ tenantId: tenant.id, key, enabled: true })))
+    .onConflictDoNothing({ target: [tenantFeatureFlags.tenantId, tenantFeatureFlags.key] });
 
   return tenant.id;
 }

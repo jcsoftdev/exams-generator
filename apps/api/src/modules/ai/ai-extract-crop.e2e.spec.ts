@@ -11,6 +11,7 @@ import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { tenants, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { REDIS_CLIENT } from "../../common/redis.provider";
 import { TokenService } from "../auth/token.service";
 import { isTesseractAvailableSync } from "./adapters/ocr/test-utils/tesseract-availability";
@@ -97,6 +98,7 @@ describeIfTesseract("POST /ai/questions/extract/:extractionId/crop (e2e)", () =>
       .values({ name: `AI Extract Crop E2E Tenant ${suffix}`, slug: `ai-extract-crop-e2e-tenant-${suffix}` })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

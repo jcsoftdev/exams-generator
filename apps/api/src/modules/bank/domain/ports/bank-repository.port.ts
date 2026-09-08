@@ -9,6 +9,29 @@ import { QuestionStatus, QuestionType } from "../../../../db/schema/enums";
  * `import { XRecord } from "./bank.repository"` sites keep resolving.
  */
 
+/**
+ * Who is asking, and whether the central bank is part of their bank.
+ *
+ * This replaced a bare `currentTenantId: string | null` on every method
+ * below. The scalar forced each call site to re-derive the visibility rule
+ * itself, and `bank.repository.ts` ended up with eleven hand-copied versions
+ * of `tenant_id IS NULL OR tenant_id = :current` — while `exams.repository.ts`
+ * had the same rule factored into one helper, carrying a comment saying it
+ * must not be duplicated. Threading the `global_bank` feature flag through
+ * eleven copies is how one of them silently keeps showing central questions.
+ *
+ * `includeGlobal` is resolved ONCE, in `BankService`, from that flag.
+ */
+export interface QuestionScope {
+  /** The requesting user's own tenant. `null` = platform staff. */
+  readonly tenantId: string | null;
+  /**
+   * `false` when `global_bank` is off for this caller: central questions
+   * (`tenant_id IS NULL`) drop out of every listing, lookup and count.
+   */
+  readonly includeGlobal: boolean;
+}
+
 export interface CreateImageQuestionRecord {
   readonly tenantId: string | null;
   readonly topicId: string;
@@ -125,8 +148,8 @@ export interface QuestionListItem {
 }
 
 export interface QuestionListFilter {
-  /** The requesting user's own tenant (null = platform staff). */
-  readonly currentTenantId: string | null;
+  /** Who is asking, and whether central questions count as theirs. */
+  readonly scope: QuestionScope;
   readonly courseId?: string;
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
@@ -170,7 +193,7 @@ export interface BankRepositoryPort {
     filter: QuestionListFilter,
     pagination: QuestionListPagination,
   ): Promise<{ items: QuestionListItem[]; total: number }>;
-  findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined>;
+  findQuestionById(id: string, scope: QuestionScope): Promise<QuestionListItem | undefined>;
   /**
    * Files/unfiles a question, tenant-scoped. Separate from
    * `updateStructuredQuestionAndTaxonomy` on purpose: filing applies to BOTH
@@ -179,7 +202,7 @@ export interface BankRepositoryPort {
    */
   setQuestionFolder(
     id: string,
-    tenantId: string | null,
+    scope: QuestionScope,
     folderId: string | null,
   ): Promise<QuestionListItem | undefined>;
   /**
@@ -202,12 +225,12 @@ export interface BankRepositoryPort {
   ): Promise<{ courseName: string; topicName: string } | undefined>;
   approveQuestion(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
   ): Promise<{ id: string; status: QuestionStatus } | undefined>;
-  rejectQuestion(id: string, currentTenantId: string | null): Promise<boolean>;
+  rejectQuestion(id: string, scope: QuestionScope): Promise<boolean>;
   updateStructuredQuestion(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     patch: UpdateStructuredQuestionRecord,
   ): Promise<QuestionListItem | undefined>;
   topicExists(topicId: string): Promise<boolean>;
@@ -221,18 +244,18 @@ export interface BankRepositoryPort {
   getSubtopicTopicId(subtopicId: string): Promise<string | undefined>;
   updateStructuredQuestionAndTaxonomy(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     contentPatch: UpdateStructuredQuestionRecord,
     taxonomyPatch: { topicId?: string; difficulty?: string; gradeLevel?: string },
   ): Promise<QuestionListItem | undefined>;
   updateImageQuestionTaxonomyAndCorrectAnswer(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     patch: { correctAnswer?: string; topicId?: string; difficulty?: string; gradeLevel?: string },
   ): Promise<QuestionListItem | undefined>;
   replaceImageAsset(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     image: { readonly storageKey: string; readonly mime: string },
   ): Promise<string | undefined>;
   /**
@@ -247,7 +270,7 @@ export interface BankRepositoryPort {
    */
   setAlternativeImages(
     id: string,
-    currentTenantId: string | null,
+    scope: QuestionScope,
     images: readonly {
       readonly storageKey: string;
       readonly mime: string;
@@ -256,5 +279,5 @@ export interface BankRepositoryPort {
   ): Promise<string | undefined>;
   updateStatus(id: string, status: QuestionStatus): Promise<void>;
   deleteQuestion(id: string): Promise<void>;
-  countByDifficultyAndStatus(tenantId: string | null): Promise<BankStatusDifficultyCount[]>;
+  countByDifficultyAndStatus(scope: QuestionScope): Promise<BankStatusDifficultyCount[]>;
 }

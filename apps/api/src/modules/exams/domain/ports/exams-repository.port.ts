@@ -152,6 +152,12 @@ export interface QuestionPoolFilter {
   /** The requesting tenant. Exams always belong to a tenant (never central). */
   readonly tenantId: string;
   readonly gradeLevel: string;
+  /**
+   * `false` when `global_bank` is off for this school: the pool, the stock
+   * counts and the replace candidates all shrink to the school's own
+   * questions. Resolved by `ExamsService`, never by the repository.
+   */
+  readonly includeGlobal: boolean;
 }
 
 export interface SaveSelectionEntry {
@@ -282,7 +288,7 @@ export interface ExamsRepositoryPort {
   getBlueprintRows(examId: string): Promise<BlueprintRowRecord[]>;
   getQuestionPool(filter: QuestionPoolFilter): Promise<QuestionPoolCandidateRecord[]>;
   countStock(filter: QuestionPoolFilter, cells: readonly StockCellFilter[]): Promise<number[]>;
-  countApprovedByGradeLevel(tenantId: string): Promise<GradeLevelStockRecord[]>;
+  countApprovedByGradeLevel(tenantId: string, includeGlobal: boolean): Promise<GradeLevelStockRecord[]>;
   renameExam(examId: string, tenantId: string, title: string): Promise<boolean>;
   saveSelection(examId: string, selections: readonly SaveSelectionEntry[]): Promise<void>;
   getSelectedQuestionIds(examId: string): Promise<string[]>;

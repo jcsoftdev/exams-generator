@@ -88,9 +88,20 @@ const logoAssets = alias(assets, "logo_assets");
  * question bank on behalf of an exam (`getQuestionPool`, `countStock`):
  * `tenant_id IS NULL OR tenant_id = :tenant` (B1-R7 — must not be
  * duplicated).
+ *
+ * `includeGlobal` is the `global_bank` flag's answer for this school. With
+ * it off the central half drops and the school builds exams out of its own
+ * bank alone. Note this governs what can be CHOSEN, not what has already
+ * been chosen: `getExamQuestions` renders an exam's stored selection with no
+ * visibility predicate at all, so exams built while the flag was on keep
+ * printing exactly as they were confirmed.
  */
-function questionVisibility(tenantId: string): SQL {
-  return or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL;
+function questionVisibility(tenantId: string, includeGlobal: boolean): SQL {
+  return (
+    includeGlobal
+      ? or(isNull(questions.tenantId), eq(questions.tenantId, tenantId))
+      : eq(questions.tenantId, tenantId)
+  ) as SQL;
 }
 
 /**
@@ -360,7 +371,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * place that decides tenant visibility for exam question selection.
    */
   async getQuestionPool(filter: QuestionPoolFilter): Promise<QuestionPoolCandidateRecord[]> {
-    const visibility = questionVisibility(filter.tenantId);
+    const visibility = questionVisibility(filter.tenantId, filter.includeGlobal);
 
     return this.db
       .select({
@@ -384,7 +395,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * group that still matches the cell's other criteria.
    */
   async countStock(filter: QuestionPoolFilter, cells: readonly StockCellFilter[]): Promise<number[]> {
-    const visibility = questionVisibility(filter.tenantId);
+    const visibility = questionVisibility(filter.tenantId, filter.includeGlobal);
 
     const groups = await this.db
       .select({
@@ -444,11 +455,14 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * Grades with nothing available are simply absent from the result (a
    * `GROUP BY` has no row to return for them); the caller treats missing as 0.
    */
-  async countApprovedByGradeLevel(tenantId: string): Promise<GradeLevelStockRecord[]> {
+  async countApprovedByGradeLevel(
+    tenantId: string,
+    includeGlobal: boolean,
+  ): Promise<GradeLevelStockRecord[]> {
     const rows = await this.db
       .select({ gradeLevel: questions.gradeLevel, total: count() })
       .from(questions)
-      .where(and(questionVisibility(tenantId), eq(questions.status, "approved")))
+      .where(and(questionVisibility(tenantId, includeGlobal), eq(questions.status, "approved")))
       .groupBy(questions.gradeLevel);
 
     return rows.map((row) => ({ gradeLevel: row.gradeLevel, available: Number(row.total) }));

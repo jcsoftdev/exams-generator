@@ -25,6 +25,9 @@ import {
 import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { FeatureFlag } from "@exams-generator/shared";
+import { FeatureFlagGuard } from "../feature-flags/feature-flag.guard";
+import { RequiresFeature } from "../feature-flags/requires-feature.decorator";
 import { AuthTokenPayload } from "../auth/token.service";
 import { NormalizedBox } from "./domain/normalized-box";
 import { ExtractQuestionService } from "./extract-question.service";
@@ -101,7 +104,7 @@ const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
 // Order matters: `AccountThrottlerGuard` reads `request.user`, which only
 // exists after `JwtAuthGuard` has verified the token. Guards run in the order
 // they are listed (audit 2026-08-20, M9).
-@UseGuards(JwtAuthGuard, AccountThrottlerGuard)
+@UseGuards(JwtAuthGuard, AccountThrottlerGuard, FeatureFlagGuard)
 @Throttle(AI_PER_ACCOUNT_THROTTLE)
 export class AiController {
   constructor(
@@ -126,6 +129,7 @@ export class AiController {
    * not-found taxonomy, AI/compile error) is carried inside a `done` event's
    * `result.failed` instead of an HTTP error status.
    */
+  @RequiresFeature(FeatureFlag.AiGeneration)
   @Post("generate/stream")
   @HttpCode(200)
   async generateStream(
@@ -171,6 +175,7 @@ export class AiController {
    * created, the response is a revised-but-unsaved draft the caller may
    * later persist via the existing edit endpoint.
    */
+  @RequiresFeature(FeatureFlag.AiGeneration)
   @Post(":id/revise")
   @HttpCode(200)
   async revise(
@@ -192,6 +197,7 @@ export class AiController {
    * persist via the existing bank creation endpoints. No `:id` — unlike
    * `revise`, there is no existing question to look up.
    */
+  @RequiresFeature(FeatureFlag.AiExtraction)
   @Post("extract")
   @HttpCode(200)
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
@@ -214,6 +220,7 @@ export class AiController {
    * box the teacher drew. 200, never 201: nothing is created, and the photo it
    * reads was cached by the extraction call, not by this one.
    */
+  @RequiresFeature(FeatureFlag.AiExtraction)
   @Post("extract/:extractionId/crop")
   @HttpCode(200)
   @Throttle(AI_CROP_PER_ACCOUNT_THROTTLE)

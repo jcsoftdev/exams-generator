@@ -9,14 +9,15 @@ import {
   viewChild,
 } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { MeResponseDto, Role } from '@exams-generator/shared';
+import { FeatureFlag, MeResponseDto, Role } from '@exams-generator/shared';
 import { LucideAngularModule } from 'lucide-angular';
 import { SidebarComponent } from '../../ui/sidebar/sidebar.component';
 import { TopbarComponent } from '../../ui/topbar/topbar.component';
 import { TagComponent } from '../../ui/tag/tag.component';
 import { LiveRegionComponent } from '../../ui/live-region/live-region.component';
-import { NavGroup } from '../../ui/ui.types';
+import { NavGroup, NavItem } from '../../ui/ui.types';
 import { AuthService } from '../../core/auth/auth.service';
+import { FeatureFlagsStore } from '../../core/features/feature-flags.store';
 import { roleLabel } from '../../core/auth/role-label.util';
 import { TenantSettingsService } from '../tenant-settings/tenant-settings.service';
 import { DraftCountService } from '../ai/draft-count.service';
@@ -75,6 +76,8 @@ export class ShellComponent {
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
   private readonly authService = inject(AuthService);
+
+  private readonly features = inject(FeatureFlagsStore);
   private readonly tenantSettings = inject(TenantSettingsService);
   private readonly router = inject(Router);
   private readonly draftCount = inject(DraftCountService);
@@ -120,20 +123,27 @@ export class ShellComponent {
         (item) => item.route !== '/app/exams' || (role !== null && EXAMS_ROLES.includes(role)),
       ),
     };
-    const inteligenciaGroup: NavGroup = {
-      title: 'Inteligencia',
-      items: [
-        { label: 'Generar con IA', route: '/app/ai/generate', icon: 'sparkles' },
-        {
-          label: 'Cola de revisión',
-          route: '/app/ai/review',
-          icon: 'inbox',
-          ...(pendingDrafts !== null ? { badge: pendingDrafts } : {}),
-        },
-        { label: 'Historial IA', route: '/app/ai/jobs', icon: 'history' },
-      ],
-    };
-    const groups: NavGroup[] = [principalGroup, inteligenciaGroup];
+    // "Generar con IA" is the way IN, so it follows `ai_generation`. The
+    // review queue and the history are the way OUT — drafts already
+    // generated and jobs already run are the school's own work, and hiding
+    // them would strand a queue nobody can empty. Same rule the API applies
+    // to its own routes.
+    const aiItems: NavItem[] = [];
+    if (this.features.isEnabled(FeatureFlag.AiGeneration)) {
+      aiItems.push({ label: 'Generar con IA', route: '/app/ai/generate', icon: 'sparkles' });
+    }
+    aiItems.push({
+      label: 'Cola de revisión',
+      route: '/app/ai/review',
+      icon: 'inbox',
+      ...(pendingDrafts !== null ? { badge: pendingDrafts } : {}),
+    });
+    aiItems.push({ label: 'Historial IA', route: '/app/ai/jobs', icon: 'history' });
+
+    const groups: NavGroup[] = [principalGroup];
+    if (aiItems.length > 0) {
+      groups.push({ title: 'Inteligencia', items: aiItems });
+    }
     if (role === Role.SchoolAdmin) {
       groups.push(COLEGIO_GROUP);
     }
@@ -163,7 +173,12 @@ export class ShellComponent {
     // guard needed. Still swallows the error the same way: the identity
     // block in the menu just doesn't render, "Cerrar sesión" always does.
     this.authService.me().subscribe({
-      next: (user) => this.currentUser.set(user),
+      next: (user) => {
+        this.currentUser.set(user);
+        // The same response carries the flags, so the app-wide store fills
+        // here rather than paying for a second `/auth/me`.
+        this.features.applyFrom(user);
+      },
       error: () => {},
     });
 

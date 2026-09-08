@@ -22,6 +22,7 @@ import {
   users,
 } from "../../db/schema";
 import { STORAGE_PORT } from "../bank/bank.constants";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { StoragePort } from "./domain/ports/storage.port";
 
@@ -73,6 +74,7 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
       })
       .returning({ id: tenants.id });
     tenantAId = tenantA!.id;
+    await grantFeaturesFixture(tenantAId);
 
     const [teacherA] = await db
       .insert(users)

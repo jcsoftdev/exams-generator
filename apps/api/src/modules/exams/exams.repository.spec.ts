@@ -299,7 +299,11 @@ describe("ExamsRepository", () => {
         gradeLevel: "secundaria_2",
       });
 
-      const pool = await repository.getQuestionPool({ tenantId: tenantAId, gradeLevel: "secundaria_2" });
+      const pool = await repository.getQuestionPool({
+        tenantId: tenantAId,
+        gradeLevel: "secundaria_2",
+        includeGlobal: true,
+      });
 
       expect(pool.map((c) => c.id)).toContain(centralId);
     });
@@ -311,7 +315,11 @@ describe("ExamsRepository", () => {
         gradeLevel: "secundaria_3",
       });
 
-      const pool = await repository.getQuestionPool({ tenantId: tenantAId, gradeLevel: "secundaria_3" });
+      const pool = await repository.getQuestionPool({
+        tenantId: tenantAId,
+        gradeLevel: "secundaria_3",
+        includeGlobal: true,
+      });
 
       expect(pool.map((c) => c.id)).toContain(privateId);
     });
@@ -323,7 +331,11 @@ describe("ExamsRepository", () => {
         gradeLevel: "secundaria_4",
       });
 
-      const poolForB = await repository.getQuestionPool({ tenantId: tenantBId, gradeLevel: "secundaria_4" });
+      const poolForB = await repository.getQuestionPool({
+        tenantId: tenantBId,
+        gradeLevel: "secundaria_4",
+        includeGlobal: true,
+      });
 
       expect(poolForB.map((c) => c.id)).not.toContain(privateToA);
     });
@@ -336,7 +348,11 @@ describe("ExamsRepository", () => {
         status: "draft",
       });
 
-      const pool = await repository.getQuestionPool({ tenantId: tenantAId, gradeLevel: "secundaria_1" });
+      const pool = await repository.getQuestionPool({
+        tenantId: tenantAId,
+        gradeLevel: "secundaria_1",
+        includeGlobal: true,
+      });
 
       expect(pool.map((c) => c.id)).not.toContain(draftId);
     });
@@ -348,7 +364,11 @@ describe("ExamsRepository", () => {
         gradeLevel: "pre",
       });
 
-      const pool = await repository.getQuestionPool({ tenantId: tenantAId, gradeLevel: "primaria_2" });
+      const pool = await repository.getQuestionPool({
+        tenantId: tenantAId,
+        gradeLevel: "primaria_2",
+        includeGlobal: true,
+      });
 
       expect(pool.map((c) => c.id)).not.toContain(wrongGradeId);
     });
@@ -381,7 +401,7 @@ describe("ExamsRepository", () => {
         difficulty: Difficulty.Easy,
       });
 
-      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel, includeGlobal: true }, [
         { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy },
       ]);
 
@@ -398,7 +418,7 @@ describe("ExamsRepository", () => {
         difficulty: Difficulty.Easy,
       });
 
-      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel, includeGlobal: true }, [
         { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Hard },
       ]);
 
@@ -437,7 +457,7 @@ describe("ExamsRepository", () => {
         topicId: cellB.topicId,
       });
 
-      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel, includeGlobal: true }, [
         { courseId: cellA.courseId, topicId: cellA.topicId, difficulty: Difficulty.Easy },
         { courseId: cellA.courseId, topicId: cellA.topicId, difficulty: Difficulty.Medium },
         { courseId: cellA.courseId, topicId: cellA.topicId, difficulty: Difficulty.Hard },
@@ -465,7 +485,7 @@ describe("ExamsRepository", () => {
       });
       await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId });
 
-      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel, includeGlobal: true }, [
         { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy },
       ]);
 
@@ -475,7 +495,7 @@ describe("ExamsRepository", () => {
     it("returns 0 (not an error) for a cell whose courseId/topicId has zero matching questions", async () => {
       const cell = await createCourseAndTopic();
 
-      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel, includeGlobal: true }, [
         { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy },
       ]);
 
@@ -1152,7 +1172,7 @@ describe("ExamsRepository", () => {
      * dashboard's `countByStatus` tests already use.
      */
     async function availableFor(tenantId: string, gradeLevel: string): Promise<number> {
-      const counts = await repository.countApprovedByGradeLevel(tenantId);
+      const counts = await repository.countApprovedByGradeLevel(tenantId, true);
       return counts.find((row) => row.gradeLevel === gradeLevel)?.available ?? 0;
     }
 
@@ -1207,7 +1227,7 @@ describe("ExamsRepository", () => {
     });
 
     it("omits grade levels with nothing available (the caller treats a missing row as 0)", async () => {
-      const counts = await repository.countApprovedByGradeLevel(tenantAId);
+      const counts = await repository.countApprovedByGradeLevel(tenantAId, true);
 
       expect(counts.every((row) => row.available > 0)).toBe(true);
     });

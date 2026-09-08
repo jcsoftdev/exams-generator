@@ -64,12 +64,47 @@ module.exports = {
       setupFilesAfterEnv: ["<rootDir>/test-support/jest-timeout.ts"],
     },
     {
+      // The feature-flag suites mutate state that is GLOBAL by construction,
+      // which no amount of per-suite fixture hygiene can isolate:
+      //
+      //  - `feature-flags.e2e.spec.ts` writes `platform_feature_flags`, whose
+      //    rows have no tenant column at all. It cuts `ai_generation` for
+      //    EVERYONE for the length of one assertion; a parallel AI suite
+      //    landing in that window gets a 403 that looks like its own bug.
+      //  - `global-bank-flag.e2e.spec.ts` creates a CENTRAL question
+      //    (`tenant_id IS NULL`), which by definition appears in every
+      //    tenant's bank listing and folder-tree badge while it exists.
+      //
+      // Same shape and same reasoning as `db-serial` above: its own project
+      // so the `test` script can run it with `--runInBand` instead of
+      // serializing the whole e2e lane to isolate two files. Everything else
+      // in this project is copied from `e2e` — these suites boot the real
+      // AppModule and BullMQ and need the same setup and timeout budget.
+      displayName: "e2e-serial",
+      preset: "ts-jest",
+      transform: { "^.+\\.ts$": ["ts-jest", { isolatedModules: true }] },
+      testEnvironment: "node",
+      rootDir: "src",
+      testRegex: "(modules/feature-flags/feature-flags|modules/bank/global-bank-flag)\\.e2e\\.spec\\.ts$",
+      moduleFileExtensions: ["js", "json", "ts"],
+      moduleNameMapper,
+      setupFilesAfterEnv: ["<rootDir>/test-support/jest-timeout.ts"],
+      setupFiles: ["<rootDir>/test-support/jest-setup.ts"],
+      globalSetup: "<rootDir>/test-support/jest-global-setup.ts",
+    },
+    {
       displayName: "e2e",
       preset: "ts-jest",
       transform: { "^.+\\.ts$": ["ts-jest", { isolatedModules: true }] },
       testEnvironment: "node",
       rootDir: "src",
       testRegex: "\\.e2e\\.spec\\.ts$",
+      // The two feature-flag suites are excluded here and given their own
+      // serial project below — see the comment there.
+      testPathIgnorePatterns: [
+        "<rootDir>/modules/feature-flags/feature-flags\\.e2e\\.spec\\.ts$",
+        "<rootDir>/modules/bank/global-bank-flag\\.e2e\\.spec\\.ts$",
+      ],
       moduleFileExtensions: ["js", "json", "ts"],
       moduleNameMapper,
       // The e2e suites exercise the REAL Typst compiler and real Postgres

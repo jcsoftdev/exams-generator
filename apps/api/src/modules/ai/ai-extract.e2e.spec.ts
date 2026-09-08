@@ -9,6 +9,7 @@ import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { tenants, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { InMemoryQuestionGeneratorAdapter } from "./adapters/in-memory-question-generator.adapter";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
@@ -49,6 +50,7 @@ describe("POST /ai/questions/extract (e2e)", () => {
       .values({ name: `AI Extract E2E Tenant ${suffix}`, slug: `ai-extract-e2e-tenant-${suffix}` })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

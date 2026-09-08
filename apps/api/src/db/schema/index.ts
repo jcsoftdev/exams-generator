@@ -20,3 +20,4 @@ export * from "./exam-blueprint-templates.schema";
 export * from "./exam-blueprint-template-rows.schema";
 export * from "./syllabus-week-maps.schema";
 export * from "./cycles.schema";
+export * from "./feature-flags.schema";

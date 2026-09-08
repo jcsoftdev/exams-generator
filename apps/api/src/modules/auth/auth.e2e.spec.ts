@@ -239,6 +239,17 @@ describe("Auth (e2e)", () => {
         email: schoolAdminTenantA.email,
         role: Role.SchoolAdmin,
         tenantId: tenantA.id,
+        // Rides here rather than in the JWT: a token lives 8h and does not
+        // refresh, so a feature switched off this morning would keep
+        // reading as on for the rest of the school day. This tenant has no
+        // overrides, so these are the catalog defaults.
+        features: {
+          global_bank: true,
+          tenant_branding: true,
+          ai_generation: false,
+          ai_extraction: false,
+          exam_versions: false,
+        },
       });
     });
 
@@ -260,7 +271,7 @@ describe("Auth (e2e)", () => {
 
       expect(res.status).toBe(200);
       expect(res.body.passwordHash).toBeUndefined();
-      expect(Object.keys(res.body).sort()).toEqual(["email", "id", "name", "role", "tenantId"]);
+      expect(Object.keys(res.body).sort()).toEqual(["email", "features", "id", "name", "role", "tenantId"]);
     });
 
     it("returns 401 with no Authorization header", async () => {

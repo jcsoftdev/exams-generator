@@ -10,6 +10,7 @@ import { AuthModule } from "./modules/auth/auth.module";
 import { BankModule } from "./modules/bank/bank.module";
 import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { ExamsModule } from "./modules/exams/exams.module";
+import { FeatureFlagsModule } from "./modules/feature-flags/feature-flags.module";
 import { HealthModule } from "./modules/health/health.module";
 import { MetricsModule } from "./modules/metrics/metrics.module";
 import { QueueModule } from "./common/queue.module";
@@ -67,6 +68,7 @@ import { UsersModule } from "./modules/users/users.module";
     BankModule,
     TenantsModule,
     ExamsModule,
+    FeatureFlagsModule,
     AiModule,
     TaxonomyModule,
     AssetsModule,

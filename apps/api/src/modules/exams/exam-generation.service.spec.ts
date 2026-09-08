@@ -9,6 +9,7 @@ import {
   TypstCompilationError,
 } from "./domain/ports/pdf-compiler.port";
 import { AuthTokenPayload } from "../auth/token.service";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { ExamForGenerationRecord, ExamsRepository } from "./exams.repository";
 import { ExamPdfGenerationError, ExamVersionGenerationService } from "./exam-generation.service";
 
@@ -114,15 +115,20 @@ function buildDeps() {
   // Only `error` is exercised; the service takes the nestjs-pino Logger.
   const logger = { error: jest.fn() } as unknown as import("nestjs-pino").Logger;
 
+  const features = {
+    isEnabled: jest.fn().mockResolvedValue(true),
+  } as unknown as jest.Mocked<FeatureFlagsService>;
+
   const service = new ExamVersionGenerationService(
     repository,
     storage,
     pdfCompiler,
+    features,
     () => createSeededRng(7),
     logger,
   );
 
-  return { service, repository, storage, pdfCompiler, logger };
+  return { service, repository, storage, pdfCompiler, logger, features };
 }
 
 /**

@@ -10,6 +10,7 @@ import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { tenants, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { InMemoryQuestionGeneratorAdapter } from "./adapters/in-memory-question-generator.adapter";
 import { isTesseractAvailableSync } from "./adapters/ocr/test-utils/tesseract-availability";
@@ -88,6 +89,7 @@ describeIfTesseract("POST /ai/questions/extract — OCR figure detection (golden
       .values({ name: `AI Extract OCR E2E Tenant ${suffix}`, slug: `ai-extract-ocr-e2e-tenant-${suffix}` })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

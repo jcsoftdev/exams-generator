@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FeatureFlagsStore } from '../../../core/features/feature-flags.store';
 import { By } from '@angular/platform-browser';
 import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import { Observable, Subject, TimeoutError, of, throwError } from 'rxjs';
@@ -94,6 +95,7 @@ const FOLDERS: BankFolderNode[] = [
 
 function setup(
   over: {
+    aiExtractionEnabled?: boolean;
     uploadImpl?: () => unknown;
     structuredImpl?: () => unknown;
     replaceImageImpl?: () => unknown;
@@ -157,6 +159,13 @@ function setup(
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
     providers: [
+      // Written when the photo tab was unconditional. "On" keeps every
+      // assertion here meaning what it was written to mean; the flag's own
+      // effect on the tab is covered by its dedicated spec.
+      {
+        provide: FeatureFlagsStore,
+        useValue: { isEnabled: () => over.aiExtractionEnabled ?? true },
+      },
       {
         provide: BankService,
         useValue: {
@@ -3691,6 +3700,24 @@ describe('BankNewComponent', () => {
 
       expect(localComponent.sCourseId()).toBe('c1');
       expect(localComponent.sTopicId()).toBe('t1');
+    });
+  });
+
+  describe('permisos del colegio', () => {
+    it('esconde la pestaña de foto cuando el plan no incluye extracción con IA', () => {
+      const { compiled } = setup({ aiExtractionEnabled: false });
+
+      expect(compiled.querySelector('[data-testid="tab-photo"]')).toBeNull();
+      expect(compiled.querySelector('[data-testid="tab-photo-panel"]')).toBeNull();
+    });
+
+    it('abre en "Escribir pregunta", que nunca fue un permiso pagado', () => {
+      const { compiled } = setup({ aiExtractionEnabled: false });
+
+      // Sin esto la pantalla arrancaría en una pestaña que ya no existe y
+      // se vería vacía: la foto era la pestaña por defecto.
+      expect(compiled.querySelector('[data-testid="tab-structured"]')).not.toBeNull();
+      expect(compiled.querySelector('[data-testid="tab-structured-panel"]')).not.toBeNull();
     });
   });
 });

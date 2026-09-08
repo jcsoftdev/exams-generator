@@ -6,6 +6,8 @@
     </div>
   </div>
 
+  <app-platform-feature-flags></app-platform-feature-flags>
+
   @if (actionError()) {
     <p class="mb-4 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
       {{ actionError() }}
@@ -57,12 +59,23 @@
               t.active ? 'Desactivar' : 'Activar'
             }}</ui-button>
           </div>
+          <div data-testid="tenant-flags">
+            <ui-button variant="ghost" (clicked)="toggleFlags(t)">{{
+              flagsFor()?.id === t.id ? 'Ocultar permisos' : 'Permisos'
+            }}</ui-button>
+          </div>
           <div data-testid="tenant-delete">
             <ui-button variant="ghost" (clicked)="requestDelete(t)"
               ><span class="text-hard-text">Eliminar</span></ui-button
             >
           </div>
         </div>
+        @if (flagsFor()?.id === t.id) {
+          <app-tenant-feature-flags
+            [tenantId]="t.id"
+            [tenantName]="t.name"
+          ></app-tenant-feature-flags>
+        }
       }
     </div>
     <div class="mt-4">

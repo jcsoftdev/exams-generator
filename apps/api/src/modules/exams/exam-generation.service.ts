@@ -9,8 +9,10 @@ import {
   NotFoundException,
   Optional,
 } from "@nestjs/common";
+import { FeatureFlag } from "@exams-generator/shared";
 import { Logger } from "nestjs-pino";
 import { AuthTokenPayload } from "../auth/token.service";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { Version, buildVersions } from "./domain/version-shuffler";
 import { QuestionPlacement, groupIntoSections } from "./domain/exam-sections";
 import { pickReplacementQuestion } from "./domain/pick-replacement-question";
@@ -100,6 +102,7 @@ export class ExamVersionGenerationService {
     private readonly repository: ExamsRepository,
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
+    private readonly features: FeatureFlagsService,
     @Optional() rngFactory?: () => Rng,
     // Audit 2026-08-20 (L1): the swap-recovery error used bare console.error,
     // outside the structured pino stream. @Optional because a handful of unit
@@ -283,6 +286,7 @@ export class ExamVersionGenerationService {
     const pool = await this.repository.getQuestionPool({
       tenantId: exam.tenantId,
       gradeLevel: examRecord.gradeLevel,
+      includeGlobal: await this.features.isEnabled(FeatureFlag.GlobalBank, exam.tenantId),
     });
     const usedIds = await this.repository.getSelectedQuestionIds(exam.id);
     const replacement = pickReplacementQuestion({
@@ -671,8 +675,21 @@ export class ExamVersionGenerationService {
     return map;
   }
 
+  /**
+   * Where `tenant_branding` is actually enforced.
+   *
+   * A guard on `POST /tenants/:id/logo` would only stop NEW uploads: a logo
+   * uploaded while the flag was on would keep printing on every exam
+   * afterwards, which is the opposite of what switching the flag off means.
+   * So the check lives here, on the worker path that puts the file in front
+   * of Typst. The stored logo is left alone — the school keeps its asset and
+   * gets it back the moment the flag returns.
+   */
   private async materializeLogo(workDir: string, exam: ExamForGenerationRecord): Promise<string | undefined> {
     if (!exam.logoStorageKey) {
+      return undefined;
+    }
+    if (!(await this.features.isEnabled(FeatureFlag.TenantBranding, exam.tenantId))) {
       return undefined;
     }
     const bytes = await this.storage.get(exam.logoStorageKey);

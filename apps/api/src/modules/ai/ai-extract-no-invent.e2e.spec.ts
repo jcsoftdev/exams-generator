@@ -9,6 +9,7 @@ import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { tenants, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { QuestionGeneratorPort } from "./domain/ports/question-generator.port";
@@ -67,6 +68,7 @@ describe("POST /ai/questions/extract — does not invent alternatives or a key (
       })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

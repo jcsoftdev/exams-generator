@@ -1,8 +1,9 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Difficulty } from '@exams-generator/shared';
+import { Difficulty, FeatureFlag } from '@exams-generator/shared';
 import { LucideAngularModule, Shuffle, Check, Lock, ArrowRight, ChevronDown } from 'lucide-angular';
+import { FeatureFlagsStore } from '../../../core/features/feature-flags.store';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
@@ -55,6 +56,13 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
   templateUrl: './exam-review.component.html',
 })
 export class ExamReviewComponent implements OnInit {
+  private readonly features = inject(FeatureFlagsStore);
+
+  /** Hides the "Generar N formas" control when the school's plan excludes it. */
+  protected readonly canGenerateVersions = computed(() =>
+    this.features.isEnabled(FeatureFlag.ExamVersions),
+  );
+
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly examsService = inject(ExamsService);

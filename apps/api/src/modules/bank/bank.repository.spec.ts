@@ -16,7 +16,17 @@ import {
 } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import { BankRepository } from "./bank.repository";
+import { QuestionScope } from "./domain/ports/bank-repository.port";
 import { hashBodyTypst } from "./domain/hash-body-typst";
+
+/**
+ * Every existing assertion here was written when the central bank was always
+ * visible — `includeGlobal: true` is what keeps that meaning after
+ * `QuestionScope` replaced the bare `tenantId` these methods used to take.
+ */
+function scope(tenantId: string | null): QuestionScope {
+  return { tenantId, includeGlobal: true };
+}
 
 /**
  * Integration test against the real docker-compose Postgres — same pattern
@@ -250,7 +260,7 @@ describe("BankRepository", () => {
       bodyTypst: "$y - 3 = 5$, resuelve para $y$",
     });
 
-    const list = await repository.listQuestions({ currentTenantId: null });
+    const list = await repository.listQuestions({ scope: scope(null) });
     const listed = list.find((q) => q.id === id);
     expect(listed).toBeDefined();
     expect(listed?.type).toBe("structured");
@@ -258,7 +268,7 @@ describe("BankRepository", () => {
     expect(listed?.alternatives).toEqual(["1", "2", "3"]);
     expect(listed?.imageAssetId).toBeNull();
 
-    const byId = await repository.findQuestionById(id, null);
+    const byId = await repository.findQuestionById(id, scope(null));
     expect(byId?.type).toBe("structured");
     expect(byId?.bodyTypst).toBe("$y - 3 = 5$, resuelve para $y$");
   });
@@ -266,7 +276,7 @@ describe("BankRepository", () => {
   it("listQuestions() surfaces type='image' with null structured fields for image questions", async () => {
     const id = await createQuestion({ tenantId: null, createdBy: centralUserId });
 
-    const list = await repository.listQuestions({ currentTenantId: null });
+    const list = await repository.listQuestions({ scope: scope(null) });
     const listed = list.find((q) => q.id === id);
     expect(listed?.type).toBe("image");
     expect(listed?.bodyTypst).toBeNull();
@@ -283,7 +293,7 @@ describe("BankRepository", () => {
       sourceName: "UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4 (clave E)",
     });
 
-    const list = await repository.listQuestions({ currentTenantId: null });
+    const list = await repository.listQuestions({ scope: scope(null) });
     const listed = list.find((q) => q.id === id);
     expect(listed?.sourceName).toBe("UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4 (clave E)");
   });
@@ -292,8 +302,8 @@ describe("BankRepository", () => {
     it("a central (tenantId=null) question is visible to every tenant", async () => {
       const centralId = await createQuestion({ tenantId: null, createdBy: centralUserId });
 
-      const forTenantA = await repository.listQuestions({ currentTenantId: tenantAId });
-      const forTenantB = await repository.listQuestions({ currentTenantId: tenantBId });
+      const forTenantA = await repository.listQuestions({ scope: scope(tenantAId) });
+      const forTenantB = await repository.listQuestions({ scope: scope(tenantBId) });
 
       expect(forTenantA.map((q) => q.id)).toContain(centralId);
       expect(forTenantB.map((q) => q.id)).toContain(centralId);
@@ -302,8 +312,8 @@ describe("BankRepository", () => {
     it("a tenant-private question is NEVER visible to another tenant", async () => {
       const privateId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
 
-      const forTenantA = await repository.listQuestions({ currentTenantId: tenantAId });
-      const forTenantB = await repository.listQuestions({ currentTenantId: tenantBId });
+      const forTenantA = await repository.listQuestions({ scope: scope(tenantAId) });
+      const forTenantB = await repository.listQuestions({ scope: scope(tenantBId) });
 
       expect(forTenantA.map((q) => q.id)).toContain(privateId);
       expect(forTenantB.map((q) => q.id)).not.toContain(privateId);
@@ -312,9 +322,9 @@ describe("BankRepository", () => {
     it("is symmetric: tenant B's private question is NEVER visible to tenant A (or platform staff)", async () => {
       const privateId = await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId });
 
-      const forTenantB = await repository.listQuestions({ currentTenantId: tenantBId });
-      const forTenantA = await repository.listQuestions({ currentTenantId: tenantAId });
-      const forStaff = await repository.listQuestions({ currentTenantId: null });
+      const forTenantB = await repository.listQuestions({ scope: scope(tenantBId) });
+      const forTenantA = await repository.listQuestions({ scope: scope(tenantAId) });
+      const forStaff = await repository.listQuestions({ scope: scope(null) });
 
       expect(forTenantB.map((q) => q.id)).toContain(privateId);
       expect(forTenantA.map((q) => q.id)).not.toContain(privateId);
@@ -354,8 +364,8 @@ describe("BankRepository", () => {
       await putInExam(questionId, 1);
       await putInExam(questionId, 1);
 
-      const listed = await repository.listQuestions({ currentTenantId: tenantAId });
-      const byId = await repository.findQuestionById(questionId, tenantAId);
+      const listed = await repository.listQuestions({ scope: scope(tenantAId) });
+      const byId = await repository.findQuestionById(questionId, scope(tenantAId));
 
       expect(listed.find((q) => q.id === questionId)?.usedInExamCount).toBe(2);
       expect(byId?.usedInExamCount).toBe(2);
@@ -364,7 +374,7 @@ describe("BankRepository", () => {
     it("is 0 for a question no exam uses — not undefined, which the UI reads as 0 either way and cannot distinguish", async () => {
       const questionId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
 
-      const listed = await repository.listQuestions({ currentTenantId: tenantAId });
+      const listed = await repository.listQuestions({ scope: scope(tenantAId) });
 
       expect(listed.find((q) => q.id === questionId)?.usedInExamCount).toBe(0);
     });
@@ -374,8 +384,8 @@ describe("BankRepository", () => {
     it("returns a central (tenantId=null) question for any tenant", async () => {
       const centralId = await createQuestion({ tenantId: null, createdBy: centralUserId });
 
-      const forTenantA = await repository.findQuestionById(centralId, tenantAId);
-      const forTenantB = await repository.findQuestionById(centralId, tenantBId);
+      const forTenantA = await repository.findQuestionById(centralId, scope(tenantAId));
+      const forTenantB = await repository.findQuestionById(centralId, scope(tenantBId));
 
       expect(forTenantA?.id).toBe(centralId);
       expect(forTenantB?.id).toBe(centralId);
@@ -384,7 +394,7 @@ describe("BankRepository", () => {
     it("returns a tenant-private question to its own tenant", async () => {
       const privateId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
 
-      const result = await repository.findQuestionById(privateId, tenantAId);
+      const result = await repository.findQuestionById(privateId, scope(tenantAId));
 
       expect(result?.id).toBe(privateId);
     });
@@ -392,15 +402,15 @@ describe("BankRepository", () => {
     it("does NOT return a tenant-private question to another tenant (id enumeration guard)", async () => {
       const privateId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
 
-      const forTenantB = await repository.findQuestionById(privateId, tenantBId);
-      const forStaff = await repository.findQuestionById(privateId, null);
+      const forTenantB = await repository.findQuestionById(privateId, scope(tenantBId));
+      const forStaff = await repository.findQuestionById(privateId, scope(null));
 
       expect(forTenantB).toBeUndefined();
       expect(forStaff).toBeUndefined();
     });
 
     it("returns undefined for a non-existent id", async () => {
-      const result = await repository.findQuestionById(randomUUID(), tenantAId);
+      const result = await repository.findQuestionById(randomUUID(), scope(tenantAId));
 
       expect(result).toBeUndefined();
     });
@@ -473,7 +483,7 @@ describe("BankRepository", () => {
         bodyTypst: "$w/2 = 4$, resuelve para $w$",
       });
 
-      const drafts = await repository.listQuestions({ currentTenantId: null, status: "draft" });
+      const drafts = await repository.listQuestions({ scope: scope(null), status: "draft" });
       const ids = drafts.map((q) => q.id);
       expect(ids).toContain(draftId);
       expect(ids).not.toContain(approvedId);
@@ -531,7 +541,7 @@ describe("BankRepository", () => {
     it("approveQuestion() flips status draft -> approved, scoped to the requester's tenant visibility", async () => {
       const id = await createDraft(null, centralUserId);
 
-      const result = await repository.approveQuestion(id, null);
+      const result = await repository.approveQuestion(id, scope(null));
       expect(result?.status).toBe("approved");
 
       const [row] = await db
@@ -544,7 +554,7 @@ describe("BankRepository", () => {
     it("approveQuestion() returns undefined when the draft belongs to another tenant", async () => {
       const id = await createDraft(tenantAId, tenantAUserId);
 
-      const result = await repository.approveQuestion(id, tenantBId);
+      const result = await repository.approveQuestion(id, scope(tenantBId));
       expect(result).toBeUndefined();
 
       const [row] = await db
@@ -557,7 +567,7 @@ describe("BankRepository", () => {
     it("rejectQuestion() deletes the draft row, scoped to the requester's tenant visibility", async () => {
       const id = await createDraft(null, centralUserId);
 
-      const result = await repository.rejectQuestion(id, null);
+      const result = await repository.rejectQuestion(id, scope(null));
       expect(result).toBe(true);
 
       const [row] = await db
@@ -571,7 +581,7 @@ describe("BankRepository", () => {
     it("rejectQuestion() returns false and does NOT delete when the draft belongs to another tenant", async () => {
       const id = await createDraft(tenantAId, tenantAUserId);
 
-      const result = await repository.rejectQuestion(id, tenantBId);
+      const result = await repository.rejectQuestion(id, scope(tenantBId));
       expect(result).toBe(false);
 
       const [row] = await db
@@ -584,7 +594,7 @@ describe("BankRepository", () => {
     it("updateStructuredQuestion() overwrites bodyTypst/alternatives/correctAnswer/figureCode on a draft", async () => {
       const id = await createDraft(null, centralUserId);
 
-      const result = await repository.updateStructuredQuestion(id, null, {
+      const result = await repository.updateStructuredQuestion(id, scope(null), {
         bodyTypst: "edited body",
         alternatives: ["a", "b"],
         correctAnswer: "1",
@@ -606,7 +616,7 @@ describe("BankRepository", () => {
     it("updateStructuredQuestion() returns undefined when the draft belongs to another tenant", async () => {
       const id = await createDraft(tenantAId, tenantAUserId);
 
-      const result = await repository.updateStructuredQuestion(id, tenantBId, {
+      const result = await repository.updateStructuredQuestion(id, scope(tenantBId), {
         bodyTypst: "hacked",
         alternatives: ["x", "y"],
         correctAnswer: "0",
@@ -642,7 +652,7 @@ describe("BankRepository", () => {
       });
 
       const results = await repository.listQuestions({
-        currentTenantId: null,
+        scope: scope(null),
         courseId,
         topicId,
         difficulty: Difficulty.Hard,
@@ -670,7 +680,7 @@ describe("BankRepository", () => {
       const older = await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
       const newer = await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
 
-      const results = await repository.listQuestions({ currentTenantId: null, topicId });
+      const results = await repository.listQuestions({ scope: scope(null), topicId });
       const ids = results.map((q) => q.id);
 
       expect(ids.indexOf(newer)).toBeLessThan(ids.indexOf(older));
@@ -682,11 +692,11 @@ describe("BankRepository", () => {
       }
 
       const firstPage = await repository.listQuestions(
-        { currentTenantId: null, topicId },
+        { scope: scope(null), topicId },
         { page: 1, pageSize: 3 },
       );
       const secondPage = await repository.listQuestions(
-        { currentTenantId: null, topicId },
+        { scope: scope(null), topicId },
         { page: 2, pageSize: 3 },
       );
 
@@ -701,14 +711,8 @@ describe("BankRepository", () => {
     it("keeps the same page stable across identical calls", async () => {
       await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
 
-      const once = await repository.listQuestions(
-        { currentTenantId: null, topicId },
-        { page: 1, pageSize: 4 },
-      );
-      const twice = await repository.listQuestions(
-        { currentTenantId: null, topicId },
-        { page: 1, pageSize: 4 },
-      );
+      const once = await repository.listQuestions({ scope: scope(null), topicId }, { page: 1, pageSize: 4 });
+      const twice = await repository.listQuestions({ scope: scope(null), topicId }, { page: 1, pageSize: 4 });
 
       expect(once.items.map((q) => q.id)).toEqual(twice.items.map((q) => q.id));
     });
@@ -735,7 +739,7 @@ describe("BankRepository", () => {
       difficulty: Difficulty,
       status: QuestionStatus,
     ): Promise<number> {
-      const rows = await repository.countByDifficultyAndStatus(tenantId);
+      const rows = await repository.countByDifficultyAndStatus(scope(tenantId));
       return rows.find((g) => g.difficulty === difficulty && g.status === status)?.total ?? 0;
     }
 
@@ -861,7 +865,7 @@ describe("BankRepository", () => {
         bodyTypst: `alt-images sparse body ${randomUUID()}`,
       });
 
-      const result = await repository.setAlternativeImages(questionId, null, [
+      const result = await repository.setAlternativeImages(questionId, scope(null), [
         { storageKey: `test/${randomUUID()}`, mime: "image/png", alternativeIndex: 0 },
         { storageKey: `test/${randomUUID()}`, mime: "image/png", alternativeIndex: 2 },
       ]);

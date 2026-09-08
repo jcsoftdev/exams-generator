@@ -192,6 +192,18 @@ Puntos de consumo:
 - Filas huérfanas con una key retirada del catálogo: el resolver las ignora. Retirar una key requiere una migración de limpieza en el mismo commit.
 - Apagar `global_bank` mientras un profesor tiene el banco abierto: la siguiente request devuelve solo lo del tenant. No hay error, la lista se acorta.
 
+## Lo que la implementación agregó al diseño
+
+Tres cosas que no estaban en el diseño y que el código obligó a resolver.
+
+**`AuthModule` importa `FeatureFlagsModule` explícitamente.** `@Global` solo significa "no hace falta importarlo una vez que está en el grafo", y `auth.e2e.spec.ts` arma su módulo de prueba con `AuthModule` solo. Como `AuthService.me()` resuelve los flags, sin ese import Nest ni siquiera puede construir `AuthService` y la suite entera de auth muere en el arranque.
+
+**Las suites e2e necesitan `grantFeaturesFixture(tenantId)`.** Es el costo real del default apagado, y conviene decirlo sin adornos: cada suite que inserta su propio tenant y llama a una ruta de IA o de formas recibe 403 antes de llegar a lo que venía a probar. El helper vive en `test-utils/db-fixtures.ts` y escribe las filas directo a la tabla.
+
+Eso último tiene una regla de tiempo que hay que respetar. `FeatureFlagsService` cachea cada capa 60 segundos y solo suelta ese caché en sus propias escrituras, así que escribir filas a mano es seguro únicamente en `beforeAll`, antes del primer request, con el caché todavía vacío. Una suite que necesite mover un flag a mitad de camino tiene que pasar por las rutas HTTP.
+
+**`GET /auth/me` cambió de contrato.** El cuerpo ahora trae `features`, y los dos tests de auth que comparaban el objeto completo se actualizaron. No es un detalle de test: cualquier consumidor que valide la forma exacta de esa respuesta ve un campo nuevo.
+
 ## Tests
 
 Test rojo primero, y a nivel de feature: e2e con supertest contra el Nest real y el Postgres real en el API, spec de componente por TestBed en la web. Unitario solo para el resolver puro.
@@ -204,5 +216,6 @@ Test rojo primero, y a nivel de feature: e2e con supertest contra el Nest real y
 - **e2e de tenant nuevo:** un tenant creado sin filas recibe exactamente los defaults del catálogo.
 - **e2e de borrado de tenant:** borrar un tenant con overrides no revienta.
 - **Web:** cada punto de consumo esconde su entrada con el flag apagado; el panel de admin muestra las tres capas.
+- **Contrato de `/auth/me`:** el cuerpo trae `features` con las cinco keys, siempre completo.
 
 Las suites del API corren con `--runInBand`, y el filtro de ruta va **antes** de `--selectProjects`.

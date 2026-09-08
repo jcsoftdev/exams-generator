@@ -1,9 +1,18 @@
 import { randomUUID } from "node:crypto";
 import { eq } from "drizzle-orm";
-import { Role } from "@exams-generator/shared";
+import { FEATURE_FLAG_KEYS, FeatureFlag, Role } from "@exams-generator/shared";
 import { db, pool } from "../db/client";
 import { runMigrations } from "../db/migrate";
-import { assets, courses, gradeLevels, questions, tenants, topics, users } from "../db/schema";
+import {
+  assets,
+  courses,
+  gradeLevels,
+  questions,
+  tenantFeatureFlags,
+  tenants,
+  topics,
+  users,
+} from "../db/schema";
 import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level";
 import { hashPassword } from "../modules/auth/password.util";
 
@@ -76,6 +85,37 @@ export async function createUserFixture(params: {
     tenantId: user.tenantId,
     plainPassword,
   };
+}
+
+/**
+ * Grants a fixture tenant every paid feature (or just the ones named).
+ *
+ * Most e2e suites exist to exercise what a school DOES with AI generation,
+ * OCR extraction or exam versions — not whether its plan includes them. The
+ * catalog deliberately starts those three OFF, so without this a suite that
+ * inserts its own tenant row gets a 403 from `FeatureFlagGuard` before its
+ * subject under test ever runs.
+ *
+ * Rows are written straight to the table rather than through the admin
+ * routes, which is safe HERE and only here: a suite calls this in `beforeAll`
+ * before its first request, so `FeatureFlagsService`'s per-layer cache is
+ * still empty and fills from these rows on the first read. Flip a flag
+ * MID-suite and you must go through the route instead, or the app keeps
+ * answering from a cache nobody invalidated.
+ */
+export async function grantFeaturesFixture(
+  tenantId: string,
+  keys: readonly FeatureFlag[] = FEATURE_FLAG_KEYS,
+): Promise<void> {
+  await db
+    .insert(tenantFeatureFlags)
+    .values(keys.map((key) => ({ tenantId, key, enabled: true })))
+    .onConflictDoNothing();
+}
+
+/** Drops a fixture tenant's overrides. Cascades on tenant delete too; explicit here for suites that clean up by hand. */
+export async function deleteFeaturesFixture(tenantId: string): Promise<void> {
+  await db.delete(tenantFeatureFlags).where(eq(tenantFeatureFlags.tenantId, tenantId));
 }
 
 export async function deleteUserFixture(id: string): Promise<void> {

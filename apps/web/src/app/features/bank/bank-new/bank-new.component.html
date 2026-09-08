@@ -3,7 +3,7 @@
        is a section heading within the page, not a second top-level one. -->
   <h2 class="mb-4 text-xl font-bold text-n900">Nueva pregunta</h2>
 
-  <ui-tabs [tabs]="tabItems" [value]="tab()" (valueChange)="setTab($event)"></ui-tabs>
+  <ui-tabs [tabs]="tabItems()" [value]="tab()" (valueChange)="setTab($event)"></ui-tabs>
 
   @if (saveError()) {
     <p
@@ -15,7 +15,7 @@
     </p>
   }
 
-  @if (tab() === 'photo') {
+  @if (tab() === 'photo' && canExtractWithAi()) {
     <div
       data-testid="tab-photo-panel"
       class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4"

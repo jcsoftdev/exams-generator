@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { FeatureFlagsStore } from '../../../core/features/feature-flags.store';
 import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
@@ -71,6 +72,7 @@ const STRUCTURED_EXAM: ExamDetail = {
 };
 
 function setup(overrides: {
+  examVersionsEnabled?: boolean;
   getExam?: (id: string) => unknown;
   replaceQuestion?: (...args: unknown[]) => unknown;
   confirmExam?: (...args: unknown[]) => unknown;
@@ -100,6 +102,14 @@ function setup(overrides: {
   TestBed.configureTestingModule({
     imports: [ExamReviewComponent],
     providers: [
+      // These specs predate feature flags, when every feature was on for
+      // everyone. Stubbing the store to "on" keeps each assertion meaning
+      // what it was written to mean; the flag's own behaviour is covered by
+      // its dedicated spec.
+      {
+        provide: FeatureFlagsStore,
+        useValue: { isEnabled: () => overrides.examVersionsEnabled ?? true },
+      },
       { provide: ExamsService, useValue: { getExam, replaceQuestion, confirmExam } },
       { provide: ExamVersionsService, useValue: { generateVersions } },
       { provide: Router, useValue: { navigate } },
@@ -515,5 +525,24 @@ describe('ExamReviewComponent', () => {
     fixture.detectChanges();
 
     expect(compiled.textContent).toMatch(/no se pudo confirmar/i);
+  });
+
+  describe('permisos del colegio', () => {
+    it('esconde la generación de formas cuando el plan no la incluye', () => {
+      const { compiled } = setup({ examVersionsEnabled: false });
+
+      expect(compiled.querySelector('[data-testid="generate-from-review"]')).toBeNull();
+      expect(compiled.querySelector('[data-testid="review-version-count"]')).toBeNull();
+    });
+
+    it('deja intacto el resto de la revisión, que no depende del permiso', () => {
+      const { compiled } = setup({ examVersionsEnabled: false });
+
+      // Confirmar un examen y rerollear preguntas nunca fueron parte de
+      // `exam_versions`: cortar la generación no puede dejar el examen
+      // atrapado a medio armar.
+      expect(compiled.querySelector('[data-testid="confirm-button"]')).not.toBeNull();
+      expect(compiled.querySelector('[data-testid="reroll-button"]')).not.toBeNull();
+    });
   });
 });

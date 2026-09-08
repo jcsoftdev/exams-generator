@@ -7,6 +7,7 @@ import {
 } from "@nestjs/common";
 import { createSeededRng } from "./domain/ports/random.port";
 import { AuthTokenPayload } from "../auth/token.service";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { BlueprintRowRecord, ExamsRepository, QuestionPoolCandidateRecord } from "./exams.repository";
 import { ExamsService, InsufficientQuestionStockError } from "./exams.service";
 
@@ -35,8 +36,12 @@ function buildDeps() {
     findActiveCycle: jest.fn(),
   } as unknown as jest.Mocked<ExamsRepository>;
 
-  const service = new ExamsService(repository, () => createSeededRng(1));
-  return { service, repository };
+  const features = {
+    isEnabled: jest.fn().mockResolvedValue(true),
+  } as unknown as jest.Mocked<FeatureFlagsService>;
+
+  const service = new ExamsService(repository, features, () => createSeededRng(1));
+  return { service, repository, features };
 }
 
 const ROW: BlueprintRowRecord = {
@@ -162,6 +167,7 @@ describe("ExamsService.createExam", () => {
     expect(repository.getQuestionPool).toHaveBeenCalledWith({
       tenantId: "tenant-1",
       gradeLevel: "primaria_1",
+      includeGlobal: true,
     });
     expect(repository.saveSelection).toHaveBeenCalledTimes(1);
     const [, savedSelections] = repository.saveSelection.mock.calls[0]!;
@@ -541,10 +547,13 @@ describe("ExamsService.countStock (B1)", () => {
       ],
     });
 
-    expect(repository.countStock).toHaveBeenCalledWith({ tenantId: "tenant-1", gradeLevel: "secundaria_1" }, [
-      { courseId: "course-1", topicId: undefined, difficulty: "easy" },
-      { courseId: "course-1", topicId: "topic-1", difficulty: "hard" },
-    ]);
+    expect(repository.countStock).toHaveBeenCalledWith(
+      { tenantId: "tenant-1", gradeLevel: "secundaria_1", includeGlobal: true },
+      [
+        { courseId: "course-1", topicId: undefined, difficulty: "easy" },
+        { courseId: "course-1", topicId: "topic-1", difficulty: "hard" },
+      ],
+    );
     expect(result).toEqual({
       results: [
         { courseId: "course-1", topicId: undefined, difficulty: "easy", available: 20 },

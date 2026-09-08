@@ -158,7 +158,12 @@
         "Confirmar examen" se queda al lado, secundario, para congelar la
         selección sin compilar todavía — es un estado que la API modela.
       -->
-      @if (!isReady()) {
+      <!--
+        `exam_versions` gates GENERATING forms, never reading them: the
+        version list and its ZIP stay reachable below, because PDFs already
+        produced belong to the school. Same split the API applies.
+      -->
+      @if (!isReady() && canGenerateVersions()) {
         <span class="w-24" data-testid="review-version-count">
           <ui-select
             label="Formas"

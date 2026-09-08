@@ -8,6 +8,7 @@ import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { courses, questions, tenants, topics, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { isTypstAvailableSync } from "../exams/adapters/pdf/test-utils/typst-availability";
 import { InMemoryQuestionGeneratorAdapter } from "./adapters/in-memory-question-generator.adapter";
@@ -57,6 +58,7 @@ describeIfTypst("POST /ai/questions/generate/stream (e2e)", () => {
       .values({ name: `AI Stream E2E Tenant ${suffix}`, slug: `ai-stream-e2e-tenant-${suffix}` })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

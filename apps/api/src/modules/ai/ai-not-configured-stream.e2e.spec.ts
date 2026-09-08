@@ -8,6 +8,7 @@ import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { courses, tenants, topics, users } from "../../db/schema";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 
 /**
@@ -81,6 +82,7 @@ describe("POST /ai/questions/generate/stream — AI not configured (e2e)", () =>
       })
       .returning({ id: tenants.id });
     tenantId = tenant!.id;
+    await grantFeaturesFixture(tenantId);
 
     const [teacher] = await db
       .insert(users)

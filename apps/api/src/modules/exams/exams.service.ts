@@ -1,4 +1,4 @@
-import { Difficulty } from "@exams-generator/shared";
+import { Difficulty, FeatureFlag } from "@exams-generator/shared";
 import {
   BadRequestException,
   ConflictException,
@@ -9,6 +9,7 @@ import {
 } from "@nestjs/common";
 import { ExamStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { BlueprintRow, Candidate, select, selectPreview } from "./domain/blueprint-selector";
 import { computeCurrentWeek } from "./domain/current-week";
 import { matchesRowCriteria, pickReplacementQuestion } from "./domain/pick-replacement-question";
@@ -289,9 +290,22 @@ export class ExamsService {
    */
   constructor(
     private readonly repository: ExamsRepository,
+    private readonly features: FeatureFlagsService,
     @Optional() rngFactory?: () => Rng,
   ) {
     this.rngFactory = rngFactory ?? (() => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)));
+  }
+
+  /**
+   * Whether this school may still draw on the central bank, per `global_bank`.
+   *
+   * Governs CHOOSING questions — the pool, the stock counts, the replace
+   * candidates. It deliberately does not reach an exam already confirmed:
+   * `getExamQuestions` renders a stored selection with no visibility
+   * predicate, so exams built while the flag was on keep printing.
+   */
+  private async includeGlobal(tenantId: string): Promise<boolean> {
+    return this.features.isEnabled(FeatureFlag.GlobalBank, tenantId);
   }
 
   /**
@@ -344,7 +358,11 @@ export class ExamsService {
     });
 
     const rows = await this.repository.getBlueprintRows(examId);
-    const pool = await this.repository.getQuestionPool({ tenantId, gradeLevel });
+    const pool = await this.repository.getQuestionPool({
+      tenantId,
+      gradeLevel,
+      includeGlobal: await this.includeGlobal(tenantId),
+    });
 
     const selectorRows: (BlueprintRow & { readonly __rowRecord: BlueprintRowRecord })[] = rows.map((row) => ({
       courseId: row.courseId,
@@ -413,7 +431,10 @@ export class ExamsService {
       difficulty: cell.difficulty as Difficulty | undefined,
     }));
 
-    const counts = await this.repository.countStock({ tenantId, gradeLevel }, cells);
+    const counts = await this.repository.countStock(
+      { tenantId, gradeLevel, includeGlobal: await this.includeGlobal(tenantId) },
+      cells,
+    );
 
     return {
       results: cells.map((cell, index) => ({
@@ -461,7 +482,10 @@ export class ExamsService {
    */
   async countStockByGradeLevel(user: AuthTokenPayload): Promise<GradeLevelStockResult> {
     const tenantId = requireTenant(user);
-    const counts = await this.repository.countApprovedByGradeLevel(tenantId);
+    const counts = await this.repository.countApprovedByGradeLevel(
+      tenantId,
+      await this.includeGlobal(tenantId),
+    );
     const byGrade = new Map(counts.map((row) => [row.gradeLevel, row.available]));
 
     return {
@@ -489,7 +513,11 @@ export class ExamsService {
     const gradeLevel = dto.gradeLevel as string;
     const blueprint = dto.blueprint as CreateExamBlueprintRowDto[];
 
-    const pool = await this.repository.getQuestionPool({ tenantId, gradeLevel });
+    const pool = await this.repository.getQuestionPool({
+      tenantId,
+      gradeLevel,
+      includeGlobal: await this.includeGlobal(tenantId),
+    });
     const candidates: Candidate[] = pool.map((c) => ({
       id: c.id,
       courseId: c.courseId,
@@ -560,7 +588,11 @@ export class ExamsService {
       throw new NotFoundException(`Blueprint row not found for selected question ${questionId}`);
     }
 
-    const pool = await this.repository.getQuestionPool({ tenantId, gradeLevel: exam.gradeLevel });
+    const pool = await this.repository.getQuestionPool({
+      tenantId,
+      gradeLevel: exam.gradeLevel,
+      includeGlobal: await this.includeGlobal(tenantId),
+    });
     const usedIds = new Set(await this.repository.getSelectedQuestionIds(examId));
     const matching = pool.filter(
       (candidate) => matchesRowCriteria(candidate, row) && !usedIds.has(candidate.id),

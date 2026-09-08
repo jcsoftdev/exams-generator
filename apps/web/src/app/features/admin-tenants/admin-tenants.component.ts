@@ -7,6 +7,8 @@ import { TagComponent } from '../../ui/tag/tag.component';
 import { PaginationComponent } from '../../ui/pagination/pagination.component';
 import { AdminTenantsService } from './admin-tenants.service';
 import { AdminTenant } from './admin-tenants.models';
+import { PlatformFeatureFlagsComponent } from './platform-feature-flags/platform-feature-flags.component';
+import { TenantFeatureFlagsComponent } from './tenant-feature-flags/tenant-feature-flags.component';
 
 const ERROR_MESSAGE = 'No se pudieron cargar los colegios. Inténtalo de nuevo.';
 
@@ -21,7 +23,15 @@ const ERROR_MESSAGE = 'No se pudieron cargar los colegios. Inténtalo de nuevo.'
 @Component({
   selector: 'app-admin-tenants',
   standalone: true,
-  imports: [ButtonComponent, InputComponent, ModalComponent, TagComponent, PaginationComponent],
+  imports: [
+    ButtonComponent,
+    InputComponent,
+    ModalComponent,
+    TagComponent,
+    PaginationComponent,
+    TenantFeatureFlagsComponent,
+    PlatformFeatureFlagsComponent,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './admin-tenants.component.html',
 })
@@ -34,6 +44,14 @@ export class AdminTenantsComponent {
   protected readonly page = signal(1);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
+
+  // ---- permisos (feature flags) ----
+  /** The school whose flag panel is open, or `null`. One at a time, inline under its row. */
+  protected readonly flagsFor = signal<AdminTenant | null>(null);
+
+  protected toggleFlags(tenant: AdminTenant): void {
+    this.flagsFor.set(this.flagsFor()?.id === tenant.id ? null : tenant);
+  }
 
   // ---- create ----
   protected readonly createOpen = signal(false);

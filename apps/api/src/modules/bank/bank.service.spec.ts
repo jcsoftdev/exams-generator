@@ -13,6 +13,7 @@ import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
 import { hashBodyTypst } from "./domain/hash-body-typst";
 import { BankFoldersService } from "./folders/bank-folders.service";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 
 const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
@@ -76,8 +77,12 @@ function buildDeps() {
     assertAssignableFolder: jest.fn(),
   } as unknown as jest.Mocked<BankFoldersService>;
 
-  const service = new BankService(repository, storage, pdfCompiler, folders);
-  return { service, repository, storage, pdfCompiler, folders };
+  const features = {
+    isEnabled: jest.fn().mockResolvedValue(true),
+  } as unknown as jest.Mocked<FeatureFlagsService>;
+
+  const service = new BankService(repository, storage, pdfCompiler, folders, features);
+  return { service, repository, storage, pdfCompiler, folders, features };
 }
 
 /** A Multer file whose buffer tag makes it distinguishable in test assertions. */
@@ -475,7 +480,10 @@ describe("BankService.listQuestions", () => {
     await service.listQuestions(TEACHER_USER, { courseId: "course-1" });
 
     expect(repository.listQuestions).toHaveBeenCalledWith(
-      expect.objectContaining({ currentTenantId: "tenant-1", courseId: "course-1" }),
+      expect.objectContaining({
+        scope: { tenantId: "tenant-1", includeGlobal: true },
+        courseId: "course-1",
+      }),
     );
   });
 
@@ -484,7 +492,9 @@ describe("BankService.listQuestions", () => {
 
     await service.listQuestions(STAFF_USER, {});
 
-    expect(repository.listQuestions).toHaveBeenCalledWith(expect.objectContaining({ currentTenantId: null }));
+    expect(repository.listQuestions).toHaveBeenCalledWith(
+      expect.objectContaining({ scope: { tenantId: null, includeGlobal: true } }),
+    );
   });
 
   it("resolves folderId through BankFoldersService and forwards folderId/folderTopicId to the repository", async () => {
@@ -549,7 +559,10 @@ describe("BankService.getQuestionById", () => {
 
     const result = await service.getQuestionById(TEACHER_USER, "question-1");
 
-    expect(repository.findQuestionById).toHaveBeenCalledWith("question-1", "tenant-1");
+    expect(repository.findQuestionById).toHaveBeenCalledWith("question-1", {
+      tenantId: "tenant-1",
+      includeGlobal: true,
+    });
     expect(result).toEqual(QUESTION);
   });
 
@@ -590,7 +603,10 @@ describe("BankService.approveQuestion", () => {
 
     const result = await service.approveQuestion(TEACHER_USER, "draft-1");
 
-    expect(repository.approveQuestion).toHaveBeenCalledWith("draft-1", "tenant-1");
+    expect(repository.approveQuestion).toHaveBeenCalledWith("draft-1", {
+      tenantId: "tenant-1",
+      includeGlobal: true,
+    });
     expect(result).toEqual({ id: "draft-1" });
   });
 
@@ -635,7 +651,10 @@ describe("BankService.rejectQuestion", () => {
 
     const result = await service.rejectQuestion(TEACHER_USER, "draft-1");
 
-    expect(repository.rejectQuestion).toHaveBeenCalledWith("draft-1", "tenant-1");
+    expect(repository.rejectQuestion).toHaveBeenCalledWith("draft-1", {
+      tenantId: "tenant-1",
+      includeGlobal: true,
+    });
     expect(result).toEqual({ id: "draft-1" });
   });
 
@@ -678,7 +697,7 @@ describe("BankService.editQuestion", () => {
     expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(1);
     expect(repository.updateStructuredQuestionAndTaxonomy).toHaveBeenCalledWith(
       "draft-1",
-      "tenant-1",
+      { tenantId: "tenant-1", includeGlobal: true },
       expect.objectContaining({ bodyTypst: "edited body", alternatives: ["1", "2", "3"] }),
       expect.objectContaining({ topicId: undefined, difficulty: undefined, gradeLevel: undefined }),
     );
@@ -774,7 +793,7 @@ describe("BankService.editQuestion", () => {
 
     expect(repository.updateStructuredQuestionAndTaxonomy).toHaveBeenCalledWith(
       "draft-1",
-      "tenant-1",
+      { tenantId: "tenant-1", includeGlobal: true },
       expect.anything(),
       expect.objectContaining({ difficulty: "hard" }),
     );
@@ -901,10 +920,11 @@ describe("BankService.setAlternativeImages", () => {
     await service.setAlternativeImages(TEACHER_USER, "q1", [file("a"), file("c")], [0, 2]);
 
     expect(storage.put).toHaveBeenCalledTimes(2);
-    expect(repository.setAlternativeImages).toHaveBeenCalledWith("q1", TEACHER_USER.tenantId, [
-      expect.objectContaining({ alternativeIndex: 0 }),
-      expect.objectContaining({ alternativeIndex: 2 }),
-    ]);
+    expect(repository.setAlternativeImages).toHaveBeenCalledWith(
+      "q1",
+      { tenantId: TEACHER_USER.tenantId, includeGlobal: true },
+      [expect.objectContaining({ alternativeIndex: 0 }), expect.objectContaining({ alternativeIndex: 2 })],
+    );
   });
 
   it("still requires one file per alternative when indexes is omitted, with the original error message", async () => {

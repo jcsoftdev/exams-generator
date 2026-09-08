@@ -169,6 +169,13 @@
       "when": 1788469166155,
       "tag": "0023_topic_grades",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1788892438599,
+      "tag": "0024_feature_flags",
+      "breakpoints": true
     }
   ]
 }

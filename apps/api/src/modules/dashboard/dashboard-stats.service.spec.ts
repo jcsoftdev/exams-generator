@@ -2,6 +2,7 @@ import { Difficulty, Role } from "@exams-generator/shared";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { ExamsRepository } from "../exams/exams.repository";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { DashboardStatsService } from "./dashboard-stats.service";
 
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
@@ -17,8 +18,12 @@ function buildDeps() {
     listRecent: jest.fn().mockResolvedValue([]),
   } as unknown as jest.Mocked<ExamsRepository>;
 
-  const service = new DashboardStatsService(bankRepository, examsRepository);
-  return { service, bankRepository, examsRepository };
+  const features = {
+    isEnabled: jest.fn().mockResolvedValue(true),
+  } as unknown as jest.Mocked<FeatureFlagsService>;
+
+  const service = new DashboardStatsService(bankRepository, examsRepository, features);
+  return { service, bankRepository, examsRepository, features };
 }
 
 describe("DashboardStatsService.getStats", () => {
@@ -53,7 +58,10 @@ describe("DashboardStatsService.getStats", () => {
 
     await service.getStats(TEACHER_USER);
 
-    expect(bankRepository.countByDifficultyAndStatus).toHaveBeenCalledWith("tenant-1");
+    expect(bankRepository.countByDifficultyAndStatus).toHaveBeenCalledWith({
+      tenantId: "tenant-1",
+      includeGlobal: true,
+    });
   });
 
   it("aggregates exam counts by status and returns recent exams for a tenant user", async () => {

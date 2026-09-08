@@ -14,11 +14,17 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Difficulty, NormalizedBoxDto, UNFILED_FOLDER_ID } from '@exams-generator/shared';
+import {
+  Difficulty,
+  NormalizedBoxDto,
+  UNFILED_FOLDER_ID,
+  FeatureFlag,
+} from '@exams-generator/shared';
 import { LucideAngularModule, Check, ChevronDown, Sparkles } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { FeatureFlagsStore } from '../../../core/features/feature-flags.store';
 import { TabsComponent, TabItem } from '../../../ui/tabs/tabs.component';
 import { FileUploadComponent } from '../../../ui/file-upload/file-upload.component';
 import { BankFoldersStore } from '../folders/bank-folders.store';
@@ -124,11 +130,27 @@ export class BankNewComponent {
     label: DIFFICULTY_LABELS[d],
   }));
 
-  protected readonly tab = signal<Tab>('photo');
-  protected readonly tabItems: readonly TabItem<Tab>[] = [
-    { value: 'photo', label: 'Foto de la pregunta', testId: 'tab-photo' },
-    { value: 'structured', label: 'Escribir pregunta', testId: 'tab-structured' },
-  ];
+  private readonly features = inject(FeatureFlagsStore);
+
+  /**
+   * The photo tab IS the AI extraction flow, so `ai_extraction` decides
+   * whether it exists at all. With the flag off the tab disappears and
+   * "Escribir pregunta" is the only way in — writing a question by hand was
+   * never a paid feature.
+   */
+  protected readonly canExtractWithAi = computed(() =>
+    this.features.isEnabled(FeatureFlag.AiExtraction),
+  );
+
+  protected readonly tab = signal<Tab>(
+    this.features.isEnabled(FeatureFlag.AiExtraction) ? 'photo' : 'structured',
+  );
+  protected readonly tabItems = computed<readonly TabItem<Tab>[]>(() => [
+    ...(this.canExtractWithAi()
+      ? [{ value: 'photo' as const, label: 'Foto de la pregunta', testId: 'tab-photo' }]
+      : []),
+    { value: 'structured' as const, label: 'Escribir pregunta', testId: 'tab-structured' },
+  ]);
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
   /**

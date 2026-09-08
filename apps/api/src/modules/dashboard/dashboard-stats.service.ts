@@ -1,8 +1,10 @@
 import { Injectable } from "@nestjs/common";
-import { Difficulty, DashboardStats as SharedDashboardStats } from "@exams-generator/shared";
+import { DashboardStats as SharedDashboardStats, Difficulty, FeatureFlag } from "@exams-generator/shared";
 import { EXAM_STATUSES, ExamStatus, QUESTION_STATUSES, QuestionStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
+import { QuestionScope } from "../bank/domain/ports/bank-repository.port";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { ExamsRepository } from "../exams/exams.repository";
 
 const RECENT_EXAMS_LIMIT = 5;
@@ -53,10 +55,23 @@ export class DashboardStatsService {
   constructor(
     private readonly bankRepository: BankRepository,
     private readonly examsRepository: ExamsRepository,
+    private readonly features: FeatureFlagsService,
   ) {}
 
+  /**
+   * Same scope `BankService` builds, for the same reason: the `global_bank`
+   * flag decides whether central questions are part of this caller's bank,
+   * and the repository must be told once rather than guess per query.
+   */
+  private async questionScope(user: AuthTokenPayload): Promise<QuestionScope> {
+    return {
+      tenantId: user.tenantId,
+      includeGlobal: await this.features.isEnabled(FeatureFlag.GlobalBank, user.tenantId),
+    };
+  }
+
   async getStats(user: AuthTokenPayload): Promise<DashboardStats> {
-    const bankGroups = await this.bankRepository.countByDifficultyAndStatus(user.tenantId);
+    const bankGroups = await this.bankRepository.countByDifficultyAndStatus(await this.questionScope(user));
 
     const byDifficulty = zeroedByDifficulty();
     const byStatus = zeroedByQuestionStatus();

@@ -22,6 +22,7 @@ import {
   users,
 } from "../../db/schema";
 import { STORAGE_PORT } from "../bank/bank.constants";
+import { grantFeaturesFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 import { StoragePort } from "./domain/ports/storage.port";
 
@@ -75,6 +76,7 @@ describe("POST /exams/:examId/versions — queued generation (e2e)", () => {
       .values({ name: `VersionJobsE2E Tenant A ${suffix}`, slug: `version-jobs-e2e-a-${suffix}` })
       .returning({ id: tenants.id });
     tenantAId = tenantA!.id;
+    await grantFeaturesFixture(tenantAId);
 
     const [teacherA] = await db
       .insert(users)

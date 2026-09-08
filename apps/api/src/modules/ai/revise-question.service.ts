@@ -5,8 +5,11 @@ import {
   NotFoundException,
   UnprocessableEntityException,
 } from "@nestjs/common";
+import { FeatureFlag } from "@exams-generator/shared";
 import { AuthTokenPayload } from "../auth/token.service";
+import { FeatureFlagsService } from "../feature-flags/feature-flags.service";
 import { BankRepository } from "../bank/bank.repository";
+import { QuestionScope } from "../bank/domain/ports/bank-repository.port";
 import { PDF_COMPILER_PORT } from "../bank/bank.constants";
 import { assertStructuredQuestion } from "../bank/domain/assert-structured-question";
 import { compilePreviewFromContent } from "../bank/domain/compile-preview-from-content";
@@ -61,7 +64,20 @@ export class ReviseQuestionService {
     @Inject(QUESTION_GENERATOR_PORT) private readonly generator: QuestionGeneratorPort,
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
     private readonly bankRepository: BankRepository,
+    private readonly features: FeatureFlagsService,
   ) {}
+
+  /**
+   * Same scope `BankService` builds, for the same reason: the `global_bank`
+   * flag decides whether central questions are part of this caller's bank,
+   * and the repository must be told once rather than guess per query.
+   */
+  private async questionScope(user: AuthTokenPayload): Promise<QuestionScope> {
+    return {
+      tenantId: user.tenantId,
+      includeGlobal: await this.features.isEnabled(FeatureFlag.GlobalBank, user.tenantId),
+    };
+  }
 
   async revise(user: AuthTokenPayload, id: string, instruction: string): Promise<GeneratedQuestion> {
     if (!instruction || instruction.trim() === "") {
@@ -73,7 +89,7 @@ export class ReviseQuestionService {
       );
     }
 
-    const question = await this.bankRepository.findQuestionById(id, user.tenantId);
+    const question = await this.bankRepository.findQuestionById(id, await this.questionScope(user));
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
