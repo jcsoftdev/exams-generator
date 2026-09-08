@@ -372,6 +372,32 @@ Dos casos reales del borde, los dos correctos:
   pregunta puede estar pidiendo justamente detectar el nombre incorrecto, y
   arreglarlo la destruye.
 
+### La captura de página entera, después de transcribir
+
+Una vez que el lote es texto, su PNG de página entera no lo lee nadie: ni el
+sembrador, ni el API, ni la web. Solo sobreviven los pocos que una entrada
+sigue nombrando, o sea las preguntas que se quedan como imagen a propósito.
+
+Los demás se borran. El 2026-09-08 se fueron 1462 archivos, 114 MB, y el
+directorio de lotes bajó de 128 MB a 16 MB. Importa porque el `Dockerfile.api`
+hace `COPY . .` y el build copia `src/db/data` entera al runtime, así que cada
+uno de esos megas viajaba dentro de la imagen del API en cada deploy.
+
+**Dónde queda el original.** En git. Están committeados desde la cosecha, así
+que para revisar una transcripción se saca el PNG de cualquier commit anterior
+al borrado. Borrarlos NO adelgaza el repositorio: los blobs se quedan en el
+pack. Lo que adelgaza es el checkout y la imagen.
+
+**Consecuencia.** `check_source_url.py` verifica la procedencia haciendo OCR del
+recorte de página entera, así que para un lote ya transcrito se queda sin nada
+que leer. Es la herramienta que se usa cuando el lote llega, no después.
+
+Para podar durante la transcripción está `--apply --prune`, que borra solo lo
+que ninguna entrada referencia. Para un lote ya aplicado, el criterio es el
+mismo: fuera todo PNG bajo `<lote>-image/` que ningún `imagePath`,
+`figureSourceImagePath` ni `alternativeImagePaths` nombre. `validate_lots.py`
+los lista como `ORPH` antes, y después no debe quedar ninguna línea `ORPH`.
+
 ### Llegar a producción
 
 No hay paso manual. `seed()` corre `seedLotQuestions` y enseguida
