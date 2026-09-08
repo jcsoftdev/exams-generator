@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject, input, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FeatureFlag, TenantFeatureFlagStateDto } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -36,6 +36,13 @@ export class TenantFeatureFlagsComponent {
 
   readonly tenantId = input.required<string>();
   readonly tenantName = input.required<string>();
+  /**
+   * Bumped by the parent whenever the platform layer moves. This panel's
+   * `platform` column is a copy of that layer, so it has to be re-read; the
+   * alternative is a screen where one panel says "cortado" and the one
+   * below it still says "permitido".
+   */
+  readonly refreshToken = input(0);
 
   protected readonly rows = signal<readonly TenantFeatureFlagStateDto[]>([]);
   protected readonly loading = signal(true);
@@ -47,6 +54,17 @@ export class TenantFeatureFlagsComponent {
     // `input.required` is not readable in a field initializer, so the first
     // load waits for the first change detection pass instead.
     queueMicrotask(() => this.reload());
+
+    // Skips its own first run: the microtask above is already loading, and a
+    // second request on mount would be pure waste.
+    let seen = false;
+    effect(() => {
+      this.refreshToken();
+      if (seen) {
+        this.reload();
+      }
+      seen = true;
+    });
   }
 
   protected label(key: FeatureFlag): string {

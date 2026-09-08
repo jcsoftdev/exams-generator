@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, output, signal } from '@angular/core';
 import { FeatureFlag, PlatformFeatureFlagDto } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
@@ -29,6 +29,14 @@ const FLAG_LABELS: Readonly<Record<FeatureFlag, string>> = {
 })
 export class PlatformFeatureFlagsComponent {
   private readonly service = inject(AdminFeatureFlagsService);
+
+  /**
+   * Fires after a cut or a restore lands. Any tenant panel open on the same
+   * screen is showing a `platform` column that just went stale, and a panel
+   * still reading "permitido" next to a feature that was cut seconds ago is
+   * exactly the confusion the three-column layout exists to prevent.
+   */
+  readonly changed = output<void>();
 
   protected readonly open = signal(false);
   protected readonly rows = signal<readonly PlatformFeatureFlagDto[]>([]);
@@ -70,6 +78,7 @@ export class PlatformFeatureFlagsComponent {
         this.rows.set(rows);
         this.saving.set(null);
         this.errorMessage.set(null);
+        this.changed.emit();
       },
       error: () => {
         this.saving.set(null);

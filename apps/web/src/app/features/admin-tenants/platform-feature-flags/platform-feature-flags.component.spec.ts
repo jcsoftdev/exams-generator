@@ -92,4 +92,15 @@ describe('PlatformFeatureFlagsComponent', () => {
       /no se pudo cargar/i,
     );
   });
+
+  it('announces a cut so the tenant panels can re-read it', () => {
+    const { fixture, compiled, open } = setup();
+    open();
+    const changed = vi.fn();
+    fixture.componentInstance.changed.subscribe(changed);
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="platform-flag-cut"] button')!.click();
+
+    expect(changed).toHaveBeenCalled();
+  });
 });

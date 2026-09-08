@@ -53,6 +53,13 @@ export class AdminTenantsComponent {
     this.flagsFor.set(this.flagsFor()?.id === tenant.id ? null : tenant);
   }
 
+  /** Bumped when the kill switch moves, so an open tenant panel re-reads it. */
+  protected readonly platformFlagsVersion = signal(0);
+
+  protected onPlatformFlagsChanged(): void {
+    this.platformFlagsVersion.update((version) => version + 1);
+  }
+
   // ---- create ----
   protected readonly createOpen = signal(false);
   protected readonly createName = signal('');

@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <app-platform-feature-flags></app-platform-feature-flags>
+  <app-platform-feature-flags (changed)="onPlatformFlagsChanged()"></app-platform-feature-flags>
 
   @if (actionError()) {
     <p class="mb-4 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
@@ -74,6 +74,7 @@
           <app-tenant-feature-flags
             [tenantId]="t.id"
             [tenantName]="t.name"
+            [refreshToken]="platformFlagsVersion()"
           ></app-tenant-feature-flags>
         }
       }

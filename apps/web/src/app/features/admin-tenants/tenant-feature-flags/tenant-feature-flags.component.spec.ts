@@ -176,4 +176,26 @@ describe('TenantFeatureFlagsComponent', () => {
       /no se pudo guardar/i,
     );
   });
+
+  it('re-reads the platform column when the kill switch moves', async () => {
+    const { fixture, listForTenant, settle } = setup();
+    await settle();
+    expect(listForTenant).toHaveBeenCalledTimes(1);
+
+    fixture.componentRef.setInput('refreshToken', 1);
+    fixture.detectChanges();
+
+    // Otherwise the panel keeps saying "permitido" next to a feature the
+    // admin cut seconds ago, one section up the same screen.
+    expect(listForTenant).toHaveBeenCalledTimes(2);
+  });
+
+  it('does not fire a second request just for mounting', async () => {
+    const { listForTenant, settle } = setup();
+    await settle();
+
+    // The constructor already loads; an effect that ran on its first pass
+    // would double every open.
+    expect(listForTenant).toHaveBeenCalledTimes(1);
+  });
 });
