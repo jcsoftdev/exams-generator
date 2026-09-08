@@ -104,7 +104,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
-      start_period: 10s
+      # 20 minutes, and it is the boot seed that needs them. The api runs
+      # `migrate && seed && main`, so it answers /health only once the seed is
+      # done, and that seed grows with every lot the bank gains. At the old 10s
+      # the container was called unhealthy 110s in: on 2026-09-07 the seed ran
+      # past that, compose failed the deploy and reported an error while the
+      # container quietly finished and served normally. `web` waits on
+      # `api: service_healthy`, so on a stack started from nothing the frontend
+      # would never come up at all.
+      # Costs nothing when the seed is quick — a successful check turns the
+      # container healthy immediately, whatever the grace period says. It only
+      # decides how long a silent api is given before compose gives up on it.
+      start_period: 20m
 
   web:
     build:
