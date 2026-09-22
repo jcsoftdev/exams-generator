@@ -23,6 +23,21 @@ export const routes: Routes = [
     title: `Iniciando sesión${TITLE_SUFFIX}`,
   },
   { path: 'forbidden', component: ForbiddenComponent, title: `Sin acceso${TITLE_SUFFIX}` },
+  // The ONLY feature route outside `authGuard`, and it can be: the preview
+  // tool injects no service, calls no endpoint and reads no tenant data — a
+  // visitor pastes their own JSON and their own browser typesets it. What is
+  // public is the renderer, never anybody's questions. Lazy-loaded so an
+  // anonymous visit does not pull the authenticated app's chunks (and
+  // `/app/tools/json-preview` keeps the same tool inside the shell, where the
+  // sidebar points).
+  {
+    path: 'json-preview',
+    loadComponent: () =>
+      import('./features/tools/json-preview/public-json-preview.component').then(
+        (m) => m.PublicJsonPreviewComponent,
+      ),
+    title: `Preview de preguntas${TITLE_SUFFIX}`,
+  },
   {
     path: 'app',
     // ShellComponent is the immediate landing target for any already
@@ -133,6 +148,19 @@ export const routes: Routes = [
             (m) => m.AiReviewQueueComponent,
           ),
         title: `Revisión de borradores${TITLE_SUFFIX}`,
+      },
+      // Preview-only tool for a question JSON produced OUTSIDE the app (the
+      // extraction prompt pasted into a chat UI, with the photos attached
+      // there). It reads nothing and saves nothing, so it carries no
+      // roleGuard beyond the shell's authGuard — and it has no nav entry
+      // either, since it is a utility, not part of a teacher's daily flow.
+      {
+        path: 'tools/json-preview',
+        loadComponent: () =>
+          import('./features/tools/json-preview/json-preview.component').then(
+            (m) => m.JsonPreviewComponent,
+          ),
+        title: `Preview de JSON${TITLE_SUFFIX}`,
       },
       {
         path: 'settings',

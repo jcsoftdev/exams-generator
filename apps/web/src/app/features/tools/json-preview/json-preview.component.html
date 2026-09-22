@@ -1,0 +1,137 @@
+<div class="mx-auto flex max-w-3xl flex-col gap-4">
+  <!-- The topbar already renders this page's <h1> (its route `title`), so the
+       panel starts at the explanation instead of repeating the heading. -->
+  <ui-card>
+    <div class="flex flex-col gap-3">
+      <p class="text-sm text-n600">
+        Pega el JSON que te devolvió el chat al leer las fotos —
+        <code class="rounded-field bg-n50 px-1">{{ envelopeExample }}</code
+        >, un array de preguntas, una sola pregunta, o directamente el enunciado en Typst.
+      </p>
+
+      <label class="flex flex-col gap-1">
+        <span class="text-sm font-medium text-n900">JSON o Typst</span>
+        <textarea
+          data-testid="paste-textarea"
+          rows="10"
+          spellcheck="false"
+          class="w-full rounded-field border border-n200 bg-surface px-3 py-2 font-mono text-sm text-n900"
+          [placeholder]="placeholderExample"
+          [value]="raw()"
+          (input)="raw.set($any($event.target).value)"
+        ></textarea>
+      </label>
+
+      <div class="flex gap-2">
+        <span data-testid="paste-submit">
+          <ui-button variant="primary" (clicked)="preview()">Ver preview</ui-button>
+        </span>
+        <span data-testid="paste-clear">
+          <ui-button variant="ghost" (clicked)="clear()">Limpiar</ui-button>
+        </span>
+      </div>
+    </div>
+  </ui-card>
+
+  @if (error()) {
+    <ui-banner variant="error" [message]="error()!"></ui-banner>
+  }
+
+  @if (showEmptyState()) {
+    <p
+      data-testid="paste-empty"
+      class="rounded-card border border-n200 bg-n50 p-4 text-sm text-n600"
+    >
+      Aún no hay nada que previsualizar. Pega el JSON y pulsa «Ver preview».
+    </p>
+  }
+
+  @for (question of questions(); track $index) {
+    <ui-card>
+      <div data-testid="preview-question" class="flex flex-col gap-3">
+        <div class="flex items-center justify-between gap-2">
+          <h2 class="text-sm font-semibold text-n900">Pregunta {{ $index + 1 }}</h2>
+          @if (question.sourceImage !== null) {
+            <span data-testid="preview-source-image" class="text-xs text-n600">
+              Imagen {{ question.sourceImage }}
+            </span>
+          }
+        </div>
+
+        @for (warning of question.warnings; track warning) {
+          <p
+            data-testid="preview-warning"
+            class="rounded-field bg-warn-bg px-3 py-2 text-sm text-warn-text"
+          >
+            {{ warning }}
+          </p>
+        }
+
+        <!-- `whitespace-pre-wrap` keeps the line breaks the paste carries: a
+             statement whose question sits on its own line after a reading or
+             an equation is unreadable once collapsed to one run. -->
+        <div class="whitespace-pre-wrap text-base text-n900">
+          <ui-math-text [value]="question.bodyTypst"></ui-math-text>
+        </div>
+
+        @if (question.alternatives.length) {
+          <ol class="flex flex-col gap-1">
+            @for (alternative of question.alternatives; track $index) {
+              <li
+                data-testid="preview-alternative"
+                [attr.data-correct]="$index === question.correctAnswerIndex ? 'true' : null"
+                [class]="
+                  $index === question.correctAnswerIndex
+                    ? 'flex gap-2 rounded-field bg-easy-bg px-2 py-1 text-sm font-medium text-easy-text'
+                    : 'flex gap-2 px-2 py-1 text-sm text-n900'
+                "
+              >
+                <span class="shrink-0">{{ letterFor($index) }})</span>
+                <ui-math-text [value]="alternative"></ui-math-text>
+              </li>
+            }
+          </ol>
+          @if (question.correctAnswerIndex === null) {
+            <p class="text-sm text-n600">Sin clave marcada.</p>
+          }
+        }
+
+        @if (question.figureCode) {
+          <pre
+            data-testid="preview-figure-code"
+            class="overflow-x-auto rounded-field bg-n50 p-3 font-mono text-xs text-n900"
+            >{{ question.figureCode }}</pre>
+        }
+
+        @if (question.suggestedCourse || question.suggestedTopic) {
+          <p data-testid="preview-taxonomy" class="text-sm text-n600">
+            {{ question.suggestedCourse ?? 'Curso sin sugerir' }} ·
+            {{ question.suggestedTopic ?? 'Tema sin sugerir' }}
+          </p>
+        }
+
+        @if (question.conceptsUsed.length) {
+          <div class="flex flex-wrap gap-1">
+            @for (concept of question.conceptsUsed; track concept) {
+              <span data-testid="preview-concept"
+                ><ui-tag variant="ai">{{ concept }}</ui-tag></span
+              >
+            }
+          </div>
+        }
+
+        @if (question.solutionSteps.length) {
+          <ol class="flex list-decimal flex-col gap-1 pl-5 text-sm text-n600">
+            @for (step of question.solutionSteps; track $index) {
+              <li data-testid="preview-step"><ui-math-text [value]="step"></ui-math-text></li>
+            }
+          </ol>
+        } @else if (question.declaredStepCount !== null) {
+          <p class="text-sm text-n600">
+            Declara {{ question.declaredStepCount }} paso(s) de solución, sin detallarlos.
+          </p>
+        }
+      </div>
+    </ui-card>
+  }
+</div>

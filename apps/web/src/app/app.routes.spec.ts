@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { routes } from './app.routes';
 import { authGuard } from './core/auth/auth.guard';
+import { PublicJsonPreviewComponent } from './features/tools/json-preview/public-json-preview.component';
 import { LoginComponent } from './features/login/login.component';
 import { AuthCallbackComponent } from './features/auth-callback/auth-callback.component';
 import { ShellComponent } from './features/shell/shell.component';
@@ -26,6 +27,18 @@ describe('app routes', () => {
   it('registers a public /login route', () => {
     const loginRoute = routes.find((route) => route.path === 'login');
     expect(loginRoute).toBeTruthy();
+  });
+
+  it('registers a PUBLIC /json-preview route outside the authenticated shell, so anyone can try a paste without an account', () => {
+    const route = routes.find((r) => r.path === 'json-preview');
+    expect(route).toBeDefined();
+    expect(route?.canActivate).toBeUndefined();
+  });
+
+  it('lazy-loads the public /json-preview route to the standalone page, not the in-shell one', async () => {
+    const route = routes.find((r) => r.path === 'json-preview');
+    expect(route?.component).toBeUndefined();
+    await expect(route?.loadComponent?.()).resolves.toBe(PublicJsonPreviewComponent);
   });
 
   it('registers a public /forbidden route', () => {

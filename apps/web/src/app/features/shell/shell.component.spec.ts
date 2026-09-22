@@ -35,6 +35,7 @@ import {
   History,
   Sun,
   Moon,
+  ClipboardPaste,
 } from 'lucide-angular';
 import { Role, MeResponseDto } from '@exams-generator/shared';
 import { ShellComponent } from './shell.component';
@@ -105,6 +106,7 @@ function setup(
           History,
           Sun,
           Moon,
+          ClipboardPaste,
         }),
       ),
       {
@@ -175,6 +177,16 @@ describe('ShellComponent', () => {
 
     expect(compiled.textContent).not.toContain('Colegio');
     expect(compiled.textContent).not.toContain('Configuración');
+  });
+
+  // The target url is NOT asserted here: this suite's Router is a mock whose
+  // `serializeUrl` returns '', so RouterLink never renders a real href. That
+  // the in-shell route exists is `app.routes.spec.ts`'s job.
+  it('offers the JSON preview tool in the nav', () => {
+    const { compiled } = setup(Role.Teacher);
+
+    const links = Array.from(compiled.querySelectorAll('a'));
+    expect(links.some((link) => link.textContent?.includes('Preview de JSON'))).toBe(true);
   });
 
   it('labels the exams nav item "Exámenes"', () => {

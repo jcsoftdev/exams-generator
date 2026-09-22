@@ -139,6 +139,15 @@ export class ShellComponent {
       ...(pendingDrafts !== null ? { badge: pendingDrafts } : {}),
     });
     aiItems.push({ label: 'Historial IA', route: '/app/ai/jobs', icon: 'history' });
+    // Points at the in-shell route, not the public `/json-preview` one: a
+    // teacher already inside the app should keep the sidebar when they open
+    // it. The public url is for sharing the tool with someone who has no
+    // account.
+    aiItems.push({
+      label: 'Preview de JSON',
+      route: '/app/tools/json-preview',
+      icon: 'clipboard-paste',
+    });
 
     const groups: NavGroup[] = [principalGroup];
     if (aiItems.length > 0) {
